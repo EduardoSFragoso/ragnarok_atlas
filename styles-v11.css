@@ -15,3 +15,4 @@ body[data-theme="dark"] .total-row th{background:#203a37;color:#b3e0d3}body[data
 .recipe-product{display:grid;gap:5px;justify-items:start}.recipe-product>.item-link{font-size:10px}
 
 .calc-explanation{margin:12px 0 16px;padding:12px 14px;border:1px solid var(--line);border-left:3px solid var(--mint);border-radius:8px;background:var(--panel-soft,var(--panel));color:var(--muted);font-size:11px;line-height:1.65}.calc-explanation b{color:var(--text)}.bonus-amount{display:inline-block;font-weight:700;color:var(--text);margin-right:5px}.bonus-entry{display:flex;width:max-content;color:var(--muted)}.no-bonus{color:var(--muted)}
+.data-table td{vertical-align:top}.data-table th{vertical-align:middle}.data-table td[rowspan],.grouped-table.align-top td[rowspan]{vertical-align:top}.calc-explanation ul{margin:7px 0 0;padding-left:18px}.calc-explanation li+li{margin-top:4px}
