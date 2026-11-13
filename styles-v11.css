@@ -13,3 +13,5 @@ body[data-theme="dark"] .total-row th{background:#203a37;color:#b3e0d3}body[data
 .item-link{display:inline-flex;align-items:center;gap:6px;color:var(--link,#78baff);text-decoration:none}.item-link:hover{text-decoration:underline}.cost-summary{line-height:1.7}.cost-summary p{margin:8px 0 0}.cost-summary small{display:block;color:var(--muted)}.data-table .item-label{vertical-align:middle}
 
 .recipe-product{display:grid;gap:5px;justify-items:start}.recipe-product>.item-link{font-size:10px}
+
+.calc-explanation{margin:12px 0 16px;padding:12px 14px;border:1px solid var(--line);border-left:3px solid var(--mint);border-radius:8px;background:var(--panel-soft,var(--panel));color:var(--muted);font-size:11px;line-height:1.65}.calc-explanation b{color:var(--text)}.bonus-amount{display:inline-block;font-weight:700;color:var(--text);margin-right:5px}.bonus-entry{display:flex;width:max-content;color:var(--muted)}.no-bonus{color:var(--muted)}
