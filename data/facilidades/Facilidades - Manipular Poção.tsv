@@ -1,0 +1,50 @@
+ID do produto	Ícone do produto	Produto	Taxa/fator	ID do material	Ícone do material	Material	Quantidade		FÓRMULA E CALCULADORA — Manipular Poção				
+1000276		Ácido Inflamável	30	7135		Frasco de Fogo Grego	1		A = INT/3 + CRV + SOR/3 + base/5 + aleatório (50–200) + (base−100) + Pesquisa de Poções×5. B = taxa do item + fator de produção.				
+				7136		Frasco de Ácido	1						
+				6360		Fragmento Escarlate	2		Entradas	Valor		Resultado	Calculado
+1000277		Ácido Sólido	30	7135		Frasco de Fogo Grego	1		Nível da habilidade (1–5)	5		Fórmula A	481.6666667
+				7136		Frasco de Ácido	1		INT	100		Fórmula B	230
+				6363		Fragmento Verde	2		CRV	100		Diferença A−B	251.6666667
+1000278		Ácido Gasoso	30	7135		Frasco de Fogo Grego	1		SOR	100		Máximo pelo nível	15
+				7136		Frasco de Ácido	1		Nível base	200		Itens estimados	10
+				6362		Fragmento Amarelo	2		Pesquisa de Poções	10			
+1000279		Ácido Álgido	30	7135		Frasco de Fogo Grego	1		Aleatório (50–200)	125			
+				7136		Frasco de Ácido	1		Taxa do item	30			
+				6361		Fragmento Azul	2						
+1000280		Ampola de Revestimento	50	7139		Frasco de Revestimento	10						
+				713		Garrafa Vazia	5		COMPARAÇÃO A − B				
+1000281		Frasco de Terrário	50	7137		Frasco de Planta	10		Diferença A−B	Resultado			
+				6217		Muda de Mandrágora	5		≥ 550	Máximo de poções			
+				6210		Semente de P. Selvagem	2		450 a 549	Máximo − 3			
+				6211		Semente de P. Sanguessuga	2		200 a 449	Máximo − 5			
+100516		Limpador de Olhos	100	713		Garrafa Vazia	10		1 a 199	Máximo − 6			
+				523		Água Benta	5		< 0	Máximo − 7			
+				509		Erva Branca	3						
+				511		Erva Verde	3						
+100517		Limpador de Ouvido	100	713		Garrafa Vazia	10						
+				523		Água Benta	5						
+				510		Erva Azul	2						
+				511		Erva Verde	3						
+100518		Biotônico	100	713		Garrafa Vazia	10						
+				523		Água Benta	5						
+				607		Fruto de Yggdrasil	2						
+				526		Geleia Real	3						
+100519		Extintor	100	713		Garrafa Vazia	10						
+				523		Água Benta	5						
+				991		Cristal Azul	5						
+				998		Ferro	3						
+100520		Banho de Ervas	100	713		Garrafa Vazia	10						
+				523		Água Benta	5						
+				705		Trevo	10						
+				511		Erva Verde	3						
+100521		Frasco de Antídoto	100	713		Garrafa Vazia	10						
+				523		Água Benta	5						
+				678		Garrafa de Veneno	2						
+				511		Erva Verde	10						
+100522		Brigadeiro	100	713		Garrafa Vazia	10						
+				7182		Cacau	3						
+				608		Semente de Yggdrasil	5						
+				526		Geleia Real	3						
+100523		Óleo Sagrado	100	713		Garrafa Vazia	10						
+				523		Água Benta	10						
+				526		Geleia Real	3						

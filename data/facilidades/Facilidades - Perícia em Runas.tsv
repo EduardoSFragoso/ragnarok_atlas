@@ -1,0 +1,31 @@
+ID do produto	Ícone do produto	Produto	Taxa/fator	ID do material	Ícone do material	Material	Quantidade		FÓRMULA E CALCULADORA — Perícia em Runas				
+12731		Thurisaz	Dificuldade 5%	7939		Galho Antigo	1		Chance = chance-base do nível + DES/30 + SOR/10 + classe/10 + raridade da Runa Bruta − dificuldade da runa.				
+				1034		Cabelo Azul	1						
+				7030		Garra de Lobo do Deserto	1		Entradas	Valor		Resultado	Calculado
+12728		Isa	Dificuldade 10%	7939		Galho Antigo	1		Nível de Perícia em Runas (1–10)	10		Chance calculada (%)	100
+				7097		Coração Incandescente	1		DES	120			
+12732		Wyrd	Dificuldade 10%	7939		Galho Antigo	1		SOR	120			
+				7938		Partículas de Luz	1		Nível de classe	70			
+				7221		Corrente	1		Bônus de raridade da Runa Bruta (%)	60			
+				1035		Canino de Dragão	1		Dificuldade da runa (%)	20			
+12733		Hagalaz	Dificuldade 5%	7939		Galho Antigo	1						
+				1096		Casca Arredondada	1						
+				7123		Pele de Dragão	1		RUNAS BRUTAS — RARIDADE				
+12729		Othila	Dificuldade 5%	7939		Galho Antigo	1		Ícone	Runa Bruta	Bônus da raridade		
+				7938		Partículas de Luz	1			Runa Bruta Comum	4%		
+				7002		Dente de Ogro	1			Runa Bruta Forte	8%		
+12730		Uruz	Dificuldade 15%	7939		Galho Antigo	1			Runa Bruta Rara	15%		
+				1048		Cabelo Horrendo	1			Runa Bruta Antiga	30%		
+				518		Mel	1			Runa Bruta Mística	60%		
+12726		Raido	Dificuldade 5%	7939		Galho Antigo	1						
+				7938		Partículas de Luz	1						
+				716		Gema Vermelha	1						
+12725		Nauthiz	Dificuldade 15%	7939		Galho Antigo	1						
+				7938		Partículas de Luz	1						
+				7069		Armadura Destruída	1						
+				7099		Pergaminho Antigo	1						
+12727		Berkana	Dificuldade 20%	7939		Galho Antigo	1						
+				7210		Armadura de Dullahan	1						
+22540		Luxanima	Dificuldade 20%	7939		Galho Antigo	1						
+				7938		Partículas de Luz	3						
+				969		Ouro	3						

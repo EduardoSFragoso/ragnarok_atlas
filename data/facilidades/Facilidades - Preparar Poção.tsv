@@ -1,0 +1,82 @@
+ID do produto	Ícone do produto	Produto	Dificuldade	ID do material	Ícone do material	Material	Quantidade		FÓRMULA E CALCULADORA				
+501		Poção Vermelha	+15% a +25%	1093		Garrafa de Poção	1		Chance = Pesquisa de Poções + Preparar Poção + Mudança de Planos + classe×0,2 + DES×0,1 + SOR×0,1 + INT×0,05 + dificuldade.				
+				507		Erva Vermelha	1						
+				7134		Vasilha de Mistura	1		Entradas	Valor		Resultado	Calculado
+503		Poção Amarela	+15% a +25%	1093		Garrafa de Poção	1		Pesquisa de Poções	10		Chance calculada (%)	54
+				508		Erva Amarela	1		Preparar Poção	10			
+				7134		Vasilha de Mistura	1		Mudança de Planos	5			
+504		Poção Branca	+15% a +25%	1093		Garrafa de Poção	1		Nível de classe	70			
+				509		Erva Branca	1		DES	120			
+				7134		Vasilha de Mistura	1		SOR	120			
+505		Poção Azul	−5%	1093		Garrafa de Poção	1		INT	120			
+				510		Erva Azul	1		Dificuldade escolhida (%)	-15			
+				911		Scell	1						
+				7134		Vasilha de Mistura	1		Dificuldade	Receitas			
+605		Analgésico	−5%	713		Garrafa Vazia	1		+15% a +25%	Poções Vermelha, Amarela e Branca			
+				970		Álcool	1		+5% a +15%	Álcool			
+				708		Menta	1		−5% a +5%	Frascos de Ácido, Esfera Marinha, Fogo Grego e Planta			
+				7134		Vasilha de Mistura	1		−5%	Poção Azul, Analgésico, Aloe Vera, Embrião, Antipropriedade, Compacta Vermelha			
+606		Aloe Vera	−5%	713		Garrafa Vazia	1		−10% a −5%	Poção Compacta Amarela			
+				518		Mel	1		−15% a −5%	Poção Compacta Branca e Frasco de Revestimento			
+				704		Aloés	1		Não indicada	Suplemento Alimentar			
+				7134		Vasilha de Mistura	1						
+7142		Embrião	−5%	7141		Orvalho de Yggdrasil	1						
+				7140		Semente da Vida	1						
+				7143		Cápsula da Criação	1						
+				7134		Vasilha de Mistura	1						
+100371		Suplemento Alimentar	Não indicada	508		Erva Amarela	1						
+				7140		Semente da Vida	1						
+				713		Garrafa Vazia	1						
+				7134		Vasilha de Mistura	1						
+970		Álcool	+5% a +15%	1092		Tubo de Ensaio	1						
+				713		Garrafa Vazia	5						
+				905		Caule	5						
+				7033		Esporo Venenoso	5						
+				7134		Vasilha de Mistura	1						
+7135		Frasco de Fogo Grego	−5% a +5%	713		Garrafa Vazia	1						
+				1059		Tecido	1						
+				970		Álcool	1						
+				7134		Vasilha de Mistura	1						
+7136		Frasco de Ácido	−5% a +5%	713		Garrafa Vazia	1						
+				929		Coração Imortal	1						
+				7134		Vasilha de Mistura	1						
+7137		Frasco de Planta	−5% a +5%	713		Garrafa Vazia	1						
+				1032		Flor de Planta Carnívora	2						
+				7134		Vasilha de Mistura	1						
+7138		Frasco de Esfera Marinha	−5% a +5%	713		Garrafa Vazia	1						
+				1050		Tendões	1						
+				1051		Neurônio	1						
+				7134		Vasilha de Mistura	1						
+7139		Frasco de Revestimento	−15% a −5%	713		Garrafa Vazia	1						
+				950		Coração de Sereia	1						
+				1044		Presa de Zenorc	1						
+				970		Álcool	1						
+				7134		Vasilha de Mistura	1						
+545		Poção Vermelha Compacta	−5%	1092		Tubo de Ensaio	1						
+				501		Poção Vermelha	1						
+				952		Espinho de Cacto	1						
+				7134		Vasilha de Mistura	1						
+546		Poção Amarela Compacta	−10% a −5%	1092		Tubo de Ensaio	1						
+				503		Poção Amarela	1						
+				1017		Bigodes de Toupeira	1						
+				7134		Vasilha de Mistura	1						
+547		Poção Branca Compacta	−15% a −5%	1092		Tubo de Ensaio	1						
+				504		Poção Branca	1						
+				1061		Areia Estelar de Bruxa	1						
+				7134		Vasilha de Mistura	1						
+12119		Poção Antiágua	−5% a +5%	1093		Garrafa de Poção	1						
+				717		Gema Azul	3						
+				950		Coração de Sereia	1						
+				7134		Vasilha de Mistura	1						
+12121		Poção Antivento	−5% a +5%	1093		Garrafa de Poção	1						
+				717		Gema Azul	3						
+				1057		Pó de Traça	1						
+				7134		Vasilha de Mistura	1						
+12120		Poção Antiterra	−5% a +5%	1093		Garrafa de Poção	1						
+				715		Gema Amarela	2						
+				7126		Jellopy Tamanho Família	1						
+				7134		Vasilha de Mistura	1						
+12118		Poção Antifogo	−5% a +5%	1093		Garrafa de Poção	1						
+				716		Gema Vermelha	2						
+				1012		Brasão	1						
+				7134		Vasilha de Mistura	1						

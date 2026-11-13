@@ -1,0 +1,36 @@
+ID do produto	Ícone do produto	Produto	Taxa/fator	ID do material	Ícone do material	Material	Quantidade		FÓRMULA E CALCULADORA				
+12717		Curare		7155		Pele de Sapo	20		Chance = chance-base de Pesquisa de Toxinas + (DES + classe + SOR×2)/20 ± 5.				
+				7937		Amoena	1						
+				7931		Kit de Veneno	1		Entradas	Valor		Resultado	Calculado
+				7134		Vasilha de Mistura	1		Nível de Pesquisa de Toxinas (1–10)	10		Chance calculada (%)	98
+12722		Pirexia		7003		Pele de Anolian	20		DES	130			
+				7933		Lantana	1		Nível de classe	70			
+				7931		Kit de Veneno	1		SOR	130			
+				7134		Vasilha de Mistura	1		Ajuste aleatório (−5 a +5)	-5			
+12720		Squamata		957		Unha Apodrecida	25						
+				7935		Celatom	1						
+				7931		Kit de Veneno	1						
+				7134		Vasilha de Mistura	1						
+12718		Vípera		7936		Scoforia	1						
+				7932		Nerium	1						
+				7931		Kit de Veneno	1						
+				7134		Vasilha de Mistura	1						
+6128		Antídoto		511		Ervas Verdes	2						
+				510		Erva Azul	1						
+				509		Erva Branca	1						
+12724		Beladona		7565		Veneno Pegajoso	10						
+				709		Izidor	1						
+				7931		Kit de Veneno	1						
+				7134		Vasilha de Mistura	1						
+12723		Waraitake		7033		Esporo Venenoso	10						
+				7934		Makulata	1						
+				7931		Kit de Veneno	1						
+				7134		Vasilha de Mistura	1						
+12721		Cicuta		7565		Veneno Pegajoso	10						
+				7932		Nerium	1						
+				7931		Kit de Veneno	1						
+				7134		Vasilha de Mistura	1						
+12719		Oblivium		950		Coração de Sereia	10						
+				709		Izidor	1						
+				7931		Kit de Veneno	1						
+				7134		Vasilha de Mistura	1						

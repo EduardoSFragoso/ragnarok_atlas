@@ -1,0 +1,19 @@
+ID do produto	Ícone do produto	Produto	Taxa/fator	ID do material	Ícone do material	Material	Quantidade		FÓRMULA E CALCULADORA				
+12429		Churrasco de Selvagem		6249		Carne de Selvagem	1		Criação = classe/4 + DES/3 + SOR/2. Dificuldade = aleatório entre 30–150 + dificuldade do prato (valor desconhecido).				
+				6250		Espeto de Cozinha	1						
+				6251		Carvão Negro	1		Entradas	Valor		Resultado	Calculado
+12430		Coquetel Uivante		6252		Sangue de Lobo	3		Nível de classe	70		Criação	125.8333333
+				6253		Gelo	2		DES	130		Dificuldade	150
+12431		Carne ao Vinho		6254		Medalhões de Carne	2		SOR	130		Diferença Criação−Dificuldade	-24.16666667
+				6255		Vasilha Grande	1		Aleatório (30–150)	150		Resultado estimado	5 pratos
+12432		Chá Gelado de Siroma		6256		Raspadinha	3		Dificuldade do prato (desconhecida)	0			
+				6257		Gelo Cristalino	2						
+				6258		Fruta de Comodo	1						
+12433		Cozido de Drosera		6259		Tentáculo de Drosera	3		COMPARAÇÃO CRIAÇÃO − DIFICULDADE				
+				507		Erva Vermelha	3		Diferença	Resultado indicado			
+				509		Erva Branca	3		≥ 30	10 a 12 pratos			
+				510		Erva Azul	3		10 a 29	10 pratos			
+				6255		Vasilha Grande	1		0	8 pratos			
+12434		Macarrão com Petite		6260		Rabo de Petite	2		-30 a -49	5 pratos			
+				6261		Macarrão Fino	1		≤ -50	Falha			
+				6262		Molho Especial	1						

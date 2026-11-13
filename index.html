@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101923">
+  <meta name="description" content="Guia comunitário de equipamentos, encantamentos, reformas e calculadoras para Ragnarök Online LATAM.">
+  <title>Ragnarök Atlas — guia LATAM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#inicio" aria-label="Ragnarök Atlas início"><span class="brand-mark">R</span><span><b>RAGNARÖK</b><small>ATLAS · LATAM</small></span></a>
+      <div class="sidebar-label">Biblioteca</div>
+      <nav class="nav-list" aria-label="Navegação principal">
+        <button class="nav-link active" data-view="inicio"><span>⌂</span> Visão geral</button>
+        <button class="nav-link" data-view="equipamentos"><span>◈</span> Equipamentos</button>
+        <button class="nav-link" data-view="encantamentos"><span>✳</span> Encantamentos</button>
+        <button class="nav-link" data-view="custos"><span>◇</span> Custos & materiais</button>
+        <button class="nav-link" data-view="complementares"><span>⌖</span> Fontes complementares</button>
+        <button class="nav-link" data-view="obtencao"><span>⌖</span> Onde obter</button>
+        <button class="nav-link" data-view="reformas"><span>↗</span> Reforma de armas</button>
+        <button class="nav-link" data-view="calculadoras"><span>∑</span> Calculadoras</button>
+        <button class="nav-link" data-view="fontes"><span>↗</span> Fontes & referências</button>
+      </nav>
+      <div class="sidebar-bottom"><span class="status-dot"></span> Base em evolução <small>· dados locais</small></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><div class="breadcrumb">RAGNARÖK ONLINE <span>/</span> <b id="crumb">VISÃO GERAL</b></div><label class="global-search"><span>⌕</span><input id="globalSearch" type="search" placeholder="Buscar equipamento, material ou episódio…"><kbd>/</kbd></label><button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button></header>
+      <div id="content" class="content"><div class="loading"><span class="spinner"></span> Carregando a biblioteca…</div></div>
+      <footer class="footer"><span>Projeto comunitário, independente e em construção.</span><span>Dados baseados nas planilhas fornecidas e em referências citadas.</span></footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
