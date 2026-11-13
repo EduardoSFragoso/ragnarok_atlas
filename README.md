@@ -20,7 +20,7 @@ Guia comunitário em português para consultar equipamentos por episódio, encan
 - [Divine Pride — documentação da API](https://www.divine-pride.net/tools/api-doc): fonte informada para dados e URLs dos ícones usados pelo projeto.
 - [Divine — Termos de uso](https://divine.inc/terms).
 
-Os ícones necessários à interface são armazenados em `assets/icons/` para evitar novas solicitações durante o uso. Conforme informado pelo mantenedor, há autorização explícita para redistribuir esses ícones e usar os dados e textos de efeitos relacionados à API neste projeto. Essa autorização é independente da licença MIT do código.
+Os 791 ícones já identificados são armazenados em `assets/icons/` para evitar novas solicitações durante o uso. Conforme informado pelo mantenedor, há autorização explícita para redistribuir esses ícones e usar os dados e textos de efeitos relacionados à API neste projeto. Essa autorização é independente da licença MIT do código.
 
 ## Aviso de licença e conteúdo de terceiros
 

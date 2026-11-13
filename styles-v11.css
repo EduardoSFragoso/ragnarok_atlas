@@ -9,3 +9,7 @@ body[data-theme="dark"]{color-scheme:dark}body[data-theme="dark"] .data-table th
 body[data-theme="dark"] .total-row th{background:#203a37;color:#b3e0d3}body[data-theme="dark"] .bonus-entry input[type=number]{background:#17232e;color:#dce6e8;border-color:#40515b}
 @media(max-width:760px){.theme-toggle span{display:none}.theme-toggle{padding:8px 9px}.table-section-head{align-items:flex-start;flex-direction:column}}@media(max-width:520px){.table-wrap{border-radius:3px}.data-table{min-width:650px}.recipe-table{min-width:500px}.table-group-title{font-size:12px}}
 @media(max-width:900px){.reform-teams{grid-template-columns:1fr}}
+
+.item-link{display:inline-flex;align-items:center;gap:6px;color:var(--link,#78baff);text-decoration:none}.item-link:hover{text-decoration:underline}.cost-summary{line-height:1.7}.cost-summary p{margin:8px 0 0}.cost-summary small{display:block;color:var(--muted)}.data-table .item-label{vertical-align:middle}
+
+.recipe-product{display:grid;gap:5px;justify-items:start}.recipe-product>.item-link{font-size:10px}
