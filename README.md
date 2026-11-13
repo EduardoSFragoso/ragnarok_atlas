@@ -1,4 +1,4 @@
-# Ragnarök Atlas · LATAM
+# Ragnarök Atlas · LATAM · v1.1
 
 Biblioteca comunitária em português para consultar informações de Ragnarök Online LATAM: equipamentos de episódio, encantamentos, custos, fontes de obtenção, reformas e receitas. As calculadoras são executadas no navegador; os valores digitados não são enviados nem salvos.
 
@@ -8,6 +8,8 @@ O projeto é independente e não é afiliado, aprovado ou mantido pela Gravity, 
 
 - Tabelas pesquisáveis de equipamentos, encantamentos, custos, fontes de obtenção e reformas.
 - Calculadoras para fabricação de flechas, criação de toxinas e venenos, runas, poções, farmacologia e culinária.
+- Catálogo completo de produtos e materiais em cada calculadora, com os ingredientes de cada produto mantidos separados.
+- Tabelas com células agrupadas para reduzir repetições, além de alternância entre tema claro e escuro.
 - Links para as páginas de referência fornecidas para o projeto.
 - Dados organizados em TSVs, separados da interface para facilitar atualizações.
 
@@ -40,6 +42,11 @@ GitHub Pages hospeda arquivos estáticos. Não coloque credenciais, dados privad
 ## Atualizar os dados
 
 Os TSVs podem ser editados ou substituídos em `data/`. Preserve a ordem das colunas esperada pelo site e mantenha, junto de cada arquivo, a fonte, autoria e licença aplicável. Se o formato mudar, atualize também `app.js`.
+
+## Versões
+
+- **1.1** — reorganiza as tabelas com agrupamento de valores repetidos; permite alternar entre modo claro e escuro; mostra o catálogo completo de produtos e separa corretamente os materiais de cada receita.
+- **1.0** — primeira versão da biblioteca estática e das calculadoras.
 
 ## Fontes
 
