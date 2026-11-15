@@ -9,6 +9,8 @@ Guia comunitário em português para consultar equipamentos por episódio, encan
 - Fontes de obtenção, totais e campos para considerar bônus de reputação.
 - Reforma de armas e referências sobre Grau e Refinamento.
 - Calculadoras executadas no navegador; os valores digitados não são enviados nem salvos.
+- Calculadoras de custo total de encantamento e de upgrade de Grau (Ep. 19), e seção de reciclagem do Ep. 19.
+- Grau e Refinamento (páginas da bROWiki), com chances normais e durante o evento.
 - Temas claro e escuro.
 
 ## Fontes
@@ -19,11 +21,12 @@ Guia comunitário em português para consultar equipamentos por episódio, encan
 - [bROWiki — demais referências de episódios, itens e habilidades](https://browiki.org/), também listadas na seção **Fontes & referências** do site.
 - [Divine Pride — documentação da API](https://www.divine-pride.net/tools/api-doc): fonte informada para dados e URLs dos ícones usados pelo projeto.
 - [Divine — Termos de uso](https://divine.inc/terms).
+- [Hazy Forest — Enchants: Glacier Weapons](https://hazyforest.com/enchants:glacier_weapons): wiki comunitária do kRO, usada para os itens de drop e os custos de Globos das Armas Invernais (Ep. 19). Esses valores aparecem com asterisco no site e podem não corresponder ao valor real do LATAM/bROWiki.
 
-Os 791 ícones já identificados são armazenados em `assets/icons/` para evitar novas solicitações durante o uso. Conforme informado pelo mantenedor, há autorização explícita para redistribuir esses ícones e usar os dados e textos de efeitos relacionados à API neste projeto. Essa autorização é independente da licença MIT do código.
+Os ícones já identificados são armazenados em `assets/icons/` para evitar novas solicitações durante o uso. O script `tools/baixar_icones.py` baixa os que ainda faltam, a partir dos IDs conhecidos pelo projeto. Conforme informado pelo mantenedor, há autorização explícita para redistribuir esses ícones e usar os dados e textos de efeitos relacionados à API neste projeto. Essa autorização é independente da licença MIT do código.
 
 ## Aviso de licença e conteúdo de terceiros
 
-O arquivo [`LICENSE`](LICENSE) aplica a licença MIT somente ao código original escrito para este projeto. Ela não cobre nem concede direitos sobre dados da API, URLs ou arquivos de ícones, textos de efeitos, conteúdo da bROWiki, informações do jogo, nomes, logotipos ou marcas de terceiros. Os dados, textos e ícones da API têm autorização de uso informada pelo mantenedor, independente da licença do código; isso não se estende automaticamente a conteúdo da bROWiki ou a outros materiais de terceiros.
+O arquivo [`LICENSE`](LICENSE) aplica a licença MIT somente ao código original escrito para este projeto. Ela não cobre nem concede direitos sobre dados da API, URLs ou arquivos de ícones, textos de efeitos, conteúdo da bROWiki e do Hazy Forest, informações do jogo, nomes, logotipos ou marcas de terceiros. Os dados, textos e ícones da API têm autorização de uso informada pelo mantenedor, independente da licença do código; isso não se estende automaticamente a conteúdo da bROWiki ou a outros materiais de terceiros.
 
-Os dados atuais foram compilados de informações da bROWiki e da API Divine Pride. Ainda não há atribuição de fonte individual registrada para cada linha de cada TSV.
+Os dados atuais foram compilados de informações da bROWiki, do Hazy Forest e da API Divine Pride. Ainda não há atribuição de fonte individual registrada para cada linha de cada TSV.

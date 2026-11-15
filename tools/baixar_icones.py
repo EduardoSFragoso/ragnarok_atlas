@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parent.parent
 ICONS = ROOT / 'assets' / 'icons'
 URL = 'https://static.divine-pride.net/images/items/item/{}.png'
 DELAY = 0.6  # segundos entre pedidos, para não sobrecarregar o servidor
-IGNORAR = {'Zeny', 'Itens variados (lista a confirmar)'}
+IGNORAR = {'Zeny', 'Itens variados (lista a confirmar)', 'Itens de drop de monstros (varia por habilidade)'}
 
 def tsv(path):
     return [l.rstrip('\r\n').split('\t') for l in path.read_text(encoding='utf-8-sig').splitlines()]
