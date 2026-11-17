@@ -4,10 +4,6 @@
     "titulo": "Episódio 19: Issgard — A Terra da Neve e das Lendas",
     "requisitos": "Nível de Base 200 · Quest anterior: Caminho da Oração (Ep. 18)",
     "recompensaTotal": "242 Pétalas de Flor Invernal · 245 Rep. Castelo de Gelo · 731,4 mi EXP Base",
-    "avisos": [
-      "Guarde desde o início: Núcleo Mágico Rgan de Baixa Qualidade (65 para história/secundárias), Casco Rgan, Casco Fino e Resistente, Pétalas e Minérios.",
-      "No Ninho da Serpente (jor_nest), entre SEMPRE usando o Disfarce de Rgan (dura 180s). Compre extras com o Lunch (/navi jor_back2 250/30)."
-    ],
     "principal": [
       {
         "capitulo": "0. Prólogo — A caminho de Issgard",
@@ -151,7 +147,8 @@
             "texto": "Fale novamente com Juncea (furiosa) para concluir a etapa.",
             "navi": "/navi jor_nest 22/141"
           }
-        ]
+        ],
+        "nota": "No Ninho da Serpente (jor_nest), entre SEMPRE usando o Disfarce de Rgan (dura 180s). Compre extras com o Lunch (/navi jor_back2 250/30)."
       },
       {
         "capitulo": "4. Relatório da Missão de Infiltração",

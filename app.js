@@ -232,7 +232,7 @@ let guideTab = 'principal';
 
 function naviBtn(cmd) {
   if (!cmd) return '';
-  return `<button type="button" class="navi-chip" data-copy-navi="${esc(cmd)}" title="Clique para copiar ${esc(cmd)}"><code>${esc(cmd)}</code><span class="navi-copy" aria-hidden="true">📋</span></button>`;
+  return `<button type="button" class="navi-chip" data-copy-navi="${esc(cmd)}" title="Clique para copiar ${esc(cmd)}"><code>${esc(cmd)}</code></button>`;
 }
 
 function itensNecessariosHtml(ep) {
@@ -259,7 +259,7 @@ function guideView() {
     const passos = cap.passos.map((p, i) => `
       <li class="guide-step"><span class="step-num">${i + 1}.</span> <span class="step-text">${esc(p.texto)}</span>${naviBtn(p.navi)}</li>
     `).join('');
-    const body = `${cap.recompensa ? `<p class="gift-line">🎁 ${esc(cap.recompensa)}</p>` : ''}<ol class="guide-steps">${passos}</ol>`;
+    const body = `${cap.nota ? `<p class="gift-line">⚠️ ${esc(cap.nota)}</p>` : ''}${cap.recompensa ? `<p class="gift-line">🎁 ${esc(cap.recompensa)}</p>` : ''}<ol class="guide-steps">${passos}</ol>`;
     return fold(esc(cap.capitulo), body, { open: idx === 0, count: `${cap.passos.length} ${cap.passos.length === 1 ? 'passo' : 'passos'}` });
   }).join('');
 
@@ -282,7 +282,6 @@ function guideView() {
         <h1 class="page-title">${esc(ep.titulo)}</h1>
         <p class="page-subtitle">${esc(ep.requisitos)} · ${esc(ep.recompensaTotal)}</p>
       </div>
-      <span class="count-pill">CLIQUE NO /NAVI PARA COPIAR</span>
     </div>
     ${avisosHtml}
     ${itensNecessariosHtml(ep)}
@@ -310,12 +309,10 @@ document.addEventListener('click', e => {
   if (copyBtn) {
     const text = copyBtn.dataset.copyNavi;
     navigator.clipboard?.writeText(text).then(() => {
-      const label = copyBtn.querySelector('span:last-child');
-      if (label) {
-        const old = label.textContent;
-        label.textContent = '✓ Copiado!';
-        setTimeout(() => { label.textContent = old; }, 1400);
-      }
+      const old = copyBtn.title;
+      copyBtn.classList.add('copied');
+      copyBtn.title = 'Copiado!';
+      setTimeout(() => { copyBtn.classList.remove('copied'); copyBtn.title = old; }, 1400);
     });
   }
 });
