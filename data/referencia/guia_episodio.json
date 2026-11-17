@@ -1,0 +1,225 @@
+[
+  {
+    "id": "ep19",
+    "titulo": "Episódio 19: Issgard — A Terra da Neve e das Lendas",
+    "requisitos": "Nível de Base 200 · Quest anterior: Caminho da Oração (Ep. 18)",
+    "recompensaTotal": "242 Pétalas de Flor Invernal · 245 Rep. Castelo de Gelo · 731,4 mi EXP Base",
+    "avisos": [
+      "Guarde desde o início: Núcleo Mágico Rgan de Baixa Qualidade (65 para história/secundárias), Casco Rgan, Casco Fino e Resistente, Pétalas e Minérios.",
+      "No Ninho da Serpente (jor_nest), entre SEMPRE usando o Disfarce de Rgan (dura 180s). Compre extras com o Lunch (/navi jor_back2 250/30)."
+    ],
+    "principal": [
+      {
+        "capitulo": "0. Prólogo — A caminho de Issgard",
+        "recompensa": "40 Pétalas · 50 Rep. · 65,3 mi EXP Base · Libera Patrulha Iwin e S1",
+        "passos": [
+          { "texto": "Fale com o Aldeão do Lobo Cinzento para iniciar a busca por Bagot.", "navi": "/navi wolfvill 223/83" },
+          { "texto": "Fale com Smart Elly na Mansão de Varmundt (em alguns servidores: ba_in01 341/369).", "navi": "/navi ba_in01 384/114" },
+          { "texto": "Fale com Crux para voltar ao Castelo de Prontera.", "navi": "/navi ba_in01 386/110" },
+          { "texto": "Atravesse o portal e fale com Crux e Nyhill.", "navi": "/navi prt_cas 320/270" },
+          { "texto": "Fale com Nyhill na mesa à direita para receber o Convite do Guardião.", "navi": "/navi prt_cas 331/343" },
+          { "texto": "Reencontre a equipe na mansão para preparar a aeronave.", "navi": "/navi ba_maison 186/251" },
+          { "texto": "Fale com a Navegadora Ginger para embarcar.", "navi": "/navi ba_in01 30/264" },
+          { "texto": "Na aeronave, entregue o Convite do Guardião para Ginger.", "navi": "/navi air_if 46/71" },
+          { "texto": "Fale com Lehar e seus amigos na aeronave.", "navi": "/navi air_if 32/63" },
+          { "texto": "Fale novamente com Ginger para desembarcar em Issgard.", "navi": "/navi air_if 46/71" },
+          { "texto": "Após o pouso, fale com Lehar.", "navi": "/navi jor_tail 221/53" },
+          { "texto": "Suba até o portal norte e, no mapa seguinte, siga para o portal à direita até o Castelo de Gelo.", "navi": "/navi jor_back1 381/229" },
+          { "texto": "No interior do castelo, encontre Lehar e a família Petit.", "navi": "/navi icas_in 141/216" },
+          { "texto": "Fale com o Guardião Leon para concluir o prólogo.", "navi": "/navi icas_in 138/220" }
+        ]
+      },
+      {
+        "capitulo": "1. Patrulha Iwin (Instância)",
+        "recompensa": "2 Pétalas · 5 Rep. · 16 mi EXP Base",
+        "passos": [
+          { "texto": "Fale com o Líder da Patrulha <Eagle Patrol> no portal oeste para iniciar a instância. Dica: dentro dela, corra direto até o jovem careca no topo do mapa, fale com ele e saia pelo portal norte ao lado.", "navi": "/navi icecastle 23/115" }
+        ]
+      },
+      {
+        "capitulo": "2. Reconhecimento da Transformação Rgan",
+        "recompensa": "27 Pétalas · 30 Rep. · 52,2 mi EXP Base · 1x Disfarce de Rgan",
+        "passos": [
+          { "texto": "Fale com o Jovem Misterioso (Lunch) que você salvou na patrulha.", "navi": "/navi jor_back2 250/30" },
+          { "texto": "Volte ao Castelo de Gelo e fale com Horuru perto do portal.", "navi": "/navi icecastle 27/126" },
+          { "texto": "No salão de refeições, fale com Aurelie Petit e a equipe.", "navi": "/navi icas_in 34/189" },
+          { "texto": "Vá para oeste/norte/oeste, use o Disfarce de Rgan e fale com Horuru para transformar o grupo.", "navi": "/navi jor_back3 99/317" }
+        ]
+      },
+      {
+        "capitulo": "3. Infiltração no Ninho da Serpente",
+        "recompensa": "25 Pétalas · 30 Rep. · ~209 mi EXP Base total · Libera Diárias do Ninho e S5–S8",
+        "passos": [
+          { "texto": "Entre na caverna e vá ao 2º andar falar com Miriam (mantenha o Disfarce ativo daqui em diante).", "navi": "/navi jor_dun02 263/170" },
+          { "texto": "Entre no Ninho da Serpente e fale com o Sacerdote Rgan a sudoeste.", "navi": "/navi jor_nest 185/49" },
+          { "texto": "Fale com o Bispo Rgan no incubatório superior.", "navi": "/navi jor_nest 196/202" },
+          { "texto": "Fale com o Bispo Rgan próximo à área dos humanos.", "navi": "/navi jor_nest 115/187" },
+          { "texto": "Continue para noroeste e fale com o Bispo Rgan e Sarekhgand.", "navi": "/navi jor_nest 53/244" },
+          { "texto": "Vá ao laboratório a oeste e fale com Juncea para o exame.", "navi": "/navi jor_nest 22/141" },
+          { "texto": "Volte a Miriam no 2º andar da caverna para buscar cascas de ovo.", "navi": "/navi jor_dun02 263/170" },
+          { "texto": "Pegue uma Casca de Ovo Rgan Superior com o Sacerdote Rgan no incubatório superior.", "navi": "/navi jor_nest 23/58" },
+          { "texto": "Entregue a casca para Juncea.", "navi": "/navi jor_nest 22/141" },
+          { "texto": "Fale com Bagot que aparece no laboratório.", "navi": "/navi jor_nest 26/142" },
+          { "texto": "Fale novamente com Juncea (furiosa) para concluir a etapa.", "navi": "/navi jor_nest 22/141" }
+        ]
+      },
+      {
+        "capitulo": "4. Relatório da Missão de Infiltração",
+        "recompensa": "50 Pétalas · 60 Rep. · 143,6 mi EXP Base · Libera Teleporte Syaryara e Destruição da Aeronave",
+        "passos": [
+          { "texto": "Disfarçado, encontre Lazy no Ninho.", "navi": "/navi jor_nest 87/164" },
+          { "texto": "Vá para noroeste e fale com Lazy perto da aeronave.", "navi": "/navi jor_nest 24/252" },
+          { "texto": "Desça ao 2º andar da caverna e fale com o Guarda Rgan.", "navi": "/navi jor_dun02 153/239" },
+          { "texto": "Fale com Miriam no incubatório inferior.", "navi": "/navi jor_dun02 150/269" },
+          { "texto": "Volte ao Castelo de Gelo e fale com Aurelie Petit no salão de refeições.", "navi": "/navi icas_in 34/189" }
+        ]
+      },
+      {
+        "capitulo": "5. Busca por Vulnerabilidades",
+        "recompensa": "Recebe o Livro-caixa de quest",
+        "passos": [
+          { "texto": "Disfarçado, fale com Lazy no Ninho.", "navi": "/navi jor_nest 127/207" },
+          { "texto": "Ande perto da parte externa do Laboratório de Juncea até abrir diálogo.", "navi": "/navi jor_nest 53/156" },
+          { "texto": "Examine a primeira Pilha de Documentos.", "navi": "/navi jor_nest 19/141" },
+          { "texto": "Examine a segunda Pilha de Documentos ao norte.", "navi": "/navi jor_nest 21/195" },
+          { "texto": "Entre no Laboratório de Bagot a noroeste.", "navi": "/navi jor_nest 66/260" },
+          { "texto": "Examine a Pilha de Documentos dentro do laboratório.", "navi": "/navi jor_dun03 74/71" },
+          { "texto": "Examine a Pilha de Documentos ultrassecreta.", "navi": "/navi jor_dun03 49/80" },
+          { "texto": "Saia do laboratório e pegue o Livro-caixa na mesa perto dos Guardas Rgan.", "navi": "/navi jor_nest 181/173" },
+          { "texto": "Escute a conversa entre o Guarda Rgan e o Capitão da Guarda.", "navi": "/navi jor_nest 173/177" },
+          { "texto": "Volte a Lazy para relatar suas descobertas.", "navi": "/navi jor_nest 127/207" }
+        ]
+      },
+      {
+        "capitulo": "6. Abordagem Furtiva",
+        "recompensa": "Avança para o Cap. 7 (Consome 1 Petisco grátis + 2x [1 Petisco OU 10 Núcleos de Baixa Qualidade])",
+        "passos": [
+          { "texto": "Fale com Juncea no laboratório (ela pedirá algo doce).", "navi": "/navi jor_nest 31/140" },
+          { "texto": "No Castelo de Gelo, fale com Wirorung e Jaerorong para ganhar 1x Petisco de Gelo grátis.", "navi": "/navi icas_in 245/197" },
+          { "texto": "Volte a Juncea, entregue o Petisco e faça mais 2 entregas (1 Petisco ou 10 Núcleos de Baixa Qualidade cada). Depois mostre o Livro-caixa.", "navi": "/navi jor_nest 31/140" }
+        ]
+      },
+      {
+        "capitulo": "7 e 8. Suspeita Crescente & Laboratório de Bagot (Chefe Solo)",
+        "recompensa": "Libera a instância diária Simulação após a história",
+        "passos": [
+          { "texto": "Fale com Lazy na sala à direita do Castelo de Gelo.", "navi": "/navi icas_in 245/197" },
+          { "texto": "Fale com Miriam ao lado (reponha Disfarces de Rgan antes de voltar ao Ninho).", "navi": "/navi icas_in 249/199" },
+          { "texto": "Examine a Caixa Estranha na área de trabalho de Juncea.", "navi": "/navi jor_nest 19/190" },
+          { "texto": "Pegue o Tubo de Ensaio vazio na mesa e colete o líquido da Caixa Estranha.", "navi": "/navi jor_nest 20/194" },
+          { "texto": "Fale com o Rgan que aparece ao lado.", "navi": "/navi jor_nest 24/185" },
+          { "texto": "Entre no Laboratório de Bagot a noroeste.", "navi": "/navi jor_nest 66/260" },
+          { "texto": "Fale com Juncea para iniciar a instância SOLO contra Simulation Juncea (Nv 215, Veneno, 225M HP — use Carta Bathory ou Druida Maligno contra Dark Grand Cross).", "navi": "/navi jor_dun03 57/63" }
+        ]
+      },
+      {
+        "capitulo": "9 e 10. Ninho da Serpente Caótico (Instância)",
+        "recompensa": "50 Pétalas · 25 Rep. · 130,6 mi EXP Base · Consome 20 Núcleos de Baixa Qualidade · Libera Incinerador",
+        "passos": [
+          { "texto": "De volta ao Castelo de Gelo, fale com Horuru.", "navi": "/navi icecastle 27/126" },
+          { "texto": "Entre na casa/estalagem de Horuru.", "navi": "/navi icecastle 62/134" },
+          { "texto": "Fale com Horuru e a equipe lá dentro.", "navi": "/navi icas_in 247/116" },
+          { "texto": "Entregue 20x Núcleo Mágico Rgan de Baixa Qualidade para Vellgunde preparar o antídoto.", "navi": "/navi icas_in 244/117" },
+          { "texto": "Fale com Juncea após ela acordar.", "navi": "/navi icas_in 243/120" },
+          { "texto": "Fale com Aurelie na mesma sala.", "navi": "/navi icas_in 249/113" },
+          { "texto": "Use um Disfarce de Rgan e entre na área especial pelo 2º andar da caverna.", "navi": "/navi jor_dun01 8/238" },
+          { "texto": "Fale com Horuru na área especial.", "navi": "/navi jor_que 271/88" },
+          { "texto": "Fale com Miriam ao norte.", "navi": "/navi jor_que 144/253" },
+          { "texto": "Fale com o Rgan Intermediário no centro.", "navi": "/navi jor_que 131/148" },
+          { "texto": "Encontre Lehar a sudoeste para abrir a instância Ninho da Serpente Caótico (grupo permitido). Dentro dela, elimine todos os monstros errantes, desligue os dispositivos (1@jorchs 191/203 duas vezes) e chegue ao Portão Central (1@jorchs 38/272).", "navi": "/navi jor_que 32/37" }
+        ]
+      },
+      {
+        "capitulo": "11. Os que Desapareceram (Conclusão)",
+        "recompensa": "50 Pétalas · 50 Rep. · 130,6 mi EXP Base · Libera S4, Simulação e Teleportes",
+        "passos": [
+          { "texto": "No salão de refeições do Castelo de Gelo, fale com Aurelie Petit e a equipe para finalizar o Episódio 19.", "navi": "/navi icas_in 34/189" }
+        ]
+      }
+    ],
+    "secundarias": [
+      {
+        "codigo": "S1",
+        "titulo": "Santa da Purificação",
+        "prerequisito": "Fim do Cap. 0",
+        "recompensa": "30 Pétalas · 50 Rep. · Libera S2, Dia da Friederike, purificação de Núcleos e Trenó",
+        "passos": [
+          { "texto": "Fale com Voglinde no Castelo de Gelo.", "navi": "/navi icas_in 162/224" },
+          { "texto": "Fale com Maram e depois com Lehar (136/197), então volte a Voglinde.", "navi": "/navi icas_in 130/201" },
+          { "texto": "Pegue o trenó com Hellock para Aldebaran.", "navi": "/navi jor_tail 211/63" },
+          { "texto": "Em Aldebaran, fale com Hellock e siga para a Igreja de Prontera falar com Ellis (prontera 254/309).", "navi": "/navi aldebaran 102/103" },
+          { "texto": "No quarto da Santa no Castelo de Prontera, fale com Friederike (18/32), esvazie as malas ao redor e fale com Ellis (21/31).", "navi": "/navi prt_cas 20/32" },
+          { "texto": "Volte a Aldebaran, fale com Hellock para retornar a Issgard e leve Friederike ao quarto dela (icecastle 59/212 -> icas_in 32/123) e fale com Lehar (icas_in 35/118).", "navi": "/navi aldebaran 102/103" }
+        ]
+      },
+      {
+        "codigo": "S2",
+        "titulo": "Mar Congelado",
+        "prerequisito": "Concluir S1",
+        "recompensa": "10 Pétalas · 10 Rep. · ~130,6 mi EXP Base · Libera diárias do Fosso Abandonado",
+        "passos": [
+          { "texto": "Fale com Surr e Tamarin (27/122) no quarto de Friederike.", "navi": "/navi icas_in 27/116" },
+          { "texto": "Investigue as armadilhas em jor_back1 (300/272) e jor_back2 (346/203 e 260/294), depois fale com o Mergulhador Iwin.", "navi": "/navi jor_back2 255/312" },
+          { "texto": "Peça ajuda a Friederike no castelo.", "navi": "/navi icas_in 32/123" },
+          { "texto": "Entre no Fosso Abandonado, derrote monstros para coletar 7x Carne Congelada no total (jor_back2, jor_ab01 e jor_ab02), investigue o fim do fosso (jor_ab02 28/254) e relate a Friederike.", "navi": "/navi jor_back2 258/315" }
+        ]
+      },
+      {
+        "codigo": "S3",
+        "titulo": "Procura pelos Desaparecidos",
+        "prerequisito": "Sem pré-requisito informado",
+        "recompensa": "Libera diária Procurando Sobreviventes",
+        "passos": [
+          { "texto": "Fale com Lehar no Castelo de Gelo.", "navi": "/navi icas_in 141/216" },
+          { "texto": "Suba ao andar superior e fale com o Guardião Leon e depois com Miriam (48/252).", "navi": "/navi icas_in 42/252" }
+        ]
+      },
+      {
+        "codigo": "S4",
+        "titulo": "Rastreando o Esconderijo Subterrâneo",
+        "prerequisito": "Concluir Cap. 11 (Pós-história)",
+        "recompensa": "2 Pétalas · 5 Rep. · ~19 mi EXP Base · Libera diária Encontrar o Esconderijo Subterrâneo",
+        "passos": [
+          { "texto": "Fale com Horuru no Castelo de Gelo e depois fora dele (icecastle 27/124) para pegar 10 Antenas.", "navi": "/navi icas_in 32/184" },
+          { "texto": "Enterre as 10 antenas nos pontos marcados no minimapa em jor_back2 (5 pontos) e jor_back3 (5 pontos) e volte a Horuru (icecastle 27/126).", "navi": "/navi jor_back2 308/99" }
+        ]
+      },
+      {
+        "codigo": "S5",
+        "titulo": "Um Jeito Único de Sobreviver",
+        "prerequisito": "Cap. 3 + Disfarce de Rgan · Consome 10 Núcleos de Baixa Qualidade",
+        "recompensa": "10 Pétalas · 52,2 mi EXP Base · Libera diárias Nossa Preciosa Comida e Hobbies Elegantes",
+        "passos": [
+          { "texto": "Disfarçado, fale com Mimirgand no Ninho, derrote 10 Primitive Rgan e 10 Lowest Rgan e entregue 10 Núcleos Mágicos Rgan de Baixa Qualidade.", "navi": "/navi jor_nest 34/79" }
+        ]
+      },
+      {
+        "codigo": "S6",
+        "titulo": "Doutrina e Sermão",
+        "prerequisito": "Cap. 3 + Disfarce de Rgan",
+        "recompensa": "10 Pétalas · 52,2 mi EXP Base",
+        "passos": [
+          { "texto": "Disfarçado, ouça o sermão de Bernagand e depois fale com Yuramigand (18/92) ao lado.", "navi": "/navi jor_nest 17/97" }
+        ]
+      },
+      {
+        "codigo": "S7",
+        "titulo": "Uma Coisa Curiosa",
+        "prerequisito": "Cap. 3 + Disfarce de Rgan",
+        "recompensa": "10 Pétalas · 52,2 mi EXP Base",
+        "passos": [
+          { "texto": "Disfarçado, fale com Delfanagand, converse com os 3 Rgans nos incubatórios (274/199, 277/257 e 220/279) e retorne.", "navi": "/navi jor_nest 239/239" }
+        ]
+      },
+      {
+        "codigo": "S8",
+        "titulo": "A Velha Serpente",
+        "prerequisito": "Cap. 3 + Disfarce de Rgan · Consome 15 Núcleos de Baixa Qualidade",
+        "recompensa": "10 Pétalas · 52,2 mi EXP Base",
+        "passos": [
+          { "texto": "Disfarçado, fale com Aleigand no Ninho e entregue 15 Núcleos Mágicos Rgan de Baixa Qualidade.", "navi": "/navi jor_nest 70/100" }
+        ]
+      }
+    ]
+  }
+]
