@@ -1,0 +1,106 @@
+Orbe Lupino - Refletor 3	Orbe Lupino - Refletor 3
+Orbe Lupino - Híbrido	Orbe Lupino - Híbrido
+Orbe Lupino - Dragão	Orbe Lupino - Dragão
+Orbe Lupino - Rúnico	Orbe Lupino - Rúnico
+Orbe Lupino - Lança	Orbe Lupino - Lança
+Orbe Lupino - Guardião	Orbe Lupino - Guardião
+Orbe Lupino - Hoplita	Orbe Lupino - Hoplita
+Orbe Lupino - Domini	Orbe Lupino - Domini
+Orbe Lupino - Canhão	Orbe Lupino - Canhão
+Orbe Lupino - Lenhador	Orbe Lupino - Lenhador
+Orbe Lupino - Machado	Orbe Lupino - Machado
+Orbe Lupino - Biologia	Orbe Lupino - Biologia
+Orbe Lupino - Física	Orbe Lupino - Física
+Orbe Lupino - Química	Orbe Lupino - Química
+Orbe Lupino - Lâminas	Orbe Lupino - Lâminas
+Orbe Lupino - Loki	Orbe Lupino - Loki
+Orbe Lupino - Duelista	Orbe Lupino - Duelista
+Orbe Lupino - Ofensiva	Orbe Lupino - Ofensiva
+Orbe Lupino - Desejo	Orbe Lupino - Desejo
+Orbe Lupino - Triplo	Orbe Lupino - Triplo
+Orbe Lupino - Místico	Orbe Lupino - Místico
+Orbe Lupino - Arcanista	Orbe Lupino - Arcanista
+Orbe Lupino - Neutral	Orbe Lupino - Neutral
+Orbe Lupino - Tóxico	Orbe Lupino - Tóxico
+Orbe Lupino - Psíquica	Orbe Lupino - Psíquica
+Orbe Lupino - Feitiço	Orbe Lupino - Feitiço
+Orbe Lupino - Exorcismo	Orbe Lupino - Exorcismo
+Orbe Lupino - Judex	Orbe Lupino - Judex
+Orbe Lupino - Gemini	Orbe Lupino - Gemini
+Orbe Lupino - Lutador	Orbe Lupino - Lutador
+Orbe Lupino - Espiritual	Orbe Lupino - Espiritual
+Orbe Lupino - Pugilista	Orbe Lupino - Pugilista
+Orbe Lupino - Bomba	Orbe Lupino - Bomba
+Orbe Lupino - Atirador	Orbe Lupino - Atirador
+Orbe Lupino - Flecha	Orbe Lupino - Flecha
+Orbe Lupino - Ruído	Orbe Lupino - Ruído
+Orbe Lupino - Música	Orbe Lupino - Música
+Orbe Lupino - Temporal	Orbe Lupino - Temporal
+Orbe Lupino - Solar	Orbe Lupino - Solar
+Orbe Lupino - Lunar	Orbe Lupino - Lunar
+Orbe Lupino - Estelar	Orbe Lupino - Estelar
+Orbe Lupino - Almas	Orbe Lupino - Almas
+Orbe Lupino - Espírito	Orbe Lupino - Espírito
+Orbe Lupino - Sombrio	Orbe Lupino - Sombrio
+Orbe Lupino - Revólver	Orbe Lupino - Revólver
+Orbe Lupino - Granada	Orbe Lupino - Granada
+Orbe Lupino - Espingarda	Orbe Lupino - Espingarda
+Orbe Lupino - Ninpou	Orbe Lupino - Ninpou
+Orbe Lupino - Togatana	Orbe Lupino - Togatana
+Orbe Lupino - Mahou	Orbe Lupino - Mahou
+Orbe Lupino - Maré	Orbe Lupino - Maré
+Orbe Lupino - Selva	Orbe Lupino - Selva
+Orbe Lupino - Fauna	Orbe Lupino - Fauna
+Orbe Lupino - FOR 3	Orbe Lupino - FOR 3
+Orbe Lupino - DES 3	Orbe Lupino - DES 3
+Orbe Lupino - AGI 3	Orbe Lupino - AGI 3
+Orbe Lupino - INT 3	Orbe Lupino - INT 3
+Orbe Lupino - VIT 3	Orbe Lupino - VIT 3
+Orbe Lupino - SOR 3	Orbe Lupino - SOR 3
+Orbe Lupino - DEF 3	Orbe Lupino - DEF 3
+Orbe Lupino - DEFM 3	Orbe Lupino - DEFM 3
+Orbe Lupino - Artilheiro 3	Orbe Lupino - Artilheiro 3
+Orbe Lupino - Bárbaro 3	Orbe Lupino - Bárbaro 3
+Orbe Lupino - Mágico 3	Orbe Lupino - Mágico 3
+Orbe Lupino - FOR 2	Orbe Lupino - FOR 2
+Orbe Lupino - DES 2	Orbe Lupino - DES 2
+Orbe Lupino - AGI 2	Orbe Lupino - AGI 2
+Orbe Lupino - INT 2	Orbe Lupino - INT 2
+Orbe Lupino - VIT 2	Orbe Lupino - VIT 2
+Orbe Lupino - SOR 2	Orbe Lupino - SOR 2
+Orbe Lupino - DEF 2	Orbe Lupino - DEF 2
+Orbe Lupino - DEFM 2	Orbe Lupino - DEFM 2
+Orbe Lupino - Artilheiro 2	Orbe Lupino - Artilheiro 2
+Orbe Lupino - Bárbaro 2	Orbe Lupino - Bárbaro 2
+Orbe Lupino - Mágico 2	Orbe Lupino - Mágico 2
+Orbe Lupino - Total 3	Orbe Lupino - Total 3
+Orbe Lupino - Dano 3	Orbe Lupino - Dano 3
+Orbe Lupino - Espelho 3	Orbe Lupino - Espelho 3
+Orbe Lupino - Rapidez 3	Orbe Lupino - Rapidez 3
+Orbe Lupino - Variável 3	Orbe Lupino - Variável 3
+Orbe Lupino - Crítico 3	Orbe Lupino - Crítico 3
+Orbe Lupino - Precisão 3	Orbe Lupino - Precisão 3
+Orbe Lupino - Eternidade	Orbe Lupino - Eternidade
+Orbe Lupino - Sortilégio	Orbe Lupino - Sortilégio
+Orbe Lupino - Astúcia	Orbe Lupino - Astúcia
+Orbe Lupino - Superpoder	Orbe Lupino - Superpoder
+Orbe Lupino - Lampejo	Orbe Lupino - Lampejo
+Orbe Lupino - Fortuna	Orbe Lupino - Fortuna
+Orbe Lupino - Fixa 3	Orbe Lupino - Fixa 3
+Orbe Lupino - Estatura 3	Orbe Lupino - Estatura 3
+Orbe Lupino - Tamanho 3	Orbe Lupino - Tamanho 3
+Orbe Lupino - Vital 3	Orbe Lupino - Vital 3
+Orbe Lupino - Mental 3	Orbe Lupino - Mental 3
+Orbe Lupino - Cura 3	Orbe Lupino - Cura 3
+Orbe Lupino - Robusto 3	Orbe Lupino - Robusto 3
+Orbe Lupino - Atraso 4	Orbe Lupino - Atraso 4
+Orbe Lupino - Mira 4	Orbe Lupino - Mira 4
+Orbe Lupino - Fatal 4	Orbe Lupino - Fatal 4
+Orbe Lupino - Combate 4	Orbe Lupino - Combate 4
+Orbe Lupino - Encanto 4	Orbe Lupino - Encanto 4
+Orbe Lupino - Conversão	Orbe Lupino - Conversão
+Orbe Lupino - Vida	Orbe Lupino - Vida
+Orbe Lupino - Geral	Orbe Lupino - Geral
+Orbe Lupino - Mente	Orbe Lupino - Mente
+Orbe Lupino - Absorção	Orbe Lupino - Absorção
+Orbe Lupino - HPR 4	Orbe Lupino - HPR 4

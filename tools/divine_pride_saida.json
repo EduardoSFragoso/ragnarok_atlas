@@ -1,0 +1,461 @@
+{
+ "H-Almas": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Eswhoo) to equipment. / [Enchant effects] / Increases Esma and Eswhoo damage by 15%. / If refine rate is 9 or higher, increases Esma and Eswhoo damage by additional 3%. / If refine rate is 11 or higher, increases Esma and Eswhoo damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000191,
+  "nome_en": "Automatic Module (Eswhoo)"
+ },
+ "H-Arcanista": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Jack Lightning) to equipment. / [Enchant effects] / Increases Jack Frost and Chain Lightning damage by 15%. / If refine rate is 9 or higher, increases Jack Frost and Chain Lightning damage by additional 3%. / If refine rate is 11 or higher, increases Jack Frost and Chain Lightning damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000171,
+  "nome_en": "Automatic Module (Jack Lightning)"
+ },
+ "H-Atirador": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Breeze Shooting) to equipment. / [Enchant effects] / Increases Focused Arrow Strike damage by 15%, increases critical damage by 10%. / If refine rate is 9 or higher, increases Focused Arrow Strike damage by additional 3%. / If refine rate is 11 or higher, increases Focused Arrow Strike damage by additional 7%, increases critical damage by additional 5%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000183,
+  "nome_en": "Automatic Module (Breeze Shooting)"
+ },
+ "H-Bomba": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Cluster) to equipment. / [Enchant effects] / Increases Bomb Cluster damage by 15%. / If refine rate is 9 or higher, increases Bomb Cluster damage by additional 3%. / If refine rate is 11 or higher, increases Bomb Cluster damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000182,
+  "nome_en": "Automatic Module (Cluster)"
+ },
+ "H-Canhão": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Boost Cannon) to equipment. / [Enchant effects] / Increases Knuckle Boost and Arm Cannon damage by 15%. / If refine rate is 9 or higher, increases Knuckle Boost and Arm Cannon damage by additional 3%. / If refine rate is 11 or higher, increases Knuckle Boost and Arm Cannon damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000158,
+  "nome_en": "Automatic Module (Boost Cannon)"
+ },
+ "H-Canção": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Metal Echo) to equipment. / [Enchant effects] / Increases Metallic Sound and Great Echo damage by 15%. / If refine rate is 9 or higher, increases Metallic Sound and Great Echo damage by additional 3%. / If refine rate is 11 or higher, increases Metallic Sound and Great Echo damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000185,
+  "nome_en": "Automatic Module (Metal Echo)"
+ },
+ "H-Carrinho": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Cannon Tornado) to equipment. / [Enchant effects] / Increases Cart Cannon and Cart Tornado damage by 15%. / If refine rate is 9 or higher, increases Cart Cannon and Cart Tornado damage by additional 3%. / If refine rate is 11 or higher, increases Cart Cannon and Cart Tornado damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000161,
+  "nome_en": "Automatic Module (Cannon Tornado)"
+ },
+ "H-Combo": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Raging Combo) to equipment. / [Enchant effects] / Increases Raging Thrust and Chain Crush Combo damage by 15%. / If refine rate is 9 or higher, increases Raging Thrust and Chain Crush Combo damage by additional 3%. / If refine rate is 11 or higher, increases Raging Thrust and Chain Crush Combo damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000181,
+  "nome_en": "Automatic Module (Raging Combo)"
+ },
+ "H-Corporal": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Rampage Arrow) to equipment. / [Enchant effects] / Increases Rampage Blast and Knuckle Arrow damage by 15%. / If refine rate is 9 or higher, increases Rampage Blast and Knuckle Arrow damage by additional 3%. / If refine rate is 11 or higher, increases Rampage Blast and Knuckle Arrow damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000180,
+  "nome_en": "Automatic Module (Rampage Arrow)"
+ },
+ "H-Desejo": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Shadow Spell) to equipment. / [Enchant effects] / Increases all property magical damage by 15%. / If refine rate is 9 or higher, increases all property magical damage by additional 3%. / If refine rate is 11 or higher, increases all property magical damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000168,
+  "nome_en": "Automatic Module (Shadow Spell)"
+ },
+ "H-Domini": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Genesis Pressure) to equipment. / [Enchant effects] / Increases Gloria Domini and Genesis Ray damage by 15%. / If refine rate is 9 or higher, increases Gloria Domini and Genesis Ray damage by additional 3%. / If refine rate is 11 or higher, increases Gloria Domini and Genesis Ray damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000157,
+  "nome_en": "Automatic Module (Genesis Pressure)"
+ },
+ "H-Dragão": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Dragonic Breath) to equipment. / [Enchant effects] / Increases Dragon Breath and Dragon Breath - Water damage by 15%. / If refine rate is 9 or higher, increases Dragon Breath and Dragon Breath - Water damage by additional 3%. / If refine rate is 11 or higher, increases Dragon Breath and Dragon Breath - Water damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000152,
+  "nome_en": "Automatic Module (Dragonic Breath)"
+ },
+ "H-Duelista": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Berserk Slash) to equipment. / [Enchant effects] / Increases Soul Destroyer and Counter Slash damage by 15%. / If refine rate is 9 or higher, increases Soul Destroyer and Counter Slash damage by additional 3%. / If refine rate is 11 or higher, increases Soul Destroyer and Counter Slash damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000166,
+  "nome_en": "Automatic Module (Berserk Slash)"
+ },
+ "H-Elemental": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Double Bolt) to equipment. / [Enchant effects] / Increases Fire Bolt, Cold Bolt and Lightning Bolt damage by 15%. / If refine rate is 9 or higher, increases Fire Bolt, Cold Bolt and Lightning Bolt damage by additional 3%. / If refine rate is 11 or higher, increases Fire Bolt, Cold Bolt and Lightning Bolt damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000173,
+  "nome_en": "Automatic Module (Double Bolt)"
+ },
+ "H-Escudo": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Drive Press) to equipment. / [Enchant effects] / Increases Earth Drive and Shield Press damage by 15%. / If refine rate is 9 or higher, increases Earth Drive and Shield Press damage by additional 3%. / If refine rate is 11 or higher, increases Earth Drive and Shield Press damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000155,
+  "nome_en": "Automatic Module (Drive Press)"
+ },
+ "H-Espingarda": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Storm Buster Trip) to equipment. / [Enchant effects] / Increases Shattering Storm, Vanishing Buster and Round Trip damage by 15%. / If refine rate is 9 or higher, increases Shattering Storm, Vanishing Buster and Round Trip damage by additional 3%. / If refine rate is 11 or higher, increases Shattering Storm, Vanishing Buster and Round Trip damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000196,
+  "nome_en": "Automatic Module (Storm Buster Trip)"
+ },
+ "H-Espírito": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Espa) to equipment. / [Enchant effects] / Increases Espa damage by 15%. / If refine rate is 9 or higher, increases Espa damage by additional 3%. / If refine rate is 11 or higher, increases Espa damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000192,
+  "nome_en": "Automatic Module (Espa)"
+ },
+ "H-Estelar": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Flash Falling) to equipment. / [Enchant effects] / Increases Flash Kick and Falling Star damage by 15%. / If refine rate is 9 or higher, increases Flash Kick and Falling Star damage by additional 3%. / If refine rate is 11 or higher, increases Flash Kick and Falling Star damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000190,
+  "nome_en": "Automatic Module (Flash Falling)"
+ },
+ "H-Exorcismo": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Magnusmus) to equipment. / [Enchant effects] / Increases Magnus Exorcismus and Adoramus damage by 15%. / If refine rate is 9 or higher, increases Magnus Exorcismus and Adoramus damage by additional 3%. / If refine rate is 11 or higher, increases Magnus Exorcismus and Adoramus damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000176,
+  "nome_en": "Automatic Module (Magnusmus)"
+ },
+ "H-Fauna": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Power of Life) to equipment. / [Enchant effects] / Increases Picky Peck and Lunatic Carrot Beat damage by 15%. / If refine rate is 9 or higher, increases Picky Peck and Lunatic Carrot Beat damage by additional 3%. / If refine rate is 11 or higher, increases Picky Peck and Lunatic Carrot Beat damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000202,
+  "nome_en": "Automatic Module (Power of Life)"
+ },
+ "H-Feitiço": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Diamond Grave) to equipment. / [Enchant effects] / Increases Diamond Dust and Earth Grave damage by 15%. / If refine rate is 9 or higher, increases Diamond Dust and Earth Grave damage by additional 3%. / If refine rate is 11 or higher, increases Diamond Dust and Earth Grave damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000175,
+  "nome_en": "Automatic Module (Diamond Grave)"
+ },
+ "H-Flecha": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Aimed Storm) to equipment. / [Enchant effects] / Increases Aimed Bolt and Arrow Storm damage by 15%. / If refine rate is 9 or higher, increases Aimed Bolt and Arrow Storm damage by additional 3%. / If refine rate is 11 or higher, increases Aimed Bolt and Arrow Storm damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000184,
+  "nome_en": "Automatic Module (Aimed Storm)"
+ },
+ "H-Granada": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Fire Howling Tail) to equipment. / [Enchant effects] / Increases Fire Rain, Howling Mine and Dragon Tail damage by 15%. / If refine rate is 9 or higher, increases Fire Rain, Howling Mine and Dragon Tail damage by additional 3%. / If refine rate is 11 or higher, increases Fire Rain, Howling Mine and Dragon Tail damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000195,
+  "nome_en": "Automatic Module (Fire Howling Tail)"
+ },
+ "H-Hoplita": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Vanishing Cannon) to equipment. / [Enchant effects] / Increases Vanishing Point and Cannon Spear damage by 15%. / If refine rate is 9 or higher, increases Vanishing Point and Cannon Spear damage by additional 3%. / If refine rate is 11 or higher, increases Vanishing Point and Cannon Spear damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000156,
+  "nome_en": "Automatic Module (Vanishing Cannon)"
+ },
+ "H-Lança": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Hundred Spiral) to equipment. / [Enchant effects] / Increases Clashing Spiral and Hundred Spear damage by 15%. / If refine rate is 9 or higher, Increases Clashing Spiral and Hundred Spear damage by additional 3%. / If refine rate is 11 or higher, Increases Clashing Spiral damage by additional 7%, reduces skill cooldown of Hundred Spear by 0.25 seconds. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000154,
+  "nome_en": "Automatic Module (Hundred Spiral)"
+ },
+ "H-Loki": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Cutter Slasher) to equipment. / [Enchant effects] / Increases Rolling Cutter and Cross Ripper Slasher damage by 15%. / If refine rate is 9 or higher, increases Rolling Cutter and Cross Ripper Slasher damage by additional 3%. / If refine rate is 11 or higher, increases Rolling Cutter and Cross Ripper Slasher damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000165,
+  "nome_en": "Automatic Module (Cutter Slasher)"
+ },
+ "H-Lunar": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Moon Kick) to equipment. / [Enchant effects] / Increases New Moon Kick and Full Moon Kick damage by 15%. / If refine rate is 9 or higher, increases New Moon Kick and Full Moon Kick damage by additional 3%. / If refine rate is 11 or higher, increases New Moon Kick and Full Moon Kick damage by additional 7%, increases critical damage by 5%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000189,
+  "nome_en": "Automatic Module (Moon Kick)"
+ },
+ "H-Lutador": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Tiger Empire) to equipment. / [Enchant effects] / Increases Tiger Cannon and Fallen Empire damage by 15%. / If refine rate is 9 or higher, increases Tiger Cannon and Fallen Empire damage by additional 3%. / If refine rate is 11 or higher, increases Tiger Cannon and Fallen Empire damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000179,
+  "nome_en": "Automatic Module (Tiger Empire)"
+ },
+ "H-Lâminas": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Sonic Impact) to equipment. / [Enchant effects] / Increases Sonic Blow and Cross Impact damage by 15%. / If refine rate is 9 or higher, increases Sonic Blow and Cross Impact damage by additional 3%. / If refine rate is 11 or higher, increases Sonic Blow and Cross Impact damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000164,
+  "nome_en": "Automatic Module (Sonic Impact)"
+ },
+ "H-Machado": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Tornado Swing) to equipment. / [Enchant effects] / Increases Axe Tornado and Power Swing damage by 15%. / If refine rate is 9 or higher, increases Axe Tornado and Power Swing damage by additional 3%. / If refine rate is 11 or higher, increases Axe Tornado and Power Swing damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000160,
+  "nome_en": "Automatic Module (Tornado Swing)"
+ },
+ "H-Mahou": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Exploding Flake Wind) to equipment. / [Enchant effects] / Increases Exploding Dragon, Snow Flake Draft and First Wind damage by 15%. / If refine rate is 9 or higher, increases Exploding Dragon, Snow Flake Draft and First Wind damage by additional 3%. / If refine rate is 11 or higher, increases Exploding Dragon, Snow Flake Draft and First Wind damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000199,
+  "nome_en": "Automatic Module (Exploding Flake Wind)"
+ },
+ "H-Maré": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Power of Sea) to equipment. / [Enchant effects] / Reduces skill cooldown of Tuna Party and Tasty Shrimp Party by 0.5 seconds. / If refine rate is 9 or higher, reduces skill cooldown of Tuna Party and Tasty Shrimp Party by additional 1 second. / If refine rate is 11 or higher, reduces skill cooldown of Tuna Party and Tasty Shrimp Party by additional 1.5 seconds. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000200,
+  "nome_en": "Automatic Module (Power of Sea)"
+ },
+ "H-Musical": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Reverberation) to equipment. / [Enchant effects] / Increases Reverberation damage by 15%. / If refine rate is 9 or higher, increases Reverberation damage by additional 3%. / If refine rate is 11 or higher, increases Reverberation damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000186,
+  "nome_en": "Automatic Module (Reverberation)"
+ },
+ "H-Místico": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Crimson Strain) to equipment. / [Enchant effects] / Increases Crimson Rock and Earth Strain damage by 15%. / If refine rate is 9 or higher, increases Crimson Rock and Earth Strain damage by additional 3%. / If refine rate is 11 or higher, increases Crimson Rock and Earth Strain damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000170,
+  "nome_en": "Automatic Module (Crimson Strain)"
+ },
+ "H-Necro": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Curse Explosion) to equipment. / [Enchant effects] / Increases Curse Explosion damage by 15%. / If refine rate is 9 or higher, increases Curse Explosion damage by additional 3%. / If refine rate is 11 or higher, increases Curse Explosion damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000193,
+  "nome_en": "Automatic Module (Curse Explosion)"
+ },
+ "H-Neutral": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Comet Vortex) to equipment. / [Enchant effects] / Increases Comet and Tetra Vortex damage by 15%. / If refine rate is 9 or higher, increases Comet and Tetra Vortex damage by additional 3%. / If refine rate is 11 or higher, increases Comet and Tetra Vortex damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000172,
+  "nome_en": "Automatic Module (Comet Vortex)"
+ },
+ "H-Ninpou": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Flame Ice Wind) to equipment. / [Enchant effects] / Increases Flaming Petals, Freezing Spear and Wind Blade damage by 15%. / If refine rate is 9 or higher, increases Flaming Petals, Freezing Spear and Wind Blade damage by additional 3%. / If refine rate is 11 or higher, increases Flaming Petals, Freezing Spear and Wind Blade damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000197,
+  "nome_en": "Automatic Module (Flame Ice Wind)"
+ },
+ "H-Ofensiva": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Fatal Raid) to equipment. / [Enchant effects] / Increases Fatal Menace and Sightless Mind damage by 15%. / If refine rate is 9 or higher, increases Fatal Menace and Sightless Mind damage by additional 3%. / If refine rate is 11 or higher, increases Fatal Menace and Sightless Mind damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000167,
+  "nome_en": "Automatic Module (Fatal Raid)"
+ },
+ "H-Planta": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Crazy Mandragora) to equipment. / [Enchant effects] / Increases Crazy Vines damage by 15%, reduces skill cooldown of Mandragora Howl by 0.3 seconds. / If refine rate is 9 or higher, increases Crazy Vines damage by additional 3%, reduces skill cooldown of Mandragora Howl by additional 0.3 seconds. / If refine rate is 11 or higher, increases Crazy Vines damage by additional 7%, reduces skill cooldown of Mandragora Howl by additional 0.4 seconds. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000162,
+  "nome_en": "Automatic Module (Crazy Mandragora)"
+ },
+ "H-Psíquico": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Warm Wave) to equipment. / [Enchant effects] / Increases Psychic Wave damage by 15%, reduces skill cooldown of Warmer by 1 second. / If refine rate is 9 or higher, increases Psychic Wave damage by additional 3%, reduces skill cooldown of Warmer by additional 2 seconds. / If refine rate is 11 or higher, increases Psychic Wave damage by additional 7%, reduces skill cooldown of Warmer by additional 4 seconds. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000174,
+  "nome_en": "Automatic Module (Warm Wave)"
+ },
+ "H-Química": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Acid Explosion) to equipment. / [Enchant effects] / Increases Acid Bomb and Spore Explosion damage by 15%. / If refine rate is 9 or higher, increases Acid Bomb and Spore Explosion damage by additional 3%. / If refine rate is 11 or higher, increases Acid Bomb and Spore Explosion damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000163,
+  "nome_en": "Automatic Module (Acid Explosion)"
+ },
+ "H-Revólver": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Des Hammer Dance) to equipment. / [Enchant effects] / Increases Desperado, Fire Dance and Hammer of God damage by 15%. / If refine rate is 9 or higher, increases Desperado, Fire Dance and Hammer of God damage by additional 3%. / If refine rate is 11 or higher, increases Desperado, Fire Dance and Hammer of God damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000194,
+  "nome_en": "Automatic Module (Des Hammer Dance)"
+ },
+ "H-Robô": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Cold Flare) to equipment. / [Enchant effects] / Increases Ice Launcher and Flame Launcher damage by 15%. / If refine rate is 9 or higher, increases Ice Launcher and Flame Launcher damage by additional 3%. / If refine rate is 11 or higher, increases Ice Launcher and Flame Launcher damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000159,
+  "nome_en": "Automatic Module (Cold Flare)"
+ },
+ "H-Rúnico": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Wave Break) to equipment. / [Enchant effects] / Increases Sonic Wave and Ignition Break damage by 15%. / If refine rate is 9 or higher, increases Sonic Wave and Ignition Break damage by additional 3%. / If refine rate is 11 or higher, increases Sonic Wave damage by additional 7%, reduces skill cooldown of Ignition Break by 0.25 seconds. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000153,
+  "nome_en": "Automatic Module (Wave Break)"
+ },
+ "H-Sagrado": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Holy Judex) to equipment. / [Enchant effects] / Increases Holy light and Judex damage by 15%. / If refine rate is 9 or higher, increases Holy light and Judex damage by additional 3%. / If refine rate is 11 or higher, increases Holy light and Judex damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000177,
+  "nome_en": "Automatic Module (Holy Judex)"
+ },
+ "H-Santo": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Duple lica) to equipment. / [Enchant effects] / Increases Duple Light damage by 15%, reduces skill cooldown of Basilica by 2 seconds. / If refine rate is 9 or higher, increases Duple Light damage by additional 3%, reduces skill cooldown of Basilica by additional 3 seconds. / If refine rate is 11 or higher, increases Duple Light damage by additional 7%, reduces skill cooldown of Basilica by additional 5 seconds. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000178,
+  "nome_en": "Automatic Module (Duple Lica)"
+ },
+ "H-Selva": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Power of Land) to equipment. / [Enchant effects] / Increases Silvervine Stem Spear and Catnip Meteor damage by 15%. / If refine rate is 9 or higher, increases Silvervine Stem Spear and Catnip Meteor damage by additional 3%. / If refine rate is 11 or higher, increases Silvervine Stem Spear and Catnip Meteor damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000201,
+  "nome_en": "Automatic Module (Power of Land)"
+ },
+ "H-Solar": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Prominence Burst) to equipment. / [Enchant effects] / Increases Prominence Kick and Solar Burst damage by 15%. / If refine rate is 9 or higher, increases Prominence Kick and Solar Burst damage by additional 3%. / If refine rate is 11 or higher, increases Prominence Kick and Solar Burst damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000188,
+  "nome_en": "Automatic Module (Prominence Burst)"
+ },
+ "H-Taijutsu": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Cross Slash) to equipment. / [Enchant effects] / Increases Cross Slash damage by 15%. / If refine rate is 9 or higher, increases Cross Slash damage by additional 3%. / If refine rate is 11 or higher, increases Cross Slash damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000198,
+  "nome_en": "Automatic Module (Cross Slash)"
+ },
+ "H-Temporal": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Vulcan Severe) to equipment. / [Enchant effects] / Increases Arrow Vulcan and Severe Rainstorm damage by 15%. / If refine rate is 9 or higher, increases Arrow Vulcan and Severe Rainstorm damage by additional 3%. / If refine rate is 11 or higher, increases Arrow Vulcan and Severe Rainstorm damage by additional 7%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000187,
+  "nome_en": "Automatic Module (Vulcan Severe)"
+ },
+ "H-Triplo": {
+  "alvos": [
+   "Colete"
+  ],
+  "busca": false,
+  "efeito": "Grants Automatic Orb (Angle Shot) to equipment. / [Enchant effects] / Increases Triangle Shot damage by 15%, increases long ranged physical damage by 10%. / If refine rate is 9 or higher, increases Triangle Shot damage by additional 3%. / If refine rate is 11 or higher, increases Triangle Shot damage by additional 7%, increases long ranged physical damage by additional 5%. / [Enchant-able equipment] / Automatic Armor A-type / Automatic Armor B-type / _ / Weight: 1",
+  "id": 1000169,
+  "nome_en": "Automatic Module (Angle Shot)"
+ }
+}
