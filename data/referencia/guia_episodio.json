@@ -65,6 +65,9 @@
             "texto": "Fale com o Guardião Leon para concluir o prólogo.",
             "navi": "/navi icas_in 138/220"
           }
+        ],
+        "itens": [
+          "Convite do Guardião (recebido na quest)"
         ]
       },
       {
@@ -75,7 +78,8 @@
             "texto": "Fale com o Líder da Patrulha <Eagle Patrol> no portal oeste para iniciar a instância. Dica: dentro dela, corra direto até o jovem careca no topo do mapa, fale com ele e saia pelo portal norte ao lado.",
             "navi": "/navi icecastle 23/115"
           }
-        ]
+        ],
+        "itens": []
       },
       {
         "capitulo": "2. Reconhecimento da Transformação Rgan",
@@ -97,6 +101,9 @@
             "texto": "Vá para oeste/norte/oeste, use o Disfarce de Rgan e fale com Horuru para transformar o grupo.",
             "navi": "/navi jor_back3 99/317"
           }
+        ],
+        "itens": [
+          "{{Disfarce de Rgan}} (1 é entregue nesta etapa)"
         ]
       },
       {
@@ -148,7 +155,11 @@
             "navi": "/navi jor_nest 22/141"
           }
         ],
-        "nota": "No Ninho da Serpente (jor_nest), entre SEMPRE usando o Disfarce de Rgan (dura 180s). Compre extras com o Lunch (/navi jor_back2 250/30)."
+        "nota": "No Ninho da Serpente (jor_nest), entre SEMPRE usando o Disfarce de Rgan (dura 180s). Compre extras com o Lunch (/navi jor_back2 250/30).",
+        "itens": [
+          "Casca de Ovo Rgan Superior (recebida na quest)",
+          "{{Disfarce de Rgan}} — mantenha ativo no Ninho"
+        ]
       },
       {
         "capitulo": "4. Relatório da Missão de Infiltração",
@@ -174,7 +185,8 @@
             "texto": "Volte ao Castelo de Gelo e fale com Aurelie Petit no salão de refeições.",
             "navi": "/navi icas_in 34/189"
           }
-        ]
+        ],
+        "itens": []
       },
       {
         "capitulo": "5. Busca por Vulnerabilidades",
@@ -220,6 +232,9 @@
             "texto": "Volte a Lazy para relatar suas descobertas.",
             "navi": "/navi jor_nest 127/207"
           }
+        ],
+        "itens": [
+          "Livro-caixa (recebido na quest)"
         ]
       },
       {
@@ -238,6 +253,9 @@
             "texto": "Volte a Juncea, entregue o Petisco e faça mais 2 entregas (1 Petisco ou 10 Núcleos de Baixa Qualidade cada). Depois mostre o Livro-caixa.",
             "navi": "/navi jor_nest 31/140"
           }
+        ],
+        "itens": [
+          "{{Petisco de Gelo}} (1 vem grátis) ou 2 entregas de 10 {{Núcleo Mágico Rgan de Baixa Qualidade}}"
         ]
       },
       {
@@ -272,6 +290,9 @@
             "texto": "Fale com Juncea para iniciar a instância SOLO contra Simulation Juncea (Nv 215, Veneno, 225M HP — use Carta Bathory ou Druida Maligno contra Dark Grand Cross).",
             "navi": "/navi jor_dun03 57/63"
           }
+        ],
+        "itens": [
+          "Tubos de ensaio recebidos na quest"
         ]
       },
       {
@@ -322,6 +343,10 @@
             "texto": "Encontre Lehar a sudoeste para abrir a instância Ninho da Serpente Caótico (grupo permitido). Dentro dela, elimine todos os monstros errantes, desligue os dispositivos (1@jorchs 191/203 duas vezes) e chegue ao Portão Central (1@jorchs 38/272).",
             "navi": "/navi jor_que 32/37"
           }
+        ],
+        "itens": [
+          "20 × {{Núcleo Mágico Rgan de Baixa Qualidade}}",
+          "{{Disfarce de Rgan}}"
         ]
       },
       {
@@ -332,6 +357,9 @@
             "texto": "No salão de refeições do Castelo de Gelo, fale com Aurelie Petit e a equipe para finalizar o Episódio 19.",
             "navi": "/navi icas_in 34/189"
           }
+        ],
+        "itens": [
+          "{{Disfarce de Rgan}} (usado também na área jor_dun01 8/238)"
         ]
       }
     ],
@@ -366,6 +394,9 @@
             "texto": "Volte a Aldebaran, fale com Hellock para retornar a Issgard e leve Friederike ao quarto dela (icecastle 59/212 -> icas_in 32/123) e fale com Lehar (icas_in 35/118).",
             "navi": "/navi aldebaran 102/103"
           }
+        ],
+        "itens": [
+          "Chocolate (presente da Voglinde — recebido na quest)"
         ]
       },
       {
@@ -390,6 +421,9 @@
             "texto": "Entre no Fosso Abandonado, derrote monstros para coletar 7x Carne Congelada no total (jor_back2, jor_ab01 e jor_ab02), investigue o fim do fosso (jor_ab02 28/254) e relate a Friederike.",
             "navi": "/navi jor_back2 258/315"
           }
+        ],
+        "itens": [
+          "{{Carne Congelada}} (cai sozinha durante a quest)"
         ]
       },
       {
@@ -406,7 +440,8 @@
             "texto": "Suba ao andar superior e fale com o Guardião Leon e depois com Miriam (48/252).",
             "navi": "/navi icas_in 42/252"
           }
-        ]
+        ],
+        "itens": []
       },
       {
         "codigo": "S4",
@@ -422,6 +457,9 @@
             "texto": "Enterre as 10 antenas nos pontos marcados no minimapa em jor_back2 (5 pontos) e jor_back3 (5 pontos) e volte a Horuru (icecastle 27/126).",
             "navi": "/navi jor_back2 308/99"
           }
+        ],
+        "itens": [
+          "10 × {{Antena de Alta Sensibilidade}} (recebidas na quest)"
         ]
       },
       {
@@ -434,6 +472,9 @@
             "texto": "Disfarçado, fale com Mimirgand no Ninho, derrote 10 Primitive Rgan e 10 Lowest Rgan e entregue 10 Núcleos Mágicos Rgan de Baixa Qualidade.",
             "navi": "/navi jor_nest 34/79"
           }
+        ],
+        "itens": [
+          "10 × {{Núcleo Mágico Rgan de Baixa Qualidade}}"
         ]
       },
       {
@@ -446,7 +487,8 @@
             "texto": "Disfarçado, ouça o sermão de Bernagand e depois fale com Yuramigand (18/92) ao lado.",
             "navi": "/navi jor_nest 17/97"
           }
-        ]
+        ],
+        "itens": []
       },
       {
         "codigo": "S7",
@@ -458,7 +500,8 @@
             "texto": "Disfarçado, fale com Delfanagand, converse com os 3 Rgans nos incubatórios (274/199, 277/257 e 220/279) e retorne.",
             "navi": "/navi jor_nest 239/239"
           }
-        ]
+        ],
+        "itens": []
       },
       {
         "codigo": "S8",
@@ -470,12 +513,15 @@
             "texto": "Disfarçado, fale com Aleigand no Ninho e entregue 15 Núcleos Mágicos Rgan de Baixa Qualidade.",
             "navi": "/navi jor_nest 70/100"
           }
+        ],
+        "itens": [
+          "15 × {{Núcleo Mágico Rgan de Baixa Qualidade}}"
         ]
       }
     ],
     "itensNecessarios": {
       "farm": {
-        "titulo": "Farm desde o primeiro monstro (não venda nada)",
+        "titulo": "Farm desde o primeiro monstro (itens compartilhados)",
         "colunas": [
           "Item",
           "Onde cai",
@@ -484,126 +530,286 @@
         ],
         "linhas": [
           [
-            "Núcleo Mágico Rgan de Baixa Qualidade",
+            "{{Núcleo Mágico Rgan de Baixa Qualidade}}",
             "Qualquer Rgan: Primitive e Lowest Rgan em jor_back3; Rgans de jor_dun01/02",
-            "Cap. 6 Juncea (20) · Cap. 9 Vellgunde (20) · S5 (10) · S8 (15) · diárias Nossa Preciosa Comida (30) e Vellgunde (30 → 3 purificados)",
-            "65 para história + secundárias · +60/dia nas diárias"
+            "História (cap. 6 e 9) · S5 (10) · S8 (15) · diárias Nosso Precioso Alimento (30) e Obtenção de Materiais de Pesquisa (30 → 3 purificados)",
+            "65 para história + secundárias · +30/dia nas diárias"
           ],
           [
-            "Casco Rgan",
-            "Rgans (mesmos lugares)",
-            "Diária Sacerdote, Tenha Piedade?? (30)",
-            "30/dia"
-          ],
-          [
-            "Casco Fino e Resistente",
-            "Ice Straw (jor_back1, jor_back2; segundo a Hazy Forest)",
-            "Diárias Hora do Almoço com Zoryara (15) e Hobbies Elegantes (10)",
-            "25/dia"
-          ],
-          [
-            "Calapi",
-            "Calmaring (jor_back3) e Cave Calmaring (jor_ab01) — cristal do interior de um Calamaring",
-            "Diária Hobbies Elegantes (10)",
-            "10/dia"
-          ],
-          [
-            "Flor-Sino de Isca",
-            "Origem não informada pelas wikis (flor usada como isca)",
-            "Diária Hobbies Elegantes (10)",
-            "10/dia"
-          ],
-          [
-            "Pétala de Flor Invernal",
+            "{{Pétala de Flor Invernal}}",
             "Todos os monstros de Issgard + recompensas",
             "Equipamento Invernal (100 por peça) · Refinadores +9 (200 e 500) · 35 → 1 Globo (Vellgunde) · loja de reputação",
             "Guarde todas"
           ],
           [
-            "Minério Mágico da Flor de Neve e Globos de Flor Invernal (normal, Brilhante, Reluzente)",
-            "Todos os monstros (Brilhante e Reluzente são raros: dungeons, instâncias, Simulation Juncea)",
+            "{{Minério Mágico da Flor de Neve}} e Globos de Flor Invernal ({{Globo de Flor Invernal}}, {{Globo de Flor Invernal Brilhante}}, {{Globo de Flor Invernal Reluzente}})",
+            "Todos os monstros (Brilhante e Reluzente são raros: dungeons, instâncias, Simulação de Batalha)",
             "Encantamentos (Vellgunde) · conversão 5 → 1 (Hoyoyo)",
             "Guarde todos"
           ],
           [
-            "Arma Vil Invernal [1]",
+            "{{Carne Congelada}}",
+            "Cai sozinha nas quests de carne (S2 e diárias)",
+            "S2 (cai durante a quest) · diárias Precisa de uma Geladeira? e Um lugar que Merece ser Abandonado",
+            "Guarde a que cair para as diárias"
+          ],
+          [
+            "{{Arma Vil Invernal [1]}}",
             "Drop em jor_dun01/02 (Calor do Deus Serpente) e jor_ab01/02 (Fosso Abandonado)",
             "Usar (Nv 230) ou queimar 3 no Incinerador → materiais de encantamento (após o cap. 9)",
             "Guarde todas"
+          ]
+        ]
+      },
+      "diarias": {
+        "titulo": "Itens usados só nas missões diárias",
+        "colunas": [
+          "Item",
+          "Onde cai",
+          "Para que serve",
+          "Quanto guardar"
+        ],
+        "linhas": [
+          [
+            "{{Casco Rgan}}",
+            "Rgans (mesmos lugares do Núcleo de Baixa Qualidade)",
+            "Diária Sacerdote, tenha piedade?? (30)",
+            "30/dia"
           ],
           [
-            "Carne Congelada",
-            "Cai sozinha no inventário durante S2 e as diárias de carne",
-            "S2 (7) · diárias do Fosso e Geladeira (20 cada)",
-            "Não precisa juntar antes"
+            "{{Casco Fino e Resistente}}",
+            "Ice Straw (jor_back1 e jor_back2, segundo a Hazy Forest)",
+            "Diárias Um agradável momento de Jeomsim (15) e Passatempo Refinado (10)",
+            "25/dia"
           ],
           [
-            "Núcleo Mágico Rgan",
-            "Cai sozinho ao matar Rgans durante a diária",
-            "Diária Dia da Friederike (10)",
+            "{{Calapi}}",
+            "Calmaring (jor_back3) e Cave Calmaring (jor_ab01) — cristal do interior de um Calamaring",
+            "Diária Passatempo Refinado (10)",
+            "10/dia"
+          ],
+          [
+            "{{Flor-Sino de Isca}}",
+            "Cave Flower (15,5%) e Unfrost Flower (27%)",
+            "Diária Passatempo Refinado (10)",
+            "10/dia"
+          ],
+          [
+            "{{Núcleo Mágico Rgan}}",
+            "Cai ao caçar Rgan Primitivo e Rgan Ínfimo durante a própria diária",
+            "Diária da Friederike (10)",
             "Não precisa juntar antes"
           ]
         ]
       },
-      "historia": {
-        "titulo": "Itens que a história consome",
+      "embarque": {
+        "titulo": "Itens que a história consome · leve de Midgard antes de embarcar",
         "colunas": [
           "Item",
           "Quantidade",
-          "Onde é usado",
+          "Para que é usado",
           "Observações"
         ],
         "linhas": [
           [
-            "Disfarce de Rgan (ID 101162 · Transformation Scroll (Rgan))",
+            "{{Disfarce de Rgan}}",
             "Vários (1 vem na quest)",
-            "Transformar o grupo (cap. 2) · toda visita ao Ninho (cap. 3–7, S5–S8 e diárias do Ninho) · área especial /navi jor_dun01 8/238 (cap. 9)",
-            "Dura só 180 s e acaba se você morrer. Compre com o Lunch (/navi jor_back2 250/30); a diária Cardápio do Lunch dá 1 por dia."
+            "Transformar o grupo (cap. 2) · toda visita ao Ninho (cap. 3–7, S5–S8 e diárias do Ninho) · área especial jor_dun01 8/238 (cap. 9)",
+            "Dura só 180 s e acaba se você morrer. Compre com o Lunch (/navi jor_back2 250/30); a diária do cardápio entrega 1 por dia."
           ],
           [
-            "Núcleo Mágico Rgan de Baixa Qualidade (ID 1000707)",
+            "{{Núcleo Mágico Rgan de Baixa Qualidade}}",
             "20 obrigatórios + 20 opcionais",
             "Juncea: 2 entregas de 10 (ou 1 Petisco cada) — cap. 6 · Vellgunde: 20, sem alternativa — cap. 9",
             "Drop de Rgans. Some +25 se for fazer S5 e S8."
           ],
           [
-            "Petisco de Gelo (ID 1000846 · Ice Cookie)",
+            "{{Petisco de Gelo}}",
             "1 grátis + até 2 opcionais",
             "1ª entrega a Juncea (o grátis) — cap. 6 · alternativa aos 10 núcleos nas 2 entregas seguintes",
-            "O primeiro vem de Wirorung e Jaerorong (/navi icas_in 245/197). As wikis não dizem onde conseguir outros."
-          ]
-        ],
-        "nota": "Itens de quest recebidos e entregues automaticamente: Convite do Guardião · Casca de Ovo Rgan Superior · Livro-caixa · Tubo de Ensaio de Juncea · Tubo de Ensaio com Líquido Vermelho · Antena de Alta Sensibilidade."
-      },
-      "midgard": {
-        "titulo": "Leve de Midgard antes de embarcar",
-        "linhas": [
-          [
-            "10 penas de um mesmo tipo",
-            "Diária Diversão Secreta. Aceita qualquer uma: Plumas de Ave, Pena Macia, Pluma Arredondada, Pluma Flamejante, Pena Vermelha, Pena de Cendrawasih, Pena de Grand Peco, Pena Azul, Pena de Harpia"
+            "O primeiro vem de Wirorung e Jaerorong (/navi icas_in 245/197)."
           ],
           [
-            "Estoque do Cardápio do Lunch",
-            "Ele pede 10 de um destes por dia e a recompensa inclui 1 Disfarce de Rgan: Jarro de Nuvem, Jarro de Saquê, Pedaço de Bambu, Pena de Cendrawasih, Cesto de Palha, Cauda de Gabiru, Pilão Yaga, Dentadura da Máscara do Dragão, Jejellopy, Pele de Leopardo"
+            "10 de um mesmo tipo de pena: {{Plumas de Ave}} · {{Pena Macia}} · {{Pluma Arredondada}} · {{Pluma Flamejante}} · {{Pena Vermelha}} · {{Pena de Cendrawasih}} · {{Pena de Grand Peco}} · {{Pena Azul}} · {{Pena de Harpia}}",
+            "10",
+            "Diária Diversão às Escondidas",
+            "Qualquer uma das penas listadas serve."
           ],
           [
-            "10 Líquido Fluorescente",
-            "Diária Hobbies Elegantes"
+            "Estoque do Cardápio do Lunch: {{Jarro de Nuvem}} · {{Jarro de Saquê}} · {{Pedaço de Bambu}} · {{Pena de Cendrawasih}} · {{Cesto de Palha}} · {{Cauda de Gabiru}} · {{Pilão Yaga}} · {{Dentadura da Máscara do Dragão}} · {{Jejellopy}} · {{Pele de Leopardo}}",
+            "10 por dia",
+            "Diária de comida do Lunch",
+            "A recompensa inclui 1 {{Disfarce de Rgan}}."
           ],
           [
-            "Carta Bathory ou Carta Druida Maligno (armadura)",
-            "Imunidade ao Dark Grand Cross da Simulation Juncea"
+            "{{Líquido Fluorescente}}",
+            "10",
+            "Diária Passatempo Refinado",
+            ""
+          ],
+          [
+            "{{Carta Bathory}} ou {{Carta Druida Maligno}}",
+            "1",
+            "Imunidade ao Dark Grand Cross da Simulação de Batalha",
+            ""
           ],
           [
             "Arma ou encantamento de Vento",
-            "Quase todos os monstros dos campos e do Fosso são de propriedade Água"
+            "1",
+            "Quase todos os monstros dos campos e do Fosso são de propriedade Água",
+            ""
           ],
           [
             "Zeny",
-            "150.000z por Arma Invernal · 5.000z a pousada · 500z o armazém"
+            "150.000z + 5.000z + 500z",
+            "150.000z por Arma Invernal · 5.000z a pousada · 500z o armazém",
+            ""
           ]
-        ]
+        ],
+        "observacaoEquip": "A carta ({{Carta Bathory}} ou {{Carta Druida Maligno}}) precisa estar equipada em Armadura para dar imunidade ao Dark Grand Cross da Simulação de Batalha. Arma ou encantamento de propriedade Vento cobre os monstros de Água dos campos e do Fosso. Ambos são opcionais, mas facilitam muito os capítulos 6 e 9 e as diárias.",
+        "nota": "Itens de quest recebidos e entregues automaticamente: Convite do Guardião · Casca de Ovo Rgan Superior · Livro-caixa · Tubo de Ensaio de Juncea · Tubo de Ensaio com Líquido Vermelho · Antena de Alta Sensibilidade (as 10 da S4 também vêm da quest)."
       }
+    },
+    "diarias": {
+      "titulo": "Missões diárias de episódio",
+      "aviso": "Todas as diárias pagam 2 {{Pétala de Flor Invernal}}; nas do Castelo de Gelo soma Reputação +5, nas do Ninho da Serpente não dá Reputação. A EXP diária consta como desconhecida (?) na browiki.",
+      "grupos": [
+        {
+          "nome": "Castelo de Gelo e arredores",
+          "diarias": [
+            {
+              "nome": "Ajuda na pesca de Moryara",
+              "tarefa": "Derrotar 20 Alga Brilhante (caçada, não consome item)",
+              "itens": "",
+              "recompensa": "2 Pétalas · Rep. +5"
+            },
+            {
+              "nome": "Procurando o Esconderijo Subterrâneo",
+              "tarefa": "Enterrar 10 Antenas de Alta Sensibilidade (entregues pela própria diária) nos pontos de jor_back2 e jor_back3",
+              "itens": "{{Antena de Alta Sensibilidade}}",
+              "recompensa": "2 Pétalas · Rep. +5"
+            },
+            {
+              "nome": "Não Alimente os Animais",
+              "tarefa": "Recuperar 1 Ração de Monstro na Planície de Escamas Congeladas",
+              "itens": "1 × {{Ração de Monstro}}",
+              "recompensa": "2 Pétalas · Rep. +5"
+            },
+            {
+              "nome": "Um agradável momento de Jeomsim",
+              "tarefa": "Entregar 15 Casco Fino e Resistente",
+              "itens": "15 × {{Casco Fino e Resistente}}",
+              "recompensa": "2 Pétalas · Rep. +5"
+            },
+            {
+              "nome": "Diária da Friederike",
+              "tarefa": "Derrotar 10 Rgan Primitivo e 10 Rgan Ínfimo; coletar 10 Núcleo Mágico Rgan que caem na caçada",
+              "itens": "10 × {{Núcleo Mágico Rgan}}",
+              "recompensa": "2 Pétalas · Rep. +5"
+            },
+            {
+              "nome": "Obtenção de Materiais de Pesquisa",
+              "tarefa": "Levar 10 Núcleos de Baixa Qualidade à Friederike (icas_in 321/23) → 1 Purificado, e entregar 3 Purificados",
+              "itens": "30 × {{Núcleo Mágico Rgan de Baixa Qualidade}} → 3 × {{Núcleo Mágico Rgan Purificado}}",
+              "recompensa": "2 Pétalas · Rep. +5"
+            },
+            {
+              "nome": "Diversão às Escondidas",
+              "tarefa": "Entregar 10 de uma das penas aceitas (serve qualquer tipo)",
+              "itens": "10 de: {{Plumas de Ave}} · {{Pena Macia}} · {{Pluma Arredondada}} · {{Pluma Flamejante}} · {{Pena Vermelha}} · {{Pena de Cendrawasih}} · {{Pena de Grand Peco}} · {{Pena Azul}} · {{Pena de Harpia}}",
+              "recompensa": "2 Pétalas · Rep. +5"
+            },
+            {
+              "nome": "Precisa de uma Geladeira?",
+              "tarefa": "Derrotar 20 monstros na Geleira de Escamas Congeladas e coletar Carne Congelada",
+              "itens": "{{Carne Congelada}}",
+              "recompensa": "2 Pétalas · Rep. +5",
+              "obs": "A browiki lista 10 Carnes; a iRO lista 20."
+            },
+            {
+              "nome": "Ferramenta Crocante",
+              "tarefa": "Verificar as Armadilhas Congeladas",
+              "itens": "",
+              "recompensa": "2 Pétalas · Rep. +5"
+            },
+            {
+              "nome": "Um lugar que Merece ser Abandonado (1F, Nv. 220+)",
+              "tarefa": "Derrotar 40 monstros no 1º andar do Poço das Profundezas e coletar 20 Carne Congelada",
+              "itens": "20 × {{Carne Congelada}}",
+              "recompensa": "2 Pétalas · Rep. +5"
+            },
+            {
+              "nome": "Um lugar que Merece ser Abandonado (2F, Nv. 240+)",
+              "tarefa": "Derrotar 40 monstros no 2º andar do Poço das Profundezas e coletar 20 Carne Congelada",
+              "itens": "20 × {{Carne Congelada}}",
+              "recompensa": "2 Pétalas · Rep. +5"
+            },
+            {
+              "nome": "Cavar e Cavar",
+              "tarefa": "Conversar com Alp no 1º andar do Poço das Profundezas",
+              "itens": "",
+              "recompensa": "2 Pétalas · Rep. +5"
+            }
+          ]
+        },
+        {
+          "nome": "Cardápio do Lunch (Lunch, em jor_back2 250/30)",
+          "diarias": [
+            {
+              "nome": "Busca por Desaparecidos (refeição do Lunch)",
+              "tarefa": "Entregar 10 de um dos itens do cardápio",
+              "itens": "10 de: {{Jarro de Nuvem}} · {{Jarro de Saquê}} · {{Pedaço de Bambu}} · {{Pena de Cendrawasih}} · {{Cesto de Palha}} · {{Cauda de Gabiru}} · {{Pilão Yaga}} · {{Dentadura da Máscara do Dragão}} · {{Jejellopy}} · {{Pele de Leopardo}}",
+              "recompensa": "Inclui 1 {{Disfarce de Rgan}}"
+            }
+          ]
+        },
+        {
+          "nome": "Ninho da Serpente",
+          "diarias": [
+            {
+              "nome": "Por um Trabalho Seguro",
+              "tarefa": "Derrotar 20 Calamaring e 20 Limacina",
+              "itens": "",
+              "recompensa": "2 Pétalas"
+            },
+            {
+              "nome": "Sacerdote, tenha piedade??",
+              "tarefa": "Entregar 30 Casco Rgan",
+              "itens": "30 × {{Casco Rgan}}",
+              "recompensa": "2 Pétalas"
+            },
+            {
+              "nome": "Passatempo Refinado",
+              "tarefa": "Entregar 10 de cada: Casco Fino e Resistente, Flor-Sino de Isca, Calapi e Líquido Fluorescente",
+              "itens": "10 × {{Casco Fino e Resistente}} · 10 × {{Flor-Sino de Isca}} · 10 × {{Calapi}} · 10 × {{Líquido Fluorescente}}",
+              "recompensa": "2 Pétalas"
+            },
+            {
+              "nome": "Nosso Precioso Alimento",
+              "tarefa": "Derrotar 30 Rgan Primitivo e 30 Rgan Ínfimo; coletar 30 Núcleos de Baixa Qualidade",
+              "itens": "30 × {{Núcleo Mágico Rgan de Baixa Qualidade}}",
+              "recompensa": "2 Pétalas"
+            },
+            {
+              "nome": "Rgan que Dá Ordens",
+              "tarefa": "Derrotar 20 Rgan Primitivo",
+              "itens": "",
+              "recompensa": "2 Pétalas"
+            }
+          ]
+        },
+        {
+          "nome": "Laboratório de Bagot (menu de instâncias de Issgard)",
+          "diarias": [
+            {
+              "nome": "Simulação de Batalha",
+              "tarefa": "Instância no menu de Issgard; a entrada consome os materiais do lobby",
+              "itens": "4 × {{Pétala de Flor Invernal}} · 1 × {{Minério Mágico da Flor de Neve}}",
+              "recompensa": "~11,7 mi EXP base · ~16,3 mi EXP classe"
+            }
+          ]
+        }
+      ]
     }
   }
 ]
