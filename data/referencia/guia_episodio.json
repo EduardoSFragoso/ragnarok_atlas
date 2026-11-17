@@ -521,7 +521,7 @@
     ],
     "itensNecessarios": {
       "farm": {
-        "titulo": "Farm desde o primeiro monstro (itens compartilhados)",
+        "titulo": "Materiais do Episódio",
         "colunas": [
           "Item",
           "Onde cai",
@@ -554,7 +554,7 @@
             "Guarde a que cair para as diárias"
           ],
           [
-            "{{Arma Vil Invernal [1]}}",
+            "Armas Vil Invernais [1] (qualquer tipo)",
             "Drop em jor_dun01/02 (Calor do Deus Serpente) e jor_ab01/02 (Fosso Abandonado)",
             "Usar (Nv 230) ou queimar 3 no Incinerador → materiais de encantamento (após o cap. 9)",
             "Guarde todas"
@@ -562,7 +562,7 @@
         ]
       },
       "diarias": {
-        "titulo": "Itens usados só nas missões diárias",
+        "titulo": "Materiais Para As Diárias",
         "colunas": [
           "Item",
           "Onde cai",
@@ -603,7 +603,7 @@
         ]
       },
       "embarque": {
-        "titulo": "Itens que a história consome · leve de Midgard antes de embarcar",
+        "titulo": "Materiais Usado No Episódio",
         "colunas": [
           "Item",
           "Quantidade",
@@ -630,13 +630,13 @@
             "O primeiro vem de Wirorung e Jaerorong (/navi icas_in 245/197)."
           ],
           [
-            "10 de um mesmo tipo de pena: {{Plumas de Ave}} · {{Pena Macia}} · {{Pluma Arredondada}} · {{Pluma Flamejante}} · {{Pena Vermelha}} · {{Pena de Cendrawasih}} · {{Pena de Grand Peco}} · {{Pena Azul}} · {{Pena de Harpia}}",
+            "10 de um mesmo tipo de pena (escolha 1):\n{{Plumas de Ave}}\n{{Pena Macia}}\n{{Pluma Arredondada}}\n{{Pluma Flamejante}}\n{{Pena Vermelha}}\n{{Pena de Cendrawasih}}\n{{Pena de Grand Peco}}\n{{Pena Azul}}\n{{Pena de Harpia}}",
             "10",
             "Diária Diversão às Escondidas",
             "Qualquer uma das penas listadas serve."
           ],
           [
-            "Estoque do Cardápio do Lunch: {{Jarro de Nuvem}} · {{Jarro de Saquê}} · {{Pedaço de Bambu}} · {{Pena de Cendrawasih}} · {{Cesto de Palha}} · {{Cauda de Gabiru}} · {{Pilão Yaga}} · {{Dentadura da Máscara do Dragão}} · {{Jejellopy}} · {{Pele de Leopardo}}",
+            "Estoque do Cardápio do Lunch (10/dia):\n{{Jarro de Nuvem}}\n{{Jarro de Saquê}}\n{{Pedaço de Bambu}}\n{{Pena de Cendrawasih}}\n{{Cesto de Palha}}\n{{Cauda de Gabiru}}\n{{Pilão Yaga}}\n{{Dentadura da Máscara do Dragão}}\n{{Jejellopy}}\n{{Pele de Leopardo}}",
             "10 por dia",
             "Diária de comida do Lunch",
             "A recompensa inclui 1 {{Disfarce de Rgan}}."
@@ -681,73 +681,85 @@
               "nome": "Ajudar Moryara com os Peixes",
               "tarefa": "Derrotar 20 Alga Brilhante (caçada, não consome item)",
               "itens": "",
-              "recompensa": "2 Pétalas · Rep. +5"
+              "recompensa": "2 Pétalas · Rep. +5",
+              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard#Ajuda_na_pesca_de_Moryara"
             },
             {
               "nome": "Procurando o Esconderijo Subterrâneo",
               "tarefa": "Enterrar 10 Antenas de Alta Sensibilidade (entregues pela própria diária) nos pontos de jor_back2 e jor_back3",
               "itens": "{{Antena de Alta Sensibilidade}}",
-              "recompensa": "2 Pétalas · Rep. +5"
+              "recompensa": "2 Pétalas · Rep. +5",
+              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard#Procurando_o_Esconderijo_Subterr.C3.A2neo"
             },
             {
               "nome": "Proibido Alimentar",
               "tarefa": "Recuperar 1 Ração de Monstro na Planície de Escamas Congeladas",
               "itens": "1 × {{Ração para Monstros}}",
-              "recompensa": "2 Pétalas · Rep. +5"
+              "recompensa": "2 Pétalas · Rep. +5",
+              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard#N.C3.A3o_Alimente_os_Animais"
             },
             {
               "nome": "Almoço com Zoryara",
               "tarefa": "Entregar 15 Casco Fino e Resistente",
               "itens": "15 × {{Casco Fino e Resistente}}",
-              "recompensa": "2 Pétalas · Rep. +5"
+              "recompensa": "2 Pétalas · Rep. +5",
+              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard#Um_agrad.C3.A1vel_momento_de_Jeomsim"
             },
             {
               "nome": "O Dia de Friederike",
               "tarefa": "Derrotar 10 Rgan Primitivo e 10 Rgan Ínfimo; coletar 10 Núcleo Mágico Rgan que caem na caçada",
               "itens": "10 × {{Núcleo Mágico Rgan}}",
-              "recompensa": "2 Pétalas · Rep. +5"
+              "recompensa": "2 Pétalas · Rep. +5",
+              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard#.3F.3F.3F"
             },
             {
               "nome": "Obtenção de Materiais de Pesquisa",
               "tarefa": "Levar 10 Núcleos de Baixa Qualidade à Friederike (icas_in 321/23) → 1 Purificado, e entregar 3 Purificados",
               "itens": "30 × {{Núcleo Mágico Rgan de Baixa Qualidade}} → 3 × {{Núcleo Mágico Rgan Purificado}}",
-              "recompensa": "2 Pétalas · Rep. +5"
+              "recompensa": "2 Pétalas · Rep. +5",
+              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard#Obten.C3.A7.C3.A3o_de_Materiais_de_Pesquisa"
             },
             {
               "nome": "Diversão às Escondidas",
               "tarefa": "Entregar 10 de uma das penas aceitas (serve qualquer tipo)",
               "itens": "10 de: {{Plumas de Ave}} · {{Pena Macia}} · {{Pluma Arredondada}} · {{Pluma Flamejante}} · {{Pena Vermelha}} · {{Pena de Cendrawasih}} · {{Pena de Grand Peco}} · {{Pena Azul}} · {{Pena de Harpia}}",
-              "recompensa": "2 Pétalas · Rep. +5"
+              "recompensa": "2 Pétalas · Rep. +5",
+              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard#Divers.C3.A3o_.C3.A0s_Escondidas"
             },
             {
               "nome": "Precisa de uma Geladeira?",
               "tarefa": "Derrotar 20 monstros na Geleira de Escamas Congeladas e coletar 10 Carne Congelada",
               "itens": "10 × {{Carne Congelada}}",
-              "recompensa": "2 Pétalas · Rep. +5"
+              "recompensa": "2 Pétalas · Rep. +5",
+              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard#Precisa_de_uma_Geladeira.3F_.2F_Ferramenta_Crocante"
             },
             {
               "nome": "Ferramenta Crocante",
               "tarefa": "Verificar as Armadilhas Congeladas",
               "itens": "",
-              "recompensa": "2 Pétalas · Rep. +5"
+              "recompensa": "2 Pétalas · Rep. +5",
+              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard#Precisa_de_uma_Geladeira.3F_.2F_Ferramenta_Crocante"
             },
             {
               "nome": "Um lugar que Merece ser Abandonado (1F, Nv. 220+)",
               "tarefa": "Derrotar 40 monstros no 1º andar do Poço das Profundezas e coletar 20 Carne Congelada",
               "itens": "20 × {{Carne Congelada}}",
-              "recompensa": "2 Pétalas · Rep. +5"
+              "recompensa": "2 Pétalas · Rep. +5",
+              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard#Um_lugar_que_Merece_ser_Abandonado_.2F_Cavar_e_Cavar"
             },
             {
               "nome": "Um lugar que Merece ser Abandonado (2F, Nv. 240+)",
               "tarefa": "Derrotar 40 monstros no 2º andar do Poço das Profundezas e coletar 20 Carne Congelada",
               "itens": "20 × {{Carne Congelada}}",
-              "recompensa": "2 Pétalas · Rep. +5"
+              "recompensa": "2 Pétalas · Rep. +5",
+              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard#Um_lugar_que_Merece_ser_Abandonado_.2F_Cavar_e_Cavar"
             },
             {
               "nome": "Cavar e Cavar",
               "tarefa": "Conversar com Alp no 1º andar do Poço das Profundezas",
               "itens": "",
-              "recompensa": "2 Pétalas · Rep. +5"
+              "recompensa": "2 Pétalas · Rep. +5",
+              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard#Um_lugar_que_Merece_ser_Abandonado_.2F_Cavar_e_Cavar"
             }
           ]
         },
@@ -758,7 +770,8 @@
               "nome": "Busca por Desaparecidos (refeição do Lunch)",
               "tarefa": "Entregar 10 de um dos itens do cardápio",
               "itens": "10 de: {{Jarro de Nuvem}} · {{Jarro de Saquê}} · {{Pedaço de Bambu}} · {{Pena de Cendrawasih}} · {{Cesto de Palha}} · {{Cauda de Gabiru}} · {{Pilão Yaga}} · {{Dentadura da Máscara do Dragão}} · {{Jejellopy}} · {{Pele de Leopardo}}",
-              "recompensa": "Inclui 1 {{Disfarce de Rgan}}"
+              "recompensa": "Inclui 1 {{Disfarce de Rgan}}",
+              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard#Busca_por_Desaparecidos"
             }
           ]
         },
@@ -769,31 +782,36 @@
               "nome": "Por um Trabalho Mais Seguro",
               "tarefa": "Derrotar 20 Calamaring e 20 Limacina",
               "itens": "",
-              "recompensa": "2 Pétalas"
+              "recompensa": "2 Pétalas",
+              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard#Por_um_Trabalho_Seguro"
             },
             {
               "nome": "Sacerdote, Tende Piedade",
               "tarefa": "Entregar 30 Casco Rgan",
               "itens": "30 × {{Casco Rgan}}",
-              "recompensa": "2 Pétalas"
+              "recompensa": "2 Pétalas",
+              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard#Sacerdote.2C_tenha_piedade.3F.3F"
             },
             {
               "nome": "Passatempo Refinado",
               "tarefa": "Entregar 10 de cada: Casco Fino e Resistente, Flor-Sino de Isca, Calapi e Líquido Fluorescente",
               "itens": "10 × {{Casco Fino e Resistente}} · 10 × {{Flor-Sino de Isca}} · 10 × {{Calapi}} · 10 × {{Líquido Fluorescente}}",
-              "recompensa": "2 Pétalas"
+              "recompensa": "2 Pétalas",
+              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard#Passatempo_Refinado"
             },
             {
               "nome": "Nossas Preciosas Provisões",
               "tarefa": "Derrotar 30 Rgan Primitivo e 30 Rgan Ínfimo; coletar 30 Núcleos Mágicos Rgan de Baixa Qualidade",
               "itens": "30 × {{Núcleo Mágico Rgan de Baixa Qualidade}}",
-              "recompensa": "2 Pétalas"
+              "recompensa": "2 Pétalas",
+              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard#Nosso_Precioso_Alimento"
             },
             {
               "nome": "Rgan que Dá Ordens",
               "tarefa": "Derrotar 20 Rgan Primitivo",
               "itens": "",
-              "recompensa": "2 Pétalas"
+              "recompensa": "2 Pétalas",
+              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard#Rgan_que_D.C3.A1_Ordens"
             }
           ]
         },
@@ -804,7 +822,8 @@
               "nome": "Simulação de Batalha",
               "tarefa": "Instância no menu de Issgard; a entrada consome os materiais do lobby",
               "itens": "4 × {{Pétala de Flor Invernal}} · 1 × {{Minério Mágico da Flor de Neve}}",
-              "recompensa": "~11,7 mi EXP base · ~16,3 mi EXP classe"
+              "recompensa": "~11,7 mi EXP base · ~16,3 mi EXP classe",
+              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgardhttps://browiki.org/wiki/Batalha_de_Simula%C3%A7%C3%A3o"
             }
           ]
         }

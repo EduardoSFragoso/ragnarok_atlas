@@ -1,0 +1,41 @@
+name: Puxar efeitos Divine Pride
+
+on:
+  workflow_dispatch:
+    inputs:
+      delay:
+        description: "Pausa entre requisições em segundos (padrão 1.2)"
+        required: false
+        default: "1.2"
+
+permissions:
+  contents: write
+
+jobs:
+  puxar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rodar o script (usa o segredo DP_API_KEY, nunca impresso no log)
+        env:
+          DP_API_KEY: ${{ secrets.DP_API_KEY }}
+        run: python3 tools/puxar_efeitos_divine_pride.py --delay "${{ inputs.delay || '1.2' }}"
+
+      - name: Salvar a saída no repositório
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tools/divine_pride_saida.json tools/divine_pride_faltando.txt 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Nada novo para salvar."
+          else
+            git commit -m "tooling: saída da API Divine Pride (efeitos de encantamento)"
+            git push
+          fi
