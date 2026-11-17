@@ -475,6 +475,138 @@
           }
         ]
       }
-    ]
+    ],
+    "itensNecessarios": {
+      "farm": {
+        "titulo": "Farm desde o primeiro monstro (não venda nada)",
+        "colunas": [
+          "Item",
+          "Onde cai",
+          "Para que serve",
+          "Quanto guardar"
+        ],
+        "linhas": [
+          [
+            "Núcleo Mágico Rgan de Baixa Qualidade",
+            "Qualquer Rgan: Primitive e Lowest Rgan em jor_back3; Rgans de jor_dun01/02",
+            "Cap. 6 Juncea (20) · Cap. 9 Vellgunde (20) · S5 (10) · S8 (15) · diárias Nossa Preciosa Comida (30) e Vellgunde (30 → 3 purificados)",
+            "65 para história + secundárias · +60/dia nas diárias"
+          ],
+          [
+            "Casco Rgan",
+            "Rgans (mesmos lugares)",
+            "Diária Sacerdote, Tenha Piedade?? (30)",
+            "30/dia"
+          ],
+          [
+            "Casco Fino e Resistente",
+            "Ice Straw (jor_back1, jor_back2; segundo a Hazy Forest)",
+            "Diárias Hora do Almoço com Zoryara (15) e Hobbies Elegantes (10)",
+            "25/dia"
+          ],
+          [
+            "Calapi",
+            "Calmaring (jor_back3) e Cave Calmaring (jor_ab01) — cristal do interior de um Calamaring",
+            "Diária Hobbies Elegantes (10)",
+            "10/dia"
+          ],
+          [
+            "Flor-Sino de Isca",
+            "Origem não informada pelas wikis (flor usada como isca)",
+            "Diária Hobbies Elegantes (10)",
+            "10/dia"
+          ],
+          [
+            "Pétala de Flor Invernal",
+            "Todos os monstros de Issgard + recompensas",
+            "Equipamento Invernal (100 por peça) · Refinadores +9 (200 e 500) · 35 → 1 Globo (Vellgunde) · loja de reputação",
+            "Guarde todas"
+          ],
+          [
+            "Minério Mágico da Flor de Neve e Globos de Flor Invernal (normal, Brilhante, Reluzente)",
+            "Todos os monstros (Brilhante e Reluzente são raros: dungeons, instâncias, Simulation Juncea)",
+            "Encantamentos (Vellgunde) · conversão 5 → 1 (Hoyoyo)",
+            "Guarde todos"
+          ],
+          [
+            "Arma Vil Invernal [1]",
+            "Drop em jor_dun01/02 (Calor do Deus Serpente) e jor_ab01/02 (Fosso Abandonado)",
+            "Usar (Nv 230) ou queimar 3 no Incinerador → materiais de encantamento (após o cap. 9)",
+            "Guarde todas"
+          ],
+          [
+            "Carne Congelada",
+            "Cai sozinha no inventário durante S2 e as diárias de carne",
+            "S2 (7) · diárias do Fosso e Geladeira (20 cada)",
+            "Não precisa juntar antes"
+          ],
+          [
+            "Núcleo Mágico Rgan",
+            "Cai sozinho ao matar Rgans durante a diária",
+            "Diária Dia da Friederike (10)",
+            "Não precisa juntar antes"
+          ]
+        ]
+      },
+      "historia": {
+        "titulo": "Itens que a história consome",
+        "colunas": [
+          "Item",
+          "Quantidade",
+          "Onde é usado",
+          "Observações"
+        ],
+        "linhas": [
+          [
+            "Disfarce de Rgan (ID 101162 · Transformation Scroll (Rgan))",
+            "Vários (1 vem na quest)",
+            "Transformar o grupo (cap. 2) · toda visita ao Ninho (cap. 3–7, S5–S8 e diárias do Ninho) · área especial /navi jor_dun01 8/238 (cap. 9)",
+            "Dura só 180 s e acaba se você morrer. Compre com o Lunch (/navi jor_back2 250/30); a diária Cardápio do Lunch dá 1 por dia."
+          ],
+          [
+            "Núcleo Mágico Rgan de Baixa Qualidade (ID 1000707)",
+            "20 obrigatórios + 20 opcionais",
+            "Juncea: 2 entregas de 10 (ou 1 Petisco cada) — cap. 6 · Vellgunde: 20, sem alternativa — cap. 9",
+            "Drop de Rgans. Some +25 se for fazer S5 e S8."
+          ],
+          [
+            "Petisco de Gelo (ID 1000846 · Ice Cookie)",
+            "1 grátis + até 2 opcionais",
+            "1ª entrega a Juncea (o grátis) — cap. 6 · alternativa aos 10 núcleos nas 2 entregas seguintes",
+            "O primeiro vem de Wirorung e Jaerorong (/navi icas_in 245/197). As wikis não dizem onde conseguir outros."
+          ]
+        ],
+        "nota": "Itens de quest recebidos e entregues automaticamente: Convite do Guardião · Casca de Ovo Rgan Superior · Livro-caixa · Tubo de Ensaio de Juncea · Tubo de Ensaio com Líquido Vermelho · Antena de Alta Sensibilidade."
+      },
+      "midgard": {
+        "titulo": "Leve de Midgard antes de embarcar",
+        "linhas": [
+          [
+            "10 penas de um mesmo tipo",
+            "Diária Diversão Secreta. Aceita qualquer uma: Plumas de Ave, Pena Macia, Pluma Arredondada, Pluma Flamejante, Pena Vermelha, Pena de Cendrawasih, Pena de Grand Peco, Pena Azul, Pena de Harpia"
+          ],
+          [
+            "Estoque do Cardápio do Lunch",
+            "Ele pede 10 de um destes por dia e a recompensa inclui 1 Disfarce de Rgan: Jarro de Nuvem, Jarro de Saquê, Pedaço de Bambu, Pena de Cendrawasih, Cesto de Palha, Cauda de Gabiru, Pilão Yaga, Dentadura da Máscara do Dragão, Jejellopy, Pele de Leopardo"
+          ],
+          [
+            "10 Líquido Fluorescente",
+            "Diária Hobbies Elegantes"
+          ],
+          [
+            "Carta Bathory ou Carta Druida Maligno (armadura)",
+            "Imunidade ao Dark Grand Cross da Simulation Juncea"
+          ],
+          [
+            "Arma ou encantamento de Vento",
+            "Quase todos os monstros dos campos e do Fosso são de propriedade Água"
+          ],
+          [
+            "Zeny",
+            "150.000z por Arma Invernal · 5.000z a pousada · 500z o armazém"
+          ]
+        ]
+      }
+    }
   }
 ]
