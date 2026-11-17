@@ -3,7 +3,7 @@
     "id": "ep19",
     "titulo": "Episódio 19: Issgard — A Terra da Neve e das Lendas",
     "requisitos": "Nível de Base 200 · Quest anterior: Caminho da Oração (Ep. 18)",
-    "recompensaTotal": "242 Pétalas de Flor Invernal · 245 Rep. Castelo de Gelo · 731,4 mi EXP Base",
+    "recompensaTotal": "326 Pétalas de Flor Invernal · 315 Rep. Castelo de Gelo · 1.236,7 mi EXP Base · 97 mi EXP Classe",
     "principal": [
       {
         "capitulo": "0. Prólogo — A caminho de Issgard",
@@ -532,7 +532,7 @@
           [
             "{{Núcleo Mágico Rgan de Baixa Qualidade}}",
             "Qualquer Rgan: Primitive e Lowest Rgan em jor_back3; Rgans de jor_dun01/02",
-            "História (cap. 6 e 9) · S5 (10) · S8 (15) · diárias Nosso Precioso Alimento (30) e Obtenção de Materiais de Pesquisa (30 → 3 purificados)",
+            "História (cap. 6 e 9) · S5 (10) · S8 (15) · diárias Nossas Preciosas Provisões (30) e Obtenção de Materiais de Pesquisa (30 → 3 purificados)",
             "65 para história + secundárias · +30/dia nas diárias"
           ],
           [
@@ -573,13 +573,13 @@
           [
             "{{Casco Rgan}}",
             "Rgans (mesmos lugares do Núcleo de Baixa Qualidade)",
-            "Diária Sacerdote, tenha piedade?? (30)",
+            "Diária Sacerdote, Tende Piedade (30)",
             "30/dia"
           ],
           [
             "{{Casco Fino e Resistente}}",
             "Ice Straw (jor_back1 e jor_back2, segundo a Hazy Forest)",
-            "Diárias Um agradável momento de Jeomsim (15) e Passatempo Refinado (10)",
+            "Diárias Almoço com Zoryara (15) e Passatempo Refinado (10)",
             "25/dia"
           ],
           [
@@ -597,7 +597,7 @@
           [
             "{{Núcleo Mágico Rgan}}",
             "Cai ao caçar Rgan Primitivo e Rgan Ínfimo durante a própria diária",
-            "Diária da Friederike (10)",
+            "O Dia de Friederike (10)",
             "Não precisa juntar antes"
           ]
         ]
@@ -678,7 +678,7 @@
           "nome": "Castelo de Gelo e arredores",
           "diarias": [
             {
-              "nome": "Ajuda na pesca de Moryara",
+              "nome": "Ajudar Moryara com os Peixes",
               "tarefa": "Derrotar 20 Alga Brilhante (caçada, não consome item)",
               "itens": "",
               "recompensa": "2 Pétalas · Rep. +5"
@@ -690,19 +690,19 @@
               "recompensa": "2 Pétalas · Rep. +5"
             },
             {
-              "nome": "Não Alimente os Animais",
+              "nome": "Proibido Alimentar",
               "tarefa": "Recuperar 1 Ração de Monstro na Planície de Escamas Congeladas",
-              "itens": "1 × {{Ração de Monstro}}",
+              "itens": "1 × {{Ração para Monstros}}",
               "recompensa": "2 Pétalas · Rep. +5"
             },
             {
-              "nome": "Um agradável momento de Jeomsim",
+              "nome": "Almoço com Zoryara",
               "tarefa": "Entregar 15 Casco Fino e Resistente",
               "itens": "15 × {{Casco Fino e Resistente}}",
               "recompensa": "2 Pétalas · Rep. +5"
             },
             {
-              "nome": "Diária da Friederike",
+              "nome": "O Dia de Friederike",
               "tarefa": "Derrotar 10 Rgan Primitivo e 10 Rgan Ínfimo; coletar 10 Núcleo Mágico Rgan que caem na caçada",
               "itens": "10 × {{Núcleo Mágico Rgan}}",
               "recompensa": "2 Pétalas · Rep. +5"
@@ -721,10 +721,9 @@
             },
             {
               "nome": "Precisa de uma Geladeira?",
-              "tarefa": "Derrotar 20 monstros na Geleira de Escamas Congeladas e coletar Carne Congelada",
-              "itens": "{{Carne Congelada}}",
-              "recompensa": "2 Pétalas · Rep. +5",
-              "obs": "A browiki lista 10 Carnes; a iRO lista 20."
+              "tarefa": "Derrotar 20 monstros na Geleira de Escamas Congeladas e coletar 10 Carne Congelada",
+              "itens": "10 × {{Carne Congelada}}",
+              "recompensa": "2 Pétalas · Rep. +5"
             },
             {
               "nome": "Ferramenta Crocante",
@@ -767,13 +766,13 @@
           "nome": "Ninho da Serpente",
           "diarias": [
             {
-              "nome": "Por um Trabalho Seguro",
+              "nome": "Por um Trabalho Mais Seguro",
               "tarefa": "Derrotar 20 Calamaring e 20 Limacina",
               "itens": "",
               "recompensa": "2 Pétalas"
             },
             {
-              "nome": "Sacerdote, tenha piedade??",
+              "nome": "Sacerdote, Tende Piedade",
               "tarefa": "Entregar 30 Casco Rgan",
               "itens": "30 × {{Casco Rgan}}",
               "recompensa": "2 Pétalas"
@@ -785,8 +784,8 @@
               "recompensa": "2 Pétalas"
             },
             {
-              "nome": "Nosso Precioso Alimento",
-              "tarefa": "Derrotar 30 Rgan Primitivo e 30 Rgan Ínfimo; coletar 30 Núcleos de Baixa Qualidade",
+              "nome": "Nossas Preciosas Provisões",
+              "tarefa": "Derrotar 30 Rgan Primitivo e 30 Rgan Ínfimo; coletar 30 Núcleos Mágicos Rgan de Baixa Qualidade",
               "itens": "30 × {{Núcleo Mágico Rgan de Baixa Qualidade}}",
               "recompensa": "2 Pétalas"
             },
