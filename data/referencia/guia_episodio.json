@@ -683,7 +683,7 @@
     },
     "diarias": {
       "titulo": "Missões diárias de episódio",
-      "aviso": "Todas as diárias pagam 2 {{Pétala de Flor Invernal}}; nas do Castelo de Gelo soma Reputação +5, nas do Ninho da Serpente não dá Reputação. A EXP diária consta como desconhecida (?) na browiki.",
+      "aviso": "Todas as diárias pagam 2 {{Pétala de Flor Invernal}}; nas do Castelo de Gelo soma Reputação +5, nas do Ninho da Serpente não dá Reputação.",
       "grupos": [
         {
           "nome": "Castelo de Gelo e arredores",
