@@ -362,16 +362,16 @@
       "questSecundarias": null,
       "somas": {
         "principal": {
-          "varmida": 100,
+          "varmida": 105,
           "base": 4641012
         },
         "total": {
-          "varmida": 100,
+          "varmida": 105,
           "base": 4641012
         }
       },
       "total_moedas": {
-        "Vale Varmida": 100
+        "Vale Varmida": 105
       }
     },
     "ep17.1": {
@@ -450,14 +450,14 @@
           "cor": 40,
           "chip": 50,
           "base": 4100000,
-          "classe": 4850000,
+          "classe": 5050000,
           "basePct": 25
         },
         "total": {
           "cor": 40,
           "chip": 50,
           "base": 4100000,
-          "classe": 4850000,
+          "classe": 5050000,
           "basePct": 25
         }
       },
