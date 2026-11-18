@@ -896,7 +896,8 @@
             "navi": "/navi wolfvill 143/113"
           }
         ],
-        "desbloqueia": "Missões secundárias e diárias da Aldeia do Lobo Cinzento."
+        "desbloqueia": "Missões secundárias e diárias da Aldeia do Lobo Cinzento.",
+        "itens": []
       },
       {
         "capitulo": "2. Aumente sua Reputação (1.000 pontos)",
@@ -946,8 +947,7 @@
         "itens": [
           "3 × {{Aço}}",
           "1 × {{Carne}}",
-          "1 × {{Palha}}",
-          "550 zenys (Relíquia Sagrada, comprada em Rachel)"
+          "1 × {{Palha}}"
         ],
         "desbloqueia": "As diárias de cada NPC (Gudura, Ezekiel, Budan, Scania, Ahir, Eruin, Imril...) conforme você as conclui."
       },
@@ -990,7 +990,8 @@
             "texto": "Vá até os Saques e fale com o Aldeão Armado ao lado das caixas.",
             "navi": "/navi wolfvill 131/257"
           }
-        ]
+        ],
+        "itens": []
       },
       {
         "capitulo": "4. Lobo em Pele de Cordeiro",
@@ -1026,7 +1027,8 @@
             "navi": "/navi ra_temin 254/117"
           }
         ],
-        "desbloqueia": "Instâncias Purificação do Santuário e Mansão da Desilusão (diárias do episódio). Continua no Episódio 19 — Issgard."
+        "desbloqueia": "Instâncias Purificação do Santuário e Mansão da Desilusão (diárias do episódio). Continua no Episódio 19 — Issgard.",
+        "itens": []
       }
     ],
     "secundarias": [
@@ -1237,10 +1239,55 @@
             },
             {
               "nome": "Coleta de Flor Bicolor",
-              "tarefa": "Coletar a Flor Bicolor conforme a palavra-chave do dia (tabela de ângulo/folhas/água/pó na bROWiki) e entregar a Mejai",
+              "tarefa": "Coletar a Flor Bicolor conforme a palavra-chave do dia (Rochas, Terreno Plano, Árvores ou Água) e entregar a Mejai",
               "itens": "",
               "recompensa": "3 Fragmento de Ametista",
-              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Aldeia#Coleta_de_Flor_Bicolor"
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Aldeia#Coleta_de_Flor_Bicolor",
+              "detalhes": [
+                "Vá até Mejai (/navi rachel 70/135) e aceite coletar uma Flor Bicolor conforme a palavra mencionada no diálogo; a palavra muda por dia e corresponde a uma linha da tabela abaixo.",
+                "Cultive a flor usando exatamente a combinação da tabela: o ângulo, as folhas que você deixa, a água e o pó secreto.",
+                "Receba 1 Flor Bicolor — o item dura 24 horas, então só cultive quando for entregar.",
+                "Entregue a flor a Mejai (/navi rachel 70/135) para receber a recompensa."
+              ],
+              "tabela": {
+                "colunas": [
+                  "Palavra-chave",
+                  "Ângulo",
+                  "Folhas (deixar)",
+                  "Água",
+                  "Pó Secreto"
+                ],
+                "linhas": [
+                  [
+                    "Rochas",
+                    "40°",
+                    "2",
+                    "50ml",
+                    "2g"
+                  ],
+                  [
+                    "Terreno Plano",
+                    "30°",
+                    "4",
+                    "40ml",
+                    "4g"
+                  ],
+                  [
+                    "Árvores",
+                    "20°",
+                    "4",
+                    "30ml",
+                    "6g"
+                  ],
+                  [
+                    "Água",
+                    "10°",
+                    "8",
+                    "20ml",
+                    "8g"
+                  ]
+                ]
+              }
             }
           ]
         },
@@ -2104,7 +2151,7 @@
               "nome": "Simulação de Batalha",
               "tarefa": "Instância no menu de Issgard; a entrada consome os materiais do lobby",
               "itens": "4 × {{Pétala de Flor Invernal}} · 1 × {{Minério Mágico da Flor de Neve}}",
-              "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgardhttps://browiki.org/wiki/Batalha_de_Simula%C3%A7%C3%A3o"
+              "linkBrowiki": "https://browiki.org/wiki/Batalha_de_Simula%C3%A7%C3%A3o"
             }
           ]
         }
