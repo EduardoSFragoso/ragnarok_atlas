@@ -1976,7 +1976,7 @@
     },
     "diarias": {
       "titulo": "Missões diárias de episódio",
-      "aviso": "Todas as diárias pagam 2 {{Pétala de Flor Invernal}}; nas do Castelo de Gelo soma Reputação +5, nas do Ninho da Serpente não dá Reputação.",
+      "aviso": "Todas as diárias pagam 2 {{Pétala de Flor Invernal}}; nas do Castelo de Gelo soma Reputação +5, nas do Ninho da Serpente não dá Reputação. Cada nível de reputação exige 1.000 pontos (ganhos nas diárias e instâncias); a loja de reputação do Hoyoyo (op. 2) está no Guia de Episódio, na seção de serviços.",
       "grupos": [
         {
           "nome": "Castelo de Gelo e arredores",
@@ -2131,6 +2131,36 @@
           ]
         }
       ]
+    },
+    "servicos": {
+      "titulo": "Serviços e lojas de Issgard",
+      "colunas": ["Serviço", "NPC", "Onde (/navi)", "Custos", "Observação"],
+      "linhas": [
+        ["Salvar e pousada", "Iwin (Feather Bed and Breakfast)", "icecastle 62/229", "5.000z", "Restaura HP e SP completos."],
+        ["Armazém (1 ou 2)", "Jarro Congelado", "icas_in 81/121", "500z", ""],
+        ["Teleporte → Ninho da Serpente", "Syaryara (opção 1)", "icecastle 55/124", "Grátis", "Liberado após o cap. 4; leva direto para dentro do Ninho."],
+        ["Teleporte → Castelo de Gelo", "Rgan no Ninho (opção 2)", "jor_nest 273/23", "Grátis", "Volta do Ninho para o Castelo de Gelo."],
+        ["Trenó → Aldebaran", "Hellock (opção 1)", "jor_tail 211/63", "Grátis", "Liberado pela secundária Santa da Purificação."],
+        ["Trenó → Issgard", "Hellock (opção 1)", "aldebaran 102/103", "Grátis", ""],
+        ["Lojas do Maram", "Maram (op. 1–4)", "icas_in 180/61", "Op. 1: consumíveis · op. 2: Equipamento Invernal (100 Pétalas/peça) · op. 3: vender", "As Armas Invernais (150.000z) são compradas com Poruru (icas_in 188/60), ao lado do Incinerador."],
+        ["Trocas e encantamentos", "Vellgunde (op. 2–4)", "icas_in 185/63", "Op. 2: 35 Pétalas → 1 Peça de Flor Invernal aleatória · op. 3: 3 Globos → 1 Globo aleatório · op. 4: encantamentos", "A reciclagem da op. 3 não consta na bROWiki (fonte: Hazy/iRO)."],
+        ["Globos e reputação", "Hoyoyo (op. 1–2)", "icas_in 175/63", "Op. 1: 5 Minério → 1 Globo · 5 Globos → 1 Brilhante · 5 Brilhantes → 1 Reluzente · op. 2: loja de reputação", ""],
+        ["Incinerador (extração)", "Incinerador, no quartel", "icas_in 192/58", "3 Armas Vil Invernais por uso", "Liberado após o cap. 9; detalhes na aba Reciclagem."]
+      ]
+    },
+    "lojaReputacao": {
+      "titulo": "Loja de reputação — Hoyoyo (op. 2)",
+      "colunas": ["Nível", "Item / benefício", "Preço"],
+      "linhas": [
+        ["1", "Refinador de Armadura Invernal +9", "200 Pétalas"],
+        ["1", "Minhogelix Seco (consumível)", "1 Pétala"],
+        ["1", "Asas de Teleporte do Castelo de Gelo", "1 Pétala"],
+        ["2", "Refinador de Arma Invernal +9", "500 Pétalas"],
+        ["2", "[Visual] Disfarce de Rgan", "1.000 Pétalas"],
+        ["2", "[Visual] Capacete Iwin de Frio", "1.000 Pétalas"],
+        ["3", "Diárias do Castelo de Gelo pagam +1 Pétala; nas do Ninho, +2", "—"]
+      ],
+      "nota": "Lista do Hazy Forest (kRO); o LATAM pode variar. Cada nível exige 1.000 pontos de reputação, ganhos nas diárias e instâncias. No nível 0 Hoyoyo não fala com você."
     }
   }
 ]
