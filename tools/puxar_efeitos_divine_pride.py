@@ -4,7 +4,7 @@
 A API oficial (https://www.divine-pride.net/api) só atende por ID de item e
 precisa de uma apiKey gratuita. Este script:
 
-    1. Lê data/referencia/encantamentos_disponiveis.tsv e separa as linhas dos
+    1. Lê data/referencia/encantamentos_disponiveis.json e separa as linhas dos
        Episódios 17.2 e 18 cujo "Efeito (+11)" está pendente (ver Divine Pride
        ou valor não informado).
     2. Resolve o ID de cada encantamento: primeiro pelo registro local
@@ -42,14 +42,16 @@ SKILL_IDS = ROOT / 'tools' / 'skills_ids.json'
 DELAY = 1.2  # segundos entre pedidos; aumente com --delay se quiser mais calma
 
 
-def tsv(path):
-    return [l.rstrip('\r\n').split('\t') for l in path.read_text(encoding='utf-8-sig').splitlines()]
+def linhas_json(path):
+    dados = json.loads(path.read_text(encoding='utf-8'))
+    cols = list(dados[0].keys()) if dados else []
+    return [[str(r.get(c) or '') for c in cols] for r in dados]
 
 
 def pendentes():
     ids = json.loads((ROOT / 'data/referencia/itens_divine_pride.json').read_text(encoding='utf-8'))
     linhas = []
-    for r in tsv(ROOT / 'data/referencia/encantamentos_disponiveis.tsv')[1:]:
+    for r in linhas_json(ROOT / 'data/referencia/encantamentos_disponiveis.json')[1:]:
         r += [''] * 12
         ep, alvo, enc, efeito = r[0], r[1], r[5], r[6]
         if not re.search(r'17\.2|Ep\. 18|Oração', ep):

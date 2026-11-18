@@ -1,7 +1,8 @@
+import json
 import re
 
-PATH = "data/referencia/encantamentos_disponiveis.tsv"
-COL = 6
+PATH = "data/referencia/encantamentos_disponiveis.json"
+COLUNA = "Efeito (+11)"
 MAX_REFINO = 11
 
 RE_BASE = re.compile(r"^(.+?) ([+\-])(\d+(?:,\d+)?) ?(%|s)?$")
@@ -81,19 +82,15 @@ def agregar(efeito):
 
 
 def main():
-    with open(PATH, encoding="utf-8-sig") as f:
-        raw = f.read()
-    linhas = raw.replace("\r\n", "\n").rstrip("\n").split("\n")
+    with open(PATH, encoding="utf-8") as f:
+        dados = json.load(f)
     alteradas = mantidas = puladas = 0
     puladas_lista = []
     exemplos = []
-    for i, linha in enumerate(linhas[1:], start=2):
-        if not linha.strip():
+    for i, linha in enumerate(dados[1:], start=2):
+        atual = str(linha.get(COLUNA) or "").strip()
+        if not atual:
             continue
-        cols = linha.split("\t")
-        if len(cols) <= COL or not cols[COL].strip():
-            continue
-        atual = cols[COL].strip()
         if "com refino" not in atual:
             mantidas += 1
             continue
@@ -102,13 +99,13 @@ def main():
             puladas += 1
             puladas_lista.append((i, atual[:150]))
             continue
-        cols[COL] = novo
-        linhas[i - 1] = "\t".join(cols)
+        linha[COLUNA] = novo
         alteradas += 1
         if len(exemplos) < 6:
             exemplos.append((i, novo[:150]))
-    with open(PATH, "w", encoding="utf-8-sig", newline="") as f:
-        f.write("\n".join(linhas) + "\n")
+    with open(PATH, "w", encoding="utf-8") as f:
+        json.dump(dados, f, ensure_ascii=False, indent=1)
+        f.write("\n")
     print(f"alteradas={alteradas} mantidas={mantidas} puladas={puladas}")
     for i, s in exemplos:
         print(f"  ok  L{i}: {s}")

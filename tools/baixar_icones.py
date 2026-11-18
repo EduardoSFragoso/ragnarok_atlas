@@ -25,23 +25,25 @@ URL = 'https://static.divine-pride.net/images/items/item/{}.png'
 DELAY = 0.6  # segundos entre pedidos, para não sobrecarregar o servidor
 IGNORAR = {'Zeny', 'Itens variados (lista a confirmar)', 'Itens de drop de monstros (varia por habilidade)'}
 
-def tsv(path):
-    return [l.rstrip('\r\n').split('\t') for l in path.read_text(encoding='utf-8-sig').splitlines()]
+def linhas_json(path):
+    dados = json.loads(path.read_text(encoding='utf-8'))
+    cols = list(dados[0].keys()) if dados else []
+    return [[str(r.get(c) or '') for c in cols] for r in dados]
 
 def coletar():
     ids = {n: int(i) for n, i in re.findall(r"'([^']+)':(\d{3,8})", (ROOT / 'app.js').read_text(encoding='utf-8'))}
     ids.update({n: int(i) for n, i in json.loads((ROOT / 'data/referencia/itens_divine_pride.json').read_text(encoding='utf-8')).items()})
     nomes = set()
-    for f in (ROOT / 'data/facilidades').glob('*.tsv'):
-        flechas = 'Flechas' in f.name
-        for k, r in enumerate(tsv(f)):
+    for f in sorted((ROOT / 'data/facilidades').glob('*.json')):
+        flechas = 'flechas' in f.name.lower()
+        for k, r in enumerate(linhas_json(f)):
             r += [''] * 10
             if r[0].isdigit() and r[2]: ids[r[2]] = int(r[0])
             if r[4].isdigit() and r[6]: ids[r[6]] = int(r[4])
             if k >= (2 if flechas else 1): nomes.update(r[c].strip() for c in ((1, 3) if flechas else (2, 6)) if r[c].strip())
-    for r in tsv(ROOT / 'data/referencia/custo_de_encantamento.tsv')[1:]:
+    for r in linhas_json(ROOT / 'data/referencia/custo_de_encantamento.json')[1:]:
         if len(r) > 5 and r[5]: nomes.add(r[5])
-    for r in tsv(ROOT / 'data/referencia/reforma_de_armas.tsv')[1:]:
+    for r in linhas_json(ROOT / 'data/referencia/reforma_de_armas.json')[1:]:
         r += [''] * 12
         nomes.update(r[c] for c in (2, 5, 9) if r[c])
     sem_id = sorted(n for n in nomes - IGNORAR if n not in ids and re.sub(r'\s*\[\d+\]$', '', n) not in ids)
