@@ -65,23 +65,19 @@ def buscar_url(url, key):
     for srv in servidores_param:
         destino = url + ('&' if '?' in url else '?') + f'apiKey={key}' + (f'&server={srv}' if srv else '')
         req = urllib.request.Request(destino, headers={'Accept-Language': 'en', 'User-Agent': 'ragnarok-atlas-ench-sync'})
-        try:
-            with urllib.request.urlopen(req, timeout=25) as r:
-                return json.loads(r.read()), None
-        except urllib.error.HTTPError as e:
-            if e.code == 429:
-                espera = min(int(e.headers.get('Retry-After', 30) or 30), 120)
-                print(f'  limite do servidor (429); esperando {espera}s…')
+        for tent in range(6):
+            try:
+                with urllib.request.urlopen(req, timeout=25) as r:
+                    return json.loads(r.read()), None
+            except urllib.error.HTTPError as e:
+                ultimo = e
+                if e.code != 429:
+                    break
+                espera = min(max(int(e.headers.get('Retry-After', 20) or 20), 20) * (2 ** tent), 180)
+                print(f'  limite do servidor (429); esperando {espera}s (tentativa {tent + 1}/6)…')
                 time.sleep(espera)
-                try:
-                    with urllib.request.urlopen(req, timeout=25) as r:
-                        return json.loads(r.read()), None
-                except Exception as e2:
-                    return None, e2
-            ultimo = e
-            if e.code != 400:
-                return None, e
-        ultimo = e
+        if ultimo is None or ultimo.code != 400:
+            break
     return None, ultimo
 
 
