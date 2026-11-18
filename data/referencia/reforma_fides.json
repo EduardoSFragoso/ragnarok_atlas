@@ -1,0 +1,528 @@
+{
+  "gerado": "2026-11-18",
+  "fonte": "https://browiki.org/wiki/Aldeia_do_Lobo_Cinzento",
+  "npc": {
+    "nome": "Bamdatt",
+    "navi": "wolfvill 170/131"
+  },
+  "requisitos": [
+    "Refino mínimo para reformar: +9.",
+    "O Esboço de Arma deve corresponder à arma desejada."
+  ],
+  "metodos": [
+    {
+      "nome": "Ritual Básico",
+      "nota": "Perde 5 níveis de refino",
+      "mats": [
+        [
+          200,
+          "Fragmento de Ametista"
+        ],
+        [
+          50,
+          "Óleo Ungido"
+        ],
+        [
+          50,
+          "Água Ungida"
+        ],
+        [
+          50,
+          "Sudário Santo"
+        ],
+        [
+          10,
+          "Esboço de Arma"
+        ]
+      ]
+    },
+    {
+      "nome": "Ritual Avançado",
+      "nota": "Perde 1 nível de refino",
+      "mats": [
+        [
+          400,
+          "Fragmento de Ametista"
+        ],
+        [
+          200,
+          "Óleo Ungido"
+        ],
+        [
+          200,
+          "Água Ungida"
+        ],
+        [
+          200,
+          "Sudário Santo"
+        ],
+        [
+          30,
+          "Esboço de Arma"
+        ]
+      ]
+    },
+    {
+      "nome": "Reformador de Fides",
+      "nota": "Mantém refino e cartas",
+      "mats": [
+        [
+          400,
+          "Fragmento de Ametista"
+        ]
+      ]
+    }
+  ],
+  "classes": [
+    {
+      "classe": "Cavaleiros Draconianos",
+      "armas": [
+        {
+          "o": "Arpão Adulter Fides",
+          "r": "Arpão Vivatus Fides"
+        },
+        {
+          "o": "Bastarda Adulter Fides",
+          "r": "Bastarda Vivatus Fides"
+        }
+      ]
+    },
+    {
+      "classe": "Guardiões Imperiais",
+      "armas": [
+        {
+          "o": "Espada Adulter Fides",
+          "r": "Espada Vivatus Fides"
+        },
+        {
+          "o": "Lança Adulter Fides",
+          "r": "Lança Vivatus Fides"
+        }
+      ]
+    },
+    {
+      "classe": "Magus",
+      "armas": [
+        {
+          "o": "Bastão Adulter Fides",
+          "r": "Bastão Vivatus Fides"
+        },
+        {
+          "o": "Báculo Adulter Fides",
+          "r": "Báculo Vivatus Fides"
+        }
+      ]
+    },
+    {
+      "classe": "Elementalistas",
+      "armas": [
+        {
+          "o": "Grimório Adulter Fides",
+          "r": "Grimório Vivatus Fides"
+        },
+        {
+          "o": "Livro Adulter Fides",
+          "r": "Livro Vivatus Fides"
+        }
+      ]
+    },
+    {
+      "classe": "Falcões do Vento",
+      "armas": [
+        {
+          "o": "Arco Adulter Fides",
+          "r": "Arco Vivatus Fides"
+        },
+        {
+          "o": "Balista Adulter Fides",
+          "r": "Balista Vivatus Fides"
+        }
+      ]
+    },
+    {
+      "classe": "Maestros",
+      "armas": [
+        {
+          "o": "Harpa Adulter Fides",
+          "r": "Harpa Vivatus Fides"
+        },
+        {
+          "o": "Violino Adulter Fides",
+          "r": "Violino Vivatus Fides"
+        }
+      ]
+    },
+    {
+      "classe": "Divas",
+      "armas": [
+        {
+          "o": "Açoite Adulter Fides",
+          "r": "Açoite Vivatus Fides"
+        },
+        {
+          "o": "Chicote Adulter Fides",
+          "r": "Chicote Vivatus Fides"
+        }
+      ]
+    },
+    {
+      "classe": "Engenheiros",
+      "armas": [
+        {
+          "o": "Clava Adulter Fides",
+          "r": "Clava Vivatus Fides"
+        },
+        {
+          "o": "Lábris Adulter Fides",
+          "r": "Lábris Vivatus Fides"
+        }
+      ]
+    },
+    {
+      "classe": "Cientistas",
+      "armas": [
+        {
+          "o": "Maça Adulter Fides",
+          "r": "Maça Vivatus Fides"
+        },
+        {
+          "o": "Rapieira Adulter Fides",
+          "r": "Rapieira Vivatus Fides"
+        }
+      ]
+    },
+    {
+      "classe": "Executores",
+      "armas": [
+        {
+          "o": "Chakram Adulter Fides",
+          "r": "Chakram Vivatus Fides"
+        },
+        {
+          "o": "Katar Adulter Fides",
+          "r": "Katar Vivatus Fides"
+        }
+      ]
+    },
+    {
+      "classe": "Mandraques",
+      "armas": [
+        {
+          "o": "Adaga Adulter Fides",
+          "r": "Adaga Vivatus Fides"
+        },
+        {
+          "o": "Besta Adulter Fides",
+          "r": "Besta Vivatus Fides"
+        }
+      ]
+    },
+    {
+      "classe": "Cardeais",
+      "armas": [
+        {
+          "o": "Bíblia Adulter Fides",
+          "r": "Bíblia Vivatus Fides"
+        },
+        {
+          "o": "Cetro Adulter Fides",
+          "r": "Cetro Vivatus Fides"
+        }
+      ]
+    },
+    {
+      "classe": "Inquisidores",
+      "armas": [
+        {
+          "o": "Garra Adulter Fides",
+          "r": "Garra Vivatus Fides"
+        },
+        {
+          "o": "Manopla Adulter Fides",
+          "r": "Manopla Vivatus Fides"
+        }
+      ]
+    },
+    {
+      "classe": "Shinkiro e Shiranui",
+      "armas": [
+        {
+          "o": "Huuma Adulter Fides",
+          "r": "Huuma Vivatus Fides"
+        },
+        {
+          "o": "Shuriken Adulter Fides",
+          "r": "Shuriken Vivatus Fides"
+        }
+      ]
+    },
+    {
+      "classe": "Animistas",
+      "armas": [
+        {
+          "o": "Cauda de Gato Adulter Fides",
+          "r": "Cauda de Gato Vivatus Fides"
+        },
+        {
+          "o": "Rabo-de-Gato Adulter Fides",
+          "r": "Rabo-de-Gato Vivatus Fides"
+        }
+      ]
+    },
+    {
+      "classe": "Mestres Celestiais",
+      "armas": [
+        {
+          "o": "Manual Adulter Fides",
+          "r": "Manual Vivatus Fides"
+        },
+        {
+          "o": "Compêndio Adulter Fides",
+          "r": "Compêndio Vivatus Fides"
+        }
+      ]
+    },
+    {
+      "classe": "Ascetas das Almas",
+      "armas": [
+        {
+          "o": "Cajado Adulter Fides",
+          "r": "Cajado Vivatus Fides"
+        },
+        {
+          "o": "Varinha Adulter Fides",
+          "r": "Varinha Vivatus Fides"
+        }
+      ]
+    },
+    {
+      "classe": "Guerrilheiros",
+      "armas": [
+        {
+          "o": "Espingarda Adulter Fides",
+          "r": "Espingarda Vivatus Fides"
+        },
+        {
+          "o": "Granadeira Adulter Fides",
+          "r": "Granadeira Vivatus Fides"
+        },
+        {
+          "o": "Metralhadora Adulter Fides",
+          "r": "Metralhadora Vivatus Fides"
+        },
+        {
+          "o": "Revólver Adulter Fides",
+          "r": "Revólver Vivatus Fides"
+        },
+        {
+          "o": "Rifle Adulter Fides",
+          "r": "Rifle Vivatus Fides"
+        }
+      ]
+    }
+  ],
+  "bonus": {
+    "regras": [
+      "Não há perda de refino ou cartas ao adicionar bônus aleatórios.",
+      "As armas recebem até 2 bônus aleatórios de uma só vez e podem ser resetadas quantas vezes você quiser.",
+      "Os valores dos bônus da Adulter são menores que os da Vivatus (versão mais fraca) e são sorteados dentro das faixas abaixo."
+    ],
+    "variaveis": [
+      {
+        "nome": "[PROPRIEDADE]",
+        "opcoes": "Água, Fogo, Terra, Vento, Veneno, Sagrado, Sombrio, Fantasma, Maldito ou Neutro"
+      },
+      {
+        "nome": "[RAÇA]",
+        "opcoes": "Peixe, Demônio, Planta, Inseto, Amorfo, Anjo, Morto-Vivo, Humanoide, Bruto ou Dragão"
+      },
+      {
+        "nome": "[TAMANHO]",
+        "opcoes": "Pequeno, Médio e Grande"
+      }
+    ],
+    "combinadores": {
+      "adulter": [
+        "Pontifex da Coragem",
+        "Pontifex da Sabedoria"
+      ],
+      "vivatus": [
+        "Pontifex da Tenacidade",
+        "Pontifex da Crença"
+      ],
+      "nota": "Os combinadores são adquiridos somente por monstros na Mansão da Desilusão, no modo difícil da instância."
+    },
+    "fisicos": {
+      "primeiro": [
+        {
+          "efeito": "Dano crítico",
+          "adulter": "+2 ~ 10%",
+          "vivatus": "+2 ~ 10%"
+        },
+        {
+          "efeito": "Dano físico a distância",
+          "adulter": "+2 ~ 10%",
+          "vivatus": "+2 ~ 10%"
+        },
+        {
+          "efeito": "Dano físico corpo a corpo",
+          "adulter": "+2 ~ 10%",
+          "vivatus": "+2 ~ 10%"
+        },
+        {
+          "efeito": "Pós-conjuração",
+          "adulter": "-1 ~ 3%",
+          "vivatus": "-1 ~ 5%"
+        },
+        {
+          "efeito": "Dano físico contra [RAÇA]",
+          "adulter": "+3 ~ 15%",
+          "vivatus": "+4 ~ 20%"
+        },
+        {
+          "efeito": "ATQ",
+          "adulter": "+10 ~ 50",
+          "vivatus": "+12 ~ 60"
+        },
+        {
+          "efeito": "DEF",
+          "adulter": "+10 ~ 50",
+          "vivatus": "+12 ~ 60"
+        },
+        {
+          "efeito": "Esquiva",
+          "adulter": "+5 ~ 25",
+          "vivatus": "+6 ~ 30"
+        },
+        {
+          "efeito": "Precisão",
+          "adulter": "+5 ~ 25",
+          "vivatus": "+6 ~ 30"
+        },
+        {
+          "efeito": "Dano físico",
+          "adulter": "+1 ~ 5%",
+          "vivatus": "+2 ~ 10%"
+        },
+        {
+          "efeito": "HP máx.",
+          "adulter": "+200 ~ 1.000",
+          "vivatus": "+250 ~ 1.250"
+        },
+        {
+          "efeito": "SP máx.",
+          "adulter": "+50 ~ 250",
+          "vivatus": "+75 ~ 375"
+        }
+      ],
+      "segundo": [
+        {
+          "efeito": "Dano crítico",
+          "adulter": "+2 ~ 10%",
+          "vivatus": "+2 ~ 10%"
+        },
+        {
+          "efeito": "Dano físico a distância",
+          "adulter": "+2 ~ 10%",
+          "vivatus": "+2 ~ 10%"
+        },
+        {
+          "efeito": "Dano físico corpo a corpo",
+          "adulter": "+2 ~ 10%",
+          "vivatus": "+2 ~ 10%"
+        },
+        {
+          "efeito": "Pós-conjuração",
+          "adulter": "-1 ~ 3%",
+          "vivatus": "-1 ~ 5%"
+        },
+        {
+          "efeito": "Dano físico contra [PROPRIEDADE]",
+          "adulter": "+2 ~ 10%",
+          "vivatus": "+3 ~ 15%"
+        },
+        {
+          "efeito": "Dano físico contra [TAMANHO]",
+          "adulter": "+2 ~ 10%",
+          "vivatus": "+3 ~ 15%"
+        }
+      ]
+    },
+    "magicos": {
+      "primeiro": [
+        {
+          "efeito": "Pós-conjuração",
+          "adulter": "-1 ~ 3%",
+          "vivatus": "-1 ~ 5%"
+        },
+        {
+          "efeito": "Dano mágico contra [RAÇA]",
+          "adulter": "+3 ~ 15%",
+          "vivatus": "+4 ~ 20%"
+        },
+        {
+          "efeito": "Dano mágico de propriedade [PROPRIEDADE]",
+          "adulter": "+2 ~ 10%",
+          "vivatus": "+3 ~ 15%"
+        },
+        {
+          "efeito": "ATQM",
+          "adulter": "+10 ~ 50",
+          "vivatus": "+12 ~ 60"
+        },
+        {
+          "efeito": "DEF",
+          "adulter": "+10 ~ 50",
+          "vivatus": "+12 ~ 60"
+        },
+        {
+          "efeito": "Esquiva",
+          "adulter": "+5 ~ 25",
+          "vivatus": "+6 ~ 30"
+        },
+        {
+          "efeito": "Conjuração variável",
+          "adulter": "-2 ~ 10%",
+          "vivatus": "+3 ~ 15%"
+        },
+        {
+          "efeito": "Dano mágico",
+          "adulter": "+1 ~ 5%",
+          "vivatus": "+2 ~ 10%"
+        },
+        {
+          "efeito": "HP máx.",
+          "adulter": "+200 ~ 1.000",
+          "vivatus": "+250 ~ 1.250"
+        },
+        {
+          "efeito": "SP máx.",
+          "adulter": "+50 ~ 250",
+          "vivatus": "+75 ~ 375"
+        }
+      ],
+      "segundo": [
+        {
+          "efeito": "Pós-conjuração",
+          "adulter": "-1 ~ 3%",
+          "vivatus": "-1 ~ 5%"
+        },
+        {
+          "efeito": "Dano físico contra [PROPRIEDADE]",
+          "adulter": "+2 ~ 10%",
+          "vivatus": "+3 ~ 15%"
+        },
+        {
+          "efeito": "Dano mágico de propriedade [PROPRIEDADE]",
+          "adulter": "+2 ~ 10%",
+          "vivatus": "+3 ~ 15%"
+        },
+        {
+          "efeito": "Dano mágico contra [TAMANHO]",
+          "adulter": "+2 ~ 10%",
+          "vivatus": "+3 ~ 15%"
+        }
+      ]
+    }
+  }
+}
