@@ -1,0 +1,1784 @@
+{
+ "Acid Bomb": {
+  "busca_candidatos": [
+   {
+    "id": 490,
+    "nome": "Bomba Ácida"
+   }
+  ],
+  "cru": {
+   "description": "Bomba Ácida Nível máximo: 10 Pré-requisitos: Fogo Grego 5, Terror Ácido 5 Tipo: Ofensiva Descrição: Combina dois frascos de Ácido e Fogo Grego para causar dano físico a distância e ter a chance de quebrar a Arma/Armadura do alvo. O dano é afetado pela INT e nível de base do usuário e pela VIT do alvo selecionado. A propriedade depende da arma equipada. Em jogadores, o dano é cortado pela metade. Consome 1 Frasco de Ácido e 1 Frasco de Fogo Grego. Nível l ATQ [Nv 1]: 200% [Nv 2]: 400% [Nv 3]: 600% [Nv 4]: 800% [Nv 5]: 1.000% [Nv 6]: 1.200% [Nv 7]: 1.400% [Nv 8]: 1.600% [Nv 9]: 1.800% [Nv 10]: 2.000%",
+   "id": 490,
+   "name": "Bomba Ácida",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 490,
+  "nada": false,
+  "nome_busca": "Acid Bomb",
+  "srv_detalhe": "LATAM"
+ },
+ "Adoramus": {
+  "busca_candidatos": [
+   {
+    "id": 2040,
+    "nome": "Adoramus"
+   }
+  ],
+  "cru": {
+   "description": "Adoramus Nível máximo: 10 Pré-requisitos: Judex 5, Criar Ancilla 1, Magnus Exorcismus 1 Tipo: Ofensiva Descrição: Causa dano mágico de propriedade Sagrado com chance de infligir Cegueira e reduzir a AGI dos alvos. Se Ancilla estiver ativa, a propriedade da magia altera para Neutro. Se houver um Noviço ou evoluções ao redor, o consumo de Gema Azul é anulado. O dano é afetado pelo nível de base do usuário. Consome 1 Gema Azul. Nível l ATQM l Área [Nv 1]: 550% l 7x7 células [Nv 2]: 800% l 7x7 células [Nv 3]: 1.050% l 7x7 células [Nv 4]: 1.300% l 7x7 células [Nv 5]: 1.550% l 7x7 células [Nv 6]: 1.800% l 7x7 células [Nv 7]: 2.050% l 11x11 células [Nv 8]: 2.300% l 11x11 células [Nv 9]: 2.550% l 11x11 células [Nv 10]: 2.800% l 11x11 células",
+   "id": 2040,
+   "name": "Adoramus",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2040,
+  "nada": false,
+  "nome_busca": "Adoramus",
+  "srv_detalhe": "LATAM"
+ },
+ "Aimed Bolt": {
+  "busca_candidatos": [
+   {
+    "id": 2236,
+    "nome": "Disparo Certeiro"
+   }
+  ],
+  "cru": {
+   "description": "Disparo Certeiro Nível máximo: 10 Pré-requisitos: Instalar Armadilha 5 Tipo: Ofensiva Descrição: Dispara 5 flechas no alvo, causando dano físico a distância que é influenciado pelo nível de base e bônus de Disparo Selvagem. Consome 3 flechas. Nível l ATQ l ATQ (Bônus) [Nv 1]: 520% l 835% [Nv 2]: 540% l 870% [Nv 3]: 560% l 905% [Nv 4]: 580% l 940% [Nv 5]: 600% l 975% [Nv 6]: 620% l 1.010% [Nv 7]: 640% l 1.045% [Nv 8]: 660% l 1.080% [Nv 9]: 680% l 1.115% [Nv 10]: 700% l 1.150%",
+   "id": 2236,
+   "name": "Disparo Certeiro",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2236,
+  "nada": false,
+  "nome_busca": "Aimed Bolt",
+  "srv_detalhe": "LATAM"
+ },
+ "Arm Cannon": {
+  "busca_candidatos": [
+   {
+    "id": 2261,
+    "nome": "Canhão"
+   }
+  ],
+  "cru": {
+   "description": "Canhão Nível máximo: 5 Pré-requisitos: Lança Chamas 2, Gás Criogênico 2 Tipo: Ofensiva Descrição: Apenas com M.E.C.H.A. Causa dano físico a distância na área. A propriedade depende da Bala de Canhão. Tem alcance de células. O dano é afetado pelo seu nível de base. Consome 1 Gasolina e 1 Bala de Canhão. Nível l Área l ATQ [Nv 1] 3x3 células l 750% [Nv 2] 3x3 células l 1.100% [Nv 3] 5x5 células l 1.450% [Nv 4] 5x5 células l 1.800% [Nv 5] 7x7 células l 2.150%",
+   "id": 2261,
+   "name": "Canhão",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2261,
+  "nada": false,
+  "nome_busca": "Arm Cannon",
+  "srv_detalhe": "LATAM"
+ },
+ "Arrow Storm": {
+  "busca_candidatos": [
+   {
+    "id": 2233,
+    "nome": "Tempestade de Flechas"
+   }
+  ],
+  "cru": {
+   "description": "Tempestade de Flechas Nível máximo: 10 Pré-requisitos: Disparo Certeiro 5 Tipo: Ofensiva Descrição: Causa dano físico a distância na área. O dano é afetado pelo nível de base do usuário e ganha um bônus se a habilidade [Disparo Selvagem] estiver ativada. Consome 5 flechas. Nível l ATQ l ATQ (Bônus) l Área [Nv 1]: 380% l 450% l 5x5 células [Nv 2]: 560% l 700% l 5x5 células [Nv 3]: 740% l 950% l 5x5 células [Nv 4]: 920% l 1.200% l 5x5 células [Nv 5]: 1.100% l 1.450% l 5x5 células [Nv 6]: 1.280% l 1.700% l 7x7 células [Nv 7]: 1.460% l 1.950% l 7x7 células [Nv 8]: 1.640% l 2.200% l 7x7 células [Nv 9]: 1.820% l 2.450% l 7x7 células [Nv 10]: 2.000% l 2.700% l 9x9 células",
+   "id": 2233,
+   "name": "Tempestade de Flechas",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2233,
+  "nada": false,
+  "nome_busca": "Arrow Storm",
+  "srv_detalhe": "LATAM"
+ },
+ "Arrow Vulcan": {
+  "busca_candidatos": [
+   {
+    "id": 394,
+    "nome": "Vulcão de Flechas"
+   }
+  ],
+  "cru": {
+   "description": "Vulcão de Flechas Nível máximo: 10 Pré-requisitos: Rajada de Flechas 5, Chuva de Flechas 5, Flecha Melódica 1 Tipo: Ofensiva Descrição: Apenas Chicotes ou Instrumentos. Causa dano físico a distância no alvo. O nível de base influencia no dano causado. Consome 1 flecha. Nível l ATQ [Nv 1]: 600% [Nv 2]: 700% [Nv 3]: 800% [Nv 4]: 900% [Nv 5]: 1.000% [Nv 6]: 1.100% [Nv 7]: 1.200% [Nv 8]: 1.300% [Nv 9]: 1.400% [Nv 10]: 1.500%",
+   "id": 394,
+   "name": "Vulcão de Flechas",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 394,
+  "nada": false,
+  "nome_busca": "Arrow Vulcan",
+  "srv_detalhe": "LATAM"
+ },
+ "Axe Tornado": {
+  "busca_candidatos": [
+   {
+    "id": 2280,
+    "nome": "Fúria do Furacão"
+   }
+  ],
+  "cru": {
+   "description": "Fúria do Furacão Nível máximo: 5 Pré-requisitos: Maestria com Machados 1 Tipo: Ofensiva Descrição: Apenas com Machados. Causa dano físico corpo a corpo ao redor. VIT e nível de base influenciam no dano. Nível l ATQ l Área [Nv 1]: 380% l 5x5 células [Nv 2]: 560% l 5x5 células [Nv 3]: 740% l 7x7 células [Nv 4]: 920% l 7x7 células [Nv 5]: 1.100% l 7x7 células",
+   "id": 2280,
+   "name": "Fúria do Furacão",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2280,
+  "nada": false,
+  "nome_busca": "Axe Tornado",
+  "srv_detalhe": "LATAM"
+ },
+ "Basilica": {
+  "busca_candidatos": [
+   {
+    "id": 362,
+    "nome": "Basílica"
+   }
+  ],
+  "cru": {
+   "description": "Basílica Nível máximo: 5 Pré-requisitos: Gloria 2, Aumentar Recuperação de SP 1 Tipo: Suporte Descrição: Garante um bônus de dano físico contra oponentes Sombrios/Malditos e aumenta o dano mágico de propriedade Sagrado. Nível l Dano mágico l Dano físico [Nv 1]: +3% l +5% [Nv 2]: +6% l +10% [Nv 3]: +9% l +15% [Nv 4]: +12% l +20% [Nv 5]: +15% l +25%",
+   "id": 362,
+   "name": "Basílica",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 362,
+  "nada": false,
+  "nome_busca": "Basilica",
+  "srv_detalhe": "LATAM"
+ },
+ "Bomb Cluster": {
+  "busca_candidatos": [
+   {
+    "id": 2239,
+    "nome": "Bomba Relógio"
+   }
+  ],
+  "cru": {
+   "description": "Bomba Relógio Nível máximo: 5 Pré-requisitos: Perícia com Armadilha 3 Tipo: Ofensiva Descrição: Instala uma armadilha no chão, causando dano físico de propriedade Neutro na área de 7x7 células ao redor dela. A armadilha dura 15 segundos e não pode ser removida por [Remover Armadilha]. Apenas 3 armadilhas ativas por vez. Consome 1 Armadilha Especial. Nível l ATQ [Nv 1]: 300% [Nv 2]: 400% [Nv 3]: 500% [Nv 4]: 600% [Nv 5]: 700%",
+   "id": 2239,
+   "name": "Bomba Relógio",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2239,
+  "nada": false,
+  "nome_busca": "Bomb Cluster",
+  "srv_detalhe": "LATAM"
+ },
+ "Cannon Spear": {
+  "busca_candidatos": [
+   {
+    "id": 2307,
+    "nome": "Disparo Perfurante"
+   }
+  ],
+  "cru": {
+   "description": "Disparo Perfurante Nível máximo: 5 Pré-requisitos: Estocada Precisa 1 Tipo: Ofensiva Descrição: Apenas com Lança. Causa dano físico a distância na área. FOR e nv. de base influenciam no dano. Tem chance do ataque ser crítico. A chance é a metade de CRIT do usuário. Nivel l ATQ l Área [Nv 1]: 120% + (FOR x 1)% l 3x3 células [Nv 2]: 240% + (FOR x 2)% l 3x3 células [Nv 3]: 360% + (FOR x 3)% l 5x5 células [Nv 4]: 480% + (FOR x 4)% l 5x5 células [Nv 5]: 600% + (FOR x 5)% l 5x5 células",
+   "id": 2307,
+   "name": "Disparo Perfurante",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2307,
+  "nada": false,
+  "nome_busca": "Cannon Spear",
+  "srv_detalhe": "LATAM"
+ },
+ "Cart Cannon": {
+  "busca_candidatos": [
+   {
+    "id": 2477,
+    "nome": "Canhão de Prótons"
+   }
+  ],
+  "cru": {
+   "description": "Canhão de Prótons Nível máximo: 5 Pré-requisitos: Aprimorar Carrinho 2 Tipo: Ofensiva Descrição: Apenas com Carrinho. Causa dano físico a distância que ignora a esquiva dos alvos atingidos na área. O dano é afetado pela INT, nível de base e pelo nível aprendido de [Aprimorar Carrinho]. Consome 1 Bala de Canhão. Nível l Área l ATQ l Nv. de Aprimorar Carrinho [Nv 1]: 3x3 células l 250% l +20% [Nv 2]: 3x3 células l 500% l +40% [Nv 3]: 5x5 células l 750% l +60% [Nv 4]: 5x5 células l 1.000% l +80% [Nv 5]: 7x7 células l 1.250% l +100%",
+   "id": 2477,
+   "name": "Canhão de Prótons",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2477,
+  "nada": false,
+  "nome_busca": "Cart Cannon",
+  "srv_detalhe": "LATAM"
+ },
+ "Cart Tornado": {
+  "busca_candidatos": [
+   {
+    "id": 2476,
+    "nome": "Tornado de Carrinho"
+   }
+  ],
+  "cru": {
+   "description": "Tornado de Carrinho Nível máximo: 10 Pré-requisitos: Aprimorar Carrinho 1 Tipo: Ofensiva Descrição: Apenas com Carrinho. Causa dano físico corpo a corpo na área de 5x5 células ao redor do usuário. O dano é afetado pela FOR, pelo peso do carrinho, nv. de base e nv. de Aprimorar Carrinho. Nível l ATQ [Nv 1]: 200% [Nv 2]: 400% [Nv 3]: 600% [Nv 4]: 800% [Nv 5]: 1.000% [Nv 6]: 1.200% [Nv 7]: 1.400% [Nv 8]: 1.600% [Nv 9]: 1.800% [Nv 10]: 2.000%",
+   "id": 2476,
+   "name": "Tornado de Carrinho",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2476,
+  "nada": false,
+  "nome_busca": "Cart Tornado",
+  "srv_detalhe": "LATAM"
+ },
+ "Catnip Meteor": {
+  "busca_candidatos": [
+   {
+    "id": 5028,
+    "nome": "Meteoros de Nepeta"
+   }
+  ],
+  "cru": {
+   "description": "Meteoros de Nepeta Nível máximo: 5 Tipo: Ofensiva / Selva Pré requisitos: Hera Venenosa 3 Descrição: Causa dano mágico de propriedade Neutro na área de 7x7 células selecionada. Cada Nepeta possui 5x5 células de alcance. Se Fruto de Nepeta estiver no inventário, adiciona a chance de infligir Maldição. Se tiver nv. base 100 ou mais, o dano aumenta de acordo com o nível de base e a INT do usuário. Consome 1 Fruto de Nepeta (Opcional). Nível l ATQM [Nv 1]: 300% [Nv 2]: 400% [Nv 3]: 500% [Nv 4]: 600% [Nv 5]: 700%",
+   "id": 5028,
+   "name": "Meteoros de Nepeta",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 5028,
+  "nada": false,
+  "nome_busca": "Catnip Meteor",
+  "srv_detalhe": "LATAM"
+ },
+ "Chain Crush Combo": {
+  "busca_candidatos": [
+   {
+    "id": 372,
+    "nome": "Combo Esmagador"
+   }
+  ],
+  "cru": {
+   "description": "Combo Esmagador Nível máximo: 10 Pré-requisitos: Punhos de Ferro 5, Punho do Tigre 2, Inv. Esfera Espiritual 5 Tipo: Ofensiva / Combo Descrição: Após [O Último Dragão] ou [Punho do Tigre]. Causa dano físico corpo a corpo. Se o usuário estiver em estado de Fúria e possuir 1 Esfera Espiritual sobrando, é possível usar [Punho Supremo de Asura]. O nível de base influencia no dano causado. Consome 1 Esfera Espiritual. Nível l ATQ [Nv 1]: 200% [Nv 2]: 400% [Nv 3]: 600% [Nv 4]: 800% [Nv 5]: 1.000% [Nv 6]: 1.200% [Nv 7]: 1.400% [Nv 8]: 1.600% [Nv 9]: 1.800% [Nv 10]: 2.000%",
+   "id": 372,
+   "name": "Combo Esmagador",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 372,
+  "nada": false,
+  "nome_busca": "Chain Crush Combo",
+  "srv_detalhe": "LATAM"
+ },
+ "Chain Lightning": {
+  "busca_candidatos": [
+   {
+    "id": 2214,
+    "nome": "Corrente Elétrica"
+   }
+  ],
+  "cru": {
+   "description": "Corrente Elétrica Nível máximo: 5 Pré-requisitos: Invocar Esfera de Vento 1 Tipo: Ofensiva Descrição: Causa dano mágico de propriedade Vento que atinge o alvo e oponentes ao redor uma vez por sequência. Nível l ATQM l Correntes [Nv 1]: 600% l 5 [Nv 2]: 700% l 6 [Nv 3]: 800% l 7 [Nv 4]: 900% l 8 [Nv 5]: 1.000% l 9",
+   "id": 2214,
+   "name": "Corrente Elétrica",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2214,
+  "nada": false,
+  "nome_busca": "Chain Lightning",
+  "srv_detalhe": "LATAM"
+ },
+ "Clashing Spiral": {
+  "busca_candidatos": [
+   {
+    "id": 8218,
+    "nome": "Perfurar em Espiral"
+   }
+  ],
+  "cru": {
+   "description": "Perfurar em Espiral Nível máximo: 5 Tipo: Ofensiva Descrição: Causa dano físico a distância no alvo, que ficará imóvel por 1 segundo. O dano é afetado pelo peso da arma.",
+   "id": 8218,
+   "name": "Perfurar em Espiral",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 8218,
+  "nada": false,
+  "nome_busca": "Clashing Spiral",
+  "srv_detalhe": "LATAM"
+ },
+ "Cold Bolt": {
+  "busca_candidatos": [
+   {
+    "id": 14,
+    "nome": "Lanças de Gelo"
+   }
+  ],
+  "cru": {
+   "description": "Lanças de Gelo Nível máximo: 10 Tipo: Ofensiva Descrição: Causa dano mágico de propriedade Água. Cada lança causa 100% do ATQM. Nível l Lanças l Custo de SP [Nv 1]: 1 l 12 [Nv 2]: 2 l 14 [Nv 3]: 3 l 16 [Nv 4]: 4 l 18 [Nv 5]: 5 l 20 [Nv 6]: 6 l 22 [Nv 7]: 7 l 24 [Nv 8]: 8 l 26 [Nv 9]: 9 l 28 [Nv 10]: 10 l 30",
+   "id": 14,
+   "name": "Lanças de Gelo",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 14,
+  "nada": false,
+  "nome_busca": "Cold Bolt",
+  "srv_detalhe": "LATAM"
+ },
+ "Comet": {
+  "busca_candidatos": [
+   {
+    "id": 2213,
+    "nome": "Cometa"
+   }
+  ],
+  "cru": {
+   "description": "Cometa Nível máximo: 5 Pré-requisitos: Chamas de Hela 3 Tipo: Ofensiva Descrição: Abre espaço para um enorme Cometa cair, causando dano mágico de propriedade Neutro na área de 13x13 células e infligindo um efeito de [Vício Mágico] nos oponentes. Vício Mágico: Por 20 segundos, reduz a resistência aos ataques de todas as propriedades em 50%. Nível l ATQM l Custo de SP [Nv 1]: 3.200% l 70 [Nv 2]: 3.900% l 90 [Nv 3]: 4.600% l 110 [Nv 4]: 5.300% l 130 [Nv 5]: 6.000% l 150",
+   "id": 2213,
+   "name": "Cometa",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2213,
+  "nada": false,
+  "nome_busca": "Comet",
+  "srv_detalhe": "LATAM"
+ },
+ "Counter Slash": {
+  "busca_candidatos": [
+   {
+    "id": 2029,
+    "nome": "Retaliação"
+   }
+  ],
+  "cru": {
+   "description": "Retaliação Nível máximo: 10 Pré-requisitos: Reflexo de Combate 1 Tipo: Ofensiva Descrição: Após ativar [Reflexo de Combate]. Causa dano físico corpo a corpo que ignora a DEF dos oponentes ao redor do usuário. AGI e Nv. de base/classe afetam o dano. Nível l ATQ l Área [Nv 1]: 450% l 3x3 células [Nv 2]: 600% l 3x3 células [Nv 3]: 750% l 3x3 células [Nv 4]: 900% l 3x3 células [Nv 5]: 1.050% l 3x3 células [Nv 6]: 1.200% l 5x5 células [Nv 7]: 1.350% l 5x5 células [Nv 8]: 1.500% l 5x5 células [Nv 9]: 1.650% l 5x5 células [Nv 10]: 1.800% l 5x5 células",
+   "id": 2029,
+   "name": "Retaliação",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2029,
+  "nada": false,
+  "nome_busca": "Counter Slash",
+  "srv_detalhe": "LATAM"
+ },
+ "Crazy Vines": {
+  "busca_candidatos": [
+   {
+    "id": 2483,
+    "nome": "Erva Daninha"
+   }
+  ],
+  "cru": {
+   "description": "Erva Daninha Nível máximo: 10 Pré-requisitos: Muralha de Espinhos 3 Tipo: Ofensiva Descrição: Espalha ervas daninhas na área escolhida. Causa dano físico a distância e remove algumas magias de solo atuantes no lugar. O dano é afetado pelo seu nível de base. Consome 1 Semente de Planta Selvagem. Nível l Ervas l ATQ por erva [Nv 1]: 5 l 800% [Nv 2]: 6 l 900% [Nv 3]: 6 l 1.000% [Nv 4]: 7 l 1.100% [Nv 5]: 7 l 1.200% [Nv 6]: 8 l 1.300% [Nv 7]: 8 l 1.400% [Nv 8]: 9 l 1.500% [Nv 9]: 9 l 1.600% [Nv 10]: 10 l 1.700%",
+   "id": 2483,
+   "name": "Erva Daninha",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2483,
+  "nada": false,
+  "nome_busca": "Crazy Vines",
+  "srv_detalhe": "LATAM"
+ },
+ "Crimson Rock": {
+  "busca_candidatos": [
+   {
+    "id": 2211,
+    "nome": "Meteoro Escarlate"
+   }
+  ],
+  "cru": {
+   "description": "Meteoro Escarlate Nível máximo: 5 Pré-requisitos: Invocar Esfera de Fogo 1 Tipo: Ofensiva Descrição: Causa dano mágico de propriedade Fogo na área de 7x7 células ao redor do alvo e empurra todos 3 células para trás. O nv. de base do usuário afeta o dano. Nível l ATQM l Custo de SP [Nv 1]: 1.300% l 60 [Nv 2]: 1.900% l 70 [Nv 3]: 2.500% l 80 [Nv 4]: 3.100% l 90 [Nv 5]: 3.700% l 100",
+   "id": 2211,
+   "name": "Meteoro Escarlate",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2211,
+  "nada": false,
+  "nome_busca": "Crimson Rock",
+  "srv_detalhe": "LATAM"
+ },
+ "Cross Impact": {
+  "busca_candidatos": [
+   {
+    "id": 2022,
+    "nome": "Lâminas Retalhadoras"
+   }
+  ],
+  "cru": {
+   "description": "Lâminas Retalhadoras Nível máximo: 5 Pré-requisitos: Lâminas Destruidoras 10 Tipo: Ofensiva Descrição: Se aproxima do alvo até 7 células distante para causar dano físico corpo a corpo. O dano é afetado pelo nível base do usuário. Tem chance do ataque ser crítico. A chance é a metade do CRIT do usuário. Nível l ATQ [Nv 1]: 1.550% [Nv 2]: 1.700% [Nv 3]: 1.850% [Nv 4]: 2.000% [Nv 5]: 2.150%",
+   "id": 2022,
+   "name": "Lâminas Retalhadoras",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2022,
+  "nada": false,
+  "nome_busca": "Cross Impact",
+  "srv_detalhe": "LATAM"
+ },
+ "Cross Ripper Slasher": {
+  "busca_candidatos": [
+   {
+    "id": 2037,
+    "nome": "Castigo de Loki"
+   }
+  ],
+  "cru": {
+   "description": "Castigo de Loki Nível máximo: 5 Pré-requisitos: Lâminas de Loki 1 Tipo: Ofensiva Descrição: Apenas com Katar. Só pode ser usada com Pontos de Rotação acumulados por [Lâminas de Loki]. Causa dano físico a distância no alvo. A AGI e o nível de base influenciam no dano. Nível l ATQ l Alcance [Nv 1]: 80% + Rotação l 9 células [Nv 2]: 160% + Rotação l 10 células [Nv 3]: 240% + Rotação l 11 células [Nv 4]: 320% + Rotação l 12 células [Nv 5]: 400% + Rotação l 13 células",
+   "id": 2037,
+   "name": "Castigo de Loki",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2037,
+  "nada": false,
+  "nome_busca": "Cross Ripper Slasher",
+  "srv_detalhe": "LATAM"
+ },
+ "Cross Slash": {
+  "busca_candidatos": [
+   {
+    "id": 3004,
+    "nome": "Impacto Cruzado"
+   }
+  ],
+  "cru": {
+   "description": "Impacto Cruzado Nível máximo: 10 Pré-requisitos: Refúgio das Sombras 1 Tipo: Ofensiva Descrição: Apenas com as duas mãos armadas. Pula em direção ao alvo para causar dano físico a distância e deixar a [Ferida Cruzada]. Nos próximos 3 segundos, o alvo sofrerá mais dano de [Impacto Cruzado]. O nível de base do usuário aumenta o dano. Nível l ATQ l Alcance l Recarga [Nv 1]: 200% l 4 células l 4,0 segundos [Nv 2]: 400% l 4 células l 3,9 segundos [Nv 3]: 600% l 4 células l 3,8 segundos [Nv 4]: 800% l 5 células l 3,7 segundos [Nv 5]: 1.000% l 5 células l 3,6 segundos [Nv 6]: 1.200% l 5 células l 3,5 segundos [Nv 7]: 1.400% l 6 células l 3,4 segundos [Nv 8]: 1.600% l 6 células l 3,3 segundos [Nv 9]: 1.800% l 6 células l 3,2 segundos [Nv 10]: 2.000% l 7 células l 3,1 segundos",
+   "id": 3004,
+   "name": "Impacto Cruzado",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 3004,
+  "nada": false,
+  "nome_busca": "Cross Slash",
+  "srv_detalhe": "LATAM"
+ },
+ "Curse Explosion": {
+  "busca_candidatos": [
+   {
+    "id": 2600,
+    "nome": "Necroexplosão"
+   }
+  ],
+  "cru": {
+   "description": "Necroexplosão Nível máximo: 10 Pré-requisitos: Necromancia 3 Tipo: Ofensiva Descriçãoo: Causa dano mágico de propriedade Sombrio em uma área de 7x7 células ao redor do alvo. Se o alvo estiver com o efeito Assombração, o dano mágico causado será maior. Nível l ATQM l ATQM (Assombrado) [Nv 1]: 500% l 1.500% [Nv 2]: 600% l 1.800% [Nv 3]: 700% l 2.100% [Nv 4]: 800% l 2.400% [Nv 5]: 900% l 2.700% [Nv. 6]: 1.000% l 3.000% [Nv. 7]: 1.100% l 3.300% [Nv. 8]: 1.200% l 3.600% [Nv. 9]: 1.300% l 3.900% [Nv. 10]: 1.400% l 4.200%",
+   "id": 2600,
+   "name": "Necroexplosão",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2600,
+  "nada": false,
+  "nome_busca": "Curse Explosion",
+  "srv_detalhe": "LATAM"
+ },
+ "Desperado": {
+  "busca_candidatos": [
+   {
+    "id": 516,
+    "nome": "Desperado"
+   }
+  ],
+  "cru": {
+   "description": "Desperado Nível máximo: 10 Pré-requisitos: Rajada Certeira 5 Tipo: Ofensiva Descrição: Apenas com Pistolas. Atira a distância até 10 vezes nos alvos ao redor do usuário, consumindo 10 projéteis. Nível l ATQ l SP [Nv 1]: 100% l 32 [Nv 2]: 150% l 34 [Nv 3]: 200% l 36 [Nv 4]: 250% l 38 [Nv 5]: 300% l 40 [Nv 6]: 350% l 42 [Nv 7]: 400% l 44 [Nv 8]: 450% l 46 [Nv 9]: 500% l 48 [Nv 10]: 550% l 50",
+   "id": 516,
+   "name": "Desperado",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 516,
+  "nada": false,
+  "nome_busca": "Desperado",
+  "srv_detalhe": "LATAM"
+ },
+ "Diamond Dust": {
+  "busca_candidatos": [
+   {
+    "id": 2447,
+    "nome": "Pó de Diamante"
+   }
+  ],
+  "cru": {
+   "description": "Pó de Diamante Nível máximo: 5 Pré-requisitos: Dilúvio 3 Tipo: Ofensiva Descrição: Causa dano mágico de propriedade Água na área, podendo infligir [Cristalização]. O dano é afetado pelo nível de base, INT e pelo nível de Encantar com Geada. Nível l Área [Nv 1]: 7x7 células [Nv 2]: 7x7 células [Nv 3]: 7x7 células [Nv 4]: 9x9 células [Nv 5]: 9x9 células",
+   "id": 2447,
+   "name": "Pó de Diamante",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2447,
+  "nada": false,
+  "nome_busca": "Diamond Dust",
+  "srv_detalhe": "LATAM"
+ },
+ "Dragon Breath": {
+  "busca_candidatos": [
+   {
+    "id": 2008,
+    "nome": "Sopro do Dragão"
+   }
+  ],
+  "cru": {
+   "description": "Sopro do Dragão Nível máximo: 10 Pré requisito: Adestrar Dragão 2 Tipo: Ofensiva Descrição: Apenas com montaria de Dragão. O dragão sopra na área selecionada, podendo infligir [Incêndio] e causar dano físico a distância de propriedade Fogo. A propriedade pode ser alterada de acordo com a Runa ativa. Luxanima tem sempre prioridade se duas runas estiverem ativas. Normal: Propriedade Fogo. Runa Turisaz: Propriedade Sagrado. Runa Luxanima: Propriedade Sombrio.",
+   "id": 2008,
+   "name": "Sopro do Dragão",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2008,
+  "nada": false,
+  "nome_busca": "Dragon Breath",
+  "srv_detalhe": "LATAM"
+ },
+ "Dragon Breath - Water": {
+  "busca_candidatos": [
+   {
+    "id": 5004,
+    "nome": "Bafo do Dragão"
+   }
+  ],
+  "cru": {
+   "description": "Bafo do Dragão Nível máximo: 10 Pré requisito: Adestrar Dragão 2 Tipo: Ofensiva Descrição: Apenas com montaria de Dragão. O dragão bafora na área selecionada, podendo infligir [Hipotermia] e causar dano físico a distância de propriedade Água. A propriedade pode ser alterada de acordo com a Runa ativa. Luxanima tem sempre prioridade se duas runas estiverem ativas. Normal: Propriedade Água. Runa Othila: Propriedade Fantasma. Runa Luxanima: Propriedade Neutro.",
+   "id": 5004,
+   "name": "Bafo do Dragão",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 5004,
+  "nada": false,
+  "nome_busca": "Dragon Breath - Water",
+  "srv_detalhe": "LATAM"
+ },
+ "Dragon Tail": {
+  "busca_candidatos": [
+   {
+    "id": 2566,
+    "nome": "Lançar Míssil"
+   }
+  ],
+  "cru": {
+   "description": "Lançar Míssil Nível máximo: 10 Pré-requisitos: Marcar em Brasa 1, Arremessar Granada 3 Tipo: Ofensiva Descrição: Apenas com Lança-Granadas. Lança a Cauda do Dragão no alvo, atingindo oponentes próximos e causando dano físico a distância. Alvos com a [Marca de Brasa] receberão dano adicional, assim como os oponentes ao redor do alvo marcado. Consome 1 Míssil Cauda de Dragão. Nível l ATQ l ATQ (alvo marcado) [Nv. 1]: 700% l 1.400% [Nv. 2]: 900% l 1.800% [Nv. 3]: 1.100% l 2.200% [Nv. 4]: 1.300% l 2.600% [Nv. 5]: 1.500% l 3.000% [Nv. 6]: 1.700% l 3.400% [Nv. 7]: 1.900% l 3.800% [Nv. 8]: 2.100% l 4.200% [Nv. 9]: 2.300% l 4.600% [Nv. 10]: 2.500% l 5.000%",
+   "id": 2566,
+   "name": "Lançar Míssil",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2566,
+  "nada": false,
+  "nome_busca": "Dragon Tail",
+  "srv_detalhe": "LATAM"
+ },
+ "Duple Light": {
+  "busca_candidatos": [
+   {
+    "id": 2054,
+    "nome": "Gemini Lumen"
+   }
+  ],
+  "cru": {
+   "description": "Gemini Lumen Nível máximo: 10 Pré-requisitos: Aspersio 1 Tipo: Ativa Descrição: Invoca duas luzes que ficam ativas temporariamente, concedendo a chance de causar dano físico ou mágico ao realizar ataques físicos corpo a corpo. Nível l ATQ l ATQM l Duração [Nv 1]: 165% l 440% l 90 segundos [Nv 2]: 180% l 480% l 120 segundos [Nv 3]: 195% l 520% l 150 segundos [Nv 4]: 210% l 560% l 180 segundos [Nv 5]: 225% l 600% l 210 segundos [Nv 6]: 240% l 640% l 240 segundos [Nv 7]: 255% l 680% l 270 segundos [Nv 8]: 270% l 720% l 300 segundos [Nv 9]: 285% l 760% l 330 segundos [Nv 10]: 300% l 800% l 360 segundos",
+   "id": 2054,
+   "name": "Gemini Lumen",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2054,
+  "nada": false,
+  "nome_busca": "Duple Light",
+  "srv_detalhe": "LATAM"
+ },
+ "Earth Drive": {
+  "busca_candidatos": [
+   {
+    "id": 2323,
+    "nome": "Aegis Inferi"
+   }
+  ],
+  "cru": {
+   "description": "Aegis Inferi Nível máximo: 5 Pré-requisitos: Escudo Supressor 3 Tipo: Ofensiva Descrição: Apenas com Escudo. Causa dano físico corpo a corpo na área, incluindo oponentes escondidos e removendo habilidades mágicas atuantes no terreno. A FOR, VIT e nv. de base afetam o dano. A propriedade varia de acordo com a arma. Nível l ATQ l Área [Nv 1]: 380% l 3x3 células [Nv 2]: 760% l 3x3 células [Nv 3]: 1.140% l 5x5 células [Nv 4]: 1.520% l 5x5 células [Nv 5]: 1.900% l 7x7 células",
+   "id": 2323,
+   "name": "Aegis Inferi",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2323,
+  "nada": false,
+  "nome_busca": "Earth Drive",
+  "srv_detalhe": "LATAM"
+ },
+ "Earth Grave": {
+  "busca_candidatos": [
+   {
+    "id": 2446,
+    "nome": "Castigo de Nerthus"
+   }
+  ],
+  "cru": {
+   "description": "Castigo de Nerthus Nível máximo: 5 Pré-requisitos: Coluna de Pedra 5 Tipo: Ofensiva Descrição: Causa dano mágico de propriedade Terra com chance de infligir Sangramento na área. Pode atingir oponentes em Esconderijo. O dano é afetado pela INT, nível de base e pelo nível de Encantar com Terremoto. Nível l Área [Nv 1]: 7x7 células [Nv 2]: 7x7 células [Nv 3]: 7x7 células [Nv 4]: 9x9 células [Nv 5]: 9x9 células",
+   "id": 2446,
+   "name": "Castigo de Nerthus",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2446,
+  "nada": false,
+  "nome_busca": "Earth Grave",
+  "srv_detalhe": "LATAM"
+ },
+ "Earth Strain": {
+  "busca_candidatos": [
+   {
+    "id": 2216,
+    "nome": "Abalo Sísmico"
+   }
+  ],
+  "cru": {
+   "description": "Abalo Sísmico Nível máximo: 5 Pré-requisitos: Fúria da Medusa 2 Tipo: Ofensiva Descrição: Causa dano mágico de propriedade Terra em linha reta. Tem 7 segundos de recarga. Nível l ATQM l Área [Nv 1]: 1.600% l 15x5 células [Nv 2]: 2.200% l 15x6 células [Nv 3]: 2.800% l 15x7 células [Nv 4]: 3.400% l 15x8 células [Nv 5]: 4.000% l 15x9 células",
+   "id": 2216,
+   "name": "Abalo Sísmico",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2216,
+  "nada": false,
+  "nome_busca": "Earth Strain",
+  "srv_detalhe": "LATAM"
+ },
+ "Esma": {
+  "busca_candidatos": [
+   {
+    "id": 469,
+    "nome": "Esma"
+   }
+  ],
+  "cru": {
+   "description": "Esma Nível máximo: 10 Tipo: Ofensiva Alvo: Apenas monstros Pré-requisitos: Estin 7, Estun 7 Descrição: Após conjurar Estin, Estun ou Eske, você terá 3 segundos para invocar círculos espirituais que causam dano mágico num único alvo. A propriedade muda conforme Brisa Leve. Nível l Círculos l Custo de SP [Nv 1] 1 l 8 [Nv 2] 2 l 16 [Nv 3] 3 l 24 [Nv 4] 4 l 32 [Nv 5] 5 l 40 [Nv 6] 6 l 48 [Nv 7] 7 l 56 [Nv 8] 8 l 64 [Nv 9] 9 l 72 [Nv 10] 10 l 80",
+   "id": 469,
+   "name": "Esma",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 469,
+  "nada": false,
+  "nome_busca": "Esma",
+  "srv_detalhe": "LATAM"
+ },
+ "Espa": {
+  "busca_candidatos": [
+   {
+    "id": 2602,
+    "nome": "Espa"
+   }
+  ],
+  "cru": {
+   "description": "Espa Nível máximo: 10 Pré-requisitos: Esha 1 Tipo: Ofensiva Alvo: Apenas monstros Descrição: Causa dano mágico em um alvo único. 5 segundos após o uso, pode usar [Eswhoo] A propriedade é alterada por Brisa Leve. O dano é aumentado pelo seu nível de base. No nível 10, não consome Almas. Consome 1 Alma. Nível l ATQM [Nv 1]: 750% [Nv 2]: 1.000% [Nv 3]: 1.250% [Nv 4]: 1.500% [Nv 5]: 1.750% [Nv. 6]: 2.000% [Nv. 7]: 2.250% [Nv. 8]: 2.500% [Nv. 9]: 2.750% [Nv. 10]: 3.000%",
+   "id": 2602,
+   "name": "Espa",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2602,
+  "nada": false,
+  "nome_busca": "Espa",
+  "srv_detalhe": "LATAM"
+ },
+ "Eswhoo": {
+  "busca_candidatos": [
+   {
+    "id": 2604,
+    "nome": "Eswhoo"
+   }
+  ],
+  "cru": {
+   "description": "Eswhoo Nível máximo: 10 Pré-requisitos: Espa 3 Tipo: Ofensiva Alvo: Apenas monstros Descrição: Somente após Espa. Causa dano mágico na área selecionada. Pode usar Esma até 5 segundos após o uso. A propriedade é alterada por Brisa Leve. O dano é aumentado pelo seu nível de base. No nível 10, consome apenas 1 Alma. Consome 2 Almas. Nível l ATQM l Área [Nv. 1]: 1.700% l 3x3 células [Nv. 2]: 1.900% l 3x3 células [Nv. 3]: 2.100% l 3x3 células [Nv. 4]: 2.300% l 5x5 células [Nv. 5]: 2.500% l 5x5 células [Nv. 6]: 2.700% l 5x5 células [Nv. 7]: 2.900% l 7x7 células [Nv. 8]: 3.100% l 7x7 células [Nv. 9]: 3.300% l 7x7 células [Nv. 10]: 3.500% l 9x9 células",
+   "id": 2604,
+   "name": "Eswhoo",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2604,
+  "nada": false,
+  "nome_busca": "Eswhoo",
+  "srv_detalhe": "LATAM"
+ },
+ "Exploding Dragon": {
+  "busca_candidatos": [
+   {
+    "id": 536,
+    "nome": "Dragão Explosivo"
+   }
+  ],
+  "cru": {
+   "description": "Dragão Explosivo Nível máximo: 5 Pré-requisitos: Perícia Ninja 10, Escudo de Chamas 7 Tipo: Ofensiva Descrição: Causa dano mágico de propriedade Fogo no alvo e na área de 5x5 células ao redor. Consome 1 Pedra do Fogo. Nível l ATQM [Nv 1]: 300% [Nv 2]: 450% [Nv 3]: 600% [Nv 4]: 750% [Nv 5]: 900%",
+   "id": 536,
+   "name": "Dragão Explosivo",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 536,
+  "nada": false,
+  "nome_busca": "Exploding Dragon",
+  "srv_detalhe": "LATAM"
+ },
+ "Fallen Empire": {
+  "busca_candidatos": [
+   {
+    "id": 2329,
+    "nome": "Ruína"
+   }
+  ],
+  "cru": {
+   "description": "Ruína Nível máximo: 10 Pré-requisitos: Punho do Dragão 3 Tipo: Ofensiva / Combo Descrição: Após [Punho do Dragão]. Causa dano físico corpo a corpo no alvo. Após o uso, pode usar Garra de Tigre ou Portões do Inferno. O dano é afetado pelo nível de base e FOR do usuário. Consome Esferas Espirituais. Nível l ATQ l Esferas consumidas [Nv 1]: 400% l 2 Esferas [Nv 2]: 700% l 2 Esferas [Nv 3]: 1.000% l 2 Esferas [Nv 4]: 1.300% l 2 Esferas [Nv 5]: 1.600% l 2 Esferas [Nv 6]: 1.900% l 1 Esfera [Nv 7]: 2.200% l 1 Esfera [Nv 8]: 2.500% l 1 Esfera [Nv 9]: 2.800% l 1 Esfera [Nv 10]: 3.100% l 1 Esfera",
+   "id": 2329,
+   "name": "Ruína",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2329,
+  "nada": false,
+  "nome_busca": "Fallen Empire",
+  "srv_detalhe": "LATAM"
+ },
+ "Falling Star": {
+  "busca_candidatos": [
+   {
+    "id": 2584,
+    "nome": "Chuva Estelar"
+   }
+  ],
+  "cru": {
+   "description": "Chuva Estelar Nível máximo: 10 Pré-requisitos: Chute Estelar 10 Tipo: Ofensiva / Estelar Descrição: Ao realizar ataques físicos, tem chance de invocar uma Estrela Cadente de 3x3 células para cair nos alvos com a Marca Estelar que estão na área de 5x5 células ao seu redor. O dano aumenta conforme o nível de base. Nível l ATQ [Nv 1]: 200% [Nv 2]: 300% [Nv 3]: 400% [Nv 4]: 500% [Nv 5]: 600% [Nv 6]: 700% [Nv 7]: 800% [Nv. 8]: 900% [Nv. 9]: 1.000% [Nv. 10]: 1.100%",
+   "id": 2584,
+   "name": "Chuva Estelar",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2584,
+  "nada": false,
+  "nome_busca": "Falling Star",
+  "srv_detalhe": "LATAM"
+ },
+ "Fatal Menace": {
+  "busca_candidatos": [
+   {
+    "id": 2284,
+    "nome": "Ofensiva Fatal"
+   }
+  ],
+  "cru": {
+   "description": "Ofensiva Fatal Nível máximo: 10 Pré-requisitos: Rapto 5 Tipo: Ofensiva Descrição: Causa dano físico corpo a corpo no alvo e nos oponentes ao redor. Se usar uma Adaga, a quantida de ataques será dobrada. O dano é afetado pela AGI e pelo nível de base. Nível l ATQ l Área l Precisão [Nv 1]: 120% l 3x3 células l -30 [Nv 2]: 240% l 3x3 células l -25 [Nv 3]: 360% l 3x3 células l -20 [Nv 4]: 480% l 3x3 células l -15 [Nv 5]: 600% l 3x3 células l -10 [Nv 6]: 720% l 5x5 células l 0 [Nv 7]: 840% l 5x5 células l +5 [Nv 8]: 960% l 5x5 células l +10 [Nv 9]: 1.080% l 5x5 células l +15 [Nv 10]: 1.200% l 5x5 células l +20",
+   "id": 2284,
+   "name": "Ofensiva Fatal",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2284,
+  "nada": false,
+  "nome_busca": "Fatal Menace",
+  "srv_detalhe": "LATAM"
+ },
+ "Fire Bolt": {
+  "busca_candidatos": [
+   {
+    "id": 19,
+    "nome": "Lanças de Fogo"
+   }
+  ],
+  "cru": {
+   "description": "Lanças de Fogo Nível máximo: 10 Tipo: Ofensiva Descrição: Causa dano mágico de propriedade Fogo. Cada lança causa 100% do ATQM. Nível l Lanças l Custo de SP [Nv 1]: 1 l 12 [Nv 2]: 2 l 14 [Nv 3]: 3 l 16 [Nv 4]: 4 l 18 [Nv 5]: 5 l 20 [Nv 6]: 6 l 22 [Nv 7]: 7 l 24 [Nv 8]: 8 l 26 [Nv 9]: 9 l 28 [Nv 10]: 10 l 30",
+   "id": 19,
+   "name": "Lanças de Fogo",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 19,
+  "nada": false,
+  "nome_busca": "Fire Bolt",
+  "srv_detalhe": "LATAM"
+ },
+ "Fire Dance": {
+  "busca_candidatos": [
+   {
+    "id": 2561,
+    "nome": "Descarregar Tambor"
+   }
+  ],
+  "cru": {
+   "description": "Descarregar Tambor Nível máximo: 10 Pré-requisitos: Desperado 1 Tipo: Ofensiva Descrição: Apenas com Pistolas. Causa dano físico a distância em 7x7 células ao redor do usuário. O dano é influenciado pelo nível de base e por [Desperado]. Consome 3 projéteis. Nível l ATQ [Nv. 1]: 300% [Nv. 2]: 400% [Nv. 3]: 500% [Nv. 4]: 600% [Nv. 5]: 700% [Nv. 6]: 800% [Nv. 7]: 900% [Nv. 8]: 1.000% [Nv. 9]: 1.100% [Nv. 10]: 1.200%",
+   "id": 2561,
+   "name": "Descarregar Tambor",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2561,
+  "nada": false,
+  "nome_busca": "Fire Dance",
+  "srv_detalhe": "LATAM"
+ },
+ "Fire Rain": {
+  "busca_candidatos": [
+   {
+    "id": 2567,
+    "nome": "Disparo Labareda"
+   }
+  ],
+  "cru": {
+   "description": "Disparo Labareda Nível máximo: 5 Pré-requisitos: Ataque Gatling 1 Tipo: Ofensiva Descrição: Apenas com Metralhadoras. Dispara em uma área de 3x10 células, causando dano físico a distância com chance de remover habilidades de terreno ativas. Precisa ter 11 Projéteis equipados. Consome 10 Projéteis. Nível l ATQ l Chance de remover [Nv. 1]: 3.800% l 20% [Nv. 2]: 4.100% l 25% [Nv. 3]: 4.400% l 30% [Nv. 4]: 4.700% l 35% [Nv. 5]: 5.000% l 40%",
+   "id": 2567,
+   "name": "Disparo Labareda",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2567,
+  "nada": false,
+  "nome_busca": "Fire Rain",
+  "srv_detalhe": "LATAM"
+ },
+ "First Wind": {
+  "busca_candidatos": [
+   {
+    "id": 542,
+    "nome": "Brisa Cortante"
+   }
+  ],
+  "cru": {
+   "description": "Brisa Cortante Nível máximo: 5 Pré-requisitos: Perícia Ninja 10, Descarga Elétrica 5 Tipo: Ofensiva Descrição: Causa dano mágico de propriedade Vento em uma linha reta, atingindo todos os alvos dentro do alcance da habilidade. Consome 1 Pedra do Vento. Nível l ATQM l Área [Nv 1]: 200% l 3x5 células [Nv 2]: 300% l 3x6 células [Nv 3]: 400% l 3x7 células [Nv 4]: 500% l 3x8 células [Nv 5]: 600% l 3x9 células",
+   "id": 542,
+   "name": "Brisa Cortante",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 542,
+  "nada": false,
+  "nome_busca": "First Wind",
+  "srv_detalhe": "LATAM"
+ },
+ "Flame Launcher": {
+  "busca_candidatos": [
+   {
+    "id": 2259,
+    "nome": "Lança Chamas"
+   }
+  ],
+  "cru": {
+   "description": "Lança Chamas Nível máximo: 3 Pré-requisitos: Metralhadora 1 Tipo: Ofensiva Descrição: Apenas com M.E.C.H.A. Causa dano físico de propriedade Fogo com chance de infligir [Incêndio] na área. Consome 1 Gasolina. Precisa de 1 Lança-Chamas. Nível l Chance l Área l ATQ [Nv 1]: 30% l 5x5 células l 600% [Nv 2]: 40% l 7x7 células l 900% [Nv 3]: 50% l 9x9 células l 1.200%",
+   "id": 2259,
+   "name": "Lança Chamas",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2259,
+  "nada": false,
+  "nome_busca": "Flame Launcher",
+  "srv_detalhe": "LATAM"
+ },
+ "Flaming Petals": {
+  "busca_candidatos": [
+   {
+    "id": 534,
+    "nome": "Pétalas Flamejantes"
+   }
+  ],
+  "cru": {
+   "description": "Pétalas Flamejantes Nível máximo: 10 Pré-requisitos: Perícia Ninja 1 Tipo: Ofensiva Descrição: Causa dano mágico de propriedade Fogo. Cada pétala causa 90% do ATQM. Nível l Pétalas [Nv 1]: 1 [Nv 2]: 2 [Nv 3]: 3 [Nv 4]: 4 [Nv 5]: 5 [Nv 6]: 6 [Nv 7]: 7 [Nv 8]: 8 [Nv 9]: 9 [Nv 10]: 10",
+   "id": 534,
+   "name": "Pétalas Flamejantes",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 534,
+  "nada": false,
+  "nome_busca": "Flaming Petals",
+  "srv_detalhe": "LATAM"
+ },
+ "Flash Kick": {
+  "busca_candidatos": [
+   {
+    "id": 2580,
+    "nome": "Chute Estelar"
+   }
+  ],
+  "cru": {
+   "description": "Chute Estelar Nível máximo: 7 Pré-requisitos: Postura Estelar 1 Tipo: Ofensiva / Estelar Descrição: Causa 100% de dano físico corpo a corpo em alvo único, deixando uma Marca Estelar. Até 5 oponentes podem ser marcados. Nível l Duração da marca [Nv 1]: 4 segundos [Nv 2]: 5 segundos [Nv 3]: 6 segundos [Nv 4]: 7 segundos [Nv 5]: 8 segundos [Nv 6]: 9 segundos [Nv 7]: 10 segundos",
+   "id": 2580,
+   "name": "Chute Estelar",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2580,
+  "nada": false,
+  "nome_busca": "Flash Kick",
+  "srv_detalhe": "LATAM"
+ },
+ "Focused Arrow Strike": {
+  "busca_candidatos": [
+   {
+    "id": 382,
+    "nome": "Tiro Preciso"
+   }
+  ],
+  "cru": {
+   "description": "Tiro Preciso Nível máximo: 5 Pré-requisitos: Rajada de Flechas 5, Concentrar 10 Tipo: Ofensiva Descrição: Causa dano físico a distância no alvo em até 11 células de alcance, atingindo os oponentes 5x5 células ao redor dele. No momento do ataque, garante CRIT +50. Tem chance do ataque ser crítico. A chance é a metade de CRIT do usuário. Consome 1 Flecha. Nível l ATQ l Custo de SP [Nv 1]: 600% l 16 [Nv 2]: 900% l 18 [Nv 3]: 1.200% l 20 [Nv 4]: 1.500% l 22 [Nv 5]: 1.800% l 24",
+   "id": 382,
+   "name": "Tiro Preciso",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 382,
+  "nada": false,
+  "nome_busca": "Focused Arrow Strike",
+  "srv_detalhe": "LATAM"
+ },
+ "Freezing Spear": {
+  "busca_candidatos": [
+   {
+    "id": 537,
+    "nome": "Lança Congelante"
+   }
+  ],
+  "cru": {
+   "description": "Lança Congelante Nível máximo: 10 Pré-requisitos: Perícia Ninja 1 Tipo: Ofensiva Descrição: Causa dano mágico de propriedade Água. Cada lança causa 70% do ATQM. Nível l Lanças [Nv 1]: 3 [Nv 2]: 4 [Nv 3]: 5 [Nv 4]: 6 [Nv 5]: 7 [Nv 6]: 8 [Nv 7]: 9 [Nv 8]: 10 [Nv 9]: 11 [Nv 10]: 12",
+   "id": 537,
+   "name": "Lança Congelante",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 537,
+  "nada": false,
+  "nome_busca": "Freezing Spear",
+  "srv_detalhe": "LATAM"
+ },
+ "Full Moon Kick": {
+  "busca_candidatos": [
+   {
+    "id": 2576,
+    "nome": "Chute Lunar"
+   }
+  ],
+  "cru": {
+   "description": "Chute Lunar Nível máximo: 10 Pré-requisitos: Eclipse Lunar 7 Tipo: Ofensiva / Lunar Descrição: Precisa de [Penumbra] ativo. Cancela o status de [Penumbra] para causar dano físico corpo a corpo na área 7x7 células. Tem chance de infligir Cegueira nos alvos. O dano aumenta conforme o nível de base. Nível l ATQ [Nv. 1]: 1.200% [Nv. 2]: 1.300% [Nv. 3]: 1.400% [Nv. 4]: 1.500% [Nv. 5]: 1.600% [Nv. 6]: 1.700% [Nv. 7]: 1.800% [Nv. 8]: 1.900% [Nv. 9]: 2.000% [Nv. 10]: 2.100%",
+   "id": 2576,
+   "name": "Chute Lunar",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2576,
+  "nada": false,
+  "nome_busca": "Full Moon Kick",
+  "srv_detalhe": "LATAM"
+ },
+ "Genesis Ray": {
+  "busca_candidatos": [
+   {
+    "id": 2321,
+    "nome": "Luz da Criação"
+   }
+  ],
+  "cru": {
+   "description": "Luz da Criação Nível máximo: 10 Pré-requisitos: Crux Magnum 5 Tipo: Ofensiva Descrição: Causa dano mágico de propriedade Sagrado ao redor de 11x11 células do usuário. Há 50% de chance de infligir Cegueira em Mortos-Vivos, Malditos ou Demônios. Se [Consagração] estiver ativo, faz com que o dano mágico seja de propriedade Neutro. Nível l ATQM [Nv 1]: 350% [Nv 2]: 700% [Nv 3]: 1.050% [Nv 4]: 1.400% [Nv 5]: 1.750% [Nv 6]: 2.100% [Nv 7]: 2.450% [Nv 8]: 2.800% [Nv 9]: 3.150% [Nv 10]: 3.500%",
+   "id": 2321,
+   "name": "Luz da Criação",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2321,
+  "nada": false,
+  "nome_busca": "Genesis Ray",
+  "srv_detalhe": "LATAM"
+ },
+ "Gloria Domini": {
+  "busca_candidatos": [
+   {
+    "id": 367,
+    "nome": "Gloria Domini"
+   }
+  ],
+  "cru": {
+   "description": "Gloria Domini Nível máximo: 5 Pré-requisitos: Vigor 5, Fé 5, Punição Divina 2 Tipo: Ofensiva Descrição: Cai a Santa Cruz para fazer pressão e causar dano mágico de propriedade Sagrado. Nível l ATQM [Nv 1]: 650% [Nv 2]: 800% [Nv 3]: 950% [Nv 4]: 1.100% [Nv 5]: 1.250%",
+   "id": 367,
+   "name": "Gloria Domini",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 367,
+  "nada": false,
+  "nome_busca": "Gloria Domini",
+  "srv_detalhe": "LATAM"
+ },
+ "Great Echo": {
+  "busca_candidatos": [
+   {
+    "id": 2426,
+    "nome": "Brado de Odin"
+   }
+  ],
+  "cru": {
+   "description": "Brado de Odin Nível máximo: 5 Pré-requisitos: Ruído Estridente 1 Tipo: Ofensiva Descrição: Apenas Chicotes ou Instrumentos. Um eco que causa dano físico a distância nos alvos próximos da área selecionada. O dano é afetado pelo nível de base, nível de [Domínio Musical] e é dobrado se houver mais um artista no grupo. Consome 2 Pastilhas Refrescantes. Nível l Área l ATQ [Nv 1]: 5x5 células l 750% [Nv 2]: 7x7 células l 1.250% [Nv 3]: 7x7 células l 1.750% [Nv 4]: 9x9 células l 2.250% [Nv 5]: 9x9 células l 2.750%",
+   "id": 2426,
+   "name": "Brado de Odin",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2426,
+  "nada": false,
+  "nome_busca": "Great Echo",
+  "srv_detalhe": "LATAM"
+ },
+ "Hammer of God": {
+  "busca_candidatos": [
+   {
+    "id": 2571,
+    "nome": "Execução"
+   }
+  ],
+  "cru": {
+   "description": "Execução Nível máximo: 10 Pré-requisitos: Farta Fortuna 1, Explosão Antimatéria 3 Tipo: Ofensiva Descrição: Apenas com Rifles. Derruba o martelo de Deus para executar oponentes, causando dano físico a distância em todos os inimigos ao redor do alvo. O dano aumenta pelo nv. de base do usuário e se o alvo estiver com [Marca de Brasa]. Consome todas as Moedas. Nível l Área l ATQ (por moeda) [Nv. 1]: 5x5 l 100% [Nv. 2]: 5x5 l 200% [Nv. 3]: 5x5 l 300% [Nv. 4]: 5x5 l 400% [Nv. 5]: 5x5 l 500% [Nv. 6]: 7x7 l 600% [Nv. 7]: 7x7 l 700% [Nv. 8]: 7x7 l 800% [Nv. 9]: 7x7 l 900% [Nv. 10]: 7x7 l 1.000%",
+   "id": 2571,
+   "name": "Execução",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2571,
+  "nada": false,
+  "nome_busca": "Hammer of God",
+  "srv_detalhe": "LATAM"
+ },
+ "Holy light": {
+  "busca_candidatos": [
+   {
+    "id": 156,
+    "nome": "Luz Divina"
+   }
+  ],
+  "cru": {
+   "description": "Luz Divina Pré-requisitos: Completar Missão Tipo: Ofensiva Descrição: Emite uma luz que causa 125% de dano mágico da propriedade Sagrado em um alvo. Consome 15 de SP.",
+   "id": 156,
+   "name": "Luz Divina",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 156,
+  "nada": false,
+  "nome_busca": "Holy light",
+  "srv_detalhe": "LATAM"
+ },
+ "Howling Mine": {
+  "busca_candidatos": [
+   {
+    "id": 2562,
+    "nome": "Arremessar Granada"
+   }
+  ],
+  "cru": {
+   "description": "Arremessar Granada Nível máximo: 5 Pré-requisitos: Mina do Justiceiro 1 Tipo: Ofensiva Descrição: Apenas com Lança-Granadas. Prende uma granada no oponente, causando dano físico a distância e mantém a granada presa no alvo por 50 segundos. Ao usar [Ignição], causa dano adicional da propriedade Fogo nos oponentes ao redor. Se não for acionada, a granada desaparece. Até 5 granadas podem ficar ativas. Consome 1 Granada Aderente. Nível l ATQ l Dano Extra [Nv. 1]: 400% l 800% [Nv. 2]: 600% l 1.100% [Nv. 3]: 800% l 1.400% [Nv. 4]: 1.000% l 1.700% [Nv. 5]: 1.200% l 2.000%",
+   "id": 2562,
+   "name": "Arremessar Granada",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2562,
+  "nada": false,
+  "nome_busca": "Howling Mine",
+  "srv_detalhe": "LATAM"
+ },
+ "Hundred Spear": {
+  "busca_candidatos": [
+   {
+    "id": 2004,
+    "nome": "Lança das Mil Pontas"
+   }
+  ],
+  "cru": {
+   "description": "Lança das Mil Pontas Nível máximo: 10 Pré-requisitos: Arpão 3 Tipo: Ofensiva Descrição: Apenas com Lança. Causa dano físico a distância no alvo e nos oponentes ao redor. O dano é afetado pelo nível de base e por [Perfurar em Espiral]. Nível l ATQ l Área [Nv 1]: 800% l 3x3 células [Nv 2]: 1.000% l 3x3 células [Nv 3]: 1.200% l 3x3 células [Nv 4]: 1.400% l 3x3 células [Nv 5]: 1.600% l 5x5 células [Nv 6]: 1.800% l 5x5 células [Nv 7]: 2.000% l 5x5 células [Nv 8]: 2.200% l 5x5 células [Nv 9]: 2.400% l 7x7 células [Nv 10]: 2.600% l 7x7 células",
+   "id": 2004,
+   "name": "Lança das Mil Pontas",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2004,
+  "nada": false,
+  "nome_busca": "Hundred Spear",
+  "srv_detalhe": "LATAM"
+ },
+ "Ice Launcher": {
+  "busca_candidatos": [
+   {
+    "id": 2260,
+    "nome": "Gás Criogênico"
+   }
+  ],
+  "cru": {
+   "description": "Gás Criogênico Nível máximo: 3 Pré-requisitos: Metralhadora 3 Tipo: Ofensiva Descrição: Apenas com M.E.C.H.A. Causa dano físico de propriedade Água com chance de infligir [Hipotermia] ou [Congelamento] na área. Consome 1 Gasolina. Consome 1 Cápsula de Nitrogênio. Nível l Área l ATQ [Nv 1]: 5x5 células l 600% [Nv 2]: 7x7 células l 900% [Nv 3]: 9x9 células l 1.200%",
+   "id": 2260,
+   "name": "Gás Criogênico",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2260,
+  "nada": false,
+  "nome_busca": "Ice Launcher",
+  "srv_detalhe": "LATAM"
+ },
+ "Ignition Break": {
+  "busca_candidatos": [
+   {
+    "id": 2006,
+    "nome": "Impacto Flamejante"
+   }
+  ],
+  "cru": {
+   "description": "Impacto Flamejante Nível máximo: 5 Pré-requisitos: Onda de Choque 2, Vento Cortante 3, Revidar Dano 5 Tipo: Ofensiva Descrição: Causa dano físico corpo a corpo na área de 9x9 células ao redor do usuário. O dano é afetado pelo seu nível de base. Tem chance do ataque ser crítico. A chance é igual ao CRIT do usuário. Nível l ATQ [Nv 1]: 450% [Nv 2]: 900% [Nv 3]: 1.350% [Nv 4]: 1.800% [Nv 5]: 2.250%",
+   "id": 2006,
+   "name": "Impacto Flamejante",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2006,
+  "nada": false,
+  "nome_busca": "Ignition Break",
+  "srv_detalhe": "LATAM"
+ },
+ "Jack Frost": {
+  "busca_candidatos": [
+   {
+    "id": 2204,
+    "nome": "Esquife de Gelo"
+   }
+  ],
+  "cru": {
+   "description": "Esquife de Gelo Nível máximo: 5 Pré-requisitos: Zero Absoluto 2 Tipo: Ofensiva Descrição: Causa dano mágico de propriedade Água no alvo selecionado e em oponentes ao redor. Se estiverem sofrendo de [Calafrio] causa um dano mágico ainda maior. Nível l ATQM l ATQM (Calafrio) l Área [Nv 1]: 1.300% l 1.800% l 7x7 células [Nv 2]: 1.600% l 2.400% l 7x7 células [Nv 3]: 1.900% l 3.000% l 9x9 células [Nv 4]: 2.200% l 3.600% l 9x9 células [Nv 5]: 2.500% l 4.200% l 11x11 células",
+   "id": 2204,
+   "name": "Esquife de Gelo",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2204,
+  "nada": false,
+  "nome_busca": "Jack Frost",
+  "srv_detalhe": "LATAM"
+ },
+ "Judex": {
+  "busca_candidatos": [
+   {
+    "id": 2038,
+    "nome": "Judex"
+   }
+  ],
+  "cru": {
+   "description": "Judex Nível máximo: 10 Pré-requisitos: Esconjurar 1 Tipo: Ofensiva Descrição: Emite a luz do Grande Juiz, causando dano mágico de propriedade Sagrado no alvo e em oponentes ao redor de 3x3 células dele. O dano é afetado pelo seu nível de base. Nível l ATQM l SP [Nv 1]: 370% l 20 [Nv 2]: 440% l 23 [Nv 3]: 510% l 26 [Nv 4]: 580% l 29 [Nv 5]: 650% l 32 [Nv 6]: 720% l 34 [Nv 7]: 790% l 36 [Nv 8]: 860% l 38 [Nv 9]: 930% l 40 [Nv 10]: 1.000% l 42",
+   "id": 2038,
+   "name": "Judex",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2038,
+  "nada": false,
+  "nome_busca": "Judex",
+  "srv_detalhe": "LATAM"
+ },
+ "Knuckle Arrow": {
+  "busca_candidatos": [
+   {
+    "id": 2336,
+    "nome": "Pancada Corporal"
+   }
+  ],
+  "cru": {
+   "description": "Pancada Corporal Nível máximo: 10 Pré-requisitos: Salto Relâmpago 1 Tipo: Ofensiva Descrição: Joga o corpo contra o alvo para causar dano físico a distância e empurrá-lo para trás. Há um bônus se o alvo bater na parede e monstros Chefes receberão mais dano. O peso do alvo influencia no dano causado. Não consome 1 Esfera do nível 6 em diante. Consome 1 Esfera Espiritual. Nível l ATQ l ATQ (Empurrão) l ATQ (Chefe) [Nv 1]: 600% l 150% l 700% [Nv 2]: 700% l 300% l 900% [Nv 3]: 800% l 450% l 1.100% [Nv 4]: 900% l 600% l 1.300% [Nv 5]: 1.000% l 750% l 1.500% [Nv 6]: 1.100% l 900% l 1.700% [Nv 7]: 1.200% l 1.050% l 1.900% [Nv 8]: 1.300% l 1.200% l 2.100% [Nv 9]: 1.400% l 1.350% l 2.300% [Nv 10]: 1.500% l 1.500% l 2.500%",
+   "id": 2336,
+   "name": "Pancada Corporal",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2336,
+  "nada": false,
+  "nome_busca": "Knuckle Arrow",
+  "srv_detalhe": "LATAM"
+ },
+ "Knuckle Boost": {
+  "busca_candidatos": [
+   {
+    "id": 2256,
+    "nome": "Punho Foguete"
+   }
+  ],
+  "cru": {
+   "description": "Punho Foguete Nível máximo: 5 Pré-requisitos: Licença de Pilotagem 1 Tipo: Ofensiva Descrição: Apenas com M.E.C.H.A. Causa dano físico a distância em um único alvo com até 11 células de alcance. DES e nv. de base afetam o dano causado. Nível l ATQ l SP [Nv 1]: 340% l 5 [Nv 2]: 580% l 10 [Nv 3]: 820% l 15 [Nv 4]: 1.060% l 20 [Nv 5]: 1.300% l 25",
+   "id": 2256,
+   "name": "Punho Foguete",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2256,
+  "nada": false,
+  "nome_busca": "Knuckle Boost",
+  "srv_detalhe": "LATAM"
+ },
+ "Lightning Bolt": {
+  "busca_candidatos": [
+   {
+    "id": 20,
+    "nome": "Relâmpago"
+   }
+  ],
+  "cru": {
+   "description": "Relâmpago Nível máximo: 10 Tipo: Ofensiva Descrição: Causa dano mágico de propriedade Vento. Cada lança causa 100% do ATQM. Nível l Lanças l Custo de SP [Nv 1]: 1 l 12 [Nv 2]: 2 l 14 [Nv 3]: 3 l 16 [Nv 4]: 4 l 18 [Nv 5]: 5 l 20 [Nv 6]: 6 l 22 [Nv 7]: 7 l 24 [Nv 8]: 8 l 26 [Nv 9]: 9 l 28 [Nv 10]: 10 l 30",
+   "id": 20,
+   "name": "Relâmpago",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 20,
+  "nada": false,
+  "nome_busca": "Lightning Bolt",
+  "srv_detalhe": "LATAM"
+ },
+ "Lunatic Carrot Beat": {
+  "busca_candidatos": [
+   {
+    "id": 5036,
+    "nome": "Cometas Lunáticos"
+   }
+  ],
+  "cru": {
+   "description": "Cometas Lunáticos Nível máximo: 5 Tipo: Ofensiva / Fauna Pré requisitos: Ferida de Tarou 3 Descrição: Invoca várias cenouras de Lunático para causar dano físico na área próxima do alvo. Se o item Cenoura estiver no inventário, adiciona a chance de infligir Atordoamento. Se tiver nv. base 100 ou mais, o dano aumenta de acordo com o nível de base e a FOR do usuário. Consome 1 Cenoura (Opcional). Nível l ATQ l Área [Nv 1]: 300% l 3x3 células [Nv 2]: 400% l 3x3 células [Nv 3]: 500% l 5x5 células [Nv 4]: 600% l 5x5 células [Nv 5]: 700% l 7x7 células",
+   "id": 5036,
+   "name": "Cometas Lunáticos",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 5036,
+  "nada": false,
+  "nome_busca": "Lunatic Carrot Beat",
+  "srv_detalhe": "LATAM"
+ },
+ "Magnus Exorcismus": {
+  "busca_candidatos": [
+   {
+    "id": 79,
+    "nome": "Magnus Exorcismus"
+   }
+  ],
+  "cru": {
+   "description": "Magnus Exorcismus Nível máximo: 10 Pré-requisitos: Escudo Mágico 1, Esconjurar 3, Lex Aeterna 1 Tipo: Ofensiva Descrição: Cria uma área 7x7 células que emite uma luz de propriedade Sagrado a cada 3 segundos. A luz causa 100% do ATQM em todas as raças e 130% em Demônios, Malditos, Sombrios e Mortos-Vivos. Consome 1 Gema Azul. Nível l Luzes l Duração [Nv 1]: 1 l 4 segundos [Nv 2]: 2 l 5 segundos [Nv 3]: 3 l 6 segundos [Nv 4]: 4 l 7 segundos [Nv 5]: 5 l 8 segundos [Nv 6]: 6 l 9 segundos [Nv 7]: 7 l 10 segundos [Nv 8]: 8 l 11 segundos [Nv 9]: 9 l 12 segundos [Nv 10]: 10 l 13 segundos",
+   "id": 79,
+   "name": "Magnus Exorcismus",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 79,
+  "nada": false,
+  "nome_busca": "Magnus Exorcismus",
+  "srv_detalhe": "LATAM"
+ },
+ "Mandragora Howl": {
+  "busca_candidatos": [
+   {
+    "id": 2492,
+    "nome": "Grito da Mandrágora"
+   }
+  ],
+  "cru": {
+   "description": "Grito da Mandrágora Nível máximo: 5 Pré-requisitos: Planta Infernal 3 Tipo: Ativa Descrição: Concede a chance de reduzir a INT, drenar o SP e aumentar o tempo de conjuração fixa dos oponentes ao redor do usuário. A chance será menor conforme a VIT e SOR dos adversários. Não funciona em monstros. Consome 1 Muda de Mandrágora. Nível l Área l SP drenado l INT [Nv 1]: 11x11 células l 30% l -4 [Nv 2]: 13x13 células l 35% l -8 [Nv 3]: 13x13 células l 40% l -12 [Nv 4]: 15x15 células l 45% l -16 [Nv 5]: 15x15 células l 50% l -20",
+   "id": 2492,
+   "name": "Grito da Mandrágora",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2492,
+  "nada": false,
+  "nome_busca": "Mandragora Howl",
+  "srv_detalhe": "LATAM"
+ },
+ "Metallic Sound": {
+  "busca_candidatos": [
+   {
+    "id": 2413,
+    "nome": "Ruído Estridente"
+   }
+  ],
+  "cru": {
+   "description": "Ruído Estridente Nível máximo: 10 Pré-requisitos: Ressonância 5 Tipo: Ofensiva Descrição: Emite um som metálico e causa dano mágico de propriedade Neutro em um alvo único. O dano é afetado pelo nível de base, pelo nível de [Domínio Musical] e se o oponente estiver sofrendo de Sono Profundo. Nível l ATQM [Nv 1]: 120% [Nv 2]: 240% [Nv 3]: 360% [Nv 4]: 480% [Nv 5]: 600% [Nv 6]: 720% [Nv 7]: 840% [Nv 8]: 960% [Nv 9]: 1.080% [Nv 10]: 1.200%",
+   "id": 2413,
+   "name": "Ruído Estridente",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2413,
+  "nada": false,
+  "nome_busca": "Metallic Sound",
+  "srv_detalhe": "LATAM"
+ },
+ "New Moon Kick": {
+  "busca_candidatos": [
+   {
+    "id": 2579,
+    "nome": "Eclipse Lunar"
+   }
+  ],
+  "cru": {
+   "description": "Eclipse Lunar Nível máximo: 7 Pré-requisitos: Postura Lunar 1 Tipo: Ofensiva / Lunar Descrição: Causa dano físico corpo a corpo no alvo e na área de 7x7 células, entrando em estado escondido de [Penumbra] logo em seguida. [Penumbra]: Dura 15 segundos e drena 1 de SP por seg. Demônios e Insetos não podem ver você. Pode se movimentar enquanto escondido. Nível l ATQ [Nv 1]: 800% [Nv 2]: 900% [Nv 3]: 1.000% [Nv 4]: 1.100% [Nv 5]: 1.200% [Nv 6]: 1.300% [Nv 7]: 1.400%",
+   "id": 2579,
+   "name": "Eclipse Lunar",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2579,
+  "nada": false,
+  "nome_busca": "New Moon Kick",
+  "srv_detalhe": "LATAM"
+ },
+ "Picky Peck": {
+  "busca_candidatos": [
+   {
+    "id": 5033,
+    "nome": "Chilique de Picky"
+   }
+  ],
+  "cru": {
+   "description": "Chilique de Picky Nível máximo: 5 Tipo: Ofensiva / Fauna Pré-requisitos: Invocar 1 Descrição: Invoca um Picky para causar dano físico a distância em um alvo único. Se o HP do alvo for menor que 50%, o dano causado será o dobro do normal. A partir do nível 30 de base, ao ser usada, a habilidade tem chance de dupla conjuração. Nível l ATQ [Nv 1]: 300% [Nv 2]: 400% [Nv 3]: 500% [Nv 4]: 600% [Nv 5]: 700%",
+   "id": 5033,
+   "name": "Chilique de Picky",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 5033,
+  "nada": false,
+  "nome_busca": "Picky Peck",
+  "srv_detalhe": "LATAM"
+ },
+ "Power Swing": {
+  "busca_candidatos": [
+   {
+    "id": 2279,
+    "nome": "Brandir Machado"
+   }
+  ],
+  "cru": {
+   "description": "Brandir Machado Nível máximo: 10 Pré-requisitos: Arremesso de Machado 3 Tipo: Ofensiva Descrição: Causa dano físico corpo a corpo com chance de infligir Atordoamento em um alvo único. FOR, DES e nível de base afetam o dano. Nível l ATQ l SP [Nv 1]: 400% l 20 [Nv 2]: 500% l 22 [Nv 3]: 600% l 24 [Nv 4]: 700% l 26 [Nv 5]: 800% l 28 [Nv 6]: 900% l 30 [Nv 7]: 1.000% l 32 [Nv 8]: 1.100% l 34 [Nv 9]: 1.200% l 36 [Nv 10]: 1.300% l 38",
+   "id": 2279,
+   "name": "Brandir Machado",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2279,
+  "nada": false,
+  "nome_busca": "Power Swing",
+  "srv_detalhe": "LATAM"
+ },
+ "Prominence Kick": {
+  "busca_candidatos": [
+   {
+    "id": 2593,
+    "nome": "Chute Solar"
+   }
+  ],
+  "cru": {
+   "description": "Chute Solar Nível máximo: 7 Pré-requisitos: Postura Solar 1 Tipo: Ofensiva / Solar Descrição: Causa dano físico corpo a corpo no alvo, se houver oponentes em 3x3 células ao redor, causa dano 100% de dano adicional. Após o chute, pode usar [Explosão Solar]. Nível l ATQ [Nv 1]: 200% [Nv 2]: 250% [Nv 3]: 300% [Nv 4]: 350% [Nv 5]: 400% [Nv 6]: 450% [Nv 7]: 500%",
+   "id": 2593,
+   "name": "Chute Solar",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2593,
+  "nada": false,
+  "nome_busca": "Prominence Kick",
+  "srv_detalhe": "LATAM"
+ },
+ "Psychic Wave": {
+  "busca_candidatos": [
+   {
+    "id": 2449,
+    "nome": "Onda Psíquica"
+   }
+  ],
+  "cru": {
+   "description": "Onda Psíquica Nível máximo: 5 Pré-requisitos: Desencantar 2 Tipo: Ofensiva Descrição: Causa dano mágico de propriedade Neutro na área. Ao equipar Livros ou Cajados, dobra o número de ondas causadas pela magia. INT e nv. de base influenciam no dano. Nível l Ondas l Área [Nv 1]: 3 l 7x7 células [Nv 2]: 4 l 7x7 células [Nv 3]: 5 l 9x9 células [Nv 4]: 6 l 9x9 células [Nv 5]: 7 l 11x11 células",
+   "id": 2449,
+   "name": "Onda Psíquica",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2449,
+  "nada": false,
+  "nome_busca": "Psychic Wave",
+  "srv_detalhe": "LATAM"
+ },
+ "Raging Thrust": {
+  "busca_candidatos": [
+   {
+    "id": 273,
+    "nome": "O Último Dragão"
+   }
+  ],
+  "cru": {
+   "description": "O Último Dragão Nível máximo: 5 Pré-requisitos: Combo Quádruplo 3 Tipo: Ofensiva / Combo Descrição: Após Combo Quádruplo. Causa dano físico corpo a corpo no alvo. O dano é afetado pela FOR do usuário. Após o uso, haverá 0,3 segundos para usar Punho Supremo de Asura em Fúria Interior e sobrando pelo menos 1 Esfera Espiritual. Consome 1 Esfera Espiritual. Nível l ATQ l Custo de SP [Nv 1]: 600% l 3 [Nv 2]: 750% l 4 [Nv 3]: 900% l 5 [Nv 4]: 1.050% l 6 [Nv 5]: 1.200% l 7",
+   "id": 273,
+   "name": "O Último Dragão",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 273,
+  "nada": false,
+  "nome_busca": "Raging Thrust",
+  "srv_detalhe": "LATAM"
+ },
+ "Rampage Blast": {
+  "busca_candidatos": [
+   {
+    "id": 2332,
+    "nome": "Explosão Espiritual"
+   }
+  ],
+  "cru": {
+   "description": "Explosão Espiritual Nível máximo: 5 Pré-requisitos: Impacto Sísmico 2 Tipo: Ofensiva Descrição: Apenas em [Fúria Interior]. Causa dano físico a distância em 7x7 células ao redor do usuário. O dano aumenta com o nível de base do usuário e se o alvo foi atingido por [Impacto Sísmico]. Consome 3 Esferas Espirituais. Nível l ATQ l ATQ (Impacto Sísmico) [Nv 1]: 350% l 550% [Nv 2]: 700% l 1.100% [Nv 3]: 1.050% l 1.650% [Nv 4]: 1.400% l 2.200% [Nv 5]: 1.750% l 2.750%",
+   "id": 2332,
+   "name": "Explosão Espiritual",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2332,
+  "nada": false,
+  "nome_busca": "Rampage Blast",
+  "srv_detalhe": "LATAM"
+ },
+ "Reverberation": {
+  "busca_candidatos": [
+   {
+    "id": 2414,
+    "nome": "Ressonância"
+   }
+  ],
+  "cru": {
+   "description": "Ressonância Nível máximo: 5 Pré-requisitos: Dissonância 5 ou Dança do Ventre 5 Tipo: Ofensiva Descrição: Apenas Chicotes ou Instrumentos. Causa dano mágico no alvo e nos inimigos ao redor de 5x5 células próximos a ele. A propriedade depende da Flecha equipada. O dano é afetado pelo seu nível de base. Consome 5 Flechas. Nível l ATQM [Nv 1]: 1.000% [Nv 2]: 1.300% [Nv 3]: 1.600% [Nv 4]: 1.900% [Nv 5]: 2.200%",
+   "id": 2414,
+   "name": "Ressonância",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2414,
+  "nada": false,
+  "nome_busca": "Reverberation",
+  "srv_detalhe": "LATAM"
+ },
+ "Rolling Cutter": {
+  "busca_candidatos": [
+   {
+    "id": 2036,
+    "nome": "Lâminas de Loki"
+   }
+  ],
+  "cru": {
+   "description": "Lâminas de Loki Nível máximo: 5 Pré-requisitos: Lâminas Destruidoras 10 Tipo: Ofensiva Descrição: Apenas com Katar. Causa dano físico corpo a corpo ao redor. Cada giro dá 1 Ponto de Rotação usado pra causar mais dano em [Castigo de Loki]. Pontos de Rotação duram 10 segundos e são perdidos se o usuário mudar de posição. É possível acumular até 10 Pontos. Nível l ATQ l Área [Nv 1]: 130% l 3x3 células [Nv 2]: 210% l 3x3 células [Nv 3]: 290% l 5x5 células [Nv 4]: 370% l 5x5 células [Nv 5]: 450% l 7x7 células",
+   "id": 2036,
+   "name": "Lâminas de Loki",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2036,
+  "nada": false,
+  "nome_busca": "Rolling Cutter",
+  "srv_detalhe": "LATAM"
+ },
+ "Round Trip": {
+  "busca_candidatos": [
+   {
+    "id": 2565,
+    "nome": "Expurgar"
+   }
+  ],
+  "cru": {
+   "description": "Expurgar Nível máximo: 10 Pré-requisitos: Disparo Labareda 1 Tipo: Ofensiva Descrição: Apenas com Metralhadoras. Atira enquanto gira, causando dano físico a distância e empurrando alvos 3 células. Alvos empurrados que baterem em paredes receberão um dano extra. O nível de base do usuário aumenta o dano. Precisa ter 6 Projéteis equipados. Consome 5 Projéteis. Nível l Recarga l Área l ATQ [Nv. 1]: 2,8 segundos l 7x7 células l 700% [Nv. 2]: 2,6 segundos l 7x7 células l 900% [Nv. 3]: 2,4 segundos l 7x7 células l 1.100% [Nv. 4]: 2,2 segundos l 9x9 células l 1.300% [Nv. 5]: 2,0 segundos l 9x9 células l 1.500% [Nv. 6]: 1,8 segundos l 9x9 células l 1.700% [Nv. 7]: 1,6 segundos l 11x11 células l 1.900% [Nv. 8]: 1,4 segundos l 11x11 células l 2.100% [Nv. 9]: 1,2 segundos l 11x11 células l 2.300% [Nv. 10]: 1,0 segundo l 13x13 células l 2.500%",
+   "id": 2565,
+   "name": "Expurgar",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2565,
+  "nada": false,
+  "nome_busca": "Round Trip",
+  "srv_detalhe": "LATAM"
+ },
+ "Severe Rainstorm": {
+  "busca_candidatos": [
+   {
+    "id": 2418,
+    "nome": "Temporal de Flechas"
+   }
+  ],
+  "cru": {
+   "description": "Temporal de Flechas Nível máximo: 5 Pré-requisitos: Estilingue 5 ou Flecha Melódica 5 Tipo: Ofensiva Descrição: Dispara flechas no céu para cair na área de 11x11 células, causando dano físico a distância. Se estiver usando Chicotes ou Instrumentos Musicais, o dano é maior que usar Arcos. O dano também é afetado pela AGI, DES e nível de base do usuário. Consome 10 Flechas. Nível l ATQ (Arco) l ATQ (Chic./Inst.Mus.) [Nv 1]: 100% l 120% [Nv 2]: 200% l 240% [Nv 3]: 300% l 360% [Nv 4]: 400% l 480% [Nv 5]: 500% l 600%",
+   "id": 2418,
+   "name": "Temporal de Flechas",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2418,
+  "nada": false,
+  "nome_busca": "Severe Rainstorm",
+  "srv_detalhe": "LATAM"
+ },
+ "Shattering Storm": {
+  "busca_candidatos": [
+   {
+    "id": 2557,
+    "nome": "Rajada Estilhaçante"
+   }
+  ],
+  "cru": {
+   "description": "Rajada Estilhaçante Nível máximo: 5 Pré-requisitos: Desarmar 1, Controle de Multidão 1 Tipo: Ofensiva Descrição: Apenas com Espingardas. Dispara estilhaços no alvo para causar dano físico a distância ao redor do oponente. Há chance de destruir o Equip. para Cabeça do alvo, sendo a chance afetada pela DES do usuário e pela AGI e nv. de base do alvo. Não afeta Elmos indestrutíveis ou revestidos. Consome 1 Projétil. Nível l ATQ l Área l SP [Nv. 1]: 1.900% l 5x5 células l 50 [Nv. 2]: 2.100% l 5x5 células l 55 [Nv. 3]: 2.300% l 5x5 células l 60 [Nv. 4]: 2.500% l 5x5 células l 65 [Nv. 5]: 2.700% l 7x7 células l 70",
+   "id": 2557,
+   "name": "Rajada Estilhaçante",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2557,
+  "nada": false,
+  "nome_busca": "Shattering Storm",
+  "srv_detalhe": "LATAM"
+ },
+ "Shield Press": {
+  "busca_candidatos": [
+   {
+    "id": 2310,
+    "nome": "Escudo Compressor"
+   }
+  ],
+  "cru": {
+   "description": "Escudo Compressor Nível máximo: 10 Pré-requisitos: Punição Divina 3 Tipo: Ofensiva Descrição: Apenas com Escudo. Causa dano físico corpo a corpo no alvo. O dano é influenciado pela FOR, VIT, pelo peso e refino do escudo. Nível l ATQ [Nv 1]: 200% [Nv 2]: 400% [Nv 3]: 600% [Nv 4]: 800% [Nv 5]: 1.000% [Nv 6]: 1.200% [Nv 7]: 1.400% [Nv 8]: 1.600% [Nv 9]: 1.800% [Nv10]: 2.000%",
+   "id": 2310,
+   "name": "Escudo Compressor",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2310,
+  "nada": false,
+  "nome_busca": "Shield Press",
+  "srv_detalhe": "LATAM"
+ },
+ "Sightless Mind": {
+  "busca_candidatos": [
+   {
+    "id": 214,
+    "nome": "Ataque Surpresa"
+   }
+  ],
+  "cru": {
+   "description": "Ataque Surpresa Nível máximo: 5 Pré-requisitos: Apunhalar 2, Túnel de Fuga 2 Tipo: Ofensiva Descrição: Somente em Esconderijo. Causa dano físico corpo a corpo na área de 7x7 células ao redor do usuário, com chance de infligir [Cegueira] ou [Atordoamento]. Pelos próximos 10 segundos, ativa o efeito: Monstros Normais: recebem 30% mais dano Monstros Chefes: recebem 15% mais dano Nível l ATQ l Chance [Nv 1]: 200% l 13% [Nv 2]: 350% l 16% [Nv 3]: 500% l 19% [Nv 4]: 650% l 22% [Nv 5]: 800% l 25%",
+   "id": 214,
+   "name": "Ataque Surpresa",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 214,
+  "nada": false,
+  "nome_busca": "Sightless Mind",
+  "srv_detalhe": "LATAM"
+ },
+ "Silvervine Stem Spear": {
+  "busca_candidatos": [
+   {
+    "id": 5026,
+    "nome": "Lança Gateira"
+   }
+  ],
+  "cru": {
+   "description": "Lança Gateira Nível máximo: 5 Tipo: Ofensiva / Selva Pré-requisitos: Invocar 1 Descrição: Causa 700% de dano mágico no alvo único, com 10% de chance de infligir Sangramento. A propriedade da magia varia com o nível. A partir do nível 30 de base, ao ser usada, a habilidade tem chance de dupla conjuração. Nível l Propriedade [Nv 1]: Terra [Nv 2]: Fogo [Nv 3]: Água [Nv 4]: Vento [Nv 5]: Fantasma",
+   "id": 5026,
+   "name": "Lança Gateira",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 5026,
+  "nada": false,
+  "nome_busca": "Silvervine Stem Spear",
+  "srv_detalhe": "LATAM"
+ },
+ "Snow Flake Draft": {
+  "busca_candidatos": [
+   {
+    "id": 539,
+    "nome": "Grande Floco de Neve"
+   }
+  ],
+  "cru": {
+   "description": "Grande Floco de Neve Nível máximo: 5 Pré-requisitos: Perícia Ninja 10, Evasão Aquática 7 Tipo: Ofensiva Descrição: Causa dano mágico de propriedade Água na área de 7x7 células ao redor do usuário. Existe uma chance de infligir Congelamento. Consome 1 Pedra do Gelo. Nível l ATQM l Chance de congelar [Nv 1]: 300% l 20% [Nv 2]: 450% l 30% [Nv 3]: 600% l 40% [Nv 4]: 750% l 50% [Nv 5]: 900% l 60%",
+   "id": 539,
+   "name": "Grande Floco de Neve",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 539,
+  "nada": false,
+  "nome_busca": "Snow Flake Draft",
+  "srv_detalhe": "LATAM"
+ },
+ "Solar Burst": {
+  "busca_candidatos": [
+   {
+    "id": 2592,
+    "nome": "Explosão Solar"
+   }
+  ],
+  "cru": {
+   "description": "Explosão Solar Nível máximo: 10 Pré-requisitos: Chute Solar 7 Tipo: Ofensiva / Solar Descrição: Apenas após [Chute Solar]. Ao ativar, causa dano físico corpo a corpo em uma área de 7x7 células ao redor. O dano aumenta conforme o nível de base. Nível l ATQ [Nv. 1]: 1.220% [Nv. 2]: 1.440% [Nv. 3]: 1.660% [Nv. 4]: 1.880% [Nv. 5]: 2.100% [Nv. 6]: 2.320% [Nv. 7]: 2.540% [Nv. 8]: 2.760% [Nv. 9]: 2.980% [Nv. 10]: 3.200%",
+   "id": 2592,
+   "name": "Explosão Solar",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2592,
+  "nada": false,
+  "nome_busca": "Solar Burst",
+  "srv_detalhe": "LATAM"
+ },
+ "Sonic Blow": {
+  "busca_candidatos": [
+   {
+    "id": 136,
+    "nome": "Lâminas Destruidoras"
+   }
+  ],
+  "cru": {
+   "description": "Lâminas Destruidoras Nível máximo: 10 Pré-requisitos: Perícia com Katar 4 Tipo: Ofensiva Descrição: Apenas com Katar. Causa dano físico corpo a corpo no alvo. O dano aumenta em 50% se o oponente estiver com o HP máx. menor que 50%. Tem chance de infligir [Atordoamento]. Nível l ATQ l Chance [Nv 1]: 300% l 12% [Nv 2]: 400% l 14% [Nv 3]: 500% l 16% [Nv 4]: 600% l 18% [Nv 5]: 700% l 20% [Nv 6]: 800% l 22% [Nv 7]: 900% l 24% [Nv 8]: 1.000% l 26% [Nv 9]: 1.100% l 28% [Nv 10]: 1.200% l 30%",
+   "id": 136,
+   "name": "Lâminas Destruidoras",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 136,
+  "nada": false,
+  "nome_busca": "Sonic Blow",
+  "srv_detalhe": "LATAM"
+ },
+ "Sonic Wave": {
+  "busca_candidatos": [
+   {
+    "id": 2002,
+    "nome": "Onda de Choque"
+   }
+  ],
+  "cru": {
+   "description": "Onda de Choque Nível máximo: 10 Pré-requisitos: Encantar Lâmina 3 Tipo: Ofensiva Descrição: Provoca uma onda sonora que causa dano físico a distância em um alvo único. O dano é afetado pelo seu nível de base. Tem chance do ataque ser crítico. A chance é igual ao CRIT do usuário. Nível l ATQ l Alcance [Nv 1]: 1.200% l 7 células [Nv 2]: 1.350% l 7 células [Nv 3]: 1.500% l 8 células [Nv 4]: 1.650% l 8 células [Nv 5]: 1.800% l 9 células [Nv 6]: 1.950% l 9 células [Nv 7]: 2.100% l 10 células [Nv 8]: 2.250% l 10 células [Nv 9]: 2.400% l 11 células [Nv 10]: 2.550% l 11 células",
+   "id": 2002,
+   "name": "Onda de Choque",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2002,
+  "nada": false,
+  "nome_busca": "Sonic Wave",
+  "srv_detalhe": "LATAM"
+ },
+ "Soul Destroyer": {
+  "busca_candidatos": [
+   {
+    "id": 379,
+    "nome": "Destruidor de Almas"
+   }
+  ],
+  "cru": {
+   "description": "Destruidor de Almas Nível máximo: 10 Pré-requisitos: Envenenar Arma 6, Ataque Duplo 5, Esconderijo 2, Envenenar 5, Furtividade 3 Tipo: Ofensiva Descrição: Causa dano físico a distância influenciado pela FOR, INT e nível de base do usuário. Tem chance do ataque ser crítico. A chance é a metade do CRIT do usuário. Nível l ATQ [Nv 1]: 150% [Nv 2]: 300% [Nv 3]: 450% [Nv 4]: 600% [Nv 5]: 750% [Nv 6]: 900% [Nv 7]: 1.050% [Nv 8]: 1.200% [Nv 9]: 1.350% [Nv 10]: 1.500%",
+   "id": 379,
+   "name": "Destruidor de Almas",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 379,
+  "nada": false,
+  "nome_busca": "Soul Destroyer",
+  "srv_detalhe": "LATAM"
+ },
+ "Spore Explosion": {
+  "busca_candidatos": [
+   {
+    "id": 2481,
+    "nome": "Esporo Explosivo"
+   }
+  ],
+  "cru": {
+   "description": "Esporo Explosivo Nível máximo: 10 Pré-requisitos: Farmacologia Avançada 4 Tipo: Ofensiva Descrição: Causa dano físico a distância no alvo e na área ao redor, infligindo [Esporão] neles. O dano é baseado na INT e no nível de base. Esporão: Por 5 segundos, a resistência a dano físico a distância é reduzida em 10%. Em monstros Chefes, a redução é apenas 5%. Consome 1 Esporo de Cogumelo Explosivo. Nível l ATQ l Área [Nv 1]: 600% l 3x3 células [Nv 2]: 800% l 3x3 células [Nv 3]: 1.000% l 5x5 células [Nv 4]: 1.200% l 5x5 células [Nv 5]: 1.400% l 7x7 células [Nv 6]: 1.600% l 7x7 células [Nv 7]: 1.800% l 9x9 células [Nv 8]: 2.000% l 9x9 células [Nv 9]: 2.200% l 11x11 células [Nv 10]: 2.400% l 11x11 células",
+   "id": 2481,
+   "name": "Esporo Explosivo",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2481,
+  "nada": false,
+  "nome_busca": "Spore Explosion",
+  "srv_detalhe": "LATAM"
+ },
+ "Tasty Shrimp Party": {
+  "busca_candidatos": [
+   {
+    "id": 5051,
+    "nome": "Festa do Camarão"
+   }
+  ],
+  "cru": {
+   "description": "Festa do Camarão Nível máximo: 5 Tipo: Suporte / Marés Pré-requisitos: Banho de Lambidas 5 Descrição: Conjura [Camarão Fresquinho] nos membros do grupo em toda a tela do usuário. Também aumenta a regeneração de SP em 150% por um curto período de tempo. Nível l Duração da Rec. de SP [Nv 1]: 12 segundos [Nv 2]: 14 segundos [Nv 3]: 16 segundos [Nv 4]: 18 segundos [Nv 5]: 20 segundos",
+   "id": 5051,
+   "name": "Festa do Camarão",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 5051,
+  "nada": false,
+  "nome_busca": "Tasty Shrimp Party",
+  "srv_detalhe": "LATAM"
+ },
+ "Tetra Vortex": {
+  "busca_candidatos": [
+   {
+    "id": 2217,
+    "nome": "Tetra Vortex"
+   }
+  ],
+  "cru": {
+   "description": "Tetra Vortex Nível máximo: 10 Pré-requisitos: Corrente Elétrica 5, Esquife de Gelo 5, Abalo Sísmico 5, Chamas de Hela 5 Tipo: Ofensiva Descrição: Usa as Esferas invocadas para causar 4 danos mágicos da propriedade das Esferas. A partir do nível 6, causa dano em área. Precisa de 4 ou mais Esferas invocadas. Nível l ATQM por Esfera l Área [Nv 1]: 1.200% l 1 alvo [Nv 2]: 1.600% l 1 alvo [Nv 3]: 2.000% l 1 alvo [Nv 4]: 2.400% l 1 alvo [Nv 5]: 2.800% l 1 alvo [Nv 6]: 3.200% l 3x3 células [Nv 7]: 3.600% l 3x3 células [Nv 8]: 4.000% l 5x5 células [Nv 9]: 4.400% l 5x5 células [Nv 10]: 4.800% l 7x7 células",
+   "id": 2217,
+   "name": "Tetra Vortex",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2217,
+  "nada": false,
+  "nome_busca": "Tetra Vortex",
+  "srv_detalhe": "LATAM"
+ },
+ "Tiger Cannon": {
+  "busca_candidatos": [
+   {
+    "id": 2330,
+    "nome": "Garra de Tigre"
+   }
+  ],
+  "cru": {
+   "description": "Garra de Tigre Nível máximo: 10 Pré-requisitos: Ruína 3 Tipo: Ofensiva Descrição: Apenas em [Fúria Interior]. Causa dano físico corpo a corpo na área com base no HP e SP máx. do usuário. Se usada após [Ruína], causa mais dano. Consome 2 Esferas Espirituais. Nível l Área l HP l SP [Nv 1]: 5x5 células l 12% l 6% [Nv 2]: 5x5 células l 14% l 7% [Nv 3]: 5x5 células l 16% l 8% [Nv 4]: 5x5 células l 18% l 9% [Nv 5]: 5x5 células l 20% l 10% [Nv 6]: 7x7 células l 22% l 11% [Nv 7]: 7x7 células l 24% l 12% [Nv 8]: 7x7 células l 26% l 13% [Nv 9]: 7x7 células l 28% l 14% [Nv 10]: 7x7 células l 30% l 15%",
+   "id": 2330,
+   "name": "Garra de Tigre",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2330,
+  "nada": false,
+  "nome_busca": "Tiger Cannon",
+  "srv_detalhe": "LATAM"
+ },
+ "Triangle Shot": {
+  "busca_candidatos": [
+   {
+    "id": 2288,
+    "nome": "Disparo Triplo"
+   }
+  ],
+  "cru": {
+   "description": "Disparo Triplo Nível máximo: 10 Pré-requisitos: Rajada de Flechas 7 Tipo: Ofensiva Descrição: Causa dano físico a distância em 1 alvo. A AGI e nv. de base influenciam no dano. Consome 3 Flechas. Nível l ATQ l Alcance [Nv 1]: 230% l 7 células [Nv 2]: 460% l 7 células [Nv 3]: 690% l 7 células [Nv 4]: 920% l 9 células [Nv 5]: 1.150% l 9 células [Nv 6]: 1.380% l 9 células [Nv 7]: 1.610% l 9 células [Nv 8]: 1.840% l 11 células [Nv 9]: 2.070% l 11 células [Nv 10]: 2.300% l 11 células",
+   "id": 2288,
+   "name": "Disparo Triplo",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2288,
+  "nada": false,
+  "nome_busca": "Triangle Shot",
+  "srv_detalhe": "LATAM"
+ },
+ "Tuna Party": {
+  "busca_candidatos": [
+   {
+    "id": 5039,
+    "nome": "Proteção da Orla"
+   }
+  ],
+  "cru": {
+   "description": "Proteção da Orla Nível máximo: 5 Tipo: Suporte / Marés Pré-requisitos: Dádiva do Atum 3 Descrição: Por 30 segundos, invoca um Atum para bloquear ataques físicos e mágicos. O HP máx. do usuário determina a quantia de ataques que serão bloqueados. Nível l Durabilidade [Nv 1]: 10% do HP máx. [Nv 2]: 20% do HP máx. [Nv 3]: 30% do HP máx. [Nv 4]: 40% do HP máx. [Nv 5]: 50% do HP máx.",
+   "id": 5039,
+   "name": "Proteção da Orla",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 5039,
+  "nada": false,
+  "nome_busca": "Tuna Party",
+  "srv_detalhe": "LATAM"
+ },
+ "Vanishing Buster": {
+  "busca_candidatos": [
+   {
+    "id": 2554,
+    "nome": "Tiro Neutralizante"
+   }
+  ],
+  "cru": {
+   "description": "Tiro Neutralizante Nível máximo: 10 Pré-requisitos: Rajada Estilhaçante 1 Tipo: Ofensiva Descrição: Apenas com Espingardas. Causa dano físico a distância e tem chance de remover os efeitos atuantes no alvo. O nível de base do usuário aumenta o dano. Consome 1 Projétil. Nível l ATQ l Chance [Nv. 1]: 1.600% l 55% [Nv. 2]: 1.700% l 60% [Nv. 3]: 1.800% l 65% [Nv. 4]: 1.900% l 70% [Nv. 5]: 2.000% l 75% [Nv. 6]: 2.100% l 80% [Nv. 7]: 2.200% l 85% [Nv. 8]: 2.300% l 90% [Nv. 9]: 2.400% l 95% [Nv. 10]: 2.500% l 100%",
+   "id": 2554,
+   "name": "Tiro Neutralizante",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2554,
+  "nada": false,
+  "nome_busca": "Vanishing Buster",
+  "srv_detalhe": "LATAM"
+ },
+ "Vanishing Point": {
+  "busca_candidatos": [
+   {
+    "id": 2308,
+    "nome": "Toque do Oblívio"
+   }
+  ],
+  "cru": {
+   "description": "Toque do Oblívio Nível máximo: 10 Pré-requisitos: Perícia com Lança 1 Tipo: Ofensiva Descrição: Apenas com Lança. Causa dano físico a distância no alvo de até 7 células de alcance. O dano é afetado pelo nv. de base e nv. de Golpe Fulminante. Nivel l ATQ + (Nv. Golpe Fulminante x 70) [Nv 1]: 100% [Nv 2]: 200% [Nv 3]: 300% [Nv 4]: 400% [Nv 5]: 500% [Nv 6]: 600% [Nv 7]: 700% [Nv 8]: 800% [Nv 9]: 900% [Nv 10]: 1.000%",
+   "id": 2308,
+   "name": "Toque do Oblívio",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2308,
+  "nada": false,
+  "nome_busca": "Vanishing Point",
+  "srv_detalhe": "LATAM"
+ },
+ "Warmer": {
+  "busca_candidatos": [
+   {
+    "id": 2452,
+    "nome": "Aquecer Terreno"
+   }
+  ],
+  "cru": {
+   "description": "Aquecer Terreno Nível máximo: 5 Pré-requisitos: Vulcão 1, Furacão 1 Tipo: Suporte Descrição: Alvos na área de 7x7 células irão regenerar HP a cada 3 segundos e serão libertados da Cristalização, Hipotermia e Congelamento, além de se tornarem imunes a esses efeitos enquanto estiverem na área. Nível l Duração l Recarga [Nv 1]: 40 segundos l 35 segundos [Nv 2]: 45 segundos l 40 segundos [Nv 3]: 50 segundos l 45 segundos [Nv 4]: 55 segundos l 50 segundos [Nv 5]: 60 segundos l 55 segundos",
+   "id": 2452,
+   "name": "Aquecer Terreno",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 2452,
+  "nada": false,
+  "nome_busca": "Warmer",
+  "srv_detalhe": "LATAM"
+ },
+ "Wind Blade": {
+  "busca_candidatos": [
+   {
+    "id": 540,
+    "nome": "Lâmina de Vento"
+   }
+  ],
+  "cru": {
+   "description": "Lâmina de Vento Nível máximo: 10 Pré-requisitos: Perícia Ninja 1 Tipo: Ofensiva Descrição: Causa dano mágico de propriedade Vento. Cada lâmina causa 150% do ATQM. Nível l Lâminas [Nv 1]: 1 [Nv 2]: 2 [Nv 3]: 2 [Nv 4]: 3 [Nv 5]: 3 [Nv 6]: 4 [Nv 7]: 4 [Nv 8]: 5 [Nv 9]: 5 [Nv 10]: 6",
+   "id": 540,
+   "name": "Lâmina de Vento",
+   "origem": "pagina publica LATAM"
+  },
+  "id": 540,
+  "nada": false,
+  "nome_busca": "Wind Blade",
+  "srv_detalhe": "LATAM"
+ }
+}
