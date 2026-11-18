@@ -32,6 +32,10 @@ API = 'https://www.divine-pride.net/api/database/Item/{}'
 BUSCA = 'https://www.divine-pride.net/api/database/Item'
 SAIDA = ROOT / 'tools' / 'divine_pride_saida.json'
 PEND = ROOT / 'tools' / 'divine_pride_faltando.txt'
+SKILL_API = 'https://www.divine-pride.net/api/database/Skill/{}'
+SKILL_BUSCA = 'https://www.divine-pride.net/api/database/Skill'
+SKILLS = ROOT / 'tools' / 'divine_pride_skills.json'
+SKILLS_FALTA = ROOT / 'tools' / 'divine_pride_skills_faltando.txt'
 DELAY = 1.2  # segundos entre pedidos; aumente com --delay se quiser mais calma
 
 
@@ -112,6 +116,79 @@ def limpar(desc):
     return re.sub(r'\s*/\s*(?:/\s*)+', ' / ', texto).strip(' /')
 
 
+ESPECIAIS = {'critical', 'long ranged physical', 'long range physical', 'short range physical', 'short ranged physical', 'all property magical', 'melee physical', 'ranged physical', 'magical', 'physical', 'melee', 'ranged'}
+
+
+def nomes_de_skill(desc):
+    nomes = []
+    for frag in re.findall(r'(?i)increases (.+?) damage', desc or ''):
+        nomes += [n.strip() for n in re.split(r', | and ', frag)]
+    for m in re.finditer(r'(?i)reduces skill cooldown of (.+?) by', desc or ''):
+        nomes += [n.strip() for n in re.split(r', | and ', m.group(1))]
+    return sorted({n for n in nomes if n and n.casefold() not in ESPECIAIS})
+
+
+def estagio_skills(key, delay):
+    fonte = json.loads(SAIDA.read_text(encoding='utf-8')) if SAIDA.exists() else {}
+    nomes = set()
+    for v in fonte.values():
+        nomes.update(nomes_de_skill(v.get('efeito')))
+    cache = json.loads(SKILLS.read_text(encoding='utf-8')) if SKILLS.exists() else {}
+    faltam = sorted(n for n in nomes if not (cache.get(n, {}).get('cru') or cache.get(n, {}).get('nada')))
+    print(f'fase skills: {len(nomes)} habilidades distintas · {len(faltam)} a buscar')
+    if '--dry-run' in sys.argv:
+        for n in faltam:
+            print(f'  faltando: {n}')
+        return
+    if not key:
+        return
+    global servidores_param
+    erros, seguidos = [], 0
+    for n, nome in enumerate(faltam, 1):
+        servidores_param = ['iRO']
+        lista, falha = buscar_url(f'{SKILL_BUSCA}?query={urllib.parse.quote(nome)}', key)
+        if falha:
+            erros.append((nome, 'busca', falha)); seguidos += 1
+            print(f'[{n}/{len(faltam)}] {nome}: busca falhou ({falha})')
+            if seguidos >= 5:
+                print('5 falhas seguidas; interrompendo. Rode de novo mais tarde.')
+                break
+            time.sleep(delay)
+            continue
+        seguidos = 0
+        algo = None
+        if isinstance(lista, dict):
+            lista = lista.get('list') or lista.get('Body') or lista.get('body')
+        alvo = nome.casefold()
+        for it in lista or []:
+            if str(it.get('name', '')).casefold() == alvo:
+                algo = it
+                break
+        if algo is None and lista:
+            algo = lista[0]
+        if algo is None:
+            cache[nome] = {'nome_busca': nome, 'nada': True}
+        else:
+            servidores_param = ['LATAM', 'iRO']
+            detalhe, falha2 = buscar_url(SKILL_API.format(algo['id']), key)
+            cru, srv = None, None
+            if detalhe is not None:
+                cru, srv = detalhe, 'LATAM'
+            cache[nome] = {'nome_busca': nome, 'id': algo.get('id'), 'cru': cru,
+                           'srv_detalhe': srv, 'busca_candidatos': [{'id': c.get('id'), 'nome': c.get('name')} for c in (lista or [])[:5]],
+                           'nada': cru is None}
+            print(f'[{n}/{len(faltam)}] {nome} → id {algo.get("id")} ({srv or "sem detalhe"})')
+        SKILLS.write_text(json.dumps(cache, ensure_ascii=False, indent=1, sort_keys=True) + '\n', encoding='utf-8')
+        time.sleep(delay)
+    if erros:
+        print('Com erro:', *{f'{a} ({b})' for a, b, _ in erros}, sep='\n  ')
+    faltando = [n for n in nomes if cache.get(n, {}).get('nada')]
+    if faltando:
+        SKILLS_FALTA.write_text('\n'.join(faltando) + '\n', encoding='utf-8')
+    elif SKILLS_FALTA.exists():
+        SKILLS_FALTA.unlink()
+
+
 def main():
     secos = '--dry-run' in sys.argv
     delay = float(sys.argv[sys.argv.index('--delay') + 1]) if '--delay' in sys.argv else DELAY
@@ -178,6 +255,7 @@ def main():
         time.sleep(delay)
     if erros:
         print('Com erro:', *{f'{a} ({b})' for a, b, _ in erros}, sep='\n  ')
+    estagio_skills(key, delay)
 
 
 if __name__ == '__main__':
