@@ -36,5 +36,8 @@ body[data-theme="dark"] .fold.fold-team>.fold-body,body[data-theme="dark"] .fold
 .panel-note{font-size:13px;line-height:1.7}
 .panel-note.lg{font-size:14px}
 .switch-entry{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--text);cursor:pointer;white-space:nowrap}
+.switch-entry[hidden]{display:none}
 .switch-entry input{accent-color:#4ade80;width:15px;height:15px;cursor:pointer}
 .bonus-entry{font-size:13px}
+
+.ref-par{display:flex;align-items:center;gap:7px;padding:1px 0}
