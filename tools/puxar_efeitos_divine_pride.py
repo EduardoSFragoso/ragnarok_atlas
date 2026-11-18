@@ -12,7 +12,9 @@ precisa de uma apiKey gratuita. Este script:
        afins); nomes ainda sem ID passam pela listagem da própria API
        (/api/database/Item?query=…&server=LATAM), marcada como "busca" no
        arquivo de saída para conferência manual.
-    3. Consulta o detalhe de cada item UMA vez, com pausa entre pedidos,
+    3. Consulta o detalhe de cada item/skill UMA vez, em português via cabeçalhos
+       Accept-Language: pt e x-server (LATAM, com iRO como reserva), com pausa entre
+       pedidos,
        respeitando o Retry-After quando o servidor responder 429, e salvando
        tudo em tools/divine_pride_saida.json (acumulativo: rodar de novo
        continua de onde parou).
@@ -68,8 +70,11 @@ def pendentes():
 def buscar_url(url, key, tentar_404=False):
     ultimo = None
     for srv in servidores_param:
-        destino = url + ('&' if '?' in url else '?') + f'apiKey={key}' + (f'&server={srv}' if srv else '')
-        req = urllib.request.Request(destino, headers={'Accept-Language': 'en', 'User-Agent': 'ragnarok-atlas-ench-sync'})
+        destino = url + ('&' if '?' in url else '?') + f'apiKey={key}'
+        cabs = {'Accept-Language': 'pt', 'User-Agent': 'ragnarok-atlas-ench-sync'}
+        if srv:
+            cabs['x-server'] = srv
+        req = urllib.request.Request(destino, headers=cabs)
         for tent in range(6):
             try:
                 with urllib.request.urlopen(req, timeout=25) as r:
