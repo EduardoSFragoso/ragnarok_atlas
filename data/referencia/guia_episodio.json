@@ -1,5 +1,1282 @@
 [
   {
+    "id": "ep171",
+    "titulo": "Episódio 17.1: Ilusión",
+    "requisitos": "Nível de Base 110 · Quest anterior: Terra Gloria · Caça: 10 Dolor, 10 Venenum, 10 Caput",
+    "recompensaTotal": "40 Núcleos COR · 50 Chips Misteriosos · 1 Arma Danificada · 4,1 mi EXP Base + 25% ao final · 5,05 mi EXP Classe (soma dos passos; a infobox da bROWiki cita 5.850.000 — conferir)",
+    "avisos": [
+      "As instâncias duram 1 hora e podem ser refeitas quantas vezes for preciso até a conclusão (Invasão na Regenschirm, OS Restrito e Memorial COR).",
+      "Erro conhecido: personagens que fizeram a missão de evento de 10 anos atrás pulam os passos da instância OS Restrito e vão direto para Dien, no Distrito OS."
+    ],
+    "principal": [
+      {
+        "capitulo": "0. Prólogo — Do Palácio a Rudus",
+        "passos": [
+          {
+            "texto": "No Palácio de Prontera, entre no seu quarto e fale com Nihil (se o NPC não aparecer, aproxime-se das coordenadas; se não aparecer de novo, retorne a Terra Gloria e fale com Tess).",
+            "navi": "/navi prt_cas_q 21/39"
+          },
+          {
+            "texto": "Na entrada de Clana Nemieri, fale com o Membro da Rebelião (NPC cinemático, visível apenas ao se aproximar).",
+            "navi": "/navi einbech 219/80"
+          },
+          {
+            "texto": "Vá a Einbroch, entre no boteco Miado de Bala e converse com Philopontess (Tess).",
+            "navi": "/navi pub_cat 93/105"
+          },
+          {
+            "texto": "Entre em Rudus falando com o Guarda da Rebelião — o teleporte é permitido nesse mapa.",
+            "navi": "/navi ein_fild05 156/288"
+          }
+        ],
+        "desbloqueia": "Acesso a Rudus, Distrito OS, Distrito COR e a missão diária Morning."
+      },
+      {
+        "capitulo": "1. Investigando Rudus",
+        "recompensa": "15 Núcleos COR · 800.000 EXP Base · 800.000 EXP Classe",
+        "passos": [
+          {
+            "texto": "Fale com Elena Bolkova.",
+            "navi": "/navi sp_rudus 184/360"
+          },
+          {
+            "texto": "Fale com Lukie: investigue o paredão falando com o Membro da Rebelião (304/266), a Membra da Rebelião (121/286) e o Buraco (27/300), e volte a ele.",
+            "navi": "/navi sp_rudus 193/284"
+          },
+          {
+            "texto": "Entregue a caça a Lukie: 10 Dolor, 10 Venenum e 10 Caput.",
+            "navi": "/navi sp_rudus 193/284"
+          },
+          {
+            "texto": "Com a caça completa, atravesse o paredão pelo Portão Trancado e fale com Elena Bolkova.",
+            "navi": "/navi sp_rudus 184/360"
+          },
+          {
+            "texto": "Reporte a situação para Tess no Miado de Bala; clique no Aposentado ao lado para entrar na sala secreta, fale com Tess e depois com o Cavalheiro — a missão Invasão na Regenschirm começa.",
+            "navi": "/navi pub_cat 93/105"
+          }
+        ],
+        "itens": [
+          "Caça: 10 Dolor · 10 Venenum · 10 Caput (contador da quest)"
+        ]
+      },
+      {
+        "capitulo": "2. Invasão na Regenschirm (Instância)",
+        "recompensa": "25 Chips Misteriosos · 1.200.000 EXP Base · 800.000 EXP Classe (+200.000 base e classe conversando de novo com Tess)",
+        "passos": [
+          {
+            "texto": "Em Lighthalzen, fale com o Guarda da República; ao lado dele está Oscar.",
+            "navi": "/navi lighthalzen 56/270"
+          },
+          {
+            "texto": "Fale com Oscar na entrada e depois com Ace; elimine os Traidores no local e vá à Lanchonete (ponto 1); clique no Controle de Acesso e passe pelo portão.",
+            "navi": "/navi lighthalzen 55/278"
+          },
+          {
+            "texto": "Elimine todos os Gases Letais; vá aos 3 quartos dos Cientistas (ponto 2) e fale com cada um deles; no 4º quarto, a mensagem pede apoio ao Auditório."
+          },
+          {
+            "texto": "Siga ao norte e fale com Est (ponto 7); pegue o código 0315 e use-o no Painel de Controle."
+          },
+          {
+            "texto": "Retorne ao último quarto e fale com Ace (ponto 3) — NÃO ESQUEÇA de clicar nos Documentos Dispersos atrás dela."
+          },
+          {
+            "texto": "Siga ao Auditório central (ponto 5) e clique no NPC Auditório (devem surgir Ace, Est e Gonie; se não surgirem, volte ao 4º quarto do ponto 2)."
+          },
+          {
+            "texto": "Fale com Ace para entrar no auditório; aproxime-se da Cobaia Detida e clique nos 4 Controladores em ordem, escolhendo: 1) Botão Azul, 2) Botão Vermelho, 3) Botão Branco, 4) Botão Amarelo."
+          },
+          {
+            "texto": "Elimine a Cobaia Detida e fale com Ace no centro do Auditório, escolhendo \"Ir para Einbroch\"."
+          },
+          {
+            "texto": "No Miado de Bala, converse com Tess (fale de novo para o bônus extra).",
+            "navi": "/navi pub_cat 93/105"
+          }
+        ]
+      },
+      {
+        "capitulo": "3. Crise na Rekenber",
+        "recompensa": "20 Núcleos COR · 1.200.000 EXP Base · 1.200.000 EXP Classe",
+        "passos": [
+          {
+            "texto": "Ainda no Miado de Bala, passe pelo Wilde e fale com Nalandro; siga o balão de quest no salão para prosseguir o diálogo.",
+            "navi": "/navi pub_cat 106/69"
+          },
+          {
+            "texto": "Fale com Nalandro na frente do aeroporto de Einbroch.",
+            "navi": "/navi einbroch 42/208"
+          },
+          {
+            "texto": "Em Lighthalzen, converse com Nalandro na entrada da favela e, dentro dela, fale com ele novamente.",
+            "navi": "/navi lighthalzen 259/215"
+          },
+          {
+            "texto": "Na sede da Corporação Rekenber, fale com Nalandro, entre e converse com a Funcionária na entrada.",
+            "navi": "/navi lighthalzen 108/163"
+          },
+          {
+            "texto": "Suba as escadas da Rekenber e converse com o Funcionário.",
+            "navi": "/navi lhz_in01 163/258"
+          },
+          {
+            "texto": "Dirija-se ao laboratório anexo da Regenschirm; converse com o Cientista (clique nos links azuis do diálogo para ativar a navegação) e depois com o Funcionário Sammy.",
+            "navi": "/navi rgsr_in 158/83"
+          },
+          {
+            "texto": "Retorne à Corporação Rekenber e fale com o Secretário; na Sala de Arquivo, fale com o Funcionário (qualquer opção serve).",
+            "navi": "/navi lhz_in01 80/210"
+          },
+          {
+            "texto": "Siga para os Arredores de Einbroch e fale com Kaya Toss.",
+            "navi": "/navi ein_fild01 95/146"
+          }
+        ]
+      },
+      {
+        "capitulo": "4. Como nos velhos tempos (Instância OS Restrito)",
+        "recompensa": "25 Chips Misteriosos · 700.000 EXP Base · 700.000 EXP Classe",
+        "passos": [
+          {
+            "texto": "Volte ao Miado de Bala e fale com Tess.",
+            "navi": "/navi pub_cat 93/105"
+          },
+          {
+            "texto": "Encontre o Membro da Rebelião e investigue os 3 pontos ao redor (347/219, 268/207 e 218/266), seguindo a navegação.",
+            "navi": "/navi ein_fild03 278/269"
+          },
+          {
+            "texto": "Volte ao Membro da Rebelião (recebe 100.000 de EXP de base e classe) e fale com ele para gerar a entrada da instância.",
+            "navi": "/navi ein_fild03 278/269"
+          },
+          {
+            "texto": "Fale com Ridsh e elimine os 2 monstros que aparecem; clique no anúncio vermelho destrua a Máquina Suspeita atrás das NPCs."
+          },
+          {
+            "texto": "Siga pelos trilhos do trem até um portão e clique nos 3 Fios Grossos; volte aos trilhos até o portal ao norte."
+          },
+          {
+            "texto": "Saia dos trilhos e ande até Dien; encontre Ridsh; após o diálogo com Est, passe por onde estava o portal e siga à direita até a entrada dos trilhos novamente."
+          },
+          {
+            "texto": "Siga pelos trilhos (monstros podem aparecer em alguns pontos) e fale com Dien no final para encerrar a instância."
+          }
+        ]
+      },
+      {
+        "capitulo": "5. O Envelope de Dien",
+        "recompensa": "200.000 EXP Base · 100.000 EXP Classe",
+        "passos": [
+          {
+            "texto": "Saia da instância e vá a Clana Nemieri; converse com a Membra da Rebelião.",
+            "navi": "/navi rebel_in 68/41"
+          },
+          {
+            "texto": "No quarto das Veteranas, clique na Caixa Decorada, escolha \"Olhar\" e depois \"Pegar\" para receber 1 Envelope de Dien."
+          },
+          {
+            "texto": "Entregue o envelope para Dien, no Distrito OS — ela teleporta você para o Distrito COR; fale com Est.",
+            "navi": "/navi sp_os 252/358"
+          }
+        ],
+        "itens": [
+          "1 × Envelope de Dien (recebido e entregue na etapa)"
+        ],
+        "desbloqueia": "A missão Ocupação OS (não faça a instância com Est agora — siga andando até os Rebeldes)."
+      },
+      {
+        "capitulo": "6. Capturando Elyumina (Instância solo — Memorial COR)",
+        "recompensa": "5 Núcleos COR · 1 Arma Danificada · 25% EXP Base (10% + 15%) · 1.250.000 EXP Classe",
+        "passos": [
+          {
+            "texto": "Fale com o Rebelde e siga o balão de quest; Elyumina surge e ativa a navegação.",
+            "navi": "/navi sp_cor 168/81"
+          },
+          {
+            "texto": "Encontre Tess e depois fale com Ace — a missão Procurando Patrick fica liberada.",
+            "navi": "/navi sp_cor 122/140"
+          },
+          {
+            "texto": "Fale com o Insurgente; Elena Bolkova aparece — fale com ela.",
+            "navi": "/navi sp_cor 108/130"
+          },
+          {
+            "texto": "Fale com Elena Bolkova na nova posição, até surgir a opção de gerar a instância (solo, 1 hora).",
+            "navi": "/navi sp_cor 180/169"
+          },
+          {
+            "texto": "Memorial COR: Elena marca 4 pontos no minimapa; siga aos 2 pontos do norte, clique na Caixa para invocar os monstros, elimine-os e fale com o Insurgente ao lado (Caixas de Madeira: Caçador de Coração, E-EA2S e E-13EN0; Caixas de Aço: Caçador de Coração 2, E-EA1L e E-13EN0)."
+          },
+          {
+            "texto": "Repita até um anúncio pedir que você vá ao meio do mapa; aproximar-se das Biobatérias as faz explodir, liberando um feixe de luz que dá [Todos os atributos +20] por 30 segundos (Veneno Químico e Biobateria não precisam ser eliminados)."
+          },
+          {
+            "texto": "No centro, fale com Elena Bolkova para abrir o portal; entre na área perto das cordas e elimine EL-A17T (com HP menor que o original)."
+          },
+          {
+            "texto": "Fale com Elena Bolkova, peça para sair da instância e fale com ela novamente do lado de fora.",
+            "navi": "/navi sp_cor 180/169"
+          },
+          {
+            "texto": "Procure Gonie; Lukie surge — fale com ele (um resumo da história do episódio).",
+            "navi": "/navi sp_cor 137/210"
+          },
+          {
+            "texto": "Siga ao norte do mapa e fale com Lukie.",
+            "navi": "/navi sp_cor 255/284"
+          }
+        ],
+        "desbloqueia": "Instância Memorial COR, Equipamentos Ilusión e Armas OS. Continua no Episódio 17.2."
+      }
+    ],
+    "secundarias": [],
+    "itensNecessarios": {
+      "diarias": {
+        "titulo": "Materiais Para As Diárias",
+        "colunas": [
+          "Item",
+          "Onde conseguir",
+          "Para que serve",
+          "Quanto guardar"
+        ],
+        "linhas": [
+          [
+            "10 de um mesmo tipo (escolha 1):\n{{Jellopy}}\n{{Raiz de Árvore}}\n{{Perna de Gafanhoto}}\n{{Trevo}}\n{{Plumas de Ave}}\n{{Cauda de Rato}}\n{{Canino Venenoso}}\n{{Cauda de Yoyo}}\n{{Dente de Morcego}}\n{{Pata de Urso}}",
+            "Drops clássicos de Midgard (Porings, Lunáticos, Ratões etc.)",
+            "Comida do dia para a diária Morning — a pedida é igual para todo o servidor",
+            "10/dia (a opção muda por dia)"
+          ],
+          [
+            "{{Bracelete de Identificação}}",
+            "Cai dos Dolor derrotados em Rudus",
+            "Diária Descanse em Paz (10)",
+            "10/dia"
+          ]
+        ]
+      },
+      "embarque": {
+        "titulo": "Materiais Usado No Episódio",
+        "colunas": [
+          "Item",
+          "Quantidade",
+          "Para que é usado",
+          "Observações"
+        ],
+        "linhas": [
+          [
+            "Dolor · Venenum · Caput",
+            "10 de cada",
+            "Caça exigida por Lukie (cap. 1)",
+            "Derrotados em Rudus; caça regular da quest, sem item para guardar."
+          ]
+        ],
+        "nota": "A história não exige itens comprados: o {{Envelope de Dien}} é recebido na Caixa Decorada do quarto das Veteranas (cap. 5) e o Núcleo COR/Chip Misterioso/Arma Danificada são recompensas. Sempre que Morning pedir um bichinho de estimação, 1 ovo (Poring, Picky, Rocker ou Lunático) garante 5% de EXP base + 800.000 de EXP classe."
+      }
+    },
+    "diarias": {
+      "titulo": "Missões diárias de episódio",
+      "aviso": "Diárias do Distrito (reset às 4h da manhã). Todas pagam a mesma recompensa fixa: 1 Núcleo COR + 5 Chips Misteriosos por execução; o episódio não tem sistema de Reputação, portanto não há bônus por reputação.",
+      "grupos": [
+        {
+          "nome": "Aventuras no Distrito",
+          "diarias": [
+            {
+              "nome": "Trabalhando na Fazenda",
+              "tarefa": "Ajudar o Fazendeiro: executar a ação pedida (retirar pulgões, remover ervas daninhas ou fertilizar) nos 3 pés do mapa — Abóbora, Uva e Feijão (o mais distante) — e retornar",
+              "itens": "",
+              "recompensa": "1 Núcleo COR · 5 Chips Misteriosos",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_no_Distrito#Trabalhando_na_Fazenda"
+            },
+            {
+              "nome": "Caça aos Caçadores",
+              "tarefa": "Eliminar 15 Bellare e 15 Sanare no Distrito OS",
+              "itens": "",
+              "recompensa": "1 Núcleo COR · 5 Chips Misteriosos",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_no_Distrito#Ca.C3.A7a_aos_Ca.C3.A7adores"
+            },
+            {
+              "nome": "Morning",
+              "tarefa": "Cavar perto do NPC em Rudus e entregar 10 do alimento do dia (a comida é a mesma para todo o servidor)",
+              "itens": "10 de: {{Jellopy}} · {{Raiz de Árvore}} · {{Perna de Gafanhoto}} · {{Trevo}} · {{Plumas de Ave}} · {{Cauda de Rato}} · {{Canino Venenoso}} · {{Cauda de Yoyo}} · {{Dente de Morcego}} · {{Pata de Urso}}",
+              "recompensa": "1 Núcleo COR · 5 Chips Misteriosos",
+              "obs": "Intimidade: a cada 10 níveis Morning pode pedir 1 Ovo de bichinho (Poring, Picky, Rocker ou Lunático) por 5% de EXP base + 800.000 de EXP classe",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_no_Distrito#Morning"
+            },
+            {
+              "nome": "Descanse em Paz",
+              "tarefa": "Eliminar 20 Dolor em Rudus e coletar 10 Bracelete de Identificação",
+              "itens": "10 × {{Bracelete de Identificação}}",
+              "recompensa": "1 Núcleo COR · 5 Chips Misteriosos",
+              "obs": "Pré-requisito: Procurando Patrick",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_no_Distrito#Descanse_em_Paz"
+            }
+          ]
+        },
+        {
+          "nome": "Instâncias diárias (menu do Distrito)",
+          "diarias": [
+            {
+              "nome": "Missão OS",
+              "tarefa": "Instância do Distrito OS",
+              "itens": "",
+              "recompensa": "Aleatória: 1 Arma Danificada ou 1 Núcleo COR + 5 Chips Misteriosos",
+              "obs": "A bROWiki não informa as chances da recompensa",
+              "linkBrowiki": "https://browiki.org/wiki/Ocupa%C3%A7%C3%A3o_OS"
+            },
+            {
+              "nome": "Memorial COR",
+              "tarefa": "Instância liberada no fim da história do episódio",
+              "itens": "",
+              "recompensa": "Aleatória: 1 Arma Danificada ou 1 Núcleo COR + 5 Chips Misteriosos",
+              "obs": "A bROWiki não informa as chances da recompensa",
+              "linkBrowiki": "https://browiki.org/wiki/Memorial_COR"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "ep172",
+    "titulo": "Episódio 17.2: Legado do Sábio",
+    "requisitos": "Nível de Base 130 · Quest anterior: Ilusión (Ep. 17.1) · Itens: 1 Folha de Yggdrasil, 10 Espada Chanfrada, 10 Líquido Fluorescente",
+    "recompensaTotal": "105 Vales Varmida · 3.867.510 EXP Base (infobox da bROWiki — a soma dos passos dá 4.641.012; divergência a conferir)",
+    "avisos": [
+      "A instância O Jardim ao Anoitecer permite grupo; membros que não estiverem na tela na hora da morte de Sweety podem não completá-la, e quem já concluiu a instância não consegue reentrar."
+    ],
+    "principal": [
+      {
+        "capitulo": "0. Jardins da Mansão",
+        "passos": [
+          {
+            "texto": "Fale mais de uma vez com Lukie aos pés da Mansão de Varmunt.",
+            "navi": "/navi sp_cor 255/285"
+          },
+          {
+            "texto": "Entre pelo canal de esgoto e examine o ??? — entregue 1 Folha de Yggdrasil.",
+            "navi": "/navi ba_pw02 93/92"
+          },
+          {
+            "texto": "Aproxime-se das coordenadas para iniciar o diálogo e fale com Alp para se teletransportar.",
+            "navi": "/navi ba_pw01 14/115"
+          },
+          {
+            "texto": "Converse com Larcis e saia pelo portal atrás dele.",
+            "navi": "/navi ba_in01 20/319"
+          }
+        ],
+        "itens": [
+          "1 × {{Folha de Yggdrasil}} (entregue no canal de esgoto)"
+        ]
+      },
+      {
+        "capitulo": "1. Hóspede da Mansão e Transmissores",
+        "recompensa": "35 Vales Varmida · 1.547.004 EXP Base",
+        "passos": [
+          {
+            "texto": "Fale com Tamarin na mansão e cadastre-se como hóspede visitante com a Gerente Alpha.",
+            "navi": "/navi ba_maison 70/145"
+          },
+          {
+            "texto": "Após o cadastro, fale de novo com a Gerente Alpha e procure Mazang para ouvir sobre os Transmissores.",
+            "navi": "/navi ba_maison 146/109"
+          },
+          {
+            "texto": "Derrote as Betas Quebradas espalhadas pela mansão até conseguir 1 Comunicador de Autômato (70% de chance de ir direto ao inventário) e retorne à NPC.",
+            "navi": "/navi ba_maison 146/109"
+          },
+          {
+            "texto": "Localize o Transmissor.",
+            "navi": "/navi ba_maison 333/143"
+          },
+          {
+            "texto": "Localize Gaduri.",
+            "navi": "/navi ba_maison 246/206"
+          },
+          {
+            "texto": "Retorne à Gerente Alpha.",
+            "navi": "/navi ba_maison 70/145"
+          }
+        ],
+        "itens": [
+          "1 × {{Comunicador de Autômato}} (drop das Betas Quebradas, coletado na etapa)"
+        ],
+        "desbloqueia": "Jardim da Mansão, Usina Mágica, Estação de Esgoto, Armazém Tártaro, Estufa de Pitayas, Aventuras na Mansão, Silêncio na Biblioteca, Segredo no Armazém, Mistério na Sauna, Zona Restrita, Salvando Elyumina, Fazenda de Pitayas, Duelo com Sweety, Equipamentos Automatron e a diária Transmissor sem Sinal."
+      },
+      {
+        "capitulo": "2. A Casa de Chá e os depoimentos",
+        "recompensa": "35 Vales Varmida · 1.547.004 EXP Base",
+        "passos": [
+          {
+            "texto": "Na Casa de Chá, converse com Philopontess e com Dien: a missão é coletar depoimentos sobre a verdadeira história da Rebelião Mercenária.",
+            "navi": "/navi ba_maison 102/65"
+          },
+          {
+            "texto": "Pergunte \"Quem é o Sr. H?\" para Yunas.",
+            "navi": "/navi ba_maison 189/56"
+          },
+          {
+            "texto": "Converse com Skippy.",
+            "navi": "/navi ba_maison 318/169"
+          },
+          {
+            "texto": "Converse com VoaVoa, selecionando as 3 opções.",
+            "navi": "/navi ba_maison 232/310"
+          },
+          {
+            "texto": "Converse com Adoren.",
+            "navi": "/navi ba_maison 249/161"
+          },
+          {
+            "texto": "Converse com o Robô de Limpeza.",
+            "navi": "/navi ba_maison 357/291"
+          },
+          {
+            "texto": "Volte à Casa de Chá e fale com Lukie: responda \"A Rebelião\" e mostre provas de conluio com a Corporação.",
+            "navi": "/navi ba_maison 102/65"
+          },
+          {
+            "texto": "Siga conversando com os NPCs pelo balão de quest e fale com Kaya Toss; as Veteranas surgirão para ajudar.",
+            "navi": "/navi ba_maison 104/92"
+          },
+          {
+            "texto": "Siga o balão até Tatio na Casa de Chá e escolha \"Ir para fora\" no fim do diálogo.",
+            "navi": "/navi ba_maison 102/65"
+          }
+        ]
+      },
+      {
+        "capitulo": "3. Núcleos de Autômata Quebrada",
+        "recompensa": "10 Vales Varmida · 257.834 EXP Base",
+        "passos": [
+          {
+            "texto": "Saindo da Casa de Chá, fale com Lukie.",
+            "navi": "/navi ba_maison 116/67"
+          },
+          {
+            "texto": "Clique nos pontos indicados para coletar 5 Núcleos de Autômata Quebrada (10 pontos possíveis): ba_maison 150/47, 221/193, 208/87, 314/146, 207/276, 70/256, 64/187, 275/313, 338/267 e 131/197.",
+            "navi": "/navi ba_maison 150/47"
+          },
+          {
+            "texto": "Com os 5 núcleos, encontre-se com Elena Bolkova.",
+            "navi": "/navi ba_maison 303/141"
+          }
+        ],
+        "itens": [
+          "5 × Núcleo de Autômata Quebrada (coletados na etapa)"
+        ]
+      },
+      {
+        "capitulo": "4. A Rebelião escondida — Radar da Elyumina",
+        "recompensa": "10 Vales Varmida · 515.668 EXP Base",
+        "passos": [
+          {
+            "texto": "Dirija-se ao dormitório das empregadas e peça acesso ao Rebelde.",
+            "navi": "/navi ba_maison 101/321"
+          },
+          {
+            "texto": "Converse com Elena Bolkova: ela pedirá 10 Espadas Chanfradas e 10 Líquidos Fluorescentes.",
+            "navi": "/navi ba_in01 20/145"
+          },
+          {
+            "texto": "Retorne e entregue os itens para Elyumina — você recebe o 1º Radar da Elyumina.",
+            "navi": "/navi ba_in01 15/147"
+          },
+          {
+            "texto": "Saia do quarto e, no mesmo local, encontre-se com a comandante Est Loveloy. Prepare-se para a instância (membros no mesmo passo podem acompanhá-lo).",
+            "navi": "/navi ba_in01 51/157"
+          }
+        ],
+        "itens": [
+          "10 × {{Espada Chanfrada}}",
+          "10 × {{Líquido Fluorescente}}"
+        ]
+      },
+      {
+        "capitulo": "5. O Jardim ao Anoitecer (Instância)",
+        "passos": [
+          {
+            "texto": "Fale com Est para criar a fila da instância.",
+            "navi": "/navi ba_in01 51/157"
+          },
+          {
+            "texto": "Dentro da instância, fale com Est e siga o caminho até encontrar Invasores; após o diálogo, eles atacam.",
+            "navi": "/navi ba_maison 40/188"
+          },
+          {
+            "texto": "Fale com Est — ela ativará o Radar — e siga a navegação."
+          },
+          {
+            "texto": "Na entrada da Mansão, após o diálogo com Est, siga a Autômata Amêndoa e clique nela sempre que ela parar."
+          },
+          {
+            "texto": "Após batalhas, caminhadas e conversas, reencontre Est; atravesse a ponte sob a água e clique no Rebelde."
+          },
+          {
+            "texto": "Vá ao mini aeroporto: alguns Caça-Corações vigiam a entrada e atacam."
+          },
+          {
+            "texto": "Aproxime-se de Sweety e inicie a batalha (a versão dela na instância tem 500.000 de HP)."
+          },
+          {
+            "texto": "Derrote-a, fale com Est e saia pelo portal."
+          }
+        ],
+        "nota": "Membros fora da tela na morte de Sweety podem não concluir a instância e precisarão refazê-la; quem já concluiu não reentra."
+      },
+      {
+        "capitulo": "6. Conclusão — Crux em Prontera",
+        "recompensa": "15 Vales Varmida · 773.502 EXP Base",
+        "passos": [
+          {
+            "texto": "Volte ao dormitório e fale com Est.",
+            "navi": "/navi ba_maison 101/321"
+          },
+          {
+            "texto": "Retorne ao mini aeroporto e converse com Elly.",
+            "navi": "/navi ba_maison 33/222"
+          },
+          {
+            "texto": "Converse com a Amêndoa sobre Sweety e depois com Sweety — a instância Duelo com Sweety fica liberada.",
+            "navi": "/navi ba_maison 33/222"
+          },
+          {
+            "texto": "Saia a pé pelo mini aeroporto: Crux deve aparecer ao lado de Philopontess. \"Espere um pouco!\" deixa Crux esperando no dormitório; \"Partir agora\" teleporta ao Palácio de Prontera.",
+            "navi": "/navi ba_maison 33/220"
+          },
+          {
+            "texto": "No Palácio, assista à cena e converse com Nihil M. Heine (opcional); para sair, fale com o Camareiro Belle e escolha \"Sair daqui\".",
+            "navi": "/navi prt_cas 320/267"
+          }
+        ],
+        "desbloqueia": "Continua no Episódio 18 — Caminho da Oração."
+      }
+    ],
+    "secundarias": [],
+    "itensNecessarios": {
+      "diarias": {
+        "titulo": "Materiais Para As Diárias",
+        "colunas": [
+          "Item",
+          "Onde conseguir",
+          "Para que serve",
+          "Quanto guardar"
+        ],
+        "linhas": [
+          [
+            "{{Comunicador de Autômato}}",
+            "Aparece direto no inventário ao derrotar Beta Quebrada na Mansão (30% de chance)",
+            "1 na história (Mazang) · Diária Transmissor sem Sinal (10)",
+            "10/dia"
+          ],
+          [
+            "{{Peça de Autômata Quebrada}}",
+            "Aparece direto no inventário ao derrotar Empregada Quebrada na sauna (30% de chance)",
+            "Diária Entre Água Quente e Fria (5)",
+            "5/dia"
+          ],
+          [
+            "{{Chip de Batata}}",
+            "Coletado durante a própria diária, perto da Eorfa (ba_maison 79/278)",
+            "Diária Interferência Bioeletrônica (Nv. 180+, 10)",
+            "Não precisa juntar antes"
+          ],
+          [
+            "{{Sais de Banho B}}",
+            "Recompensa da diária Entre Água Quente e Fria",
+            "Recompensa adicional da sauna (uso não informado na bROWiki)",
+            "2 por execução"
+          ]
+        ]
+      },
+      "embarque": {
+        "titulo": "Materiais Usado No Episódio",
+        "colunas": [
+          "Item",
+          "Quantidade",
+          "Para que é usado",
+          "Observações"
+        ],
+        "linhas": [
+          [
+            "{{Folha de Yggdrasil}}",
+            "1",
+            "Entregue no canal de esgoto (cap. 0)",
+            ""
+          ],
+          [
+            "{{Espada Chanfrada}}",
+            "10",
+            "Pedidas por Elena Bolkova (cap. 4)",
+            ""
+          ],
+          [
+            "{{Líquido Fluorescente}}",
+            "10",
+            "Pedido junto das Espadas Chanfradas (cap. 4)",
+            "Também é item da diária Passatempo Refinado do Ep. 19"
+          ]
+        ],
+        "nota": "Itens recebidos durante a história: 1º Radar da Elyumina (ao entregar as Espadas e o Líquido) · Comunicador de Autômato (coletado para a Mazang, cap. 1) · Núcleos de Autômata Quebrada (coletados no cap. 3)."
+      }
+    },
+    "diarias": {
+      "titulo": "Missões diárias de episódio",
+      "aviso": "Diárias da Mansão de Varmunt (reset às 4h da manhã). Todas pagam Vale Varmida; a Mansão não tem sistema de Reputação, portanto não há bônus por reputação.",
+      "grupos": [
+        {
+          "nome": "Mansão de Varmunt",
+          "diarias": [
+            {
+              "nome": "Transmissor sem Sinal",
+              "tarefa": "Coletar 10 Comunicador de Autômato (aparecem direto no inventário ao derrotar Beta Quebrada)",
+              "itens": "10 × {{Comunicador de Autômato}}",
+              "recompensa": "2 Vales Varmida",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Mans%C3%A3o#Transmissor_sem_Sinal"
+            },
+            {
+              "nome": "Faxina no Esgoto",
+              "tarefa": "Eliminar 44 Cachoeira Poluída, 44 Cãibra Poluída e 44 Venenum Poluída",
+              "itens": "",
+              "recompensa": "2 Vales Varmida",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Mans%C3%A3o#Faxina_no_Esgoto"
+            },
+            {
+              "nome": "Faxina na Usina",
+              "tarefa": "Eliminar 44 Bellare Elite, 44 Dolor Viciada e 44 Magia Libertada",
+              "itens": "",
+              "recompensa": "2 Vales Varmida",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Mans%C3%A3o#Faxina_na_Usina"
+            },
+            {
+              "nome": "Brincando com Pitayas",
+              "tarefa": "Eliminar 20 Pitayas da cor aleatória do dia (Amarela, Azul, Vermelha, Roxa ou Verde)",
+              "itens": "",
+              "recompensa": "2 Vales Varmida",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Mans%C3%A3o#Brincando_com_Pitayas"
+            },
+            {
+              "nome": "Interferência Bioeletrônica (Nv. 180+)",
+              "tarefa": "Coletar 10 Chip de Batata",
+              "itens": "10 × {{Chip de Batata}}",
+              "recompensa": "1 Vale Varmida",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Mans%C3%A3o#Interfer.C3.AAncia_Bioeletr.C3.B4nica"
+            },
+            {
+              "nome": "Coletando Sucata",
+              "tarefa": "Eliminar 20 Partes de Guardião",
+              "itens": "",
+              "recompensa": "2 Vales Varmida",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Mans%C3%A3o#Coletando_Sucata"
+            }
+          ]
+        },
+        {
+          "nome": "Biblioteca e armazém",
+          "diarias": [
+            {
+              "nome": "Limpeza na Biblioteca",
+              "tarefa": "Eliminar 20 Traça-de-Livro",
+              "itens": "",
+              "recompensa": "2 Vales Varmida",
+              "obs": "Pré-requisito: Silêncio na Biblioteca",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Mans%C3%A3o#Limpeza_na_Biblioteca"
+            },
+            {
+              "nome": "Organizando Livros",
+              "tarefa": "Eliminar 20 Grimório Errante",
+              "itens": "",
+              "recompensa": "2 Vales Varmida",
+              "obs": "Pré-requisito: Silêncio na Biblioteca",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Mans%C3%A3o#Organizando_Livros"
+            },
+            {
+              "nome": "Limpeza do Armazém",
+              "tarefa": "Eliminar 20 Caçador de Coração",
+              "itens": "",
+              "recompensa": "1 Vale Varmida",
+              "obs": "Pré-requisito: Segredo no Armazém",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Mans%C3%A3o#Limpeza_do_Armaz.C3.A9m"
+            },
+            {
+              "nome": "Vigiar o Subsolo (Nv. 170+)",
+              "tarefa": "Eliminar 20 Almoxarife",
+              "itens": "",
+              "recompensa": "1 Vale Varmida",
+              "obs": "Pré-requisito: Segredo no Armazém · a Aventuras na Mansão marca 1 Vale; a página Segredo no Armazém cita 2 — conferir",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Mans%C3%A3o#Vigiar_o_Subsolo"
+            }
+          ]
+        },
+        {
+          "nome": "Sauna",
+          "diarias": [
+            {
+              "nome": "Entre Água Quente e Fria",
+              "tarefa": "Eliminar 10 Empregada Quebrada (Balde), 10 Empregada Quebrada (Cano) e coletar 5 Peça de Autômata Quebrada",
+              "itens": "5 × {{Peça de Autômata Quebrada}}",
+              "recompensa": "2 Vales Varmida + 2 {{Sais de Banho B}}",
+              "obs": "Pré-requisito: Mistério na Sauna",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Mans%C3%A3o#Entre_.C3.81gua_Quente_e_Fria"
+            },
+            {
+              "nome": "Peixe de Água Fervida",
+              "tarefa": "Eliminar 15 Marc Escaldado e 15 Carpa Escaldada",
+              "itens": "",
+              "recompensa": "2 Vales Varmida",
+              "obs": "Pré-requisito: Mistério na Sauna",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Mans%C3%A3o#Peixe_de_.C3.81gua_Fervida"
+            }
+          ]
+        },
+        {
+          "nome": "Instâncias diárias (menu de instâncias da Mansão)",
+          "diarias": [
+            {
+              "nome": "Duelo com Sweety",
+              "tarefa": "Instância no menu da Mansão de Varmunt",
+              "itens": "",
+              "recompensa": "6 Vales Varmida",
+              "linkBrowiki": "https://browiki.org/wiki/Duelo_com_Sweety"
+            },
+            {
+              "nome": "Fazenda de Pitayas",
+              "tarefa": "Instância no menu da Mansão de Varmunt",
+              "itens": "",
+              "recompensa": "4 Vales Varmida",
+              "obs": "Na 1ª vez há +20 Vales Varmida (único; não entra na taxa)",
+              "linkBrowiki": "https://browiki.org/wiki/Fazenda_de_Pitayas"
+            },
+            {
+              "nome": "Jardim Secreto — Normal (Nv. 130)",
+              "tarefa": "Instância no menu da Mansão de Varmunt",
+              "itens": "",
+              "recompensa": "6 Vales Varmida",
+              "obs": "A morte do MVP precisa ocorrer no seu campo de visão; no Difícil (Nv. 180) o prêmio é a Caixa de Automódulo H-, não Vales",
+              "linkBrowiki": "https://browiki.org/wiki/Jardim_Secreto"
+            },
+            {
+              "nome": "Ortus Aqua — Caçar Papilia Violeta (Normal, Nv. 130)",
+              "tarefa": "Missão do Seiyu dentro da instância Ortus Aqua",
+              "itens": "",
+              "recompensa": "4 Vales Varmida",
+              "obs": "Normal e Difícil não podem ser feitos no mesmo dia",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Mans%C3%A3o"
+            },
+            {
+              "nome": "Ortus Aqua — Encontrar Jardineiras (Nv. 130)",
+              "tarefa": "Missão do Seiyu: coletar Biscoito da Jardineira",
+              "itens": "",
+              "recompensa": "4 Vales Varmida",
+              "obs": "Não confirmado se pode ser feita na mesma execução que a outra missão",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Mans%C3%A3o"
+            },
+            {
+              "nome": "Ortus Aqua — Caçar Papilia Rubra (Difícil, Nv. 180)",
+              "tarefa": "Missão do Seiyu dentro da instância Ortus Aqua",
+              "itens": "",
+              "recompensa": "4 Vales Varmida",
+              "obs": "Normal e Difícil não podem ser feitos no mesmo dia",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Mans%C3%A3o"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "ep18",
+    "titulo": "Episódio 18: Caminho da Oração",
+    "requisitos": "Nível de Base 170 · Quest anterior: Legado do Sábio (Ep. 17.2) · Santuário de Rachel até o passo 5",
+    "recompensaTotal": "680 Fragmentos de Ametista · 1.000 Reputação (Aldeia do Lobo Cinzento) · 576,4 mi EXP Base · 225 mi EXP Classe · (Visual) Mini Elly (a infobox da bROWiki cita 660 Fragmentos — a soma das seções dá 680; divergência anotada)",
+    "avisos": [
+      "A Boneca de Elly (chapéu) é recebida no início e é necessária em vários passos — só desequipe quando a quest pedir (no passo final com Miriam).",
+      "Depois de Filhos Cinzentos, a história exige 1.000 de Reputação com a Aldeia do Lobo Cinzento. Cada missão do capítulo 2 dá Reputação +100 na primeira vez; na repetição (diárias), +30."
+    ],
+    "principal": [
+      {
+        "capitulo": "0. Convergência em Arunafeltz",
+        "recompensa": "50 Fragmentos de Ametista · 68,4 mi EXP Base · 70 mi EXP Classe",
+        "passos": [
+          {
+            "texto": "Nos jardins da Mansão de Varmunt, fale com Elly — você recebe a Boneca de Elly, usada durante a missão.",
+            "navi": "/navi ba_in01 26/266"
+          },
+          {
+            "texto": "Em Rachel, encontre a Pessoa Mascarada e, após a discussão, continue a conversa com o Sacerdote Nervoso que surge; fale com ele mais uma vez (qualquer opção).",
+            "navi": "/navi rachel 182/176"
+          },
+          {
+            "texto": "Encontre o Sacerdote Nervoso, que se chama Junok.",
+            "navi": "/navi ra_temple 72/54"
+          },
+          {
+            "texto": "Siga ao norte dos jardins do Santuário e fale com o Sacerdote Nervoso — as missões das Pessoas de Rachel ficam liberadas.",
+            "navi": "/navi ra_temple 30/142"
+          },
+          {
+            "texto": "Entre no Santuário e fale com o Guarda Dent.",
+            "navi": "/navi ra_temin 173/40"
+          },
+          {
+            "texto": "Continue seguindo o balão de quest até Niren aparecer e fale com ela.",
+            "navi": "/navi ra_temin 213/87"
+          },
+          {
+            "texto": "Retorne à entrada do Santuário e fale com o Guarda Neil.",
+            "navi": "/navi ra_temin 174/38"
+          },
+          {
+            "texto": "Pergunte sobre Maram aos NPCs: rachel 137/135, rachel 105/134 e rachel 69/117.",
+            "navi": "/navi rachel 137/135"
+          }
+        ],
+        "itens": [
+          "{{Boneca de Elly}} (chapéu recebido na quest)"
+        ],
+        "desbloqueia": "Missões repetíveis das Pessoas de Rachel."
+      },
+      {
+        "capitulo": "1. Filhos Cinzentos",
+        "recompensa": "50 Fragmentos de Ametista · 91.262.042 EXP Base · 70 mi EXP Classe",
+        "passos": [
+          {
+            "texto": "Encontre Maram, o filho adotivo de Niren; durante a conversa Miriam surge — fale com ela.",
+            "navi": "/navi rachel 70/147"
+          },
+          {
+            "texto": "Encontre os comerciantes: rachel 87/122 e rachel 107/102.",
+            "navi": "/navi rachel 87/122"
+          },
+          {
+            "texto": "Miriam e Maram surgem — fale com os dois e aceite ajudá-los.",
+            "navi": "/navi rachel 117/104"
+          },
+          {
+            "texto": "Converse com o Comerciante Rensia (qualquer opção) e depois com Miriam.",
+            "navi": "/navi rachel 137/85"
+          },
+          {
+            "texto": "Clique nos Bolinhos e depois encontre Mark na praça central.",
+            "navi": "/navi rachel 108/73"
+          },
+          {
+            "texto": "Retorne a Maram e depois ao Comerciante Rensia.",
+            "navi": "/navi rachel 70/147"
+          },
+          {
+            "texto": "Clique nas Caixas de Madeira.",
+            "navi": "/navi rachel 41/132"
+          },
+          {
+            "texto": "Saia de Rachel e encontre-se com Maram disfarçado de Comerciante.",
+            "navi": "/navi ra_fild11 354/235"
+          },
+          {
+            "texto": "Siga o caminho até o Comerciante. Prepare-se para uma instância!",
+            "navi": "/navi ra_fild10 179/176"
+          },
+          {
+            "texto": "Dentro da instância, fale com Miriam e siga o caminho: enfrente Sapos Cinzentos e Mãos de Garras quando elas aparecerem."
+          },
+          {
+            "texto": "Encontre Imril, siga os diálogos e continue lutando; no final do trajeto, suba pela corda para sair da instância."
+          },
+          {
+            "texto": "Aproxime-se do balão de quest para fazer surgir Maram e dialogue com o Campista; Imril surge — converse com ele.",
+            "navi": "/navi gw_fild01 273/339"
+          },
+          {
+            "texto": "Fale com Maram e siga o diálogo até Suad aparecer; ele permite a sua entrada na Aldeia do Lobo Cinzento.",
+            "navi": "/navi gw_fild01 37/105"
+          },
+          {
+            "texto": "Na Aldeia, fale com Imril — as missões secundárias da Aldeia ficam liberadas.",
+            "navi": "/navi wolfvill 143/113"
+          }
+        ],
+        "desbloqueia": "Missões secundárias e diárias da Aldeia do Lobo Cinzento."
+      },
+      {
+        "capitulo": "2. Aumente sua Reputação (1.000 pontos)",
+        "recompensa": "220 Fragmentos de Ametista · 180,2 mi EXP Base · 20 mi EXP Classe · 1.000 Reputação",
+        "passos": [
+          {
+            "texto": "O Labirinto e o Mercador — fale com Imril: no Labirinto de Oz, clique na Caixa (26/184), desça pelo Caminho Íngreme (65/189), clique no Vapor (111/96), converse com o ??? (100/92), elimine 10 monstros do Labirinto, encontre a outra Caixa (134/56), clique nas Faíscas (110/37) e, no 2º andar, com o Velho em oz_dun02 150/275. Volte a Imril.",
+            "navi": "/navi oz_dun01 26/184"
+          },
+          {
+            "texto": "Aqui Não é Aquele Lugar — fale com Julan, Kayar e Redsel; procure o Sr. Ahab (qualquer opção), fale com o Dono da Loja em Rachel (3ª opção); retorne ao Sr. Ahab e selecione opções duras; volte a Julan.",
+            "navi": "/navi wolfvill 85/111"
+          },
+          {
+            "texto": "Reunindo Histórias — aceite ajudar a Folclorista Gudura, converse com Dinar (106/224), Amira (180/204) e Shanina (154/184), e retorne a ela com o Caderno de Registros.",
+            "navi": "/navi wolfvill 61/170"
+          },
+          {
+            "texto": "Onde Fica Minha Casa — aceite ajudar Ezekiel, converse com o Ancião e entregue 3 Aços para Ezekiel.",
+            "navi": "/navi wolfvill 173/253"
+          },
+          {
+            "texto": "Abastecimento de Água — aceite ajudar Budan, compre a Relíquia Sagrada por 550 zeny com o Vendedor em Rachel (103/141), clique no Barril de Água Potável (103/235) e entregue o Balde a Budan.",
+            "navi": "/navi wolfvill 103/230"
+          },
+          {
+            "texto": "Não Existem Feras Más no Mundo — converse com Scania, fale com Aisha e com o Fido ao lado, entregue 1 Carne ao Fido e retorne à Scania.",
+            "navi": "/navi wolfvill 117/119"
+          },
+          {
+            "texto": "Não Consigo Dormir — aceite ajudar Ahir, elimine 30 Gavião Ardente na Floresta Cinzenta (2) e retorne.",
+            "navi": "/navi wolfvill 147/97"
+          },
+          {
+            "texto": "O Bem-Estar de um Amigo — aceite ajudar Alber, fale com Horim na Estalagem de Rachel (ra_in01 388/58), encontre-o em ra_fild11 350/236 e ra_fild10 375/293, desça pela Corda (ra_fild10 175/179), fale com Horim no laboratório (oz_dun01 285/170), suba pela Corda (28/190) e encontre-o na Floresta (gw_fild01 272/342); finalize a conversa na Aldeia.",
+            "navi": "/navi wolfvill 182/82"
+          },
+          {
+            "texto": "Pão Nosso de Cada Dia — ajude Eruin: clique nas Armadilhas da Floresta (10s de conjuração; sofrer dano interrompe) e junte 5 Coisas Presas (Animal, Bichinho ou Fruta Presa).",
+            "navi": "/navi wolfvill 202/166"
+          },
+          {
+            "texto": "Dificuldades da Caravana Mercante (NPCs cinemáticos) — fale com Hazar e, com 1 Palha no inventário, clique na Carroça ao lado; procure a Carroça na floresta (115/130), encontre Kamil e o Lobo (205/103), escolha \"Dê conselhos de combate\" e zere a vida do Lobo (cuidado com a vida de Kamil), converse com Kamil, reúna-se com Hazar (75/214), colete as 4 Cargas Espalhadas (230/52, 347/194, 242/325 e 89/211) e volte ao 2º local do Hazar.",
+            "navi": "/navi wolfvill 50/234"
+          }
+        ],
+        "itens": [
+          "3 × {{Aço}}",
+          "1 × {{Carne}}",
+          "1 × {{Palha}}",
+          "550 zenys (Relíquia Sagrada, comprada em Rachel)"
+        ],
+        "desbloqueia": "As diárias de cada NPC (Gudura, Ezekiel, Budan, Scania, Ahir, Eruin, Imril...) conforme você as conclui."
+      },
+      {
+        "capitulo": "3. Participação na Assembleia",
+        "recompensa": "120 Fragmentos de Ametista · 122,4 mi EXP Base · 35 mi EXP Classe",
+        "passos": [
+          {
+            "texto": "Fale com o Garoto da Vila e depois encontre-se com Suad para iniciar a Assembleia; converse com todos os NPCs ao redor e volte a Suad.",
+            "navi": "/navi wolfvill 180/179"
+          },
+          {
+            "texto": "Ao lado de Suad, fale com Miriam.",
+            "navi": "/navi wolfvill 148/153"
+          },
+          {
+            "texto": "Perto de Miriam, fale com o Jovem Radical e, em Rachel, mencione o \"Dente-de-leão Fedorento\" para o Jack Barbudo.",
+            "navi": "/navi wolfvill 143/145"
+          },
+          {
+            "texto": "Procure o Dente-de-leão em Veins.",
+            "navi": "/navi veins 293/282"
+          },
+          {
+            "texto": "Encontre Maram no Vulcão de Thor — você entra na Base Militar e deve falar com Maram. Prepare-se para uma instância!",
+            "navi": "/navi thor_v01 169/169"
+          },
+          {
+            "texto": "Na Base, siga o caminho vermelho; ao se aproximar das Torres de Vigia, Guardas aparecem. Clique nas Cordas para desbloquear a passagem."
+          },
+          {
+            "texto": "Na sala principal, colete 5 Arquivos clicando nas Pilhas de Documento; converse com Miriam e finalize a instância com Maram.",
+            "navi": "/navi 1@tcamp 34/100"
+          },
+          {
+            "texto": "De volta à Aldeia do Lobo Cinzento, fale com Suad.",
+            "navi": "/navi wolfvill 140/122"
+          },
+          {
+            "texto": "Vá até os Saques e fale com o Aldeão Armado ao lado das caixas.",
+            "navi": "/navi wolfvill 131/257"
+          }
+        ]
+      },
+      {
+        "capitulo": "4. Lobo em Pele de Cordeiro",
+        "recompensa": "240 Fragmentos de Ametista · 114,1 mi EXP Base · 30 mi EXP Classe · (Visual) Mini Elly",
+        "passos": [
+          {
+            "texto": "Em Rachel, fale com a Pessoa Comum. Prepare-se para mais uma instância!",
+            "navi": "/navi rachel 169/245"
+          },
+          {
+            "texto": "Instância do Protesto: siga Miriam até o local do protesto, guie-se pela navegação até entrar no Santuário e limpe todas as salas até encontrar Schulang e Bagot."
+          },
+          {
+            "texto": "Acompanhe Miriam para fora do Santuário, elimine os Caça-Corações e encontre-se com Niren — a instância Purificação do Santuário fica liberada.",
+            "navi": "/navi rachel 116/200"
+          },
+          {
+            "texto": "No Labirinto de Oz, clique no Ponto de Encontro e converse com Ayra. Prepare-se para mais uma instância!",
+            "navi": "/navi oz_dun01 223/116"
+          },
+          {
+            "texto": "Instância Aposentos do Clérigo: fale com Miriam e todos os NPCs lá dentro, elimine os Caça-Corações para avançar nas salas e derrote Schulang quando encontrá-lo."
+          },
+          {
+            "texto": "Dialogue com o Sumo Sacerdote Amal e Bagot e derrote a Falsa Deusa Freya; fale com Miriam e saia pelo portal sul."
+          },
+          {
+            "texto": "Fale com Maram — ele enviará você para o Santuário.",
+            "navi": "/navi oz_dun01 226/118"
+          },
+          {
+            "texto": "Desequipe a Mini Elly e fale com Miriam e, depois, com Elly, que surge em seguida — a Boneca se transforma no (Visual) Mini Elly.",
+            "navi": "/navi ra_temin 254/117"
+          }
+        ],
+        "desbloqueia": "Instâncias Purificação do Santuário e Mansão da Desilusão (diárias do episódio). Continua no Episódio 19 — Issgard."
+      }
+    ],
+    "secundarias": [
+      {
+        "codigo": "S1",
+        "titulo": "Purificação do Santuário (Instância diária)",
+        "prerequisito": "Concluir Caminho da Oração · 1 pessoa ou mais · reset às 4h da manhã",
+        "recompensa": "8 Fragmentos de Ametista · 21.903.959 EXP Base · 6 mi EXP Classe (2 missões internas: 4 Frag + 12.681.245 base + 3 mi classe cada)",
+        "passos": [
+          {
+            "texto": "Converse com a Pessoa Comum — um Sacerdote surge.",
+            "navi": "/navi rachel 169/245"
+          },
+          {
+            "texto": "Antes de começar a instância, selecione as duas missões com o Sacerdote (Eliminar Guardas Traidores e Eliminar Caça-Corações)."
+          },
+          {
+            "texto": "Siga o caminho amarelo eliminando os Guardas de Rachel e Caça-Corações."
+          },
+          {
+            "texto": "Entre no Santuário de Rachel e preste atenção no código de 4 dígitos (aleatório) dado pelo Guarda de Rachel (25/190)."
+          },
+          {
+            "texto": "Use o código nos dispositivos (Lanternas) próximos dos portões e siga eliminando os monstros."
+          },
+          {
+            "texto": "Do lado de fora, fale com o Sacerdote após falar com a Pessoa Comum e receba as recompensas."
+          }
+        ]
+      },
+      {
+        "codigo": "S2",
+        "titulo": "Mansão da Desilusão (Instância diária)",
+        "prerequisito": "Concluir Caminho da Oração · grupo de 2+ pessoas · reset às 4h da manhã (Difícil Nv. 200: cada membro precisa de 1 Chave da Mansão da Desilusão, que cai como prêmio no fim da instância)",
+        "recompensa": "Normal: 8 Fragmentos de Ametista (10 com Reputação nv. 5+) · Difícil: 10 (13 com Reputação nv. 5+) · Armas Adulter Fides · Chave: só cai no Normal (10%)",
+        "passos": [
+          {
+            "texto": "Na Aldeia do Lobo Cinzento, reserve a instância com Aira (é preciso ter mais de uma pessoa no grupo).",
+            "navi": "/navi wolfvill 79/260"
+          },
+          {
+            "texto": "Área 1 — Sala de Recepção: derrote os 35 monstros (opcional nesta área). Não encoste nos Ceifadores — eles reduzem seu HP em 50%. Dois jogadores devem falar com o NPC Fantasma simultaneamente (intervalo de até 3 segundos)."
+          },
+          {
+            "texto": "Área 2 — Sala de Jantar: derrote os 35 monstros, clique nas 4 mesas (reduzem os Ceifeiros da Área 3) e fale com as 2 estátuas no fim do corredor para abrir o portal."
+          },
+          {
+            "texto": "Área 3 — Jardins: derrote os 35 monstros (os Ceifeiros conjuram Gravidade Gradual); o portal para a próxima área abre ao vencer todos."
+          },
+          {
+            "texto": "Área 4 — Schulang: o líder deve se aproximar para iniciar a luta (300.000.000 de HP no Normal; 450.000.000 no Difícil)."
+          },
+          {
+            "texto": "Capela: o líder clica no Altar central para enfrentar a falsa Deusa Freya (200.000.000 de HP no Normal; 300.000.000 no Difícil)."
+          },
+          {
+            "texto": "Mecânica da Freya: mantenha-a longe do lustre central (mais ATQ e sem Aliviar; 5.000 a 400.000 de ATQ conforme a distância); apague as 4 Luzes (4s cada — cada Luz ativa cura a Freya a cada 3 segundos) e não toque nos Círculos Mágicos (drenam 30% do HP e teleportam para fora, voltando em 50s)."
+          },
+          {
+            "texto": "Após a batalha, clique no Altar para receber a recompensa."
+          }
+        ],
+        "nota": "Todos os monstros da Mansão usam Aliviar nível 9."
+      }
+    ],
+    "itensNecessarios": {
+      "diarias": {
+        "titulo": "Materiais Para As Diárias",
+        "colunas": [
+          "Item",
+          "Onde conseguir",
+          "Para que serve",
+          "Quanto guardar"
+        ],
+        "linhas": [
+          [
+            "1 × {{Aço}}",
+            "Drop de minérios/monstros clássicos de Midgard",
+            "Diária Onde Fica Minha Casa",
+            "1/dia"
+          ],
+          [
+            "10 × {{Cristal Sólido}}",
+            "Cai do Lobo Cinzento (Floresta Cinzenta)",
+            "Diária Onde Fica Minha Casa",
+            "10/dia"
+          ],
+          [
+            "5 Coisas Presas: {{Animal Preso}} · {{Bichinho Preso}} · {{Fruta Presa}}",
+            "Resultado das Armadilhas na Floresta Cinzenta (1)",
+            "Diária Pão Nosso de Cada Dia (5, qualquer mistura)",
+            "5/dia"
+          ]
+        ]
+      },
+      "embarque": {
+        "titulo": "Materiais Usado No Episódio",
+        "colunas": [
+          "Item",
+          "Quantidade",
+          "Para que é usado",
+          "Observações"
+        ],
+        "linhas": [
+          [
+            "{{Aço}}",
+            "3",
+            "Missão Onde Fica Minha Casa da história (cap. 2)",
+            "Com a diária, o total recomendado é 4."
+          ],
+          [
+            "{{Carne}}",
+            "1",
+            "Missão Não Existem Feras Más no Mundo — entregue ao Fido (cap. 2)",
+            ""
+          ],
+          [
+            "{{Palha}}",
+            "1",
+            "Missão Dificuldades da Caravana Mercante (cap. 2)",
+            "Esteja com ela no inventário antes de clicar na Carroça."
+          ]
+        ],
+        "nota": "A Boneca de Elly é recebida no início e se transforma no (Visual) Mini Elly no final · Caderno de Registros, Balde de Água Filtrada, Capturas e Arquivos são manejados pelas próprias missões · A Relíquia Sagrada é comprada por 550 zeny no Vendedor de Rachel (/navi rachel 103/141)."
+      }
+    },
+    "diarias": {
+      "titulo": "Missões diárias de episódio",
+      "aviso": "Missões da Aldeia do Lobo Cinzento e de Rachel (reset às 4h da manhã). As da Aldeia pagam {{Fragmento de Ametista}} ×3 (+1 conforme a Reputação) e Reputação +30; as duas missões em Rachel não dão Reputação.",
+      "grupos": [
+        {
+          "nome": "Missões na Aldeia",
+          "diarias": [
+            {
+              "nome": "Reunindo Histórias",
+              "tarefa": "Falar com Dinar, Amira e Shanina e retornar à Gudura",
+              "itens": "",
+              "recompensa": "3 Fragmento de Ametista (+1) · Rep. +30",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Aldeia#Reunindo_Hist.C3.B3rias"
+            },
+            {
+              "nome": "Abastecimento de Água",
+              "tarefa": "Comprar o Filtro de Água com o Vendedor em Rachel (103/141), clicar no Barril (104/235) e entregar o Balde",
+              "itens": "",
+              "recompensa": "3 Fragmento de Ametista (+1) · Rep. +30",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Aldeia#Abastecimento_de_.C3.81gua"
+            },
+            {
+              "nome": "Onde Fica Minha Casa",
+              "tarefa": "Coletar 1 Aço e 10 Cristal Sólido (cai do Lobo Cinzento)",
+              "itens": "1 × {{Aço}} · 10 × {{Cristal Sólido}}",
+              "recompensa": "3 Fragmento de Ametista · Rep. +30",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Aldeia#Onde_Fica_Minha_Casa"
+            },
+            {
+              "nome": "Pão Nosso de Cada Dia",
+              "tarefa": "Clique nas Armadilhas da Floresta Cinzenta (1) e colete 5 Coisas Presas (Animal, Bichinho ou Fruta Presa)",
+              "itens": "5 de: {{Animal Preso}} · {{Bichinho Preso}} · {{Fruta Presa}}",
+              "recompensa": "3 Fragmento de Ametista · Rep. +30",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Aldeia#P.C3.A3o_Nosso_de_Cada_Dia"
+            },
+            {
+              "nome": "Labirinto de Oz — 20 Sapo Cinzento",
+              "tarefa": "Eliminar 20 Sapo Cinzento",
+              "itens": "",
+              "recompensa": "3 Fragmento de Ametista · Rep. +30",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Aldeia#Labirinto_de_Oz"
+            },
+            {
+              "nome": "Labirinto de Oz — 20 Molares de Fogo (Nv. 200+)",
+              "tarefa": "Eliminar 20 Molares de Fogo",
+              "itens": "",
+              "recompensa": "3 Fragmento de Ametista · Rep. +30",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Aldeia#Labirinto_de_Oz"
+            },
+            {
+              "nome": "Não Consigo Dormir",
+              "tarefa": "Eliminar 30 Gavião Ardente",
+              "itens": "",
+              "recompensa": "3 Fragmento de Ametista (+1) · Rep. +30",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Aldeia#N.C3.A3o_Consigo_Dormir"
+            },
+            {
+              "nome": "Pastor Inesperado",
+              "tarefa": "Clicar no Capim (138/106) e eliminar 20 Cinzaring",
+              "itens": "",
+              "recompensa": "3 Fragmento de Ametista (+1) · Rep. +30",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Aldeia#Pastor_Inesperado"
+            },
+            {
+              "nome": "Torne a Floresta mais Segura",
+              "tarefa": "Eliminar 30 monstros na Floresta Cinzenta (1)",
+              "itens": "",
+              "recompensa": "3 Fragmento de Ametista · Rep. +30",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Aldeia#Torne_a_Floresta_mais_Segura"
+            }
+          ]
+        },
+        {
+          "nome": "Missões em Rachel (sem Reputação)",
+          "diarias": [
+            {
+              "nome": "Observando a Situação",
+              "tarefa": "Conversar com os NPCs marcados no minimapa (locais aleatórios por dia)",
+              "itens": "",
+              "recompensa": "3 Fragmento de Ametista",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Aldeia#Observando_a_Situa.C3.A7.C3.A3o"
+            },
+            {
+              "nome": "Coleta de Flor Bicolor",
+              "tarefa": "Coletar a Flor Bicolor conforme a palavra-chave do dia (tabela de ângulo/folhas/água/pó na bROWiki) e entregar a Mejai",
+              "itens": "",
+              "recompensa": "3 Fragmento de Ametista",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Aldeia#Coleta_de_Flor_Bicolor"
+            }
+          ]
+        },
+        {
+          "nome": "Instâncias diárias",
+          "diarias": [
+            {
+              "nome": "Purificação do Santuário",
+              "tarefa": "Aceitar as 2 missões com o Sacerdote e concluir a instância",
+              "itens": "",
+              "recompensa": "8 Fragmento de Ametista (4 + 4)",
+              "obs": "Grupo de 1+ pessoas; reset às 4h — passo a passo na aba Guia de Episódio, S1",
+              "linkBrowiki": "https://browiki.org/wiki/Purifica%C3%A7%C3%A3o_do_Santu%C3%A1rio"
+            },
+            {
+              "nome": "Mansão da Desilusão — Normal",
+              "tarefa": "Instância no menu de instâncias (grupo de 2+ pessoas)",
+              "itens": "",
+              "recompensa": "8 (+2) Fragmento de Ametista · 10% de chance da Chave da Mansão da Desilusão",
+              "obs": "Bônus (+2) com Reputação nv. 5+; passo a passo na aba Guia de Episódio, S2",
+              "linkBrowiki": "https://browiki.org/wiki/Mans%C3%A3o_da_Desilus%C3%A3o"
+            },
+            {
+              "nome": "Mansão da Desilusão — Difícil",
+              "tarefa": "Instância no menu de instâncias (Nv. 200; cada membro com 1 Chave da Mansão)",
+              "itens": "1 × {{Chave da Mansão da Desilusão}} por membro",
+              "recompensa": "10 (+3) Fragmento de Ametista",
+              "obs": "A Chave só cai no Normal (10%); no Difícil não é obtida",
+              "linkBrowiki": "https://browiki.org/wiki/Mans%C3%A3o_da_Desilus%C3%A3o"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
     "id": "ep19",
     "titulo": "Episódio 19: Issgard — A Terra da Neve e das Lendas",
     "requisitos": "Nível de Base 200 · Quest anterior: Caminho da Oração (Ep. 18)",
