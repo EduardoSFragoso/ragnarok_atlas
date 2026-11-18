@@ -1,5 +1,1445 @@
 [
   {
+    "id": "ep161",
+    "titulo": "Episódio 16.1: Banquete Real",
+    "requisitos": "Acesso ao Novo Mundo",
+    "recompensaTotal": "60 Marcas de Honra · 1,5 mi EXP base · 1,5 mi EXP classe na história (10 + 20 + 30 Marcas) · recompensas adicionais nas missões secundárias",
+    "avisos": [
+      "A instância Sala de Ymir é feita uma vez na história e, depois do Ritual de Coroação, volta a ser repetível com cooldown de 16 h.",
+      "Nenhuma diária do episódio tem sistema de Reputação: todas pagam Marcas de Honra.",
+      "A diária dos Wigner e a história do Valor Sentimental dependem da Pedra do Mar (drop caçando Medusas): leve antes de embarcar."
+    ],
+    "principal": [
+      {
+        "capitulo": "0. Convite ao Banquete",
+        "passos": [
+          {
+            "texto": "Fale com o Andarilho Real em Prontera até receber o Convite pro Banquete (ele também oferece teleporte para a frente do Palácio).",
+            "navi": "/navi prontera 121/72"
+          },
+          {
+            "texto": "No Palácio de Prontera, o Camareiro Belle aparece para guiar você ao seu quarto.",
+            "navi": "/navi prt_cas 217/150"
+          },
+          {
+            "texto": "No quarto, aceite o pedido do Camareiro Belle.",
+            "navi": "/navi prt_cas_q 26/30"
+          }
+        ]
+      },
+      {
+        "capitulo": "1. As famílias reais",
+        "recompensa": "10 Marcas de Honra · 300k EXP base · 300k EXP classe (passo 10)",
+        "passos": [
+          {
+            "texto": "Família Heine: entre no quarto, aguarde a cinemática e fale com Kronecker G. Heine.",
+            "navi": "/navi prt_cas_q 130/32"
+          },
+          {
+            "texto": "Ao dirigir-se ao quarto seguinte, outra cinemática surge: uma conversa entre Nihil e Skia.",
+            "navi": "/navi prt_cas_q 142/38"
+          },
+          {
+            "texto": "Família Nerius: entre no quarto e fale com Spica Nerius.",
+            "navi": "/navi prt_cas_q 130/56"
+          },
+          {
+            "texto": "Família Walther: no quarto seguinte, converse com Ian Walther e depois com Isenhonor Walther (retornar a Isenhonor inicia a secundária opcional Os Walther).",
+            "navi": "/navi prt_cas_q 130/80"
+          },
+          {
+            "texto": "Dirija-se aos quartos do lado oposto do mapa.",
+            "navi": "/navi prt_cas_q 135/119"
+          },
+          {
+            "texto": "Família Wigner: fale com Levuiere Wigner e depois com Jurgen Wigner (retornar a Levuiere inicia a secundária Valor Sentimental).",
+            "navi": "/navi prt_cas_q 94/9"
+          },
+          {
+            "texto": "Família Richard: fale com o Mordomo e depois com Po Richard (ao falar de novo com ele, inicia a missão Os Richard).",
+            "navi": "/navi prt_cas_q 80/80"
+          },
+          {
+            "texto": "Família Gaebolg: dois guardas abordarão você; fale com a Rainha Catherine D. Gaebolg e pergunte sobre os Gaebolg (falar com os Guardas inicia a missão Os Gaebolg)."
+          },
+          {
+            "texto": "Família Lugenburg: converse com Maximilian Lugenburg e depois com Wolf Lugenburg (ao falar com Wolf, inicia a secundária Conflito Familiar). Terminar com todas as famílias desbloqueia a conquista Parte da Realeza.",
+            "navi": "/navi prt_cas_q 96/186"
+          },
+          {
+            "texto": "Seu quarto: volte ao Camareiro Belle para receber 300.000 de EXP base e classe e 10 Marcas de Honra.",
+            "navi": "/navi prt_cas_q 26/30"
+          }
+        ]
+      },
+      {
+        "capitulo": "2. A noite do banquete",
+        "passos": [
+          {
+            "texto": "Caminhando na frente do Quarto de Nihil, você ouvirá uma conversa suspeita.",
+            "navi": "/navi prt_cas 174/163"
+          },
+          {
+            "texto": "No salão do banquete, procure por Spica Nerius.",
+            "navi": "/navi prt_cas 104/240"
+          },
+          {
+            "texto": "Dirija-se ao quarto de Nihil Heine: antes de entrar, você ouvirá uma conversa.",
+            "navi": "/navi prt_cas 27/38"
+          },
+          {
+            "texto": "Retorne ao Camareiro Belle.",
+            "navi": "/navi prt_cas_q 26/30"
+          }
+        ]
+      },
+      {
+        "capitulo": "3. A instância Sala de Ymir",
+        "passos": [
+          {
+            "texto": "Durante a conversa, o Mago Nillem aparecerá e teleportará você ao Memorial das Famílias Reais."
+          },
+          {
+            "texto": "Crie um grupo e fale com o Mago Nillem no Memorial para reservar a instância.",
+            "navi": "/navi prt_lib 90/84"
+          },
+          {
+            "texto": "Entre na instância pelo teleportador e fale com Skia Nerius na entrada; siga em frente."
+          },
+          {
+            "texto": "Caminhe para ativar os diálogos passando por Poe Richard.",
+            "navi": "/navi prt_lib 90/84"
+          },
+          {
+            "texto": "Aguarde os diálogos acabarem e elimine os Invasores."
+          },
+          {
+            "texto": "Converse com Kronecker G. Heine no altar."
+          },
+          {
+            "texto": "Saia da Sala de Ymir pelo mesmo lugar por onde entrou."
+          }
+        ]
+      },
+      {
+        "capitulo": "4. O Memorial e o passado",
+        "recompensa": "20 Marcas de Honra · 400k EXP base · 400k EXP classe (passo 8)",
+        "passos": [
+          {
+            "texto": "No Memorial das Famílias Reais, fale com Ian Walther e, em seguida, com o Mago Nillem no mesmo local.",
+            "navi": "/navi prt_lib 90/84"
+          },
+          {
+            "texto": "Fale com o Bibliotecário Lindt.",
+            "navi": "/navi prt_lib 76/80"
+          },
+          {
+            "texto": "Fale novamente com o Mago Nillem."
+          },
+          {
+            "texto": "Dirija-se ao Cavaleiro Real para sair do Memorial.",
+            "navi": "/navi prt_lib 56/61"
+          },
+          {
+            "texto": "Fale com o Observador Terketh para sair da Carceragem.",
+            "navi": "/navi prt_pri00 55/128"
+          },
+          {
+            "texto": "Em seu quarto, diga ao Camareiro Belle que visitará os Nerius.",
+            "navi": "/navi prt_cas_q 26/30"
+          },
+          {
+            "texto": "Procure pelo quarto dos Nerius e fale com Spica.",
+            "navi": "/navi prt_cas_q 18/135"
+          },
+          {
+            "texto": "Encontre Kronecker G. Heine no quarto dele: recebe 20 Marcas de Honra e 400.000 de EXP base e classe. A partir daqui você pode iniciar o Ritual de Coroação.",
+            "navi": "/navi prt_cas_q 19/84"
+          }
+        ]
+      },
+      {
+        "capitulo": "5. Ritual de Coroação",
+        "recompensa": "30 Marcas de Honra · 800k EXP base · 800k EXP classe (passo 8)",
+        "desbloqueia": "Acesso à Prontera Destruída (diária Salvando Vidas) · Sussurro Sombrio · Sala de Ymir repetível com cooldown de 16 h · Continuação: Terra Gloria (Ep. 16.2)",
+        "passos": [
+          {
+            "texto": "Nos seus aposentos do Palácio, fale com o Camareiro Belle e invoque o Mago da Corte para teleportar.",
+            "navi": "/navi prt_cas_q 26/30"
+          },
+          {
+            "texto": "No Memorial das Famílias Reais, fale com Nillem e clique na Máquina do Tempo 3000 para viajar ao passado.",
+            "navi": "/navi prt_lib_q 92/8"
+          },
+          {
+            "texto": "No passado, fale com o Mago Nillem para reservar a instância."
+          },
+          {
+            "texto": "Clique na Distorção e faça a instância Sala de Ymir (a partir do passo 3 do cap. 3). Ao final, Nillem dirá que a Prontera do passado está sendo atacada."
+          },
+          {
+            "texto": "Saia do Memorial pelo portal no final do corredor: desbloqueia a missão Salvando Vidas e o acesso ao Sussurro Sombrio.",
+            "navi": "/navi prt_lib_q 92/8"
+          },
+          {
+            "texto": "Fale com o Mago Nillem para voltar ao presente."
+          },
+          {
+            "texto": "No presente, fale novamente com o Mago Nillem no Memorial."
+          },
+          {
+            "texto": "Fale com Kronecker G. Heine para receber 30 Marcas de Honra e 800.000 de EXP base e classe.",
+            "navi": "/navi prt_cas_q 19/84"
+          },
+          {
+            "texto": "Fale com o Mago Nillem, depois procure por Friedrich Stolz Heine: a partir daqui a instância Sala de Ymir vira repetível (cooldown de 16 h).",
+            "navi": "/navi prt_cas_q 19/84"
+          },
+          {
+            "texto": "Finalize a missão falando com Spica Nerius.",
+            "navi": "/navi prt_cas_q 18/135"
+          },
+          {
+            "texto": "Para visitar a Prontera Destruída: invoque Nillem pelo Camareiro Belle, fale com Nillem no Memorial, clique na máquina do tempo e siga pelo corredor do Memorial do Passado.",
+            "navi": "/navi prt_lib_q 92/8"
+          }
+        ]
+      }
+    ],
+    "secundarias": [
+      {
+        "codigo": "S1",
+        "titulo": "Emergência Culinária",
+        "prerequisito": "Depois da noite do banquete (a partir do cap. 2)",
+        "recompensa": "Recompensa não informada na bROWiki",
+        "desbloqueia": "Diárias Aventuras na Cozinha (3 missões)",
+        "passos": [
+          {
+            "texto": "Aproxime-se do Chef Real.",
+            "navi": "/navi prt_cas 213/176"
+          },
+          {
+            "texto": "Dirija-se à cozinha e fale com a Chef Mestra.",
+            "navi": "/navi prt_cas 308/200"
+          },
+          {
+            "texto": "Encontre o Mestre dos Molhos e prepare o molho conforme o diálogo: Manteiga (losango) — gosto suave, Geleia de Poring (triângulo) — texturizado, Suco de Muka (círculo) — refrescante, Planta Brilhante (quadrado) — brilhante; siga até o NPC de cada ingrediente e, ao concluir, volte ao Mestre dos Molhos.",
+            "navi": "/navi prt_cas 319/211"
+          },
+          {
+            "texto": "Volte a falar com a Chef Mestra.",
+            "navi": "/navi prt_cas 308/200"
+          },
+          {
+            "texto": "Posicione-se entre os cozinheiros para preparar o prato.",
+            "navi": "/navi prt_cas 314/199"
+          },
+          {
+            "texto": "Com o prato pronto, siga para a Sala de Jantar e clique no Grifo Grelhado.",
+            "navi": "/navi prt_cas 361/124"
+          },
+          {
+            "texto": "Na mesma sala, fale com Tamarin.",
+            "navi": "/navi prt_cas 361/142"
+          },
+          {
+            "texto": "No salão do banquete, fale com Du Lian e, em seguida, com Magi Steen.",
+            "navi": "/navi prt_cas 110/235"
+          },
+          {
+            "texto": "Subindo as escadas, fale com Mark Esha e depois com Alice.",
+            "navi": "/navi prt_cas 82/267"
+          },
+          {
+            "texto": "Ao voltar com Tamarin, colete 15 Pratos Luxuosos eliminando os Pratos Luxuosos na sala de jantar (o item aparece direto no inventário).",
+            "navi": "/navi prt_cas 361/142"
+          },
+          {
+            "texto": "Leve os Pratos Luxuosos ao Lavador de Louças na cozinha.",
+            "navi": "/navi prt_cas 302/204"
+          },
+          {
+            "texto": "Volte a falar com a Chef Mestra para receber a recompensa. Você liberou a missão Aventuras na Cozinha.",
+            "navi": "/navi prt_cas 308/200"
+          }
+        ]
+      },
+      {
+        "codigo": "S2",
+        "titulo": "Valor Sentimental",
+        "prerequisito": "Falar com Levuiere Wigner no banquete (cap. 1)",
+        "recompensa": "14 Marcas de Honra · 1,2 mi EXP base · 700k EXP classe (soma dos passos)",
+        "desbloqueia": "Diária dos Wigner",
+        "itens": [
+          "{{Água Benta}} ×1 · {{Pó de Bolor}} ×1 · {{Laranja}} ×1 · {{Álcool}} ×1 · {{Limão}} ×1 · {{Areia Fina}} ×1 · {{Medalhão de Carne}} ×3 · {{Pedra do Mar}} ×25 · {{Rosa Eterna}} ×2"
+        ],
+        "passos": [
+          {
+            "texto": "No quarto dos Wigner, fale com Katrin Wigner.",
+            "navi": "/navi prt_cas_q 97/6"
+          },
+          {
+            "texto": "Na Cozinha Real, fale com a Empregada: ela entrega 3 Esponja de Poring para limpar 3 áreas da cozinha (cada área pede itens diferentes; pode falhar sem gastar os itens — basta continuar esfregando).",
+            "navi": "/navi prt_cas 322/216"
+          },
+          {
+            "texto": "Parede Mofada: 1 Água Benta + 1 Pó de Bolor.",
+            "navi": "/navi prt_cas 339/212"
+          },
+          {
+            "texto": "Parede Grudenta: 1 Laranja + 1 Álcool.",
+            "navi": "/navi prt_cas 339/198"
+          },
+          {
+            "texto": "Piso Sujo: 1 Limão + 1 Areia Fina.",
+            "navi": "/navi prt_cas 309/215"
+          },
+          {
+            "texto": "Reporte a limpeza para a Empregada.",
+            "navi": "/navi prt_cas 322/216"
+          },
+          {
+            "texto": "Procure o Entregador de Móveis em Prontera e entregue 3 Medalhão de Carne.",
+            "navi": "/navi prontera 68/68"
+          },
+          {
+            "texto": "Converse com Jurgen Wigner: colete 1 Rosa Eterna e 10 Pedra do Mar (a Pedra do Mar cai direto no inventário ao eliminar Medusas) e entregue a ele.",
+            "navi": "/navi prt_cas_q 97/6"
+          },
+          {
+            "texto": "Continue falando com Jurgen até a Empregada aparecer; vá à cozinha e fale com ela."
+          },
+          {
+            "texto": "Retorne a Jurgen: ele pede 15 Pedra do Mar + 1 Rosa Eterna."
+          },
+          {
+            "texto": "Com os itens no inventário, dirija-se à Empregada (ela remove todas as Pedras entregues).",
+            "navi": "/navi prt_cas 322/216"
+          },
+          {
+            "texto": "Conte o relato a Jurgen para receber 4 Marcas de Honra e 200.000 de EXP base e classe, liberando a diária dos Wigner.",
+            "navi": "/navi prt_cas_q 97/6"
+          }
+        ]
+      },
+      {
+        "codigo": "S3",
+        "titulo": "Os Gaebolg",
+        "prerequisito": "Falar com os Guardas no quarto Gaebolg (cap. 1)",
+        "recompensa": "Recompensa não informada na bROWiki",
+        "passos": [
+          {
+            "texto": "No quarto dos Gaebolg, fale com o Guarda Costas da Rainha, Jared.",
+            "navi": "/navi prt_cas_q 85/127"
+          },
+          {
+            "texto": "No salão do banquete, encontre Scarlet Jaha.",
+            "navi": "/navi prt_cas 73/244"
+          },
+          {
+            "texto": "Converse com Lidion Gaebolg, próximo a Scarlet.",
+            "navi": "/navi prt_cas 82/240"
+          },
+          {
+            "texto": "Retorne a Scarlet Jaha, que pedirá pistas para encontrar o Príncipe Ernest Gaebolg."
+          },
+          {
+            "texto": "Caminhe nos 7 pontos do salão para ativar os diálogos: 77/258, 87/235, 109/240, 108/221, 90/221, 78/220 e 90/229.",
+            "navi": "/navi prt_cas 77/258"
+          },
+          {
+            "texto": "Volte a Scarlet Jaha para receber a recompensa.",
+            "navi": "/navi prt_cas 73/244"
+          }
+        ]
+      },
+      {
+        "codigo": "S4",
+        "titulo": "Os Walther",
+        "prerequisito": "Conversar novamente com Isenhonor Walther (cap. 1)",
+        "recompensa": "Recompensa não informada na bROWiki",
+        "itens": [
+          "{{Salada Verde}} ×1 · {{Pão de Carne Picante}} ×3"
+        ],
+        "passos": [
+          {
+            "texto": "No quarto dos Walther, aceite ajudar Isenhonor Walther.",
+            "navi": "/navi prt_cas_q 131/85"
+          },
+          {
+            "texto": "Em Alberta, encontre o Mordomo dos Walthers.",
+            "navi": "/navi alberta 48/30"
+          },
+          {
+            "texto": "Fale com o Cavaleiro Guardião.",
+            "navi": "/navi alberta 187/147"
+          },
+          {
+            "texto": "No Palácio de Prontera, siga até a prisão e fale com Pé Grande: entregue 1 Salada Verde e 3 Pão de Carne Picante.",
+            "navi": "/navi prt_pri00 55/119"
+          },
+          {
+            "texto": "Em Veins, localize K: você recebe 1 Carta com Selo.",
+            "navi": "/navi veins 156/160"
+          },
+          {
+            "texto": "Entregue a Carta com Selo a Isenhonor Walther para receber a recompensa (bônus: traga 1 Vinho de Mastela ao Pé Grande entre 1h e 2h da manhã para a conquista Assaltante de Geladeira).",
+            "navi": "/navi prt_cas_q 131/85"
+          }
+        ]
+      },
+      {
+        "codigo": "S5",
+        "titulo": "Conflito Familiar",
+        "prerequisito": "Falar com Wolf Lugenburg (cap. 1)",
+        "recompensa": "14 Marcas de Honra · 1,2 mi EXP base · 700k EXP classe (soma dos passos)",
+        "desbloqueia": "Diária O vestido de Agnes (Os Lugenburg)",
+        "itens": [
+          "{{Pérola}} ×3 · {{Pluma}} ×50 · {{Seda Macia}} ×12 (1 dos favores das Crianças)"
+        ],
+        "passos": [
+          {
+            "texto": "Ao se apresentar à família Lugenburg, fale com Wolf Lugenburg.",
+            "navi": "/navi prt_cas_q 96/186"
+          },
+          {
+            "texto": "Nos aposentos dos Wigner, converse com Isaac Wigner para receber 1 Baú de Negócios.",
+            "navi": "/navi prt_cas_q 94/7"
+          },
+          {
+            "texto": "Entregue o Baú de Negócios a Wolf Lugenburg e digite a senha 1618."
+          },
+          {
+            "texto": "Em Prontera, procure as Crianças: cada uma pede um favor — caçar 33 Majoruros, coletar 12 Seda Macia ou pegar o livro A História de Rune-Midgard.",
+            "navi": "/navi prontera 270/69"
+          },
+          {
+            "texto": "O livro vem da Bibliotecária Séria, no primeiro portal à direita do salão do banquete. Respostas: Por que está acontecendo um banquete? — Lembrança à derrota de Morroc · Todas as famílias reais foram — 7 famílias reais foram · Quais famílias não participam? — Gaebolg e Walther · A família ficou muito sujeita à antiga maldição — Você quer dizer os Gaebolg?",
+            "navi": "/navi prt_cas 343/68"
+          },
+          {
+            "texto": "Com os favores concluídos, volte a falar com as Crianças.",
+            "navi": "/navi prontera 267/69"
+          },
+          {
+            "texto": "Retorne a Wolf Lugenburg: você recebe 1 Documento Secreto.",
+            "navi": "/navi prt_cas_q 96/186"
+          },
+          {
+            "texto": "Entregue o Documento Secreto a Isaac Wigner.",
+            "navi": "/navi prt_cas_q 94/7"
+          },
+          {
+            "texto": "Fale de novo com Wolf: no meio do diálogo, Maximilian Lugenburg conta a história verdadeira e entrega 1 Passaporte para Prontera (não use o item agora)."
+          },
+          {
+            "texto": "Na fronteira da República, fale com Helmut Lugenburg; depois disso, use o Passaporte para Prontera ou siga normalmente.",
+            "navi": "/navi yuno_fild01 242/175"
+          },
+          {
+            "texto": "Fale com Maximilian Lugenburg em Prontera.",
+            "navi": "/navi prt_cas_q 90/187"
+          },
+          {
+            "texto": "Converse novamente com as Crianças.",
+            "navi": "/navi prontera 267/69"
+          },
+          {
+            "texto": "Retorne a Maximilian Lugenburg para receber 10 Marcas de Honra e 1.000.000 de EXP base e 500.000 de classe.",
+            "navi": "/navi prt_cas_q 90/187"
+          },
+          {
+            "texto": "Ainda no quarto, converse com Agnes Lugenburg: entregue 3 Pérola e 50 Pluma para receber 4 Marcas de Honra e 200.000 de EXP base e classe, liberando a diária dela.",
+            "navi": "/navi prt_cas_q 90/187"
+          }
+        ]
+      },
+      {
+        "codigo": "S6",
+        "titulo": "Patrulha Prisional",
+        "prerequisito": "Acesso à Carceragem de Prontera (Ritual de Coroação / fim da história)",
+        "recompensa": "Recompensa não informada na bROWiki",
+        "desbloqueia": "Diárias Aventuras na Prisão (7 missões)",
+        "passos": [
+          {
+            "texto": "Na carceragem de Prontera, dê seu autógrafo a Ellond Lawrence: converse até liberar o acesso à Prisão de Prontera; ele pede uma patrulha.",
+            "navi": "/navi prt_pri00 51/117"
+          },
+          {
+            "texto": "Fale com os prisioneiros dos setores: A — 243/259, B — 268/188, C — 260/153, D — 236/16, E — 101/71, F — 111/187, G — 98/215 e H — 54/118 (cada prisioneiro destranca uma diária; o setor D não tem diária).",
+            "navi": "/navi prt_prison 243/259"
+          },
+          {
+            "texto": "Relate a situação a Ellond para receber a recompensa (pode reportar prisioneiro por prisioneiro ou todos de uma vez; a recompensa só vem com todos relatados).",
+            "navi": "/navi prt_pri00 51/117"
+          }
+        ]
+      }
+    ],
+    "itensNecessarios": {
+      "diarias": {
+        "titulo": "Materiais Para As Diárias",
+        "colunas": [
+          "Item",
+          "Onde conseguir",
+          "Para que serve",
+          "Quanto guardar"
+        ],
+        "linhas": [
+          [
+            "{{Pedra do Mar}}",
+            "Drop de Medusa (~25%)",
+            "Diária dos Wigner (entregar 15)",
+            "15/dia"
+          ],
+          [
+            "{{Rosa Eterna}}",
+            "Mercado de jogadores",
+            "Diária dos Wigner (entregar 1)",
+            "1/dia"
+          ],
+          [
+            "{{Olho de Sangue}}",
+            "Drop de Observador",
+            "Diária Favor Vampiresco (20)",
+            "20/dia"
+          ],
+          [
+            "{{Desumidificador}}",
+            "Drop de Lobo de Gelo",
+            "Diária Umidade em Excesso (20)",
+            "20/dia"
+          ],
+          [
+            "{{Lixa}}",
+            "Drop de Tappy",
+            "Diária Ei Chifrudo (20)",
+            "20/dia"
+          ],
+          [
+            "Flores: {{Flor das Ilusões}} (100%), {{Flor Misteriosa}}, {{Flor Elegante}}, {{Aloés}} (50%), {{Menta}}, {{Hinalle}}, {{Izidor}} (30%), {{Flor}}, {{Flor Bonita}} (10%)",
+            "Floras comuns",
+            "Diária Controlando a Escuridão — a flor pode ser recusada e consumida",
+            "Leve 2–3 flores"
+          ]
+        ]
+      },
+      "embarque": {
+        "titulo": "Materiais Usado No Episódio",
+        "colunas": [
+          "Item",
+          "Quantidade",
+          "Para que é usado",
+          "Observações"
+        ],
+        "linhas": [
+          [
+            "{{Água Benta}}",
+            "1",
+            "Valor Sentimental — Parede Mofada da cozinha",
+            "A limpeza pode falhar sem gastar o item"
+          ],
+          [
+            "{{Pó de Bolor}}",
+            "1",
+            "Valor Sentimental — Parede Mofada",
+            ""
+          ],
+          [
+            "{{Laranja}}",
+            "1",
+            "Valor Sentimental — Parede Grudenta",
+            ""
+          ],
+          [
+            "{{Álcool}}",
+            "1",
+            "Valor Sentimental — Parede Grudenta",
+            ""
+          ],
+          [
+            "{{Limão}}",
+            "1",
+            "Valor Sentimental — Piso Sujo",
+            ""
+          ],
+          [
+            "{{Areia Fina}}",
+            "1",
+            "Valor Sentimental — Piso Sujo",
+            ""
+          ],
+          [
+            "{{Medalhão de Carne}}",
+            "3",
+            "Entregador de Móveis em Prontera (68/68)",
+            ""
+          ],
+          [
+            "{{Salada Verde}} · {{Pão de Carne Picante}}",
+            "1 · 3",
+            "Pé Grande na prisão do Palácio (Os Walther)",
+            ""
+          ],
+          [
+            "{{Pérola}} · {{Pluma}}",
+            "3 · 50",
+            "Agnes Lugenburg (fim de Conflito Familiar)",
+            ""
+          ],
+          [
+            "{{Pedra do Mar}}",
+            "10 + 15",
+            "Jurgen Wigner (história) e a diária dos Wigner",
+            "Cai direto no inventário caçando Medusas"
+          ]
+        ]
+      },
+      "nota": "Os {{Prato Luxuoso}}s da diária Louça Suja são coletados na própria Sala de Jantar, sem farm prévio."
+    },
+    "diarias": {
+      "aviso": "Diárias do Palácio de Prontera, da Prisão Subterrânea e da Prontera Destruída (reset às 4h da manhã). Todas pagam Marcas de Honra: 4 por missão e 10 na repetição da Sala de Ymir (cooldown de 16 h). Nenhuma tem sistema de Reputação.",
+      "grupos": [
+        {
+          "nome": "Aventuras na Cozinha",
+          "diarias": [
+            {
+              "nome": "Emergência: Molhos",
+              "tarefa": "Pegar cada ingrediente nos NPCs da cozinha conforme as pistas do Mestre dos Molhos (pede 4) e entregar",
+              "itens": "",
+              "recompensa": "4 Marcas de Honra",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Cozinha#Emerg.C3.AAnca:_Molhos"
+            },
+            {
+              "nome": "Emergência: Grifo Grelhado",
+              "tarefa": "Falar com a Chef Mestra (308/200), montar o prato entre os cozinheiros (314/199) e entregar ao Grifo Grelhado (361/124)",
+              "itens": "",
+              "recompensa": "4 Marcas de Honra",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Cozinha#Emerg.C3.AAnca:_Grifo_Grelhado"
+            },
+            {
+              "nome": "Emergência: Louça Suja",
+              "tarefa": "Coletar 15 Pratos Luxuosos eliminando os Pratos Luxuosos da Sala de Jantar (370/170) e entregar ao Lavador de Louças",
+              "itens": "",
+              "recompensa": "4 Marcas de Honra",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Cozinha#Emerg.C3.AAnca:_Lou.C3.A7a_Suja"
+            }
+          ]
+        },
+        {
+          "nome": "As Famílias Reais",
+          "diarias": [
+            {
+              "nome": "O vestido de Agnes (Os Lugenburg)",
+              "tarefa": "Entregar a Agnes o material do vestido sorteado no diálogo (tabela abaixo)",
+              "itens": "Conforme o vestido",
+              "recompensa": "4 Marcas de Honra · 200k EXP b/c",
+              "linkBrowiki": "https://browiki.org/wiki/As_Fam%C3%ADlias_Reais#Os_Lugenburg",
+              "tabela": {
+                "colunas": [
+                  "Vestido",
+                  "Materiais"
+                ],
+                "linhas": [
+                  [
+                    "Vestido da Primavera",
+                    "5 {{Flor Bonita}} · 5 {{Flor Elegante}} · 5 {{Flor Misteriosa}}"
+                  ],
+                  [
+                    "Vestido do Alvorecer",
+                    "20 {{Retalho Negro}}"
+                  ],
+                  [
+                    "Vestido Incandescente",
+                    "20 {{Pelugem Incandescente}}"
+                  ],
+                  [
+                    "Vestido de Fada",
+                    "5 {{Bela Asa de Fada}}"
+                  ],
+                  [
+                    "Vestido de Pétalas",
+                    "15 {{Seda Macia}} · 30 {{Erva Vermelha}} · 10 {{Erva Branca}}"
+                  ],
+                  [
+                    "Vestido Estelar",
+                    "5 {{Poeira Estelar}}"
+                  ]
+                ]
+              }
+            },
+            {
+              "nome": "Empregada dos Wigner (Hoje eu me sinto…)",
+              "tarefa": "Coletar 15 Pedra do Mar caçando Medusas e entregar 15 Pedra do Mar + 1 Rosa Eterna à Empregada da cozinha (322/216), depois voltar a Jurgen",
+              "itens": "15 × {{Pedra do Mar}} · 1 × {{Rosa Eterna}}",
+              "recompensa": "4 Marcas de Honra · 200k EXP b/c",
+              "linkBrowiki": "https://browiki.org/wiki/As_Fam%C3%ADlias_Reais#Os_Wigner"
+            },
+            {
+              "nome": "Disciplina de guerreiro (Os Richard)",
+              "tarefa": "Caçar 50 monstros de nível 140+ da raça sorteada pelo Mordomo (humanóide, bruto, inseto, peixe, planta, demônio, anjo, morto-vivo, amorfos; a raça Dragão não possui monstros no nível pedido — não escolha)",
+              "itens": "",
+              "recompensa": "4 Marcas de Honra · 500k EXP base · 550k EXP classe",
+              "linkBrowiki": "https://browiki.org/wiki/As_Fam%C3%ADlias_Reais#Os_Richard"
+            }
+          ]
+        },
+        {
+          "nome": "Aventuras na Prisão",
+          "diarias": [
+            {
+              "nome": "Velho Amigo",
+              "tarefa": "Encontrar a Forma Escura no mapa, receber a Carta do Prisioneiro e devolvê-la ao Prisioneiro (243/259)",
+              "itens": "",
+              "recompensa": "4 Marcas de Honra · 700k EXP base · 500k EXP classe",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Pris%C3%A3o#Velho_Amigo",
+              "detalhes": [
+                "Converse com o Prisioneiro 243AD265 (/navi prt_prison 243/259).",
+                "Encontre a Forma Escura em um dos pontos: prt_prison 167/81, 203/213, 161/224, 153/173 ou 205/138; fale com ela até receber a Carta do Prisioneiro (se não estiver no ponto, tente outro).",
+                "Entregue a Carta do Prisioneiro ao Prisioneiro para receber a recompensa."
+              ]
+            },
+            {
+              "nome": "Favor Vampiresco",
+              "tarefa": "Coletar 20 Olho de Sangue caçando Observador e entregar ao Prisioneiro (268/188)",
+              "itens": "20 × {{Olho de Sangue}}",
+              "recompensa": "4 Marcas de Honra · 700k EXP base · 500k EXP classe",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Pris%C3%A3o#Favor_Vampiresco"
+            },
+            {
+              "nome": "Melhorando o Ambiente",
+              "tarefa": "Limpar as Pilhas de Lixo espalhadas pelo mapa até o diálogo liberar o retorno à Prisioneira (260/153)",
+              "itens": "",
+              "recompensa": "4 Marcas de Honra · 700k EXP base · 500k EXP classe",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Pris%C3%A3o#Melhorando_o_Ambiente"
+            },
+            {
+              "nome": "Coleta de Luz",
+              "tarefa": "Coletar 1 Luz Flamejante clicando nas Torchas espalhadas pelo mapa e entregar ao Prisioneiro (101/71)",
+              "itens": "1 × {{Luz Flamejante}}",
+              "recompensa": "4 Marcas de Honra · 700k EXP base · 500k EXP classe",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Pris%C3%A3o#Coleta_de_Luz"
+            },
+            {
+              "nome": "Umidade em Excesso",
+              "tarefa": "Coletar 20 Desumidificador caçando Lobo de Gelo e entregar à Prisioneira (111/187)",
+              "itens": "20 × {{Desumidificador}}",
+              "recompensa": "4 Marcas de Honra · 700k EXP base · 500k EXP classe",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Pris%C3%A3o#Umidade_em_Excesso"
+            },
+            {
+              "nome": "Controlando a Escuridão",
+              "tarefa": "Entregar qualquer flor ao Prisioneiro (98/215) até uma ser aceita — a flor recusada é consumida (chances na tabela abaixo)",
+              "itens": "Flores",
+              "recompensa": "4 Marcas de Honra · 700k EXP base · 500k EXP classe",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Pris%C3%A3o#Controlando_a_Escurid.C3.A3o",
+              "tabela": {
+                "colunas": [
+                  "Chance de aceitar",
+                  "Flores"
+                ],
+                "linhas": [
+                  [
+                    "100%",
+                    "{{Flor das Ilusões}}"
+                  ],
+                  [
+                    "50%",
+                    "{{Flor Misteriosa}} · {{Flor Elegante}} · {{Aloés}}"
+                  ],
+                  [
+                    "30%",
+                    "{{Menta}} · {{Hinalle}} · {{Izidor}}"
+                  ],
+                  [
+                    "10%",
+                    "{{Flor}} · {{Flor Bonita}}"
+                  ]
+                ]
+              }
+            },
+            {
+              "nome": "Ei Chifrudo",
+              "tarefa": "Coletar 20 Lixa caçando Tappy e entregar ao Prisioneiro (54/118)",
+              "itens": "20 × {{Lixa}}",
+              "recompensa": "4 Marcas de Honra · 700k EXP base · 500k EXP classe",
+              "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Pris%C3%A3o#Ei_Chifrudo"
+            }
+          ]
+        },
+        {
+          "nome": "Memorial das Famílias Reais",
+          "diarias": [
+            {
+              "nome": "Sala de Ymir — repetição",
+              "tarefa": "Falar com Friedrich S. Heine (prt_cas_q 21/83) e refazer a instância Sala de Ymir; acesso pelo Memorial (Camareiro Belle → Nillem → Máquina do Tempo, ou Observador Terketh)",
+              "itens": "",
+              "recompensa": "10 Marcas de Honra · 400k EXP base · 400k EXP classe",
+              "obs": "Instância com cooldown de 16 h; no iRO a missão se chama Hope You Cannot Let Go (nome oficial PT ainda não confirmado).",
+              "linkBrowiki": "https://browiki.org/wiki/Ritual_de_Coroa%C3%A7%C3%A3o"
+            }
+          ]
+        },
+        {
+          "nome": "Prontera Destruída",
+          "diarias": [
+            {
+              "nome": "Salvando Vidas (Guarda Spiegel)",
+              "tarefa": "Receber do Guarda Spiegel (prt_q 153/323) 1 missão aleatória de 4 — Ingrato, Soldado, Amante ou Garota — e reportar de volta a ele",
+              "itens": "",
+              "recompensa": "4 Marcas de Honra · 800k EXP base · 250k EXP classe",
+              "linkBrowiki": "https://browiki.org/wiki/Salvando_Vidas"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "ep162",
+    "titulo": "Episódio 16.2: Terra Gloria",
+    "requisitos": "Quest anterior: Episódio 16.1 — Banquete Real",
+    "recompensaTotal": "50 Brasões de Honra · 10 Marcas de Honra · 1 Estrela da Bênção · 1 Pochete de Couro · 2,4 mi EXP base · 1,9 mi EXP classe (soma dos passos)",
+    "avisos": [
+      "Não venda a Estrela da Bênção em NPC: ela é necessária para progredir na quest principal; se perder o item, contate a central de suporte.",
+      "O Laboratório Clandestino da história é feito obrigatoriamente SOLO: o grupo reserva a instância, mas os outros membros não entram.",
+      "A instância Base Militar precisa estar em grupo para ser reservada."
+    ],
+    "principal": [
+      {
+        "capitulo": "0. Chegada à República",
+        "recompensa": "30 Brasões de Honra · 1,4 mi EXP base · 900k EXP classe",
+        "desbloqueia": "Missões secundárias de Clana Nemieri (diárias, Gêmeos Levedev e Proibição dos Teleportes) · Trocas e encantamentos em Clana Nemieri",
+        "passos": [
+          {
+            "texto": "Sua jornada começa nos seus aposentos do Palácio de Prontera: converse com Nihil M. Heine.",
+            "navi": "/navi prt_cas_q 21/39"
+          },
+          {
+            "texto": "Spica Nerius aparecerá; converse com ela e fale novamente com Nihil para receber a primeira missão."
+          },
+          {
+            "texto": "No Aeroporto de Lighthalzen, converse com Crux.",
+            "navi": "/navi lhz_airport 189/39"
+          },
+          {
+            "texto": "Aproxime-se da coordenada marcada para iniciar um diálogo.",
+            "navi": "/navi lighthalzen 184/292"
+          },
+          {
+            "texto": "Fale com o Guarda para entrar na favela: com a missão Três Amigos feita, mostre o Passe; sem ela, clique no NPC repetidamente até a opção de entrada aparecer.",
+            "navi": "/navi lighthalzen 266/200"
+          },
+          {
+            "texto": "Encontre Bruno na favela.",
+            "navi": "/navi lighthalzen 309/263"
+          },
+          {
+            "texto": "Volte aos seus aposentos e fale com Nihil M. Heine.",
+            "navi": "/navi prt_cas_q 21/39"
+          },
+          {
+            "texto": "Dessa vez, vá ao Aeroporto de Juno e converse com Crux.",
+            "navi": "/navi y_airport 168/41"
+          },
+          {
+            "texto": "Crux envia você a Lighthalzen: no Hotel, ouça a história de Philophontess.",
+            "navi": "/navi lhz_in02 239/148"
+          },
+          {
+            "texto": "Em Einbroch, fale com a Pessoa Incomum para ativar a navegação.",
+            "navi": "/navi einbroch 239/269"
+          },
+          {
+            "texto": "Reencontre Nalandro e use o Pequeno Buraco.",
+            "navi": "/navi einbroch 267/266"
+          },
+          {
+            "texto": "Em Einbech, continue conversando e seguindo Nalandro pela navegação; no meio do caminho, leve a pessoa desmaiada até Clana Nemieri."
+          },
+          {
+            "texto": "Entrando no portal de Clana Nemieri, fale com Nalandro.",
+            "navi": "/navi einbech 215/83"
+          },
+          {
+            "texto": "Após a discussão, siga pelo corredor e converse com Nalandro mais de uma vez até receber as missões para falar com a Rebelião."
+          },
+          {
+            "texto": "Convença Elena Bolkova: vença-a na arena em 2 minutos (fácil; Arcebispos e evoluções não precisam batalhar). Entre clicando no chat e saia falando com Sorita Doritas. Você recebe 10 Brasões de Honra e 200.000 de EXP base e classe.",
+            "navi": "/navi rebel_in 69/78"
+          },
+          {
+            "texto": "Converse com Rupert, o Líder dos Insurgentes (122/71), com Dien, a Veterana (123/41 — aproxime-se do portal da sala vigiada pelas veteranas até ela citar a Comandante Est), e com a Comandante Est (209/84).",
+            "navi": "/navi rebel_in 209/84"
+          },
+          {
+            "texto": "Após Est concordar, fale com Rupert novamente: o Guarda Larcis aparece e a conversa entre Rupert, Larcis e Dien termina na briga (10 Brasões de Honra e 200.000 de EXP base e classe). Depois, reporte a situação a Nalandro (10 Brasões de Honra e 1.000.000 de EXP base, 500.000 de classe). Os Brasões podem ser trocados por itens com Strasse — e você liberou as missões Clana Nemieri, Gêmeos Levedev e Proibição dos Teleportes.",
+            "navi": "/navi rebel_in 122/71"
+          }
+        ]
+      },
+      {
+        "capitulo": "1. Invadindo a Base dos Caça-Corações (Instância)",
+        "recompensa": "10 Brasões de Honra (batalha final)",
+        "passos": [
+          {
+            "texto": "Dentro de Clana Nemieri, fale com o Combatente."
+          },
+          {
+            "texto": "Dirija-se ao hotel de Einbroch para falar com Nihil.",
+            "navi": "/navi ein_in01 274/243"
+          },
+          {
+            "texto": "Vá para o norte da cidade e reserve a instância com Julian (lembre-se de estar em grupo).",
+            "navi": "/navi ein_fild04 281/333"
+          },
+          {
+            "texto": "Assim que a entrada estiver liberada, fale com o Comandante da Tropa."
+          },
+          {
+            "texto": "Aproxime-se de Julian para iniciar o diálogo."
+          },
+          {
+            "texto": "Elimine os Caça-Corações e siga em frente, caminhando em direção a Julian; os robôs drenam HP, mas não matam. Ao clicar nele, escolha a opção Limpando a área."
+          },
+          {
+            "texto": "Volte um pouco até a Pilha de Pólvora e clique para pegar as Pólvoras Velhas; nesse momento, mais Caça-Corações aparecerão."
+          },
+          {
+            "texto": "Volte a Julian e, após a explosão, siga em frente até se aproximar dele novamente."
+          },
+          {
+            "texto": "Suba o mapa até encontrar o Objeto Suspeito e selecione Apertar o botão: você enfrentará 15 Caça-Corações e, às vezes, um Caça-Coração Gigante."
+          },
+          {
+            "texto": "Aproxime-se de Julian, aguarde ele liberar a passagem e continue seguindo reto até encontrar Julian novamente."
+          },
+          {
+            "texto": "Julian pedirá mais pólvora: volte pela Pilha de Pólvora próxima da segunda barreira quebrada e pegue mais Pólvoras Velhas."
+          },
+          {
+            "texto": "Retorne para Julian e clique nele para abrir a passagem da próxima fase.",
+            "navi": "/navi ein_fild04 281/333"
+          },
+          {
+            "texto": "Siga reto até Julian: é a batalha final da instância, contra a Caça-Coração Malícia (se não puder derrotá-la, Julian aparece para ajudar). Ao final, você recebe 10 Brasões de Honra e sai da instância; a instância Base Militar poderá ser feita após as 4h da manhã."
+          }
+        ]
+      },
+      {
+        "capitulo": "2. Descobrindo um Laboratório Clandestino",
+        "recompensa": "1 Estrela da Bênção · 1 Pochete de Couro (passo 8)",
+        "desbloqueia": "Missão Últimas Memórias · Instância Laboratório Werner",
+        "passos": [
+          {
+            "texto": "Nos arredores de Einbroch, para entrar na Base Militar, fale com Lukie.",
+            "navi": "/navi ein_fild04 284/332"
+          },
+          {
+            "texto": "Na Base Militar, fale com Lukie novamente."
+          },
+          {
+            "texto": "Dirija-se ao fim do Laboratório Clandestino e reserve a instância com Lukie: precisa estar em grupo, mas a instância é solo — os outros membros do grupo não conseguem entrar. Assim que a entrada for liberada, clique no portal que aparece no centro do círculo (nessa versão histórica não há batalhas, apenas diálogos).",
+            "navi": "/navi slabw01 236/91"
+          },
+          {
+            "texto": "Na instância, avance falando com Eisen Werner sempre que ele aparecer no mapa."
+          },
+          {
+            "texto": "Para ir às próximas áreas, ative os Aparatos de Segurança: ao clicar, ele mostra o nome dado a uma das espécimes de Eisen Werner e você escolhe a cor correta entre as duas opções. Acertando os dois aparatos de uma área, abre-se um portal; errando, os dois reiniciam e você recomeça."
+          },
+          {
+            "texto": "Tabela de cores: Aurora, Sonho, Eternidade e Pureza = Azul. Contradição, Brilho, Alegria, Solidão, Rosa, Mar, Crepúsculo e Retorno = Vermelho. Jogadores daltônicos: a primeira opção é sempre vermelha e a segunda, azul."
+          },
+          {
+            "texto": "Após conversar com Werner e ativar todos os Aparatos, fale pela última vez com Eisen no grande salão: você recebe 1 Estrela da Bênção e 1 Pochete de Couro. Tome cuidado para NÃO vender a Estrela da Bênção em NPC — ela é necessária para a quest principal. A missão Últimas Memórias foi liberada e a instância Laboratório Werner já pode ser feita (a Cobaia Y.S.F.01 é opcional)."
+          },
+          {
+            "texto": "(Opcional) Fale com Lukie na Base Militar: Skia aparece e encerra essa etapa.",
+            "navi": "/navi ein_fild04 284/332"
+          }
+        ]
+      },
+      {
+        "capitulo": "3. Reportando a Situação",
+        "recompensa": "10 Brasões de Honra · 10 Marcas de Honra · 1 mi EXP base · 1 mi EXP classe",
+        "desbloqueia": "Diárias da Base Militar · Continuação da história no Ep. 17.1: Ilusión",
+        "passos": [
+          {
+            "texto": "Com a Estrela da Bênção em mãos, retorne ao hotel de Einbroch para falar com Nihil.",
+            "navi": "/navi ein_in01 274/243"
+          },
+          {
+            "texto": "Nihil te envia para Prontera: nos seus aposentos, converse com Skia Nerius. Você recebe 10 Marcas de Honra e 500.000 de EXP base e classe.",
+            "navi": "/navi prt_cas_q 18/37"
+          },
+          {
+            "texto": "Fale com Lukie para entrar na Base Militar.",
+            "navi": "/navi ein_fild04 284/332"
+          },
+          {
+            "texto": "Fale com Philopontess para receber 10 Brasões de Honra (e 500.000 de EXP base e classe). Libera as missões diárias da Base Militar; agora é possível continuar a história no episódio 17.1: Ilusión.",
+            "navi": "/navi que_swat 145/57"
+          }
+        ]
+      }
+    ],
+    "secundarias": [
+      {
+        "codigo": "S1",
+        "titulo": "Gêmeos Levedev",
+        "prerequisito": "Fim do cap. 0",
+        "recompensa": "10 Brasões de Honra · 200k EXP base · 200k EXP classe",
+        "desbloqueia": "Diárias dos Gêmeos Levedev",
+        "passos": [
+          {
+            "texto": "Em Clana Nemieri, converse com Elena Bolkova: selecione Estou livre, dei uma passada aqui, Sim, irei, Unidade Secreta? e Irei ajudar.",
+            "navi": "/navi rebel_in 69/78"
+          },
+          {
+            "texto": "Fale com Jana Levedev."
+          },
+          {
+            "texto": "Volte a falar sobre os Levedev com Elena Bolkova."
+          },
+          {
+            "texto": "Converse com Milo River."
+          },
+          {
+            "texto": "Converse com Manson Bender."
+          },
+          {
+            "texto": "Retorne a Jana Levedev e selecione Perguntar diretamente."
+          },
+          {
+            "texto": "Volte a Elena Bolkova e selecione Conte a ela sobre os gêmeos Levedev."
+          },
+          {
+            "texto": "Converse com Ericsson Adler até receber 1 Bolacha Caseira."
+          },
+          {
+            "texto": "Ofereça a Bolacha Caseira para Jana Levedev."
+          },
+          {
+            "texto": "Volte a Elena Bolkova e selecione Conte a ela sobre os gêmeos Levedev; retorne a Jana Levedev."
+          },
+          {
+            "texto": "Volte a Elena Bolkova e selecione Eu trouxe os gêmeos Levedev: você recebe 200.000 de EXP base e classe e 10 Brasões de Honra, liberando as diárias."
+          }
+        ]
+      },
+      {
+        "codigo": "S2",
+        "titulo": "Proibição dos Teleportes",
+        "prerequisito": "Fim do cap. 0",
+        "recompensa": "10 Brasões de Honra · 1 mi EXP base · 4 mi EXP classe",
+        "itens": [
+          "{{Coração Flamejante}} ×4 · {{Gelo Místico}} ×4 · {{Vento Bruto}} ×3 · {{Fragmento Estelar}} ×1 · {{Natureza Grandiosa}} ×4"
+        ],
+        "passos": [
+          {
+            "texto": "Em Clana Nemieri, fale com Arinoa Yurhik: seu irmão, Arivero Yuhrik, aparecerá e pede retorno após as 4h da manhã."
+          },
+          {
+            "texto": "Clique em Arinoa Yurhik para que Arivero apareça; o NPC só fala se você clicar em Arinoa — use-a sempre como referência. Selecione Ventania e A Tocha Apagada."
+          },
+          {
+            "texto": "Dirija-se a Einbech com 1 Coração Flamejante e 3 Gelo Místico e fale com Arivero.",
+            "navi": "/navi einbech 211/212"
+          },
+          {
+            "texto": "Retorne à Clana Nemieri e fale com Arivero através de Arinoa: selecione Vento Bruto."
+          },
+          {
+            "texto": "Dirija-se a Lighthalzen com 1 Gelo Místico e 3 Vento Bruto e fale com Arivero.",
+            "navi": "/navi lighthalzen 134/233"
+          },
+          {
+            "texto": "Retorne à Clana Nemieri: selecione Perguntar a ele e dê 1 Fragmento Estelar para Arivero."
+          },
+          {
+            "texto": "Dirija-se a Juno com 3 Natureza Grandiosa e fale com Arivero.",
+            "navi": "/navi yuno 206/224"
+          },
+          {
+            "texto": "Dirija-se a Einbroch com 1 Natureza Grandiosa e 3 Coração Flamejante e fale com Arivero.",
+            "navi": "/navi einbroch 262/42"
+          },
+          {
+            "texto": "Retorne pela última vez a Arinoa Yurhik na Clana Nemieri."
+          },
+          {
+            "texto": "Fale com Rupert, o Líder dos Insurgentes, para entender o que aconteceu.",
+            "navi": "/navi rebel_in 122/71"
+          }
+        ]
+      },
+      {
+        "codigo": "S3",
+        "titulo": "Últimas Memórias",
+        "prerequisito": "Laboratório Werner concluído no modo história — os pertences vêm da Pochete de Couro",
+        "recompensa": "500k EXP base · 500k EXP classe (5 entregas de 100k)",
+        "passos": [
+          {
+            "texto": "Após completar o Laboratório Werner no modo história, entregue os pertences aos respectivos familiares — cada entrega garante 100.000 de EXP base e de classe."
+          },
+          {
+            "texto": "Entregue as Antigas Alianças e o Colar com Medalhão ao Cavaleiro Windsor (fale mais de uma vez).",
+            "navi": "/navi prt_in 177/26"
+          },
+          {
+            "texto": "Entregue o Rosário de Madeira à Irmã Magaleta.",
+            "navi": "/navi prt_monk 93/254"
+          },
+          {
+            "texto": "Entregue os Materiais de Costura à Caçadora Sherine.",
+            "navi": "/navi payon_in03 194/39"
+          },
+          {
+            "texto": "Entregue a Adaga de Assassino a Marovitz Guile.",
+            "navi": "/navi que_job01 189/91"
+          },
+          {
+            "texto": "Entregue o Dedal de Arco ao Ferreiro.",
+            "navi": "/navi yuno_in01 163/31"
+          }
+        ]
+      }
+    ],
+    "itensNecessarios": {
+      "diarias": {
+        "titulo": "Materiais Para As Diárias",
+        "colunas": [
+          "Item",
+          "Onde conseguir",
+          "Para que serve",
+          "Quanto guardar"
+        ],
+        "linhas": [
+          [
+            "{{Ferro}} · {{Oridecon}} · {{Elunium}}",
+            "Mercado/drop comum",
+            "Armeira da Rebelião — pedido aleatório do dia (5 Ferro, 2 Oridecon ou 2 Elunium)",
+            "1 do conjunto/dia"
+          ],
+          [
+            "{{Pedaço de Papel}}",
+            "Mercado/drops comuns",
+            "Gesto de Carinho (entregar 3)",
+            "3/dia"
+          ],
+          [
+            "{{Chá de Ervas com Uvas}} · {{Chá Vermelho de Outono}} · {{Chá de Ervas e Mel}} · {{Mousse de Chocolate}} · {{Salada de Frutas}}",
+            "Culinária ou mercado",
+            "Pedidos de Milo — Lanche dos Veteranos (entregar 1)",
+            "1/dia"
+          ],
+          [
+            "{{Bolachas Caseiras}}",
+            "Culinária ou mercado",
+            "Gêmeos: Culinária — entregar aos membros da Rebelião",
+            "Sob demanda"
+          ],
+          [
+            "{{Mistura de Pólvora}}",
+            "Drop de Mineiros",
+            "Gêmeos: Mineradores (coletar 1)",
+            "1/dia"
+          ],
+          [
+            "{{Pó Explosivo}}",
+            "Drop de Nuvem Venenosa e Nuvem Tóxica",
+            "Gêmeos: Ar Poluído (coletar 1)",
+            "1/dia"
+          ]
+        ]
+      },
+      "embarque": {
+        "titulo": "Materiais Usado No Episódio",
+        "colunas": [
+          "Item",
+          "Quantidade",
+          "Para que é usado",
+          "Observações"
+        ],
+        "linhas": [
+          [
+            "{{Coração Flamejante}}",
+            "4",
+            "Proibição dos Teleportes (Einbech ×1 e Einbroch ×3)",
+            ""
+          ],
+          [
+            "{{Gelo Místico}}",
+            "4",
+            "Proibição dos Teleportes (Einbech ×3 e Lighthalzen ×1)",
+            ""
+          ],
+          [
+            "{{Vento Bruto}}",
+            "3",
+            "Proibição dos Teleportes (Lighthalzen ×3)",
+            ""
+          ],
+          [
+            "{{Fragmento Estelar}}",
+            "1",
+            "Proibição dos Teleportes (Clana Nemieri)",
+            ""
+          ],
+          [
+            "{{Natureza Grandiosa}}",
+            "4",
+            "Proibição dos Teleportes (Juno ×3 e Einbroch ×1)",
+            ""
+          ]
+        ]
+      },
+      "nota": "A {{Estrela da Bênção}}, entregue no laboratório da história, não deve ser vendida em NPC."
+    },
+    "servicos": {
+      "titulo": "Serviços e lojas de Clana Nemieri",
+      "colunas": [
+        "Serviço",
+        "NPC",
+        "Onde (/navi)",
+        "Custos",
+        "Observação"
+      ],
+      "linhas": [
+        [
+          "Acesso à base da Rebelião",
+          "Porta de Clana Nemieri",
+          "einbech 215/83",
+          "Grátis",
+          "Requer a quest Terra Gloria concluída."
+        ],
+        [
+          "Loja de Brasões de Honra",
+          "Strasse",
+          "rebel_in 74/67",
+          "700 a 1.750 Brasões",
+          "Anel Mercenário A/B (700), Vestimentas (700), Vestígios de Combate (1.050) e Chapéu da República (1.750)."
+        ],
+        [
+          "Encanto — Anéis Mercenários A/B",
+          "Hogar",
+          "rebel_in 90/40",
+          "5 Brasões · reset 10",
+          "Até 2 encantos, sem falha. O reset tem 20% de chance de destruir o item."
+        ],
+        [
+          "Encanto — Vestimentas Consulente/Atraente",
+          "Hogar",
+          "rebel_in 90/40",
+          "20 Brasões · reset 10",
+          "Até 2 encantos, sem falha. Reset somente com os 2 encantos e sem chance de perder."
+        ],
+        [
+          "Teleporte → Base Militar",
+          "Mago Nillem (boteco Miado de Bala)",
+          "pub_cat 85/105",
+          "Grátis",
+          "Leva ao ein_fild04, na entrada da Base Militar."
+        ],
+        [
+          "Reserva de instâncias",
+          "Julian",
+          "ein_fild04 281/333",
+          "Grátis",
+          "Base Militar (grupo obrigatório) e acesso ao Laboratório Werner."
+        ]
+      ]
+    },
+    "diarias": {
+      "aviso": "Missões diárias da Clana Nemieri e da Base Militar (reset às 4h da manhã) e a diária sorteada dos Gêmeos Levedev. Todas pagam 3 Brasões de Honra (algumas missões da Clana pagam 10 na primeira execução). Brasões são trocados por equipamentos com Strasse e usados nos encantos de Hogar — o episódio não tem sistema de Reputação.",
+      "grupos": [
+        {
+          "nome": "Clana Nemieri",
+          "diarias": [
+            {
+              "nome": "Armeira da Rebelião",
+              "tarefa": "Entregar a Rachel Smith o material do dia (5 Ferro, 2 Oridecon ou 2 Elunium); na 1ª vez inclui levar o Revólver de Rachel ao Ferreiro",
+              "itens": "5 × {{Ferro}} ou 2 × {{Oridecon}} ou 2 × {{Elunium}}",
+              "recompensa": "3 Brasões de Honra · 200k EXP b/c (1ª vez: 10 Brasões)",
+              "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Armeira_da_Rebeli.C3.A3o"
+            },
+            {
+              "nome": "Dia de Panfletagem",
+              "tarefa": "Distribuir os 3 Panfletos de Loja entre Idosa Sonolenta (einbech 170/143), Homem Cansado (71/168) e Idoso Cansado (79/100)",
+              "itens": "",
+              "recompensa": "3 Brasões de Honra · 100k EXP b/c (1ª vez: 10 Brasões)",
+              "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Dia_de_Panfletagem"
+            },
+            {
+              "nome": "Gesto de Carinho",
+              "tarefa": "Levar 3 Pedaço de Papel à Menina Florista (einbroch 168/160), receber o Buquê Cerimonial e deixá-lo na Grande Árvore (163/152)",
+              "itens": "3 × {{Pedaço de Papel}}",
+              "recompensa": "3 Brasões de Honra · 200k EXP b/c (1ª vez: 10 Brasões)",
+              "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Gesto_de_Carinho"
+            },
+            {
+              "nome": "Pedidos de Lukie",
+              "tarefa": "Missão aleatória de 1 de 3 crianças (tabela abaixo)",
+              "itens": "Conforme a criança sorteada",
+              "recompensa": "3 Brasões de Honra · 200k EXP b/c",
+              "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Pedidos_de_Lukie",
+              "tabela": {
+                "colunas": [
+                  "Missão",
+                  "Caçar / coletar"
+                ],
+                "linhas": [
+                  [
+                    "Reparos para Denny",
+                    "10 {{Fornalha Velha}} · 5 {{Aço}} · 15 {{Placa de Ferro Usada}}"
+                  ],
+                  [
+                    "Combustíveis para Cyan",
+                    "10 {{Fornalha Velha}} · 10 {{Madeira Queimada}} · 3 {{Carvão}}"
+                  ],
+                  [
+                    "Cristais para Magenta",
+                    "5 {{Obsidiana}} · 5 {{Mineral}} · 10 {{Fragmento de Cristal}} · 10 {{Fragmento de Cristal Negro}}"
+                  ]
+                ]
+              }
+            },
+            {
+              "nome": "Pedidos de Milo — Lanche dos Veteranos",
+              "tarefa": "Entregar 1 prato de culinária a Milo River: Chá de Ervas com Uvas, Chá Vermelho de Outono, Chá de Ervas e Mel, Mousse de Chocolate ou Salada de Frutas",
+              "itens": "1 prato de culinária",
+              "recompensa": "3 Brasões de Honra · 100k EXP b/c",
+              "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Pedidos_de_Milo"
+            },
+            {
+              "nome": "Pedidos de Milo — Gata Perdida",
+              "tarefa": "Usar a Anchova Crocante entregue pela própria missão para achar a Charity em um dos Bancos Vazios de einbech (257/100, 34/209, 144/98 ou 244/129)",
+              "itens": "",
+              "recompensa": "3 Brasões de Honra · 100k EXP b/c",
+              "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Pedidos_de_Milo"
+            },
+            {
+              "nome": "Recuperando Armas",
+              "tarefa": "Coletar 3 Resto de Arma Quebrada nas pilhas de areia dos arredores de Einbech e eliminar 5 Rancores de Arma",
+              "itens": "",
+              "recompensa": "3 Brasões de Honra · 200k EXP b/c",
+              "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Recuperando_Armas",
+              "detalhes": [
+                "Aceite ajudar a Chefe atrás do balcão de Clana Nemieri.",
+                "As pilhas de areia em ein_fild09 têm 10 pontos possíveis: 135/305, 255/282, 335/239, 332/216, 256/320, 127/276, 164/290, 103/352, 70/175 e 71/106.",
+                "Colete 3 Resto de Arma Quebrada e elimine os 5 Rancores de Arma que são invocados nas pilhas.",
+                "Volte à Chefe para receber a recompensa."
+              ]
+            },
+            {
+              "nome": "Desafio de Elena",
+              "tarefa": "Derrotar Elena Bolkova na arena em até 2 minutos (Arcebispos e evoluções: 1.300 HP); entre clicando no chat e saia falando com Sorita Doritas",
+              "itens": "",
+              "recompensa": "3 Brasões de Honra · 200k EXP b/c",
+              "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Desafio_de_Elena"
+            },
+            {
+              "nome": "Festa: Chá de Dien",
+              "tarefa": "Eliminar 1 Malícia na Base Militar; o Chá Sofisicado vem direto ao inventário com a missão ativa",
+              "itens": "",
+              "recompensa": "3 Brasões de Honra · 150k EXP b/c",
+              "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Festa_das_Idosas"
+            },
+            {
+              "nome": "Festa: Carta de Ridsh",
+              "tarefa": "Eliminar Caça-Corações Gigantes até conseguir 1 Carta Antiga (vem direto ao inventário com a missão ativa)",
+              "itens": "",
+              "recompensa": "3 Brasões de Honra · 150k EXP b/c",
+              "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Festa_das_Idosas"
+            },
+            {
+              "nome": "Festa: Anéis de Cotnes",
+              "tarefa": "Eliminar 5 Caça-Corações; os Anéis Brilhantes vêm direto ao inventário com a missão ativa",
+              "itens": "",
+              "recompensa": "3 Brasões de Honra · 150k EXP b/c",
+              "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Festa_das_Idosas"
+            }
+          ]
+        },
+        {
+          "nome": "Base Militar",
+          "diarias": [
+            {
+              "nome": "Missões de Lukie — Elimine Fofinho",
+              "tarefa": "Derrotar 1 Fofinho no modo batalha do Laboratório Werner (reservado com Lukie, que_swat 150/58)",
+              "itens": "",
+              "recompensa": "3 Brasões de Honra · 150k EXP b/c",
+              "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Miss.C3.B5es_de_Lukie"
+            },
+            {
+              "nome": "Missões de Lukie — Elimine YSF01",
+              "tarefa": "Derrotar 1 YSF01 no modo história do Laboratório Werner",
+              "itens": "",
+              "recompensa": "3 Brasões de Honra · 150k EXP b/c",
+              "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Miss.C3.B5es_de_Lukie"
+            },
+            {
+              "nome": "Pesquisadores Escondidos",
+              "tarefa": "Localizar 3 Pesquisadores escondidos nos móveis suspeitos do Laboratório Werner (8 pontos possíveis)",
+              "itens": "",
+              "recompensa": "3 Brasões de Honra · 150k EXP b/c",
+              "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Pesquisadores_Escondidos",
+              "detalhes": [
+                "Ajude Philopontess na Base Militar (/navi que_swat 145/57).",
+                "No Laboratório Werner (slabw01): Armário Suspeito 235/137 e 254/131; Vão Suspeito 247/111 e 255/63; Mesa Suspeita 179/58; Tubo Suspeito 143/100; Estante Suspeita 247/34; Lixeira Suspeita 231/125.",
+                "Encontre 3 Pesquisadores para receber a recompensa."
+              ]
+            },
+            {
+              "nome": "Pesquisa de Quimeras",
+              "tarefa": "Eliminar 10 Quimeras Humanas e 10 Quimeras Disformes no Laboratório Werner",
+              "itens": "",
+              "recompensa": "3 Brasões de Honra · 150k EXP b/c",
+              "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Pesquisa_de_Quimeras"
+            }
+          ]
+        },
+        {
+          "nome": "Gêmeos Levedev",
+          "diarias": [
+            {
+              "nome": "Missão sorteada (1 de 4)",
+              "tarefa": "Fale com Jana Levedev (selecione Eu vim brincar com vocês!) e receba 1 das missões da tabela abaixo",
+              "itens": "Conforme o sorteio",
+              "recompensa": "3 Brasões de Honra · 200k EXP b/c",
+              "linkBrowiki": "https://browiki.org/wiki/G%C3%AAmeos_Levedev#Miss.C3.B5es_di.C3.A1rias",
+              "tabela": {
+                "colunas": [
+                  "Missão",
+                  "Objetivo"
+                ],
+                "linhas": [
+                  [
+                    "Gêmeos: Culinária",
+                    "Entregar Bolachas Caseiras a Milo River (rebel_in 108/27), Elena Bolkova (70/77), Ericsson Adler (91/66), Rachel Smith (88/51) ou Manson Bender (19/48)"
+                  ],
+                  [
+                    "Gêmeos: Livro Infantil",
+                    "Anotar o título do livro citado por Jana (3 possíveis) e conversar com a Bibliotecária em prt_in 165/89 para receber o Livro Alugado"
+                  ],
+                  [
+                    "Gêmeos: Mineradores",
+                    "Eliminar 30 Mineiros e coletar 1 Mistura de Pólvora"
+                  ],
+                  [
+                    "Gêmeos: Ar Poluído",
+                    "Eliminar 20 Nuvem Venenosa e 20 Nuvem Tóxica e coletar 1 Pó Explosivo"
+                  ]
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
     "id": "ep171",
     "titulo": "Episódio 17.1: Ilusión",
     "requisitos": "Nível de Base 110 · Quest anterior: Terra Gloria · Caça: 10 Dolor, 10 Venenum, 10 Caput",
@@ -758,6 +2198,32 @@
           ]
         }
       ]
+    },
+    "servicos": {
+      "titulo": "Serviços de Varmundt",
+      "colunas": [
+        "Serviço",
+        "NPC",
+        "Onde (/navi)",
+        "Custos",
+        "Observação"
+      ],
+      "linhas": [
+        [
+          "Acesso às diárias",
+          "Gerente Alpha",
+          "ba_maison 70/145",
+          "Grátis",
+          "Cadastro de hóspede visitante: habilita as diárias Aventuras na Mansão."
+        ],
+        [
+          "Teleporte → ein_fild04",
+          "Mago Nillem (boteco Miado de Bala)",
+          "pub_cat 85/105",
+          "Grátis",
+          "Leva à entrada da Base Militar do Ep. 16.2 — Laboratório Werner."
+        ]
+      ]
     }
   },
   {
@@ -1296,6 +2762,84 @@
           ]
         }
       ]
+    },
+    "servicos": {
+      "titulo": "Serviços e lojas da Aldeia do Lobo Cinzento",
+      "colunas": [
+        "Serviço",
+        "NPC",
+        "Onde (/navi)",
+        "Custos",
+        "Observação"
+      ],
+      "linhas": [
+        [
+          "Benefícios por Reputação",
+          "Asad",
+          "wolfvill 167/135",
+          "—",
+          "Desbloqueia os benefícios conforme os pontos de Reputação (ver loja abaixo)."
+        ],
+        [
+          "Loja de equipamentos",
+          "Emmit",
+          "wolfvill 164/137",
+          "—",
+          "Equipamentos Cinzentos da aldeia."
+        ],
+        [
+          "Reforma de armas",
+          "Bamdatt",
+          "wolfvill 170/131",
+          "—",
+          "Reforma das armas do episódio (ver aba Reforma de Armas)."
+        ],
+        [
+          "Troca de Fragmento por Asa",
+          "Mercador de Asas",
+          "wolfvill 164/141",
+          "1 Fragmento de Ametista",
+          "Troca 1 Fragmento de Ametista por 1 Asa da Aldeia."
+        ],
+        [
+          "Acesso à Aldeia",
+          "Campista",
+          "gw_fild01 32/101",
+          "—",
+          "Entrada/saída da Aldeia do Lobo Cinzento (a partir de gw_fild01)."
+        ]
+      ]
+    },
+    "lojaReputacao": {
+      "titulo": "Loja de Reputação — Asad",
+      "colunas": [
+        "Nível",
+        "Item / benefício",
+        "Preço"
+      ],
+      "linhas": [
+        [
+          "1",
+          "Abre a Loja de Ferramentas e o acesso ao Armazém",
+          "—"
+        ],
+        [
+          "2",
+          "Teleporta para Rachel",
+          "1 Fragmento de Ametista"
+        ],
+        [
+          "3",
+          "Refinador Cinzento +7",
+          "1.050 Fragmentos de Ametista"
+        ],
+        [
+          "4",
+          "Refinador Cinzento +9",
+          "2.250 Fragmentos de Ametista"
+        ]
+      ],
+      "nota": "Pontos de Reputação vêm das diárias e instâncias da Aldeia (+30 por missão); a história do episódio pede 1.000 pontos."
     }
   },
   {
@@ -2134,31 +3678,129 @@
     },
     "servicos": {
       "titulo": "Serviços e lojas de Issgard",
-      "colunas": ["Serviço", "NPC", "Onde (/navi)", "Custos", "Observação"],
+      "colunas": [
+        "Serviço",
+        "NPC",
+        "Onde (/navi)",
+        "Custos",
+        "Observação"
+      ],
       "linhas": [
-        ["Salvar e pousada", "Iwin (Feather Bed and Breakfast)", "icecastle 62/229", "5.000z", "Restaura HP e SP completos."],
-        ["Armazém (1 ou 2)", "Jarro Congelado", "icas_in 81/121", "500z", ""],
-        ["Teleporte → Ninho da Serpente", "Syaryara (opção 1)", "icecastle 55/124", "Grátis", "Liberado após o cap. 4; leva direto para dentro do Ninho."],
-        ["Teleporte → Castelo de Gelo", "Rgan no Ninho (opção 2)", "jor_nest 273/23", "Grátis", "Volta do Ninho para o Castelo de Gelo."],
-        ["Trenó → Aldebaran", "Hellock (opção 1)", "jor_tail 211/63", "Grátis", "Liberado pela secundária Santa da Purificação."],
-        ["Trenó → Issgard", "Hellock (opção 1)", "aldebaran 102/103", "Grátis", ""],
-        ["Lojas do Maram", "Maram (op. 1–4)", "icas_in 180/61", "Op. 1: consumíveis · op. 2: Equipamento Invernal (100 Pétalas/peça) · op. 3: vender", "As Armas Invernais (150.000z) são compradas com Poruru (icas_in 188/60), ao lado do Incinerador."],
-        ["Trocas e encantamentos", "Vellgunde (op. 2–4)", "icas_in 185/63", "Op. 2: 35 Pétalas → 1 Peça de Flor Invernal aleatória · op. 3: 3 Globos → 1 Globo aleatório · op. 4: encantamentos", "A reciclagem da op. 3 não consta na bROWiki (fonte: Hazy/iRO)."],
-        ["Globos e reputação", "Hoyoyo (op. 1–2)", "icas_in 175/63", "Op. 1: 5 Minério → 1 Globo · 5 Globos → 1 Brilhante · 5 Brilhantes → 1 Reluzente · op. 2: loja de reputação", ""],
-        ["Incinerador (extração)", "Incinerador, no quartel", "icas_in 192/58", "3 Armas Vil Invernais por uso", "Liberado após o cap. 9; detalhes na aba Reciclagem."]
+        [
+          "Salvar e pousada",
+          "Iwin (Feather Bed and Breakfast)",
+          "icecastle 62/229",
+          "5.000z",
+          "Restaura HP e SP completos."
+        ],
+        [
+          "Armazém (1 ou 2)",
+          "Jarro Congelado",
+          "icas_in 81/121",
+          "500z",
+          ""
+        ],
+        [
+          "Teleporte → Ninho da Serpente",
+          "Syaryara (opção 1)",
+          "icecastle 55/124",
+          "Grátis",
+          "Liberado após o cap. 4; leva direto para dentro do Ninho."
+        ],
+        [
+          "Teleporte → Castelo de Gelo",
+          "Rgan no Ninho (opção 2)",
+          "jor_nest 273/23",
+          "Grátis",
+          "Volta do Ninho para o Castelo de Gelo."
+        ],
+        [
+          "Trenó → Aldebaran",
+          "Hellock (opção 1)",
+          "jor_tail 211/63",
+          "Grátis",
+          "Liberado pela secundária Santa da Purificação."
+        ],
+        [
+          "Trenó → Issgard",
+          "Hellock (opção 1)",
+          "aldebaran 102/103",
+          "Grátis",
+          ""
+        ],
+        [
+          "Lojas do Maram",
+          "Maram (op. 1–4)",
+          "icas_in 180/61",
+          "Op. 1: consumíveis · op. 2: Equipamento Invernal (100 Pétalas/peça) · op. 3: vender",
+          "As Armas Invernais (150.000z) são compradas com Poruru (icas_in 188/60), ao lado do Incinerador."
+        ],
+        [
+          "Trocas e encantamentos",
+          "Vellgunde (op. 2–4)",
+          "icas_in 185/63",
+          "Op. 2: 35 Pétalas → 1 Peça de Flor Invernal aleatória · op. 3: 3 Globos → 1 Globo aleatório · op. 4: encantamentos",
+          "A reciclagem da op. 3 não consta na bROWiki (fonte: Hazy/iRO)."
+        ],
+        [
+          "Globos e reputação",
+          "Hoyoyo (op. 1–2)",
+          "icas_in 175/63",
+          "Op. 1: 5 Minério → 1 Globo · 5 Globos → 1 Brilhante · 5 Brilhantes → 1 Reluzente · op. 2: loja de reputação",
+          ""
+        ],
+        [
+          "Incinerador (extração)",
+          "Incinerador, no quartel",
+          "icas_in 192/58",
+          "3 Armas Vil Invernais por uso",
+          "Liberado após o cap. 9; detalhes na aba Reciclagem."
+        ]
       ]
     },
     "lojaReputacao": {
       "titulo": "Loja de reputação — Hoyoyo (op. 2)",
-      "colunas": ["Nível", "Item / benefício", "Preço"],
+      "colunas": [
+        "Nível",
+        "Item / benefício",
+        "Preço"
+      ],
       "linhas": [
-        ["1", "Refinador de Armadura Invernal +9", "200 Pétalas"],
-        ["1", "Minhogelix Seco (consumível)", "1 Pétala"],
-        ["1", "Asas de Teleporte do Castelo de Gelo", "1 Pétala"],
-        ["2", "Refinador de Arma Invernal +9", "500 Pétalas"],
-        ["2", "[Visual] Disfarce de Rgan", "1.000 Pétalas"],
-        ["2", "[Visual] Capacete Iwin de Frio", "1.000 Pétalas"],
-        ["3", "Diárias do Castelo de Gelo pagam +1 Pétala; nas do Ninho, +2", "—"]
+        [
+          "1",
+          "Refinador de Armadura Invernal +9",
+          "200 Pétalas"
+        ],
+        [
+          "1",
+          "Minhogelix Seco (consumível)",
+          "1 Pétala"
+        ],
+        [
+          "1",
+          "Asas de Teleporte do Castelo de Gelo",
+          "1 Pétala"
+        ],
+        [
+          "2",
+          "Refinador de Arma Invernal +9",
+          "500 Pétalas"
+        ],
+        [
+          "2",
+          "[Visual] Disfarce de Rgan",
+          "1.000 Pétalas"
+        ],
+        [
+          "2",
+          "[Visual] Capacete Iwin de Frio",
+          "1.000 Pétalas"
+        ],
+        [
+          "3",
+          "Diárias do Castelo de Gelo pagam +1 Pétala; nas do Ninho, +2",
+          "—"
+        ]
       ],
       "nota": "Lista do Hazy Forest (kRO); o LATAM pode variar. Cada nível exige 1.000 pontos de reputação, ganhos nas diárias e instâncias. No nível 0 Hoyoyo não fala com você."
     }
