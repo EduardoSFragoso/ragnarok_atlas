@@ -7,7 +7,7 @@
     "principal": [
       {
         "capitulo": "0. Prólogo — A caminho de Issgard",
-        "recompensa": "40 Pétalas · 50 Rep. · 65,3 mi EXP Base · Libera Patrulha Iwin e S1",
+        "recompensa": "40 Pétalas · 50 Rep. · 65,3 mi EXP Base",
         "passos": [
           {
             "texto": "Fale com o Aldeão do Lobo Cinzento para iniciar a busca por Bagot.",
@@ -68,15 +68,25 @@
         ],
         "itens": [
           "Convite do Guardião (recebido na quest)"
-        ]
+        ],
+        "desbloqueia": "Patrulha Iwin (diária) e a secundária S1 — Santa da Purificação."
       },
       {
         "capitulo": "1. Patrulha Iwin (Instância)",
         "recompensa": "2 Pétalas · 5 Rep. · 16 mi EXP Base",
         "passos": [
           {
-            "texto": "Fale com o Líder da Patrulha <Eagle Patrol> no portal oeste para iniciar a instância. Dica: dentro dela, corra direto até o jovem careca no topo do mapa, fale com ele e saia pelo portal norte ao lado.",
+            "texto": "Fale com o Líder da Patrulha <Eagle Patrol> no portal oeste para iniciar a instância.",
             "navi": "/navi icecastle 23/115"
+          },
+          {
+            "texto": "Acompanhe os Iwins durante a travessia: mantenha todos na tela, pois a instância avança junto deles."
+          },
+          {
+            "texto": "Ao chegar na parte norte, perto do portal vermelho, corra até o jovem careca no topo do mapa e fale com ele antes de sair — é o Jovem Misterioso do capítulo seguinte."
+          },
+          {
+            "texto": "Volte ao ponto inicial e fale com o NPC para concluir a instância."
           }
         ],
         "itens": []
@@ -108,7 +118,7 @@
       },
       {
         "capitulo": "3. Infiltração no Ninho da Serpente",
-        "recompensa": "25 Pétalas · 30 Rep. · ~209 mi EXP Base total · Libera Diárias do Ninho e S5–S8",
+        "recompensa": "25 Pétalas · 30 Rep. · ~209 mi EXP Base total",
         "passos": [
           {
             "texto": "Entre na caverna e vá ao 2º andar falar com Miriam (mantenha o Disfarce ativo daqui em diante).",
@@ -159,11 +169,12 @@
         "itens": [
           "Casca de Ovo Rgan Superior (recebida na quest)",
           "{{Disfarce de Rgan}} — mantenha ativo no Ninho"
-        ]
+        ],
+        "desbloqueia": "Diárias do Ninho da Serpente (Por um Trabalho Mais Seguro, Sacerdote, Tende Piedade, Nossas Preciosas Provisões e Rgan que Dá Ordens) e as secundárias S5–S8."
       },
       {
         "capitulo": "4. Relatório da Missão de Infiltração",
-        "recompensa": "50 Pétalas · 60 Rep. · 143,6 mi EXP Base · Libera Teleporte Syaryara e Destruição da Aeronave",
+        "recompensa": "50 Pétalas · 60 Rep. · 143,6 mi EXP Base",
         "passos": [
           {
             "texto": "Disfarçado, encontre Lazy no Ninho.",
@@ -186,7 +197,8 @@
             "navi": "/navi icas_in 34/189"
           }
         ],
-        "itens": []
+        "itens": [],
+        "desbloqueia": "NPC de teleporte Syaryara (/navi icecastle 55/124), a instância diária Operação Destruição e a diária Ajudar Moryara com os Peixes."
       },
       {
         "capitulo": "5. Busca por Vulnerabilidades",
@@ -260,7 +272,6 @@
       },
       {
         "capitulo": "7 e 8. Suspeita Crescente & Laboratório de Bagot (Chefe Solo)",
-        "recompensa": "Libera a instância diária Simulação após a história",
         "passos": [
           {
             "texto": "Fale com Lazy na sala à direita do Castelo de Gelo.",
@@ -293,11 +304,12 @@
         ],
         "itens": [
           "Tubos de ensaio recebidos na quest"
-        ]
+        ],
+        "desbloqueia": "A instância diária Batalha de Simulação (liberada após concluir toda a história)."
       },
       {
         "capitulo": "9 e 10. Ninho da Serpente Caótico (Instância)",
-        "recompensa": "50 Pétalas · 25 Rep. · 130,6 mi EXP Base · Consome 20 Núcleos de Baixa Qualidade · Libera Incinerador",
+        "recompensa": "50 Pétalas · 25 Rep. · 130,6 mi EXP Base · Consome 20 Núcleos de Baixa Qualidade",
         "passos": [
           {
             "texto": "De volta ao Castelo de Gelo, fale com Horuru.",
@@ -340,18 +352,53 @@
             "navi": "/navi jor_que 131/148"
           },
           {
-            "texto": "Encontre Lehar a sudoeste para abrir a instância Ninho da Serpente Caótico (grupo permitido). Dentro dela, elimine todos os monstros errantes, desligue os dispositivos (1@jorchs 191/203 duas vezes) e chegue ao Portão Central (1@jorchs 38/272).",
+            "texto": "Encontre Lehar a sudoeste para abrir a instância Ninho da Serpente Caótico (grupo permitido).",
             "navi": "/navi jor_que 32/37"
+          },
+          {
+            "texto": "Dentro da instância, encontre o time em campo no início da travessia.",
+            "navi": "/navi 1@jorchs 261/34"
+          },
+          {
+            "texto": "Derrote o Rgan especial no caminho de baixo.",
+            "navi": "/navi 1@jorchs 114/20"
+          },
+          {
+            "texto": "Siga em direção a noroeste, limpe a região sudoeste de monstros e volte até os Iwins.",
+            "navi": "/navi 1@jorchs 112/116"
+          },
+          {
+            "texto": "Fale com Voglinde/Miriam a nordeste e desligue o 1º Dispositivo de Injeção, derrotando as Heart Hunters que aparecem durante a conversa.",
+            "navi": "/navi 1@jorchs 219/147"
+          },
+          {
+            "texto": "Desligue o 2º Dispositivo de Injeção e limpe os monstros errantes restantes.",
+            "navi": "/navi 1@jorchs 226/246"
+          },
+          {
+            "texto": "Aurelie e Leon capturam 2 Heart Hunters que religaram as máquinas: desligue os dispositivos novamente.",
+            "navi": "/navi 1@jorchs 191/203"
+          },
+          {
+            "texto": "Procure dados de pesquisa nas salas de laboratório (a equipe encontra trechos sobre o Coração de Ymir), derrotando os inimigos do caminho."
+          },
+          {
+            "texto": "Enfrente Bagot na última linha de defesa da instância e derrote-o."
+          },
+          {
+            "texto": "Sair pelo Portão Central encerra a instância e conclui a etapa.",
+            "navi": "/navi 1@jorchs 37/274"
           }
         ],
         "itens": [
           "20 × {{Núcleo Mágico Rgan de Baixa Qualidade}}",
           "{{Disfarce de Rgan}}"
-        ]
+        ],
+        "desbloqueia": "O Incinerador, para reciclar Armas Vis Invernais."
       },
       {
         "capitulo": "11. Os que Desapareceram (Conclusão)",
-        "recompensa": "50 Pétalas · 50 Rep. · 130,6 mi EXP Base · Libera S4, Simulação e Teleportes",
+        "recompensa": "50 Pétalas · 50 Rep. · 130,6 mi EXP Base",
         "passos": [
           {
             "texto": "No salão de refeições do Castelo de Gelo, fale com Aurelie Petit e a equipe para finalizar o Episódio 19.",
@@ -360,7 +407,8 @@
         ],
         "itens": [
           "{{Disfarce de Rgan}} (usado também na área jor_dun01 8/238)"
-        ]
+        ],
+        "desbloqueia": "A secundária S4 — Rastreando o Esconderijo Subterrâneo, a instância Simulação e os teleportes da vila."
       }
     ],
     "secundarias": [
@@ -368,7 +416,7 @@
         "codigo": "S1",
         "titulo": "Santa da Purificação",
         "prerequisito": "Fim do Cap. 0",
-        "recompensa": "30 Pétalas · 50 Rep. · Libera S2, Dia da Friederike, purificação de Núcleos e Trenó",
+        "recompensa": "30 Pétalas · 50 Rep.",
         "passos": [
           {
             "texto": "Fale com Voglinde no Castelo de Gelo.",
@@ -397,13 +445,14 @@
         ],
         "itens": [
           "Chocolate (presente da Voglinde — recebido na quest)"
-        ]
+        ],
+        "desbloqueia": "Secundária S2 — Mar Congelado, a diária O Dia de Friederike, a purificação de Núcleos de Baixa Qualidade e a diária do Trenó."
       },
       {
         "codigo": "S2",
         "titulo": "Mar Congelado",
         "prerequisito": "Concluir S1",
-        "recompensa": "10 Pétalas · 10 Rep. · ~130,6 mi EXP Base · Libera diárias do Fosso Abandonado",
+        "recompensa": "10 Pétalas · 10 Rep. · ~130,6 mi EXP Base",
         "passos": [
           {
             "texto": "Fale com Surr e Tamarin (27/122) no quarto de Friederike.",
@@ -424,13 +473,13 @@
         ],
         "itens": [
           "{{Carne Congelada}} (cai sozinha durante a quest)"
-        ]
+        ],
+        "desbloqueia": "Diárias do Fosso Abandonado."
       },
       {
         "codigo": "S3",
         "titulo": "Procura pelos Desaparecidos",
         "prerequisito": "Sem pré-requisito informado",
-        "recompensa": "Libera diária Procurando Sobreviventes",
         "passos": [
           {
             "texto": "Fale com Lehar no Castelo de Gelo.",
@@ -441,13 +490,14 @@
             "navi": "/navi icas_in 42/252"
           }
         ],
-        "itens": []
+        "itens": [],
+        "desbloqueia": "Diária Procurando Sobreviventes."
       },
       {
         "codigo": "S4",
         "titulo": "Rastreando o Esconderijo Subterrâneo",
         "prerequisito": "Concluir Cap. 11 (Pós-história)",
-        "recompensa": "2 Pétalas · 5 Rep. · ~19 mi EXP Base · Libera diária Encontrar o Esconderijo Subterrâneo",
+        "recompensa": "2 Pétalas · 5 Rep. · ~19 mi EXP Base",
         "passos": [
           {
             "texto": "Fale com Horuru no Castelo de Gelo e depois fora dele (icecastle 27/124) para pegar 10 Antenas.",
@@ -460,13 +510,14 @@
         ],
         "itens": [
           "10 × {{Antena de Alta Sensibilidade}} (recebidas na quest)"
-        ]
+        ],
+        "desbloqueia": "Diária Encontrar o Esconderijo Subterrâneo."
       },
       {
         "codigo": "S5",
         "titulo": "Um Jeito Único de Sobreviver",
         "prerequisito": "Cap. 3 + Disfarce de Rgan · Consome 10 Núcleos de Baixa Qualidade",
-        "recompensa": "10 Pétalas · 52,2 mi EXP Base · Libera diárias Nossa Preciosa Comida e Hobbies Elegantes",
+        "recompensa": "10 Pétalas · 52,2 mi EXP Base",
         "passos": [
           {
             "texto": "Disfarçado, fale com Mimirgand no Ninho, derrote 10 Primitive Rgan e 10 Lowest Rgan e entregue 10 Núcleos Mágicos Rgan de Baixa Qualidade.",
@@ -475,7 +526,8 @@
         ],
         "itens": [
           "10 × {{Núcleo Mágico Rgan de Baixa Qualidade}}"
-        ]
+        ],
+        "desbloqueia": "Diárias Nossa Preciosa Comida e Hobbies Elegantes."
       },
       {
         "codigo": "S6",
