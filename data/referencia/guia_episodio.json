@@ -572,47 +572,6 @@
       }
     ],
     "itensNecessarios": {
-      "farm": {
-        "titulo": "Materiais do Episódio",
-        "colunas": [
-          "Item",
-          "Onde cai",
-          "Para que serve",
-          "Quanto guardar"
-        ],
-        "linhas": [
-          [
-            "{{Núcleo Mágico Rgan de Baixa Qualidade}}",
-            "Qualquer Rgan: Primitive e Lowest Rgan em jor_back3; Rgans de jor_dun01/02",
-            "História (cap. 6 e 9) · S5 (10) · S8 (15) · diárias Nossas Preciosas Provisões (30) e Obtenção de Materiais de Pesquisa (30 → 3 purificados)",
-            "65 para história + secundárias · +30/dia nas diárias"
-          ],
-          [
-            "{{Pétala de Flor Invernal}}",
-            "Todos os monstros de Issgard + recompensas",
-            "Equipamento Invernal (100 por peça) · Refinadores +9 (200 e 500) · 35 → 1 Globo (Vellgunde) · loja de reputação",
-            "Guarde todas"
-          ],
-          [
-            "{{Minério Mágico da Flor de Neve}} e Globos de Flor Invernal ({{Globo de Flor Invernal}}, {{Globo de Flor Invernal Brilhante}}, {{Globo de Flor Invernal Reluzente}})",
-            "Todos os monstros (Brilhante e Reluzente são raros: dungeons, instâncias, Simulação de Batalha)",
-            "Encantamentos (Vellgunde) · conversão 5 → 1 (Hoyoyo)",
-            "Guarde todos"
-          ],
-          [
-            "{{Carne Congelada}}",
-            "Cai sozinha nas quests de carne (S2 e diárias)",
-            "S2 (cai durante a quest) · diárias Precisa de uma Geladeira? e Um lugar que Merece ser Abandonado",
-            "Guarde a que cair para as diárias"
-          ],
-          [
-            "Armas Vil Invernais [1] (qualquer tipo)",
-            "Drop em jor_dun01/02 (Calor do Deus Serpente) e jor_ab01/02 (Fosso Abandonado)",
-            "Usar (Nv 230) ou queimar 3 no Incinerador → materiais de encantamento (após o cap. 9)",
-            "Guarde todas"
-          ]
-        ]
-      },
       "diarias": {
         "titulo": "Materiais Para As Diárias",
         "colunas": [
@@ -874,7 +833,6 @@
               "nome": "Simulação de Batalha",
               "tarefa": "Instância no menu de Issgard; a entrada consome os materiais do lobby",
               "itens": "4 × {{Pétala de Flor Invernal}} · 1 × {{Minério Mágico da Flor de Neve}}",
-              "recompensa": "~11,7 mi EXP base · ~16,3 mi EXP classe",
               "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgardhttps://browiki.org/wiki/Batalha_de_Simula%C3%A7%C3%A3o"
             }
           ]

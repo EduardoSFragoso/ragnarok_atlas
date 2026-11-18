@@ -32,3 +32,4 @@ body[data-theme="dark"] .fold>summary{background:#1a2733;border-color:#34495a;bo
 body[data-theme="dark"] .fold>.fold-body{border-left-color:#34495a}
 body[data-theme="dark"] .fold.fold-team>summary,body[data-theme="dark"] .fold.fold-top>summary{background:#1f3d39;border-color:#3f7168;border-left-color:#8de1cb;color:#d8f3ea}
 body[data-theme="dark"] .fold.fold-team>.fold-body,body[data-theme="dark"] .fold.fold-top>.fold-body{border-left-color:#3f7168}
+.panel-note.lg{font-size:12.5px}.plain-title{margin:22px 0 8px;font-size:14px;font-weight:700;color:var(--text)}.up-controls+#upChance .plain-title:first-child{margin-top:6px}.reform-label{margin:16px 0 8px;font-size:13px;font-weight:700;color:var(--text)}
