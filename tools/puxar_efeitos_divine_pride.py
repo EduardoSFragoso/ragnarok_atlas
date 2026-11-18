@@ -36,6 +36,7 @@ SKILL_API = 'https://www.divine-pride.net/api/database/Skill/{}'
 SKILL_BUSCA = 'https://www.divine-pride.net/api/database/Skill'
 SKILLS = ROOT / 'tools' / 'divine_pride_skills.json'
 SKILLS_FALTA = ROOT / 'tools' / 'divine_pride_skills_faltando.txt'
+SKILL_IDS = ROOT / 'tools' / 'skills_ids.json'
 DELAY = 1.2  # segundos entre pedidos; aumente com --delay se quiser mais calma
 
 
@@ -64,7 +65,7 @@ def pendentes():
     return dedup
 
 
-def buscar_url(url, key):
+def buscar_url(url, key, tentar_404=False):
     ultimo = None
     for srv in servidores_param:
         destino = url + ('&' if '?' in url else '?') + f'apiKey={key}' + (f'&server={srv}' if srv else '')
@@ -72,6 +73,7 @@ def buscar_url(url, key):
         for tent in range(6):
             try:
                 with urllib.request.urlopen(req, timeout=25) as r:
+                    buscar_url.srv_usado = srv or 'padrão'
                     return json.loads(r.read()), None
             except urllib.error.HTTPError as e:
                 ultimo = e
@@ -80,8 +82,9 @@ def buscar_url(url, key):
                 espera = min(max(int(e.headers.get('Retry-After', 20) or 20), 20) * (2 ** tent), 180)
                 print(f'  limite do servidor (429); esperando {espera}s (tentativa {tent + 1}/6)…')
                 time.sleep(espera)
-        if ultimo is None or ultimo.code != 400:
+        if ultimo is None or ultimo.code not in ({400} | ({404} if tentar_404 else set())):
             break
+    buscar_url.srv_usado = None
     return None, ultimo
 
 
@@ -134,8 +137,10 @@ def estagio_skills(key, delay):
     for v in fonte.values():
         nomes.update(nomes_de_skill(v.get('efeito')))
     cache = json.loads(SKILLS.read_text(encoding='utf-8')) if SKILLS.exists() else {}
-    faltam = sorted(n for n in nomes if not (cache.get(n, {}).get('cru') or cache.get(n, {}).get('nada')))
-    print(f'fase skills: {len(nomes)} habilidades distintas · {len(faltam)} a buscar')
+    ids_offline = json.loads(SKILL_IDS.read_text(encoding='utf-8')) if SKILL_IDS.exists() else {}
+    offline = sorted(n for n in nomes if n in ids_offline and not (cache.get(n, {}).get('cru') or cache.get(n, {}).get('nada')))
+    faltam = offline + sorted(n for n in nomes if n not in ids_offline and not (cache.get(n, {}).get('cru') or cache.get(n, {}).get('nada')))
+    print(f'fase skills: {len(nomes)} habilidades distintas · {len(faltam)} a buscar ({len(offline)} por ID direto)')
     if '--dry-run' in sys.argv:
         for n in faltam:
             print(f'  faltando: {n}')
@@ -145,6 +150,28 @@ def estagio_skills(key, delay):
     global servidores_param
     erros, seguidos = [], 0
     for n, nome in enumerate(faltam, 1):
+        sid = ids_offline.get(nome)
+        if sid is not None:
+            servidores_param = ['LATAM', 'iRO']
+            detalhe, falha = buscar_url(SKILL_API.format(sid), key, tentar_404=True)
+            if falha:
+                erros.append((nome, f'detalhe {sid}', falha)); seguidos += 1
+                print(f'[{n}/{len(faltam)}] {nome} (id {sid}): detalhe falhou ({falha})')
+                if seguidos >= 5:
+                    print('5 falhas seguidas; interrompendo. Rode de novo mais tarde.')
+                    break
+                time.sleep(delay)
+                continue
+            seguidos = 0
+            srv = getattr(buscar_url, 'srv_usado', None)
+            cache[nome] = {'nome_busca': nome, 'id': sid, 'cru': detalhe,
+                           'srv_detalhe': srv if detalhe is not None else None,
+                           'busca_candidatos': [{'id': sid, 'nome': nome}],
+                           'nada': detalhe is None}
+            print(f'[{n}/{len(faltam)}] {nome} → id {sid} ({srv} / {"PT" if srv == "LATAM" else "EN"})')
+            SKILLS.write_text(json.dumps(cache, ensure_ascii=False, indent=1, sort_keys=True) + '\n', encoding='utf-8')
+            time.sleep(delay)
+            continue
         servidores_param = ['iRO']
         lista, falha = buscar_url(f'{SKILL_BUSCA}?query={urllib.parse.quote(nome)}', key)
         if falha:
