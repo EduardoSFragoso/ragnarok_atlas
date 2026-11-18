@@ -325,6 +325,18 @@ function itensNecessariosHtml(ep) {
   </section>`;
 }
 
+function servicosHtml(ep) {
+  const sv = ep.servicos, rep = ep.lojaReputacao;
+  if (!sv && !rep) return '';
+  const tabela = t => tableFrame(t.colunas.map(esc), trs(t.linhas.map(r => [esc(r[0]), esc(r[1]), naviBtn(r[2]), richText(r[3] || ''), richText(r[4] || '')])), 'align-top');
+  const repTabela = t => tableFrame(t.colunas.map(esc), trs(t.linhas.map(r => r.map(richText))), 'align-top');
+  return `<section class="itens-necessarios">
+    <div class="section-heading"><div><h2>Serviços do episódio</h2><p>NPCs de utilidade, lojas e trocas do episódio.</p></div></div>
+    ${sv ? fold(esc(sv.titulo), tabela(sv), { count: `${sv.linhas.length} serviços` }) : ''}
+    ${rep ? fold(esc(rep.titulo), `${repTabela(rep)}${rep.nota ? `<p class="gift-line">${richText(rep.nota)}</p>` : ''}`, { count: `${rep.linhas.length} itens` }) : ''}
+  </section>`;
+}
+
 function guideView() {
   const ep = pickEp();
   if (!ep) return `<div class="panel-note">Nenhum guia de episódio carregado.</div>`;
@@ -359,6 +371,7 @@ function guideView() {
     ${epSwitcher()}
     ${avisosHtml}
     ${itensNecessariosHtml(ep)}
+    ${servicosHtml(ep)}
     <div class="section-heading"><div><h2>Passo a passo</h2><p>Capítulos da história e missões secundárias, com /navi copiável em cada etapa.</p></div></div>
     <div class="up-controls" style="margin-bottom:14px">
       <div class="subtabs" role="group" aria-label="Tipo de missão">
