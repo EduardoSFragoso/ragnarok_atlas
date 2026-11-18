@@ -5,8 +5,7 @@
     "requisitos": "Nível de Base 110 · Quest anterior: Terra Gloria · Caça: 10 Dolor, 10 Venenum, 10 Caput",
     "recompensaTotal": "40 Núcleos COR · 50 Chips Misteriosos · 1 Arma Danificada · 4,1 mi EXP Base + 25% ao final · 5,05 mi EXP Classe (soma dos passos; a infobox da bROWiki cita 5.850.000 — conferir)",
     "avisos": [
-      "As instâncias duram 1 hora e podem ser refeitas quantas vezes for preciso até a conclusão (Invasão na Regenschirm, OS Restrito e Memorial COR).",
-      "Erro conhecido: personagens que fizeram a missão de evento de 10 anos atrás pulam os passos da instância OS Restrito e vão direto para Dien, no Distrito OS."
+      "As instâncias duram 1 hora e podem ser refeitas quantas vezes for preciso até a conclusão (Invasão na Regenschirm, OS Restrito e Memorial COR)."
     ],
     "principal": [
       {
@@ -254,24 +253,6 @@
             "10/dia"
           ]
         ]
-      },
-      "embarque": {
-        "titulo": "Materiais Usado No Episódio",
-        "colunas": [
-          "Item",
-          "Quantidade",
-          "Para que é usado",
-          "Observações"
-        ],
-        "linhas": [
-          [
-            "Dolor · Venenum · Caput",
-            "10 de cada",
-            "Caça exigida por Lukie (cap. 1)",
-            "Derrotados em Rudus; caça regular da quest, sem item para guardar."
-          ]
-        ],
-        "nota": "A história não exige itens comprados: o {{Envelope de Dien}} é recebido na Caixa Decorada do quarto das Veteranas (cap. 5) e o Núcleo COR/Chip Misterioso/Arma Danificada são recompensas. Sempre que Morning pedir um bichinho de estimação, 1 ovo (Poring, Picky, Rocker ou Lunático) garante 5% de EXP base + 800.000 de EXP classe."
       }
     },
     "diarias": {
@@ -580,13 +561,7 @@
             "{{Chip de Batata}}",
             "Coletado durante a própria diária, perto da Eorfa (ba_maison 79/278)",
             "Diária Interferência Bioeletrônica (Nv. 180+, 10)",
-            "Não precisa juntar antes"
-          ],
-          [
-            "{{Sais de Banho B}}",
-            "Recompensa da diária Entre Água Quente e Fria",
-            "Recompensa adicional da sauna (uso não informado na bROWiki)",
-            "2 por execução"
+            "10/dia"
           ]
         ]
       },
