@@ -1,0 +1,541 @@
+{
+ "다이아몬드 더스트": {
+  "id": 2447,
+  "handle": "SO_DIAMONDDUST",
+  "pt": "Pó de Diamante",
+  "pedra": null
+ },
+ "듀플레 라이트": {
+  "id": 2054,
+  "handle": "AB_DUPLELIGHT",
+  "pt": "Gemini Lumen",
+  "pedra": null
+ },
+ "드래곤 브레스": {
+  "id": 2008,
+  "handle": "RK_DRAGONBREATH",
+  "pt": "Sopro do Dragão",
+  "pedra": null
+ },
+ "레이 오브 제네시스": {
+  "id": 2321,
+  "handle": "LG_RAYOFGENESIS",
+  "pt": "Luz da Criação",
+  "pedra": null
+ },
+ "로드 오브 버밀리온": {
+  "id": 85,
+  "handle": "WZ_VERMILION",
+  "pt": "Ira de Thor",
+  "pedra": null
+ },
+ "롤링 커터": {
+  "id": 2036,
+  "handle": "GC_ROLLINGCUTTER",
+  "pt": "Lâminas de Loki",
+  "pedra": null
+ },
+ "메탈릭 사운드": {
+  "id": 2413,
+  "handle": "WM_METALICSOUND",
+  "pt": "Ruído Estridente",
+  "pedra": null
+ },
+ "메테오 스톰": {
+  "id": 83,
+  "handle": "WZ_METEOR",
+  "pt": "Chuva de Meteoros",
+  "pedra": null
+ },
+ "바레티르 스피어": {
+  "id": 2454,
+  "handle": "SO_VARETYR_SPEAR",
+  "pt": "Lanças dos Aesir",
+  "pedra": null
+ },
+ "발칸 암": {
+  "id": 2258,
+  "handle": "NC_VULCANARM",
+  "pt": "Metralhadora",
+  "pedra": null
+ },
+ "배니싱 포인트": {
+  "id": 2308,
+  "handle": "LG_BANISHINGPOINT",
+  "pt": "Toque do Oblívio",
+  "pedra": null
+ },
+ "백 스탭": {
+  "id": 212,
+  "handle": "RG_BACKSTAP",
+  "pt": "Apunhalar",
+  "pedra": null
+ },
+ "부스트 너클": {
+  "id": 2256,
+  "handle": "NC_BOOSTKNUCKLE",
+  "pt": "Punho Foguete",
+  "pedra": null
+ },
+ "사이킥 웨이브": {
+  "id": 2449,
+  "handle": "SO_PSYCHIC_WAVE",
+  "pt": "Onda Psíquica",
+  "pedra": null
+ },
+ "서비어 레인스톰": {
+  "id": 2418,
+  "handle": "WM_SEVERE_RAINSTORM",
+  "pt": "Temporal de Flechas",
+  "pedra": null
+ },
+ "소닉 웨이브": {
+  "id": 2002,
+  "handle": "RK_SONICWAVE",
+  "pt": "Onda de Choque",
+  "pedra": null
+ },
+ "소울 익스펜션": {
+  "id": 2202,
+  "handle": "WL_SOULEXPANSION",
+  "pt": "Impacto Espiritual",
+  "pedra": null
+ },
+ "쉴드 부메랑": {
+  "id": 251,
+  "handle": "CR_SHIELDBOOMERANG",
+  "pt": "Escudo Bumerangue",
+  "pedra": null
+ },
+ "쉴드 프레스": {
+  "id": 2310,
+  "handle": "LG_SHIELDPRESS",
+  "pt": "Escudo Compressor",
+  "pedra": null
+ },
+ "스톰 가스트": {
+  "id": 89,
+  "handle": "WZ_STORMGUST",
+  "pt": "Nevasca",
+  "pedra": null
+ },
+ "스포어 익스플로젼": {
+  "id": 2481,
+  "handle": "GN_SPORE_EXPLOSION",
+  "pt": "Esporo Explosivo",
+  "pedra": null
+ },
+ "아도라무스": {
+  "id": 2040,
+  "handle": "AB_ADORAMUS",
+  "pt": "Adoramus",
+  "pedra": null
+ },
+ "암즈 캐논": {
+  "id": 2261,
+  "handle": "NC_ARMSCANNON",
+  "pt": "Canhão",
+  "pedra": null
+ },
+ "애로우 스톰": {
+  "id": 2233,
+  "handle": "RA_ARROWSTORM",
+  "pt": "Tempestade de Flechas",
+  "pedra": null
+ },
+ "액스 부메랑": {
+  "id": 2278,
+  "handle": "NC_AXEBOOMERANG",
+  "pt": "Arremesso de Machado",
+  "pedra": null
+ },
+ "액스 토네이도": {
+  "id": 2280,
+  "handle": "NC_AXETORNADO",
+  "pt": "Fúria do Furacão",
+  "pedra": null
+ },
+ "어스 그레이브": {
+  "id": 2446,
+  "handle": "SO_EARTHGRAVE",
+  "pt": "Castigo de Nerthus",
+  "pedra": null
+ },
+ "어스 드라이브": {
+  "id": 2323,
+  "handle": "LG_EARTHDRIVE",
+  "pt": "Aegis Inferi",
+  "pedra": null
+ },
+ "에임드 볼트": {
+  "id": 2236,
+  "handle": "RA_AIMEDBOLT",
+  "pt": "Disparo Certeiro",
+  "pedra": null
+ },
+ "오버 브랜드": {
+  "id": 2317,
+  "handle": "LG_OVERBRAND",
+  "pt": "Lança do Destino",
+  "pedra": null
+ },
+ "오토 섀도우 스펠": {
+  "id": 2286,
+  "handle": "SC_AUTOSHADOWSPELL",
+  "pt": "Desejo das Sombras",
+  "pedra": null
+ },
+ "워그 스트라이크": {
+  "id": 2243,
+  "handle": "RA_WUGSTRIKE",
+  "pt": "Investida de Worg",
+  "pedra": null
+ },
+ "윈드 커터": {
+  "id": 2005,
+  "handle": "RK_WINDCUTTER",
+  "pt": "Vento Cortante",
+  "pedra": null
+ },
+ "유피텔 선더": {
+  "id": 84,
+  "handle": "WZ_JUPITEL",
+  "pt": "Trovão de Júpiter",
+  "pedra": null
+ },
+ "이그니션 브레이크": {
+  "id": 2006,
+  "handle": "RK_IGNITIONBREAK",
+  "pt": "Impacto Flamejante",
+  "pedra": null
+ },
+ "쥬덱스": {
+  "id": 2038,
+  "handle": "AB_JUDEX",
+  "pt": "Judex",
+  "pedra": null
+ },
+ "진동 잔향": {
+  "id": 2414,
+  "handle": "WM_REVERBERATION",
+  "pt": "Ressonância",
+  "pedra": null
+ },
+ "카운터 슬래쉬": {
+  "id": 2029,
+  "handle": "GC_COUNTERSLASH",
+  "pt": "Retaliação",
+  "pedra": null
+ },
+ "카트 캐논": {
+  "id": 2477,
+  "handle": "GN_CARTCANNON",
+  "pt": "Canhão de Prótons",
+  "pedra": null
+ },
+ "캐논 스피어": {
+  "id": 2307,
+  "handle": "LG_CANNONSPEAR",
+  "pt": "Disparo Perfurante",
+  "pedra": null
+ },
+ "커미트": {
+  "id": 2213,
+  "handle": "WL_COMET",
+  "pt": "Cometa",
+  "pedra": null
+ },
+ "크레이지 위드": {
+  "id": 2483,
+  "handle": "GN_CRAZYWEED",
+  "pt": "Erva Daninha",
+  "pedra": null
+ },
+ "크로스 리퍼 슬래셔": {
+  "id": 2037,
+  "handle": "GC_CROSSRIPPERSLASHER",
+  "pt": "Castigo de Loki",
+  "pedra": null
+ },
+ "크로스 임팩트": {
+  "id": 2022,
+  "handle": "GC_CROSSIMPACT",
+  "pt": "Lâminas Retalhadoras",
+  "pedra": null
+ },
+ "트라이앵글 샷": {
+  "id": 2288,
+  "handle": "SC_TRIANGLESHOT",
+  "pt": "Disparo Triplo",
+  "pedra": null
+ },
+ "파워 스윙": {
+  "id": 2279,
+  "handle": "NC_POWERSWING",
+  "pt": "Brandir Machado",
+  "pedra": null
+ },
+ "페이탈 메나스": {
+  "id": 2284,
+  "handle": "SC_FATALMENACE",
+  "pt": "Ofensiva Fatal",
+  "pedra": null
+ },
+ "페인트 봄": {
+  "id": 2304,
+  "handle": "SC_FEINTBOMB",
+  "pt": "Cópia Explosiva",
+  "pedra": null
+ },
+ "포이즌 버스터": {
+  "id": 2448,
+  "handle": "SO_POISON_BUSTER",
+  "pt": "Implosão Tóxica",
+  "pedra": null
+ },
+ "헌드레드 스피어": {
+  "id": 2004,
+  "handle": "RK_HUNDREDSPEAR",
+  "pt": "Lança das Mil Pontas",
+  "pedra": null
+ },
+ "헤스페루스 리트": {
+  "id": 2324,
+  "handle": "LG_HESPERUSLIT",
+  "pt": "Trindade",
+  "pedra": null
+ },
+ "홀리 크로스": {
+  "id": 253,
+  "handle": "CR_HOLYCROSS",
+  "pt": "Crux Divinum",
+  "pedra": null
+ },
+ "호포": {
+  "id": 2330,
+  "handle": "SR_TIGERCANNON",
+  "pt": "Garra de Tigre",
+  "pedra": null
+ },
+ "폭기 산탄": {
+  "id": 2332,
+  "handle": "SR_RAMPAGEBLASTER",
+  "pt": "Explosão Espiritual",
+  "pedra": null
+ },
+ "천라지망": {
+  "id": 2327,
+  "handle": "SR_SKYNETBLOW",
+  "pt": "Soco Furacão",
+  "pedra": null
+ },
+ "사령 폭발": {
+  "id": 2600,
+  "handle": "SP_CURSEEXPLOSION",
+  "pt": "Necroexplosão",
+  "pedra": null
+ },
+ "파이어 댄스": {
+  "id": 2561,
+  "handle": "RL_FIREDANCE",
+  "pt": "Descarregar Tambor",
+  "pedra": null
+ },
+ "해머 오브 갓": {
+  "id": 2571,
+  "handle": "RL_HAMMER_OF_GOD",
+  "pt": "Execução",
+  "pedra": null
+ },
+ "드래곤 테일": {
+  "id": 2566,
+  "handle": "RL_D_TAIL",
+  "pt": "Lançar Míssil",
+  "pedra": null
+ },
+ "스톰 버스터": {
+  "id": 2557,
+  "handle": "RL_S_STORM",
+  "pt": "Rajada Estilhaçante",
+  "pedra": null
+ },
+ "라운드 트립": {
+  "id": 2565,
+  "handle": "RL_R_TRIP",
+  "pt": "Expurgar",
+  "pedra": null
+ },
+ "십자 베기": {
+  "id": 3004,
+  "handle": "KO_JYUMONJIKIRI",
+  "pt": "Impacto Cruzado",
+  "pedra": null
+ },
+ "풍마수리검 난화": {
+  "id": 3009,
+  "handle": "KO_HUUMARANKA",
+  "pt": "Turbilhão de Pétalas",
+  "pedra": null
+ },
+ "에스파": {
+  "id": 2602,
+  "handle": "SP_SPA",
+  "pt": "Espa",
+  "pedra": null
+ },
+ "에스후": {
+  "id": 2604,
+  "handle": "SP_SWHOO",
+  "pt": "Eswhoo",
+  "pedra": null
+ },
+ "개다래 줄기창": {
+  "id": 5026,
+  "handle": "SU_SV_STEMSPEAR",
+  "pt": "Lança Gateira",
+  "pedra": null
+ },
+ "개박하 메테오": {
+  "id": 5028,
+  "handle": "SU_CN_METEOR",
+  "pt": "Meteoros de Nepeta",
+  "pedra": null
+ },
+ "루나틱 당근난타": {
+  "id": 5036,
+  "handle": "SU_LUNATICCARROTBEAT",
+  "pt": "Cometas Lunáticos",
+  "pedra": null
+ },
+ "픽키 마구쪼기": {
+  "id": 5033,
+  "handle": "SU_PICKYPECK",
+  "pt": "Chilique de Picky",
+  "pedra": null
+ },
+ "세비지의 영혼": {
+  "id": 5046,
+  "handle": "SU_SVG_SPIRIT",
+  "pt": "Ataque Selvagem",
+  "pedra": null
+ },
+ "염락풍": {
+  "id": null,
+  "handle": null,
+  "pt": "Kagerou (pedra)",
+  "pedra": {
+   "nome": "Cristal Invernal (Kagerou)",
+   "ids": [
+    1000199,
+    311256,
+    311185,
+    310174,
+    310563
+   ]
+  }
+ },
+ "화섬풍": {
+  "id": null,
+  "handle": null,
+  "pt": "Oboro (pedra)",
+  "pedra": {
+   "nome": "Cristal Invernal (Oboro)",
+   "ids": [
+    1000197,
+    311257,
+    311183,
+    310172,
+    310561
+   ]
+  }
+ },
+ "팔방 폭발": {
+  "id": null,
+  "handle": null,
+  "pt": "Ninja (pedra)",
+  "pedra": {
+   "nome": "Cristal Invernal (Ninja)",
+   "ids": [
+    311258
+   ]
+  }
+ },
+ "엘레멘탈 스펠": {
+  "id": null,
+  "handle": null,
+  "pt": "Magismo (pedra)",
+  "pedra": {
+   "nome": "Cristal Invernal (Magismo)",
+   "ids": [
+    311222
+   ]
+  }
+ },
+ "뇌광탄": {
+  "id": null,
+  "handle": null,
+  "pt": "Tempestade Espiritual (pedra)",
+  "pedra": {
+   "nome": "Cristal Invernal (Tempestade Espiritual)",
+   "ids": [
+    311236
+   ]
+  }
+ },
+ "수라신탄": {
+  "id": null,
+  "handle": null,
+  "pt": "Pancada Corporal (pedra)",
+  "pedra": {
+   "nome": "Cristal Invernal (Pancada Corporal)",
+   "ids": [
+    311237
+   ]
+  }
+ },
+ "홍염폭발": {
+  "id": null,
+  "handle": null,
+  "pt": "Sol",
+  "pedra": {
+   "nome": "Cristal Invernal (Sol)",
+   "ids": [
+    1000188,
+    311244,
+    311174,
+    310163,
+    310552
+   ]
+  }
+ },
+ "월각": {
+  "id": null,
+  "handle": null,
+  "pt": "Lua",
+  "pedra": {
+   "nome": "Cristal Invernal (Lua)",
+   "ids": [
+    1000189,
+    311245,
+    311175,
+    310164,
+    310553
+   ]
+  }
+ },
+ "섬광낙하": {
+  "id": null,
+  "handle": null,
+  "pt": "Estrela",
+  "pedra": {
+   "nome": "Cristal Invernal (Estrela)",
+   "ids": [
+    1000190,
+    311246,
+    311176,
+    310165,
+    310554
+   ]
+  }
+ }
+}

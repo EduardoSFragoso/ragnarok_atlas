@@ -293,7 +293,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Dragão)*",
   "col5": "",
-  "Material": "Dragon Scale",
+  "Material": "Escama de Dragão",
   "Qtd": "100",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -305,7 +305,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Dragão)*",
   "col5": "",
-  "Material": "Dragon Tail",
+  "Material": "Cauda de Dragão",
   "Qtd": "100",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -353,7 +353,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Vento Cortante)*",
   "col5": "",
-  "Material": "Vane",
+  "Material": "Catavento",
   "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -401,7 +401,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Impacto Flamejante)*",
   "col5": "",
-  "Material": "Lava",
+  "Material": "Pedra Pome",
   "Qtd": "100",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -485,7 +485,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Mil Pontas)*",
   "col5": "",
-  "Material": "Broken Needle",
+  "Material": "Espeto Quebrado",
   "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -533,7 +533,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Onda de Choque)*",
   "col5": "",
-  "Material": "Sharp Scale",
+  "Material": "Escama Aquática",
   "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -593,7 +593,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Lança do Destino)*",
   "col5": "",
-  "Material": "Old Shell",
+  "Material": "Carapaça de Tartaruga",
   "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -641,7 +641,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Trindade)*",
   "col5": "",
-  "Material": "Shining Scale",
+  "Material": "Escama Brilhante",
   "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -785,7 +785,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Luz da Criação)*",
   "col5": "",
-  "Material": "Golden Feather",
+  "Material": "Pluma Dourada",
   "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -797,7 +797,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Luz da Criação)*",
   "col5": "",
-  "Material": "Soft Feather",
+  "Material": "Pena Macia",
   "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -845,7 +845,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Escudo Compressor)*",
   "col5": "",
-  "Material": "Solid Iron Piece",
+  "Material": "Pedaço de Ferro Sólido",
   "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -941,7 +941,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Punho Foguete)*",
   "col5": "",
-  "Material": "Strange Steel Piece",
+  "Material": "Misterioso Metal em Pano",
   "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -1085,7 +1085,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Brandir Machado)*",
   "col5": "",
-  "Material": "Grit",
+  "Material": "Torrão de Areia",
   "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -1133,7 +1133,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Metralhadora)*",
   "col5": "",
-  "Material": "Metal Fragment",
+  "Material": "Pedaço de Metal",
   "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -1181,7 +1181,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Arremesso de Machado)*",
   "col5": "",
-  "Material": "Fragment",
+  "Material": "Fragmento Misterioso",
   "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -1241,7 +1241,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Tornado de Carrinho)*",
   "col5": "",
-  "Material": "Solid Husk",
+  "Material": "Casco de Inseto",
   "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -1301,7 +1301,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Prótons)*",
   "col5": "",
-  "Material": "Very Solid Purple Shell",
+  "Material": "Casca Roxa",
   "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -1349,7 +1349,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Esporo Explosivo)*",
   "col5": "",
-  "Material": "Poison Spore",
+  "Material": "Esporo Venenoso",
   "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -1397,7 +1397,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Erva Daninha)*",
   "col5": "",
-  "Material": "Maneater Root",
+  "Material": "Raiz de Planta Carnívora",
   "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -1409,7 +1409,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Erva Daninha)*",
   "col5": "",
-  "Material": "Brown Root",
+  "Material": "Raiz Marrom",
   "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -1457,7 +1457,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Castigo de Loki)*",
   "col5": "",
-  "Material": "Sharp Scale",
+  "Material": "Escama Aquática",
   "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -1601,7 +1601,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Lâminas Retalhadoras)*",
   "col5": "",
-  "Material": "Reptile Tongue",
+  "Material": "Língua de Réptil",
   "Qtd": "100",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -1673,7 +1673,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Ofensiva Fatal)*",
   "col5": "",
-  "Material": "Poisonous Powder",
+  "Material": "Poeira Venenosa",
   "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -1685,7 +1685,7 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Ofensiva Fatal)*",
   "col5": "",
-  "Material": "Sticky Poison",
+  "Material": "Veneno Pegajoso",
   "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
@@ -1733,11 +1733,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Crux Divinum)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Jejellopy",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Crux Divinum)*",
+  "col5": "",
+  "Material": "Jellopy Tamanho Família",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -1781,11 +1793,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Escudo Bumerange)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Monte de Lama",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Escudo Bumerange)*",
+  "col5": "",
+  "Material": "Lama Endurecida",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -1829,11 +1853,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Disparo Triplo)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Escama Afiada",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Disparo Triplo)*",
+  "col5": "",
+  "Material": "Veneno de Cobra",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -1877,11 +1913,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Cópia Explosiva)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Resina",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Cópia Explosiva)*",
+  "col5": "",
+  "Material": "Pata Pegajosa",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -1925,11 +1973,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Autoconjuração)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Pó de Borboleta",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Autoconjuração)*",
+  "col5": "",
+  "Material": "Escamas de Cobra",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -1973,11 +2033,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Apunhalar)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Poeira Venenosa",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2021,11 +2081,35 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Magismo)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Coração Imortal",
+  "Qtd": "100",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Magismo)*",
+  "col5": "",
+  "Material": "Coração de Sereia",
+  "Qtd": "100",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Magismo)*",
+  "col5": "",
+  "Material": "Coração de Pedra",
+  "Qtd": "100",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2069,11 +2153,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Impacto Espiritual)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Bigode de Anão Ancião",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Impacto Espiritual)*",
+  "col5": "",
+  "Material": "Poder Mágico Angelical",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2117,11 +2213,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Cometa)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Pergaminho Antigo",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2165,11 +2261,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Ira de Thor)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Monte de Lama",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Ira de Thor)*",
+  "col5": "",
+  "Material": "Lama Endurecida",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2213,11 +2321,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Trovão de Júpiter)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Ferrão de Abelha",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Trovão de Júpiter)*",
+  "col5": "",
+  "Material": "Espinho de Cacto",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2261,11 +2381,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Chuva de Meteoros)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Zé-Lanterna",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Chuva de Meteoros)*",
+  "col5": "",
+  "Material": "Lenha em Brasa",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2309,11 +2441,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Nevasca)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Cubo de Gelo",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Nevasca)*",
+  "col5": "",
+  "Material": "Bola de Neve",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2357,11 +2501,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Onda Psíquica)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Alma de Nazarian",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2405,11 +2549,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Pó de Diamante)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Cubo de Gelo",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Pó de Diamante)*",
+  "col5": "",
+  "Material": "Coração Glacial",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2453,11 +2609,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Lanças dos Aesir)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Poeira Estelar",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Lanças dos Aesir)*",
+  "col5": "",
+  "Material": "Chifre de Dokebi",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2501,11 +2669,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Castigo de Nerthus)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Torrão de Areia",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Castigo de Nerthus)*",
+  "col5": "",
+  "Material": "Areia Estelar de Bruxa",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2549,11 +2729,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Implosão Tóxica)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Poeira Estelar",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Implosão Tóxica)*",
+  "col5": "",
+  "Material": "Chifre de Dokebi",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2597,11 +2789,35 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Adoramus)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Tecido",
+  "Qtd": "100",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Adoramus)*",
+  "col5": "",
+  "Material": "Retalho Negro",
+  "Qtd": "100",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Adoramus)*",
+  "col5": "",
+  "Material": "Tecido Macio",
+  "Qtd": "100",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2645,11 +2861,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Judex)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Pluma",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Judex)*",
+  "col5": "",
+  "Material": "Sonho Angelical",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2693,11 +2921,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Gemini Lumen)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Jarro de Nuvem",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2741,11 +2969,35 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Garra de Tigre)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Cabelos Dourados",
+  "Qtd": "100",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Garra de Tigre)*",
+  "col5": "",
+  "Material": "Chifre de Leão da Montanha",
+  "Qtd": "100",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Garra de Tigre)*",
+  "col5": "",
+  "Material": "Tanga de Tigre",
+  "Qtd": "100",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2789,11 +3041,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Explosão Espiritual)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Crina",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2837,11 +3089,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Soco Furacão)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Dente Fossilizado",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2885,11 +3137,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Tempestade Espiritual)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Casca Arredondada",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2933,11 +3185,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Pancada Corporal)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Trança Curta",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -2981,11 +3233,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Disparo Certeiro)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Bigodes de Toupeira",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Disparo Certeiro)*",
+  "col5": "",
+  "Material": "Garras de Toupeira",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3029,11 +3293,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Tempestade de Flechas)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Espinho de Porco-Espinho",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Tempestade de Flechas)*",
+  "col5": "",
+  "Material": "Presa de Zenorc",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3077,11 +3353,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Investida de Worg)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Garra de Lobo do Deserto",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3125,11 +3401,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Temporal de Flechas)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Casco Arco-Íris",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3173,11 +3449,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Ruído Estridente)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Lampião",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3221,11 +3497,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Ressonância)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Geleia Brilhante",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3269,11 +3545,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Sol)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Asa de Morcego Vermelho",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3317,11 +3593,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Lua)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Areia Estelar de Bruxa",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3365,11 +3641,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Estrela)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Cabelos Dourados",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Estrela)*",
+  "col5": "",
+  "Material": "Pluma Dourada",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3413,11 +3701,35 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Espa)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Fragmento Sombrio",
+  "Qtd": "100",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Espa)*",
+  "col5": "",
+  "Material": "Fragmento de Cristal Negro",
+  "Qtd": "100",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Espa)*",
+  "col5": "",
+  "Material": "Runa da Escuridão",
+  "Qtd": "100",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3461,11 +3773,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Eswhoo)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Pele Negra de Urso",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Eswhoo)*",
+  "col5": "",
+  "Material": "Retalho Negro",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3509,11 +3833,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Necroexplosão)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Osso",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Necroexplosão)*",
+  "col5": "",
+  "Material": "Espólio",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3557,11 +3893,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Descarregar Tambor)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Ferradura em Chamas",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Descarregar Tambor)*",
+  "col5": "",
+  "Material": "Revólver Velho",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3605,11 +3953,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Execução)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Munição Ilegal",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3653,11 +4001,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Lançar Míssil)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Lenço Marrom",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3701,11 +4049,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Rajada Estilhaçante)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Espingarda Quebrada",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3749,11 +4097,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Expurgar)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Pano de Bandido",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3797,11 +4145,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Impacto Cruzado)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Shuriken Despedaçado",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3845,11 +4193,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Kagerou)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Gema Congelada",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3893,11 +4241,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Oboro)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Bola de Neve",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3941,11 +4289,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Ninja)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Algema de Identificação",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -3989,11 +4337,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Turbilhão de Pétalas)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Shuriken Gasto",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -4037,11 +4385,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Lança Gateira)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Pedaço de Escama Dura",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Lança Gateira)*",
+  "col5": "",
+  "Material": "Cipó",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -4085,11 +4445,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Meteoros de Nepeta)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Galho Resistente",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -4133,11 +4493,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Cometas Lunáticos)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Pluma",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -4181,11 +4541,23 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Chilique de Picky)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Plumas de Ave",
+  "Qtd": "150",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+ },
+ {
+  "Episódio": "Issgard (Ep. 19)",
+  "Equipamento-alvo": "Armas Invernais (4 slots)",
+  "Slot": "{2}",
+  "Tipo de efeito": "Cristal Invernal (Chilique de Picky)*",
+  "col5": "",
+  "Material": "Bico de Ave",
+  "Qtd": "150",
+  "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
+  "/navi": "/navi icas_in 188/60",
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",
@@ -4229,11 +4601,11 @@
   "Slot": "{2}",
   "Tipo de efeito": "Cristal Invernal (Ataque Selvagem)*",
   "col5": "",
-  "Material": "Itens de drop de monstros (varia por habilidade)",
-  "Qtd": "até 300",
+  "Material": "Crina",
+  "Qtd": "300",
   "Onde encantar / obter (NPC)": "Poruru (Castelo de Gelo)",
   "/navi": "/navi icas_in 188/60",
-  "Observação": "Lista de drops conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
+  "Observação": "Custo com Globos e itens de drop conforme Hazy Forest (kRO); a bROWiki marca como \"lista a confirmar\". * Não confirmado."
  },
  {
   "Episódio": "Issgard (Ep. 19)",

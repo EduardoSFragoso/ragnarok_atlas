@@ -1,0 +1,644 @@
+{
+ "Crystal Fragment": {
+  "ids": [
+   7321
+  ],
+  "nome": "Fragmento de Cristal"
+ },
+ "Feather": {
+  "ids": [
+   949
+  ],
+  "nome": "Pluma"
+ },
+ "Shining Scale": {
+  "ids": [
+   954
+  ],
+  "nome": "Escama Brilhante"
+ },
+ "Soft Feather": {
+  "ids": [
+   7063
+  ],
+  "nome": "Pena Macia"
+ },
+ "가느다란 줄기": {
+  "ids": [
+   7186
+  ],
+  "nome": "Cipó"
+ },
+ "갈색 머플러": {
+  "ids": [
+   25283
+  ],
+  "nome": "Lenço Marrom"
+ },
+ "갈색뿌리": {
+  "ids": [
+   7188
+  ],
+  "nome": "Raiz Marrom"
+ },
+ "검은 곰의 가죽": {
+  "ids": [
+   7161
+  ],
+  "nome": "Pele Negra de Urso"
+ },
+ "검은 수정의 조각": {
+  "ids": [
+   7315
+  ],
+  "nome": "Fragmento de Cristal Negro"
+ },
+ "검은 천조각": {
+  "ids": [
+   7205
+  ],
+  "nome": "Retalho Negro"
+ },
+ "고대어의 이빨": {
+  "ids": [
+   1053
+  ],
+  "nome": "Dente Fossilizado"
+ },
+ "고목나무의 진": {
+  "ids": [
+   907
+  ],
+  "nome": "Resina"
+ },
+ "고슴도치의 가시": {
+  "ids": [
+   1027
+  ],
+  "nome": "Espinho de Porco-Espinho"
+ },
+ "고장난 샷건": {
+  "ids": [
+   25280
+  ],
+  "nome": "Espingarda Quebrada"
+ },
+ "구름 조각": {
+  "ids": [
+   7162
+  ],
+  "nome": "Jarro de Nuvem"
+ },
+ "굳어버린 용암": {
+  "ids": [
+   7096
+  ],
+  "nome": "Pedra Pome"
+ },
+ "금빛 머리카락": {
+  "ids": [
+   1060
+  ],
+  "nome": "Cabelos Dourados"
+ },
+ "금빛 털": {
+  "ids": [
+   6394
+  ],
+  "nome": "Pluma Dourada"
+ },
+ "기묘한 철조각": {
+  "ids": [
+   7167
+  ],
+  "nome": "Misterioso Metal em Pano"
+ },
+ "깨진 갑옷조각": {
+  "ids": [
+   7069
+  ],
+  "nome": "Armadura Destruída"
+ },
+ "깨진 금속 파편": {
+  "ids": [
+   7095
+  ],
+  "nome": "Pedaço de Metal"
+ },
+ "깨진 슈리켄": {
+  "ids": [
+   7156
+  ],
+  "nome": "Shuriken Despedaçado"
+ },
+ "끈적끈적한 독": {
+  "ids": [
+   7565
+  ],
+  "nome": "Veneno Pegajoso"
+ },
+ "끈적이는 물갈퀴": {
+  "ids": [
+   918
+  ],
+  "nome": "Pata Pegajosa"
+ },
+ "나비의 날개가루": {
+  "ids": [
+   924
+  ],
+  "nome": "Pó de Borboleta"
+ },
+ "나사리안의 영혼석": {
+  "ids": [
+   25615
+  ],
+  "nome": "Alma de Nazarian"
+ },
+ "날카로운 비늘": {
+  "ids": [
+   963
+  ],
+  "nome": "Escama Aquática"
+ },
+ "날카로운 송곳니": {
+  "ids": [
+   1063
+  ],
+  "nome": "Presa"
+ },
+ "날카로운 잎사귀": {
+  "ids": [
+   7100
+  ],
+  "nome": "Folha Afiada"
+ },
+ "낡은 리볼버": {
+  "ids": [
+   25282
+  ],
+  "nome": "Revólver Velho"
+ },
+ "낡은 마법진": {
+  "ids": [
+   7099
+  ],
+  "nome": "Pergaminho Antigo"
+ },
+ "낡은 수리검": {
+  "ids": [
+   7072
+  ],
+  "nome": "Shuriken Gasto"
+ },
+ "낡은 철판": {
+  "ids": [
+   7319
+  ],
+  "nome": "Placa de Ferro Usada"
+ },
+ "눈덩이": {
+  "ids": [
+   25299
+  ],
+  "nome": "Bola de Neve"
+ },
+ "늙은요정의 수염": {
+  "ids": [
+   1040
+  ],
+  "nome": "Bigode de Anão Ancião"
+ },
+ "단단하게 뭉친 진흙": {
+  "ids": [
+   25641
+  ],
+  "nome": "Lama Endurecida"
+ },
+ "단단한 더듬이": {
+  "ids": [
+   7163
+  ],
+  "nome": "Antenas Afiadas"
+ },
+ "단단한 등껍질": {
+  "ids": [
+   7190
+  ],
+  "nome": "Casco de Inseto"
+ },
+ "단단한 철조각": {
+  "ids": [
+   7507
+  ],
+  "nome": "Pedaço de Ferro Sólido"
+ },
+ "도깨비의 뿔": {
+  "ids": [
+   1021
+  ],
+  "nome": "Chifre de Dokebi"
+ },
+ "도적단 스카프": {
+  "ids": [
+   25278
+  ],
+  "nome": "Pano de Bandido"
+ },
+ "독 송곳니": {
+  "ids": [
+   937
+  ],
+  "nome": "Canino Venenoso"
+ },
+ "독가루": {
+  "ids": [
+   7154
+  ],
+  "nome": "Poeira Venenosa"
+ },
+ "독버섯 포자": {
+  "ids": [
+   7033
+  ],
+  "nome": "Esporo Venenoso"
+ },
+ "돌심장": {
+  "ids": [
+   953
+  ],
+  "nome": "Coração de Pedra"
+ },
+ "두더지의 손톱": {
+  "ids": [
+   1018
+  ],
+  "nome": "Garras de Toupeira"
+ },
+ "두더지의 수염": {
+  "ids": [
+   1017
+  ],
+  "nome": "Bigodes de Toupeira"
+ },
+ "둥근 껍질": {
+  "ids": [
+   1096
+  ],
+  "nome": "Casca Arredondada"
+ },
+ "듀라한의 갑옷조각": {
+  "ids": [
+   7210
+  ],
+  "nome": "Armadura de Dullahan"
+ },
+ "드래곤의 꼬리": {
+  "ids": [
+   1037
+  ],
+  "nome": "Cauda de Dragão"
+ },
+ "드래곤의 비늘": {
+  "ids": [
+   1036
+  ],
+  "nome": "Escama de Dragão"
+ },
+ "드래곤의 이빨": {
+  "ids": [
+   1035
+  ],
+  "nome": "Canino de Dragão"
+ },
+ "라지 젤로피": {
+  "ids": [
+   7126
+  ],
+  "nome": "Jellopy Tamanho Família"
+ },
+ "랜턴": {
+  "ids": [
+   1041
+  ],
+  "nome": "Lampião"
+ },
+ "마녀의 별모래": {
+  "ids": [
+   1061
+  ],
+  "nome": "Areia Estelar de Bruxa"
+ },
+ "매우 단단한 보라빛 껍질": {
+  "ids": [
+   25776
+  ],
+  "nome": "Casca Roxa"
+ },
+ "매우 단단한 복숭아": {
+  "ids": [
+   7164
+  ],
+  "nome": "Pêssego Petrificado"
+ },
+ "멈추지 않는 심장": {
+  "ids": [
+   929
+  ],
+  "nome": "Coração Imortal"
+ },
+ "멧돼지의 갈기털": {
+  "ids": [
+   1028
+  ],
+  "nome": "Crina"
+ },
+ "모래 조각": {
+  "ids": [
+   1056
+  ],
+  "nome": "Torrão de Areia"
+ },
+ "미지의 조각": {
+  "ids": [
+   7094
+  ],
+  "nome": "Fragmento Misterioso"
+ },
+ "바람개비의 칼날": {
+  "ids": [
+   7192
+  ],
+  "nome": "Catavento"
+ },
+ "뱀의 맹독": {
+  "ids": [
+   25773
+  ],
+  "nome": "Veneno de Cobra"
+ },
+ "뱀의 비늘조각": {
+  "ids": [
+   926
+  ],
+  "nome": "Escamas de Cobra"
+ },
+ "벌의 뒷침": {
+  "ids": [
+   939
+  ],
+  "nome": "Ferrão de Abelha"
+ },
+ "별의 가루": {
+  "ids": [
+   1001
+  ],
+  "nome": "Poeira Estelar"
+ },
+ "부러진 바늘": {
+  "ids": [
+   7215
+  ],
+  "nome": "Espeto Quebrado"
+ },
+ "불씨": {
+  "ids": [
+   7098
+  ],
+  "nome": "Lenha em Brasa"
+ },
+ "불타는 말발굽": {
+  "ids": [
+   7120
+  ],
+  "nome": "Ferradura em Chamas"
+ },
+ "불타는 심장": {
+  "ids": [
+   7097
+  ],
+  "nome": "Coração Incandescente"
+ },
+ "붉은 박쥐의 날개": {
+  "ids": [
+   7006
+  ],
+  "nome": "Asa de Morcego Vermelho"
+ },
+ "비늘로된 줄기": {
+  "ids": [
+   906
+  ],
+  "nome": "Escama Afiada"
+ },
+ "뼈조각": {
+  "ids": [
+   932
+  ],
+  "nome": "Osso"
+ },
+ "사막 늑대의 발톱": {
+  "ids": [
+   7030
+  ],
+  "nome": "Garra de Lobo do Deserto"
+ },
+ "새의 깃털": {
+  "ids": [
+   916
+  ],
+  "nome": "Plumas de Ave"
+ },
+ "새의 부리": {
+  "ids": [
+   925
+  ],
+  "nome": "Bico de Ave"
+ },
+ "선인장의 뾰족한 침": {
+  "ids": [
+   952
+  ],
+  "nome": "Espinho de Cacto"
+ },
+ "시계바늘": {
+  "ids": [
+   1095
+  ],
+  "nome": "Ponteiro"
+ },
+ "식인수의 뿌리": {
+  "ids": [
+   1033
+  ],
+  "nome": "Raiz de Planta Carnívora"
+ },
+ "알록달록한 등껍질": {
+  "ids": [
+   1013
+  ],
+  "nome": "Casco Arco-Íris"
+ },
+ "어둠의 룬": {
+  "ids": [
+   7511
+  ],
+  "nome": "Runa da Escuridão"
+ },
+ "어둠의 조각": {
+  "ids": [
+   6089
+  ],
+  "nome": "Fragmento Sombrio"
+ },
+ "얼음 심장": {
+  "ids": [
+   7561
+  ],
+  "nome": "Coração Glacial"
+ },
+ "얼음조각": {
+  "ids": [
+   7066
+  ],
+  "nome": "Cubo de Gelo"
+ },
+ "오래된 등껍질": {
+  "ids": [
+   25313
+  ],
+  "nome": "Carapaça de Tartaruga"
+ },
+ "오색빛 젤리조각": {
+  "ids": [
+   25778
+  ],
+  "nome": "Geleia Brilhante"
+ },
+ "오우거의 이빨": {
+  "ids": [
+   7002
+  ],
+  "nome": "Dente de Ogro"
+ },
+ "요정의 마법가루": {
+  "ids": [
+   6395
+  ],
+  "nome": "Poder Mágico Angelical"
+ },
+ "인어의 심장": {
+  "ids": [
+   950
+  ],
+  "nome": "Coração de Sereia"
+ },
+ "제노크의 이빨": {
+  "ids": [
+   1044
+  ],
+  "nome": "Presa de Zenorc"
+ },
+ "제젤로피": {
+  "ids": [
+   6498
+  ],
+  "nome": "Jejellopy"
+ },
+ "조잡한 탄약": {
+  "ids": [
+   25279
+  ],
+  "nome": "Munição Ilegal"
+ },
+ "죄수의 팔찌": {
+  "ids": [
+   7345
+  ],
+  "nome": "Algema de Identificação"
+ },
+ "죽은자의 유품": {
+  "ids": [
+   934
+  ],
+  "nome": "Espólio"
+ },
+ "진흙 덩어리": {
+  "ids": [
+   7004
+  ],
+  "nome": "Monte de Lama"
+ },
+ "질긴 비늘 줄기": {
+  "ids": [
+   7012
+  ],
+  "nome": "Pedaço de Escama Dura"
+ },
+ "짧은 댕기머리": {
+  "ids": [
+   1094
+  ],
+  "nome": "Trança Curta"
+ },
+ "찌그러진 주전자": {
+  "ids": [
+   7323
+  ],
+  "nome": "Chaleira Surrada"
+ },
+ "천사의 꿈": {
+  "ids": [
+   25767
+  ],
+  "nome": "Sonho Angelical"
+ },
+ "투명한 천조각": {
+  "ids": [
+   1059
+  ],
+  "nome": "Tecido"
+ },
+ "튼튼한 나뭇가지": {
+  "ids": [
+   7203
+  ],
+  "nome": "Galho Resistente"
+ },
+ "파충류의 혓바닥": {
+  "ids": [
+   903
+  ],
+  "nome": "Língua de Réptil"
+ },
+ "푹신한 천조각": {
+  "ids": [
+   25775
+  ],
+  "nome": "Tecido Macio"
+ },
+ "호랑이 팬티": {
+  "ids": [
+   7267
+  ],
+  "nome": "Tanga de Tigre"
+ },
+ "호박 머리": {
+  "ids": [
+   1062
+  ],
+  "nome": "Zé-Lanterna"
+ },
+ "혼이 담긴 보석": {
+  "ids": [
+   25298
+  ],
+  "nome": "Gema Congelada"
+ },
+ "힐스리온의 뿔": {
+  "ids": [
+   6032
+  ],
+  "nome": "Chifre de Leão da Montanha"
+ }
+}
