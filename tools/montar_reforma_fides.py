@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Gera data/referencia/reforma_fides.json a partir da bROWiki.
+"""Gera data/reforma_fides.json a partir da bROWiki.
 
 Fonte: https://browiki.org/wiki/Aldeia_do_Lobo_Cinzento (seções
 Armas Fides / Reforma / Bônus aleatórios). Não usa API nem chave.
@@ -12,8 +12,8 @@ import re
 import urllib.request
 
 URL = "https://browiki.org/wiki/Aldeia_do_Lobo_Cinzento"
-SAIDA = "data/referencia/reforma_fides.json"
-IDMAP = "data/referencia/itens_divine_pride.json"
+SAIDA = "data/reforma_fides.json"
+IDMAP = "data/itens_divine_pride.json"
 UA = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
     "Accept-Language": "pt-BR,pt;q=0.9",

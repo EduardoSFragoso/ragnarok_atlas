@@ -10,9 +10,9 @@ Uso (na raiz do projeto):
     python3 tools/baixar_icones.py            # baixa o que falta
     python3 tools/baixar_icones.py --dry-run  # só lista o que falta
 
-Os IDs vêm de data/referencia/itens_divine_pride.json, das planilhas de
-data/facilidades/ e dos IDs fixos de app.js. Nomes sem ID não podem ser
-baixados: eles são gravados em data/referencia/itens_sem_id.txt. Para
+Os IDs vêm de data/itens_divine_pride.json, das planilhas de
+data/ e dos IDs fixos de app.js. Nomes sem ID não podem ser
+baixados: eles são gravados em data/itens_sem_id.txt. Para
 resolvê-los, adicione "Nome do item": ID em itens_divine_pride.json e rode
 o script de novo.
 """
@@ -32,18 +32,21 @@ def linhas_json(path):
 
 def coletar():
     ids = {n: int(i) for n, i in re.findall(r"'([^']+)':(\d{3,8})", (ROOT / 'app.js').read_text(encoding='utf-8'))}
-    ids.update({n: int(i) for n, i in json.loads((ROOT / 'data/referencia/itens_divine_pride.json').read_text(encoding='utf-8')).items()})
+    ids.update({n: int(i) for n, i in json.loads((ROOT / 'data/itens_divine_pride.json').read_text(encoding='utf-8')).items()})
     nomes = set()
-    for f in sorted((ROOT / 'data/facilidades').glob('*.json')):
-        flechas = 'flechas' in f.name.lower()
+    FACILIDADES = ['fabricar_flechas.json', 'criar_toxina.json', 'criar_veneno_mortal.json', 'pericia_em_runas.json',
+                   'preparar_pocao.json', 'manipular_pocao.json', 'farmacologia_avancada.json', 'culinaria_avancada.json']
+    for nome in FACILIDADES:
+        f = ROOT / 'data' / nome
+        flechas = nome == 'fabricar_flechas.json'
         for k, r in enumerate(linhas_json(f)):
             r += [''] * 10
             if r[0].isdigit() and r[2]: ids[r[2]] = int(r[0])
             if r[4].isdigit() and r[6]: ids[r[6]] = int(r[4])
             if k >= (2 if flechas else 1): nomes.update(r[c].strip() for c in ((1, 3) if flechas else (2, 6)) if r[c].strip())
-    for r in linhas_json(ROOT / 'data/referencia/custo_de_encantamento.json')[1:]:
+    for r in linhas_json(ROOT / 'data/custo_de_encantamento.json')[1:]:
         if len(r) > 5 and r[5]: nomes.add(r[5])
-    for r in linhas_json(ROOT / 'data/referencia/reforma_de_armas.json')[1:]:
+    for r in linhas_json(ROOT / 'data/reforma_de_armas.json')[1:]:
         r += [''] * 12
         nomes.update(r[c] for c in (2, 5, 9) if r[c])
     sem_id = sorted(n for n in nomes - IGNORAR if n not in ids and re.sub(r'\s*\[\d+\]$', '', n) not in ids)
@@ -60,12 +63,12 @@ def baixar(i):
 def main():
     ids, sem_id = coletar()
     faltam = [i for i in ids if not (ICONS / f'{i}.png').exists()]
-    lista = ROOT / 'data/referencia/itens_sem_id.txt'
+    lista = ROOT / 'data/itens_sem_id.txt'
     if sem_id:
         lista.write_text('\n'.join(sem_id) + '\n', encoding='utf-8')
     elif lista.exists():
         lista.unlink()
-    print(f'{len(ids)} IDs conhecidos · {len(faltam)} ícones faltando · {len(sem_id)} nomes sem ID (veja data/referencia/itens_sem_id.txt)')
+    print(f'{len(ids)} IDs conhecidos · {len(faltam)} ícones faltando · {len(sem_id)} nomes sem ID (veja data/itens_sem_id.txt)')
     if '--dry-run' in sys.argv or not faltam:
         return
     ICONS.mkdir(parents=True, exist_ok=True)

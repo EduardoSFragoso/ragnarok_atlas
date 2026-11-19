@@ -10,47 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="styles-v11.css">
-  <style>
-    /* Texto pequeno mais legível (sobrepõe styles.css) */
-    .table-search-note{font-size:14px}
-    .fold-count{font-size:13px}
-    small{font-size:13px}
-
-    /* Guia de episódio — passos compactos com /navi clicável */
-    .itens-necessarios{margin-bottom:8px}
-    .guide-steps{list-style:none;padding-left:0;margin:0}
-    .guide-step{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;margin:0 0 8px}
-    .step-num{font-weight:700;min-width:1.6em}
-    .step-text{flex:1 1 340px}
-    .gift-line{font-size:14px;margin:0 0 12px;opacity:.85}
-    .navi-chip{display:inline-flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:13px;line-height:1.4;padding:3px 10px;border-radius:8px;border:1px solid rgba(128,145,170,.4);background:rgba(128,145,170,.08);color:inherit;cursor:pointer;vertical-align:middle}
-    .navi-chip:hover{border-color:#7aa2f7}
-    .navi-chip.copied{border-color:#4ade80}
-    .navi-chip code{background:none;padding:0;font-family:inherit}
-    .midgard-list{margin:0;padding-left:20px}
-    .midgard-list li{margin-bottom:6px}
-
-    /* Avisos e controles maiores */
-    .cost-summary{font-size:16px;line-height:1.6}
-    .como-ler{font-size:15px;line-height:1.65}
-    .rc-stepper{display:flex;align-items:center;gap:10px}
-    .rc-stepper b{font-size:18px;min-width:2.5em;text-align:center}
-
-    /* Mobile: ajustes das páginas do guia (a base responsiva está no styles.css) */
-    @media(max-width:760px){
-      .guide-step{align-items:flex-start}
-      .step-text{flex:1 1 100%}
-      .navi-chip{max-width:100%}
-      .navi-chip code{white-space:normal;word-break:break-all}
-      .gift-line{font-size:13px;line-height:1.6}
-      .panel-note{font-size:13px}
-      .toolbar select{min-width:0;width:100%}
-      .ingredient{font-size:12px}
-      .bonus-entry{white-space:normal;font-size:13px}
-    }
-    @media(max-width:460px){.fields{grid-template-columns:1fr}.data-table td{font-size:12px}}
-  </style>
 </head>
 <body data-theme="light">
   <div class="app-shell">
@@ -59,6 +18,7 @@
         <button class="nav-link active" data-view="inicio"><span>⌂</span> Visão geral</button>
         <button class="nav-link" data-view="guia"><span>❖</span> Guia de Episódio</button>
         <button class="nav-link" data-view="diarias"><span>⟳</span> Missões diárias</button>
+        <button class="nav-link" data-view="estoque"><span>▦</span> Estoque</button>
         <button class="nav-link" data-view="equipamentos"><span>◈</span> Equipamentos</button>
         <button class="nav-link" data-view="encantamentos"><span>✳</span> Encantamentos</button>
         <button class="nav-link" data-view="custos"><span>◇</span> Custos & materiais</button>

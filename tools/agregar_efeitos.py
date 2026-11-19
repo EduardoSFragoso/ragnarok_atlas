@@ -1,7 +1,7 @@
 import json
 import re
 
-PATH = "data/referencia/encantamentos_disponiveis.json"
+PATH = "data/encantamentos_disponiveis.json"
 COLUNA = "Efeito (+11)"
 MAX_REFINO = 11
 

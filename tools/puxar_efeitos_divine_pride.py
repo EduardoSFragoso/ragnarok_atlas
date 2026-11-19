@@ -4,11 +4,11 @@
 A API oficial (https://www.divine-pride.net/api) só atende por ID de item e
 precisa de uma apiKey gratuita. Este script:
 
-    1. Lê data/referencia/encantamentos_disponiveis.json e separa as linhas dos
+    1. Lê data/encantamentos_disponiveis.json e separa as linhas dos
        Episódios 17.2 e 18 cujo "Efeito (+11)" está pendente (ver Divine Pride
        ou valor não informado).
     2. Resolve o ID de cada encantamento: primeiro pelo registro local
-       data/referencia/itens_divine_pride.json ("Automódulo de H-Dragão" e
+       data/itens_divine_pride.json ("Automódulo de H-Dragão" e
        afins); nomes ainda sem ID passam pela listagem da própria API
        (/api/database/Item?query=…&server=LATAM), marcada como "busca" no
        arquivo de saída para conferência manual.
@@ -49,9 +49,9 @@ def linhas_json(path):
 
 
 def pendentes():
-    ids = json.loads((ROOT / 'data/referencia/itens_divine_pride.json').read_text(encoding='utf-8'))
+    ids = json.loads((ROOT / 'data/itens_divine_pride.json').read_text(encoding='utf-8'))
     linhas = []
-    for r in linhas_json(ROOT / 'data/referencia/encantamentos_disponiveis.json')[1:]:
+    for r in linhas_json(ROOT / 'data/encantamentos_disponiveis.json')[1:]:
         r += [''] * 12
         ep, alvo, enc, efeito = r[0], r[1], r[5], r[6]
         if not re.search(r'17\.2|Ep\. 18|Oração', ep):
