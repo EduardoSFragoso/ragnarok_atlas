@@ -1,0 +1,23 @@
+# Configuração do Ruff (lint + formatador) para os scripts de tools/
+line-length = 120
+target-version = "py312"
+
+[lint]
+select = [
+  "E",   # pycodestyle (erros)
+  "W",   # pycodestyle (avisos)
+  "F",   # pyflakes
+  "I",   # ordenação de imports
+  "UP",  # sintaxe moderna
+  "B",   # bugbear (armadilhas comuns)
+  "SIM", # simplificações
+  "RUF", # regras específicas do ruff
+]
+ignore = [
+  "E501", # linhas longas liberadas (strings de URL e mensagens)
+  "SIM105", # contextlib.suppress — preferimos try/except explícito
+]
+
+[format]
+quote-style = "double"
+indent-style = "space"

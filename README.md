@@ -45,11 +45,21 @@ Os arquivos de `data/` estão em **JSON**, direto na raiz da pasta (sem subpasta
 - **`tools/agregar_efeitos.py`** — agrega no JSON de encantamentos os efeitos itemizados por nível de refino na soma total até o +11, no formato publicado pelo workflow do Divine Pride.
 - **`tools/montar_reforma_fides.py`** — baixa a página da bROWiki da Aldeia do Lobo Cinzento (sem API nem chave) e regenera `data/reforma_fides.json` com os rituais de reforma, o mapeamento armas Adulter → Vivatus Fides por classe e as faixas de bônus aleatórios.
 - **`tools/converter_tsv_json.py`** — converte os TSVs antigos de `data/` para o formato JSON atual (cada linha vira um objeto com as colunas nomeadas); mantido para referência e para reverter a conversão a partir da branch `legado`.
-- **`.github/workflows/puxar-efeitos-divine-pride.yml`** — workflow manual (`workflow_dispatch`) que roda o script de efeitos usando o segredo do repositório `DP_API_KEY` (chave da API do Divine Pride) e abre os resultados direto nos arquivos de dados; não há agendamento.
+- **`.github/workflows/puxar-efeitos-divine-pride.yml`** — workflow manual (`workflow_dispatch`) que roda o script de efeitos usando o segredo do repositório `DP_API_KEY` (chave da API do Divine Pride) e abre um **pull request** (branch `data/divine-pride`) com os resultados resumidos no corpo do PR, para revisão antes de entrar no site; não há agendamento. Há `concurrency` para duas execuções não disputarem o push.
 - Saídas auxiliares: `tools/skills_pt.json` (renomeações oficiais aplicadas), `tools/divine_pride_skills.json` (nomes/efeitos das habilidades citadas pelos encantamentos, em pt-BR — cobre as 99 habilidades dos eps 17.2/18/19, então a fase de habilidades do workflow não precisa rodar de novo), `tools/divine_pride_saida.json` (resposta bruta da API) e `tools/divine_pride_faltando.txt` (IDs sem resposta). As habilidades podem também ser resolvidas sem chave de API pelas páginas públicas do Divine Pride (`/database/skill/{id}` com `Accept-Language: pt` + `x-server: LATAM`), que embutem o nome e o efeito oficiais do cliente LATAM.
 - Mapas de referência de IDs (evitam buscas repetidas na API): `tools/itens_hazy_kr.json` (os 107 itens de drop do Hazy Forest: nome kRO → ids e nome PT), `tools/skills_hazy_ids.json` (habilidades da tabela de encantos do Hazy Forest: nome kRO → id/handle/nome PT, mais as pedras de encantamento LATAM equivalentes e seus ids de item) e `tools/skills_pt_ids.json` (nome PT → id). Consultas na API do Divine Pride devem ser feitas **somente por ID**; a busca por nome fica permanentemente bloqueada (429).
 
 Os ícones já identificados são armazenados em `assets/icons/` para evitar novas solicitações durante o uso (para regenerá-los, veja **Ferramentas**). O ícone da aba do navegador é `assets/favicon.svg` (veja **Aviso de licença e conteúdo de terceiros**). Conforme informado pelo mantenedor, há autorização explícita para redistribuir esses ícones e usar os dados e textos de efeitos relacionados à API neste projeto. Essa autorização é independente da licença MIT do código.
+
+## Qualidade de código
+
+O projeto usa linters e formatadores com configuração versionada (aplicados nos scripts de `tools/` e nos arquivos web):
+
+- **Ruff** (`ruff.toml`) — lint e formatação dos scripts Python (`py -m ruff check tools/` e `py -m ruff format tools/`); instale com `py -m pip install --user ruff`.
+- **Prettier** (`.prettierrc.json`) — formatação de `app.js`, `index.html` e `styles.css` (`npx prettier@3 --write app.js index.html styles.css`).
+- **ESLint** (`eslint.config.js`) — lint do `app.js` para o navegador (`npx eslint@9 app.js`).
+
+Comentários e docstrings são escritos em português do Brasil. Os scripts gravam JSON/texto de forma atômica (arquivo temporário + renomear) e com final de linha LF, para o resultado local e o do CI serem idênticos. A chave de API é lida somente de `DP_API_KEY`; nunca passe a chave na linha de comando.
 
 ## Aviso de licença e conteúdo de terceiros
 
