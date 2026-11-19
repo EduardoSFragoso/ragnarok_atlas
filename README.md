@@ -40,6 +40,8 @@ Scripts em `tools/` mantêm os dados e os ícones atualizados; o site em si é e
 
 Os arquivos de `data/` estão em **JSON**, direto na raiz da pasta (sem subpastas): cada linha virou um objeto com as colunas nomeadas (colunas sem título no original recebem o nome `colN`), o que facilita manter e exportar as informações. O site lê esses JSONs diretamente, sem etapa de build. A versão anterior em TSV foi preservada na branch `legado`.
 
+- **`data/referencias.json`** — conteúdo estático do site que não vem de planilha: links de referência da bROWiki, Hazy Forest e iRO Wiki, mapas de IDs de itens conhecidos (incluindo os do Ep. 19), materiais do Grau do Ep. 19, grupos de reciclagem das Armas Vil Invernais, links das atividades e as tabelas de chance de refino e grau (faixas compactas do tipo `[do, até, "percentuais"]`, expandidas pelo site). Para atualizar esse conteúdo, edite o JSON — não é preciso mexer no `app.js`.
+
 - **`tools/baixar_icones.py`** — baixa em `assets/icons/` os PNGs dos itens e habilidades que ainda não têm ícone local, a partir dos IDs conhecidos pelo projeto. Os ícones ficam versionados no repositório para o site não depender de requisições externas durante o uso.
 - **`tools/puxar_efeitos_divine_pride.py`** — consulta a API do Divine Pride (por ID de habilidade, via `tools/skills_ids.json`, com `Accept-Language: pt` + `x-server: LATAM` e fallback iRO em 404) e atualiza os efeitos e os nomes em português dos JSONs de encantamentos e habilidades. Antes de cada requisição há espera para respeitar o limite de requisições da API.
 - **`tools/agregar_efeitos.py`** — agrega no JSON de encantamentos os efeitos itemizados por nível de refino na soma total até o +11, no formato publicado pelo workflow do Divine Pride.

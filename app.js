@@ -25,98 +25,13 @@ const DATA_FILES = {
     manipular: "data/manipular_pocao.json",
     farmacia: "data/farmacologia_avancada.json",
     culinaria: "data/culinaria_avancada.json",
+    referencias: "data/referencias.json",
 };
 /* ===== Bases de conteúdo estático (links de referência; migrar para data/ depois) ===== */
-const BROWIKI = [
-    ["Sistemas", "Reforma", "https://browiki.org/wiki/Reforma"],
-    ["Sistemas", "Grau", "https://browiki.org/wiki/Grau"],
-    ["Sistemas", "Refinamento", "https://browiki.org/wiki/Refinamento"],
-    ["Habilidades", "Perícia em Runas", "https://browiki.org/wiki/Per%C3%ADcia_em_Runas"],
-    ["Habilidades", "Criar Veneno Mortal", "https://browiki.org/wiki/Criar_Veneno_Mortal"],
-    ["Habilidades", "Fabricar Flechas", "https://browiki.org/wiki/Fabricar_Flechas"],
-    ["Habilidades", "Preparar Poção", "https://browiki.org/wiki/Preparar_Po%C3%A7%C3%A3o"],
-    ["Habilidades", "Manipular Poção", "https://browiki.org/wiki/Manipular_Po%C3%A7%C3%A3o"],
-    ["Habilidades", "Culinária Avançada", "https://browiki.org/wiki/Culin%C3%A1ria_Avan%C3%A7ada"],
-    ["Habilidades", "Farmacologia Avançada", "https://browiki.org/wiki/Farmacologia_Avan%C3%A7ada"],
-    ["Issgard (Ep. 19)", "Issgard", "https://browiki.org/wiki/Issgard"],
-    ["Issgard (Ep. 19)", "Equipamentos Invernais", "https://browiki.org/wiki/Equipamentos_Invernais"],
-    ["Issgard (Ep. 19)", "Issgard — missões diárias", "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard"],
-    ["Issgard (Ep. 19)", "Aventuras em Issgard", "https://browiki.org/wiki/Aventuras_em_Issgard"],
-    ["Issgard (Ep. 19)", "Operação Destruição", "https://browiki.org/wiki/Opera%C3%A7%C3%A3o_Destrui%C3%A7%C3%A3o"],
-    ["Issgard (Ep. 19)", "Batalha de Simulação", "https://browiki.org/wiki/Batalha_de_Simula%C3%A7%C3%A3o"],
-    ["Issgard (Ep. 19)", "Patrulha da Águia", "https://browiki.org/wiki/Patrulha_da_%C3%81guia"],
-    ["Caminho da Oração (Ep. 18)", "Caminho da Oração", "https://browiki.org/wiki/Caminho_da_Ora%C3%A7%C3%A3o"],
-    ["Banquete Real (Ep. 16.1)", "Banquete Real", "https://browiki.org/wiki/Banquete_Real"],
-    ["Banquete Real (Ep. 16.1)", "Ritual de Coroação", "https://browiki.org/wiki/Ritual_de_Coroa%C3%A7%C3%A3o"],
-    ["Banquete Real (Ep. 16.1)", "Emergência Culinária", "https://browiki.org/wiki/Emerg%C3%AAncia_Culin%C3%A1ria"],
-    ["Banquete Real (Ep. 16.1)", "Valor Sentimental", "https://browiki.org/wiki/Valor_Sentimental"],
-    ["Banquete Real (Ep. 16.1)", "As Famílias Reais", "https://browiki.org/wiki/As_Fam%C3%ADlias_Reais"],
-    ["Banquete Real (Ep. 16.1)", "Conflito Familiar", "https://browiki.org/wiki/Conflito_Familiar"],
-    ["Banquete Real (Ep. 16.1)", "Patrulha Prisional", "https://browiki.org/wiki/Patrulha_Prisional"],
-    ["Banquete Real (Ep. 16.1)", "Aventuras na Cozinha", "https://browiki.org/wiki/Aventuras_na_Cozinha"],
-    ["Banquete Real (Ep. 16.1)", "Aventuras na Prisão", "https://browiki.org/wiki/Aventuras_na_Pris%C3%A3o"],
-    ["Banquete Real (Ep. 16.1)", "Equipamentos de Honra", "https://browiki.org/wiki/Equipamentos_de_Honra"],
-    ["Terra Gloria (Ep. 16.2)", "Terra Gloria", "https://browiki.org/wiki/Terra_Gloria"],
-    ["Terra Gloria (Ep. 16.2)", "Clana Nemieri", "https://browiki.org/wiki/Clana_Nemieri"],
-    ["Terra Gloria (Ep. 16.2)", "Gêmeos Levedev", "https://browiki.org/wiki/G%C3%AAmeos_Levedev"],
-    [
-        "Terra Gloria (Ep. 16.2)",
-        "Proibição dos Teleportes",
-        "https://browiki.org/wiki/Proibi%C3%A7%C3%A3o_dos_Teleportes",
-    ],
-    ["Terra Gloria (Ep. 16.2)", "Últimas Memórias", "https://browiki.org/wiki/%C3%9Altimas_Mem%C3%B3rias"],
-    ["Terra Gloria (Ep. 16.2)", "Base Militar", "https://browiki.org/wiki/Base_Militar"],
-    ["Terra Gloria (Ep. 16.2)", "Laboratório Werner", "https://browiki.org/wiki/Laborat%C3%B3rio_Werner"],
-    ["Ilusión (Ep. 17.1)", "Ilusión", "https://browiki.org/wiki/Ilusi%C3%B3n"],
-    ["Ilusión (Ep. 17.1)", "Equipamentos Ilusión", "https://browiki.org/wiki/Equipamentos_Ilusi%C3%B3n"],
-    ["Ilusión (Ep. 17.1)", "Memorial COR", "https://browiki.org/wiki/Memorial_COR"],
-    ["Ilusión (Ep. 17.1)", "Ocupação OS", "https://browiki.org/wiki/Ocupa%C3%A7%C3%A3o_OS"],
-    ["Ilusión (Ep. 17.1)", "Procurando Patrick", "https://browiki.org/wiki/Procurando_Patrick"],
-    ["Ilusión (Ep. 17.1)", "Aventuras no Distrito", "https://browiki.org/wiki/Aventuras_no_Distrito"],
-    ["Automatron (Ep. 17.2)", "Legado do Sábio", "https://browiki.org/wiki/Legado_do_S%C3%A1bio"],
-    ["Automatron (Ep. 17.2)", "Equipamentos Automatron", "https://browiki.org/wiki/Equipamentos_Automatron"],
-    ["Automatron (Ep. 17.2)", "Mansão de Varmunt", "https://browiki.org/wiki/Mans%C3%A3o_de_Varmunt"],
-    ["Automatron (Ep. 17.2)", "Aventuras na Mansão", "https://browiki.org/wiki/Aventuras_na_Mans%C3%A3o"],
-    ["Automatron (Ep. 17.2)", "Silêncio na Biblioteca", "https://browiki.org/wiki/Sil%C3%AAncio_na_Biblioteca"],
-    ["Automatron (Ep. 17.2)", "Segredo no Armazém", "https://browiki.org/wiki/Segredo_no_Armaz%C3%A9m"],
-    ["Automatron (Ep. 17.2)", "Mistério na Sauna", "https://browiki.org/wiki/Mist%C3%A9rio_na_Sauna"],
-    ["Automatron (Ep. 17.2)", "Zona Restrita", "https://browiki.org/wiki/Zona_Restrita"],
-    ["Automatron (Ep. 17.2)", "Salvando Elyumina", "https://browiki.org/wiki/Salvando_Elyumina"],
-    ["Automatron (Ep. 17.2)", "Fazenda de Pitayas", "https://browiki.org/wiki/Fazenda_de_Pitayas"],
-    ["Automatron (Ep. 17.2)", "Duelo com Sweety", "https://browiki.org/wiki/Duelo_com_Sweety"],
-    ["Caminho da Oração (Ep. 18)", "Aldeia do Lobo Cinzento", "https://browiki.org/wiki/Aldeia_do_Lobo_Cinzento"],
-    ["Caminho da Oração (Ep. 18)", "Aventuras na Aldeia", "https://browiki.org/wiki/Aventuras_na_Aldeia"],
-    [
-        "Caminho da Oração (Ep. 18)",
-        "Purificação do Santuário",
-        "https://browiki.org/wiki/Purifica%C3%A7%C3%A3o_do_Santu%C3%A1rio",
-    ],
-    ["Caminho da Oração (Ep. 18)", "Mansão da Desilusão", "https://browiki.org/wiki/Mans%C3%A3o_da_Desilus%C3%A3o"],
-    ["Caminho da Oração (Ep. 18)", "Pessoas de Rachel", "https://browiki.org/wiki/Pessoas_de_Rachel"],
-];
-const HAZY_EP = [
-    ["Issgard — Land of Snow Flower (Ep. 19)", "https://hazyforest.com/episodes:19_issgard_land_of_snow_flower"],
-    ["Direction of Prayer (Ep. 18)", "https://hazyforest.com/episodes:18_direction_of_prayer"],
-];
-const IROWIKI = [
-    ["Issgard — Land of Snow Flowers (Ep. 19)", "https://irowiki.org/wiki/Issgard_Land_of_Snow_Flowers"],
-    ["Issgard — Daily Quests (Ep. 19)", "https://irowiki.org/wiki/Issgard_Land_of_Snow_Flowers_Daily_Quests"],
-    ["Direction of Prayer (Ep. 18)", "https://irowiki.org/wiki/Direction_of_Prayer"],
-    ["Direction of Prayer — Daily Quests (Ep. 18)", "https://irowiki.org/wiki/Direction_of_Prayer_Daily_Quests"],
-    ["Villa of Deception (Ep. 18 — Mansão da Desilusão)", "https://irowiki.org/wiki/Villa_of_Deception"],
-    ["Legacy of the Wise One (Ep. 17.2)", "https://irowiki.org/wiki/Legacy_of_the_Wise_One"],
-    [
-        "Legacy of the Wise One — Daily Quests (Ep. 17.2)",
-        "https://irowiki.org/wiki/Legacy_of_the_Wise_One_Daily_Quests",
-    ],
-    ["Illusion (Ep. 17.1)", "https://irowiki.org/wiki/Illusion"],
-    ["Illusion — Daily Quests (Ep. 17.1)", "https://irowiki.org/wiki/Illusion_Daily_Quests"],
-    ["The Royal Banquet (Ep. 16.1)", "https://irowiki.org/wiki/The_Royal_Banquet"],
-    ["Royal Banquet — Daily Quests (Ep. 16.1)", "https://irowiki.org/wiki/Royal_Banquet_Daily_Quests"],
-    ["Terra Gloria (Ep. 16.2)", "https://irowiki.org/wiki/Terra_Gloria"],
-    ["Terra Gloria — Daily Quests (Ep. 16.2)", "https://irowiki.org/wiki/Terra_Gloria_Daily_Quests"],
-];
-/* ===== Calculadoras de habilidades (conteúdo estático) ===== */
+/* ===== Referências, links e conteúdo estático (carregados de data/referencias.json em loadData) ===== */
+let BROWIKI = [],
+    HAZY_EP = [],
+    IROWIKI = [];
 const CALCS = [
     {
         id: "veneno",
@@ -308,53 +223,11 @@ const db = {};
 let currentView = "inicio",
     globalTerm = "";
 /* ===== Mapas de IDs de itens e ícones ===== */
-const KNOWN_ITEM_IDS = {
-    "Armadura Invernal [1]": 450206,
-    "Veste Invernal [1]": 450207,
-    "Manto Invernal [1]": 480159,
-    "Sobrepeliz Invernal [1]": 480160,
-    "Bota Invernal [1]": 470115,
-    "Sapato Invernal [1]": 470116,
-    "Anel Invernal [1]": 490177,
-    "Pingente Invernal [1]": 490176,
-    "Brinco Invernal [1]": 490179,
-    "Colar Invernal [1]": 490178,
-    "Pétala de Flor Invernal": 1000608,
-    "Peça de Flor Invernal (DEF)": 1000717,
-    "Peça de Flor Invernal (Dragão)": 1000757,
-    "Montante Invernal": 600027,
-    "Katar Invernal": 610037,
-    "Berdiche Invernal": 620017,
-    "Lança Invernal": 630018,
-    "Báculo Invernal": 640033,
-    "Huuma Invernal": 650025,
-    "Arco Invernal": 700052,
-    "Revólver Invernal": 800014,
-    "Carabina Invernal": 810010,
-    "Fuzil Invernal": 820008,
-    "Metralhadora Invernal": 830013,
-    "Lança-Granadas Invernal": 840009,
-    "Flambergue Invernal": 500049,
-    "Espada Invernal": 500050,
-    "Punhal Invernal": 510061,
-    "Faca Invernal": 510062,
-    "Lábris Invernal": 520017,
-    "Espontão Invernal": 530025,
-    "Grimório Invernal": 540049,
-    "Varinha Invernal": 550069,
-    "Cauda de Gato Invernal": 550070,
-    "Soqueira Invernal": 560032,
-    "Violino Invernal": 570029,
-    "Chicote Invernal": 580030,
-    "Mangual Invernal": 590038,
-    "Clava Invernal": 590039,
-    "Runa Bruta Comum": 12737,
-    "Runa Bruta Forte": 12734,
-    "Runa Bruta Rara": 12738,
-    "Runa Bruta Antiga": 12735,
-    "Runa Bruta Mística": 12736,
-};
-const ICON_IDS = { ...KNOWN_ITEM_IDS };
+/* ===== Ícones: mapa nome -> id do Divine Pride ===== */
+/* Preenchido em loadData a partir de data/referencias.json (itens_conhecidos
+   e ep19_ids), dos mapas do Divine Pride e das receitas. */
+let ICON_IDS = {};
+/* Estrutura das tabelas de receita por habilidade (posições das colunas). */
 const RECIPE_META = {
     flechas: { key: "flechas", product: 1, material: 3, quantity: 4 },
     toxina: { key: "toxina", product: 2, material: 6, quantity: 7 },
@@ -507,9 +380,25 @@ async function loadData() {
         console.error(`Falha ao carregar ${path}`, res.reason);
     });
     entries.forEach(([key]) => {
-        if (db[key] === undefined) db[key] = key === "itemIds" ? {} : [];
+        if (db[key] === undefined) db[key] = key === "itemIds" || key === "referencias" ? {} : [];
     });
     for (const key of ROW_JSON_KEYS) db[key] = Array.isArray(db[key]?.[0]) ? db[key] : rowsFromJson(db[key] || []);
+    /* Conteúdo estático migrado para data/referencias.json: links, IDs
+       conhecidos, Ep. 19 (grau/reciclagem) e chances expandidas com rb(). */
+    const ref = db.referencias || {};
+    BROWIKI = ref.browiki || [];
+    HAZY_EP = ref.hazy || [];
+    IROWIKI = ref.irowiki || [];
+    GRAU19 = ref.grau19 || { steps: [], mats: [] };
+    RECYCLE19 = ref.reciclagem19 || [];
+    ACTIVITY_LINKS = ref.atividades || {};
+    const expandChance = (bloco) =>
+        Object.fromEntries(
+            Object.entries(bloco || {}).map(([chave, linhas]) => [chave, linhas.flatMap(([a, b, v]) => rb(a, b, v))])
+        );
+    REF_CH = expandChance(ref.refino_chances);
+    GRAU_CH = expandChance(ref.grau_chances);
+    ICON_IDS = Object.assign({}, ref.itens_conhecidos || {}, ref.ep19_ids || {});
     Object.assign(ICON_IDS, db.itemIds || {});
     for (const key of ["flechas", "toxina", "veneno", "runas", "preparar", "manipular", "farmacia", "culinaria"])
         for (const r of db[key] || []) {
@@ -1237,7 +1126,7 @@ function sourceView() {
     const categories = [...new Set(BROWIKI.map((x) => x[0]))].sort(
         (a, b) => episodeRank(b) - episodeRank(a) || a.localeCompare(b, "pt-BR")
     );
-    return `<div class="page-head"><div><div class="eyebrow">CONSULTA E RASTREABILIDADE</div><h1 class="page-title">Fontes & referências</h1><p class="page-subtitle">Páginas consultadas como apoio e referências indicadas para expandir a base.</p></div><span class="count-pill">${BROWIKI.length + HAZY_EP.length + IROWIKI.length + 4} LINKS</span></div><div class="panel-note">Os dados estruturados ficam em arquivos JSON na pasta <code>data/</code>, reunindo informações da bROWiki e da API do Divine Pride, com apoio do Hazy Forest e do iRO Wiki como fontes complementares. A permissão para redistribuir os dados e textos do Divine Pride foi confirmada pelo mantenedor. <br><b>Aviso:</b> os links de itens abrem no Divine Pride, que mostra o servidor escolhido no próprio site. Para ver os dados do LATAM, selecione LATAM no seletor de servidor do Divine Pride (a escolha fica salva).</div><div class="section-heading"><div><h2>Bases de dados e licenças</h2></div></div><div class="source-grid"><article class="card source-card"><h3>API do Divine Pride</h3><a href="https://www.divine-pride.net/tools/api-doc" target="_blank" rel="noopener noreferrer">Documentação da API ↗</a><p>Fonte consultada para IDs, ícones e parte dos dados dos itens catalogados.</p></article><article class="card source-card"><h3>Termos de uso do Divine</h3><a href="https://divine.inc/terms" target="_blank" rel="noopener noreferrer">Ler os termos ↗</a><p>Dados, textos e ícones da API são conteúdo de terceiros, fora da licença do código do projeto.</p></article></div><div class="section-heading"><div><h2>Fontes de refino Automatron</h2><p>Referências do refinador +7 utilizado na seção de equipamentos.</p></div></div><div class="source-grid"><article class="card source-card"><h3>Refinador de Automatron</h3><a href="https://ragnaplace.com/pt/laro-pt/item/100252/refinador-de-automatron" target="_blank" rel="noopener noreferrer">RagnaPlace · registro LATAM ↗</a><p>Dados de refino e equipamentos compatíveis.</p></article><article class="card source-card"><h3>Hazy Forest · Enchants: Glacier Weapons</h3><a href="https://hazyforest.com/enchants:glacier_weapons" target="_blank" rel="noopener noreferrer">Hazy Forest (wiki do kRO) ↗</a><p>Detalhamento dos encantos de habilidade de classe 3 das Armas Invernais (custos e drops não confirmados na bROWiki/iROWiki). Os rótulos entre parênteses, como <code>Cristal Invernal (Kagerou)</code>, seguem os nomes oficiais das pedras de encantamento no LATAM.</p></article></div>${categories
+    return `<div class="page-head"><div><div class="eyebrow">CONSULTA E RASTREABILIDADE</div><h1 class="page-title">Fontes & referências</h1><p class="page-subtitle">Páginas consultadas como apoio e referências indicadas para expandir a base.</p></div><span class="count-pill">${BROWIKI.length + HAZY_EP.length + IROWIKI.length + 4} LINKS</span></div>${avisoSeFalha("referencias")}<div class="panel-note">Os dados estruturados ficam em arquivos JSON na pasta <code>data/</code>, reunindo informações da bROWiki e da API do Divine Pride, com apoio do Hazy Forest e do iRO Wiki como fontes complementares. A permissão para redistribuir os dados e textos do Divine Pride foi confirmada pelo mantenedor. <br><b>Aviso:</b> os links de itens abrem no Divine Pride, que mostra o servidor escolhido no próprio site. Para ver os dados do LATAM, selecione LATAM no seletor de servidor do Divine Pride (a escolha fica salva).</div><div class="section-heading"><div><h2>Bases de dados e licenças</h2></div></div><div class="source-grid"><article class="card source-card"><h3>API do Divine Pride</h3><a href="https://www.divine-pride.net/tools/api-doc" target="_blank" rel="noopener noreferrer">Documentação da API ↗</a><p>Fonte consultada para IDs, ícones e parte dos dados dos itens catalogados.</p></article><article class="card source-card"><h3>Termos de uso do Divine</h3><a href="https://divine.inc/terms" target="_blank" rel="noopener noreferrer">Ler os termos ↗</a><p>Dados, textos e ícones da API são conteúdo de terceiros, fora da licença do código do projeto.</p></article></div><div class="section-heading"><div><h2>Fontes de refino Automatron</h2><p>Referências do refinador +7 utilizado na seção de equipamentos.</p></div></div><div class="source-grid"><article class="card source-card"><h3>Refinador de Automatron</h3><a href="https://ragnaplace.com/pt/laro-pt/item/100252/refinador-de-automatron" target="_blank" rel="noopener noreferrer">RagnaPlace · registro LATAM ↗</a><p>Dados de refino e equipamentos compatíveis.</p></article><article class="card source-card"><h3>Hazy Forest · Enchants: Glacier Weapons</h3><a href="https://hazyforest.com/enchants:glacier_weapons" target="_blank" rel="noopener noreferrer">Hazy Forest (wiki do kRO) ↗</a><p>Detalhamento dos encantos de habilidade de classe 3 das Armas Invernais (custos e drops não confirmados na bROWiki/iROWiki). Os rótulos entre parênteses, como <code>Cristal Invernal (Kagerou)</code>, seguem os nomes oficiais das pedras de encantamento no LATAM.</p></article></div>${categories
         .map(
             (cat) =>
                 `<div class="section-heading"><div><h2>${esc(cat)}</h2></div></div><div class="source-grid">${BROWIKI.filter(
@@ -1442,71 +1331,11 @@ try {
 /* ATENÇÃO: as constantes abaixo (EP19_IDS, GRAU19, RECYCLE19) são conteúdo
    estático ainda não migrado para a pasta data/ (JSONs). A migração fica para
    depois — por ora, altere o conteúdo somente aqui no app.js. */
-const EP19_IDS = {
-    "Minério Mágico de Flor Invernal": 1000811,
-    "Globo de Flor Invernal": 1000812,
-    "Globo de Flor Invernal Brilhante": 1000813,
-    "Globo de Flor Invernal Reluzente": 1000814,
-    "Pedra da Fonte Mágica Corrompida": 1001029,
-    "Pedra da Fonte Mágica Purificada": 1001030,
-    "Cristal Mágico Corrompido": 1001031,
-    "Cristal Mágico Purificado": 1001032,
-    "Magia Corrompida": 1001033,
-    "Extrato de Pedra Mágica da Flor de Neve": 1001034,
-    "Extrato de Pedra Mágica Brilhante da Flor de Neve": 1001035,
-    "Extrato de Pedra Mágica Radiante da Flor de Neve": 1001036,
-    "Extrato Glacial": 1001037,
-};
-Object.entries(EP19_IDS).forEach(([k, v]) => {
-    ICON_IDS[k] ??= v;
-});
-const GRAU19 = {
-    steps: ["Aplicar Nv. 1", "Nv. 1 → 2", "Nv. 2 → 3", "Nv. 3 → 4", "Nv. 4 → 5"],
-    mats: [
-        ["Extrato de Pedra Mágica Radiante da Flor de Neve", [60, 30, 40, 50, 65]],
-        ["Extrato de Pedra Mágica Brilhante da Flor de Neve", [40, 20, 30, 40, 50]],
-        ["Extrato de Pedra Mágica da Flor de Neve", [30, 15, 20, 30, 40]],
-        ["Extrato Glacial", [50, 25, 35, 45, 70]],
-        ["Cristal Mágico Corrompido", [0, 5, 7, 10, 15]],
-        ["Cristal Mágico Purificado", [0, 5, 7, 10, 15]],
-        ["Magia Corrompida", [0, 0, 1, 2, 3]],
-    ],
-};
-const RECYCLE19 = [
-    [
-        "Minério e Pedras da Fonte Mágica",
-        [
-            ["Minério Mágico de Flor Invernal", 1, 4],
-            ["Pedra da Fonte Mágica Corrompida", 1, 4],
-            ["Pedra da Fonte Mágica Purificada", 1, 3],
-        ],
-    ],
-    [
-        "Globos de Flor Invernal",
-        [
-            ["Globo de Flor Invernal", 1, 3],
-            ["Globo de Flor Invernal Brilhante", 1, 3],
-            ["Globo de Flor Invernal Reluzente", 1, 2],
-        ],
-    ],
-    [
-        "Extratos de Pedra Mágica",
-        [
-            ["Extrato de Pedra Mágica da Flor de Neve", 1, 1],
-            ["Extrato de Pedra Mágica Brilhante da Flor de Neve", 1, 1],
-            ["Extrato de Pedra Mágica Radiante da Flor de Neve", 1, 1],
-            ["Extrato Glacial", 1, 1],
-        ],
-    ],
-    [
-        "Cristais e Magia Corrompida",
-        [
-            ["Cristal Mágico Corrompido", 1, 2],
-            ["Cristal Mágico Purificado", 1, 2],
-            ["Magia Corrompida", 1, 1],
-        ],
-    ],
-];
+/* ===== v1.3: encantamento total, Grau do Ep. 19 e reciclagem ===== */
+/* EP19_IDS, GRAU19 e RECYCLE19 são conteúdo do site, carregados de
+   data/referencias.json em loadData (edite lá, não aqui). */
+let GRAU19 = { steps: [], mats: [] },
+    RECYCLE19 = [];
 const EXTRA_CALCS = [
     {
         id: "encanto",
@@ -1789,6 +1618,8 @@ function updateEnchantCalc(sec) {
     $("#ecTotals").innerHTML = totalList(totals, extras);
 }
 function recycleView() {
+    if (!RECYCLE19.length)
+        return caixaErroHtml("Reciclagem do Ep. 19 indisponível", "Falha ao carregar data/referencias.json");
     const body = RECYCLE19.map(([group, items]) =>
         items
             .map(
@@ -1838,32 +1669,8 @@ function bindRecycle() {
     dayNote();
 }
 /* ===== v1.4: links das atividades e Grau & Refinamento (páginas completas da bROWiki) ===== */
-const BW = "https://browiki.org/wiki/";
-const ACTIVITY_LINKS = {
-    "Aventuras em Issgard": BW + "Aventuras_em_Issgard",
-    "Operação Destruição": BW + "Opera%C3%A7%C3%A3o_Destrui%C3%A7%C3%A3o",
-    "Batalha de Simulação": BW + "Issgard",
-    "Patrulha da Águia": BW + "Issgard",
-    "Aventuras na Aldeia": BW + "Aventuras_na_Aldeia",
-    "Purificação do Santuário": BW + "Purifica%C3%A7%C3%A3o_do_Santu%C3%A1rio",
-    "Mansão da Desilusão": BW + "Mans%C3%A3o_da_Desilus%C3%A3o",
-    "Aventuras na Mansão": BW + "Aventuras_na_Mans%C3%A3o",
-    "Duelo com Sweety": BW + "Duelo_com_Sweety",
-    "Fazenda de Pitayas": BW + "Fazenda_de_Pitayas",
-    "Jardim Secreto": BW + "Jardim_Secreto",
-    "Ortus Aqua": BW + "Ortus_Aqua",
-    "Aventuras no Distrito": BW + "Aventuras_no_Distrito",
-    "Missão OS": BW + "Miss%C3%A3o_OS",
-    "Memorial COR": BW + "Memorial_COR",
-    "Aventuras na Cozinha": BW + "Aventuras_na_Cozinha",
-    "Aventuras na Prisão": BW + "Aventuras_na_Pris%C3%A3o",
-    "As Famílias Reais": BW + "As_Fam%C3%ADlias_Reais",
-    "Clana Nemieri": BW + "Clana_Nemieri",
-    "Base Militar": BW + "Base_Militar",
-    "Gêmeos Levedev": BW + "G%C3%AAmeos_Levedev",
-    "Banquete Real": BW + "Banquete_Real",
-    "Prontera Destruída": BW + "Salvando_Vidas",
-};
+/* Links das atividades (nome -> página da bROWiki), de data/referencias.json. */
+let ACTIVITY_LINKS = {};
 function activityLink(name) {
     const key = String(name || "")
             .split(" – ")[0]
@@ -1889,80 +1696,10 @@ const rb = (a, b, v) => {
     for (let n = a; n <= b; n++) r.push([`+${n}`, ...v.split(",").map((x) => (x === "-" ? "-" : x + "%"))]);
     return r;
 };
-const REF_CH = {
-    comuns: [
-        ...rb(1, 3, "100,100,100,100,100,100,100,100"),
-        ...rb(4, 4, "100,100,100,100,60,100,60,100"),
-        ...rb(5, 5, "100,100,100,60,60,60,60,60"),
-        ...rb(6, 6, "100,100,60,40,40,40,40,40"),
-        ...rb(7, 7, "100,60,50,40,40,40,40,40"),
-        ...rb(8, 8, "60,40,20,20,20,20,20,20"),
-        ...rb(9, 9, "40,20,20,20,20,20,20,20"),
-        ...rb(10, 10, "19,19,19,9,9,9,9,10"),
-        ...rb(11, 14, "18,18,18,8,8,8,8,-"),
-        ...rb(15, 15, "18,18,18,7,7,7,7,-"),
-        ...rb(16, 18, "17,17,17,7,7,7,7,-"),
-        ...rb(19, 20, "15,15,15,5,5,5,5,-"),
-    ],
-    comunsEv: [
-        ...rb(1, 3, "100,100,100,100,100,100,100,100"),
-        ...rb(4, 4, "100,100,100,100,80,100,80,100"),
-        ...rb(5, 5, "100,100,100,60,80,60,80,60"),
-        ...rb(6, 6, "100,100,60,40,60,40,60,40"),
-        ...rb(7, 7, "100,60,50,40,60,40,60,40"),
-        ...rb(8, 8, "60,40,20,20,40,20,40,20"),
-        ...rb(9, 9, "40,20,20,20,40,20,40,20"),
-        ...rb(10, 10, "19,19,19,9,18,9,18,10"),
-        ...rb(11, 12, "40,40,35,20,16,20,16,-"),
-        ...rb(13, 14, "35,35,30,16,16,16,16,-"),
-        ...rb(15, 16, "30,30,25,15,14,15,14,-"),
-        ...rb(17, 18, "20,20,20,14,14,14,14,-"),
-        ...rb(19, 20, "15,15,15,10,10,10,10,-"),
-    ],
-    especiais: [
-        ...rb(1, 3, "100,100,100,100,100,100,100,100"),
-        ...rb(4, 4, "100,100,100,100,90,100,90,100"),
-        ...rb(5, 5, "100,100,100,90,70,90,70,90"),
-        ...rb(6, 6, "100,100,90,70,60,70,60,70"),
-        ...rb(7, 7, "100,90,80,70,60,70,60,70"),
-        ...rb(8, 8, "90,70,40,40,40,40,40,40"),
-        ...rb(9, 9, "70,40,40,40,40,40,40,40"),
-        ...rb(10, 10, "30,30,30,20,20,20,20,20"),
-        ...rb(11, 14, "18,18,18,8,15,8,15,-"),
-        ...rb(15, 15, "18,18,18,7,10,7,10,-"),
-        ...rb(16, 18, "17,17,17,7,10,7,10,-"),
-        ...rb(19, 20, "15,15,15,5,7,5,7,-"),
-    ],
-    especiaisEv: [
-        ...rb(1, 3, "100,100,100,100,100,100,100,100"),
-        ...rb(4, 4, "100,100,100,100,95,100,95,100"),
-        ...rb(5, 5, "100,100,100,95,85,95,85,95"),
-        ...rb(6, 6, "100,100,95,80,70,80,70,80"),
-        ...rb(7, 7, "100,95,90,80,65,80,65,80"),
-        ...rb(8, 8, "95,85,70,60,55,60,55,60"),
-        ...rb(9, 9, "85,60,60,50,45,50,45,50"),
-        ...rb(10, 10, "55,45,45,35,25,35,25,35"),
-        ...rb(11, 12, "40,40,40,20,20,20,20,-"),
-        ...rb(13, 14, "35,35,35,16,20,16,20,-"),
-        ...rb(15, 16, "30,30,30,15,15,15,15,-"),
-        ...rb(17, 18, "20,20,20,14,15,14,15,-"),
-        ...rb(19, 20, "15,15,15,10,10,10,10,-"),
-    ],
-};
-const GRAU_CH = {
-    normal: [
-        ...rb(9, 9, "10,-,-,-"),
-        ...rb(10, 10, "20,20,-,-"),
-        ...rb(11, 15, "70,60,50,40"),
-        ...rb(16, 20, "80,70,60,50"),
-    ],
-    evento: [
-        ...rb(9, 9, "20,-,-,-"),
-        ...rb(10, 10, "30,30,-,-"),
-        ...rb(11, 15, "80,70,60,50"),
-        ...rb(16, 20, "90,80,70,60"),
-    ],
-};
+/* Tabelas de chance de refino/grau: compactas em data/referencias.json,
+   expandidos com rb() em loadData (cada linha: ["+n", "x%", ...]). */
+let REF_CH = { comuns: [], comunsEv: [], especiais: [], especiaisEv: [] },
+    GRAU_CH = { normal: [], evento: [] };
 const refChanceTable = (k) =>
     tbl(
         `<tr><th rowspan="2">Refino</th><th colspan="5">Arma</th><th colspan="3">Armadura</th></tr><tr><th>Nível 1</th><th>Nível 2</th><th>Nível 3</th><th>Nível 4</th><th>Nível 5</th><th>Nível 1</th><th>Nível 2</th><th>Sombrio</th></tr>`,
@@ -2155,6 +1892,9 @@ ${tbl(
 )}`;
 }
 function grauPage() {
+    if (!GRAU_CH.normal.length)
+        return caixaErroHtml("Tabela de grau indisponível", "Falha ao carregar data/referencias.json");
+
     return `<div class="panel-note">Grau é um sistema de aprimoramento que concede bônus especiais e altera a estética dos equipamentos. Só armaduras nível 2 e armas nível 5 são afetadas.</div>
 ${secH("Bônus por grau", "Cada Grau adiciona um bônus percentual a cada refino de uma arma nível 5. (O texto da bROWiki diz “nível 2”, mas os valores são os das armas nível 5 da página Refinamento.) A letra do Grau aparece na frente do nome do item, como em [B] Adaga.")}
 ${tbl(
