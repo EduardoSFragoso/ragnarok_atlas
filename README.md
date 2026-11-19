@@ -7,10 +7,11 @@ Guia comunitário em português para consultar equipamentos por episódio, encan
 - Equipamentos e materiais de episódios, com filtros e ordenação por episódio.
 - Encantamentos, efeitos e requisitos por equipamento e slot.
 - Fontes de obtenção, totais e campos para considerar bônus de reputação.
-- Página de Estoque: ganho por dia das diárias, recompensas por episódio (quests e moedas) e o estoque salvo no navegador — o mesmo usado pela calculadora de custo total de encantamento.
+- Fontes de obtenção, totais e campos para considerar bônus de reputação.
+- Missões diárias com um cartão de **estoque por episódio** (valor inicial guardado no navegador, botão para somar o farm de hoje ou digitação manual) e as recompensas de quest do episódio em seção dobrável.
 - Reforma de armas e referências sobre Grau e Refinamento.
 - Calculadoras executadas no navegador; os valores digitados não são enviados nem salvos.
-- Calculadoras de custo total de encantamento e de upgrade de Grau (Ep. 19), e seção de reciclagem do Ep. 19.
+- Calculadoras de farm diário, de custo total de encantamento e de upgrade de Grau (Ep. 19), e seção de reciclagem do Ep. 19.
 - Grau e Refinamento (páginas da bROWiki), com chances normais e durante o evento.
 - Temas claro e escuro.
 
@@ -67,6 +68,6 @@ Comentários e docstrings são escritos em português do Brasil. Os scripts grav
 
 O arquivo [`LICENSE`](LICENSE) aplica a licença MIT somente ao código original escrito para este projeto. Ela não cobre nem concede direitos sobre dados da API, URLs ou arquivos de ícones, textos de efeitos, conteúdo da bROWiki e do Hazy Forest, informações do jogo, nomes, logotipos ou marcas de terceiros. Os dados, textos e ícones da API têm autorização de uso informada pelo mantenedor, independente da licença do código; isso não se estende automaticamente a conteúdo da bROWiki ou a outros materiais de terceiros.
 
-**Favicon:** o arquivo `assets/favicon.svg` é uma recriação original, feita para este projeto, no estilo visual do logo de *Ragnarok Online* (letra dourada sobre fundo vinho). Ele não é o logo oficial e não reproduz a marca registrada de Gravity Co.; *Ragnarök Online* e seus logotipos são propriedade da Gravity Co. Ltd.
+**Favicon:** o arquivo `assets/favicon.svg` é uma criação original, feita para este projeto, com as iniciais “Ro” em azul sobre fundo branco. Ele não é o logo oficial e não reproduz a marca registrada de Gravity Co.; *Ragnarök Online* e seus logotipos são propriedade da Gravity Co. Ltd.
 
 Os dados atuais foram compilados de informações da bROWiki, do Hazy Forest e da API Divine Pride. Ainda não há atribuição de fonte individual registrada para cada arquivo de dados.
