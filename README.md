@@ -30,7 +30,7 @@ Referências principais:
 - [bROWiki — Refinamento](https://browiki.org/wiki/Refinamento)
 - [bROWiki — demais referências de episódios, itens e habilidades](https://browiki.org/), também listadas na seção **Fontes & referências** do site.
 - [Divine Pride](https://www.divine-pride.net/): [documentação da API](https://www.divine-pride.net/tools/api-doc) usada para dados, ícones e nomes oficiais; [termos de uso da Divine](https://divine.inc/terms).
-- [Hazy Forest — Enchants: Glacier Weapons](https://hazyforest.com/enchants:glacier_weapons): wiki comunitária do kRO, usada para os itens de drop e os custos de Globos das Armas Invernais (Ep. 19). Esses valores aparecem com asterisco no site e podem não corresponder ao valor real do LATAM/bROWiki.
+- [Hazy Forest — Enchants: Glacier Weapons](https://hazyforest.com/enchants:glacier_weapons): wiki comunitária do kRO, usada **somente para os encantos de habilidades de classe 3** das Armas Invernais (Ep. 19) — custos e itens de drop que a bROWiki/iROWiki marcam como não confirmados. Esses valores aparecem com asterisco no site e podem não corresponder ao valor real do LATAM/bROWiki. Os demais encantos das Armas Invernais usam nomes e efeitos oficiais do cliente LATAM (Divine Pride/bROWiki).
 
 ## Ferramentas
 
