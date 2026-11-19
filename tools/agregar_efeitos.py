@@ -1,32 +1,81 @@
+#!/usr/bin/env python3
+"""Agrega os efeitos "com refino +X ou mais" da planilha de encantamentos.
+
+Lê data/encantamentos_disponiveis.json, soma os efeitos por linha que
+estão no formato "com refino +n ou mais" (ex.: "+10 de Arch com refino
++9 ou mais; +5 de Coma com refino +11 ou mais"), agrupa por atributo e
+reescreve o campo "Efeito (+11)" com o resultado somado, limitado ao
+refino máximo da wiki (MAX_REFINO).
+
+Uso (na raiz do projeto):
+    python3 tools/agregar_efeitos.py
+"""
+
 import json
 import re
+from pathlib import Path
 
-PATH = "data/encantamentos_disponiveis.json"
+from _comum import salvar_json_atomico
+
+ROOT = Path(__file__).resolve().parent.parent
+PLANILHA = ROOT / "data" / "encantamentos_disponiveis.json"
 COLUNA = "Efeito (+11)"
 MAX_REFINO = 11
 
+# "+X de (atributo)" sem refino
 RE_BASE = re.compile(r"^(.+?) ([+\-])(\d+(?:,\d+)?) ?(%|s)?$")
+# "(atributo) +X% ... com refino +n ou mais"
 RE_ADD_DE = re.compile(r"^([+\-])(\d+(?:,\d+)?) ?(%|s)? de (.+?) (?:adicional )?com refino \+(\d+) ou mais$")
 RE_ADD = re.compile(r"^(.+?) ([+\-])(\d+(?:,\d+)?) ?(%|s)? ?(?:adicional )?com refino \+(\d+) ou mais$")
 
 
 def num(s):
+    """Converte número em texto com vírgula decimal para int/float.
+
+    Args:
+        s: número em texto (ex.: "12,5").
+    Returns:
+        int | float: valor convertido (int quando a parte decimal é 0).
+    """
     f = float(s.replace(",", "."))
     return int(f) if f == int(f) else f
 
 
 def fmt(v):
+    """Formata um valor para exibição com vírgula decimal.
+
+    Args:
+        v: valor numérico a formatar.
+    Returns:
+        str: número com no máximo 1 casa decimal, vírgula como separador.
+    """
     if isinstance(v, int):
         return str(v)
-    s = ("%.1f" % v).rstrip("0").rstrip(".")
+    s = f"{v:.1f}".rstrip("0").rstrip(".")
     return s.replace(".", ",")
 
 
 def chave(label):
+    """Normaliza um atributo para servir de chave de agrupamento.
+
+    Args:
+        label: nome do atributo.
+    Returns:
+        str: nome em minúsculas e com espaços colapsados.
+    """
     return re.sub(r"\s+", " ", label.strip().lower())
 
 
 def parse(partes):
+    """Decodifica cada parte de efeito e soma os valores por atributo.
+
+    Args:
+        partes: partes separadas por ";" de um "Efeito (+11)".
+    Returns:
+        (grupos, ordem) | None: dicionário chave -> {'label', 'total',
+        'unit'} e a ordem de aparição; None quando alguma parte não casa
+        com nenhum formato conhecido (ou excede MAX_REFINO).
+    """
     grupos = {}
     ordem = []
     for p in partes:
@@ -57,6 +106,14 @@ def parse(partes):
 
 
 def agregar(efeito):
+    """Agrega um "Efeito (+11)" completo em um único texto com totais.
+
+    Args:
+        efeito: texto do efeito bruto da planilha.
+    Returns:
+        str | None: efeito agregado (ex.: "Arch +15%."), ou None quando
+        alguma parte não pôde ser interpretada.
+    """
     texto = efeito.strip().rstrip(".")
     partes = [p.strip() for p in texto.split(";") if p.strip()]
     if not partes:
@@ -82,7 +139,12 @@ def agregar(efeito):
 
 
 def main():
-    with open(PATH, encoding="utf-8") as f:
+    """Percorre a planilha, agrega os efeitos elegíveis e grava de volta.
+
+    Mantém a ordem de chaves do JSON original (sort_keys=False) e imprime
+    um resumo de linhas alteradas, mantidas, puladas e exemplos.
+    """
+    with open(PLANILHA, encoding="utf-8", newline="") as f:
         dados = json.load(f)
     alteradas = mantidas = puladas = 0
     puladas_lista = []
@@ -103,9 +165,7 @@ def main():
         alteradas += 1
         if len(exemplos) < 6:
             exemplos.append((i, novo[:150]))
-    with open(PATH, "w", encoding="utf-8") as f:
-        json.dump(dados, f, ensure_ascii=False, indent=1)
-        f.write("\n")
+    salvar_json_atomico(PLANILHA, dados, indent=1, sort_keys=False)
     print(f"alteradas={alteradas} mantidas={mantidas} puladas={puladas}")
     for i, s in exemplos:
         print(f"  ok  L{i}: {s}")

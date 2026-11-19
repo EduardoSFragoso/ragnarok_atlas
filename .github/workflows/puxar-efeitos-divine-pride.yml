@@ -8,8 +8,17 @@ on:
         required: false
         default: "1.2"
 
+# contents: write — checkout e criação da branch com os dados;
+# pull-requests: write — abrir/atualizar o PR automático.
 permissions:
   contents: write
+  pull-requests: write
+
+# Rodadas do mesmo script nunca se atropelam: se uma rodar enquanto outra
+# ainda está em andamento, a nova fica na fila (não cancela a atual).
+concurrency:
+  group: divine-pride
+  cancel-in-progress: false
 
 jobs:
   puxar:
@@ -27,15 +36,57 @@ jobs:
           DP_API_KEY: ${{ secrets.DP_API_KEY }}
         run: python3 tools/puxar_efeitos_divine_pride.py --delay "${{ inputs.delay || '1.2' }}"
 
-      - name: Salvar a saída no repositório
+      - name: Gerar o corpo do PR (resumo dos itens baixados)
         run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tools/divine_pride_saida.json tools/divine_pride_faltando.txt tools/divine_pride_skills.json tools/divine_pride_skills_faltando.txt 2>/dev/null || true
-          if git diff --cached --quiet; then
-            echo "Nada novo para salvar."
-          else
-            git commit -m "tooling: saída da API Divine Pride (efeitos de encantamento)"
-            git push
-          fi
+          python3 - <<'PY' > corpo-pr.md
+          import json
+          from datetime import date
+          from pathlib import Path
+
+          def carregar(caminho):
+              p = Path(caminho)
+              return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+
+          saida = carregar("tools/divine_pride_saida.json")
+          skills = carregar("tools/divine_pride_skills.json")
+          com_efeito = sum(1 for v in saida.values() if v.get("efeito"))
+          por_busca = sum(1 for v in saida.values() if v.get("busca"))
+          skills_ok = sum(1 for v in skills.values() if v.get("cru"))
+          pendentes_itens = [
+              (v.get("encantamento") or k, v.get("nome_busca") or "")
+              for k, v in saida.items() if not v.get("efeito")
+          ]
+          linhas = [
+              "Atualização automática da saída da API Divine Pride "
+              "(efeitos de encantamento do Episódio 17.2/18).",
+              "",
+              "## Resumo",
+              f"- Data: {date.today().isoformat()}",
+              f"- Itens com efeito salvo: {com_efeito}",
+              f"- Itens resolvidos por busca (conferir manualmente): {por_busca}",
+              f"- Habilidades com detalhe salvo: {skills_ok}",
+          ]
+          if pendentes_itens:
+              linhas += ["", "## Pendências (item sem efeito no cache)"]
+              for nome, busca in sorted(pendentes_itens):
+                  linhas.append(f"- {nome}" + (f" (nome de busca: {busca})" if busca else ""))
+          print("\n".join(linhas))
+          PY
+
+      - name: Abrir/atualizar o PR automático com a saída
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: data/divine-pride
+          base: main
+          commit-message: "tooling: saída da API Divine Pride (efeitos de encantamento)"
+          title: "tooling: saída da API Divine Pride (efeitos de encantamento)"
+          body-path: corpo-pr.md
+          add-paths: |
+            tools/divine_pride_saida.json
+            tools/divine_pride_faltando.txt
+            tools/divine_pride_skills.json
+            tools/divine_pride_skills_faltando.txt
+          labels: |
+            data
+            automated
