@@ -450,7 +450,6 @@ function setView(view) {
         reformas: "REFORMA DE ARMAS",
         grau: "GRAU & REFINAMENTO",
         reciclagem: "RECICLAGEM (EP. 19)",
-        estoque: "ESTOQUE & RECOMPENSAS",
         calculadoras: "CALCULADORAS",
         fontes: "FONTES & REFERÊNCIAS",
     };
@@ -803,7 +802,6 @@ function diariasView() {
     const rows = diaRows().filter((r) => r[0] === activeDiaEp);
     const ges = guiaEpFor(activeDiaEp),
         grupos = ges?.diarias?.grupos;
-    const count = grupos ? grupos.reduce((a, g) => a + g.diarias.length, 0) : new Set(rows.map((r) => r[1])).size;
     /* Título cru: o esc() é aplicado na interpolação, depois. */
     const title = grupos ? ges.diarias.titulo : activeDiaEp;
     const gruposHtml = grupos
@@ -849,101 +847,101 @@ function diariasView() {
         <h1 class="page-title">${esc(title)}</h1>
         <p class="page-subtitle">Tarefas repetíveis do episódio, com os itens de cada uma.</p>
       </div>
-      <span class="count-pill">${count} DIÁRIAS</span>
+      ${diariasEstoqueWidget(activeDiaEp, rows)}
     </div>
     <div class="toolbar" style="margin-bottom:14px"><label for="diaSelect" style="font-size:14px">Episódio:</label><select id="diaSelect">${eps.map((e) => `<option${e === activeDiaEp ? " selected" : ""}>${esc(e)}</option>`).join("")}</select></div>
     ${avisoSeFalha("fontes")}
     ${ges?.diarias?.aviso ? `<div class="panel-note">${richText(ges.diarias.aviso)}</div>` : ""}
     <div class="panel-note"><b>Ganho por dia:</b> <span id="diaTotalsList">${diaTotalsHtml(rows, diaBonus && temBonus)}</span>${temBonus ? ` <label class="bonus-entry"><input type="checkbox" id="diaBonus"${diaBonus ? " checked" : ""}> incluir bônus por reputação</label>` : ""}</div>
     ${gruposHtml}
+    ${diariasRecompensas(activeDiaEp)}
   `;
 }
-/* ===== v1.7: página Estoque (diárias + recompensas por episódio) ===== */
-let estEp = null,
-    estBonus = false;
-function estEps() {
-    const eps = diaEps().slice();
-    Object.keys(db.recompensas?.episodios || {}).forEach((k) => {
-        const rank = Number(k.replace("ep", "")) || 0;
-        if (rank && !eps.some((e) => episodeRank(e) === rank)) eps.push("Ep. " + rank);
-    });
-    return eps.filter((e) => episodeRank(e) > 0).sort((a, b) => episodeRank(b) - episodeRank(a));
+/* ===== Controle de farm: estoque por episódio (na página de diárias) ===== */
+/* O estoque fica salvo POR EPISÓDIO (chave "ro-atlas-estoque-ep"): o valor
+   inicial é o que sobrou das quests quando o episódio termina; o ganho das
+   diárias pode ser somado com o botão "+ N" ou digitado à mão. */
+function recompensaFor(ep) {
+    return (db.recompensas?.episodios || {})["ep" + episodeRank(ep)] || null;
 }
-function estRec() {
-    return (db.recompensas?.episodios || {})["ep" + episodeRank(estEp)] || null;
+function estEpCarregar(ep) {
+    return stLoad("ro-atlas-estoque-ep", {})[ep] || {};
 }
-function estQuestTable(list) {
+function estEpSalvar(ep, itens) {
+    const tudo = stLoad("ro-atlas-estoque-ep", {});
+    tudo[ep] = itens;
+    stSave("ro-atlas-estoque-ep", tudo);
+}
+/* Tabela das recompensas de quest do episódio (usada nos folds de Diárias). */
+function questRewardTable(list) {
     return tableFrame(
         ["Quest", "Moeda do episódio", "Reputação", "EXP base", "EXP classe", "Observação"],
         list
             .map(
                 (q) =>
-                    `<tr><td>${esc(q.nome)}</td><td>${q["p\u00e9talas"] ? fmt(q["p\u00e9talas"]) : "—"}</td><td>${q.rep ? fmt(q.rep) : "—"}</td><td>${q.base ? fmt(q.base) : "—"}</td><td>${q.classe ? fmt(q.classe) : "—"}</td><td>${q.extra ? esc(q.extra) : q.obs ? esc(q.obs) : "—"}</td></tr>`
+                    `<tr><td>${esc(q.nome)}</td><td>${q["pétalas"] ? fmt(q["pétalas"]) : "—"}</td><td>${q.rep ? fmt(q.rep) : "—"}</td><td>${q.base ? fmt(q.base) : "—"}</td><td>${q.classe ? fmt(q.classe) : "—"}</td><td>${q.extra ? esc(q.extra) : q.obs ? esc(q.obs) : "—"}</td></tr>`
             )
             .join(""),
         "align-top"
     );
 }
-function estoqueView() {
-    const eps = estEps();
-    if (!eps.length)
-        return `<div class="page-head"><div><div class="eyebrow">CONTROLE DE FARM</div><h1 class="page-title">Estoque</h1><p class="page-subtitle">Sem dados de episódio carregados.</p></div></div>`;
-    if (!eps.includes(estEp)) estEp = eps[0];
-    const rows = diaRows().filter((r) => r[0] === estEp),
-        rec = estRec();
-    const totals = diaTotals(rows, estBonus),
-        recM = new Map(Object.entries(rec?.total_moedas || {}));
-    const items = [...new Set([...totals.keys(), ...recM.keys()])].sort((a, b) => a.localeCompare(b, "pt-BR"));
-    const est = stLoad("ro-atlas-estoque", {}),
-        temBonus = rows.some((r) => Number(r[6]) > 0);
-    const soma = rec?.somas?.total;
-    return `<div class="page-head"><div><div class="eyebrow">CONTROLE DE FARM</div><h1 class="page-title">Estoque</h1><p class="page-subtitle">Ganho diário, recompensas do episódio e o estoque salvo no navegador — usado pela calculadora de custo total de encantamento.</p></div><span class="count-pill">${items.length} ITENS</span></div>
-<div class="toolbar" style="margin-bottom:14px"><label for="estSelect" style="font-size:14px">Episódio:</label><select id="estSelect">${eps.map((e) => `<option${e === estEp ? " selected" : ""}>${esc(e)}</option>`).join("")}</select>${temBonus ? `<label class="bonus-entry"><input type="checkbox" id="estBonus"${estBonus ? " checked" : ""}> incluir bônus por reputação</label>` : ""}</div>
-${avisoSeFalha("fontes")}
-${secH("Ganho por dia — diárias", rows.length ? "Somatório das missões diárias do episódio, por item." : "Este episódio não tem diárias catalogadas na base.")}
-${rows.length ? `<div class="panel-note"><b>Total por dia:</b> ${diaTotalsHtml(rows, estBonus) || "—"}</div>${diaTablesTsv(rows)}` : ""}
-${
-    rec
-        ? `${secH("Recompensas de " + (rec.nome || "Episódio"), rec.moedas?.length ? `Moeda do episódio: ${rec.moedas.map((m) => itemLink(m)).join(", ")} — obtidas nas quests abaixo.` : "")}
-${estQuestTable(rec.questPrincipal || [])}
-${rec.questSecundarias?.length ? fold("Quest secundárias", estQuestTable(rec.questSecundarias), { cls: "fold-top", count: `${rec.questSecundarias.length} quests` }) : ""}
-${soma ? `<p class="table-search-note">Somando tudo: ${fmt(soma["pétalas"] || 0)} moedas do episódio, ${fmt(soma.rep || 0)} de reputação${soma.base ? `, ${fmt(soma.base)} de EXP base` : ""}${soma.classe ? ` e ${fmt(soma.classe)} de EXP de classe` : ""}.</p>` : ""}`
-        : ""
+/* Cartão do estoque exibido no topo direito da página de diárias. */
+function diariasEstoqueWidget(ep, rows) {
+    const rec = recompensaFor(ep),
+        totals = diaTotals(rows, diaBonus),
+        moedas = rec?.moedas?.length ? rec.moedas : [...totals.keys()];
+    if (!moedas.length) return "";
+    const est = estEpCarregar(ep);
+    return `<div id="diaEstoque" data-ep="${esc(ep)}" class="estoque-widget"><div class="eyebrow">ESTOQUE · ${esc(ep)}</div>${moedas
+        .map((m) => {
+            const farm = totals.get(m) || 0;
+            return `<div class="est-item"><span class="item-label">${itemIcon(m)}${esc(m)}</span><label>Tem <input type="number" min="0" step="1" data-est-item="${esc(m)}" value="${esc(est[m] ?? "")}" placeholder="0"></label><button type="button" class="button" data-est-add="${esc(m)}" data-farm="${farm}" title="Somar o ganho das diárias de hoje ao estoque">+ ${fmt(farm)}</button><button type="button" class="button stock-reset" data-est-rst="${esc(m)}" title="Zerar o valor salvo deste item">↺</button></div>`;
+        })
+        .join(
+            ""
+        )}<p class="table-search-note">Comece com o valor que sobrou das quests do episódio e use “+ N” para somar o farm de hoje. Salvo no navegador, por episódio.</p></div>`;
 }
-${secH("Estoque salvo", "O que você já tem guardado de cada item. Fica salvo no navegador e é lido pela calculadora de custo total de encantamento.")}
-${tableFrame(["Item", "Diárias (/dia)", "Recompensa do episódio (1×)", "Salvo no navegador"], items.map((name) => `<tr><td><span class="item-label">${itemLink(name)}</span></td><td>${totals.get(name) ? fmt(totals.get(name)) : "—"}</td><td>${recM.get(name) ? fmt(recM.get(name)) : "—"}</td><td class="material-cell"><div class="stock-row"><label>Tem <input type="number" min="0" step="1" data-est="${esc(name)}" value="${esc(est[name] ?? "")}"></label><button type="button" class="button stock-reset" data-estrst="${esc(name)}" title="Apagar a quantidade salva deste item">↺</button></div></td></tr>`).join(""), "grouped-table align-top")}`;
-}
-function bindEstoque() {
-    $("#estSelect")?.addEventListener("change", (e) => {
-        estEp = e.target.value;
-        render();
-    });
-    $("#estBonus")?.addEventListener("change", (e) => {
-        estBonus = e.target.checked;
-        render();
-    });
-    $$("[data-est]").forEach((inp) => {
+function bindDiariasEstoque() {
+    const widget = $("#diaEstoque");
+    if (!widget) return;
+    const ep = activeDiaEp;
+    $$("[data-est-item]").forEach((inp) => {
         inp.oninput = () => {
-            const est = stLoad("ro-atlas-estoque", {}),
-                name = inp.dataset.est,
+            const est = estEpCarregar(ep),
                 v = inp.value.trim();
-            if (v === "") delete est[name];
-            else {
-                const n = Number(v);
-                est[name] = Number.isFinite(n) && n >= 0 ? n : 0;
-            }
-            stSave("ro-atlas-estoque", est);
+            if (v === "") delete est[inp.dataset.estItem];
+            else est[inp.dataset.estItem] = Math.max(0, stNum(v));
+            estEpSalvar(ep, est);
         };
     });
-    $$("[data-estrst]").forEach(
+    $$("[data-est-add]").forEach((b) => {
+        b.onclick = () => {
+            const item = b.dataset.estAdd,
+                est = estEpCarregar(ep);
+            est[item] = stNum(est[item]) + stNum(b.dataset.farm);
+            estEpSalvar(ep, est);
+            render();
+        };
+    });
+    $$("[data-est-rst]").forEach(
         (b) =>
             (b.onclick = () => {
-                const est = stLoad("ro-atlas-estoque", {});
-                delete est[b.dataset.estrst];
-                stSave("ro-atlas-estoque", est);
+                const est = estEpCarregar(ep);
+                delete est[b.dataset.estRst];
+                estEpSalvar(ep, est);
                 render();
             })
     );
+}
+/* Recompensas de quest do episódio (antes ficavam na página Estoque). */
+function diariasRecompensas(ep) {
+    const rec = recompensaFor(ep);
+    if (!rec) return "";
+    const soma = rec.somas?.total;
+    return `${secH("Recompensas do " + (rec.nome || "episódio"), rec.moedas?.length ? `Moeda do episódio: ${rec.moedas.map((m) => itemLink(m)).join(", ")} — obtidas nas quests abaixo.` : "")}
+${questRewardTable(rec.questPrincipal || [])}
+${rec.questSecundarias?.length ? fold("Quest secundárias", questRewardTable(rec.questSecundarias), { cls: "fold-top", count: `${rec.questSecundarias.length} quests` }) : ""}
+${soma ? `<p class="table-search-note">Somando tudo: ${fmt(soma["pétalas"] || 0)} moedas do episódio, ${fmt(soma.rep || 0)} de reputação${soma.base ? `, ${fmt(soma.base)} de EXP base` : ""}${soma.classe ? ` e ${fmt(soma.classe)} de EXP de classe` : ""}.</p>` : ""}`;
 }
 
 /* ===== Tabelas de dados (montagem por view) ===== */
@@ -1014,7 +1012,7 @@ function calcView(selected = "") {
             (c) =>
                 `<button class="card calc-card" data-calc="${c.id}"><span class="calc-type">${c.kind}</span><h3>${c.title}</h3><p>${c.desc}</p></button>`
         ).join("");
-    return `<div class="page-head"><div><div class="eyebrow">FERRAMENTAS DE JOGO · VERSÃO 1.3</div><h1 class="page-title">Calculadoras</h1><p class="page-subtitle">Os valores são calculados no seu navegador e não são enviados nem salvos.</p></div><span class="count-pill">${CALCS.length + 2} FERRAMENTAS</span></div><div class="calc-grid">${cards}</div><div id="calcMount">${selected ? calcPanel(selected) : ""}</div><div id="recipeCatalog">${selected ? recipeCatalog(selected) : ""}</div>`;
+    return `<div class="page-head"><div><div class="eyebrow">FERRAMENTAS DE JOGO · VERSÃO 1.3</div><h1 class="page-title">Calculadoras</h1><p class="page-subtitle">Os valores são calculados no seu navegador e não são enviados nem salvos.</p></div><span class="count-pill">${CALCS.length + EXTRA_CALCS.length + 1} FERRAMENTAS</span></div><div class="calc-grid">${cards}</div><div id="calcMount">${selected ? calcPanel(selected) : ""}</div><div id="recipeCatalog">${selected ? recipeCatalog(selected) : ""}</div>`;
 }
 function calcExplanation(id) {
     const notes = {
@@ -1166,7 +1164,6 @@ function render() {
         else if (currentView === "grau") host.innerHTML = seguro(upgradesView, "grau & refinamento");
         else if (currentView === "reciclagem") host.innerHTML = seguro(recycleView, "reciclagem");
         else if (currentView === "calculadoras") host.innerHTML = seguro(calcView, "calculadoras");
-        else if (currentView === "estoque") host.innerHTML = seguro(estoqueView, "estoque");
         else host.innerHTML = seguro(sourceView, "fontes");
         if (TABLES[currentView]) seguro(() => renderDataTable(currentView), `tabela ${currentView}`);
         if (currentView === "reformas") seguro(renderReformTable, "tabela reforma");
@@ -1176,7 +1173,7 @@ function render() {
     }
     try {
         bindContent();
-        if (currentView === "estoque") bindEstoque();
+        if (currentView === "diarias") bindDiariasEstoque();
         if (currentView === "reciclagem") bindRecycle();
         if (currentView === "grau") bindUpgrades();
     } catch (err) {
@@ -1213,10 +1210,7 @@ function bindContent() {
     });
     $("#diaBonus")?.addEventListener("change", (e) => {
         diaBonus = e.target.checked;
-        $("#diaTotalsList").innerHTML = diaTotalsHtml(
-            diaRows().filter((r) => r[0] === activeDiaEp),
-            diaBonus
-        );
+        render();
     });
     $$("[data-calc]").forEach(
         (b) =>
@@ -1338,14 +1332,20 @@ let GRAU19 = { steps: [], mats: [] },
     RECYCLE19 = [];
 const EXTRA_CALCS = [
     {
+        id: "farm",
+        kind: "Farm diário",
+        title: "Farm diário",
+        desc: "Estima quanto você junta das missões diárias de um episódio em N dias, considerando o estoque inicial de cada item (o mesmo cartão da página de diárias).",
+    },
+    {
         id: "encanto",
         kind: "Materiais totais",
         title: "Custo total de encantamento",
         desc: "Soma os materiais dos efeitos escolhidos em cada slot. Os aleatórios do Ep. 19 ficam de fora; nos demais episódios o custo de cada sorteio é somado.",
     },
 ];
-const EXTRA_PANELS = { encanto: enchantPanel },
-    EXTRA_UPDATE = { encanto: updateEnchantCalc };
+const EXTRA_PANELS = { farm: farmDiarioPanel, encanto: enchantPanel },
+    EXTRA_UPDATE = { farm: updateFarmDiario, encanto: updateEnchantCalc };
 const numQty = (s) => {
     s = String(s ?? "").trim();
     if (/^\d{1,3}(\.\d{3})+$/.test(s)) return Number(s.replace(/\./g, ""));
@@ -1416,6 +1416,32 @@ const stLoad = (k, f) => {
 function stNum(v, def = 0) {
     const n = Number(v);
     return Number.isFinite(n) ? n : def;
+}
+/* Painel do farm diário: episódio + dias -> ganho estimado por item. */
+function farmDiarioPanel() {
+    const eps = diaEps();
+    return `<section class="calculator" data-active-calc="farm"><div class="card calc-form"><h3>Farm diário</h3><p>Estimativa do ganho das missões diárias de um episódio em N dias.</p><div class="fields"><div class="field"><label for="farmEp">Episódio</label><select id="farmEp">${eps.map((e) => `<option${e === activeDiaEp ? " selected" : ""}>${esc(e)}</option>`).join("")}</select></div><div class="field"><label for="farmDias">Dias de farm</label><input id="farmDias" type="number" min="0" step="1" value="1"></div><div class="field"><label for="farmBonus">Bônus por reputação</label><select id="farmBonus"><option value="0">sem bônus</option><option value="1">com bônus</option></select></div></div><p class="table-search-note">“Com estoque” soma o estoque inicial já salvo no cartão de estoque da página de diárias (por item, se houver).</p></div><div class="card calc-result"><div class="eyebrow">GANHO ESTIMADO</div><div class="ingredient-list" id="farmTotais"></div></div></section>`;
+}
+function updateFarmDiario() {
+    const mount = $("#farmTotais"),
+        ep = $("#farmEp")?.value,
+        dias = Math.max(0, stNum($("#farmDias")?.value, 1)),
+        bonus = $("#farmBonus")?.value === "1";
+    if (!mount || !ep) return;
+    if (!diaEps().includes(ep)) {
+        mount.innerHTML = '<span class="recipe-empty">Este episódio não tem missões diárias catalogadas.</span>';
+        return;
+    }
+    const rows = diaRows().filter((r) => r[0] === ep),
+        totals = diaTotals(rows, bonus),
+        est = estEpCarregar(ep);
+    mount.innerHTML =
+        [...totals]
+            .map(
+                ([n, q]) =>
+                    `<div class="ingredient"><span class="item-label">${itemLink(n)}</span><b>${fmt(q * dias)}${est[n] ? ` · com estoque: ${fmt(stNum(est[n]) + q * dias)}` : ""}</b></div>`
+            )
+            .join("") || '<span class="recipe-empty">Este episódio não tem ganho diário catalogado.</span>';
 }
 function enchantPanel() {
     const eps = [...enchIndex().keys()].sort((a, b) => episodeRank(b) - episodeRank(a)),

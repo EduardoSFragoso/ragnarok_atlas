@@ -688,6 +688,34 @@ body.menu-aberto {
         monospace;
 }
 
+/* ===== Estoque por episódio (cartão na página de diárias) ===== */
+.estoque-widget {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 14px;
+    min-width: 280px;
+}
+.estoque-widget .eyebrow {
+    margin-bottom: 8px;
+}
+.est-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+.est-item + .est-item {
+    margin-top: 8px;
+}
+.est-item label {
+    font-size: 12px;
+    color: var(--muted);
+}
+.est-item input {
+    width: 76px;
+}
+
 /* ===== Toolbar e campos de formulário ===== */
 .toolbar {
     display: flex;
