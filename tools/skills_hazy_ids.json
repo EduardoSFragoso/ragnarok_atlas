@@ -420,9 +420,7 @@
   "pedra": null
  },
  "염락풍": {
-  "id": null,
   "handle": null,
-  "pt": "Kagerou (pedra)",
   "pedra": {
    "nome": "Cristal Invernal (Kagerou)",
    "ids": [
@@ -432,12 +430,12 @@
     310174,
     310563
    ]
-  }
+  },
+  "kt": "CristalInvernal (Kagerou)",
+  "nota": "설화 마력(염락풍) e uma variedade da pedra de encantamento do Hazy Forest (slot 1), nao uma habilidade isolada. Equivalente LATAM: pedra \"Cristal Invernal (Kagerou);\" (ids na lista abaixo). Drops da linha foram mapeados."
  },
  "화섬풍": {
-  "id": null,
   "handle": null,
-  "pt": "Oboro (pedra)",
   "pedra": {
    "nome": "Cristal Invernal (Oboro)",
    "ids": [
@@ -447,51 +445,53 @@
     310172,
     310561
    ]
-  }
+  },
+  "kt": "CristalInvernal (Oboro)",
+  "nota": "설화 마력(화섬풍) e uma variedade da pedra de encantamento do Hazy Forest (slot 1), nao uma habilidade isolada. Equivalente LATAM: pedra \"Cristal Invernal (Oboro);\" (ids na lista abaixo). Drops da linha foram mapeados."
  },
  "팔방 폭발": {
-  "id": null,
   "handle": null,
-  "pt": "Ninja (pedra)",
   "pedra": {
    "nome": "Cristal Invernal (Ninja)",
    "ids": [
     311258
    ]
-  }
+  },
+  "kt": "CristalInvernal (Ninja)",
+  "nota": "설화 마력(팔방 폭발) e uma variedade da pedra de encantamento do Hazy Forest (slot 1), nao uma habilidade isolada. Equivalente LATAM: pedra \"Cristal Invernal (Ninja);\" (ids na lista abaixo). Drops da linha foram mapeados."
  },
  "엘레멘탈 스펠": {
-  "id": null,
   "handle": null,
-  "pt": "Magismo (pedra)",
   "pedra": {
    "nome": "Cristal Invernal (Magismo)",
    "ids": [
     311222
    ]
-  }
+  },
+  "kt": "CristalInvernal (Magismo)",
+  "nota": "설화 마력(엘레멘탈 스펠) e uma variedade da pedra de encantamento do Hazy Forest (slot 1), nao uma habilidade isolada. Equivalente LATAM: pedra \"Cristal Invernal (Magismo);\" (ids na lista abaixo). Drops da linha foram mapeados."
  },
  "뇌광탄": {
-  "id": null,
   "handle": null,
-  "pt": "Tempestade Espiritual (pedra)",
   "pedra": {
    "nome": "Cristal Invernal (Tempestade Espiritual)",
    "ids": [
     311236
    ]
-  }
+  },
+  "kt": "CristalInvernal (Tempestade Espiritual)",
+  "nota": "설화 마력(뇌광탄) e uma variedade da pedra de encantamento do Hazy Forest (slot 1), nao uma habilidade isolada. Equivalente LATAM: pedra \"Cristal Invernal (Tempestade Espiritual);\" (ids na lista abaixo). Drops da linha foram mapeados."
  },
  "수라신탄": {
-  "id": null,
   "handle": null,
-  "pt": "Pancada Corporal (pedra)",
   "pedra": {
    "nome": "Cristal Invernal (Pancada Corporal)",
    "ids": [
     311237
    ]
-  }
+  },
+  "kt": "CristalInvernal (Pancada Corporal)",
+  "nota": "설화 마력(수라신탄) e uma variedade da pedra de encantamento do Hazy Forest (slot 1), nao uma habilidade isolada. Equivalente LATAM: pedra \"Cristal Invernal (Pancada Corporal);\" (ids na lista abaixo). Drops da linha foram mapeados."
  },
  "홍염폭발": {
   "id": null,
