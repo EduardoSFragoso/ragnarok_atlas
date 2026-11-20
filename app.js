@@ -2064,10 +2064,11 @@ function naviBtn(cmd) {
     return `<button type="button" class="navi-chip" data-copy-navi="${esc(full)}" title="Clique para copiar ${esc(full)}"><code>${esc(full)}</code></button>`;
 }
 
-/** Texto rico dos JSONs: escapa, converte \n em <br> e {{Item}} em link. */
+/** Texto rico dos JSONs: escapa, converte \n em <br>, /navi … em botão e {{Item}} em link. */
 const richText = (s) =>
     escapeEntities(s)
         .replace(/\n/g, "<br>")
+        .replace(/\/navi\s+[a-z0-9_@]+\s+\d{1,3}\/\d{1,3}/gi, (m) => naviBtn(m))
         .replace(
             /(\d+)(\s*×\s*)\{\{([^}]+)\}\}/g,
             (_, q, sep, n) => `<span class="qty-item">${q} ×${itemLink(n)}</span>`
