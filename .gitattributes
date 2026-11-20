@@ -1,0 +1,12 @@
+# Normalização de fim de linha: os fontes ficam em LF no repositório,
+# independente de core.autocrlf do checkout (o Prettier exige LF e o CI valida).
+* text=auto eol=lf
+
+# Binários: nunca converter.
+*.png binary
+*.ico binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.woff binary
+*.woff2 binary
