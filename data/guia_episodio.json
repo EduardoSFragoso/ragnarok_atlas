@@ -675,7 +675,7 @@
             },
             {
               "nome": "Umidade em Excesso",
-              "tarefa": "Coletar 20 Desumidificador caçando Lobo de Gelo e entregar à Prisioneira (111/187)",
+              "tarefa": "Coletar 20 {{Desumidificador}} caçando Lobo de Gelo e entregar à Prisioneira (111/187)",
               "itens": "20 × {{Desumidificador}}",
               "recompensa": "4 Marcas de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Pris%C3%A3o#Umidade_em_Excesso"
@@ -1193,7 +1193,7 @@
             },
             {
               "nome": "Gesto de Carinho",
-              "tarefa": "Levar 3 Pedaço de Papel à Menina Florista (einbroch 168/160), receber o Buquê Cerimonial e deixá-lo na Grande Árvore (163/152)",
+              "tarefa": "Levar 3 {{Pedaço de Papel}} à Menina Florista (einbroch 168/160), receber o Buquê Cerimonial e deixá-lo na Grande Árvore (163/152)",
               "itens": "3 × {{Pedaço de Papel}}",
               "recompensa": "3 Brasões de Honra · (1ª vez: 10 Brasões)",
               "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Gesto_de_Carinho"
@@ -1342,7 +1342,7 @@
                 "linhas": [
                   [
                     "Gêmeos: Culinária",
-                    "Entregar Bolachas Caseiras a Milo River (rebel_in 108/27), Elena Bolkova (70/77), Ericsson Adler (91/66), Rachel Smith (88/51) ou Manson Bender (19/48)"
+                    "Entregar {{Bolachas Caseiras}} a Milo River (rebel_in 108/27), Elena Bolkova (70/77), Ericsson Adler (91/66), Rachel Smith (88/51) ou Manson Bender (19/48)"
                   ],
                   [
                     "Gêmeos: Livro Infantil",
@@ -1350,11 +1350,11 @@
                   ],
                   [
                     "Gêmeos: Mineradores",
-                    "Eliminar 30 Mineiros e coletar 1 Mistura de Pólvora"
+                    "Eliminar 30 Mineiros e coletar 1 {{Mistura de Pólvora}}"
                   ],
                   [
                     "Gêmeos: Ar Poluído",
-                    "Eliminar 20 Nuvem Venenosa e 20 Nuvem Tóxica e coletar 1 Pó Explosivo"
+                    "Eliminar 20 Nuvem Venenosa e 20 Nuvem Tóxica e coletar 1 {{Pó Explosivo}}"
                   ]
                 ]
               }
@@ -1760,7 +1760,7 @@
             },
             {
               "nome": "Descanse em Paz",
-              "tarefa": "Eliminar 20 Dolor em Rudus e coletar 10 Bracelete de Identificação",
+              "tarefa": "Eliminar 20 Dolor em Rudus e coletar 10 {{Bracelete de Identificação}}",
               "itens": "10 × {{Bracelete de Identificação}}",
               "recompensa": "1 Núcleo COR · 5 Chips Misteriosos",
               "obs": "Pré-requisito: Procurando Patrick",
@@ -2311,7 +2311,7 @@
             },
             {
               "nome": "Interferência Bioeletrônica (Nv. 180+)",
-              "tarefa": "Coletar 10 Chip de Batata",
+              "tarefa": "Coletar 10 {{Chip de Batata}}",
               "itens": "10 × {{Chip de Batata}}",
               "recompensa": "1 Vale Varmida",
               "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Mans%C3%A3o#Interfer.C3.AAncia_Bioeletr.C3.B4nica"
@@ -2325,7 +2325,7 @@
             },
             {
               "nome": "Coletando Núcleos",
-              "tarefa": "Coletar 10 Núcleo de Autômata Quebrada",
+              "tarefa": "Coletar 10 {{Núcleo de Autômata Quebrada}}",
               "itens": "10 × {{Núcleo de Autômata Quebrada}}",
               "recompensa": "2 Vales Varmida",
               "obs": "Requisito: secundária Fale com Doçura"
@@ -2374,7 +2374,7 @@
           "diarias": [
             {
               "nome": "Entre Água Quente e Fria",
-              "tarefa": "Eliminar 10 Empregada Quebrada (Balde), 10 Empregada Quebrada (Cano) e coletar 5 Peça de Autômata Quebrada",
+              "tarefa": "Eliminar 10 Empregada Quebrada (Balde), 10 Empregada Quebrada (Cano) e coletar 5 {{Peça de Autômata Quebrada}}",
               "itens": "5 × {{Peça de Autômata Quebrada}}",
               "recompensa": "2 Vales Varmida + 2 {{Sais de Banho B}}",
               "obs": "Pré-requisito: Mistério na Sauna",
@@ -4195,7 +4195,7 @@
             },
             {
               "nome": "Sacerdote, Tende Piedade",
-              "tarefa": "Entregar 30 Casco Rgan",
+              "tarefa": "Entregar 30 {{Casco Rgan}}",
               "itens": "30 × {{Casco Rgan}}",
               "recompensa": "2 Pétalas",
               "linkBrowiki": "https://browiki.org/wiki/Miss%C3%B5es_Di%C3%A1rias_de_Issgard#Sacerdote.2C_tenha_piedade.3F.3F"
