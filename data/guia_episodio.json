@@ -478,53 +478,6 @@
       }
     ],
     "itensNecessarios": {
-      "diarias": {
-        "titulo": "Materiais Para As Diárias",
-        "colunas": [
-          "Item",
-          "Onde conseguir",
-          "Para que serve",
-          "Quanto guardar"
-        ],
-        "linhas": [
-          [
-            "{{Pedra do Mar}}",
-            "Drop de Medusa (~25%)",
-            "Diária dos Wigner (entregar 15)",
-            "15/dia"
-          ],
-          [
-            "{{Rosa Eterna}}",
-            "Compre com a Florista de Lighthalzen (/navi lighthalzen 113/46) → mercado de jogadores",
-            "Diária dos Wigner (entregar 1)",
-            "1/dia"
-          ],
-          [
-            "{{Olho de Sangue}}",
-            "Drop de Observador",
-            "Diária Favor Vampiresco (20)",
-            "20/dia"
-          ],
-          [
-            "{{Desumidificador}}",
-            "Drop de Lobo de Gelo",
-            "Diária Umidade em Excesso (20)",
-            "20/dia"
-          ],
-          [
-            "{{Lixa}}",
-            "Drop de Tappy",
-            "Diária Ei Chifrudo (20)",
-            "20/dia"
-          ],
-          [
-            "Flores: {{Flor das Ilusões}} (100%), {{Flor Misteriosa}}, {{Flor Elegante}}, {{Aloés}} (50%), {{Menta}}, {{Hinalle}}, {{Izidor}} (30%), {{Flor}}, {{Flor Bonita}} (10%)",
-            "Floras comuns",
-            "Diária Controlando a Escuridão — a flor pode ser recusada e consumida",
-            "Leve 2–3 flores"
-          ]
-        ]
-      },
       "embarque": {
         "titulo": "Materiais Usado No Episódio",
         "colunas": [
@@ -595,8 +548,7 @@
             "Cai direto no inventário caçando Medusas"
           ]
         ]
-      },
-      "nota": "Os {{Prato Luxuoso}}s da diária Louça Suja são coletados na própria Sala de Jantar, sem farm prévio."
+      }
     },
     "diarias": {
       "aviso": "Diárias do Palácio de Prontera, da Prisão Subterrânea e da Prontera Destruída (reset às 4h da manhã). Todas pagam Marcas de Honra: 4 por missão e 10 na repetição da Sala de Ymir (cooldown de 16 h). Nenhuma tem sistema de Reputação.",
@@ -1122,53 +1074,6 @@
       }
     ],
     "itensNecessarios": {
-      "diarias": {
-        "titulo": "Materiais Para As Diárias",
-        "colunas": [
-          "Item",
-          "Onde conseguir",
-          "Para que serve",
-          "Quanto guardar"
-        ],
-        "linhas": [
-          [
-            "{{Ferro}} · {{Oridecon}} · {{Elunium}}",
-            "Mercado/drop comum",
-            "Armeira da Rebelião — pedido aleatório do dia (5 Ferro, 2 Oridecon ou 2 Elunium)",
-            "1 do conjunto/dia"
-          ],
-          [
-            "{{Pedaço de Papel}}",
-            "Mercado/drops comuns",
-            "Gesto de Carinho (entregar 3)",
-            "3/dia"
-          ],
-          [
-            "{{Chá de Ervas com Uvas}} · {{Chá Vermelho de Outono}} · {{Chá de Ervas e Mel}} · {{Mousse de Chocolate}} · {{Salada de Frutas}}",
-            "Culinária ou mercado",
-            "Pedidos de Milo — Lanche dos Veteranos (entregar 1)",
-            "1/dia"
-          ],
-          [
-            "{{Bolachas Caseiras}}",
-            "Culinária ou mercado",
-            "Gêmeos: Culinária — entregar aos membros da Rebelião",
-            "Sob demanda"
-          ],
-          [
-            "{{Mistura de Pólvora}}",
-            "Drop de Mineiros",
-            "Gêmeos: Mineradores (coletar 1)",
-            "1/dia"
-          ],
-          [
-            "{{Pó Explosivo}}",
-            "Drop de Nuvem Venenosa e Nuvem Tóxica",
-            "Gêmeos: Ar Poluído (coletar 1)",
-            "1/dia"
-          ]
-        ]
-      },
       "embarque": {
         "titulo": "Materiais Usado No Episódio",
         "colunas": [
@@ -1824,31 +1729,6 @@
         "desbloqueia": "Diária 2ª Busca do Distrito OS"
       }
     ],
-    "itensNecessarios": {
-      "diarias": {
-        "titulo": "Materiais Para As Diárias",
-        "colunas": [
-          "Item",
-          "Onde conseguir",
-          "Para que serve",
-          "Quanto guardar"
-        ],
-        "linhas": [
-          [
-            "10 de um mesmo tipo (escolha 1):\n{{Jellopy}}\n{{Raiz de Árvore}}\n{{Perna de Gafanhoto}}\n{{Trevo}}\n{{Plumas de Ave}}\n{{Cauda de Rato}}\n{{Canino Venenoso}}\n{{Cauda de Yoyo}}\n{{Dente de Morcego}}\n{{Pata de Urso}}",
-            "Drops clássicos de Midgard (Porings, Lunáticos, Ratões etc.)",
-            "Comida do dia para a diária Morning — a pedida é igual para todo o servidor",
-            "10/dia (a opção muda por dia)"
-          ],
-          [
-            "{{Bracelete de Identificação}}",
-            "Cai dos Dolor derrotados em Rudus",
-            "Diária Descanse em Paz (10)",
-            "10/dia"
-          ]
-        ]
-      }
-    },
     "diarias": {
       "titulo": "Missões diárias de episódio",
       "aviso": "Diárias do Distrito (reset às 4h da manhã). Todas pagam a mesma recompensa fixa: 1 Núcleo COR + 5 Chips Misteriosos por execução; o episódio não tem sistema de Reputação, portanto não há bônus por reputação.",
@@ -2363,35 +2243,6 @@
       }
     ],
     "itensNecessarios": {
-      "diarias": {
-        "titulo": "Materiais Para As Diárias",
-        "colunas": [
-          "Item",
-          "Onde conseguir",
-          "Para que serve",
-          "Quanto guardar"
-        ],
-        "linhas": [
-          [
-            "{{Comunicador de Autômato}}",
-            "Aparece direto no inventário ao derrotar Beta Quebrada na Mansão (30% de chance)",
-            "1 na história (Mazang) · Diária Transmissor sem Sinal (10)",
-            "10/dia"
-          ],
-          [
-            "{{Peça de Autômata Quebrada}}",
-            "Aparece direto no inventário ao derrotar Empregada Quebrada na sauna (30% de chance)",
-            "Diária Entre Água Quente e Fria (5)",
-            "5/dia"
-          ],
-          [
-            "{{Chip de Batata}}",
-            "Coletado durante a própria diária, perto da Eorfa (ba_maison 79/278)",
-            "Diária Interferência Bioeletrônica (Nv. 180+, 10)",
-            "10/dia"
-          ]
-        ]
-      },
       "embarque": {
         "titulo": "Materiais Usado No Episódio",
         "colunas": [
@@ -3311,35 +3162,6 @@
       }
     ],
     "itensNecessarios": {
-      "diarias": {
-        "titulo": "Materiais Para As Diárias",
-        "colunas": [
-          "Item",
-          "Onde conseguir",
-          "Para que serve",
-          "Quanto guardar"
-        ],
-        "linhas": [
-          [
-            "1 × {{Aço}}",
-            "Drop de minérios/monstros clássicos de Midgard",
-            "Diária Onde Fica Minha Casa",
-            "1/dia"
-          ],
-          [
-            "10 × {{Cristal Sólido}}",
-            "Cai do Lobo Cinzento (Floresta Cinzenta)",
-            "Diária Onde Fica Minha Casa",
-            "10/dia"
-          ],
-          [
-            "5 Coisas Presas: {{Animal Preso}} · {{Bichinho Preso}} · {{Fruta Presa}}",
-            "Resultado das Armadilhas na Floresta Cinzenta (1)",
-            "Diária Pão Nosso de Cada Dia (5, qualquer mistura)",
-            "5/dia"
-          ]
-        ]
-      },
       "embarque": {
         "titulo": "Materiais Usado No Episódio",
         "colunas": [
@@ -4196,47 +4018,6 @@
       }
     ],
     "itensNecessarios": {
-      "diarias": {
-        "titulo": "Materiais Para As Diárias",
-        "colunas": [
-          "Item",
-          "Onde cai",
-          "Para que serve",
-          "Quanto guardar"
-        ],
-        "linhas": [
-          [
-            "{{Casco Rgan}}",
-            "Rgans (mesmos lugares do Núcleo de Baixa Qualidade)",
-            "Diária Sacerdote, Tende Piedade (30)",
-            "30/dia"
-          ],
-          [
-            "{{Casco Fino e Resistente}}",
-            "Ice Straw (jor_back1 e jor_back2, segundo a Hazy Forest)",
-            "Diárias Almoço com Zoryara (15) e Passatempo Refinado (10)",
-            "25/dia"
-          ],
-          [
-            "{{Calapi}}",
-            "Calmaring (jor_back3) e Cave Calmaring (jor_ab01) — cristal do interior de um Calamaring",
-            "Diária Passatempo Refinado (10)",
-            "10/dia"
-          ],
-          [
-            "{{Flor-Sino de Isca}}",
-            "Cave Flower (15,5%) e Unfrost Flower (27%)",
-            "Diária Passatempo Refinado (10)",
-            "10/dia"
-          ],
-          [
-            "{{Núcleo Mágico Rgan}}",
-            "Cai ao caçar Rgan Primitivo e Rgan Ínfimo durante a própria diária",
-            "O Dia de Friederike (10)",
-            "Não precisa juntar antes"
-          ]
-        ]
-      },
       "embarque": {
         "titulo": "Materiais Usado No Episódio",
         "colunas": [
@@ -4263,24 +4044,6 @@
             "1 grátis + até 2 opcionais",
             "1ª entrega a Juncea (o grátis) — cap. 6 · alternativa aos 10 núcleos nas 2 entregas seguintes",
             "O primeiro vem de Wirorung e Jaerorong (/navi icas_in 245/197)."
-          ],
-          [
-            "10 de um mesmo tipo de pena (escolha 1):\n{{Plumas de Ave}}\n{{Pena Macia}}\n{{Pluma Arredondada}}\n{{Pluma Flamejante}}\n{{Pena Vermelha}}\n{{Pena de Cendrawasih}}\n{{Pena de Grand Peco}}\n{{Pena Azul}}\n{{Pena de Harpia}}",
-            "10",
-            "Diária Diversão às Escondidas",
-            "Qualquer uma das penas listadas serve."
-          ],
-          [
-            "Estoque do Cardápio do Lunch (10/dia):\n{{Jarro de Nuvem}}\n{{Jarro de Saquê}}\n{{Pedaço de Bambu}}\n{{Pena de Cendrawasih}}\n{{Cesto de Palha}}\n{{Cauda de Gabiru}}\n{{Pilão Yaga}}\n{{Dentadura da Máscara do Dragão}}\n{{Jejellopy}}\n{{Pele de Leopardo}}",
-            "10 por dia",
-            "Diária de comida do Lunch",
-            "A recompensa é 2 {{Pétala de Flor Invernal}} + 1 {{Disfarce de Rgan}}."
-          ],
-          [
-            "{{Líquido Fluorescente}}",
-            "10",
-            "Diária Passatempo Refinado",
-            ""
           ],
           [
             "{{Carta Bathory}} ou {{Carta Druida Maligno}}",

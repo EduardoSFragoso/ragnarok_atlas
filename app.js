@@ -2109,7 +2109,7 @@ function itensNecessariosHtml(ep) {
           )
         : "";
     return `<section class="itens-necessarios">
-    <div class="section-heading"><div><h2>Itens necessários</h2><p>Lista completa antes do passo a passo: itens das diárias e o que levar de Midgard.</p></div></div>
+    <div class="section-heading"><div><h2>Itens necessários</h2><p>Materiais da estória e o que levar de Midgard antes do passo a passo. Itens de diárias ficam na página Missões Diárias.</p></div></div>
     ${block(it.diarias)}${embarque}
   </section>`;
 }
