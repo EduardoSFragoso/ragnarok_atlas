@@ -61,6 +61,7 @@ O projeto usa linters e formatadores com configuração versionada (aplicados no
 - **Ruff** (`ruff.toml`) — lint e formatação dos scripts Python (`py -m ruff check tools/` e `py -m ruff format tools/`); instale com `py -m pip install --user ruff`.
 - **Prettier** (`.prettierrc.json`) — formatação de `app.js`, `index.html` e `styles.css` (`npx prettier@3 --write app.js index.html styles.css`).
 - **ESLint** (`eslint.config.js`) — lint do `app.js` para o navegador (`npx eslint@9 app.js`).
+- **Validador de esquema dos dados** (`tools/validar_dados.mjs`) — confere os JSONs de `data/` (colunas e ordem das tabelas lidas por posição, formato do guia de episódios, referências e ícones). Rode `npm run validar:dados`; os testes dele rodam com `npm test`. Erros derrubam a CI; campos desconhecidos geram só um aviso (⚠).
 
 Comentários e docstrings são escritos em português do Brasil. Os scripts gravam JSON/texto de forma atômica (arquivo temporário + renomear) e com final de linha LF, para o resultado local e o do CI serem idênticos. A chave de API é lida somente de `DP_API_KEY`; nunca passe a chave na linha de comando.
 
@@ -68,6 +69,6 @@ Comentários e docstrings são escritos em português do Brasil. Os scripts grav
 
 O arquivo [`LICENSE`](LICENSE) aplica a licença MIT somente ao código original escrito para este projeto. Ela não cobre nem concede direitos sobre dados da API, URLs ou arquivos de ícones, textos de efeitos, conteúdo da bROWiki e do Hazy Forest, informações do jogo, nomes, logotipos ou marcas de terceiros. Os dados, textos e ícones da API têm autorização de uso informada pelo mantenedor, independente da licença do código; isso não se estende automaticamente a conteúdo da bROWiki ou a outros materiais de terceiros.
 
-**Favicon:** o arquivo `assets/favicon.svg` é uma criação original, feita para este projeto, com as iniciais “Ro” em azul sobre fundo branco. Ele não é o logo oficial e não reproduz a marca registrada de Gravity Co.; _Ragnarök Online_ e seus logotipos são propriedade da Gravity Co. Ltd. **Este é um projeto de fãs, sem afiliação com a Gravity Co. Ltd. ou com seus publicadores; todas as marcas citadas pertencem aos respectivos detentores.** O mesmo aviso aparece na página **Fontes & referências** do site.
+**Favicon:** o arquivo `assets/favicon.svg` é uma criação original, feita para este projeto, com as iniciais “Ro” em azul sobre fundo branco. Ele não é o logo oficial e não reproduz a marca registrada de Gravity Co.; _Ragnarök Online_ e seus logotipos são propriedade da Gravity Co. Ltd.
 
 Os dados atuais foram compilados de informações da bROWiki, do Hazy Forest e da API Divine Pride. Ainda não há atribuição de fonte individual registrada para cada arquivo de dados.

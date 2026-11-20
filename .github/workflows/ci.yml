@@ -27,6 +27,12 @@ jobs:
             - name: Format (Prettier)
               run: npm run format:check
 
+            - name: Validate data schema
+              run: npm run validar:dados
+
+            - name: Tests (data validator)
+              run: npm test
+
             - name: Validate JSON
               run: |
                   set -euo pipefail
