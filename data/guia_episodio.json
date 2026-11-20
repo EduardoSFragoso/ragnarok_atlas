@@ -1227,11 +1227,11 @@
             },
             {
               "nome": "Pedidos de Milo — Lanche dos Veteranos",
-              "tarefa": "Entregar 1 prato de culinária a Milo River: Chá de Ervas com Uvas, Chá Vermelho de Outono, Chá de Ervas e Mel, Mousse de Chocolate ou Salada de Frutas",
+              "tarefa": "Entregar 1 prato de culinária a Milo River: {{Chá de Ervas com Uvas}}, {{Chá Vermelho de Outono}}, {{Chá de Ervas e Mel}}, {{Mousse de Chocolate}} ou {{Salada de Frutas}}",
               "itens": "1 prato de culinária",
               "recompensa": "3 Brasões de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Pedidos_de_Milo",
-              "obs": "Fontes dos pratos: culinárias da instância Memória de Sara; 3 Salada de Frutas saem da quest de ordenha de Hugel; comidas de evento (vinculadas à conta) não funcionam."
+              "obs": "Pratos feitos na culinária da instância Memória de Sara; comidas de evento (vinculadas à conta) não funcionam."
             },
             {
               "nome": "Pedidos de Milo — Gata Perdida",
