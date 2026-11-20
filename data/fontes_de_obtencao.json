@@ -906,7 +906,7 @@
   "Bônus por Reputação": "",
   "Incluir? (Sim/Não)": "Sim",
   "Incluir bônus? (Sim/Não)": "",
-  "Observação": "Pede 10 itens comuns do dia; em ocasiões pede também 1 Ovo de bichinho (EXP extra)",
+  "Observação": "Pede 10 itens comuns do dia; em ocasiões pede também 1 Ovo de bichinho",
   "Por dia (se incluído)": ""
  },
  {
@@ -919,7 +919,7 @@
   "Bônus por Reputação": "",
   "Incluir? (Sim/Não)": "Sim",
   "Incluir bônus? (Sim/Não)": "",
-  "Observação": "Pede 10 itens comuns do dia; em ocasiões pede também 1 Ovo de bichinho (EXP extra)",
+  "Observação": "Pede 10 itens comuns do dia; em ocasiões pede também 1 Ovo de bichinho",
   "Por dia (se incluído)": ""
  },
  {
@@ -1010,7 +1010,7 @@
   "Bônus por Reputação": "",
   "Incluir? (Sim/Não)": "Sim",
   "Incluir bônus? (Sim/Não)": "",
-  "Observação": "1ª execução paga 10 Brasões; 200k EXP b/c",
+  "Observação": "1ª execução paga 10 Brasões;",
   "Por dia (se incluído)": ""
  },
  {
@@ -1023,7 +1023,7 @@
   "Bônus por Reputação": "",
   "Incluir? (Sim/Não)": "Sim",
   "Incluir bônus? (Sim/Não)": "",
-  "Observação": "1ª execução paga 10 Brasões; 100k EXP b/c",
+  "Observação": "1ª execução paga 10 Brasões;",
   "Por dia (se incluído)": ""
  },
  {
@@ -1036,7 +1036,7 @@
   "Bônus por Reputação": "",
   "Incluir? (Sim/Não)": "Sim",
   "Incluir bônus? (Sim/Não)": "",
-  "Observação": "1ª execução paga 10 Brasões; 200k EXP b/c",
+  "Observação": "1ª execução paga 10 Brasões;",
   "Por dia (se incluído)": ""
  },
  {
@@ -1049,7 +1049,7 @@
   "Bônus por Reputação": "",
   "Incluir? (Sim/Não)": "Sim",
   "Incluir bônus? (Sim/Não)": "",
-  "Observação": "200k EXP b/c",
+  "Observação": "",
   "Por dia (se incluído)": ""
  },
  {
@@ -1062,7 +1062,7 @@
   "Bônus por Reputação": "",
   "Incluir? (Sim/Não)": "Sim",
   "Incluir bônus? (Sim/Não)": "",
-  "Observação": "1 prato de culinária; 100k EXP b/c",
+  "Observação": "1 prato de culinária;",
   "Por dia (se incluído)": ""
  },
  {
@@ -1075,7 +1075,7 @@
   "Bônus por Reputação": "",
   "Incluir? (Sim/Não)": "Sim",
   "Incluir bônus? (Sim/Não)": "",
-  "Observação": "100k EXP b/c",
+  "Observação": "",
   "Por dia (se incluído)": ""
  },
  {
@@ -1088,7 +1088,7 @@
   "Bônus por Reputação": "",
   "Incluir? (Sim/Não)": "Sim",
   "Incluir bônus? (Sim/Não)": "",
-  "Observação": "3 Resto de Arma Quebrada + 5 Rancore de Arma; 200k EXP b/c",
+  "Observação": "3 Resto de Arma Quebrada + 5 Rancore de Arma;",
   "Por dia (se incluído)": ""
  },
  {
@@ -1101,7 +1101,7 @@
   "Bônus por Reputação": "",
   "Incluir? (Sim/Não)": "Sim",
   "Incluir bônus? (Sim/Não)": "",
-  "Observação": "200k EXP b/c",
+  "Observação": "",
   "Por dia (se incluído)": ""
  },
  {
@@ -1114,7 +1114,7 @@
   "Bônus por Reputação": "",
   "Incluir? (Sim/Não)": "Sim",
   "Incluir bônus? (Sim/Não)": "",
-  "Observação": "150k EXP b/c",
+  "Observação": "",
   "Por dia (se incluído)": ""
  },
  {
@@ -1127,7 +1127,7 @@
   "Bônus por Reputação": "",
   "Incluir? (Sim/Não)": "Sim",
   "Incluir bônus? (Sim/Não)": "",
-  "Observação": "150k EXP b/c",
+  "Observação": "",
   "Por dia (se incluído)": ""
  },
  {
@@ -1140,7 +1140,7 @@
   "Bônus por Reputação": "",
   "Incluir? (Sim/Não)": "Sim",
   "Incluir bônus? (Sim/Não)": "",
-  "Observação": "150k EXP b/c",
+  "Observação": "",
   "Por dia (se incluído)": ""
  },
  {
@@ -1153,7 +1153,7 @@
   "Bônus por Reputação": "",
   "Incluir? (Sim/Não)": "Sim",
   "Incluir bônus? (Sim/Não)": "",
-  "Observação": "Laboratório Werner em modo batalha; 150k EXP b/c",
+  "Observação": "Laboratório Werner em modo batalha;",
   "Por dia (se incluído)": ""
  },
  {
@@ -1166,7 +1166,7 @@
   "Bônus por Reputação": "",
   "Incluir? (Sim/Não)": "Sim",
   "Incluir bônus? (Sim/Não)": "",
-  "Observação": "Laboratório Werner em modo história; 150k EXP b/c",
+  "Observação": "Laboratório Werner em modo história;",
   "Por dia (se incluído)": ""
  },
  {
@@ -1179,7 +1179,7 @@
   "Bônus por Reputação": "",
   "Incluir? (Sim/Não)": "Sim",
   "Incluir bônus? (Sim/Não)": "",
-  "Observação": "8 pontos possíveis no Laboratório Werner; 150k EXP b/c",
+  "Observação": "8 pontos possíveis no Laboratório Werner;",
   "Por dia (se incluído)": ""
  },
  {
@@ -1192,7 +1192,7 @@
   "Bônus por Reputação": "",
   "Incluir? (Sim/Não)": "Sim",
   "Incluir bônus? (Sim/Não)": "",
-  "Observação": "150k EXP b/c",
+  "Observação": "",
   "Por dia (se incluído)": ""
  },
  {
@@ -1205,7 +1205,7 @@
   "Bônus por Reputação": "",
   "Incluir? (Sim/Não)": "Sim",
   "Incluir bônus? (Sim/Não)": "",
-  "Observação": "Sorteio com Jana Levedev; 200k EXP b/c",
+  "Observação": "Sorteio com Jana Levedev;",
   "Por dia (se incluído)": ""
  },
  {

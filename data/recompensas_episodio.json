@@ -15,54 +15,40 @@
         {
           "nome": "Hóspede do Vento Norte",
           "pétalas": 40,
-          "rep": 50,
-          "base": 65304744,
-          "classe": 20000000
+          "rep": 50
         },
         {
           "nome": "Patrulha da Águia (instância, 1ª vez)",
           "pétalas": 2,
-          "rep": 5,
-          "base": 16075013,
-          "classe": 3000000
+          "rep": 5
         },
         {
           "nome": "Reconhecimento e Transformação Rgan",
           "pétalas": 27,
           "rep": 30,
-          "base": 52243795,
-          "classe": 3000000,
           "extra": "+1 Disfarce de Rgan (1ª e 2ª etapas juntas)"
         },
         {
           "nome": "Infiltração no Ninho da Serpente",
           "pétalas": 25,
           "rep": 30,
-          "base": 208975180,
-          "classe": 11000000,
           "extra": "4 recompensas em etapas"
         },
         {
           "nome": "Relatório da Missão de Infiltração",
           "pétalas": 50,
           "rep": 60,
-          "base": 143670438,
-          "classe": 7000000,
           "extra": "concedida em 2 etapas"
         },
         {
           "nome": "O Ninho Caótico da Serpente",
           "pétalas": 50,
-          "rep": 25,
-          "base": 130609488,
-          "classe": 10000000
+          "rep": 25
         },
         {
           "nome": "Aqueles Que Desapareceram",
           "pétalas": 50,
           "rep": 50,
-          "base": 130609489,
-          "classe": 10000000,
           "extra": "concedida em 2 etapas"
         }
       ],
@@ -70,61 +56,44 @@
         {
           "nome": "Santa da Purificação",
           "pétalas": 30,
-          "rep": 50,
-          "base": 130609489,
-          "classe": 12000000,
-          "obs": "EXP base medida com bônus 200% (a confirmar)"
+          "rep": 50
         },
         {
           "nome": "Rastreando o Esconderijo Subterrâneo (introdutória)",
           "pétalas": 2,
-          "rep": 5,
-          "base": 18997743,
-          "classe": 3000000
+          "rep": 5
         },
         {
           "nome": "Mar Congelado",
           "pétalas": 10,
           "rep": 10,
-          "base": 130609488,
-          "classe": 6000000,
           "extra": "2 recompensas em etapas"
         },
         {
           "nome": "Procura-se Ajuda",
           "pétalas": 0,
           "rep": 0,
-          "base": 0,
-          "classe": 0,
           "obs": "libera diária Procurando Sobreviventes"
         },
         {
           "nome": "Ninho da Serpente ×4 (Uma Maneira Única de Sobreviver, A Velha Serpente, Doutrina e Sermão, Algo Curioso)",
           "pétalas": 40,
           "rep": 0,
-          "base": 208975180,
-          "classe": 12000000,
           "obs": "10 Pétalas cada; Reputação não informada na browiki"
         }
       ],
       "somas": {
         "principal": {
           "pétalas": 244,
-          "rep": 250,
-          "base": 747488147,
-          "classe": 64000000
+          "rep": 250
         },
         "secundarias": {
           "pétalas": 82,
-          "rep": 65,
-          "base": 489191900,
-          "classe": 33000000
+          "rep": 65
         },
         "total": {
           "pétalas": 326,
-          "rep": 315,
-          "base": 1236680047,
-          "classe": 97000000
+          "rep": 315
         }
       },
       "total_moedas": {
@@ -144,56 +113,38 @@
       "questPrincipal": [
         {
           "nome": "Sacerdote Nervoso (1ª conversa)",
-          "ame": 20,
-          "base": 34223265,
-          "classe": 35000000
+          "ame": 20
         },
         {
           "nome": "Sacerdote Nervoso (jardins do Santuário)",
-          "ame": 30,
-          "base": 34223265,
-          "classe": 35000000
+          "ame": 30
         },
         {
           "nome": "Filhos Cinzentos (Imril)",
-          "ame": 50,
-          "base": 91262042,
-          "classe": 70000000
+          "ame": 50
         },
         {
           "nome": "Participação na Assembleia (Miriam)",
-          "ame": 40,
-          "base": 68446531,
-          "classe": 10000000
+          "ame": 40
         },
         {
           "nome": "Instância da Base do Vulcão",
-          "ame": 50,
-          "base": 22815510,
-          "classe": 10000000
+          "ame": 50
         },
         {
-          "nome": "Participação na Assembleia (Suad)",
-          "base": 8296549,
-          "classe": 5000000
+          "nome": "Participação na Assembleia (Suad)"
         },
         {
           "nome": "Participação na Assembleia (Aldeão Armado)",
-          "ame": 30,
-          "base": 22815510,
-          "classe": 10000000
+          "ame": 30
         },
         {
           "nome": "Lobo em Pele de Cordeiro (Niren)",
-          "ame": 60,
-          "base": 68446531,
-          "classe": 10000000
+          "ame": 60
         },
         {
           "nome": "Lobo em Pele de Cordeiro (Elly)",
           "ame": 180,
-          "base": 45631021,
-          "classe": 20000000,
           "extra": "+1 (Visual) Mini Elly"
         }
       ],
@@ -201,98 +152,72 @@
         {
           "nome": "O Labirinto e o Mercador",
           "ame": 20,
-          "base": 18252408,
-          "classe": 2000000,
           "rep": 100,
           "obs": "libera diárias de Imril"
         },
         {
           "nome": "Aqui Não É Aquele Lugar",
           "ame": 20,
-          "base": 18252408,
-          "classe": 2000000,
           "rep": 100
         },
         {
           "nome": "Reunindo Histórias",
           "ame": 20,
-          "base": 18252408,
-          "classe": 2000000,
           "rep": 100,
           "obs": "libera diárias da Folclorista"
         },
         {
           "nome": "Onde Fica Minha Casa",
           "ame": 20,
-          "base": 18252408,
-          "classe": 2000000,
           "rep": 100,
           "obs": "consome 3 Aço"
         },
         {
           "nome": "Abastecimento de Água",
           "ame": 20,
-          "base": 18252408,
-          "classe": 2000000,
           "rep": 100,
           "obs": "consome 550 zenys (Relíquia Sagrada)"
         },
         {
           "nome": "Não Existem Feras Más no Mundo",
           "ame": 20,
-          "base": 18252408,
-          "classe": 2000000,
           "rep": 100,
           "obs": "2 entregas (10 Frag cada), consome 1 Carne"
         },
         {
           "nome": "Não Consigo Dormir",
           "ame": 20,
-          "base": 18252408,
-          "classe": 2000000,
           "rep": 100,
           "obs": "30 Gavião Ardente"
         },
         {
           "nome": "O Bem-Estar de um Amigo",
           "ame": 20,
-          "base": 18252408,
-          "classe": 2000000,
           "rep": 100
         },
         {
           "nome": "Pão Nosso de Cada Dia",
           "ame": 20,
-          "base": 18252408,
-          "classe": 2000000,
           "rep": 100
         },
         {
           "nome": "Dificuldades da Caravana Mercante",
           "ame": 40,
-          "base": 15970857,
-          "classe": 2000000,
           "rep": 100,
           "obs": "3 recompensas ao longo da quest + 1 Palha"
         }
       ],
       "somas": {
         "principal": {
-          "ame": 460,
-          "base": 396160224,
-          "classe": 205000000
+          "ame": 460
         },
         "secundarias": {
           "rep": 1000,
-          "ame": 220,
-          "base": 180242529,
-          "classe": 20000000
+          "ame": 220
         },
         "total": {
           "rep": 1000,
-          "ame": 680,
-          "base": 576402753,
-          "classe": 225000000
+          "ame": 680
         }
       },
       "total_moedas": {
@@ -312,50 +237,41 @@
         {
           "nome": "Mazang",
           "varmida": 5,
-          "base": 257834,
           "obs": "consome 1 Comunicador de Autômato (drop Betas Quebradas)"
         },
         {
           "nome": "Transmissor",
-          "varmida": 5,
-          "base": 257834
+          "varmida": 5
         },
         {
           "nome": "Gaduri",
-          "varmida": 5,
-          "base": 257834
+          "varmida": 5
         },
         {
           "nome": "Gerente Alpha (cadastro concluído)",
           "varmida": 15,
-          "base": 773502,
           "obs": "libera diária Transmissor sem Sinal"
         },
         {
           "nome": "Kaya Toss",
-          "varmida": 15,
-          "base": 773502
+          "varmida": 15
         },
         {
           "nome": "Tatio",
-          "varmida": 20,
-          "base": 773502
+          "varmida": 20
         },
         {
           "nome": "Elena Bolkova (5 Núcleos de Autômata)",
-          "varmida": 10,
-          "base": 257834
+          "varmida": 10
         },
         {
           "nome": "Elyumina (10 Espadas Chanfradas + 10 Líquido Fluorescente)",
           "varmida": 10,
-          "base": 515668,
           "obs": "+1 Radar da Elyumina"
         },
         {
           "nome": "Elly (após instância O Jardim ao Anoitecer)",
           "varmida": 15,
-          "base": 773502,
           "obs": "libera instância Duelo com Sweety"
         }
       ],
@@ -363,70 +279,58 @@
         {
           "nome": "Silêncio na Biblioteca",
           "varmida": 5,
-          "base": 515668,
           "obs": "libera 3 diárias da Biblioteca"
         },
         {
           "nome": "Permissão de Acesso ao Jardim de Flores",
           "varmida": 20,
-          "base": 1547004,
           "obs": "libera as instâncias diárias Zona Restrita 1 e 2"
         },
         {
           "nome": "Armazém Tártaro 2",
           "varmida": 15,
-          "base": 1578025,
           "obs": "3+3+3+6 Vales; libera as 2 diárias de limpeza do Armazém"
         },
         {
           "nome": "Jardim Flutuante",
           "varmida": 20,
-          "base": 1547004,
           "obs": "libera as diárias e a instância do Jardim Flutuante"
         },
         {
           "nome": "Procurando no Banho",
           "varmida": 30,
-          "base": 515667,
           "obs": "7+7+16 Vales; libera 2 diárias do Banho"
         },
         {
           "nome": "Guia da Fazenda",
           "varmida": 0,
-          "base": 0,
           "obs": "libera a diária Brincando com Pitayas e a instância a Fazenda Esquecida pelo Tempo"
         },
         {
           "nome": "Gerente Eorpa da Usina Mágica 2",
           "varmida": 0,
-          "base": 0,
           "obs": "libera a diária da Eorpa"
         },
         {
           "nome": "Fale com Doçura",
           "varmida": 0,
-          "base": 0,
           "obs": "libera a instância Ei, Doçura! e a diária Coletando Núcleos"
         },
         {
           "nome": "Robô de Limpeza Ômega",
           "varmida": 0,
-          "base": 0,
           "obs": "libera as diárias da Estação de Esgoto e da Usina Mágica 1"
         }
       ],
       "somas": {
         "principal": {
-          "varmida": 105,
-          "base": 4641012
+          "varmida": 105
         },
         "total": {
-          "varmida": 195,
-          "base": 10344380
+          "varmida": 195
         },
         "secundarias": {
-          "varmida": 90,
-          "base": 5703368
+          "varmida": 90
         }
       },
       "total_moedas": {
@@ -446,60 +350,40 @@
       "questPrincipal": [
         {
           "nome": "Investigando Rudus (Elena Bolkova)",
-          "cor": 15,
-          "base": 800000,
-          "classe": 800000
+          "cor": 15
         },
         {
           "nome": "Invasão na Regenschirm (Tess)",
           "chip": 25,
-          "base": 1200000,
-          "classe": 800000,
           "obs": "500.000×2 base, 400.000×2 classe, +200.000 base e classe ao falar de novo"
         },
         {
-          "nome": "Crise na Rekenber (Nalandro, pub)",
-          "base": 300000,
-          "classe": 300000
+          "nome": "Crise na Rekenber (Nalandro, pub)"
         },
         {
-          "nome": "Crise na Rekenber (favela)",
-          "base": 300000,
-          "classe": 300000
+          "nome": "Crise na Rekenber (favela)"
         },
         {
           "nome": "Crise na Rekenber (Kaya Toss)",
-          "cor": 20,
-          "base": 600000,
-          "classe": 600000
+          "cor": 20
         },
         {
-          "nome": "Como nos velhos tempos (Membro da Rebelião)",
-          "base": 100000,
-          "classe": 100000
+          "nome": "Como nos velhos tempos (Membro da Rebelião)"
         },
         {
           "nome": "OS Restrito (Dien)",
-          "chip": 25,
-          "base": 600000,
-          "classe": 600000
+          "chip": 25
         },
         {
-          "nome": "Entrega do Envelope de Dien",
-          "base": 200000,
-          "classe": 100000
+          "nome": "Entrega do Envelope de Dien"
         },
         {
           "nome": "Capturando Elyumina (Elena Bolkova)",
           "cor": 5,
-          "basePct": 10,
-          "classe": 850000,
           "extra": "+1 Arma Danificada"
         },
         {
           "nome": "Capturando Elyumina (Lukie)",
-          "basePct": 15,
-          "classe": 400000,
           "obs": "libera instância Memorial COR, equips Ilusión e Armas OS"
         }
       ],
@@ -507,51 +391,36 @@
         {
           "nome": "Dados do Laboratório",
           "cor": 0,
-          "base": 200000,
-          "classe": 200000,
           "obs": "Documentos dos guardas da Regenschirm → Aas → Tes (Miado de Bala)"
         },
         {
           "nome": "A Amizade com Morning (4 cartas)",
           "cor": 18,
-          "base": 0,
-          "classe": 0,
           "obs": "Ovos de Poring, Rocker, Picky e Lunatic; as cartas liberam ao longo de alguns dias de alimentação"
         },
         {
           "nome": "Procurando Patrick — Para Rudus",
           "cor": 1,
-          "base": 300000,
-          "classe": 300000,
           "obs": "20 Dolor + 10 Cartões de Cobaia; +5 Componentes de Máquina; libera a diária. O valor da etapas de Patrick (600k/600k + 20 COR) já conta na principal Crise na Rekenber — Kaya Toss"
         },
         {
           "nome": "Ocupação OS (instância)",
           "cor": 0,
-          "base": 1200000,
-          "classe": 1080000,
           "obs": "6 parcelas de 200k base/180k classe; libera a diária 2ª Busca do Distrito OS"
         }
       ],
       "somas": {
         "principal": {
           "cor": 40,
-          "chip": 50,
-          "base": 4100000,
-          "classe": 5050000,
-          "basePct": 25
+          "chip": 50
         },
         "total": {
           "cor": 59,
-          "chip": 50,
-          "base": 5800000,
-          "classe": 6630000
+          "chip": 50
         },
         "secundarias": {
           "cor": 19,
-          "chip": 0,
-          "base": 1700000,
-          "classe": 1580000
+          "chip": 0
         }
       },
       "total_moedas": {
@@ -587,8 +456,6 @@
   "observacoes": [
     "XP mostrado são os valores base listados nas páginas da browiki (sem bônus de servidor/evento).",
     "Ep. 19: somas da browiki diferem dos totais decodificados do PDF do guia (173 Pétalas / 176 Rep / 842.524.725 base / 72.000.000 classe; secundárias 93/76) — conferir com o autor do PDF antes de usar como absoluto.",
-    "Ep. 17.2: as missões liberadas na Mansão (Silêncio na Biblioteca, Segredo no Armazém, etc.) têm páginas próprias e NÃO estão somadas aqui.",
-    "Ep. 17.1: EXP base de 10% + 15% é percentual e marcada em basePct; não entra na soma fixa.",
-    "Ep. 17.1 e 17.2: as secundárias seguem o iRO Wiki (Illusion e Legacy of the Wise One); os valores de EXP batem com a bROWiki, mas alguns nomes em pt são traduções próprias."
+    "Ep. 17.2: as missões liberadas na Mansão (Silêncio na Biblioteca, Segredo no Armazém, etc.) têm páginas próprias e NÃO estão somadas aqui."
   ]
 }

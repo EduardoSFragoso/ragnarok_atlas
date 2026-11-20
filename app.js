@@ -879,11 +879,11 @@ function questMoeda(q) {
 }
 function questRewardTable(list) {
     return tableFrame(
-        ["Quest", "Moeda do episódio", "Reputação", "EXP base", "EXP classe", "Observação"],
+        ["Quest", "Moeda do episódio", "Reputação", "Observação"],
         list
             .map((q) => {
                 const moeda = questMoeda(q);
-                return `<tr><td>${esc(q.nome)}</td><td>${moeda ? fmt(moeda) : "—"}</td><td>${q.rep ? fmt(q.rep) : "—"}</td><td>${q.base ? fmt(q.base) : "—"}</td><td>${q.classe ? fmt(q.classe) : "—"}</td><td>${q.extra ? esc(q.extra) : q.obs ? esc(q.obs) : "—"}</td></tr>`;
+                return `<tr><td>${esc(q.nome)}</td><td>${moeda ? fmt(moeda) : "—"}</td><td>${q.rep ? fmt(q.rep) : "—"}</td><td>${q.extra ? esc(q.extra) : q.obs ? esc(q.obs) : "—"}</td></tr>`;
             })
             .join(""),
         "align-top"
@@ -950,7 +950,7 @@ ${
         ? `${questRewardTable(rec.questPrincipal || [])}${rec.questSecundarias?.length ? fold("Quest secundárias", questRewardTable(rec.questSecundarias), { cls: "fold-top", count: `${rec.questSecundarias.length} quests` }) : ""}`
         : `<p class="table-search-note">${rec.obs ? esc(rec.obs) : "Recompensas de quest ainda não catalogadas para este episódio."}</p>`
 }
-${soma ? `<p class="table-search-note">Somando tudo: ${fmt(questMoeda(soma) || 0)} moedas do episódio, ${fmt(soma.rep || 0)} de reputação${soma.base ? `, ${fmt(soma.base)} de EXP base` : ""}${soma.classe ? ` e ${fmt(soma.classe)} de EXP de classe` : ""}.</p>` : ""}`;
+${soma ? `<p class="table-search-note">Somando tudo: ${fmt(questMoeda(soma) || 0)} moedas do episódio, ${fmt(soma.rep || 0)} de reputação.</p>` : ""}`;
 }
 
 /* ===== Tabelas de dados (montagem por view) ===== */

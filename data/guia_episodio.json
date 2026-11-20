@@ -3,7 +3,7 @@
     "id": "ep161",
     "titulo": "Episódio 16.1: Banquete Real",
     "requisitos": "Acesso ao Novo Mundo",
-    "recompensaTotal": "60 Marcas de Honra · 1,5 mi EXP base · 1,5 mi EXP classe na história (10 + 20 + 30 Marcas) · recompensas adicionais nas missões secundárias",
+    "recompensaTotal": "60 Marcas de Honra na história (10 + 20 + 30 Marcas) · recompensas adicionais nas missões secundárias",
     "avisos": [
       "A instância Sala de Ymir é feita uma vez na história e, depois do Ritual de Coroação, volta a ser repetível com cooldown de 16 h.",
       "Nenhuma diária do episódio tem sistema de Reputação: todas pagam Marcas de Honra.",
@@ -29,7 +29,7 @@
       },
       {
         "capitulo": "1. As famílias reais",
-        "recompensa": "10 Marcas de Honra · 300k EXP base · 300k EXP classe (passo 10)",
+        "recompensa": "10 Marcas de Honra",
         "passos": [
           {
             "texto": "Família Heine: entre no quarto, aguarde a cinemática e fale com Kronecker G. Heine.",
@@ -67,7 +67,7 @@
             "navi": "/navi prt_cas_q 96/186"
           },
           {
-            "texto": "Seu quarto: volte ao Camareiro Belle para receber 300.000 de EXP base e classe e 10 Marcas de Honra.",
+            "texto": "Seu quarto: volte ao Camareiro Belle para receber 10 Marcas de Honra.",
             "navi": "/navi prt_cas_q 26/30"
           }
         ]
@@ -123,7 +123,7 @@
       },
       {
         "capitulo": "4. O Memorial e o passado",
-        "recompensa": "20 Marcas de Honra · 400k EXP base · 400k EXP classe (passo 8)",
+        "recompensa": "20 Marcas de Honra",
         "passos": [
           {
             "texto": "No Memorial das Famílias Reais, fale com Ian Walther e, em seguida, com o Mago Nillem no mesmo local.",
@@ -153,14 +153,14 @@
             "navi": "/navi prt_cas_q 18/135"
           },
           {
-            "texto": "Encontre Kronecker G. Heine no quarto dele: recebe 20 Marcas de Honra e 400.000 de EXP base e classe. A partir daqui você pode iniciar o Ritual de Coroação.",
+            "texto": "Encontre Kronecker G. Heine no quarto dele: recebe 20 Marcas de Honra. A partir daqui você pode iniciar o Ritual de Coroação.",
             "navi": "/navi prt_cas_q 19/84"
           }
         ]
       },
       {
         "capitulo": "5. Ritual de Coroação",
-        "recompensa": "30 Marcas de Honra · 800k EXP base · 800k EXP classe (passo 8)",
+        "recompensa": "30 Marcas de Honra",
         "desbloqueia": "Acesso à Prontera Destruída (diária Salvando Vidas) · Sussurro Sombrio · Sala de Ymir repetível com cooldown de 16 h · Continuação: Terra Gloria (Ep. 16.2)",
         "passos": [
           {
@@ -188,7 +188,7 @@
             "texto": "No presente, fale novamente com o Mago Nillem no Memorial."
           },
           {
-            "texto": "Fale com Kronecker G. Heine para receber 30 Marcas de Honra e 800.000 de EXP base e classe.",
+            "texto": "Fale com Kronecker G. Heine para receber 30 Marcas de Honra.",
             "navi": "/navi prt_cas_q 19/84"
           },
           {
@@ -268,7 +268,7 @@
         "codigo": "S2",
         "titulo": "Valor Sentimental",
         "prerequisito": "Falar com Levuiere Wigner no banquete (cap. 1)",
-        "recompensa": "14 Marcas de Honra · 1,2 mi EXP base · 700k EXP classe (soma dos passos)",
+        "recompensa": "14 Marcas de Honra",
         "desbloqueia": "Diária dos Wigner",
         "itens": [
           "{{Água Benta}} ×1 · {{Pó de Bolor}} ×1 · {{Laranja}} ×1 · {{Álcool}} ×1 · {{Limão}} ×1 · {{Areia Fina}} ×1 · {{Medalhão de Carne}} ×3 · {{Pedra do Mar}} ×25 · {{Rosa Eterna}} ×2"
@@ -317,7 +317,7 @@
             "navi": "/navi prt_cas 322/216"
           },
           {
-            "texto": "Conte o relato a Jurgen para receber 4 Marcas de Honra e 200.000 de EXP base e classe, liberando a diária dos Wigner.",
+            "texto": "Conte o relato a Jurgen para receber 4 Marcas de Honra, liberando a diária dos Wigner.",
             "navi": "/navi prt_cas_q 97/6"
           }
         ]
@@ -392,7 +392,7 @@
         "codigo": "S5",
         "titulo": "Conflito Familiar",
         "prerequisito": "Falar com Wolf Lugenburg (cap. 1)",
-        "recompensa": "14 Marcas de Honra · 1,2 mi EXP base · 700k EXP classe (soma dos passos)",
+        "recompensa": "14 Marcas de Honra",
         "desbloqueia": "Diária O vestido de Agnes (Os Lugenburg)",
         "itens": [
           "{{Pérola}} ×3 · {{Pluma}} ×50 · {{Seda Macia}} ×12 (1 dos favores das Crianças)"
@@ -445,11 +445,11 @@
             "navi": "/navi prontera 267/69"
           },
           {
-            "texto": "Retorne a Maximilian Lugenburg para receber 10 Marcas de Honra e 1.000.000 de EXP base e 500.000 de classe.",
+            "texto": "Retorne a Maximilian Lugenburg para receber 10 Marcas de Honra.",
             "navi": "/navi prt_cas_q 90/187"
           },
           {
-            "texto": "Ainda no quarto, converse com Agnes Lugenburg: entregue 3 Pérola e 50 Pluma para receber 4 Marcas de Honra e 200.000 de EXP base e classe, liberando a diária dela.",
+            "texto": "Ainda no quarto, converse com Agnes Lugenburg: entregue 3 Pérola e 50 Pluma para receber 4 Marcas de Honra, liberando a diária dela.",
             "navi": "/navi prt_cas_q 90/187"
           }
         ]
@@ -633,7 +633,7 @@
               "nome": "O vestido de Agnes (Os Lugenburg)",
               "tarefa": "Entregar a Agnes o material do vestido sorteado no diálogo (tabela abaixo)",
               "itens": "Conforme o vestido",
-              "recompensa": "4 Marcas de Honra · 200k EXP b/c",
+              "recompensa": "4 Marcas de Honra",
               "linkBrowiki": "https://browiki.org/wiki/As_Fam%C3%ADlias_Reais#Os_Lugenburg",
               "tabela": {
                 "colunas": [
@@ -672,14 +672,14 @@
               "nome": "Empregada dos Wigner (Hoje eu me sinto…)",
               "tarefa": "Coletar 15 Pedra do Mar caçando Medusas e entregar 15 Pedra do Mar + 1 Rosa Eterna à Empregada da cozinha (322/216), depois voltar a Jurgen",
               "itens": "15 × {{Pedra do Mar}} · 1 × {{Rosa Eterna}}",
-              "recompensa": "4 Marcas de Honra · 200k EXP b/c",
+              "recompensa": "4 Marcas de Honra",
               "linkBrowiki": "https://browiki.org/wiki/As_Fam%C3%ADlias_Reais#Os_Wigner"
             },
             {
               "nome": "Disciplina de guerreiro (Os Richard)",
               "tarefa": "Caçar 50 monstros de nível 140+ da raça sorteada pelo Mordomo (humanóide, bruto, inseto, peixe, planta, demônio, anjo, morto-vivo, amorfos; a raça Dragão não possui monstros no nível pedido — não escolha)",
               "itens": "",
-              "recompensa": "4 Marcas de Honra · 500k EXP base · 550k EXP classe",
+              "recompensa": "4 Marcas de Honra",
               "linkBrowiki": "https://browiki.org/wiki/As_Fam%C3%ADlias_Reais#Os_Richard"
             }
           ]
@@ -691,7 +691,7 @@
               "nome": "Velho Amigo",
               "tarefa": "Encontrar a Forma Escura no mapa, receber a Carta do Prisioneiro e devolvê-la ao Prisioneiro (243/259)",
               "itens": "",
-              "recompensa": "4 Marcas de Honra · 700k EXP base · 500k EXP classe",
+              "recompensa": "4 Marcas de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Pris%C3%A3o#Velho_Amigo",
               "detalhes": [
                 "Converse com o Prisioneiro 243AD265 (/navi prt_prison 243/259).",
@@ -703,35 +703,35 @@
               "nome": "Favor Vampiresco",
               "tarefa": "Coletar 20 Olho de Sangue caçando Observador e entregar ao Prisioneiro (268/188)",
               "itens": "20 × {{Olho de Sangue}}",
-              "recompensa": "4 Marcas de Honra · 700k EXP base · 500k EXP classe",
+              "recompensa": "4 Marcas de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Pris%C3%A3o#Favor_Vampiresco"
             },
             {
               "nome": "Melhorando o Ambiente",
               "tarefa": "Limpar as Pilhas de Lixo espalhadas pelo mapa até o diálogo liberar o retorno à Prisioneira (260/153)",
               "itens": "",
-              "recompensa": "4 Marcas de Honra · 700k EXP base · 500k EXP classe",
+              "recompensa": "4 Marcas de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Pris%C3%A3o#Melhorando_o_Ambiente"
             },
             {
               "nome": "Coleta de Luz",
               "tarefa": "Coletar 1 Luz Flamejante clicando nas Torchas espalhadas pelo mapa e entregar ao Prisioneiro (101/71)",
               "itens": "1 × {{Luz Flamejante}}",
-              "recompensa": "4 Marcas de Honra · 700k EXP base · 500k EXP classe",
+              "recompensa": "4 Marcas de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Pris%C3%A3o#Coleta_de_Luz"
             },
             {
               "nome": "Umidade em Excesso",
               "tarefa": "Coletar 20 Desumidificador caçando Lobo de Gelo e entregar à Prisioneira (111/187)",
               "itens": "20 × {{Desumidificador}}",
-              "recompensa": "4 Marcas de Honra · 700k EXP base · 500k EXP classe",
+              "recompensa": "4 Marcas de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Pris%C3%A3o#Umidade_em_Excesso"
             },
             {
               "nome": "Controlando a Escuridão",
               "tarefa": "Entregar qualquer flor ao Prisioneiro (98/215) até uma ser aceita — a flor recusada é consumida (chances na tabela abaixo)",
               "itens": "Flores",
-              "recompensa": "4 Marcas de Honra · 700k EXP base · 500k EXP classe",
+              "recompensa": "4 Marcas de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Pris%C3%A3o#Controlando_a_Escurid.C3.A3o",
               "tabela": {
                 "colunas": [
@@ -762,7 +762,7 @@
               "nome": "Ei Chifrudo",
               "tarefa": "Coletar 20 Lixa caçando Tappy e entregar ao Prisioneiro (54/118)",
               "itens": "20 × {{Lixa}}",
-              "recompensa": "4 Marcas de Honra · 700k EXP base · 500k EXP classe",
+              "recompensa": "4 Marcas de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Pris%C3%A3o#Ei_Chifrudo"
             }
           ]
@@ -774,7 +774,7 @@
               "nome": "Sala de Ymir — repetição",
               "tarefa": "Falar com Friedrich S. Heine (prt_cas_q 21/83) e refazer a instância Sala de Ymir; acesso pelo Memorial (Camareiro Belle → Nillem → Máquina do Tempo, ou Observador Terketh)",
               "itens": "",
-              "recompensa": "10 Marcas de Honra · 400k EXP base · 400k EXP classe",
+              "recompensa": "10 Marcas de Honra",
               "obs": "Instância com cooldown de 16 h; no iRO a missão se chama Hope You Cannot Let Go (nome oficial PT ainda não confirmado).",
               "linkBrowiki": "https://browiki.org/wiki/Ritual_de_Coroa%C3%A7%C3%A3o"
             }
@@ -787,7 +787,7 @@
               "nome": "Salvando Vidas (Guarda Spiegel)",
               "tarefa": "Receber do Guarda Spiegel (prt_q 153/323) 1 missão aleatória de 4 — Ingrato, Soldado, Amante ou Garota — e reportar de volta a ele",
               "itens": "",
-              "recompensa": "4 Marcas de Honra · 800k EXP base · 250k EXP classe",
+              "recompensa": "4 Marcas de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Salvando_Vidas"
             }
           ]
@@ -799,7 +799,7 @@
     "id": "ep162",
     "titulo": "Episódio 16.2: Terra Gloria",
     "requisitos": "Quest anterior: Episódio 16.1 — Banquete Real",
-    "recompensaTotal": "50 Brasões de Honra · 10 Marcas de Honra · 1 Estrela da Bênção · 1 Pochete de Couro · 2,4 mi EXP base · 1,9 mi EXP classe (soma dos passos)",
+    "recompensaTotal": "50 Brasões de Honra · 10 Marcas de Honra · 1 Estrela da Bênção · 1 Pochete de Couro",
     "avisos": [
       "Não venda a Estrela da Bênção em NPC: ela é necessária para progredir na quest principal; se perder o item, contate a central de suporte.",
       "O Laboratório Clandestino da história é feito obrigatoriamente SOLO: o grupo reserva a instância, mas os outros membros não entram.",
@@ -808,7 +808,7 @@
     "principal": [
       {
         "capitulo": "0. Chegada à República",
-        "recompensa": "30 Brasões de Honra · 1,4 mi EXP base · 900k EXP classe",
+        "recompensa": "30 Brasões de Honra",
         "desbloqueia": "Missões secundárias de Clana Nemieri (diárias, Gêmeos Levedev e Proibição dos Teleportes) · Trocas e encantamentos em Clana Nemieri",
         "passos": [
           {
@@ -865,7 +865,7 @@
             "texto": "Após a discussão, siga pelo corredor e converse com Nalandro mais de uma vez até receber as missões para falar com a Rebelião."
           },
           {
-            "texto": "Convença Elena Bolkova: vença-a na arena em 2 minutos (fácil; Arcebispos e evoluções não precisam batalhar). Entre clicando no chat e saia falando com Sorita Doritas. Você recebe 10 Brasões de Honra e 200.000 de EXP base e classe.",
+            "texto": "Convença Elena Bolkova: vença-a na arena em 2 minutos (fácil; Arcebispos e evoluções não precisam batalhar). Entre clicando no chat e saia falando com Sorita Doritas. Você recebe 10 Brasões de Honra.",
             "navi": "/navi rebel_in 69/78"
           },
           {
@@ -873,7 +873,7 @@
             "navi": "/navi rebel_in 209/84"
           },
           {
-            "texto": "Após Est concordar, fale com Rupert novamente: o Guarda Larcis aparece e a conversa entre Rupert, Larcis e Dien termina na briga (10 Brasões de Honra e 200.000 de EXP base e classe). Depois, reporte a situação a Nalandro (10 Brasões de Honra e 1.000.000 de EXP base, 500.000 de classe). Os Brasões podem ser trocados por itens com Strasse — e você liberou as missões Clana Nemieri, Gêmeos Levedev e Proibição dos Teleportes.",
+            "texto": "Após Est concordar, fale com Rupert novamente: o Guarda Larcis aparece e a conversa entre Rupert, Larcis e Dien termina na briga (10 Brasões de Honra). Depois, reporte a situação a Nalandro (10 Brasões de Honra). Os Brasões podem ser trocados por itens com Strasse — e você liberou as missões Clana Nemieri, Gêmeos Levedev e Proibição dos Teleportes.",
             "navi": "/navi rebel_in 122/71"
           }
         ]
@@ -962,7 +962,7 @@
       },
       {
         "capitulo": "3. Reportando a Situação",
-        "recompensa": "10 Brasões de Honra · 10 Marcas de Honra · 1 mi EXP base · 1 mi EXP classe",
+        "recompensa": "10 Brasões de Honra · 10 Marcas de Honra",
         "desbloqueia": "Diárias da Base Militar · Continuação da história no Ep. 17.1: Ilusión",
         "passos": [
           {
@@ -970,7 +970,7 @@
             "navi": "/navi ein_in01 274/243"
           },
           {
-            "texto": "Nihil te envia para Prontera: nos seus aposentos, converse com Skia Nerius. Você recebe 10 Marcas de Honra e 500.000 de EXP base e classe.",
+            "texto": "Nihil te envia para Prontera: nos seus aposentos, converse com Skia Nerius. Você recebe 10 Marcas de Honra.",
             "navi": "/navi prt_cas_q 18/37"
           },
           {
@@ -978,7 +978,7 @@
             "navi": "/navi ein_fild04 284/332"
           },
           {
-            "texto": "Fale com Philopontess para receber 10 Brasões de Honra (e 500.000 de EXP base e classe). Libera as missões diárias da Base Militar; agora é possível continuar a história no episódio 17.1: Ilusión.",
+            "texto": "Fale com Philopontess para receber 10 Brasões de Honra . Libera as missões diárias da Base Militar; agora é possível continuar a história no episódio 17.1: Ilusión.",
             "navi": "/navi que_swat 145/57"
           }
         ]
@@ -989,7 +989,7 @@
         "codigo": "S1",
         "titulo": "Gêmeos Levedev",
         "prerequisito": "Fim do cap. 0",
-        "recompensa": "10 Brasões de Honra · 200k EXP base · 200k EXP classe",
+        "recompensa": "10 Brasões de Honra",
         "desbloqueia": "Diárias dos Gêmeos Levedev",
         "passos": [
           {
@@ -1024,7 +1024,7 @@
             "texto": "Volte a Elena Bolkova e selecione Conte a ela sobre os gêmeos Levedev; retorne a Jana Levedev."
           },
           {
-            "texto": "Volte a Elena Bolkova e selecione Eu trouxe os gêmeos Levedev: você recebe 200.000 de EXP base e classe e 10 Brasões de Honra, liberando as diárias."
+            "texto": "Volte a Elena Bolkova e selecione Eu trouxe os gêmeos Levedev: você recebe 10 Brasões de Honra, liberando as diárias."
           }
         ]
       },
@@ -1032,7 +1032,7 @@
         "codigo": "S2",
         "titulo": "Proibição dos Teleportes",
         "prerequisito": "Fim do cap. 0",
-        "recompensa": "10 Brasões de Honra · 1 mi EXP base · 4 mi EXP classe",
+        "recompensa": "10 Brasões de Honra",
         "itens": [
           "{{Coração Flamejante}} ×4 · {{Gelo Místico}} ×4 · {{Vento Bruto}} ×3 · {{Fragmento Estelar}} ×1 · {{Natureza Grandiosa}} ×4"
         ],
@@ -1078,10 +1078,10 @@
         "codigo": "S3",
         "titulo": "Últimas Memórias",
         "prerequisito": "Laboratório Werner concluído no modo história — os pertences vêm da Pochete de Couro",
-        "recompensa": "500k EXP base · 500k EXP classe (5 entregas de 100k)",
+        "recompensa": "",
         "passos": [
           {
-            "texto": "Após completar o Laboratório Werner no modo história, entregue os pertences aos respectivos familiares — cada entrega garante 100.000 de EXP base e de classe."
+            "texto": "Após completar o Laboratório Werner no modo história, entregue os pertences aos respectivos familiares."
           },
           {
             "texto": "Entregue as Antigas Alianças e o Colar com Medalhão ao Cavaleiro Windsor (fale mais de uma vez).",
@@ -1261,28 +1261,28 @@
               "nome": "Armeira da Rebelião",
               "tarefa": "Entregar a Rachel Smith o material do dia (5 Ferro, 2 Oridecon ou 2 Elunium); na 1ª vez inclui levar o Revólver de Rachel ao Ferreiro",
               "itens": "5 × {{Ferro}} ou 2 × {{Oridecon}} ou 2 × {{Elunium}}",
-              "recompensa": "3 Brasões de Honra · 200k EXP b/c (1ª vez: 10 Brasões)",
+              "recompensa": "3 Brasões de Honra · (1ª vez: 10 Brasões)",
               "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Armeira_da_Rebeli.C3.A3o"
             },
             {
               "nome": "Dia de Panfletagem",
               "tarefa": "Distribuir os 3 Panfletos de Loja entre Idosa Sonolenta (einbech 170/143), Homem Cansado (71/168) e Idoso Cansado (79/100)",
               "itens": "",
-              "recompensa": "3 Brasões de Honra · 100k EXP b/c (1ª vez: 10 Brasões)",
+              "recompensa": "3 Brasões de Honra · (1ª vez: 10 Brasões)",
               "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Dia_de_Panfletagem"
             },
             {
               "nome": "Gesto de Carinho",
               "tarefa": "Levar 3 Pedaço de Papel à Menina Florista (einbroch 168/160), receber o Buquê Cerimonial e deixá-lo na Grande Árvore (163/152)",
               "itens": "3 × {{Pedaço de Papel}}",
-              "recompensa": "3 Brasões de Honra · 200k EXP b/c (1ª vez: 10 Brasões)",
+              "recompensa": "3 Brasões de Honra · (1ª vez: 10 Brasões)",
               "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Gesto_de_Carinho"
             },
             {
               "nome": "Pedidos de Lukie",
               "tarefa": "Missão aleatória de 1 de 3 crianças (tabela abaixo)",
               "itens": "Conforme a criança sorteada",
-              "recompensa": "3 Brasões de Honra · 200k EXP b/c",
+              "recompensa": "3 Brasões de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Pedidos_de_Lukie",
               "tabela": {
                 "colunas": [
@@ -1309,21 +1309,21 @@
               "nome": "Pedidos de Milo — Lanche dos Veteranos",
               "tarefa": "Entregar 1 prato de culinária a Milo River: Chá de Ervas com Uvas, Chá Vermelho de Outono, Chá de Ervas e Mel, Mousse de Chocolate ou Salada de Frutas",
               "itens": "1 prato de culinária",
-              "recompensa": "3 Brasões de Honra · 100k EXP b/c",
+              "recompensa": "3 Brasões de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Pedidos_de_Milo"
             },
             {
               "nome": "Pedidos de Milo — Gata Perdida",
               "tarefa": "Usar a Anchova Crocante entregue pela própria missão para achar a Charity em um dos Bancos Vazios de einbech (257/100, 34/209, 144/98 ou 244/129)",
               "itens": "",
-              "recompensa": "3 Brasões de Honra · 100k EXP b/c",
+              "recompensa": "3 Brasões de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Pedidos_de_Milo"
             },
             {
               "nome": "Recuperando Armas",
               "tarefa": "Coletar 3 Resto de Arma Quebrada nas pilhas de areia dos arredores de Einbech e eliminar 5 Rancores de Arma",
               "itens": "",
-              "recompensa": "3 Brasões de Honra · 200k EXP b/c",
+              "recompensa": "3 Brasões de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Recuperando_Armas",
               "detalhes": [
                 "Aceite ajudar a Chefe atrás do balcão de Clana Nemieri.",
@@ -1336,28 +1336,28 @@
               "nome": "Desafio de Elena",
               "tarefa": "Derrotar Elena Bolkova na arena em até 2 minutos (Arcebispos e evoluções: 1.300 HP); entre clicando no chat e saia falando com Sorita Doritas",
               "itens": "",
-              "recompensa": "3 Brasões de Honra · 200k EXP b/c",
+              "recompensa": "3 Brasões de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Desafio_de_Elena"
             },
             {
               "nome": "Festa: Chá de Dien",
               "tarefa": "Eliminar 1 Malícia na Base Militar; o Chá Sofisicado vem direto ao inventário com a missão ativa",
               "itens": "",
-              "recompensa": "3 Brasões de Honra · 150k EXP b/c",
+              "recompensa": "3 Brasões de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Festa_das_Idosas"
             },
             {
               "nome": "Festa: Carta de Ridsh",
               "tarefa": "Eliminar Caça-Corações Gigantes até conseguir 1 Carta Antiga (vem direto ao inventário com a missão ativa)",
               "itens": "",
-              "recompensa": "3 Brasões de Honra · 150k EXP b/c",
+              "recompensa": "3 Brasões de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Festa_das_Idosas"
             },
             {
               "nome": "Festa: Anéis de Cotnes",
               "tarefa": "Eliminar 5 Caça-Corações; os Anéis Brilhantes vêm direto ao inventário com a missão ativa",
               "itens": "",
-              "recompensa": "3 Brasões de Honra · 150k EXP b/c",
+              "recompensa": "3 Brasões de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Festa_das_Idosas"
             }
           ]
@@ -1369,21 +1369,21 @@
               "nome": "Missões de Lukie — Elimine Fofinho",
               "tarefa": "Derrotar 1 Fofinho no modo batalha do Laboratório Werner (reservado com Lukie, que_swat 150/58)",
               "itens": "",
-              "recompensa": "3 Brasões de Honra · 150k EXP b/c",
+              "recompensa": "3 Brasões de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Miss.C3.B5es_de_Lukie"
             },
             {
               "nome": "Missões de Lukie — Elimine YSF01",
               "tarefa": "Derrotar 1 YSF01 no modo história do Laboratório Werner",
               "itens": "",
-              "recompensa": "3 Brasões de Honra · 150k EXP b/c",
+              "recompensa": "3 Brasões de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Miss.C3.B5es_de_Lukie"
             },
             {
               "nome": "Pesquisadores Escondidos",
               "tarefa": "Localizar 3 Pesquisadores escondidos nos móveis suspeitos do Laboratório Werner (8 pontos possíveis)",
               "itens": "",
-              "recompensa": "3 Brasões de Honra · 150k EXP b/c",
+              "recompensa": "3 Brasões de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Pesquisadores_Escondidos",
               "detalhes": [
                 "Ajude Philopontess na Base Militar (/navi que_swat 145/57).",
@@ -1395,7 +1395,7 @@
               "nome": "Pesquisa de Quimeras",
               "tarefa": "Eliminar 10 Quimeras Humanas e 10 Quimeras Disformes no Laboratório Werner",
               "itens": "",
-              "recompensa": "3 Brasões de Honra · 150k EXP b/c",
+              "recompensa": "3 Brasões de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Pesquisa_de_Quimeras"
             }
           ]
@@ -1407,7 +1407,7 @@
               "nome": "Missão sorteada (1 de 4)",
               "tarefa": "Fale com Jana Levedev (selecione Eu vim brincar com vocês!) e receba 1 das missões da tabela abaixo",
               "itens": "Conforme o sorteio",
-              "recompensa": "3 Brasões de Honra · 200k EXP b/c",
+              "recompensa": "3 Brasões de Honra",
               "linkBrowiki": "https://browiki.org/wiki/G%C3%AAmeos_Levedev#Miss.C3.B5es_di.C3.A1rias",
               "tabela": {
                 "colunas": [
@@ -1443,7 +1443,7 @@
     "id": "ep171",
     "titulo": "Episódio 17.1: Ilusión",
     "requisitos": "Nível de Base 110 · Quest anterior: Terra Gloria · Caça: 10 Dolor, 10 Venenum, 10 Caput",
-    "recompensaTotal": "40 Núcleos COR · 50 Chips Misteriosos · 1 Arma Danificada · 4,1 mi EXP Base + 25% ao final · 5,05 mi EXP Classe (soma dos passos; a infobox da bROWiki cita 5.850.000 — conferir)",
+    "recompensaTotal": "40 Núcleos COR · 50 Chips Misteriosos · 1 Arma Danificada · ao final · (soma dos passos; a infobox da bROWiki cita 5.850.000 — conferir)",
     "avisos": [
       "As instâncias duram 1 hora e podem ser refeitas quantas vezes for preciso até a conclusão (Invasão na Regenschirm, OS Restrito e Memorial COR)."
     ],
@@ -1472,7 +1472,7 @@
       },
       {
         "capitulo": "1. Investigando Rudus",
-        "recompensa": "15 Núcleos COR · 800.000 EXP Base · 800.000 EXP Classe",
+        "recompensa": "15 Núcleos COR",
         "passos": [
           {
             "texto": "Fale com Elena Bolkova.",
@@ -1501,7 +1501,7 @@
       },
       {
         "capitulo": "2. Invasão na Regenschirm (Instância)",
-        "recompensa": "25 Chips Misteriosos · 1.200.000 EXP Base · 800.000 EXP Classe (+200.000 base e classe conversando de novo com Tess)",
+        "recompensa": "25 Chips Misteriosos",
         "passos": [
           {
             "texto": "Em Lighthalzen, fale com o Guarda da República; ao lado dele está Oscar.",
@@ -1537,7 +1537,7 @@
       },
       {
         "capitulo": "3. Crise na Rekenber",
-        "recompensa": "20 Núcleos COR · 1.200.000 EXP Base · 1.200.000 EXP Classe",
+        "recompensa": "20 Núcleos COR",
         "passos": [
           {
             "texto": "Ainda no Miado de Bala, passe pelo Wilde e fale com Nalandro; siga o balão de quest no salão para prosseguir o diálogo.",
@@ -1575,7 +1575,7 @@
       },
       {
         "capitulo": "4. Como nos velhos tempos (Instância OS Restrito)",
-        "recompensa": "25 Chips Misteriosos · 700.000 EXP Base · 700.000 EXP Classe",
+        "recompensa": "25 Chips Misteriosos",
         "passos": [
           {
             "texto": "Volte ao Miado de Bala e fale com Tess.",
@@ -1586,7 +1586,7 @@
             "navi": "/navi ein_fild03 278/269"
           },
           {
-            "texto": "Volte ao Membro da Rebelião (recebe 100.000 de EXP de base e classe) e fale com ele para gerar a entrada da instância.",
+            "texto": "Volte ao Membro da Rebelião e fale com ele para gerar a entrada da instância.",
             "navi": "/navi ein_fild03 278/269"
           },
           {
@@ -1605,7 +1605,7 @@
       },
       {
         "capitulo": "5. O Envelope de Dien",
-        "recompensa": "200.000 EXP Base · 100.000 EXP Classe",
+        "recompensa": "",
         "passos": [
           {
             "texto": "Saia da instância e vá a Clana Nemieri; converse com a Membra da Rebelião.",
@@ -1626,7 +1626,7 @@
       },
       {
         "capitulo": "6. Capturando Elyumina (Instância solo — Memorial COR)",
-        "recompensa": "5 Núcleos COR · 1 Arma Danificada · 25% EXP Base (10% + 15%) · 1.250.000 EXP Classe",
+        "recompensa": "5 Núcleos COR · 1 Arma Danificada",
         "passos": [
           {
             "texto": "Fale com o Rebelde e siga o balão de quest; Elyumina surge e ativa a navegação.",
@@ -1694,7 +1694,7 @@
         "codigo": "S2",
         "titulo": "A Amizade com Morning",
         "prerequisito": "S1 concluída · alimentar o Morning por vários dias (1 carta por etapa)",
-        "recompensa": "18 Núcleos COR no total (5 + 4 + 3 + 6) · EXP não informada",
+        "recompensa": "18 Núcleos COR no total (5 + 4 + 3 + 6)",
         "passos": [
           {
             "texto": "Cave novas cartas na pilha de entulho de Rudus conforme as etapas liberam.",
@@ -1724,7 +1724,7 @@
         "codigo": "S3",
         "titulo": "Dados do Laboratório",
         "prerequisito": "Cap. 2 — Invasão na Regenschirm concluída",
-        "recompensa": "200k EXP base · 200k EXP classe",
+        "recompensa": "",
         "passos": [
           {
             "texto": "Na Regenschirm, pegue a pilha de documentos na Sala de Espera dos Guardas."
@@ -1733,7 +1733,7 @@
             "texto": "Entregue os documentos à Aas, no Distrito COR."
           },
           {
-            "texto": "Leve os documentos ao Tes no Pub Miado de Bala, em Einbroch, e receba a EXP."
+            "texto": "Leve os documentos ao Tes no Pub Miado de Bala, em Einbroch."
           }
         ]
       },
@@ -1741,7 +1741,7 @@
         "codigo": "S4",
         "titulo": "Procurando Patrick",
         "prerequisito": "Cap. 3 — Crise na Rekenber (Kaya Toss fala sobre os desaparecidos)",
-        "recompensa": "1,2 mi EXP base · 1,2 mi EXP classe (300k + 300k + 600k) · 20 Núcleos COR (essa recompensa já consta na quest Crise na Rekenber — Kaya Toss)",
+        "recompensa": "20 Núcleos COR",
         "passos": [
           {
             "texto": "Fale com Kaya Toss, nos Arredores de Einbroch.",
@@ -1780,7 +1780,7 @@
         "codigo": "S5",
         "titulo": "Ocupação OS (Instância)",
         "prerequisito": "Cap. 5 — O Envelope de Dien concluído · grupo obrigatório (o líder cria a instância em Distrito COR)",
-        "recompensa": "1,2 mi EXP base · 1,08 mi EXP classe (6 parcelas de 200k/180k)",
+        "recompensa": "",
         "passos": [
           {
             "texto": "Com o grupo, o líder fala com Erst, no lado sul do Distrito COR, e cria a instância; entre pelo teleportador.",
@@ -1853,7 +1853,7 @@
               "tarefa": "Cavar perto do NPC em Rudus e entregar 10 do alimento do dia (a comida é a mesma para todo o servidor)",
               "itens": "10 de: {{Jellopy}} · {{Raiz de Árvore}} · {{Perna de Gafanhoto}} · {{Trevo}} · {{Plumas de Ave}} · {{Cauda de Rato}} · {{Canino Venenoso}} · {{Cauda de Yoyo}} · {{Dente de Morcego}} · {{Pata de Urso}}",
               "recompensa": "1 Núcleo COR · 5 Chips Misteriosos",
-              "obs": "Intimidade: a cada 10 níveis Morning pode pedir 1 Ovo de bichinho (Poring, Picky, Rocker ou Lunático) por 5% de EXP base + 800.000 de EXP classe",
+              "obs": "Intimidade: a cada 10 níveis Morning pode pedir 1 Ovo de bichinho (Poring, Picky, Rocker ou Lunático)",
               "linkBrowiki": "https://browiki.org/wiki/Aventuras_no_Distrito#Morning"
             },
             {
@@ -1894,7 +1894,7 @@
     "id": "ep172",
     "titulo": "Episódio 17.2: Legado do Sábio",
     "requisitos": "Nível de Base 130 · Quest anterior: Ilusión (Ep. 17.1) · Itens: 1 Folha de Yggdrasil, 10 Espada Chanfrada, 10 Líquido Fluorescente",
-    "recompensaTotal": "105 Vales Varmida · 3.867.510 EXP Base (infobox da bROWiki — a soma dos passos dá 4.641.012; divergência a conferir)",
+    "recompensaTotal": "105 Vales Varmida",
     "avisos": [
       "A instância O Jardim ao Anoitecer permite grupo; membros que não estiverem na tela na hora da morte de Sweety podem não completá-la, e quem já concluiu a instância não consegue reentrar."
     ],
@@ -1925,7 +1925,7 @@
       },
       {
         "capitulo": "1. Hóspede da Mansão e Transmissores",
-        "recompensa": "35 Vales Varmida · 1.547.004 EXP Base",
+        "recompensa": "35 Vales Varmida",
         "passos": [
           {
             "texto": "Fale com Tamarin na mansão e cadastre-se como hóspede visitante com a Gerente Alpha.",
@@ -1959,7 +1959,7 @@
       },
       {
         "capitulo": "2. A Casa de Chá e os depoimentos",
-        "recompensa": "35 Vales Varmida · 1.547.004 EXP Base",
+        "recompensa": "35 Vales Varmida",
         "passos": [
           {
             "texto": "Na Casa de Chá, converse com Philopontess e com Dien: a missão é coletar depoimentos sobre a verdadeira história da Rebelião Mercenária.",
@@ -2001,7 +2001,7 @@
       },
       {
         "capitulo": "3. Núcleos de Autômata Quebrada",
-        "recompensa": "10 Vales Varmida · 257.834 EXP Base",
+        "recompensa": "10 Vales Varmida",
         "passos": [
           {
             "texto": "Saindo da Casa de Chá, fale com Lukie.",
@@ -2022,7 +2022,7 @@
       },
       {
         "capitulo": "4. A Rebelião escondida — Radar da Elyumina",
-        "recompensa": "10 Vales Varmida · 515.668 EXP Base",
+        "recompensa": "10 Vales Varmida",
         "passos": [
           {
             "texto": "Dirija-se ao dormitório das empregadas e peça acesso ao Rebelde.",
@@ -2080,7 +2080,7 @@
       },
       {
         "capitulo": "6. Conclusão — Crux em Prontera",
-        "recompensa": "15 Vales Varmida · 773.502 EXP Base",
+        "recompensa": "15 Vales Varmida",
         "passos": [
           {
             "texto": "Volte ao dormitório e fale com Est.",
@@ -2111,7 +2111,7 @@
         "codigo": "S1",
         "titulo": "Silêncio na Biblioteca",
         "prerequisito": "Cap. 0 — Cadastro como hóspede na Mansão de Varmunt",
-        "recompensa": "5 Vales Varmida · 515.668 EXP base",
+        "recompensa": "5 Vales Varmida",
         "passos": [
           {
             "texto": "Fale com Tamarin; veja Dew pular na fonte da Mansão.",
@@ -2129,7 +2129,7 @@
             "texto": "Chame cada um para se registrar: Mark (84/84), Tamarin (97/207), Maggie (112/265), Oliver (198/234) e Alp (292/234)."
           },
           {
-            "texto": "Volte ao Gerente para receber 5 Vales Varmida e a EXP (as diárias da biblioteca ficam liberadas)."
+            "texto": "Volte ao Gerente para receber 5 Vales Varmida (as diárias da biblioteca ficam liberadas)."
           }
         ],
         "desbloqueia": "Arrumação de Livros, Caça aos Vermes de Livro e Coleta de Sucata (3 diárias da Biblioteca)"
@@ -2189,7 +2189,7 @@
         "codigo": "S5",
         "titulo": "Permissão de Acesso ao Jardim de Flores",
         "prerequisito": "Cap. 0 concluído",
-        "recompensa": "20 Vales Varmida · 1.547.004 EXP base",
+        "recompensa": "20 Vales Varmida",
         "passos": [
           {
             "texto": "Chegue ao Jardim de Flores na Mansão; o Gerente de Entrada surge na coords. Faça a autoverificação e entre na instância.",
@@ -2205,7 +2205,7 @@
             "texto": "Siga Sigma, o guia de Barmund, e avise os outros dois Pimenta Vermelha (Kappa e Lambda) que Barmund está vivo."
           },
           {
-            "texto": "Continue marcando todas as opções do diálogo até Lambda ser revelada ouvindo: recebe 20 Vales Varmida + EXP; fale com Sigma para sair."
+            "texto": "Continue marcando todas as opções do diálogo até Lambda ser revelada ouvindo: recebe 20 Vales Varmida; fale com Sigma para sair."
           }
         ],
         "desbloqueia": "Instâncias diárias da Zona Restrita 1 e Zona Restrita 2"
@@ -2214,7 +2214,7 @@
         "codigo": "S6",
         "titulo": "Armazém Tártaro 2",
         "prerequisito": "Cap. 0 concluído",
-        "recompensa": "15 Vales Varmida (3 + 3 + 3 + 6) · 1.578.025 EXP base",
+        "recompensa": "15 Vales Varmida",
         "passos": [
           {
             "texto": "Fale com Tweet, no Armazém Tártaro 2 da Mansão.",
@@ -2238,7 +2238,7 @@
             "texto": "Colete as 3 Peças de Robô para o corpo dela: ba_2whs02 32/50, 129/81 e 240/124 (pode falhar e precisar coletar de novo)."
           },
           {
-            "texto": "Entregue às peças à Cabeça (3 Vales Varmida) e reporte a Tweet: 6 Vales + 1.578.025 EXP (libera as diárias de limpeza)."
+            "texto": "Entregue às peças à Cabeça (3 Vales Varmida) e reporte a Tweet: 6 Vales (libera as diárias de limpeza)."
           }
         ],
         "desbloqueia": "Limpeza do Armazém (Térreo) e Limpeza do Armazém (Porão)"
@@ -2247,7 +2247,7 @@
         "codigo": "S7",
         "titulo": "Jardim Flutuante",
         "prerequisito": "Cap. 0 concluído",
-        "recompensa": "20 Vales Varmida · 1.547.004 EXP base",
+        "recompensa": "20 Vales Varmida",
         "passos": [
           {
             "texto": "Fale com Renshiz, no Pátio da Usina Mágica, que considera Elyumina uma invasora.",
@@ -2265,7 +2265,7 @@
             "texto": "Na instância, siga o Jardinheiro: elimine as Papilas azuis sem pisar nas Ninfeias (investida em cruz), atravesse o labirinto de flores e então proteja o Jardinheiro quando ele atrair a Papila Silva (você perde 50% do HP e o local envenena)."
           },
           {
-            "texto": "Entregue a Folha da Papila Silva a Sayhue, que produz o antídoto, e leve-o a Elyumina (20 Vales Varmida + EXP)."
+            "texto": "Entregue a Folha da Papila Silva a Sayhue, que produz o antídoto, e leve-o a Elyumina (20 Vales Varmida)."
           }
         ],
         "desbloqueia": "Diárias e a instância do Jardim Flutuante"
@@ -2274,7 +2274,7 @@
         "codigo": "S8",
         "titulo": "Procurando no Banho",
         "prerequisito": "Cap. 0 concluído",
-        "recompensa": "30 Vales Varmida (7 + 7 + 16) · 515.667 EXP base (103.133 + 154.700 + 257.834)",
+        "recompensa": "30 Vales Varmida",
         "passos": [
           {
             "texto": "Fale com Rubber, no corredor do Banho da Mansão, e entre.",
@@ -2569,7 +2569,7 @@
     "id": "ep18",
     "titulo": "Episódio 18: Caminho da Oração",
     "requisitos": "Nível de Base 170 · Quest anterior: Legado do Sábio (Ep. 17.2) · Santuário de Rachel até o passo 5",
-    "recompensaTotal": "680 Fragmentos de Ametista · 1.000 Reputação (Aldeia do Lobo Cinzento) · 576,4 mi EXP Base · 225 mi EXP Classe · (Visual) Mini Elly (a infobox da bROWiki cita 660 Fragmentos — a soma das seções dá 680; divergência anotada)",
+    "recompensaTotal": "680 Fragmentos de Ametista · 1.000 Reputação (Aldeia do Lobo Cinzento) · (Visual) Mini Elly (a infobox da bROWiki cita 660 Fragmentos — a soma das seções dá 680; divergência anotada)",
     "avisos": [
       "A Boneca de Elly (chapéu) é recebida no início e é necessária em vários passos — só desequipe quando a quest pedir (no passo final com Miriam).",
       "Depois de Filhos Cinzentos, a história exige 1.000 de Reputação com a Aldeia do Lobo Cinzento. Cada missão do capítulo 2 dá Reputação +100 na primeira vez; na repetição (diárias), +30."
@@ -2577,7 +2577,7 @@
     "principal": [
       {
         "capitulo": "0. Convergência em Arunafeltz",
-        "recompensa": "50 Fragmentos de Ametista · 68,4 mi EXP Base · 70 mi EXP Classe",
+        "recompensa": "50 Fragmentos de Ametista",
         "passos": [
           {
             "texto": "Nos jardins da Mansão de Varmunt, fale com Elly — você recebe a Boneca de Elly, usada durante a missão.",
@@ -2619,7 +2619,7 @@
       },
       {
         "capitulo": "1. Filhos Cinzentos",
-        "recompensa": "50 Fragmentos de Ametista · 91.262.042 EXP Base · 70 mi EXP Classe",
+        "recompensa": "50 Fragmentos de Ametista",
         "passos": [
           {
             "texto": "Encontre Maram, o filho adotivo de Niren; durante a conversa Miriam surge — fale com ela.",
@@ -2681,7 +2681,7 @@
       },
       {
         "capitulo": "2. Aumente sua Reputação (1.000 pontos)",
-        "recompensa": "220 Fragmentos de Ametista · 180,2 mi EXP Base · 20 mi EXP Classe · 1.000 Reputação",
+        "recompensa": "220 Fragmentos de Ametista · 1.000 Reputação",
         "passos": [
           {
             "texto": "O Labirinto e o Mercador — fale com Imril: no Labirinto de Oz, clique na Caixa (26/184), desça pelo Caminho Íngreme (65/189), clique no Vapor (111/96), converse com o ??? (100/92), elimine 10 monstros do Labirinto, encontre a outra Caixa (134/56), clique nas Faíscas (110/37) e, no 2º andar, com o Velho em oz_dun02 150/275. Volte a Imril.",
@@ -2733,7 +2733,7 @@
       },
       {
         "capitulo": "3. Participação na Assembleia",
-        "recompensa": "120 Fragmentos de Ametista · 122,4 mi EXP Base · 35 mi EXP Classe",
+        "recompensa": "120 Fragmentos de Ametista",
         "passos": [
           {
             "texto": "Fale com o Garoto da Vila e depois encontre-se com Suad para iniciar a Assembleia; converse com todos os NPCs ao redor e volte a Suad.",
@@ -2775,7 +2775,7 @@
       },
       {
         "capitulo": "4. Lobo em Pele de Cordeiro",
-        "recompensa": "240 Fragmentos de Ametista · 114,1 mi EXP Base · 30 mi EXP Classe · (Visual) Mini Elly",
+        "recompensa": "240 Fragmentos de Ametista · (Visual) Mini Elly",
         "passos": [
           {
             "texto": "Em Rachel, fale com a Pessoa Comum. Prepare-se para mais uma instância!",
@@ -2816,7 +2816,7 @@
         "codigo": "S1",
         "titulo": "Purificação do Santuário (Instância diária)",
         "prerequisito": "Concluir Caminho da Oração · 1 pessoa ou mais · reset às 4h da manhã",
-        "recompensa": "8 Fragmentos de Ametista · 21.903.959 EXP Base · 6 mi EXP Classe (2 missões internas: 4 Frag + 12.681.245 base + 3 mi classe cada)",
+        "recompensa": "8 Fragmentos de Ametista",
         "passos": [
           {
             "texto": "Converse com a Pessoa Comum — um Sacerdote surge.",
@@ -3185,11 +3185,11 @@
     "id": "ep19",
     "titulo": "Episódio 19: Issgard — A Terra da Neve e das Lendas",
     "requisitos": "Nível de Base 200 · Quest anterior: Caminho da Oração (Ep. 18)",
-    "recompensaTotal": "326 Pétalas de Flor Invernal · 315 Rep. Castelo de Gelo · 1.236,7 mi EXP Base · 97 mi EXP Classe",
+    "recompensaTotal": "326 Pétalas de Flor Invernal · 315 Rep. Castelo de Gelo",
     "principal": [
       {
         "capitulo": "0. Prólogo — A caminho de Issgard",
-        "recompensa": "40 Pétalas · 50 Rep. · 65,3 mi EXP Base",
+        "recompensa": "40 Pétalas · 50 Rep.",
         "passos": [
           {
             "texto": "Fale com o Aldeão do Lobo Cinzento para iniciar a busca por Bagot.",
@@ -3255,7 +3255,7 @@
       },
       {
         "capitulo": "1. Patrulha Iwin (Instância)",
-        "recompensa": "2 Pétalas · 5 Rep. · 16 mi EXP Base",
+        "recompensa": "2 Pétalas · 5 Rep.",
         "passos": [
           {
             "texto": "Fale com o Líder da Patrulha <Eagle Patrol> no portal oeste para iniciar a instância.",
@@ -3275,7 +3275,7 @@
       },
       {
         "capitulo": "2. Reconhecimento da Transformação Rgan",
-        "recompensa": "27 Pétalas · 30 Rep. · 52,2 mi EXP Base · 1x Disfarce de Rgan",
+        "recompensa": "27 Pétalas · 30 Rep. · 1x Disfarce de Rgan",
         "passos": [
           {
             "texto": "Fale com o Jovem Misterioso (Lunch) que você salvou na patrulha.",
@@ -3300,7 +3300,7 @@
       },
       {
         "capitulo": "3. Infiltração no Ninho da Serpente",
-        "recompensa": "25 Pétalas · 30 Rep. · ~209 mi EXP Base total",
+        "recompensa": "25 Pétalas · 30 Rep.",
         "passos": [
           {
             "texto": "Entre na caverna e vá ao 2º andar falar com Miriam (mantenha o Disfarce ativo daqui em diante).",
@@ -3356,7 +3356,7 @@
       },
       {
         "capitulo": "4. Relatório da Missão de Infiltração",
-        "recompensa": "50 Pétalas · 60 Rep. · 143,6 mi EXP Base",
+        "recompensa": "50 Pétalas · 60 Rep.",
         "passos": [
           {
             "texto": "Disfarçado, encontre Lazy no Ninho.",
@@ -3491,7 +3491,7 @@
       },
       {
         "capitulo": "9 e 10. Ninho da Serpente Caótico (Instância)",
-        "recompensa": "50 Pétalas · 25 Rep. · 130,6 mi EXP Base · Consome 20 Núcleos de Baixa Qualidade",
+        "recompensa": "50 Pétalas · 25 Rep. · Consome 20 Núcleos de Baixa Qualidade",
         "passos": [
           {
             "texto": "De volta ao Castelo de Gelo, fale com Horuru.",
@@ -3580,7 +3580,7 @@
       },
       {
         "capitulo": "11. Os que Desapareceram (Conclusão)",
-        "recompensa": "50 Pétalas · 50 Rep. · 130,6 mi EXP Base",
+        "recompensa": "50 Pétalas · 50 Rep.",
         "passos": [
           {
             "texto": "No salão de refeições do Castelo de Gelo, fale com Aurelie Petit e a equipe para finalizar o Episódio 19.",
@@ -3634,7 +3634,7 @@
         "codigo": "S2",
         "titulo": "Mar Congelado",
         "prerequisito": "Concluir S1",
-        "recompensa": "10 Pétalas · 10 Rep. · ~130,6 mi EXP Base",
+        "recompensa": "10 Pétalas · 10 Rep.",
         "passos": [
           {
             "texto": "Fale com Surr e Tamarin (27/122) no quarto de Friederike.",
@@ -3679,7 +3679,7 @@
         "codigo": "S4",
         "titulo": "Rastreando o Esconderijo Subterrâneo",
         "prerequisito": "Concluir Cap. 11 (Pós-história)",
-        "recompensa": "2 Pétalas · 5 Rep. · ~19 mi EXP Base",
+        "recompensa": "2 Pétalas · 5 Rep.",
         "passos": [
           {
             "texto": "Fale com Horuru no Castelo de Gelo e depois fora dele (icecastle 27/124) para pegar 10 Antenas.",
@@ -3699,7 +3699,7 @@
         "codigo": "S5",
         "titulo": "Um Jeito Único de Sobreviver",
         "prerequisito": "Cap. 3 + Disfarce de Rgan · Consome 10 Núcleos de Baixa Qualidade",
-        "recompensa": "10 Pétalas · 52,2 mi EXP Base",
+        "recompensa": "10 Pétalas",
         "passos": [
           {
             "texto": "Disfarçado, fale com Mimirgand no Ninho, derrote 10 Primitive Rgan e 10 Lowest Rgan e entregue 10 Núcleos Mágicos Rgan de Baixa Qualidade.",
@@ -3715,7 +3715,7 @@
         "codigo": "S6",
         "titulo": "Doutrina e Sermão",
         "prerequisito": "Cap. 3 + Disfarce de Rgan",
-        "recompensa": "10 Pétalas · 52,2 mi EXP Base",
+        "recompensa": "10 Pétalas",
         "passos": [
           {
             "texto": "Disfarçado, ouça o sermão de Bernagand e depois fale com Yuramigand (18/92) ao lado.",
@@ -3728,7 +3728,7 @@
         "codigo": "S7",
         "titulo": "Uma Coisa Curiosa",
         "prerequisito": "Cap. 3 + Disfarce de Rgan",
-        "recompensa": "10 Pétalas · 52,2 mi EXP Base",
+        "recompensa": "10 Pétalas",
         "passos": [
           {
             "texto": "Disfarçado, fale com Delfanagand, converse com os 3 Rgans nos incubatórios (274/199, 277/257 e 220/279) e retorne.",
@@ -3741,7 +3741,7 @@
         "codigo": "S8",
         "titulo": "A Velha Serpente",
         "prerequisito": "Cap. 3 + Disfarce de Rgan · Consome 15 Núcleos de Baixa Qualidade",
-        "recompensa": "10 Pétalas · 52,2 mi EXP Base",
+        "recompensa": "10 Pétalas",
         "passos": [
           {
             "texto": "Disfarçado, fale com Aleigand no Ninho e entregue 15 Núcleos Mágicos Rgan de Baixa Qualidade.",
