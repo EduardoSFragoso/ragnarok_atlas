@@ -952,34 +952,34 @@ function renderReformTable() {
     const f = db.fides || {},
         term = globalTerm.toLocaleLowerCase("pt-BR");
     $("#reformNote").innerHTML =
-        `<p class="table-search-note">Armas Adulter Fides (+9 ou mais) viram Vivatus Fides com o ${esc(f.npc?.nome || "Bamdatt")} ${naviBtn("/navi " + (f.npc?.navi || "wolfvill 170/131"))}. Os três métodos têm o mesmo custo fixo para todas as armas de cada classe; o Esboço de Arma deve corresponder à arma desejada e todos os materiais são dropados no modo difícil da Mansão da Desilusão.</p>`;
+        `<p class="table-search-note">Armas Adulter Fides (+9 ou mais) viram Vivatus Fides com o ${esc(f.npc?.nome || "Bamdatt")} ${naviBtn("/navi " + (f.npc?.navi || "wolfvill 170/131"))}. Os três métodos têm o mesmo custo fixo para todas as classes e armas; o Esboço de Arma deve corresponder à arma desejada.</p>`;
     const classes = (f.classes || []).filter(
         (cl) =>
             !term ||
             `${cl.classe} ${cl.armas.map((a) => `${a.o} ${a.r}`).join(" ")}`.toLocaleLowerCase("pt-BR").includes(term)
     );
-    const par = (a) => `<div class="ref-par">${refItem(a.o)} ${refArrow} ${refItem(a.r)}</div>`,
-        mtd = (cl) =>
-            f.metodos
-                ?.map((m) => `<div class="material-line"><b>${esc(m.nome)}</b></div>${refMats(m.mats)}`)
-                .join("") || "\u2014",
-        perda = (cl) =>
-            f.metodos
-                ?.map(
-                    (m) =>
-                        `<div class="material-line"><b>${esc(m.nome)}</b></div><span class="table-meta">${esc(m.nota || "—")}</span>`
+    const ritual = f.metodos?.length
+        ? `<div class="ritual-card"><div class="ritual-head"><h2>Materiais dos rituais</h2><span class="ritual-note">Iguais para todas as classes e armas · dropam no modo difícil da Mansão da Desilusão</span></div><div class="ritual-grid">${f.metodos
+              .map(
+                  (m) =>
+                      `<div class="ritual-met"><h3>${esc(m.nome)}</h3><span class="table-meta">${esc(m.nota || "\u2014")}</span>${refMats(m.mats)}</div>`
+              )
+              .join("")}</div></div>`
+        : "";
+    $("#reformConversionMount").innerHTML =
+        ritual +
+        tableFrame(
+            ["Classe", "Adulter \u2192 Vivatus"],
+            classes
+                .map(
+                    (cl) =>
+                        `<tr><td class="classe-cell">${esc(cl.classe)}</td><td><div class="ver-grid">${cl.armas
+                            .map((a) => `<div class="adu">${refItem(a.o)}</div><div class="viv">${refItem(a.r)}</div>`)
+                            .join("")}</div></td></tr>`
                 )
-                .join("") || "\u2014";
-    $("#reformConversionMount").innerHTML = tableFrame(
-        ["Classe", "Adulter \u2192 Vivatus", "Materiais por m\u00e9todo", "Perda de refino"],
-        classes
-            .map(
-                (cl) =>
-                    `<tr><td>${esc(cl.classe)}</td><td>${cl.armas.map(par).join("")}</td><td class="material-cell"><div class="material-lines">${mtd(cl)}</div></td><td>${perda(cl)}</td></tr>`
-            )
-            .join(""),
-        "grouped-table align-top"
-    );
+                .join(""),
+            "conv-table align-top"
+        );
 }
 /* ===== Calculadoras (catálogo e painéis) ===== */
 function calcView(selected = "") {
