@@ -1,5 +1,5 @@
 {
-  "gerado": "2026-11-17",
+  "gerado": "2026-11-19",
   "episodios": {
     "ep19": {
       "nome": "Ep. 19 — Issgard, as Terras Geladas do Norte",
@@ -465,6 +465,22 @@
         "Chip Misterioso": 50,
         "Núcleo COR": 40
       }
+    },
+    "ep16.2": {
+      "nome": "Ep. 16.2 — Terra Gloria",
+      "moedas": ["Brasão de Honra"],
+      "total_moedas": { "Brasão de Honra": 48 },
+      "questPrincipal": null,
+      "questSecundarias": null,
+      "obs": "16 missões diárias pagam 3 Brasões cada (48 por dia); a 1ª execução de 3 missões do Clana Nemieri paga 10 Brasões cada. Veja a lista completa em Itens › Fontes de obtenção."
+    },
+    "ep16.1": {
+      "nome": "Ep. 16.1 — Banquete Real",
+      "moedas": ["Marca de Honra"],
+      "total_moedas": { "Marca de Honra": 66 },
+      "questPrincipal": null,
+      "questSecundarias": null,
+      "obs": "14 missões diárias pagam 4 Marcas cada (56 por dia) + Sala de Ymir em repetição paga 10 Marcas (cooldown de 16 h). Veja a lista completa em Itens › Fontes de obtenção."
     }
   },
   "observacoes": [

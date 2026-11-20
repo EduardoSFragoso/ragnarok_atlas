@@ -938,10 +938,14 @@ function bindDiariasEstoque() {
 function diariasRecompensas(ep) {
     const rec = recompensaFor(ep);
     if (!rec) return "";
-    const soma = rec.somas?.total;
+    const soma = rec.somas?.total,
+        temQuests = !!rec.questPrincipal?.length || !!rec.questSecundarias?.length;
     return `${secH("Recompensas do " + (rec.nome || "episódio"), rec.moedas?.length ? `Moeda do episódio: ${rec.moedas.map((m) => itemLink(m)).join(", ")} — obtidas nas quests abaixo.` : "")}
-${questRewardTable(rec.questPrincipal || [])}
-${rec.questSecundarias?.length ? fold("Quest secundárias", questRewardTable(rec.questSecundarias), { cls: "fold-top", count: `${rec.questSecundarias.length} quests` }) : ""}
+${
+    temQuests
+        ? `${questRewardTable(rec.questPrincipal || [])}${rec.questSecundarias?.length ? fold("Quest secundárias", questRewardTable(rec.questSecundarias), { cls: "fold-top", count: `${rec.questSecundarias.length} quests` }) : ""}`
+        : `<p class="table-search-note">${rec.obs ? esc(rec.obs) : "Recompensas de quest ainda não catalogadas para este episódio."}</p>`
+}
 ${soma ? `<p class="table-search-note">Somando tudo: ${fmt(soma["pétalas"] || 0)} moedas do episódio, ${fmt(soma.rep || 0)} de reputação${soma.base ? `, ${fmt(soma.base)} de EXP base` : ""}${soma.classe ? ` e ${fmt(soma.classe)} de EXP de classe` : ""}.</p>` : ""}`;
 }
 
