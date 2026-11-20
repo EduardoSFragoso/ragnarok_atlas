@@ -86,6 +86,7 @@ def salvar_json_atomico(path, dados, indent=1, sort_keys=True):
             a ordem original, ex.: planilhas convertidas de TSV).
     """
     path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_name(path.name + ".tmp")
     with open(tmp, "w", encoding="utf-8", newline="\n") as f:
         json.dump(dados, f, ensure_ascii=False, indent=indent, sort_keys=sort_keys)

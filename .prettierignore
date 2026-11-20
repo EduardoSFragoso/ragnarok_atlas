@@ -2,3 +2,5 @@
 data/
 assets/icons/
 node_modules/
+tools/cache/
+.ruff_cache/

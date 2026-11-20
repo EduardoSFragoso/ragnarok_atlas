@@ -16,7 +16,7 @@ precisa de uma apiKey gratuita. Este script:
        cabeçalhos Accept-Language: pt e x-server (LATAM, com iRO como
        reserva), com pausa entre pedidos, respeitando o Retry-After quando o
        servidor responder 429, e salvando tudo em
-       tools/divine_pride_saida.json (acumulativo: rodar de novo continua de
+       tools/cache/divine_pride_saida.json (acumulativo: rodar de novo continua de
        onde parou).
 
 A chave da API é lida SOMENTE da variável de ambiente DP_API_KEY — nunca do
@@ -28,7 +28,7 @@ Uso (na raiz do projeto):
     python3 tools/puxar_efeitos_divine_pride.py            # busca o que falta
     python3 tools/puxar_efeitos_divine_pride.py --dry-run   # só lista pendências
 
-Depois envie tools/divine_pride_saida.json de volta para eu atualizar a planilha.
+Depois envie tools/cache/divine_pride_saida.json de volta para eu atualizar a planilha.
 """
 
 import argparse
@@ -51,13 +51,14 @@ from _comum import (
 ROOT = Path(__file__).resolve().parent.parent
 API = "https://www.divine-pride.net/api/database/Item/{}"
 BUSCA = "https://www.divine-pride.net/api/database/Item"
-SAIDA = ROOT / "tools" / "divine_pride_saida.json"
+CACHE = ROOT / "tools" / "cache"
+SAIDA = CACHE / "divine_pride_saida.json"
 PEND = ROOT / "tools" / "divine_pride_faltando.txt"
 SKILL_API = "https://www.divine-pride.net/api/database/Skill/{}"
 SKILL_BUSCA = "https://www.divine-pride.net/api/database/Skill"
-SKILLS = ROOT / "tools" / "divine_pride_skills.json"
+SKILLS = CACHE / "divine_pride_skills.json"
 SKILLS_FALTA = ROOT / "tools" / "divine_pride_skills_faltando.txt"
-SKILL_IDS = ROOT / "tools" / "skills_ids.json"
+SKILL_IDS = CACHE / "skills_ids.json"
 DELAY = 1.2  # segundos entre pedidos; aumente com --delay se quiser mais calma
 
 # Servidores tentados em ordem: LATAM atende em português, iRO é a reserva.
@@ -198,7 +199,7 @@ def coletar_nomes_skills(cache_saida):
     """Reúne os nomes de habilidade citados em todos os efeitos salvos.
 
     Args:
-        cache_saida: cache tools/divine_pride_saida.json.
+        cache_saida: cache tools/cache/divine_pride_saida.json.
     Returns:
         set[str]: nomes distintos de habilidades.
     """
@@ -216,8 +217,8 @@ def separar_falta(nomes, ids_offline, cache_skills):
 
     Args:
         nomes: todos os nomes de habilidades citados nos efeitos.
-        ids_offline: mapa nome -> ID de tools/skills_ids.json.
-        cache_skills: cache tools/divine_pride_skills.json.
+        ids_offline: mapa nome -> ID de tools/cache/skills_ids.json.
+        cache_skills: cache tools/cache/divine_pride_skills.json.
     Returns:
         (offline, faltam): listas ordenadas — 'offline' com ID conhecido,
         'faltam' começa com as de ID conhecido.
@@ -302,7 +303,7 @@ def estagio_skills(key, delay, seco):
     Percorre os nomes extraídos do cache de itens, obtém o detalhe de cada
     habilidade (por ID local ou pela busca) e grava o cache de skills a cada
     acerto. Ao final, lista as habilidades sem dados em
-    tools/divine_pride_skills_faltando.txt.
+    tools/cache/divine_pride_skills_faltando.txt.
 
     Args:
         key: chave da API (DP_API_KEY); sem ela a fase é pulada (exceto --dry-run).
@@ -415,7 +416,7 @@ def main(argv=None):
     feitos = len([k for k in com_id if k in cache and cache[k].get("efeito")])
     print(
         f"{len(pend)} encantamentos pendentes · {len(com_id)} com ID · {feitos} já salvos"
-        f" · {len(sem_id)} sem ID (tools/divine_pride_faltando.txt)"
+        f" · {len(sem_id)} sem ID (tools/cache/divine_pride_faltando.txt)"
     )
     if args.dry_run:
         for k, v in sorted(com_id.items()):

@@ -1,0 +1,20 @@
+{
+    "name": "ragnarok-atlas",
+    "private": true,
+    "version": "1.0.0",
+    "description": "Site estático do Ragnarök Atlas · LATAM (sem build).",
+    "type": "module",
+    "scripts": {
+        "lint": "eslint app.js",
+        "format:check": "prettier --check .",
+        "format": "prettier --write .",
+        "check": "node --check app.js"
+    },
+    "devDependencies": {
+        "eslint": "^10.15.0",
+        "prettier": "^3.10.1"
+    },
+    "engines": {
+        "node": ">=20"
+    }
+}

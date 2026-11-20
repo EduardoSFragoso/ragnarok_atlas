@@ -68,6 +68,6 @@ Comentários e docstrings são escritos em português do Brasil. Os scripts grav
 
 O arquivo [`LICENSE`](LICENSE) aplica a licença MIT somente ao código original escrito para este projeto. Ela não cobre nem concede direitos sobre dados da API, URLs ou arquivos de ícones, textos de efeitos, conteúdo da bROWiki e do Hazy Forest, informações do jogo, nomes, logotipos ou marcas de terceiros. Os dados, textos e ícones da API têm autorização de uso informada pelo mantenedor, independente da licença do código; isso não se estende automaticamente a conteúdo da bROWiki ou a outros materiais de terceiros.
 
-**Favicon:** o arquivo `assets/favicon.svg` é uma criação original, feita para este projeto, com as iniciais “Ro” em azul sobre fundo branco. Ele não é o logo oficial e não reproduz a marca registrada de Gravity Co.; *Ragnarök Online* e seus logotipos são propriedade da Gravity Co. Ltd.
+**Favicon:** o arquivo `assets/favicon.svg` é uma criação original, feita para este projeto, com as iniciais “Ro” em azul sobre fundo branco. Ele não é o logo oficial e não reproduz a marca registrada de Gravity Co.; _Ragnarök Online_ e seus logotipos são propriedade da Gravity Co. Ltd.
 
 Os dados atuais foram compilados de informações da bROWiki, do Hazy Forest e da API Divine Pride. Ainda não há atribuição de fonte individual registrada para cada arquivo de dados.

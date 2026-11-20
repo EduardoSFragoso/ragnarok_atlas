@@ -1,27 +1,36 @@
 name: CI
 
 on:
-  pull_request:
-  push:
-    branches: [main]
+    pull_request:
+    push:
+        branches: [main]
 
 jobs:
-  checks:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+    checks:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 20
 
-      - name: Syntax-check JavaScript
-        run: node --check app.js
+            - name: Install deps
+              run: npm ci
 
-      - name: Validate JSON
-        run: |
-          set -euo pipefail
-          find . -name '*.json' -print0 | while IFS= read -r -d '' f; do
-            node -e "JSON.parse(require('fs').readFileSync(process.argv[1],'utf8'))" "$f"
-            echo "OK $f"
-          done
+            - name: Syntax-check JavaScript
+              run: npm run check
+
+            - name: Lint (ESLint)
+              run: npm run lint
+
+            - name: Format (Prettier)
+              run: npm run format:check
+
+            - name: Validate JSON
+              run: |
+                  set -euo pipefail
+                  find . -path ./node_modules -prune -o -name '*.json' -print0 | while IFS= read -r -d '' f; do
+                    node -e "JSON.parse(require('fs').readFileSync(process.argv[1],'utf8'))" "$f"
+                    echo "OK $f"
+                  done
