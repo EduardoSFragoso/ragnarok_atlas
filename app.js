@@ -2068,6 +2068,7 @@ function naviBtn(cmd) {
 const richText = (s) =>
     escapeEntities(s)
         .replace(/\n/g, "<br>")
+        .replace(/(\d+)(\s*×\s*)\{\{([^}]+)\}\}/g, (_, q, sep, n) => `<span class="qty-item">${q} ×${itemLink(n)}</span>`)
         .replace(/\{\{([^}]+)\}\}/g, (_, n) => itemLink(n));
 function guideEps() {
     return [...(db.guia || [])].sort((a, b) => episodeRank(b.titulo) - episodeRank(a.titulo));

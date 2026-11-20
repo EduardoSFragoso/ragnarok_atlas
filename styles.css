@@ -962,6 +962,12 @@ input[type="number"]::-webkit-outer-spin-button {
 .item-link:hover {
     text-decoration: underline;
 }
+.qty-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    white-space: nowrap;
+}
 
 /* ===== Reforma Fides: rituais em card + conversão de 2 colunas ===== */
 .ritual-card {
@@ -990,14 +996,15 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .ritual-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+    justify-content: center;
     gap: 10px;
 }
 .ritual-met {
     background: var(--td-bg);
     border: 1px solid var(--td-border);
     border-radius: 8px;
-    padding: 10px 12px;
+    padding: 10px 14px;
 }
 .ritual-met h3 {
     margin: 0;
@@ -1008,7 +1015,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0 0 6px;
 }
 .conv-table {
-    max-width: 980px;
+    width: 100%;
 }
 .conv-table th {
     font: 700 12px Manrope;

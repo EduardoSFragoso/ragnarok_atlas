@@ -1545,7 +1545,7 @@
           }
         ],
         "itens": [
-          "1 × Envelope de Dien (recebido e entregue na etapa)"
+          "1 × {{Envelope de Dien}} (recebido e entregue na etapa)"
         ],
         "desbloqueia": "A missão Ocupação OS (não faça a instância com Est agora — siga andando até os Rebeldes)."
       },
@@ -1945,7 +1945,7 @@
           }
         ],
         "itens": [
-          "5 × Núcleo de Autômata Quebrada (coletados na etapa)"
+          "5 × {{Núcleo de Autômata Quebrada}} (coletados na etapa)"
         ]
       },
       {
