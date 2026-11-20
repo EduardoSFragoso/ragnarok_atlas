@@ -896,7 +896,7 @@ function diariasEstoqueWidget(ep, rows) {
     return `<div id="diaEstoque" data-ep="${esc(ep)}" class="estoque-widget"><div class="est-head"><span class="eyebrow">ESTOQUE · ${esc(ep)}</span>${temBonus ? `<label class="bonus-entry"><input type="checkbox" id="diaBonus"${diaBonus ? " checked" : ""}> incluir bônus por reputação</label>` : ""}</div>${moedas
         .map((m) => {
             const farm = totals.get(m) || 0;
-            return `<div class="est-item"><span class="item-label">${itemIcon(m)}${esc(m)}</span><label>Tem <input type="number" min="0" step="1" data-est-item="${esc(m)}" value="${esc(est[m] ?? rec?.total_moedas?.[m] ?? 0)}" title="Valor salvo; vazio ou 0 volta ao total das quests"></label><button type="button" class="button" data-est-add="${esc(m)}" data-farm="${farm}" title="Somar o ganho das diárias de hoje ao estoque">+ ${fmt(farm)}</button><button type="button" class="button stock-reset" data-est-rst="${esc(m)}" title="Voltar ao total das quests deste item">↺</button></div>`;
+            return `<div class="est-item"><span class="item-label">${itemIcon(m)}${esc(m)}</span><span class="est-controls"><label>Tem <input type="number" min="0" step="1" data-est-item="${esc(m)}" value="${esc(est[m] ?? rec?.total_moedas?.[m] ?? 0)}" title="Valor salvo; vazio ou 0 volta ao total das quests"></label><button type="button" class="button" data-est-add="${esc(m)}" data-farm="${farm}" title="Somar o ganho das diárias de hoje ao estoque">+ ${fmt(farm)}</button><button type="button" class="button stock-reset" data-est-rst="${esc(m)}" title="Voltar ao total das quests deste item">↺</button></span></div>`;
         })
         .join(
             ""
