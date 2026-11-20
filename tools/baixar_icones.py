@@ -55,8 +55,9 @@ FACILIDADES = [
 def coletar():
     """Levanta todos os IDs de item conhecidos e os nomes ainda sem ID.
 
-    Fontes: IDs fixos em app.js, data/itens_divine_pride.json e as
-    planilhas de FACILIDADES + custo_de_encantamento + reforma_de_armas.
+    Fontes: IDs fixos em app.js, data/itens_divine_pride.json,
+    data/referencias.json (itens_conhecidos) e as planilhas de
+    FACILIDADES + custo_de_encantamento + reforma_de_armas.
 
     Returns:
         (ids, sem_id): lista ordenada de IDs únicos (int) e lista
@@ -64,6 +65,9 @@ def coletar():
     """
     ids = {n: int(i) for n, i in re.findall(r"'([^']+)':(\d{3,8})", (ROOT / "app.js").read_text(encoding="utf-8"))}
     ids.update({n: int(i) for n, i in carregar_ids().items()})
+    # data/referencias.json: mapa canônico nome -> ID usado pelo app (itens_conhecidos).
+    refs = carregar_json(ROOT / "data" / "referencias.json", padrao={}).get("itens_conhecidos", {})
+    ids.update({n: int(i) for n, i in refs.items()})
     nomes = set()
     for nome in FACILIDADES:
         f = ROOT / "data" / nome
