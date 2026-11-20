@@ -852,7 +852,7 @@ function diariasView() {
     <div class="toolbar" style="margin-bottom:14px"><label for="diaSelect" style="font-size:14px">Episódio:</label><select id="diaSelect">${eps.map((e) => `<option${e === activeDiaEp ? " selected" : ""}>${esc(e)}</option>`).join("")}</select></div>
     ${avisoSeFalha("fontes")}
     ${ges?.diarias?.aviso ? `<div class="panel-note">${richText(ges.diarias.aviso)}</div>` : ""}
-    <div class="panel-note"><b>Ganho por dia:</b> <span id="diaTotalsList">${diaTotalsHtml(rows, diaBonus && temBonus)}</span>${temBonus ? ` <label class="bonus-entry"><input type="checkbox" id="diaBonus"${diaBonus ? " checked" : ""}> incluir bônus por reputação</label>` : ""}</div>
+    <div class="panel-note"><b>Ganho por dia:</b> <span id="diaTotalsList">${diaTotalsHtml(rows, diaBonus && temBonus)}</span></div>
     ${gruposHtml}
     ${diariasRecompensas(activeDiaEp)}
   `;
@@ -889,17 +889,18 @@ function questRewardTable(list) {
 function diariasEstoqueWidget(ep, rows) {
     const rec = recompensaFor(ep),
         totals = diaTotals(rows, diaBonus),
+        temBonus = rows.some((r) => Number(r[6]) > 0),
         moedas = rec?.moedas?.length ? rec.moedas : [...totals.keys()];
     if (!moedas.length) return "";
     const est = estEpCarregar(ep);
-    return `<div id="diaEstoque" data-ep="${esc(ep)}" class="estoque-widget"><div class="eyebrow">ESTOQUE · ${esc(ep)}</div>${moedas
+    return `<div id="diaEstoque" data-ep="${esc(ep)}" class="estoque-widget"><div class="est-head"><span class="eyebrow">ESTOQUE · ${esc(ep)}</span>${temBonus ? `<label class="bonus-entry"><input type="checkbox" id="diaBonus"${diaBonus ? " checked" : ""}> incluir bônus por reputação</label>` : ""}</div>${moedas
         .map((m) => {
             const farm = totals.get(m) || 0;
-            return `<div class="est-item"><span class="item-label">${itemIcon(m)}${esc(m)}</span><label>Tem <input type="number" min="0" step="1" data-est-item="${esc(m)}" value="${esc(est[m] ?? "")}" placeholder="0"></label><button type="button" class="button" data-est-add="${esc(m)}" data-farm="${farm}" title="Somar o ganho das diárias de hoje ao estoque">+ ${fmt(farm)}</button><button type="button" class="button stock-reset" data-est-rst="${esc(m)}" title="Zerar o valor salvo deste item">↺</button></div>`;
+            return `<div class="est-item"><span class="item-label">${itemIcon(m)}${esc(m)}</span><label>Tem <input type="number" min="0" step="1" data-est-item="${esc(m)}" value="${esc(est[m] ?? rec?.total_moedas?.[m] ?? 0)}" title="Valor salvo; vazio ou 0 volta ao total das quests"></label><button type="button" class="button" data-est-add="${esc(m)}" data-farm="${farm}" title="Somar o ganho das diárias de hoje ao estoque">+ ${fmt(farm)}</button><button type="button" class="button stock-reset" data-est-rst="${esc(m)}" title="Voltar ao total das quests deste item">↺</button></div>`;
         })
         .join(
             ""
-        )}<p class="table-search-note">Comece com o valor que sobrou das quests do episódio e use “+ N” para somar o farm de hoje. Salvo no navegador, por episódio.</p></div>`;
+        )}<p class="table-search-note">O valor inicial é o total das quests do episódio; use “+ N” para somar o farm de hoje. Salvo no navegador, por episódio.</p></div>`;
 }
 function bindDiariasEstoque() {
     const widget = $("#diaEstoque");
@@ -1332,20 +1333,14 @@ let GRAU19 = { steps: [], mats: [] },
     RECYCLE19 = [];
 const EXTRA_CALCS = [
     {
-        id: "farm",
-        kind: "Farm diário",
-        title: "Farm diário",
-        desc: "Estima quanto você junta das missões diárias de um episódio em N dias, considerando o estoque inicial de cada item (o mesmo cartão da página de diárias).",
-    },
-    {
         id: "encanto",
         kind: "Materiais totais",
         title: "Custo total de encantamento",
         desc: "Soma os materiais dos efeitos escolhidos em cada slot. Os aleatórios do Ep. 19 ficam de fora; nos demais episódios o custo de cada sorteio é somado.",
     },
 ];
-const EXTRA_PANELS = { farm: farmDiarioPanel, encanto: enchantPanel },
-    EXTRA_UPDATE = { farm: updateFarmDiario, encanto: updateEnchantCalc };
+const EXTRA_PANELS = { encanto: enchantPanel },
+    EXTRA_UPDATE = { encanto: updateEnchantCalc };
 const numQty = (s) => {
     s = String(s ?? "").trim();
     if (/^\d{1,3}(\.\d{3})+$/.test(s)) return Number(s.replace(/\./g, ""));
@@ -1418,35 +1413,10 @@ function stNum(v, def = 0) {
     return Number.isFinite(n) ? n : def;
 }
 /* Painel do farm diário: episódio + dias -> ganho estimado por item. */
-function farmDiarioPanel() {
-    const eps = diaEps();
-    return `<section class="calculator" data-active-calc="farm"><div class="card calc-form"><h3>Farm diário</h3><p>Estimativa do ganho das missões diárias de um episódio em N dias.</p><div class="fields"><div class="field"><label for="farmEp">Episódio</label><select id="farmEp">${eps.map((e) => `<option${e === activeDiaEp ? " selected" : ""}>${esc(e)}</option>`).join("")}</select></div><div class="field"><label for="farmDias">Dias de farm</label><input id="farmDias" type="number" min="0" step="1" value="1"></div><div class="field"><label for="farmBonus">Bônus por reputação</label><select id="farmBonus"><option value="0">sem bônus</option><option value="1">com bônus</option></select></div></div><p class="table-search-note">“Com estoque” soma o estoque inicial já salvo no cartão de estoque da página de diárias (por item, se houver).</p></div><div class="card calc-result"><div class="eyebrow">GANHO ESTIMADO</div><div class="ingredient-list" id="farmTotais"></div></div></section>`;
-}
-function updateFarmDiario() {
-    const mount = $("#farmTotais"),
-        ep = $("#farmEp")?.value,
-        dias = Math.max(0, stNum($("#farmDias")?.value, 1)),
-        bonus = $("#farmBonus")?.value === "1";
-    if (!mount || !ep) return;
-    if (!diaEps().includes(ep)) {
-        mount.innerHTML = '<span class="recipe-empty">Este episódio não tem missões diárias catalogadas.</span>';
-        return;
-    }
-    const rows = diaRows().filter((r) => r[0] === ep),
-        totals = diaTotals(rows, bonus),
-        est = estEpCarregar(ep);
-    mount.innerHTML =
-        [...totals]
-            .map(
-                ([n, q]) =>
-                    `<div class="ingredient"><span class="item-label">${itemLink(n)}</span><b>${fmt(q * dias)}${est[n] ? ` · com estoque: ${fmt(stNum(est[n]) + q * dias)}` : ""}</b></div>`
-            )
-            .join("") || '<span class="recipe-empty">Este episódio não tem ganho diário catalogado.</span>';
-}
 function enchantPanel() {
     const eps = [...enchIndex().keys()].sort((a, b) => episodeRank(b) - episodeRank(a)),
         lv = (n) => (n ? `Nv. ${n}` : "Sem grau (aplicar Nv. 1)");
-    return `<section class="calculator" data-active-calc="encanto"><div class="card calc-form"><h3>Custo total de encantamento</h3><p>Escolha o episódio, o equipamento e o efeito de cada encantamento (posições 1, 2, 3…). Aleatórios do Ep. 19 ficam de fora; nos demais episódios o custo de cada sorteio é somado. No Ep. 19 dá para incluir os materiais do upgrade de grau da Arma Vil Invernal.</p><div class="fields"><div class="field"><label for="ecEp">Episódio</label><select id="ecEp">${eps.map((e) => `<option>${esc(e)}</option>`).join("")}</select></div><div class="field"><label for="ecTarget">Equipamento-alvo</label><select id="ecTarget"></select></div></div><div class="fields" data-grau hidden style="margin-top:11px"><div class="field"><label for="ecGrauDe">Grau da Arma Vil Invernal — de</label><select id="ecGrauDe">${[0, 1, 2, 3, 4].map((n) => `<option value="${n}">${lv(n)}</option>`).join("")}</select></div><div class="field"><label for="ecGrauAte">até</label><select id="ecGrauAte">${[1, 2, 3, 4, 5].map((n) => `<option value="${n}"${n === 5 ? " selected" : ""}>Nv. ${n}</option>`).join("")}</select></div><p class="table-search-note">Materiais do upgrade de grau da Arma Vil Invernal (encantamento {2}).</p></div><div class="fields" id="ecSlots" style="margin-top:11px"></div><p class="table-search-note" id="ecHint" style="margin-top:10px"></p></div><div class="card calc-result"><div class="eyebrow">CUSTO TOTAL</div><h3 id="ecTitle">—</h3><p id="ecNote"></p><div class="ingredient-list" id="ecTotals"></div><div id="ecStock" style="margin-top:14px"></div></div></section>`;
+    return `<section class="calculator" data-active-calc="encanto"><div class="card calc-form"><h3>Custo total de encantamento</h3><p>Escolha o episódio, o equipamento e o efeito de cada encantamento (posições 1, 2, 3…). Aleatórios do Ep. 19 ficam de fora; nos demais episódios o custo de cada sorteio é somado. No Ep. 19 dá para incluir os materiais do upgrade de grau da Arma Vil Invernal.</p><div class="fields"><div class="field"><label for="ecEp">Episódio</label><select id="ecEp">${eps.map((e) => `<option>${esc(e)}</option>`).join("")}</select></div><div class="field"><label for="ecTarget">Equipamento-alvo</label><select id="ecTarget"></select></div></div><div class="fields" data-grau hidden style="margin-top:11px"><div class="field"><label for="ecGrauDe">Grau da Arma Vil Invernal — de</label><select id="ecGrauDe">${[0, 1, 2, 3, 4].map((n) => `<option value="${n}">${lv(n)}</option>`).join("")}</select></div><div class="field"><label for="ecGrauAte">até</label><select id="ecGrauAte">${[1, 2, 3, 4, 5].map((n) => `<option value="${n}"${n === 5 ? " selected" : ""}>Nv. ${n}</option>`).join("")}</select></div><p class="table-search-note">Materiais do upgrade de grau da Arma Vil Invernal (encantamento {2}).</p></div><div class="fields" id="ecSlots" style="margin-top:11px"></div><p class="table-search-note" id="ecHint" style="margin-top:10px"></p></div><div class="card calc-result"><div class="eyebrow">CUSTO TOTAL</div><h3 id="ecTitle">—</h3><p id="ecNote"></p><div class="ingredient-list" id="ecTotals"></div></div></section>`;
 }
 function updateEnchantCalc(sec) {
     const idx = enchIndex(),
@@ -1525,122 +1495,6 @@ function updateEnchantCalc(sec) {
         (picked.some((p) => p.includes("*"))
             ? " · * Valores confirmados somente no Hazy Forest (kRO); não constam na bROWiki ou iROWiki."
             : "");
-    const stockBox = sec.querySelector("#ecStock");
-    if (stockBox) {
-        const sig = [...totals.entries()].map(([n, q]) => `${n}\x00${q}`).join("\x01"),
-            est = stLoad("ro-atlas-estoque", {}),
-            txs = stLoad("ro-atlas-taxas", {}),
-            frm = stLoad("ro-atlas-farm", {}),
-            bonus0 = stLoad("ro-atlas-estoque-bonus", false),
-            rec = (db.recompensas?.episodios || {})["ep" + episodeRank(ep.value)];
-        if (!totals.size) {
-            stockBox.dataset.sig = "";
-            stockBox.innerHTML = "";
-            stockBox.oninput = null;
-            stockBox.onclick = null;
-            stockBox.dataset.init = "";
-        } else if (stockBox.dataset.sig !== sig) {
-            stockBox.dataset.sig = sig;
-            stockBox.dataset.init = "";
-            const iniciais = [...totals.entries()].filter(
-                    ([name]) => est[name] === undefined && (rec?.total_moedas?.[name] || 0) > 0
-                ),
-                auto0 = diaTotals(
-                    diaRows().filter((r) => r[0] === ep.value),
-                    bonus0
-                );
-            stockBox.innerHTML = `<div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:4px"><div class="eyebrow">ESTOQUE & TEMPO</div><label class="bonus-entry"><input type="checkbox" id="ecBonusCb"${bonus0 ? " checked" : ""}> diárias com bônus por reputação</label><button type="button" class="button" id="ecFarmFold" title="Soma o farm de hoje ao estoque e zera os campos de farm">Somar farm de hoje ao estoque</button></div>${[
-                ...totals.entries(),
-            ]
-                .map(([name, need]) => {
-                    const init = est[name] === undefined ? stNum(rec?.total_moedas?.[name]) : stNum(est[name]);
-                    return `<div class="stock-row" data-name="${esc(name)}"><span class="item-label stock-item">${itemLink(name)}<b class="need">× ${fmt(need)}</b></span><label>Tem <input type="number" min="0" step="1" data-st value="${esc(init)}"></label><label>Farm hoje <input type="number" min="0" step="1" data-fr value="${esc(frm[name] ?? "")}"></label><label>/dia <input type="number" min="0" step="1" data-tx placeholder="${fmt(auto0.get(name) || 0)}" value="${esc(txs[name] ?? "")}"></label><button type="button" class="button stock-reset" data-rst title="Voltar ao estoque inicial deste item e limpar o farm de hoje">↺</button><span class="stock-status">—</span></div>`;
-                })
-                .join(
-                    ""
-                )}${iniciais.length ? `<p class="table-search-note" style="margin-top:8px">Estoque inicial considera as recompensas completadas das quests ${esc(rec.nome || "do episódio")} (${iniciais.length} material${iniciais.length > 1 ? "is" : ""}).</p>` : ""}<p class="table-search-note" style="margin-top:8px" id="ecStockNote"></p>`;
-            const getAuto = () =>
-                diaTotals(
-                    diaRows().filter((r) => r[0] === ep.value),
-                    !!stockBox.querySelector("#ecBonusCb")?.checked
-                );
-            const run = () => {
-                const auto = getAuto();
-                const rows = [...stockBox.querySelectorAll(".stock-row")].map((row) => {
-                    const name = row.dataset.name,
-                        have =
-                            (Number(row.querySelector("[data-st]").value) || 0) +
-                            (Number(row.querySelector("[data-fr]").value) || 0),
-                        manual = row.querySelector("[data-tx]").value,
-                        rate = manual === "" ? Number(auto.get(name) || 0) : Number(manual) || 0,
-                        falta = Math.max(0, (totals.get(name) || 0) - have),
-                        dias = rate > 0 ? falta / rate : NaN;
-                    return { name, rate, falta, dias, row };
-                });
-                const st = {},
-                    tx = {},
-                    fr = {};
-                rows.forEach((x) => {
-                    st[x.name] = Number(x.row.querySelector("[data-st]").value) || 0;
-                    const v = x.row.querySelector("[data-tx]").value;
-                    if (v !== "") tx[x.name] = Number(v) || 0;
-                    const f = x.row.querySelector("[data-fr]").value;
-                    if (f !== "") fr[x.name] = Number(f) || 0;
-                    if (x.row.querySelector("[data-tx]").value === "")
-                        x.row.querySelector("[data-tx]").placeholder = fmt(Number(auto.get(x.name) || 0));
-                });
-                stSave("ro-atlas-estoque", st);
-                stSave("ro-atlas-taxas", tx);
-                stSave("ro-atlas-farm", fr);
-                stSave("ro-atlas-estoque-bonus", !!stockBox.querySelector("#ecBonusCb")?.checked);
-                rows.forEach((x) => {
-                    const el = x.row.querySelector(".stock-status");
-                    el.textContent =
-                        x.falta <= 0
-                            ? "Suficiente"
-                            : Number.isNaN(x.dias)
-                              ? "informe /dia"
-                              : `≈ ${fmt(Math.ceil(x.dias * 10) / 10)} dias`;
-                });
-                const pend = rows.filter((x) => x.falta > 0),
-                    note = stockBox.querySelector("#ecStockNote");
-                if (!pend.length) note.textContent = "Estoque suficiente para todos os materiais.";
-                else {
-                    const ok = pend.filter((x) => x.rate > 0);
-                    note.textContent = ok.length
-                        ? `Tempo estimado: ≈ ${fmt(Math.ceil(Math.max(...ok.map((x) => x.dias)) * 10) / 10)} dias (gargalo: ${ok.slice().sort((a, b) => b.dias - a.dias)[0].name}), somando estoque + farm de hoje e a taxa das diárias ${stockBox.querySelector("#ecBonusCb")?.checked ? "com" : "sem"} bônus.`
-                        : `Sem taxa de aquisição para ${pend.map((x) => x.name).join(", ")}; informe o ganho por dia (diárias do episódio preenchem automaticamente quando aplicável).`;
-                }
-            };
-            stockBox.oninput = run;
-            stockBox.onclick = (e) => {
-                const rst = e.target.closest("[data-rst]");
-                if (rst) {
-                    const row = rst.closest(".stock-row"),
-                        name = row.dataset.name;
-                    delete est[name];
-                    delete frm[name];
-                    row.querySelector("[data-st]").value = Number(rec?.total_moedas?.[name] || 0);
-                    row.querySelector("[data-fr]").value = "";
-                    run();
-                    return;
-                }
-                if (e.target.id === "ecFarmFold") {
-                    stockBox.querySelectorAll(".stock-row").forEach((row) => {
-                        const fin = row.querySelector("[data-fr]"),
-                            f = Number(fin.value) || 0;
-                        if (f > 0) {
-                            const inp = row.querySelector("[data-st]");
-                            inp.value = (Number(inp.value) || 0) + f;
-                        }
-                        fin.value = "";
-                    });
-                    run();
-                }
-            };
-            run();
-        } else if (typeof stockBox.oninput === "function") stockBox.oninput();
-    }
     $("#ecTotals").innerHTML = totalList(totals, extras);
 }
 function recycleView() {
