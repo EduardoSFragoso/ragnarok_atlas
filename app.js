@@ -2090,6 +2090,9 @@ function stepList(list) {
         .join("");
 }
 function itensEtapa(list) {
+    /* Defesa: dado malformado (string em vez de lista) não derruba a aba. */
+    if (typeof list === "string") list = [list];
+    if (!Array.isArray(list)) return "";
     return list?.length ? `<p class="gift-line"><b>Itens desta etapa:</b> ${list.map(richText).join(" · ")}</p>` : "";
 }
 function itensNecessariosHtml(ep) {

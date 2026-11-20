@@ -2880,7 +2880,9 @@
         "codigo": "S6",
         "titulo": "Onde Fica Minha Casa",
         "prerequisito": "Secundária da Aldeia (1.ª conclusão) · Nv. base 170",
-        "itens": "3 × {{Aço}}",
+        "itens": [
+          "3 × {{Aço}}"
+        ],
         "recompensa": "20 Fragmentos de Ametista · Reputação +100",
         "desbloqueia": "A diária de Onde Fica Minha Casa (Ezekiel).",
         "passos": [
@@ -2902,7 +2904,9 @@
         "codigo": "S7",
         "titulo": "Abastecimento de Água",
         "prerequisito": "Secundária da Aldeia (1.ª conclusão) · Nv. base 170",
-        "itens": "550 {{zeny}} (Relíquia Sagrada → Filtro de Água)",
+        "itens": [
+          "550 {{zeny}} (Relíquia Sagrada → Filtro de Água)"
+        ],
         "recompensa": "20 Fragmentos de Ametista · Reputação +100",
         "desbloqueia": "A diária de Abastecimento de Água (Budan).",
         "passos": [
@@ -2928,7 +2932,9 @@
         "codigo": "S8",
         "titulo": "Não Existem Feras Más no Mundo",
         "prerequisito": "Secundária da Aldeia (1.ª conclusão) · Nv. base 170",
-        "itens": "1 × {{Carne}}",
+        "itens": [
+          "1 × {{Carne}}"
+        ],
         "recompensa": "20 Fragmentos de Ametista (2 entregas de 10) · Reputação +100",
         "desbloqueia": "A diária de Pastor Inesperado (Scania).",
         "passos": [
@@ -3044,7 +3050,9 @@
         "codigo": "S12",
         "titulo": "Dificuldades da Caravana Mercante",
         "prerequisito": "Secundária da Aldeia (1.ª conclusão) · Nv. base 170",
-        "itens": "1 × {{Palha}} (consumida)",
+        "itens": [
+          "1 × {{Palha}} (consumida)"
+        ],
         "recompensa": "40 Fragmentos de Ametista · Reputação +100",
         "passos": [
           {
