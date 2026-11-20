@@ -859,7 +859,6 @@ function diariasView() {
     ${ges?.diarias?.aviso ? `<div class="panel-note">${richText(ges.diarias.aviso)}</div>` : ""}
     <div class="panel-note"><b>Ganho por dia:</b> <span id="diaTotalsList">${diaTotalsHtml(rows, diaBonus && temBonus)}</span></div>
     ${gruposHtml}
-    ${diariasRecompensas(activeDiaEp)}
   `;
 }
 /* ===== Controle de farm: estoque por episódio (na página de diárias) ===== */
@@ -876,23 +875,6 @@ function estEpSalvar(ep, itens) {
     const tudo = stLoad("ro-atlas-estoque-ep", {});
     tudo[ep] = itens;
     stSave("ro-atlas-estoque-ep", tudo);
-}
-/* Tabela das recompensas de quest do episódio (usada nos folds de Diárias). */
-/* A moeda do episódio muda de chave por época (pétalas/ame/cor/chip/varmida…). */
-function questMoeda(q) {
-    return q["pétalas"] ?? q.ame ?? q.cor ?? q.chip ?? q.varmida ?? q.marca ?? q.brasao;
-}
-function questRewardTable(list) {
-    return tableFrame(
-        ["Quest", "Moeda do episódio", "Reputação", "Observação"],
-        list
-            .map((q) => {
-                const moeda = questMoeda(q);
-                return `<tr><td>${esc(q.nome)}</td><td>${moeda ? fmt(moeda) : "—"}</td><td>${q.rep ? fmt(q.rep) : "—"}</td><td>${q.extra ? esc(q.extra) : q.obs ? esc(q.obs) : "—"}</td></tr>`;
-            })
-            .join(""),
-        "align-top"
-    );
 }
 /* Cartão do estoque exibido no topo direito da página de diárias. */
 function diariasEstoqueWidget(ep, rows) {
@@ -943,21 +925,6 @@ function bindDiariasEstoque() {
             })
     );
 }
-/* Recompensas de quest do episódio (antes ficavam na página Estoque). */
-function diariasRecompensas(ep) {
-    const rec = recompensaFor(ep);
-    if (!rec) return "";
-    const soma = rec.somas?.total,
-        temQuests = !!rec.questPrincipal?.length || !!rec.questSecundarias?.length;
-    return `${secH("Recompensas do " + (rec.nome || "episódio"), rec.moedas?.length ? `Moeda do episódio: ${rec.moedas.map((m) => itemLink(m)).join(", ")} — obtidas nas quests abaixo.` : "")}
-${
-    temQuests
-        ? `${questRewardTable(rec.questPrincipal || [])}${rec.questSecundarias?.length ? fold("Quest secundárias", questRewardTable(rec.questSecundarias), { cls: "fold-top", count: `${rec.questSecundarias.length} quests` }) : ""}`
-        : `<p class="table-search-note">${rec.obs ? esc(rec.obs) : "Recompensas de quest ainda não catalogadas para este episódio."}</p>`
-}
-${soma ? `<p class="table-search-note">Somando tudo: ${fmt(questMoeda(soma) || 0)} moedas do episódio, ${fmt(soma.rep || 0)} de reputação.</p>` : ""}`;
-}
-
 /* ===== Tabelas de dados (montagem por view) ===== */
 function renderDataTable(view) {
     const found = filteredRows(view);
