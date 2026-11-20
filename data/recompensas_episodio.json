@@ -73,7 +73,7 @@
           "nome": "Procura-se Ajuda",
           "pétalas": 0,
           "rep": 0,
-          "obs": "libera diária Procurando Sobreviventes"
+          "obs": "libera a diária Busca por Desaparecidos (Miriam), a purificação de Núcleos de Baixa Qualidade e a diária O Dia de Friederike"
         },
         {
           "nome": "Ninho da Serpente ×4 (Uma Maneira Única de Sobreviver, A Velha Serpente, Doutrina e Sermão, Algo Curioso)",
@@ -156,7 +156,7 @@
           "obs": "libera diárias de Imril"
         },
         {
-          "nome": "Aqui Não É Aquele Lugar",
+          "nome": "Aqui Não é Aquele Lugar",
           "ame": 20,
           "rep": 100
         },
@@ -205,6 +205,26 @@
           "ame": 40,
           "rep": 100,
           "obs": "3 recompensas ao longo da quest + 1 Palha"
+        },
+        {
+          "nome": "Ajudando as Crianças",
+          "ame": 10,
+          "obs": "Missão individual em Rachel; sem Reputação"
+        },
+        {
+          "nome": "O Preço do Trabalho",
+          "ame": 10,
+          "obs": "Missão individual em Rachel; sem Reputação"
+        },
+        {
+          "nome": "Coletando Opiniões",
+          "ame": 3,
+          "obs": "Desbloqueia a diária Observando a Situação; sem Reputação"
+        },
+        {
+          "nome": "Vendedor de Meia-Flor",
+          "ame": 10,
+          "obs": "Desbloqueia a diária Coleta de Flor Bicolor; sem Reputação"
         }
       ],
       "somas": {
@@ -213,15 +233,15 @@
         },
         "secundarias": {
           "rep": 1000,
-          "ame": 220
+          "ame": 253
         },
         "total": {
           "rep": 1000,
-          "ame": 680
+          "ame": 713
         }
       },
       "total_moedas": {
-        "Fragmento de Ametista": 680
+        "Fragmento de Ametista": 713
       }
     },
     "ep17.2": {
@@ -234,6 +254,11 @@
         "https://irowiki.org/wiki/Legacy_of_the_Wise_One"
       ],
       "questPrincipal": [
+        {
+          "nome": "Tamarin",
+          "varmida": 5,
+          "obs": "no fim do prólogo, na entrada da Mansão (ba_maison 70/145)"
+        },
         {
           "nome": "Mazang",
           "varmida": 5,
@@ -391,7 +416,7 @@
         {
           "nome": "Dados do Laboratório",
           "cor": 0,
-          "obs": "Documentos dos guardas da Regenschirm → Aas → Tes (Miado de Bala)"
+          "obs": "Documentos dos guardas da Regenschirm → Tes (Miado de Bala)"
         },
         {
           "nome": "A Amizade com Morning (4 cartas)",
@@ -399,14 +424,20 @@
           "obs": "Ovos de Poring, Rocker, Picky e Lunatic; as cartas liberam ao longo de alguns dias de alimentação"
         },
         {
-          "nome": "Procurando Patrick — Para Rudus",
+          "nome": "Procurando Patrick",
+          "cor": 20,
+          "obs": "Kaya Toss: 600k/600k (EXP não registrada) + 20 Núcleos COR; disparada com Ace/Aas (sp_cor 135/147) no cap. 6"
+        },
+        {
+          "nome": "Para Rudus",
           "cor": 1,
-          "obs": "20 Dolor + 10 Cartões de Cobaia; +5 Componentes de Máquina; libera a diária. O valor da etapas de Patrick (600k/600k + 20 COR) já conta na principal Crise na Rekenber — Kaya Toss"
+          "obs": "20 Dolor + 10 Cartões de Cobaia; +5 Componentes de Máquina; libera a diária"
         },
         {
           "nome": "Ocupação OS (instância)",
-          "cor": 0,
-          "obs": "6 parcelas de 200k base/180k classe; libera a diária 2ª Busca do Distrito OS"
+          "cor": 5,
+          "extra": "+1 Arma Danificada",
+          "obs": "libera a diária 2ª Busca do Distrito OS"
         }
       ],
       "somas": {
@@ -414,18 +445,21 @@
           "cor": 40,
           "chip": 50
         },
-        "total": {
-          "cor": 59,
-          "chip": 50
-        },
         "secundarias": {
-          "cor": 19,
-          "chip": 0
+          "cor": 44,
+          "chip": 0,
+          "armaDanificada": 1
+        },
+        "total": {
+          "cor": 84,
+          "chip": 50,
+          "armaDanificada": 2
         }
       },
       "total_moedas": {
-        "Núcleo COR": 59,
-        "Chip Misterioso": 50
+        "Núcleo COR": 84,
+        "Chip Misterioso": 50,
+        "Arma Danificada": 2
       }
     },
     "ep16.2": {
@@ -446,11 +480,66 @@
         "Marca de Honra"
       ],
       "total_moedas": {
-        "Marca de Honra": 66
+        "Marca de Honra": 120
       },
-      "questPrincipal": null,
-      "questSecundarias": null,
-      "obs": "14 missões diárias pagam 4 Marcas cada (56 por dia) + Sala de Ymir em repetição paga 10 Marcas (cooldown de 16 h). Veja a lista completa em Itens › Fontes de obtenção."
+      "questPrincipal": [
+        {
+          "nome": "Cap. 1 — As famílias reais",
+          "marcas": 10
+        },
+        {
+          "nome": "Cap. 4 — O Memorial e o passado",
+          "marcas": 20
+        },
+        {
+          "nome": "Cap. 5 — Ritual de Coroação",
+          "marcas": 30,
+          "extra": "libera Prontera Destruída"
+        }
+      ],
+      "questSecundarias": [
+        {
+          "nome": "Emergência Culinária",
+          "marcas": 10,
+          "obs": "Nv. base 100; libera Aventuras na Cozinha"
+        },
+        {
+          "nome": "Valor Sentimental",
+          "marcas": 14,
+          "obs": "10 na entrega a Jurgen + 4 no fim; libera a diária dos Wigner"
+        },
+        {
+          "nome": "Os Gaebolg",
+          "marcas": 10
+        },
+        {
+          "nome": "Os Walther",
+          "marcas": 10,
+          "obs": "consome 1 Salada Verde + 3 Pão de Carne Picante"
+        },
+        {
+          "nome": "Conflito Familiar",
+          "marcas": 14,
+          "obs": "10 com Maximilian + 4 com Agnes; consome 3 Pérola + 50 Pluma; libera a diária de Agnes"
+        },
+        {
+          "nome": "Patrulha Prisional",
+          "marcas": 2,
+          "obs": "Nv. base 140; libera Aventuras na Prisão"
+        }
+      ],
+      "obs": "14 missões diárias pagam 4 Marcas cada (56 por dia) + Sala de Ymir em repetição paga 10 Marcas (cooldown de 16 h). Veja a lista completa em Itens › Fontes de obtenção.",
+      "somas": {
+        "principal": {
+          "marcas": 60
+        },
+        "secundarias": {
+          "marcas": 60
+        },
+        "total": {
+          "marcas": 120
+        }
+      }
     }
   },
   "observacoes": [

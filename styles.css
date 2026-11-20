@@ -1736,3 +1736,54 @@ small {
         transition: none !important;
     }
 }
+
+/* ===== Guia de episódio: página única (seções soltas + sumário) ===== */
+.guide-sumario {
+    background: var(--fold-bg);
+    border: 1px solid var(--fold-border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 0 0 18px;
+    font-size: 12px;
+}
+.guide-sumario ul {
+    margin: 6px 0 0;
+    padding-left: 18px;
+    columns: 2;
+    column-gap: 24px;
+}
+.guide-sumario li {
+    break-inside: avoid;
+    margin-bottom: 2px;
+}
+.guide-section {
+    margin: 22px 0 28px;
+    padding-top: 6px;
+    border-top: 1px solid var(--fold-rule);
+}
+.guide-section:first-of-type {
+    margin-top: 0;
+}
+.guide-section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+.guide-section-head h3 {
+    margin: 0;
+    font-size: 15px;
+    color: var(--text);
+    scroll-margin-top: 16px;
+}
+.guide-section-head span {
+    font-size: 10px;
+    color: var(--muted);
+    white-space: nowrap;
+}
+@media (max-width: 700px) {
+    .guide-sumario ul {
+        columns: 1;
+    }
+}

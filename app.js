@@ -832,7 +832,12 @@ function diariasView() {
                                     "align-top"
                                 )
                               : "";
-                          return fold(`Como fazer — ${d.nome}`, passos + tabela, { cls: "fold-top" });
+                          return `<section class="guide-section" id="${esc(activeDiaEp)}-como-${esc(d.nome)
+                              .toLowerCase()
+                              .replace(
+                                  /[^a-z0-9]+/g,
+                                  "-"
+                              )}"><div class="guide-section-head"><h3>Como fazer — ${esc(d.nome)}</h3></div>${passos}${tabela}</section>`;
                       })
                       .join("");
                   return `<section class="table-section"><div class="table-section-head"><h2>${esc(gr.nome)}</h2><span>${gr.diarias.length} diária${gr.diarias.length > 1 ? "s" : ""}</span></div>${tableFrame(["Diária", "Tarefa", "Itens", "Recompensa", "Observação"], body, "align-top")}${extra}</section>`;
@@ -2088,7 +2093,8 @@ let activeEpid = null;
  */
 function naviBtn(cmd) {
     if (!cmd) return "";
-    return `<button type="button" class="navi-chip" data-copy-navi="${esc(cmd)}" title="Clique para copiar ${esc(cmd)}"><code>${esc(cmd)}</code></button>`;
+    const full = cmd.startsWith("/navi") ? cmd : `/navi ${cmd}`;
+    return `<button type="button" class="navi-chip" data-copy-navi="${esc(full)}" title="Clique para copiar ${esc(full)}"><code>${esc(full)}</code></button>`;
 }
 
 /** Texto rico dos JSONs: escapa, converte \n em <br> e {{Item}} em link. */
@@ -2159,6 +2165,9 @@ function servicosHtml(ep) {
   </section>`;
 }
 
+/* Rótulo humano da secundária: o código S1/S2 do JSON é interno; exibe “Secundária 1”. */
+const secLabel = (sec) => (sec.codigo ? `Secundária ${sec.codigo.replace(/^S/i, "")} — ${sec.titulo}` : sec.titulo);
+
 function guideView() {
     const ep = pickEp();
     if (!ep) return `<div class="panel-note">Nenhum guia de episódio carregado.</div>`;
@@ -2167,18 +2176,17 @@ function guideView() {
         ? `<div class="panel-note"><b>Pontos de atenção:</b><ul style="margin:6px 0 0 18px">${ep.avisos.map((a) => `<li>${esc(a)}</li>`).join("")}</ul></div>`
         : "";
 
+    /* Página única: capítulos e secundárias em seções soltas (sem folds),
+       com âncora por seção e um sumário com links no topo. */
     const principalHtml = ep.principal
         .map((cap, idx) => {
             const body = `${itensEtapa(cap.itens)}${cap.nota ? `<p class="gift-line">⚠️ ${esc(cap.nota)}</p>` : ""}${cap.recompensa ? `<p class="gift-line">🎁 ${esc(cap.recompensa)}</p>` : ""}${cap.desbloqueia ? `<p class="gift-line">🔓 <b>Desbloqueia:</b> ${esc(cap.desbloqueia)}</p>` : ""}<ol class="guide-steps">${stepList(cap.passos)}</ol>`;
-            return fold(cap.capitulo, body, {
-                open: idx === 0,
-                count: `${cap.passos.length} ${cap.passos.length === 1 ? "passo" : "passos"}`,
-            });
+            return `<section class="guide-section" id="${ep.id}-cap${idx}"><div class="guide-section-head"><h3>${esc(cap.capitulo)}</h3><span>${cap.passos.length} ${cap.passos.length === 1 ? "passo" : "passos"}</span></div>${body}</section>`;
         })
         .join("");
 
     const secundariasHtml = ep.secundarias
-        .map((sec) => {
+        .map((sec, idx) => {
             const meta = [
                 sec.prerequisito && `<b>Pré:</b> ${esc(sec.prerequisito)}`,
                 sec.recompensa && `🎁 ${esc(sec.recompensa)}`,
@@ -2187,11 +2195,21 @@ function guideView() {
                 .filter(Boolean)
                 .join(" · ");
             const body = `${meta ? `<p class="gift-line">${meta}</p>` : ""}${itensEtapa(sec.itens)}<ol class="guide-steps">${stepList(sec.passos)}</ol>`;
-            return fold(`${sec.codigo} — ${sec.titulo}`, body, {
-                count: `${sec.passos.length} ${sec.passos.length === 1 ? "passo" : "passos"}`,
-            });
+            return `<section class="guide-section" id="${ep.id}-sec${idx}"><div class="guide-section-head"><h3>${esc(secLabel(sec))}</h3><span>${sec.passos.length} ${sec.passos.length === 1 ? "passo" : "passos"}</span></div>${body}</section>`;
         })
         .join("");
+
+    const sumario = (lista) =>
+        lista.length
+            ? `<nav class="guide-sumario"><b>Nesta aba:</b><ul>${lista
+                  .map(([href, label]) => `<li><a href="#${href}">${esc(label)}</a></li>`)
+                  .join("")}</ul></nav>`
+            : "";
+
+    const sumarioHtml =
+        guideTab === "principal"
+            ? sumario(ep.principal.map((cap, idx) => [`${ep.id}-cap${idx}`, cap.capitulo]))
+            : sumario(ep.secundarias.map((sec, idx) => [`${ep.id}-sec${idx}`, secLabel(sec)]));
 
     return `
     <div class="page-head">
@@ -2214,6 +2232,7 @@ function guideView() {
       </div>
     </div>
     <div id="guideBody">
+      ${sumarioHtml}
       ${guideTab === "principal" ? principalHtml : secundariasHtml}
     </div>
   `;
