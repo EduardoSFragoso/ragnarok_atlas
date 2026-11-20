@@ -2905,7 +2905,7 @@
         "titulo": "Abastecimento de Água",
         "prerequisito": "Secundária da Aldeia (1.ª conclusão) · Nv. base 170",
         "itens": [
-          "550 {{zeny}} (Relíquia Sagrada → Filtro de Água)"
+          "550 zeny (Relíquia Sagrada → Filtro de Água)"
         ],
         "recompensa": "20 Fragmentos de Ametista · Reputação +100",
         "desbloqueia": "A diária de Abastecimento de Água (Budan).",
