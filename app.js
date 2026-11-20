@@ -1902,9 +1902,17 @@ function upChance() {
     const ev = upMode === "evento",
         suf = ev ? " — durante o evento" : "";
     if (upTable === "grau")
-        return `<h3 class="table-group-title">Grau${suf}: armas e armaduras</h3><p class="table-search-note">O evento de grau aumenta as chances de sucesso ao subir o Grau de um item. É sazonal e fica ativo junto com o Evento de Refino.</p>${grauChanceTable(ev ? "evento" : "normal")}`;
+        return `<h3 class="table-group-title">Grau${suf}: armas e armaduras</h3><p class="panel-note lg" style="margin:10px 0 12px">O evento de grau aumenta as chances de sucesso ao subir o Grau de um item. É sazonal e fica ativo junto com o Evento de Refino.</p>${fold(
+            `Chances de sucesso — Grau${suf}`,
+            grauChanceTable(ev ? "evento" : "normal"),
+            { cls: "fold-top", open: true }
+        )}`;
     const esp = upSpecial;
-    return `<h3 class="table-group-title">Refinamento — minérios ${esp ? "especiais" : "comuns"}${suf}</h3><p class="table-search-note">O evento de refino aumenta as chances de sucesso nos NPCs de forja e é sazonal.${esp ? " Os minérios especiais estão listados em Detalhes do Refinamento." : ""}</p>${refChanceTable((esp ? "especiais" : "comuns") + (ev ? "Ev" : ""))}`;
+    return `<h3 class="table-group-title">Refinamento — minérios ${esp ? "especiais" : "comuns"}${suf}</h3><p class="panel-note lg" style="margin:10px 0 12px">O evento de refino aumenta as chances de sucesso nos NPCs de forja e é sazonal.${esp ? " Os minérios especiais estão listados em Detalhes do Refinamento." : ""}</p>${fold(
+        `Chances de sucesso — Refino${suf}`,
+        refChanceTable((esp ? "especiais" : "comuns") + (ev ? "Ev" : "")),
+        { cls: "fold-top", open: true }
+    )}`;
 }
 function upgradesView() {
     const sw = (attr, cur, list) =>
