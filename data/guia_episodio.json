@@ -1669,7 +1669,139 @@
         "desbloqueia": "Instância Memorial COR, Equipamentos Ilusión e Armas OS. Continua no Episódio 17.2."
       }
     ],
-    "secundarias": [],
+    "secundarias": [
+      {
+        "codigo": "S1",
+        "titulo": "Meu Nome é Morning",
+        "prerequisito": "Acesso à Rudus (cap. 0)",
+        "recompensa": "Recompensa não informada na bROWiki",
+        "passos": [
+          {
+            "texto": "No calabouço de Rudus, encontre a criança solitária (Morning), uma das marcas amarelas do mapa.",
+            "navi": "/navi sp_rudus 124/195"
+          },
+          {
+            "texto": "Cave a pilha de entulho ao lado até achar uma carta — ela apresenta o Morning.",
+            "navi": "/navi sp_rudus 124/195"
+          },
+          {
+            "texto": "Fale com o Morning e alimente-o com as 10 unidades do item pedido; o item muda a cada dia (diária Meu Nome é Morning)."
+          }
+        ],
+        "desbloqueia": "Secundária S2 — A Amizade com Morning (libera depois de alimentar o Morning por vários dias)"
+      },
+      {
+        "codigo": "S2",
+        "titulo": "A Amizade com Morning",
+        "prerequisito": "S1 concluída · alimentar o Morning por vários dias (1 carta por etapa)",
+        "recompensa": "18 Núcleos COR no total (5 + 4 + 3 + 6) · EXP não informada",
+        "passos": [
+          {
+            "texto": "Cave novas cartas na pilha de entulho de Rudus conforme as etapas liberam.",
+            "navi": "/navi sp_rudus 124/195"
+          },
+          {
+            "texto": "1ª carta: entregue 1 Ovo de Poring → 5 Núcleos COR."
+          },
+          {
+            "texto": "2ª carta: entregue 1 Ovo de Rocker → 4 Núcleos COR."
+          },
+          {
+            "texto": "3ª carta: entregue 1 Ovo de Picky → 3 Núcleos COR."
+          },
+          {
+            "texto": "4ª carta: entregue 1 Ovo de Lunatic → 6 Núcleos COR e a quest se encerra."
+          }
+        ],
+        "itens": [
+          "1 Ovo de Poring",
+          "1 Ovo de Rocker",
+          "1 Ovo de Picky",
+          "1 Ovo de Lunatic"
+        ]
+      },
+      {
+        "codigo": "S3",
+        "titulo": "Dados do Laboratório",
+        "prerequisito": "Cap. 2 — Invasão na Regenschirm concluída",
+        "recompensa": "200k EXP base · 200k EXP classe",
+        "passos": [
+          {
+            "texto": "Na Regenschirm, pegue a pilha de documentos na Sala de Espera dos Guardas."
+          },
+          {
+            "texto": "Entregue os documentos à Aas, no Distrito COR."
+          },
+          {
+            "texto": "Leve os documentos ao Tes no Pub Miado de Bala, em Einbroch, e receba a EXP."
+          }
+        ]
+      },
+      {
+        "codigo": "S4",
+        "titulo": "Procurando Patrick",
+        "prerequisito": "Cap. 3 — Crise na Rekenber (Kaya Toss fala sobre os desaparecidos)",
+        "recompensa": "1,2 mi EXP base · 1,2 mi EXP classe (300k + 300k + 600k) · 20 Núcleos COR (essa recompensa já consta na quest Crise na Rekenber — Kaya Toss)",
+        "passos": [
+          {
+            "texto": "Fale com Kaya Toss, nos Arredores de Einbroch.",
+            "navi": "/navi sp_cor 136/146"
+          },
+          {
+            "texto": "Fale com o Trabalhador da lavanderia (Marcus Holtzmann), no Distrito COR.",
+            "navi": "/navi sp_cor 151/180"
+          },
+          {
+            "texto": "Fale com o Trabalhador da usina de incineração, no canto noroeste do Distrito COR.",
+            "navi": "/navi sp_cor 70/263"
+          },
+          {
+            "texto": "No calabouço de Rudus, siga as vozes até a Pessoa Abandonada (através do portão no muro, via Rookie).",
+            "navi": "/navi sp_rudus 15/280"
+          },
+          {
+            "texto": "Reviste os Vestígios Suspeitos do mapa (6 posições possíveis, aleatórias) até achar o Cartão de Identificação da Cobaias: 55/137, 36/46, 221/165, 124/195, 332/235 e 364/134.",
+            "navi": "/navi sp_rudus 55/137"
+          },
+          {
+            "texto": "Mostre o cartão a Kaya Toss (600k/600k + 20 Núcleos COR).",
+            "navi": "/navi sp_cor 136/146"
+          },
+          {
+            "texto": "Para Rudus: Aas pede o descanso de 20 Dolor e 10 cartões de volta (os itens caem direto dos Dolor); ao reportar, ganha 300k/300k + 1 Núcleo COR + 5 Componentes de Máquina."
+          }
+        ],
+        "itens": [
+          "Cuidado: o Cartão de Identificação da Cobaia em excesso não descarta (não entregue mais de 10)"
+        ],
+        "desbloqueia": "Diária Para Rudus (repetível)"
+      },
+      {
+        "codigo": "S5",
+        "titulo": "Ocupação OS (Instância)",
+        "prerequisito": "Cap. 5 — O Envelope de Dien concluído · grupo obrigatório (o líder cria a instância em Distrito COR)",
+        "recompensa": "1,2 mi EXP base · 1,08 mi EXP classe (6 parcelas de 200k/180k)",
+        "passos": [
+          {
+            "texto": "Com o grupo, o líder fala com Erst, no lado sul do Distrito COR, e cria a instância; entre pelo teleportador.",
+            "navi": "/navi sp_cor 164/56"
+          },
+          {
+            "texto": "Aguarde os diálogos, elimine os monstros que surgem e clique no rádio quando ele brilhar azul (opção de engajar)."
+          },
+          {
+            "texto": "Siga ao sudoeste até a Equipe Alfa (atrás da ferrovia) e converse com o rádio dela até sumir."
+          },
+          {
+            "texto": "Suba para o norte, limpando os monstros; atravesse os 3 checkpoints que aparecem (2 deles sobre a ferrovia)."
+          },
+          {
+            "texto": "Siga para leste, enfrente o Miguel enfraquecido e fale com Erst para sair."
+          }
+        ],
+        "desbloqueia": "Diária 2ª Busca do Distrito OS"
+      }
+    ],
     "itensNecessarios": {
       "diarias": {
         "titulo": "Materiais Para As Diárias",
@@ -1974,7 +2106,214 @@
         "desbloqueia": "Continua no Episódio 18 — Caminho da Oração."
       }
     ],
-    "secundarias": [],
+    "secundarias": [
+      {
+        "codigo": "S1",
+        "titulo": "Silêncio na Biblioteca",
+        "prerequisito": "Cap. 0 — Cadastro como hóspede na Mansão de Varmunt",
+        "recompensa": "5 Vales Varmida · 515.668 EXP base",
+        "passos": [
+          {
+            "texto": "Fale com Tamarin; veja Dew pular na fonte da Mansão.",
+            "navi": "/navi ba_maison 71/145"
+          },
+          {
+            "texto": "Entre na biblioteca da Mansão (o grupo vê um princípio de incêndio, apagado pela Magie).",
+            "navi": "/navi ba_maison 197/103"
+          },
+          {
+            "texto": "Registre-se com o Gerente Bibliotecário Beta, dentro da biblioteca.",
+            "navi": "/navi ba_lib 157/18"
+          },
+          {
+            "texto": "Chame cada um para se registrar: Mark (84/84), Tamarin (97/207), Maggie (112/265), Oliver (198/234) e Alp (292/234)."
+          },
+          {
+            "texto": "Volte ao Gerente para receber 5 Vales Varmida e a EXP (as diárias da biblioteca ficam liberadas)."
+          }
+        ],
+        "desbloqueia": "Arrumação de Livros, Caça aos Vermes de Livro e Coleta de Sucata (3 diárias da Biblioteca)"
+      },
+      {
+        "codigo": "S2",
+        "titulo": "Guia da Fazenda",
+        "prerequisito": "Cap. 0 concluído",
+        "recompensa": "Recompensa não informada na bROWiki",
+        "passos": [
+          {
+            "texto": "Fale com Ruinan na Mansão e ouça as instruções da colheita de Rabanetes de Cauda (Pitaya).",
+            "navi": "/navi ba_maison 311/206"
+          },
+          {
+            "texto": "Ouça o guia robô e as regras da colheita, além do alimento do Chef Gato (Boss Meow)."
+          },
+          {
+            "texto": "Com o roteiro em mãos, a entrada da fazenda fica liberada."
+          }
+        ],
+        "desbloqueia": "Brincando com Pitayas (diária) e a instância diária A Fazenda Esquecida pelo Tempo"
+      },
+      {
+        "codigo": "S3",
+        "titulo": "Gerente Eorpa da Usina Mágica 2",
+        "prerequisito": "Cap. 0 concluído",
+        "recompensa": "Recompensa não informada na bROWiki",
+        "passos": [
+          {
+            "texto": "Fale com Eorpa, na Mansão, e coma as batatas fritas dela.",
+            "navi": "/navi ba_maison 79/278"
+          },
+          {
+            "texto": "Aceite ajudar a comer mais batatas feitas pelas Sanare Viciadas em Mana."
+          }
+        ],
+        "desbloqueia": "Diária da Gerente Eorpa (Usina Mágica 2)"
+      },
+      {
+        "codigo": "S4",
+        "titulo": "Fale com Doçura",
+        "prerequisito": "Cap. 0 concluído",
+        "recompensa": "Recompensa não informada na bROWiki",
+        "passos": [
+          {
+            "texto": "Fale com Almond no Pátio do Dirigível, dentro da Mansão.",
+            "navi": "/navi ba_in01 28/255"
+          },
+          {
+            "texto": "Depois, fale com Doçura (Sweetie)."
+          }
+        ],
+        "desbloqueia": "Instância diária Ei, Doçura! e a diária Coletando Núcleos"
+      },
+      {
+        "codigo": "S5",
+        "titulo": "Permissão de Acesso ao Jardim de Flores",
+        "prerequisito": "Cap. 0 concluído",
+        "recompensa": "20 Vales Varmida · 1.547.004 EXP base",
+        "passos": [
+          {
+            "texto": "Chegue ao Jardim de Flores na Mansão; o Gerente de Entrada surge na coords. Faça a autoverificação e entre na instância.",
+            "navi": "/navi ba_maison 119/319"
+          },
+          {
+            "texto": "Interaja com o holograma e toque na tela (se o padrão falhar, tente de novo); o gerente detecta a marca de mana do seu mestre e te nomeia administrador temporário (defina um nome)."
+          },
+          {
+            "texto": "Avalie as áreas do jardim; depois derrote alguns Aliots, fale com ela e selecione todas as opções."
+          },
+          {
+            "texto": "Siga Sigma, o guia de Barmund, e avise os outros dois Pimenta Vermelha (Kappa e Lambda) que Barmund está vivo."
+          },
+          {
+            "texto": "Continue marcando todas as opções do diálogo até Lambda ser revelada ouvindo: recebe 20 Vales Varmida + EXP; fale com Sigma para sair."
+          }
+        ],
+        "desbloqueia": "Instâncias diárias da Zona Restrita 1 e Zona Restrita 2"
+      },
+      {
+        "codigo": "S6",
+        "titulo": "Armazém Tártaro 2",
+        "prerequisito": "Cap. 0 concluído",
+        "recompensa": "15 Vales Varmida (3 + 3 + 3 + 6) · 1.578.025 EXP base",
+        "passos": [
+          {
+            "texto": "Fale com Tweet, no Armazém Tártaro 2 da Mansão.",
+            "navi": "/navi ba_2whs01 151/51"
+          },
+          {
+            "texto": "Derrote 5 Ômega de Limpeza Quebrados (recebe 3 Vales Varmida)."
+          },
+          {
+            "texto": "Verifique a origem do barulho no porão e ganhe a chave das escadas (3 Vales Varmida).",
+            "navi": "/navi ba_2whs01 275/290"
+          },
+          {
+            "texto": "Ache as 3 chaves de emergência: junto ao Globo (110/218), na Câmera Friar (15/282) e na saída de ar (221/257), ambas em ba_2whs01."
+          },
+          {
+            "texto": "Desça ao porão (ba_2whs02) e fale com a Cabeça T2WH-0448, no fim da sala.",
+            "navi": "/navi ba_2whs02 36/311"
+          },
+          {
+            "texto": "Colete as 3 Peças de Robô para o corpo dela: ba_2whs02 32/50, 129/81 e 240/124 (pode falhar e precisar coletar de novo)."
+          },
+          {
+            "texto": "Entregue às peças à Cabeça (3 Vales Varmida) e reporte a Tweet: 6 Vales + 1.578.025 EXP (libera as diárias de limpeza)."
+          }
+        ],
+        "desbloqueia": "Limpeza do Armazém (Térreo) e Limpeza do Armazém (Porão)"
+      },
+      {
+        "codigo": "S7",
+        "titulo": "Jardim Flutuante",
+        "prerequisito": "Cap. 0 concluído",
+        "recompensa": "20 Vales Varmida · 1.547.004 EXP base",
+        "passos": [
+          {
+            "texto": "Fale com Renshiz, no Pátio da Usina Mágica, que considera Elyumina uma invasora.",
+            "navi": "/navi ba_pw02 41/267"
+          },
+          {
+            "texto": "Fale com Need, na Mansão: Elyumina adoeceu, precisa de um ingrediente da cura no Jardim Flutuante.",
+            "navi": "/navi ba_maison 170/270"
+          },
+          {
+            "texto": "Fale com Sayhue; ele autoriza a entrada, em troca de resolver as tarefas atrasadas com os invasores.",
+            "navi": "/navi ba_maison 239/47"
+          },
+          {
+            "texto": "Na instância, siga o Jardinheiro: elimine as Papilas azuis sem pisar nas Ninfeias (investida em cruz), atravesse o labirinto de flores e então proteja o Jardinheiro quando ele atrair a Papila Silva (você perde 50% do HP e o local envenena)."
+          },
+          {
+            "texto": "Entregue a Folha da Papila Silva a Sayhue, que produz o antídoto, e leve-o a Elyumina (20 Vales Varmida + EXP)."
+          }
+        ],
+        "desbloqueia": "Diárias e a instância do Jardim Flutuante"
+      },
+      {
+        "codigo": "S8",
+        "titulo": "Procurando no Banho",
+        "prerequisito": "Cap. 0 concluído",
+        "recompensa": "30 Vales Varmida (7 + 7 + 16) · 515.667 EXP base (103.133 + 154.700 + 257.834)",
+        "passos": [
+          {
+            "texto": "Fale com Rubber, no corredor do Banho da Mansão, e entre.",
+            "navi": "/navi ba_in01 382/39"
+          },
+          {
+            "texto": "Procure Rubber dentro do banho (165/44) e vá até a sala da caldeira para falar com a Caldeira (7 Vales + 103.133).",
+            "navi": "/navi ba_bath 286/67"
+          },
+          {
+            "texto": "Encontre o falso Rookie (270/93), volte a Rubber e receba as Armadilhas Congelantes (7 Vales + 154.700).",
+            "navi": "/navi ba_bath 270/93"
+          },
+          {
+            "texto": "Instale as 4 armadilhas nos cantos do banho: 53/55, 305/121, 22/276 e 154/305 (ba_bath)."
+          },
+          {
+            "texto": "Siga a criatura até ba_bath 286/297; após o desencontro ser resolvido com a sereia Princesa, recebe 16 Vales + 257.834 (libera as 2 diárias do Banho)."
+          }
+        ],
+        "desbloqueia": "Entre o Banho Quente e Frio e O Banho em Limpeza (2 diárias)"
+      },
+      {
+        "codigo": "S9",
+        "titulo": "Robô de Limpeza Ômega",
+        "prerequisito": "Cap. 0 concluído",
+        "recompensa": "Recompensa não informada na bROWiki",
+        "passos": [
+          {
+            "texto": "No caminho para a Estação de Tratamento de Esgoto (ba_in01), fale com o Robô de Limpeza Ômega e aguarde o diálogo.",
+            "navi": "/navi ba_in01 22/326"
+          },
+          {
+            "texto": "Ofereça ajuda quando a opção aparecer."
+          }
+        ],
+        "desbloqueia": "Limpeza da Estação de Tratamento de Esgoto e Limpeza da Usina Mágica 1 (2 diárias)"
+      }
+    ],
     "itensNecessarios": {
       "diarias": {
         "titulo": "Materiais Para As Diárias",

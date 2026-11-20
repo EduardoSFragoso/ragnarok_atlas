@@ -359,19 +359,78 @@
           "obs": "libera instância Duelo com Sweety"
         }
       ],
-      "questSecundarias": null,
+      "questSecundarias": [
+        {
+          "nome": "Silêncio na Biblioteca",
+          "varmida": 5,
+          "base": 515668,
+          "obs": "libera 3 diárias da Biblioteca"
+        },
+        {
+          "nome": "Permissão de Acesso ao Jardim de Flores",
+          "varmida": 20,
+          "base": 1547004,
+          "obs": "libera as instâncias diárias Zona Restrita 1 e 2"
+        },
+        {
+          "nome": "Armazém Tártaro 2",
+          "varmida": 15,
+          "base": 1578025,
+          "obs": "3+3+3+6 Vales; libera as 2 diárias de limpeza do Armazém"
+        },
+        {
+          "nome": "Jardim Flutuante",
+          "varmida": 20,
+          "base": 1547004,
+          "obs": "libera as diárias e a instância do Jardim Flutuante"
+        },
+        {
+          "nome": "Procurando no Banho",
+          "varmida": 30,
+          "base": 515667,
+          "obs": "7+7+16 Vales; libera 2 diárias do Banho"
+        },
+        {
+          "nome": "Guia da Fazenda",
+          "varmida": 0,
+          "base": 0,
+          "obs": "libera a diária Brincando com Pitayas e a instância a Fazenda Esquecida pelo Tempo"
+        },
+        {
+          "nome": "Gerente Eorpa da Usina Mágica 2",
+          "varmida": 0,
+          "base": 0,
+          "obs": "libera a diária da Eorpa"
+        },
+        {
+          "nome": "Fale com Doçura",
+          "varmida": 0,
+          "base": 0,
+          "obs": "libera a instância Ei, Doçura! e a diária Coletando Núcleos"
+        },
+        {
+          "nome": "Robô de Limpeza Ômega",
+          "varmida": 0,
+          "base": 0,
+          "obs": "libera as diárias da Estação de Esgoto e da Usina Mágica 1"
+        }
+      ],
       "somas": {
         "principal": {
           "varmida": 105,
           "base": 4641012
         },
         "total": {
-          "varmida": 105,
-          "base": 4641012
+          "varmida": 195,
+          "base": 10344380
+        },
+        "secundarias": {
+          "varmida": 90,
+          "base": 5703368
         }
       },
       "total_moedas": {
-        "Vale Varmida": 105
+        "Vale Varmida": 195
       }
     },
     "ep17.1": {
@@ -444,7 +503,36 @@
           "obs": "libera instância Memorial COR, equips Ilusión e Armas OS"
         }
       ],
-      "questSecundarias": null,
+      "questSecundarias": [
+        {
+          "nome": "Dados do Laboratório",
+          "cor": 0,
+          "base": 200000,
+          "classe": 200000,
+          "obs": "Documentos dos guardas da Regenschirm → Aas → Tes (Miado de Bala)"
+        },
+        {
+          "nome": "A Amizade com Morning (4 cartas)",
+          "cor": 18,
+          "base": 0,
+          "classe": 0,
+          "obs": "Ovos de Poring, Rocker, Picky e Lunatic; as cartas liberam ao longo de alguns dias de alimentação"
+        },
+        {
+          "nome": "Procurando Patrick — Para Rudus",
+          "cor": 1,
+          "base": 300000,
+          "classe": 300000,
+          "obs": "20 Dolor + 10 Cartões de Cobaia; +5 Componentes de Máquina; libera a diária. O valor da etapas de Patrick (600k/600k + 20 COR) já conta na principal Crise na Rekenber — Kaya Toss"
+        },
+        {
+          "nome": "Ocupação OS (instância)",
+          "cor": 0,
+          "base": 1200000,
+          "classe": 1080000,
+          "obs": "6 parcelas de 200k base/180k classe; libera a diária 2ª Busca do Distrito OS"
+        }
+      ],
       "somas": {
         "principal": {
           "cor": 40,
@@ -454,30 +542,43 @@
           "basePct": 25
         },
         "total": {
-          "cor": 40,
+          "cor": 59,
           "chip": 50,
-          "base": 4100000,
-          "classe": 5050000,
-          "basePct": 25
+          "base": 5800000,
+          "classe": 6630000
+        },
+        "secundarias": {
+          "cor": 19,
+          "chip": 0,
+          "base": 1700000,
+          "classe": 1580000
         }
       },
       "total_moedas": {
-        "Chip Misterioso": 50,
-        "Núcleo COR": 40
+        "Núcleo COR": 59,
+        "Chip Misterioso": 50
       }
     },
     "ep16.2": {
       "nome": "Ep. 16.2 — Terra Gloria",
-      "moedas": ["Brasão de Honra"],
-      "total_moedas": { "Brasão de Honra": 48 },
+      "moedas": [
+        "Brasão de Honra"
+      ],
+      "total_moedas": {
+        "Brasão de Honra": 48
+      },
       "questPrincipal": null,
       "questSecundarias": null,
       "obs": "16 missões diárias pagam 3 Brasões cada (48 por dia); a 1ª execução de 3 missões do Clana Nemieri paga 10 Brasões cada. Veja a lista completa em Itens › Fontes de obtenção."
     },
     "ep16.1": {
       "nome": "Ep. 16.1 — Banquete Real",
-      "moedas": ["Marca de Honra"],
-      "total_moedas": { "Marca de Honra": 66 },
+      "moedas": [
+        "Marca de Honra"
+      ],
+      "total_moedas": {
+        "Marca de Honra": 66
+      },
       "questPrincipal": null,
       "questSecundarias": null,
       "obs": "14 missões diárias pagam 4 Marcas cada (56 por dia) + Sala de Ymir em repetição paga 10 Marcas (cooldown de 16 h). Veja a lista completa em Itens › Fontes de obtenção."
@@ -487,6 +588,7 @@
     "XP mostrado são os valores base listados nas páginas da browiki (sem bônus de servidor/evento).",
     "Ep. 19: somas da browiki diferem dos totais decodificados do PDF do guia (173 Pétalas / 176 Rep / 842.524.725 base / 72.000.000 classe; secundárias 93/76) — conferir com o autor do PDF antes de usar como absoluto.",
     "Ep. 17.2: as missões liberadas na Mansão (Silêncio na Biblioteca, Segredo no Armazém, etc.) têm páginas próprias e NÃO estão somadas aqui.",
-    "Ep. 17.1: EXP base de 10% + 15% é percentual e marcada em basePct; não entra na soma fixa."
+    "Ep. 17.1: EXP base de 10% + 15% é percentual e marcada em basePct; não entra na soma fixa.",
+    "Ep. 17.1 e 17.2: as secundárias seguem o iRO Wiki (Illusion e Legacy of the Wise One); os valores de EXP batem com a bROWiki, mas alguns nomes em pt são traduções próprias."
   ]
 }
