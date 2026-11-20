@@ -15,192 +15,24 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-/* ===== Contrato das tabelas lidas por posição de coluna =====
-   A ORDEM do cabeçalho da primeira linha define o índice de cada coluna no
-   app.js. Mudar a ordem ou inserir uma coluna no meio quebra a renderização
-   sem aviso. Ao trocar o acesso por índice por acesso por nome, este contrato
-   pode ser relaxado para "conjunto de colunas obrigatórias". */
-const CABECALHOS = {
-    "criar_toxina.json": [
-        "ID do produto",
-        "Ícone do produto",
-        "Produto",
-        "Taxa/fator",
-        "ID do material",
-        "Ícone do material",
-        "Material",
-        "Quantidade",
-        "col9",
-        "FÓRMULA E CALCULADORA",
-        "col11",
-        "col12",
-        "col13",
-        "col14",
-    ],
-    "criar_veneno_mortal.json": [
-        "ID do produto",
-        "Ícone do produto",
-        "Produto",
-        "Taxa/fator",
-        "ID do material",
-        "Ícone do material",
-        "Material",
-        "Quantidade",
-        "col9",
-        "FÓRMULA E CALCULADORA",
-        "col11",
-        "col12",
-        "col13",
-        "col14",
-    ],
-    "culinaria_avancada.json": [
-        "ID do produto",
-        "Ícone do produto",
-        "Produto",
-        "Taxa/fator",
-        "ID do material",
-        "Ícone do material",
-        "Material",
-        "Quantidade",
-        "col9",
-        "FÓRMULA E CALCULADORA",
-        "col11",
-        "col12",
-        "col13",
-        "col14",
-    ],
-    "custo_de_encantamento.json": [
-        "Episódio",
-        "Equipamento-alvo",
-        "Slot",
-        "Tipo de efeito",
-        "col5",
-        "Material",
-        "Qtd",
-        "Onde encantar / obter (NPC)",
-        "/navi",
-        "Observação",
-    ],
-    "encantamentos_disponiveis.json": [
-        "Episódio",
-        "Equipamento-alvo",
-        "Slot",
-        "Tipo de efeito",
-        "col5",
-        "Encantamento",
-        "Efeito (+11)",
-        "col8",
-        "Item consumido",
-        "Chance (%)",
-        "Observação",
-    ],
-    "equips_de_episodio.json": [
-        "Episódio",
-        "Categoria",
-        "col3",
-        "Equipamento",
-        "Onde adquirir (NPC)",
-        "/navi",
-        "col7",
-        "Material 1",
-        "Qtd 1",
-        "col10",
-        "Material 2",
-        "Qtd 2",
-        "Observação",
-    ],
-    "fabricar_flechas.json": ["Ícone do produto", "Tipo de flecha", "Ícone do material", "Material", "Quantidade"],
-    "farmacologia_avancada.json": [
-        "ID do produto",
-        "Ícone do produto",
-        "Ícone do produto_2",
-        "Taxa/fator",
-        "ID do material",
-        "Ícone do material",
-        "Material",
-        "Quantidade",
-        "col9",
-        "FÓRMULA E CALCULADORA — Farmacologia Avançada",
-        "col11",
-        "col12",
-        "col13",
-        "col14",
-    ],
-    "fontes_de_obtencao.json": [
-        "Episódio",
-        "Atividade",
-        "Tipo",
-        "col4",
-        "Item",
-        "Qtd por execução",
-        "Bônus por Reputação",
-        "Incluir? (Sim/Não)",
-        "Incluir bônus? (Sim/Não)",
-        "Observação",
-        "Por dia (se incluído)",
-    ],
-    "manipular_pocao.json": [
-        "ID do produto",
-        "Ícone do produto",
-        "Produto",
-        "Taxa/fator",
-        "ID do material",
-        "Ícone do material",
-        "Material",
-        "Quantidade",
-        "col9",
-        "FÓRMULA E CALCULADORA — Manipular Poção",
-        "col11",
-        "col12",
-        "col13",
-        "col14",
-    ],
-    "pericia_em_runas.json": [
-        "ID do produto",
-        "Ícone do produto",
-        "Produto",
-        "Taxa/fator",
-        "ID do material",
-        "Ícone do material",
-        "Material",
-        "Quantidade",
-        "col9",
-        "FÓRMULA E CALCULADORA — Perícia em Runas",
-        "col11",
-        "col12",
-        "col13",
-        "col14",
-    ],
-    "preparar_pocao.json": [
-        "ID do produto",
-        "Ícone do produto",
-        "Produto",
-        "Dificuldade",
-        "ID do material",
-        "Ícone do material",
-        "Material",
-        "Quantidade",
-        "col9",
-        "FÓRMULA E CALCULADORA",
-        "col11",
-        "col12",
-        "col13",
-        "col14",
-    ],
-    "reforma_de_armas.json": [
-        "Classe",
-        "col2",
-        "Arma Adulter Fides (drop na Mansão da Desilusão)",
-        "col4",
-        "col5",
-        "Arma Vivatus Fides (resultado da reforma)",
-        "Ritual de reforma",
-        "Perda de refino",
-        "col9",
-        "Material",
-        "Qtd",
-        "Observação",
-    ],
+/* ===== Contrato das tabelas =====
+   data/colunas.json lista, por tabela, as colunas que o app.js lê. O app as lê
+   POR NOME (ordem e colunas extras nos JSONs não importam); o layout em memória
+   segue a ordem de colunas.json, que é a fonte única desse contrato. */
+const TABELAS = {
+    "equips_de_episodio.json": "equips",
+    "custo_de_encantamento.json": "custo",
+    "encantamentos_disponiveis.json": "encantos",
+    "fontes_de_obtencao.json": "fontes",
+    "reforma_de_armas.json": "reforma",
+    "fabricar_flechas.json": "flechas",
+    "criar_toxina.json": "toxina",
+    "criar_veneno_mortal.json": "veneno",
+    "pericia_em_runas.json": "runas",
+    "preparar_pocao.json": "preparar",
+    "manipular_pocao.json": "manipular",
+    "farmacologia_avancada.json": "farmacia",
+    "culinaria_avancada.json": "culinaria",
 };
 
 /* ===== Utilitários de tipo ===== */
@@ -396,31 +228,26 @@ function lerJson(dir, arquivo, c) {
     }
 }
 
-function validarTabela(arquivo, dados, c) {
+function validarTabela(arquivo, dados, esperado, c) {
     const p = `data/${arquivo}`;
     if (!Array.isArray(dados) || dados.length === 0) return c.erro(p, "esperava lista não vazia de linhas");
-    const esperado = CABECALHOS[arquivo];
     const atual = Object.keys(dados[0] ?? {});
-    if (JSON.stringify(atual) !== JSON.stringify(esperado)) {
-        const faltam = esperado.filter((k) => !atual.includes(k));
-        const sobram = atual.filter((k) => !esperado.includes(k));
-        c.erro(
-            p,
-            `cabeçalho da 1ª linha mudou (o app.js lê por posição). ` +
-                (faltam.length ? `Faltam: ${faltam.join(" | ")}. ` : "") +
-                (sobram.length ? `Novas: ${sobram.join(" | ")}. ` : "") +
-                (!faltam.length && !sobram.length ? "Mesmas colunas, ordem diferente. " : "")
-        );
-    }
-    const conjunto = [...esperado].sort().join("\x00");
+    const faltam = esperado.filter((k) => !atual.includes(k));
+    if (faltam.length) c.erro(p, `coluna(s) obrigatória(s) ausente(s): ${faltam.join(" | ")}`);
+    const extras = atual.filter((k) => !esperado.includes(k));
+    if (extras.length) c.aviso(p, `coluna(s) fora do contrato (o app.js ignora): ${extras.join(" | ")}`);
+    const conjunto = [...atual].sort().join("\x00");
     dados.forEach((linha, i) => {
         if (tipo(linha) !== "objeto") return c.erro(`${p}[${i}]`, `esperava objeto, veio ${nome(linha)}`);
         const chaves = Object.keys(linha);
         if ([...chaves].sort().join("\x00") !== conjunto) {
-            const faltam = esperado.filter((k) => !chaves.includes(k));
+            const ausentes = atual.filter((k) => !chaves.includes(k));
+            const novas = chaves.filter((k) => !atual.includes(k));
             c.erro(
                 `${p}[${i}]`,
-                `colunas diferentes da 1ª linha${faltam.length ? ` (faltam: ${faltam.join(" | ")})` : ""}`
+                `colunas diferentes da 1ª linha` +
+                    (ausentes.length ? ` (faltam: ${ausentes.join(" | ")})` : "") +
+                    (novas.length ? ` (a mais: ${novas.join(" | ")})` : "")
             );
             return;
         }
@@ -485,9 +312,13 @@ function validarIcones(dir, itens, refs, c) {
 /* ===== Entrada principal ===== */
 export function validar(dir) {
     const c = contexto();
-    for (const arquivo of Object.keys(CABECALHOS)) {
+    const colunas = lerJson(dir, "colunas.json", c);
+    if (colunas !== undefined) dicionario(lista(texto, { min: 1 }))(colunas, "data/colunas.json", c);
+    for (const [arquivo, chave] of Object.entries(TABELAS)) {
         const d = lerJson(dir, arquivo, c);
-        if (d !== undefined) validarTabela(arquivo, d, c);
+        const esperado = colunas?.[chave];
+        if (colunas !== undefined && !Array.isArray(esperado)) c.erro("data/colunas.json", `falta a tabela "${chave}"`);
+        else if (d !== undefined && Array.isArray(esperado)) validarTabela(arquivo, d, esperado, c);
     }
     const guia = lerJson(dir, "guia_episodio.json", c);
     if (guia !== undefined) validarGuia(guia, c);

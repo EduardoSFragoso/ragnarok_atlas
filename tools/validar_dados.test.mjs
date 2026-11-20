@@ -48,7 +48,7 @@ test("pega linha de tabela do guia com largura diferente das colunas", () => {
     assert.match(mensagens(validar(dir)), /servicos\.linhas\[0\]: \d+ células, mas há \d+ colunas/);
 });
 
-test("pega mudança na ordem das colunas (o app.js lê por posição)", () => {
+test("aceita colunas em outra ordem em todas as linhas (o app.js lê por nome)", () => {
     const dir = copiaComMutacao(({ ler, gravar }) => {
         const t = ler("fabricar_flechas.json");
         gravar(
@@ -59,7 +59,51 @@ test("pega mudança na ordem das colunas (o app.js lê por posição)", () => {
             })
         );
     });
-    assert.match(mensagens(validar(dir)), /fabricar_flechas\.json: cabeçalho da 1ª linha mudou/);
+    assert.deepEqual(validar(dir).erros, []);
+});
+
+test("pega coluna obrigatória que sumiu de uma tabela", () => {
+    const dir = copiaComMutacao(({ ler, gravar }) => {
+        const t = ler("custo_de_encantamento.json");
+        t.forEach((r) => delete r.Material);
+        gravar("custo_de_encantamento.json", t);
+    });
+    assert.match(
+        mensagens(validar(dir)),
+        /custo_de_encantamento\.json: coluna\(s\) obrigatória\(s\) ausente\(s\): Material/
+    );
+});
+
+test("coluna nova fora do contrato vira aviso, não erro", () => {
+    const dir = copiaComMutacao(({ ler, gravar }) => {
+        const t = ler("fabricar_flechas.json");
+        t.forEach((r) => (r["Coluna nova"] = "x"));
+        gravar("fabricar_flechas.json", t);
+    });
+    const r = validar(dir);
+    assert.deepEqual(r.erros, []);
+    assert.match(r.avisos.join("\n"), /fabricar_flechas\.json: coluna\(s\) fora do contrato.*Coluna nova/);
+});
+
+test("pega linha com coluna a mais em relação à primeira", () => {
+    const dir = copiaComMutacao(({ ler, gravar }) => {
+        const t = ler("culinaria_avancada.json");
+        t[3]["Intrusa"] = "x";
+        gravar("culinaria_avancada.json", t);
+    });
+    assert.match(
+        mensagens(validar(dir)),
+        /culinaria_avancada\.json\[3\]: colunas diferentes da 1ª linha \(a mais: Intrusa\)/
+    );
+});
+
+test("pega tabela ausente no contrato colunas.json", () => {
+    const dir = copiaComMutacao(({ ler, gravar }) => {
+        const c = ler("colunas.json");
+        delete c.runas;
+        gravar("colunas.json", c);
+    });
+    assert.match(mensagens(validar(dir)), /colunas\.json: falta a tabela "runas"/);
 });
 
 test("aceita linhas com as mesmas colunas em ordem diferente (caso real do custo de encantamento)", () => {

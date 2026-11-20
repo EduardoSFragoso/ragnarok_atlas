@@ -26,6 +26,7 @@ const DATA_FILES = {
     farmacia: "data/farmacologia_avancada.json",
     culinaria: "data/culinaria_avancada.json",
     referencias: "data/referencias.json",
+    colunas: "data/colunas.json",
 };
 /* ===== Bases de conteúdo estático (links de referência; migrar para data/ depois) ===== */
 /* ===== Referências, links e conteúdo estático (carregados de data/referencias.json em loadData) ===== */
@@ -333,12 +334,24 @@ const ROW_JSON_KEYS = [
     "farmacia",
     "culinaria",
 ];
-function rowsFromJson(dados) {
-    const keys = Object.keys(dados[0] || {});
+/* Converte as linhas-objeto dos JSONs em matriz (1ª linha = cabeçalho). As colunas
+   são lidas POR NOME, na ordem definida em data/colunas.json: reordenar ou
+   acrescentar colunas nos JSONs não desloca mais os índices usados pelo app.
+   Sem o contrato (arquivo ausente), usa as chaves da primeira linha como antes. */
+function rowsFromJson(dados, colunas, caminho = "") {
+    const nomes = Array.isArray(colunas) && colunas.length ? colunas : Object.keys(dados[0] || {});
+    if (Array.isArray(colunas) && dados.length) {
+        const presentes = new Set(Object.keys(dados[0]));
+        const faltam = nomes.filter((n) => !presentes.has(n));
+        if (faltam.length) {
+            console.error(`Coluna(s) ausente(s) em ${caminho}: ${faltam.join(", ")}`);
+            falhasCarga.push(`${caminho} (coluna ausente: ${faltam.join(", ")})`);
+        }
+    }
     return [
-        keys.slice(),
+        nomes.slice(),
         ...dados.map((r) =>
-            keys.map((k) => {
+            nomes.map((k) => {
                 const v = r[k];
                 return v == null ? "" : String(v).trim();
             })
@@ -380,9 +393,12 @@ async function loadData() {
         console.error(`Falha ao carregar ${path}`, res.reason);
     });
     entries.forEach(([key]) => {
-        if (db[key] === undefined) db[key] = key === "itemIds" || key === "referencias" ? {} : [];
+        if (db[key] === undefined) db[key] = ["itemIds", "referencias", "colunas"].includes(key) ? {} : [];
     });
-    for (const key of ROW_JSON_KEYS) db[key] = Array.isArray(db[key]?.[0]) ? db[key] : rowsFromJson(db[key] || []);
+    for (const key of ROW_JSON_KEYS)
+        db[key] = Array.isArray(db[key]?.[0])
+            ? db[key]
+            : rowsFromJson(db[key] || [], db.colunas?.[key], DATA_FILES[key]);
     /* Conteúdo estático migrado para data/referencias.json: links, IDs
        conhecidos, Ep. 19 (grau/reciclagem) e chances expandidas com rb(). */
     const ref = db.referencias || {};
