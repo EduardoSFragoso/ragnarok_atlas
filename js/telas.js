@@ -41,8 +41,8 @@ function landing() {
             [
                 "reciclagem",
                 "♻",
-                "Reciclagem (Ep. 19)",
-                "Veja o que o Incinerador devolve ao reciclar armas Vis Invernais.",
+                "Reciclagem e Globos",
+                "O que o Incinerador devolve pelas armas Vil Invernais e as trocas de Globos do Hoyoyo.",
             ],
             ["calculadoras", "∑", "Calculadoras", "Estime chances e resultados de criação."],
             ["fontes", "↗", "Fontes e referências", "Consulte as páginas de apoio e as observações dos dados."],
