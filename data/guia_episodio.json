@@ -1145,14 +1145,14 @@
           "Encanto — Anéis Mercenários A/B",
           "Hogar",
           "/navi rebel_in 90/40",
-          "- 5 Brasões\n- reset 10",
+          "- Encanto: 5 Brasões por aplicação\n- Reset: 10 Brasões",
           "Até 2 encantos, sem falha. O reset tem 20% de chance de destruir o item."
         ],
         [
           "Encanto — Vestimentas Consulente/Atraente",
           "Hogar",
           "/navi rebel_in 90/40",
-          "- 20 Brasões\n- reset 10",
+          "- Encanto: 20 Brasões por aplicação\n- Reset: 10 Brasões",
           "Até 2 encantos, sem falha. Reset somente com os 2 encantos e sem chance de perder."
         ],
         [
@@ -4293,21 +4293,21 @@
           "Lojas do Maram",
           "Maram (op. 1–4)",
           "/navi icas_in 180/61",
-          "- Op. 1: consumíveis\n- op. 2: Equipamento Invernal (100 Pétalas/peça)\n- op. 3: vender",
-          "As Armas Invernais (150.000z) são compradas com Poruru, na mesma área das lojas do Maram. /navi icas_in 188/60"
+          "- Op. 1: loja de ferramentas e consumíveis\n- op. 2: Equipamentos Invernais por 100 {{Pétala de Flor Invernal}} cada: {{Armadura Invernal [1]}}, {{Veste Invernal [1]}}, {{Manto Invernal [1]}}, {{Sobrepeliz Invernal [1]}}, {{Bota Invernal [1]}}, {{Sapato Invernal [1]}}, {{Anel Invernal [1]}}, {{Pingente Invernal [1]}}, {{Brinco Invernal [1]}} e {{Colar Invernal [1]}}\n- op. 3: vender os seus itens ao NPC",
+          "As Armas Invernais (150.000z) são compradas com Poruru, na mesma área das lojas do Maram. /navi icas_in 188/60 · No kRO/iRO a loja de Armas Glaciais fica na op. 3 do próprio Maram."
         ],
         [
           "Trocas e encantamentos",
           "Vellgunde (op. 2–4)",
           "/navi icas_in 185/63",
-          "- Op. 2: 35 Pétalas → 1 Peça de Flor Invernal aleatória\n- op. 3: 3 Globos → 1 Globo aleatório\n- op. 4: encantamentos",
+          "- Op. 2: 35 Pétalas → 1 Peça de Flor Invernal aleatória (sai 1 Peça de qualquer encanto — os slots {4}, {3} e {2})\n- op. 3: reciclagem — escolha 3 Globos de qualquer tipo numa janela própria → 1 Globo aleatório\n- op. 4: encantamentos (aplicação da Peça no equipamento; sem zeny)",
           "A reciclagem da op. 3 não consta na bROWiki (fonte: Hazy/iRO)."
         ],
         [
           "Globos e reputação",
           "Hoyoyo (op. 1–2)",
           "/navi icas_in 175/63",
-          "- Op. 1: 5 Minério → 1 Globo · 5 Globos → 1 Brilhante · 5 Brilhantes → 1 Reluzente\n- op. 2: loja de reputação",
+          "- Op. 1: 5 {{Minério Mágico de Flor Invernal}} → 1 Globo · 5 Globos → 1 Brilhante · 5 Brilhantes → 1 Reluzente\n- op. 2: loja de Reputação (itens pagos com Reputação do Castelo de Gelo)",
           ""
         ],
         [
