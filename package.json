@@ -5,13 +5,15 @@
     "description": "Site estático do Ragnarök Atlas · LATAM (sem build).",
     "type": "module",
     "scripts": {
-        "lint": "eslint app.js",
+        "lint": "eslint app.js js",
         "format:check": "prettier --check .",
         "format": "prettier --write .",
-        "check": "node --check app.js",
+        "check": "node tools/checar_sintaxe.mjs",
         "validar:dados": "node tools/validar_dados.mjs",
         "test": "node --test tools/validar_dados.test.mjs",
-        "snapshot": "node tools/snapshot.mjs"
+        "snapshot": "node tools/snapshot.mjs",
+        "versao": "node tools/versao_cache.mjs",
+        "versao:verificar": "node tools/versao_cache.mjs --verificar"
     },
     "devDependencies": {
         "eslint": "^10.15.0",

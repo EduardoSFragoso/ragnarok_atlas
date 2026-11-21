@@ -21,6 +21,9 @@ jobs:
             - name: Syntax-check JavaScript
               run: npm run check
 
+            - name: Cache versions up to date
+              run: npm run versao:verificar
+
             - name: Lint (ESLint)
               run: npm run lint
 
