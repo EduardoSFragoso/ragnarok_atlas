@@ -19,9 +19,9 @@ function naviBtn(cmd) {
     );
 }
 
-/** Texto rico dos JSONs: escapa, converte \n em <br>, /navi … em botão,
-    !!aviso!! em destaque vermelho sublinhado e {{Item}} em link. */
-const richText = (s) =>
+/** Texto rico de UMA linha (sem “- ” no começo): escapa, converte \n em <br>,
+    /navi … em botão, !!aviso!! em destaque vermelho sublinhado e {{Item}} em link. */
+const richUmaLinha = (s) =>
     escapeEntities(s)
         .replace(/\n/g, "<br>")
         .replace(/\/navi\s+[a-z0-9_@]+\s+\d{1,3}\/\d{1,3}/gi, (m) => naviBtn(m))
@@ -31,6 +31,32 @@ const richText = (s) =>
             (_, q, sep, n) => `<span class="qty-item">${q} ×${itemLink(n)}</span>`
         )
         .replace(/\{\{([^}]+)\}\}/g, (_, n) => itemLink(n));
+
+/** Texto rico dos JSONs: linhas iniciadas por “- ” (separadas por \n) viram bullet
+    points em <ul class="obs-list">; sem essas linhas, renderiza como texto corrido. */
+const richText = (s) => {
+    const partes = String(s ?? "").split("\n");
+    if (!partes.some((p) => p.startsWith("- "))) return richUmaLinha(s);
+    let html = "";
+    let emLista = false;
+    for (const parte of partes) {
+        if (parte.startsWith("- ")) {
+            if (!emLista) {
+                html += '<ul class="obs-list">';
+                emLista = true;
+            }
+            html += `<li>${richUmaLinha(parte.slice(2))}</li>`;
+        } else {
+            if (emLista) {
+                html += "</ul>";
+                emLista = false;
+            }
+            html += richUmaLinha(parte);
+        }
+    }
+    if (emLista) html += "</ul>";
+    return html;
+};
 
 function guideEps() {
     return [...(db.guia || [])].sort((a, b) => episodeRank(b.titulo) - episodeRank(a.titulo));
@@ -273,13 +299,14 @@ document.addEventListener("click", (e) => {
         navigator.clipboard
             ?.writeText(text)
             .then(() => {
-                const old = copyBtn.title;
+                /* Estado "copiado" visível por 2 s: troca o rótulo do chip e volta. */
+                const antigo = copyBtn.innerHTML;
+                copyBtn.innerHTML = "Copiado ✓";
                 copyBtn.classList.add("copied");
-                copyBtn.title = "Copiado!";
                 setTimeout(() => {
+                    copyBtn.innerHTML = antigo;
                     copyBtn.classList.remove("copied");
-                    copyBtn.title = old;
-                }, 1400);
+                }, 2000);
             })
             .catch(() => {
                 /* Sem permissão de clipboard (ex.: file://): avisa o usuário no chip. */

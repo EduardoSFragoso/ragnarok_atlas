@@ -66,7 +66,7 @@ function diaTablesTsv(rows) {
             "Bônus por reputação",
             (c) => ((Number(c[K.bonus]) || 0) > 0 ? `+${esc(c[K.bonus])}` : "—"),
         ]);
-    cols.push([K.obs, "Observação", (c) => esc(c[K.obs] || "—")]);
+    cols.push([K.obs, "Observação", (c) => (c[K.obs] ? richText(c[K.obs]) : "—")]);
     const merge = [0];
     if (temBonus) merge.push(cols.length - 2);
     return tipos
@@ -114,7 +114,7 @@ function diariasView() {
                           richText(d.tarefa),
                           richText(d.itens),
                           richText(d.recompensa),
-                          d.obs ? esc(d.obs) : "",
+                          d.obs ? richText(d.obs) : "",
                       ])
                   );
                   const extra = gr.diarias

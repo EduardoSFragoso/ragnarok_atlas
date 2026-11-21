@@ -76,6 +76,12 @@ Marcas de texto (função `richText`, em `js/guia.js`):
 | `/navi mapa 123/45`    | botão que copia o comando             |
 | `!!texto!!`            | aviso crítico (vermelho e sublinhado) |
 | `\n`                   | quebra de linha                       |
+| `\n- texto`            | bullet (`<ul class="obs-list">`)      |
+
+Convenções de conteúdo: observações com mais de um ponto usam bullets (`- ` no início de cada linha,
+separadas por `\n`); o chip `/navi` fica preferencialmente no fim da linha e **sem parênteses** —
+use travessão (`— /navi mapa 123/45`) quando o restante continuar a frase. No botão de `/navi`, ao
+clicar, o rótulo vira "Copiado ✓" por 2 s (classe `.copied`, cor `--ok`).
 
 **Campo novo no guia** exige três mudanças juntas: o validador (`tools/validar_dados.mjs`, esquema `guiaEpisodio` /
 `opcionaisQuest`), o renderizador (`js/guia.js`) e, se for visual, o `styles.css`.

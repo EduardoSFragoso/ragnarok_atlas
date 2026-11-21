@@ -137,7 +137,7 @@ function renderEquipmentTable(rows) {
                             c[K.qtd1] && `${esc(c[K.qtd1])} ${itemLink(c[K.mat1])}`,
                             note && esc(note),
                             c[K.npc] && `NPC: ${esc(c[K.npc])}`,
-                            c[K.navi] && esc(c[K.navi]),
+                            c[K.navi] && naviBtn(c[K.navi]),
                             c[K.qtd2] && `${esc(c[K.qtd2])} ${itemLink(c[K.mat2])}`,
                         ].filter(Boolean);
                     return unique
@@ -345,7 +345,7 @@ function renderCostTable(rows) {
                                     const npc = x[K.npc]
                                         ? `<span class="table-meta">${esc(x[K.npc])}${x[K.navi] ? ` · ${esc(x[K.navi])}` : ""}</span>`
                                         : "";
-                                    const obs = x[K.obs] ? `<span class="table-meta">${esc(x[K.obs])}</span>` : "";
+                                    const obs = x[K.obs] ? `<span class="table-meta">${richText(x[K.obs])}</span>` : "";
                                     return (
                                         `<div class="material-line"><b class="material-qty">${esc(x[K.qtd] || "—")} ×</b>` +
                                         `${itemLink(x[K.material])}</div>${npc}${obs}`

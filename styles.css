@@ -13,6 +13,7 @@
     --mint2: #b1efdf;
     --amber: #e9bd7b;
     --red: #e98e81;
+    --ok: #4ade80;
     --blue: #9fc9ed;
     --radius: 14px;
     /* Tokens de camadas (z-index) — gaveta acima do scrim */
@@ -66,6 +67,7 @@
     --mint2: #1c665b;
     --amber: #8b6827;
     --red: #a94438;
+    --ok: #15803d;
     --blue: #275e99;
     --th-bg: #e9ecee;
     --th-text: #202a32;
@@ -262,7 +264,7 @@ body {
     background: var(--bg);
     color: var(--text);
     font-family: Manrope, system-ui, sans-serif;
-    font-size: 14px;
+    font-size: 15px;
 }
 body.menu-aberto {
     /* trava o scroll do fundo enquanto a gaveta móvel está aberta */
@@ -293,10 +295,10 @@ body.menu-aberto {
     color: var(--text);
     text-decoration: none;
     letter-spacing: 0.08em;
-    font-size: 11px;
+    font-size: 12px;
 }
 .brand b {
-    font-size: 12px;
+    font-size: 13px;
 }
 .brand small {
     display: block;
@@ -315,7 +317,7 @@ body.menu-aberto {
     display: grid;
     place-items: center;
     color: var(--mint);
-    font-size: 22px;
+    font-size: 23px;
     font-weight: 800;
     background: linear-gradient(145deg, #23403f, #1a2a35);
 }
@@ -346,7 +348,7 @@ body.menu-aberto {
 .nav-link span {
     display: inline-block;
     width: 24px;
-    font-size: 17px;
+    font-size: 18px;
     vertical-align: -2px;
     color: #8497a2;
 }
@@ -367,7 +369,7 @@ body.menu-aberto {
     border-top: 1px solid #273641;
     padding: 16px 10px 0;
     color: #bdc9cc;
-    font-size: 11px;
+    font-size: 12px;
 }
 .sidebar-bottom small {
     color: #758690;
@@ -430,7 +432,7 @@ body.menu-aberto {
     box-shadow: 0 0 0 2px #8de1cb18;
 }
 .global-search > span {
-    font-size: 18px;
+    font-size: 19px;
 }
 .global-search input {
     width: 100%;
@@ -460,7 +462,7 @@ body.menu-aberto {
     color: var(--mint);
     background: none;
     border: 0;
-    font-size: 20px;
+    font-size: 21px;
 }
 .theme-toggle {
     display: inline-flex;
@@ -494,7 +496,7 @@ body.menu-aberto {
     justify-content: space-between;
     gap: 10px;
     color: #7d909b; /* clareado para contraste no tema escuro */
-    font-size: 10px;
+    font-size: 11px;
 }
 .eyebrow {
     font:
@@ -555,7 +557,7 @@ body.menu-aberto {
     color: #b1eadc;
     padding: 7px 10px;
     border-radius: 30px;
-    font-size: 10px;
+    font-size: 11px;
     margin-top: 23px;
 }
 .stats {
@@ -581,7 +583,7 @@ body.menu-aberto {
     margin-bottom: 4px;
 }
 .stat-card .label {
-    font-size: 10px;
+    font-size: 11px;
     color: var(--muted);
     letter-spacing: 0.04em;
 }
@@ -594,7 +596,7 @@ body.menu-aberto {
 }
 .section-heading h2,
 .page-title {
-    font-size: 21px;
+    font-size: 22px;
     letter-spacing: -0.03em;
     margin: 0;
 }
@@ -602,13 +604,13 @@ body.menu-aberto {
 .page-subtitle {
     margin: 6px 0 0;
     color: var(--muted);
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.7;
 }
 .text-link {
     color: var(--mint);
     text-decoration: none;
-    font-size: 11px;
+    font-size: 12px;
 }
 .text-link:hover {
     text-decoration: underline;
@@ -638,17 +640,17 @@ body.menu-aberto {
     color: var(--mint);
     display: grid;
     place-items: center;
-    font-size: 19px;
+    font-size: 20px;
     margin-bottom: 14px;
 }
 .quick-card h3 {
     margin: 0 0 5px;
-    font-size: 13px;
+    font-size: 14px;
 }
 .quick-card p {
     margin: 0;
     color: var(--muted);
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.65;
 }
 
@@ -660,11 +662,11 @@ body.menu-aberto {
     padding: 13px 15px;
     color: #c2c4b9;
     border-radius: 0 8px 8px 0;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.7;
 }
 .panel-note.lg {
-    font-size: 14px;
+    font-size: 15px;
 }
 .page-head {
     display: flex;
@@ -674,7 +676,7 @@ body.menu-aberto {
     margin-bottom: 22px;
 }
 .page-title {
-    font-size: 27px;
+    font-size: 28px;
 }
 .count-pill {
     white-space: nowrap;
@@ -727,7 +729,7 @@ body.menu-aberto {
     gap: 8px;
 }
 .est-item label {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--muted);
 }
 .est-item input {
@@ -834,7 +836,7 @@ input[type="number"]::-webkit-outer-spin-button {
     background: var(--td-bg);
     color: var(--td-text);
     border: 1px solid var(--td-border);
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.55;
     vertical-align: top;
     max-width: none;
@@ -879,7 +881,7 @@ input[type="number"]::-webkit-outer-spin-button {
     border-bottom: 0;
     color: var(--group-title-text);
     text-align: center;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
 }
 .table-group-title:first-child {
@@ -899,12 +901,12 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-bottom: 7px;
 }
 .table-section-head h2 {
-    font-size: 14px;
+    font-size: 15px;
     margin: 0;
     color: var(--text);
 }
 .table-section-head span {
-    font-size: 10px;
+    font-size: 11px;
     color: var(--muted);
 }
 
@@ -927,7 +929,7 @@ input[type="number"]::-webkit-outer-spin-button {
     display: block;
     margin-top: 4px;
     color: var(--meta-text);
-    font-size: 10px;
+    font-size: 11px;
 }
 .item-icon {
     width: 22px;
@@ -948,7 +950,7 @@ input[type="number"]::-webkit-outer-spin-button {
     height: 18px;
 }
 .reform-arrow {
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 800;
     color: var(--mint);
 }
@@ -987,12 +989,12 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .ritual-head h2 {
     margin: 0;
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text);
 }
 .ritual-note {
     color: var(--muted);
-    font-size: 11px;
+    font-size: 12px;
 }
 .ritual-grid {
     display: grid;
@@ -1008,7 +1010,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .ritual-met h3 {
     margin: 0;
-    font-size: 12px;
+    font-size: 13px;
     color: var(--td-strong);
 }
 .ritual-met .table-meta {
@@ -1082,7 +1084,7 @@ input[type="number"]::-webkit-outer-spin-button {
     align-items: center;
     gap: 5px;
     margin: 2px 7px 2px 0;
-    font-size: 13px;
+    font-size: 14px;
     white-space: nowrap;
     width: max-content;
     color: var(--muted);
@@ -1109,7 +1111,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .cost-summary {
     margin: 0 0 8px;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.6;
 }
 .cost-summary p {
@@ -1140,7 +1142,7 @@ input[type="number"]::-webkit-outer-spin-button {
     text-align: center;
     border: 1px solid var(--th-border);
     padding: 10px 12px;
-    font-size: 11px;
+    font-size: 12px;
 }
 .recipe-table td {
     background: var(--td-bg);
@@ -1148,7 +1150,7 @@ input[type="number"]::-webkit-outer-spin-button {
     border: 1px solid var(--td-border);
     padding: 10px 13px;
     vertical-align: top;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.55;
 }
 .recipe-table tr:hover td {
@@ -1192,10 +1194,10 @@ input[type="number"]::-webkit-outer-spin-button {
     justify-items: start;
 }
 .recipe-product > .item-link {
-    font-size: 10px;
+    font-size: 11px;
 }
 .table-search-note {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--muted);
     margin: 0 0 9px;
 }
@@ -1225,7 +1227,7 @@ input[type="number"]::-webkit-outer-spin-button {
     border: 1px solid var(--fold-border);
     border-left: 3px solid var(--fold-accent);
     color: var(--fold-text);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     user-select: none;
 }
@@ -1234,7 +1236,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .fold > summary:before {
     content: "▸";
-    font-size: 11px;
+    font-size: 12px;
     transition: transform 0.15s;
 }
 .fold[open] > summary:before {
@@ -1246,7 +1248,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .fold-count {
     margin-left: auto;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     opacity: 0.75;
 }
@@ -1262,7 +1264,7 @@ input[type="number"]::-webkit-outer-spin-button {
     border-color: var(--fold-team-border);
     border-left: 4px solid var(--fold-team-accent);
     color: var(--fold-team-text);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
 }
 .fold.fold-team > .fold-body,
@@ -1293,12 +1295,12 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .calc-card h3 {
     margin: 9px 0 5px;
-    font-size: 13px;
+    font-size: 14px;
 }
 .calc-card p {
     margin: 0;
     color: var(--muted);
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.7;
 }
 .calculator {
@@ -1314,13 +1316,13 @@ input[type="number"]::-webkit-outer-spin-button {
 .calc-form h3,
 .calc-result h3 {
     margin: 0 0 4px;
-    font-size: 14px;
+    font-size: 15px;
 }
 .calc-form > p,
 .calc-result > p {
     margin: 0 0 17px;
     color: var(--muted);
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.6;
 }
 .fields {
@@ -1333,7 +1335,7 @@ input[type="number"]::-webkit-outer-spin-button {
     gap: 6px;
 }
 .field label {
-    font-size: 10px;
+    font-size: 11px;
     color: #a5b4b9;
 }
 .field input,
@@ -1349,7 +1351,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 14px 0 4px;
 }
 .result-caption {
-    font-size: 11px;
+    font-size: 12px;
     color: #b3c0c3;
     line-height: 1.7;
 }
@@ -1361,7 +1363,7 @@ input[type="number"]::-webkit-outer-spin-button {
     border-radius: 8px;
     background: var(--panel-soft, var(--panel));
     color: var(--muted);
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.65;
 }
 .calc-explanation b {
@@ -1398,7 +1400,7 @@ input[type="number"]::-webkit-outer-spin-button {
     border-bottom: 1px solid #2a3943;
     padding: 0 0 7px;
     color: #9eafb5;
-    font-size: 10px;
+    font-size: 11px;
 }
 .ingredient b {
     color: #d9e3e3;
@@ -1418,7 +1420,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .plain-title {
     margin: 22px 0 8px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
     color: var(--text);
 }
@@ -1427,7 +1429,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .reform-label {
     margin: 16px 0 8px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     color: var(--text);
 }
@@ -1446,7 +1448,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .reform-teams ul {
     padding-left: 18px;
     color: var(--muted);
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.6;
 }
 .reform-teams li + li {
@@ -1456,7 +1458,7 @@ input[type="number"]::-webkit-outer-spin-button {
     display: inline-flex;
     align-items: center;
     gap: 7px;
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text);
     cursor: pointer;
     white-space: nowrap;
@@ -1481,12 +1483,12 @@ input[type="number"]::-webkit-outer-spin-button {
     padding: 16px;
 }
 .source-card h3 {
-    font-size: 12px;
+    font-size: 13px;
     margin: 0 0 8px;
 }
 .source-card a {
     color: var(--mint);
-    font-size: 10px;
+    font-size: 11px;
     text-decoration: none;
     line-height: 1.5;
 }
@@ -1495,7 +1497,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .source-card p {
     color: var(--muted);
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.65;
     margin: 8px 0 0;
 }
@@ -1536,12 +1538,12 @@ input[type="number"]::-webkit-outer-spin-button {
     border: 1px solid #704a3f;
     border-radius: 8px;
     color: #f0c2a8;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.6;
 }
 .load-banner code {
     font-family: "DM Mono", monospace;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 /* ===== Botões e utilitários ===== */
@@ -1576,9 +1578,17 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /* ===== Guia de episódio — texto pequeno, passos com /navi e controles ===== */
 .gift-line {
-    font-size: 14px;
+    font-size: 15px;
     margin: 0 0 12px;
     opacity: 0.85;
+}
+/* Bullet points das colunas de observação (richText com linhas “- ”). */
+.obs-list {
+    margin: 0;
+    padding-left: 16px;
+    display: grid;
+    gap: 3px;
+    text-align: left;
 }
 /* Aviso crítico embutido em textos (richText !!…!!) e campo "aviso" dos caps. */
 .aviso-critico {
@@ -1586,7 +1596,7 @@ input[type="number"]::-webkit-outer-spin-button {
     text-decoration: underline;
 }
 small {
-    font-size: 13px;
+    font-size: 14px;
 }
 .itens-necessarios {
     margin-bottom: 8px;
@@ -1615,7 +1625,7 @@ small {
     align-items: center;
     gap: 6px;
     font-family: "DM Mono", monospace;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.4;
     padding: 3px 10px;
     border-radius: 8px;
@@ -1629,7 +1639,9 @@ small {
     border-color: #7aa2f7;
 }
 .navi-chip.copied {
-    border-color: #4ade80;
+    border-color: var(--ok);
+    background: color-mix(in srgb, var(--ok) 12%, transparent);
+    color: var(--ok);
 }
 .navi-chip.copy-fail {
     border-color: var(--red);
@@ -1647,7 +1659,7 @@ small {
     margin-bottom: 6px;
 }
 .como-ler {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.65;
 }
 .rc-stepper {
@@ -1656,7 +1668,7 @@ small {
     gap: 10px;
 }
 .rc-stepper b {
-    font-size: 18px;
+    font-size: 19px;
     min-width: 2.5em;
     text-align: center;
 }
@@ -1702,7 +1714,7 @@ small {
         padding: 0 16px;
     }
     .breadcrumb {
-        font-size: 9px;
+        font-size: 10px;
     }
     .global-search {
         margin-left: auto;
@@ -1774,22 +1786,22 @@ small {
         word-break: break-all;
     }
     .gift-line {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 1.6;
     }
     .panel-note {
-        font-size: 13px;
+        font-size: 14px;
     }
     .toolbar select {
         min-width: 0;
         width: 100%;
     }
     .ingredient {
-        font-size: 12px;
+        font-size: 13px;
     }
     .bonus-entry {
         white-space: normal;
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 @media (max-width: 520px) {
@@ -1803,7 +1815,7 @@ small {
         min-width: 500px;
     }
     .table-group-title {
-        font-size: 12px;
+        font-size: 13px;
     }
 }
 @media (max-width: 460px) {
@@ -1825,10 +1837,10 @@ small {
         grid-template-columns: 1fr;
     }
     .hero h1 {
-        font-size: 32px;
+        font-size: 33px;
     }
     .data-table td {
-        font-size: 12px;
+        font-size: 13px;
     }
 }
 
@@ -1849,7 +1861,7 @@ small {
     border-radius: 8px;
     padding: 10px 14px;
     margin: 0 0 18px;
-    font-size: 12px;
+    font-size: 13px;
 }
 .guide-sumario ul {
     margin: 6px 0 0;
@@ -1878,12 +1890,12 @@ small {
 }
 .guide-section-head h3 {
     margin: 0;
-    font-size: 15px;
+    font-size: 16px;
     color: var(--text);
     scroll-margin-top: 16px;
 }
 .guide-section-head span {
-    font-size: 10px;
+    font-size: 11px;
     color: var(--muted);
     white-space: nowrap;
 }
