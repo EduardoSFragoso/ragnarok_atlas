@@ -35,7 +35,7 @@ Referências principais:
 
 ## Ferramentas
 
-Scripts em `tools/` mantêm os dados e os ícones atualizados; o site em si é estático (HTML/CSS/JS puro, sem build) e roda direto no navegador ou em qualquer servidor de arquivos.
+Scripts em `tools/` mantêm os dados e os ícones atualizados; o site em si é estático (HTML/CSS/JS puro, sem build) e roda direto no navegador ou em qualquer servidor de arquivos. **Quem for mexer no código (pessoa ou IA) deve ler primeiro o [`handoff.md`](handoff.md)**: estrutura, contratos, comandos e checklist de commit.
 
 ## Dados
 
