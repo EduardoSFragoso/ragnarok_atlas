@@ -3620,7 +3620,8 @@
           "Casca de Ovo Rgan Superior (recebida na quest)",
           "{{Disfarce de Rgan}} — mantenha ativo no Ninho"
         ],
-        "desbloqueia": "Diárias do Ninho da Serpente (Por um Trabalho Mais Seguro, Sacerdote, Tende Piedade, Nossas Preciosas Provisões e Rgan que Dá Ordens) e as secundárias S5–S8."
+        "desbloqueia": "Diárias do Ninho da Serpente (Por um Trabalho Mais Seguro, Sacerdote, Tende Piedade, Nossas Preciosas Provisões e Rgan que Dá Ordens) e as secundárias S5–S8.",
+        "aviso": "O Disfarce de Rgan não é transferível para outros personagens."
       },
       {
         "capitulo": "4. Relatório da Missão de Infiltração",
@@ -4039,7 +4040,7 @@
             "{{Disfarce de Rgan}}",
             "Vários (1 vem na quest)",
             "Transformar o grupo (cap. 2) · toda visita ao Ninho (cap. 3–7, S5–S8 e diárias do Ninho) · área especial jor_dun01 8/238 (cap. 9)",
-            "Dura só 180 s e acaba se você morrer. Compre com o Lunch (/navi jor_back2 250/30); a diária do cardápio entrega 1 por dia. Também é criável com 2 {{Núcleo Mágico Rgan de Baixa Qualidade}}."
+            "Dura só 180 s e acaba se você morrer. Compre com o Lunch (/navi jor_back2 250/30); a diária do cardápio entrega 1 por dia. Também é criável com 2 {{Núcleo Mágico Rgan de Baixa Qualidade}}. !!Não é transferível para outros personagens!!"
           ],
           [
             "{{Núcleo Mágico Rgan de Baixa Qualidade}}",

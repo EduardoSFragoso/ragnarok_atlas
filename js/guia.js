@@ -18,11 +18,13 @@ function naviBtn(cmd) {
     );
 }
 
-/** Texto rico dos JSONs: escapa, converte \n em <br>, /navi … em botão e {{Item}} em link. */
+/** Texto rico dos JSONs: escapa, converte \n em <br>, /navi … em botão,
+    !!aviso!! em destaque vermelho sublinhado e {{Item}} em link. */
 const richText = (s) =>
     escapeEntities(s)
         .replace(/\n/g, "<br>")
         .replace(/\/navi\s+[a-z0-9_@]+\s+\d{1,3}\/\d{1,3}/gi, (m) => naviBtn(m))
+        .replace(/!!([^!]+)!!/g, (_, t) => `<span class="aviso-critico">${t}</span>`)
         .replace(
             /(\d+)(\s*×\s*)\{\{([^}]+)\}\}/g,
             (_, q, sep, n) => `<span class="qty-item">${q} ×${itemLink(n)}</span>`
@@ -141,7 +143,7 @@ function guideView() {
     const principalHtml = ep.principal
         .map((cap, idx) => {
             const body =
-                `${itensEtapa(cap.itens)}${cap.nota ? `<p class="gift-line">⚠️ ${esc(cap.nota)}</p>` : ""}${cap.recompensa ? `<p class="gift-line">🎁 ${esc(cap.recompensa)}</p>` : ""}${cap.desbloqueia ? `<p class="gift-line">🔓 <b>Desbloqueia:</b> ${esc(cap.desbloqueia)}</p>` : ""}` +
+                `${itensEtapa(cap.itens)}${cap.nota ? `<p class="gift-line">⚠️ ${esc(cap.nota)}</p>` : ""}${cap.aviso ? `<p class="gift-line"><span class="aviso-critico">${esc(cap.aviso)}</span></p>` : ""}${cap.recompensa ? `<p class="gift-line">🎁 ${esc(cap.recompensa)}</p>` : ""}${cap.desbloqueia ? `<p class="gift-line">🔓 <b>Desbloqueia:</b> ${esc(cap.desbloqueia)}</p>` : ""}` +
                 `<ol class="guide-steps">${stepList(cap.passos)}</ol>`;
             return (
                 `<section class="guide-section" id="${ep.id}-cap${idx}"><div class="guide-section-head">` +

@@ -119,7 +119,7 @@ const tabela = (extras = {}, { comTitulo = true } = {}) => {
 /* ===== Esquemas ===== */
 const passo = objeto({ texto }, { navi: texto });
 const comum = { passos: lista(passo, { min: 1 }) };
-const opcionaisQuest = { recompensa: texto, desbloqueia: texto, itens: lista(texto), nota: texto };
+const opcionaisQuest = { recompensa: texto, desbloqueia: texto, itens: lista(texto), nota: texto, aviso: texto };
 
 const guiaEpisodio = objeto(
     {

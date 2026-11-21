@@ -1580,6 +1580,11 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0 0 12px;
     opacity: 0.85;
 }
+/* Aviso crítico embutido em textos (richText !!…!!) e campo "aviso" dos caps. */
+.aviso-critico {
+    color: #dc2626;
+    text-decoration: underline;
+}
 small {
     font-size: 13px;
 }
