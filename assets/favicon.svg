@@ -1,14 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <!-- Favicon estilo logo clássico: "Ro" caligráfico com bordas irregulares
-       (feTurbulence + feDisplacementMap), traço azul e contorno preto, fundo transparente. -->
+       (feTurbulence + feDisplacementMap), traço azul vivo e contorno preto,
+       fundo transparente. Fonte grande e cores saturadas para legibilidade
+       no tamanho de aba (16-32 px). -->
   <defs>
-    <filter id="espinhoso" x="-10%" y="-10%" width="120%" height="120%">
+    <filter id="espinhoso" x="-25%" y="-25%" width="150%" height="150%">
       <feTurbulence type="turbulence" baseFrequency="0.55" numOctaves="2" seed="7" result="ruido"/>
       <feDisplacementMap in="SourceGraphic" in2="ruido" scale="6" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
   </defs>
-  <text x="30" y="46" text-anchor="middle" transform="rotate(-4 32 32)"
-        font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="bold"
-        font-style="italic" fill="#2456a8" stroke="#111318" stroke-width="1.6"
+  <text x="32" y="51" text-anchor="middle" transform="rotate(-4 32 32)"
+        font-family="Georgia, 'Times New Roman', serif" font-size="48" font-weight="bold"
+        font-style="italic" fill="#2f7bf5" stroke="#0e1116" stroke-width="2"
         paint-order="stroke" filter="url(#espinhoso)">Ro</text>
 </svg>
