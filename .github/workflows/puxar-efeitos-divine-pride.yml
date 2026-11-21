@@ -74,7 +74,7 @@ jobs:
                   PY
 
             - name: Abrir/atualizar o PR automático com a saída
-              uses: peter-evans/create-pull-request@v7
+              uses: peter-evans/create-pull-request@v8
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
                   branch: data/divine-pride
