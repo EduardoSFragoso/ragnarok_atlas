@@ -66,14 +66,17 @@ function bindRecycle() {
             const cycles = n / 3;
             $("#rcQty").textContent = fmt(n);
             $("#rcTitle").textContent = `${fmt(cycles)} reciclage${cycles === 1 ? "m" : "ns"}`;
-            $("#rcTotals").innerHTML = g()[1]
-                .map(
-                    ([nome, min, max]) =>
-                        `<div class="ingredient"><span class="item-label">${itemLink(nome)}</span>` +
-                        `<b>${fmt(min * cycles)}${min === max ? "" : ` ~ ${fmt(max * cycles)}`}` +
-                        `</b></div>`
-                )
-                .join("");
+            defineHTML(
+                $("#rcTotals"),
+                g()[1]
+                    .map(
+                        ([nome, min, max]) =>
+                            `<div class="ingredient"><span class="item-label">${itemLink(nome)}</span>` +
+                            `<b>${fmt(min * cycles)}${min === max ? "" : ` ~ ${fmt(max * cycles)}`}` +
+                            `</b></div>`
+                    )
+                    .join("")
+            );
         };
     $$("[data-rc]").forEach(
         (b) =>

@@ -21,20 +21,20 @@ reforma de armas, Grau e Refinamento, missões diárias, calculadoras de criaç�
 
 O `index.html` carrega estes scripts, com `defer`, **nesta ordem** (eles são scripts comuns e compartilham o escopo global):
 
-| #   | Arquivo              | Conteúdo                                                                                                              |
-| --- | -------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| 1   | `js/base.js`         | arquivos de dados (`DATA_FILES`), estado global, utilitários (`$`, `esc`, `fmt`, ícones, busca) e armazenamento local |
-| 2   | `js/dados.js`        | dados carregados, normalização das tabelas (`COL`, `rowsFromJson`) e `loadData()`                                     |
-| 3   | `js/tabelas.js`      | tabelas de equipamentos, encantamentos, custos e reformas                                                             |
-| 4   | `js/diarias.js`      | missões diárias e controle de farm                                                                                    |
-| 5   | `js/calculadoras.js` | calculadoras, receitas por habilidade, encantamento total                                                             |
-| 6   | `js/reciclagem.js`   | reciclagem do Ep. 19                                                                                                  |
-| 7   | `js/refino-grau.js`  | páginas de Refinamento e Grau                                                                                         |
-| 8   | `js/reforma.js`      | página de Reforma e seções recolhíveis                                                                                |
-| 9   | `js/guia.js`         | Guia de Episódio, `richText`, botão de copiar `/navi`                                                                 |
-| 10  | `js/telas.js`        | navegação (`setView`), `render()`, eventos do conteúdo                                                                |
-| 11  | `js/ui.js`           | busca global, menu móvel, tema claro/escuro                                                                           |
-| 12  | `app.js`             | ponto de entrada: `loadData()` e abertura da visão geral                                                              |
+| #   | Arquivo              | Conteúdo                                                                                                                                                                        |
+| --- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | `js/base.js`         | arquivos de dados (`DATA_FILES`), estado global, utilitários (`$`, `esc`, `fmt`, ícones, busca), injeção de HTML (`defineHTML`), construtor de DOM (`el`) e armazenamento local |
+| 2   | `js/dados.js`        | dados carregados, normalização das tabelas (`COL`, `rowsFromJson`) e `loadData()`                                                                                               |
+| 3   | `js/tabelas.js`      | tabelas de equipamentos, encantamentos, custos e reformas                                                                                                                       |
+| 4   | `js/diarias.js`      | missões diárias e controle de farm                                                                                                                                              |
+| 5   | `js/calculadoras.js` | calculadoras, receitas por habilidade, encantamento total                                                                                                                       |
+| 6   | `js/reciclagem.js`   | reciclagem do Ep. 19                                                                                                                                                            |
+| 7   | `js/refino-grau.js`  | páginas de Refinamento e Grau                                                                                                                                                   |
+| 8   | `js/reforma.js`      | página de Reforma e seções recolhíveis                                                                                                                                          |
+| 9   | `js/guia.js`         | Guia de Episódio, `richText`, botão de copiar `/navi`                                                                                                                           |
+| 10  | `js/telas.js`        | navegação (`setView`), `render()`, eventos do conteúdo                                                                                                                          |
+| 11  | `js/ui.js`           | busca global, menu móvel, tema claro/escuro                                                                                                                                     |
+| 12  | `app.js`             | ponto de entrada: guarda de carga, `loadData()` e abertura da visão geral                                                                                                       |
 
 Fluxo de dados: `loadData()` faz `fetch` dos JSONs de `data/` → `rowsFromJson()` monta cada tabela como matriz
 (1ª linha = cabeçalho) na ordem de `data/colunas.json` → `resolverColunas()` cria `COL.<tabela>.<campo>` (índices) →
@@ -86,6 +86,11 @@ clicar, o rótulo vira "Copiado ✓" por 2 s (classe `.copied`, cor `--ok`).
 **Campo novo no guia** exige três mudanças juntas: o validador (`tools/validar_dados.mjs`, esquema `guiaEpisodio` /
 `opcionaisQuest`), o renderizador (`js/guia.js`) e, se for visual, o `styles.css`.
 
+Na tabela de `servicos` (e nas demais linhas de tabela do guia), o renderizador usa `linhasNomeadas(t)`
+(`js/guia.js`): cada linha vira um objeto lido pelos **nomes** de `colunas` (`r["Serviço"]`, `r["NPC"]`,
+`r["Onde (/navi)"]`, `r["Custos"]`, `r["Observação"]`) — nunca por índice. Novas tabelas de linhas do guia
+devem seguir o mesmo padrão; reordenar colunas no JSON não pode quebrar o render.
+
 ### 3.3 Ícones
 
 Todo ID em `data/itens_divine_pride.json` e em `referencias.json` (`itens_conhecidos`, `ep19_ids`) **precisa** ter
@@ -102,6 +107,23 @@ executa no topo de um arquivo não podem depender de arquivos posteriores.
   certa e rode `npm run versao`. O ESLint descobre os arquivos pelo `index.html` — não precisa configurar nada.
 - Variável `let` de topo reatribuída em **outro** arquivo precisa de um bloco
   `/* eslint-disable prefer-const -- motivo */ ... /* eslint-enable prefer-const */` (o ESLint só vê um arquivo por vez).
+- **Guarda de carga**: na inicialização o `app.js` confere (`ARQUIVOS_DA_CARGA`) se os globais esperados de cada
+  arquivo existem — se algum faltar, uma caixa de erro visível aponta o arquivo culpado em vez de um erro distante.
+  Ao **renomear ou mover** uma função de topo, atualize também essa lista.
+
+### 3.6 Injeção de HTML e API de DOM
+
+- **Todo HTML gerado entra no site por `defineHTML(alvo, html)` (`js/base.js`)**: parseia via `<template>`, **saneia**
+  (remove `script`/`iframe`/`object`/`embed`/`base`/`form`/`meta`/`link`; atributos `on*` com a exceção única de
+  `onerror` em `<img>`, usada pelos ícones de item para se removerem quando o PNG falta; URLs `javascript:`/`data:`)
+  e injeta com `alvo.replaceChildren()`. É o único `innerHTML` do projeto, documentado em `js/base.js`.
+- **Atribuir `.innerHTML` fora de `js/base.js` é erro de lint** (regra `no-restricted-syntax` no `eslint.config.js`,
+  que abre exceção só para `base.js`).
+- **Código NOVO prefere o construtor de DOM `el(tag, atributos, ...filhos)`** a montar strings quando o conteúdo é
+  estrutural: strings viram nós de texto, `Element`s entram como estão, `{ html: "…" }` injeta HTML (use só com a
+  saída de `richText`/`esc`).
+- As views grandes continuam no padrão existente: strings-HTML em template literal entregues por `defineHTML`.
+  O snapshot (`npm run snapshot`) garante que nenhum desses refactors muda o DOM renderizado.
 
 ### 3.5 Versão de cache
 
@@ -225,7 +247,8 @@ nome da coluna em `colunas.json`), nunca por posição. Escritas de JSON usam
 
 - Concluído: validador de esquema com testes; colunas lidas por nome (site e Python); índices numéricos substituídos por
   nomes lógicos; `app.js` dividido em `js/`; versão de cache automática; snapshot de renderização; ESLint multi-arquivo;
-  CI cobrindo tudo isso.
+  injeção de HTML centralizada e saneada (`defineHTML`, §3.6) com guarda de carga no `app.js` — revisar na branch
+  `refatoracao-dom` antes de trazer para `main`; Dependabot e proteção da `main` (§5.1); CI cobrindo tudo isso.
 - Sem pendências conhecidas de legibilidade: as expressões longas de HTML foram extraídas para constantes nomeadas e
   os índices numéricos de colunas/tuplas viraram nomes ou desestruturação. Os `[0]` que restam são "primeiro elemento"
   de listas, o que é legítimo.

@@ -382,14 +382,17 @@ function updateArrowCalc() {
         recipe = getRecipes("flechas").find((r) => r.name === name);
     if (!recipe) return;
     $("#arrowTitle").textContent = name;
-    $("#arrowIngredients").innerHTML = recipe.materials
-        .map(
-            (m) =>
-                `<div class="ingredient"><span class="item-label">${itemLink(m.name)}</span>` +
-                `<b>${m.quantities.map((q) => fmt(Number(q) || 0)).join(" + ")}` +
-                `</b></div>`
-        )
-        .join("");
+    defineHTML(
+        $("#arrowIngredients"),
+        recipe.materials
+            .map(
+                (m) =>
+                    `<div class="ingredient"><span class="item-label">${itemLink(m.name)}</span>` +
+                    `<b>${m.quantities.map((q) => fmt(Number(q) || 0)).join(" + ")}` +
+                    `</b></div>`
+            )
+            .join("")
+    );
 }
 
 function syncRecipeChoice() {
@@ -398,7 +401,7 @@ function syncRecipeChoice() {
     const id = section.dataset.activeCalc,
         name = section.querySelector('[name="recipeProduct"]')?.value;
     if (name) {
-        $("#selectedMaterials").innerHTML = recipeIngredients(id, name);
+        defineHTML($("#selectedMaterials"), recipeIngredients(id, name));
         const K = COL[id] ?? {},
             recipe = getRecipes(id).find((r) => r.name === name);
         if (K.fator != null && recipe?.raw?.[K.fator]) {
@@ -577,7 +580,7 @@ function updateEnchantCalc(sec) {
         is19 = /Ep\.\s*19\b/.test(ep.value);
     if (tg.dataset.ep !== ep.value) {
         tg.dataset.ep = ep.value;
-        tg.innerHTML = [...(idx.get(ep.value)?.keys() || [])].map((t) => `<option>${esc(t)}</option>`).join("");
+        tg.replaceChildren(...(idx.get(ep.value)?.keys() || []).map((t) => el("option", {}, t)));
     }
     sec.querySelectorAll("[data-grau]").forEach((el) => (el.hidden = !(is19 && /Vil Invern/i.test(tg.value))));
     const E = idx.get(ep.value)?.get(tg.value) || [],
@@ -607,7 +610,7 @@ function updateEnchantCalc(sec) {
                 `${Array.from({ length: n }, (_, k) => `<option>${k + 1}</option>`).join("")}` +
                 `</select></div>`;
         }
-        box.innerHTML = h || '<p class="muted">Sem dados para este equipamento.</p>';
+        defineHTML(box, h || '<p class="muted">Sem dados para este equipamento.</p>');
         const multi = [...new Set(fixed.filter((e) => e.pos.length > 1).map((e) => e.effect))].map((f) => {
             const ps = fixed.find((e) => e.effect === f && e.pos.length > 1).pos;
             return `“${f}” pode ser usado nos encantamentos ${ps.length > 1 ? `${ps.slice(0, -1).join(", ")} ou ${ps[ps.length - 1]}` : ps[0]}`;
@@ -654,5 +657,5 @@ function updateEnchantCalc(sec) {
         (picked.some((p) => p.includes("*"))
             ? " · * Valores confirmados somente no Hazy Forest (kRO); não constam na bROWiki ou iROWiki."
             : "");
-    $("#ecTotals").innerHTML = totalList(totals, extras);
+    defineHTML($("#ecTotals"), totalList(totals, extras));
 }

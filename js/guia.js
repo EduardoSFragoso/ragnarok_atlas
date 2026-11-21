@@ -132,6 +132,12 @@ function itensNecessariosHtml(ep) {
     );
 }
 
+/** Linhas de uma tabela do guia indexadas PELO NOME da coluna t.colunas[i]:
+    devolve objetos {servico, npc, …} — reordenar ou acrescentar colunas no
+    JSON não desalinha o render (mesmo contrato de data/colunas.json). */
+const linhasNomeadas = (t) =>
+    (t.linhas || []).map((r) => Object.fromEntries(t.colunas.map((nome, i) => [nome, r[i] ?? ""])));
+
 function servicosHtml(ep) {
     const sv = ep.servicos,
         rep = ep.lojaReputacao;
@@ -140,12 +146,12 @@ function servicosHtml(ep) {
         tableFrame(
             t.colunas.map(esc),
             trs(
-                t.linhas.map(([servico, npc, onde, custos, obs]) => [
-                    esc(servico),
-                    esc(npc),
-                    naviBtn(onde),
-                    richText(custos || ""),
-                    richText(obs || ""),
+                linhasNomeadas(t).map((r) => [
+                    esc(r["Serviço"]),
+                    esc(r["NPC"]),
+                    naviBtn(r["Onde (/navi)"]),
+                    richText(r["Custos"] || ""),
+                    richText(r["Observação"] || ""),
                 ])
             ),
             "align-top"
@@ -300,12 +306,12 @@ document.addEventListener("click", (e) => {
             ?.writeText(text)
             .then(() => {
                 /* Estado "copiado" visível por 2 s: troca o rótulo do chip e volta. */
-                const antigo = copyBtn.innerHTML;
-                copyBtn.innerHTML = "Copiado ✓";
+                const original = copyBtn.cloneNode(true);
                 copyBtn.classList.add("copied");
+                copyBtn.replaceChildren("Copiado ✓");
                 setTimeout(() => {
-                    copyBtn.innerHTML = antigo;
                     copyBtn.classList.remove("copied");
+                    copyBtn.replaceChildren(...original.childNodes);
                 }, 2000);
             })
             .catch(() => {

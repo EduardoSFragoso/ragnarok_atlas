@@ -149,20 +149,24 @@ function sourceView() {
 function render() {
     const host = $("#content");
     try {
-        if (currentView === "inicio") host.innerHTML = seguro(landing, "visão geral");
-        else if (currentView === "guia") host.innerHTML = seguro(guideView, "guia de episódio");
-        else if (currentView === "diarias") host.innerHTML = seguro(diariasView, "missões diárias");
-        else if (TABLES[currentView]) host.innerHTML = seguro(() => tableView(currentView), currentView);
-        else if (currentView === "reformas") host.innerHTML = seguro(reformView, "reforma");
-        else if (currentView === "grau") host.innerHTML = seguro(upgradesView, "grau & refinamento");
-        else if (currentView === "reciclagem") host.innerHTML = seguro(recycleView, "reciclagem");
-        else if (currentView === "calculadoras") host.innerHTML = seguro(calcView, "calculadoras");
-        else host.innerHTML = seguro(sourceView, "fontes");
+        if (currentView === "inicio") defineHTML(host, seguro(landing, "visão geral"));
+        else if (currentView === "guia") defineHTML(host, seguro(guideView, "guia de episódio"));
+        else if (currentView === "diarias") defineHTML(host, seguro(diariasView, "missões diárias"));
+        else if (TABLES[currentView])
+            defineHTML(
+                host,
+                seguro(() => tableView(currentView), currentView)
+            );
+        else if (currentView === "reformas") defineHTML(host, seguro(reformView, "reforma"));
+        else if (currentView === "grau") defineHTML(host, seguro(upgradesView, "grau & refinamento"));
+        else if (currentView === "reciclagem") defineHTML(host, seguro(recycleView, "reciclagem"));
+        else if (currentView === "calculadoras") defineHTML(host, seguro(calcView, "calculadoras"));
+        else defineHTML(host, seguro(sourceView, "fontes"));
         if (TABLES[currentView]) seguro(() => renderDataTable(currentView), `tabela ${currentView}`);
         if (currentView === "reformas") seguro(renderReformTable, "tabela reforma");
     } catch (err) {
         console.error("Erro ao renderizar:", err);
-        host.innerHTML = caixaErroHtml("Erro inesperado ao montar a página.", err && err.message);
+        defineHTML(host, caixaErroHtml("Erro inesperado ao montar a página.", err && err.message));
     }
     try {
         bindContent();
@@ -209,7 +213,7 @@ function bindContent() {
     $$("[data-calc]").forEach(
         (b) =>
             (b.onclick = () => {
-                $("#calcMount").innerHTML = calcPanel(b.dataset.calc);
+                defineHTML($("#calcMount"), calcPanel(b.dataset.calc));
                 $$("[data-calc]").forEach((x) => x.classList.toggle("active", x === b));
                 bindCalc();
                 $("#calcMount").scrollIntoView({ behavior: "smooth", block: "nearest" });

@@ -71,12 +71,14 @@ function mostrarBannerCarga(paths) {
     const b = $("#loadBanner");
     if (!b) return;
     b.hidden = false;
-    b.innerHTML =
+    defineHTML(
+        b,
         `<span aria-hidden="true">⚠️</span> Falha ao carregar: ${paths
             .map((p) => `<code>${esc(p)}</code>`)
             .join(", ")}` +
-        `. ` +
-        `Algumas seções podem ficar incompletas.`;
+            `. ` +
+            `Algumas seções podem ficar incompletas.`
+    );
 }
 
 /** Aviso local para views que dependem de um arquivo ausente. */
