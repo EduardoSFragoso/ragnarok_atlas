@@ -1,7 +1,7 @@
 """Utilidades compartilhadas pelos scripts de tools/ do ragnarok_atlas.
 
-Reúne o que era duplicado entre os scripts: leitura de "planilhas" JSON
-com linhas homogêneas, escrita atômica de JSON/texto em LF (evita CRLF
+Reúne o que era duplicado entre os scripts: leitura das tabelas de data/
+pelo contrato data/colunas.json (colunas por NOME, não por posição), escrita atômica de JSON/texto em LF (evita CRLF
 local vs LF no CI), requisição HTTP com retry (429, falha de rede) e o
 aborto após muitas falhas consecutivas.
 """
@@ -14,6 +14,9 @@ import urllib.error
 import urllib.request
 from datetime import UTC, datetime
 from pathlib import Path
+
+# Raiz do projeto (a pasta acima de tools/).
+RAIZ = Path(__file__).resolve().parent.parent
 
 # Códigos HTTP que valem nova tentativa em outro servidor (item inexistente
 # ou requisição malformada podem ser aceitos por um servidor e não por outro).
@@ -55,21 +58,43 @@ def carregar_json(path, padrao=None):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def linhas_json(path):
-    """Lê uma "planilha" JSON (lista de objetos) como linhas homogêneas.
+def carregar_contrato():
+    """Lê data/colunas.json: por tabela, arquivo, colunas e nomes lógicos (campos).
 
-    A leitura usa open(..., newline="") para preservar as quebras
-    originais do arquivo, seja qual for o sistema onde ele foi gravado.
+    É o mesmo contrato que o site usa (COL.<tabela>.<campo>) e que o validador
+    (npm run validar:dados) confere.
+
+    Returns:
+        dict: tabela -> {"arquivo": str, "colunas": [str], "campos": {campo: coluna}}.
+    """
+    return carregar_json(RAIZ / "data" / "colunas.json", padrao={})
+
+
+def registros(tabela):
+    """Lê uma tabela de data/ como lista de dicts indexados pelo NOME LÓGICO.
+
+    Os nomes lógicos (campos) vêm de data/colunas.json, então a ordem das colunas
+    ou colunas extras nos JSONs não afetam as ferramentas. Devolve apenas os
+    registros de dados (não há linha de cabeçalho) e células sempre str ("" se vazia).
 
     Args:
-        path: caminho do arquivo JSON (Path ou str).
+        tabela: chave da tabela no contrato (ex.: "custo", "encantos", "toxina").
     Returns:
-        list[list[str]]: uma linha por registro; células sempre str,
-            na ordem das colunas do primeiro registro.
+        list[dict[str, str]]: um dict por registro, com os campos do contrato.
+    Raises:
+        KeyError: tabela inexistente no contrato.
+        ValueError: coluna do contrato ausente no JSON (o contrato e o arquivo divergiram).
     """
-    dados = carregar_json(path, padrao=[])
-    colunas = list(dados[0].keys()) if dados else []
-    return [[str(r.get(c) or "") for c in colunas] for r in dados]
+    contrato = carregar_contrato()
+    if tabela not in contrato:
+        raise KeyError(f"tabela {tabela!r} não existe em data/colunas.json (existem: {', '.join(sorted(contrato))})")
+    definicao = contrato[tabela]
+    dados = carregar_json(RAIZ / "data" / definicao["arquivo"], padrao=[])
+    campos = definicao.get("campos", {})
+    ausentes = [nome for nome in campos.values() if dados and nome not in dados[0]]
+    if ausentes:
+        raise ValueError(f"{definicao['arquivo']}: coluna(s) do contrato ausente(s): {', '.join(ausentes)}")
+    return [{campo: str(r.get(nome) or "") for campo, nome in campos.items()} for r in dados]
 
 
 def salvar_json_atomico(path, dados, indent=1, sort_keys=True):

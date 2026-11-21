@@ -15,6 +15,10 @@ jobs:
               with:
                   node-version: 20
 
+            - uses: actions/setup-python@v5
+              with:
+                  python-version: "3.12"
+
             - name: Install deps
               run: npm ci
 
@@ -38,6 +42,9 @@ jobs:
 
             - name: Render smoke test (jsdom)
               run: npm run snapshot -- --verificar
+
+            - name: Tests (Python tools)
+              run: python -m unittest discover -s tools -p "test_*.py"
 
             - name: Validate JSON
               run: |

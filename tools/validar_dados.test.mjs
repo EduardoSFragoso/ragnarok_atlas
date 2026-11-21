@@ -183,3 +183,15 @@ test("pega colunas repetidas em colunas.json", () => {
     });
     assert.match(mensagens(validar(dir)), /colunas\.json\.flechas\.colunas: nomes de coluna repetidos/);
 });
+
+test("pega arquivo errado ou ausente no contrato colunas.json", () => {
+    const dir = copiaComMutacao(({ ler, gravar }) => {
+        const c = ler("colunas.json");
+        c.custo.arquivo = "outro_arquivo.json";
+        delete c.runas.arquivo;
+        gravar("colunas.json", c);
+    });
+    const m = mensagens(validar(dir));
+    assert.match(m, /colunas\.json\.custo\.arquivo: esperava "custo_de_encantamento\.json"/);
+    assert.match(m, /colunas\.json\.runas: campo obrigatório ausente: "arquivo"/);
+});

@@ -228,13 +228,17 @@ function lerJson(dir, arquivo, c) {
     }
 }
 
-/* data/colunas.json: por tabela, "colunas" (layout lido pelo app) e "campos"
-   (nome lógico -> nome da coluna, usado como COL.<tabela>.<campo> no app.js). */
+/* data/colunas.json: por tabela, "arquivo" (JSON em data/), "colunas" (layout lido pelo
+   app) e "campos" (nome lógico -> nome da coluna: COL.<tabela>.<campo> no site e
+   registros("<tabela>") nas ferramentas Python). */
 function validarContrato(colunas, c) {
     const p = "data/colunas.json";
-    dicionario(objeto({ colunas: lista(texto, { min: 1 }), campos: dicionario(texto) }))(colunas, p, c);
+    dicionario(objeto({ arquivo: texto, colunas: lista(texto, { min: 1 }), campos: dicionario(texto) }))(colunas, p, c);
     for (const [tabela, def] of Object.entries(colunas)) {
         if (tipo(def) !== "objeto" || !Array.isArray(def.colunas)) continue;
+        const esperadoArquivo = Object.entries(TABELAS).find(([, chave]) => chave === tabela)?.[0];
+        if (esperadoArquivo && def.arquivo !== esperadoArquivo)
+            c.erro(`${p}.${tabela}.arquivo`, `esperava "${esperadoArquivo}", veio "${def.arquivo}"`);
         const repetidas = def.colunas.filter((n, i) => def.colunas.indexOf(n) !== i);
         if (repetidas.length) c.erro(`${p}.${tabela}.colunas`, `nomes de coluna repetidos: ${repetidas.join(" | ")}`);
         if (tipo(def.campos) !== "objeto") continue;

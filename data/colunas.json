@@ -1,5 +1,6 @@
 {
     "equips": {
+        "arquivo": "equips_de_episodio.json",
         "colunas": [
             "Episódio",
             "Categoria",
@@ -29,6 +30,7 @@
         }
     },
     "custo": {
+        "arquivo": "custo_de_encantamento.json",
         "colunas": [
             "Episódio",
             "Equipamento-alvo",
@@ -54,6 +56,7 @@
         }
     },
     "encantos": {
+        "arquivo": "encantamentos_disponiveis.json",
         "colunas": [
             "Episódio",
             "Equipamento-alvo",
@@ -80,6 +83,7 @@
         }
     },
     "fontes": {
+        "arquivo": "fontes_de_obtencao.json",
         "colunas": [
             "Episódio",
             "Atividade",
@@ -105,6 +109,7 @@
         }
     },
     "reforma": {
+        "arquivo": "reforma_de_armas.json",
         "colunas": [
             "Classe",
             "col2",
@@ -119,9 +124,19 @@
             "Qtd",
             "Observação"
         ],
-        "campos": {}
+        "campos": {
+            "classe": "Classe",
+            "adulter": "Arma Adulter Fides (drop na Mansão da Desilusão)",
+            "vivatus": "Arma Vivatus Fides (resultado da reforma)",
+            "ritual": "Ritual de reforma",
+            "perda": "Perda de refino",
+            "material": "Material",
+            "qtd": "Qtd",
+            "obs": "Observação"
+        }
     },
     "flechas": {
+        "arquivo": "fabricar_flechas.json",
         "colunas": [
             "Ícone do produto",
             "Tipo de flecha",
@@ -136,6 +151,7 @@
         }
     },
     "toxina": {
+        "arquivo": "criar_toxina.json",
         "colunas": [
             "ID do produto",
             "Ícone do produto",
@@ -161,6 +177,7 @@
         }
     },
     "veneno": {
+        "arquivo": "criar_veneno_mortal.json",
         "colunas": [
             "ID do produto",
             "Ícone do produto",
@@ -186,6 +203,7 @@
         }
     },
     "runas": {
+        "arquivo": "pericia_em_runas.json",
         "colunas": [
             "ID do produto",
             "Ícone do produto",
@@ -212,6 +230,7 @@
         }
     },
     "preparar": {
+        "arquivo": "preparar_pocao.json",
         "colunas": [
             "ID do produto",
             "Ícone do produto",
@@ -238,6 +257,7 @@
         }
     },
     "manipular": {
+        "arquivo": "manipular_pocao.json",
         "colunas": [
             "ID do produto",
             "Ícone do produto",
@@ -264,6 +284,7 @@
         }
     },
     "farmacia": {
+        "arquivo": "farmacologia_avancada.json",
         "colunas": [
             "ID do produto",
             "Ícone do produto",
@@ -290,6 +311,7 @@
         }
     },
     "culinaria": {
+        "arquivo": "culinaria_avancada.json",
         "colunas": [
             "ID do produto",
             "Ícone do produto",

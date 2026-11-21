@@ -15,11 +15,13 @@ import json
 import re
 from pathlib import Path
 
-from _comum import salvar_json_atomico
+from _comum import carregar_contrato, salvar_json_atomico
 
 ROOT = Path(__file__).resolve().parent.parent
-PLANILHA = ROOT / "data" / "encantamentos_disponiveis.json"
-COLUNA = "Efeito (+11)"
+_CONTRATO = carregar_contrato()["encantos"]
+PLANILHA = ROOT / "data" / _CONTRATO["arquivo"]
+# Coluna "Efeito (+11)": nome vem de data/colunas.json (campo "valor"), a fonte única.
+COLUNA = _CONTRATO["campos"]["valor"]
 MAX_REFINO = 11
 
 # "+X de (atributo)" sem refino

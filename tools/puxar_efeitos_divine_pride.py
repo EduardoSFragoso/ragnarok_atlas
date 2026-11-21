@@ -42,8 +42,8 @@ from _comum import (
     buscar_url,
     carregar_json,
     deve_abortar,
-    linhas_json,
     msg_erro,
+    registros,
     salvar_json_atomico,
     salvar_texto,
 )
@@ -92,15 +92,14 @@ def pendentes():
     """
     ids = carregar_json(ROOT / "data" / "itens_divine_pride.json", padrao={})
     linhas = []
-    for r in linhas_json(ROOT / "data" / "encantamentos_disponiveis.json")[1:]:
-        r += [""] * 12
-        ep, alvo, enc, efeito = r[0], r[1], r[5], r[6]
+    for r in registros("encantos"):
+        ep, alvo, enc, efeito = r["ep"], r["alvo"], r["encanto"], r["valor"]
         if not re.search(r"17\.2|Ep\. 18|Oração", ep):
             continue
         if not re.search(r"Divine|não informado", efeito, re.I):
             continue
         chave = f"{alvo}\x00{enc}"
-        nome = r[8].strip() or enc
+        nome = r["consumido"].strip() or enc
         cand = ids.get(nome) or ids.get(enc) or ids.get(re.sub(r"\s*\[\d+\]$", "", enc))
         linhas.append((chave, enc, nome, cand))
     dedup = {}

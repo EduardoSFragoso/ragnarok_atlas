@@ -10,8 +10,9 @@ Uso (na raiz do projeto):
     python3 tools/baixar_icones.py            # baixa o que falta
     python3 tools/baixar_icones.py --dry-run  # só lista o que falta
 
-Os IDs vêm de data/itens_divine_pride.json, das planilhas de
-data/ e dos IDs fixos de app.js. Nomes sem ID não podem ser
+Os IDs vêm de data/itens_divine_pride.json, de data/referencias.json
+(itens_conhecidos) e das tabelas de data/ (lidas pelo contrato
+data/colunas.json). Nomes sem ID não podem ser
 baixados: eles são gravados em data/itens_sem_id.txt. Para
 resolvê-los, adicione "Nome do item": ID em itens_divine_pride.json e rode
 o script de novo.
@@ -27,8 +28,8 @@ from pathlib import Path
 from _comum import (
     carregar_json,
     deve_abortar,
-    linhas_json,
     msg_erro,
+    registros,
     salvar_texto,
     segundos_retry_after,
 )
@@ -40,15 +41,16 @@ DELAY = 0.6  # segundos entre pedidos, para não sobrecarregar o servidor
 IGNORAR = {"Zeny", "Itens variados (lista a confirmar)", "Itens de drop de monstros (varia por habilidade)"}
 
 # Planilhas de data/ que listam itens usados pelas facilidades/ferramentas.
+# Tabelas de receitas por habilidade (chaves de data/colunas.json).
 FACILIDADES = [
-    "fabricar_flechas.json",
-    "criar_toxina.json",
-    "criar_veneno_mortal.json",
-    "pericia_em_runas.json",
-    "preparar_pocao.json",
-    "manipular_pocao.json",
-    "farmacologia_avancada.json",
-    "culinaria_avancada.json",
+    "flechas",
+    "toxina",
+    "veneno",
+    "runas",
+    "preparar",
+    "manipular",
+    "farmacia",
+    "culinaria",
 ]
 
 
@@ -57,7 +59,7 @@ def coletar():
 
     Fontes: data/itens_divine_pride.json,
     data/referencias.json (itens_conhecidos) e as planilhas de
-    FACILIDADES + custo_de_encantamento + reforma_de_armas.
+    as tabelas de receitas (FACILIDADES), de custo de encantamento e de reforma.
 
     Returns:
         (ids, sem_id): lista ordenada de IDs únicos (int) e lista
@@ -69,24 +71,19 @@ def coletar():
     refs = carregar_json(ROOT / "data" / "referencias.json", padrao={}).get("itens_conhecidos", {})
     ids.update({n: int(i) for n, i in refs.items()})
     nomes = set()
-    for nome in FACILIDADES:
-        f = ROOT / "data" / nome
-        flechas = nome == "fabricar_flechas.json"
-        for k, r in enumerate(linhas_json(f)):
-            r += [""] * 10
-            if r[0].isdigit() and r[2]:
-                ids[r[2]] = int(r[0])
-            if r[4].isdigit() and r[6]:
-                ids[r[6]] = int(r[4])
-            # A partir daqui vêm só os nomes de itens das linhas válidas.
-            if k >= (2 if flechas else 1):
-                nomes.update(r[c].strip() for c in ((1, 3) if flechas else (2, 6)) if r[c].strip())
-    for r in linhas_json(ROOT / "data" / "custo_de_encantamento.json")[1:]:
-        if len(r) > 5 and r[5]:
-            nomes.add(r[5])
-    for r in linhas_json(ROOT / "data" / "reforma_de_armas.json")[1:]:
-        r += [""] * 12
-        nomes.update(r[c] for c in (2, 5, 9) if r[c])
+    for tabela in FACILIDADES:
+        for r in registros(tabela):
+            # Pares ID -> nome (só as tabelas com colunas de ID; flechas não tem).
+            if r.get("idProduto", "").isdigit() and r["produto"]:
+                ids[r["produto"]] = int(r["idProduto"])
+            if r.get("idMaterial", "").isdigit() and r["material"]:
+                ids[r["material"]] = int(r["idMaterial"])
+            # Linhas de título (ex.: "Fabricar Flechas") não têm material: não são itens.
+            if r["material"].strip():
+                nomes.update(n.strip() for n in (r["produto"], r["material"]) if n.strip())
+    nomes.update(r["material"] for r in registros("custo") if r["material"])
+    for r in registros("reforma"):
+        nomes.update(r[c] for c in ("adulter", "vivatus", "material") if r[c])
     sem_id = sorted(n for n in nomes - IGNORAR if n not in ids and re.sub(r"\s*\[\d+\]$", "", n) not in ids)
     return sorted(set(ids.values())), sem_id
 
