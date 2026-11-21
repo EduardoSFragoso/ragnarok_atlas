@@ -74,7 +74,9 @@ function mostrarBannerCarga(paths) {
     b.innerHTML =
         `<span aria-hidden="true">⚠️</span> Falha ao carregar: ${paths
             .map((p) => `<code>${esc(p)}</code>`)
-            .join(", ")}. ` + `Algumas seções podem ficar incompletas.`;
+            .join(", ")}` +
+        `. ` +
+        `Algumas seções podem ficar incompletas.`;
 }
 
 /** Aviso local para views que dependem de um arquivo ausente. */

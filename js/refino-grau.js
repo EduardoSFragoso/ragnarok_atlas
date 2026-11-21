@@ -79,7 +79,8 @@ ${secH(
         "Refinado a partir do +15, o item ganha o bônus adicional, que aumenta ATQ e ATQM a cada refino acima " +
         "do +16. Armas de ataque à distância não recebem bônus de ATQM nem o bônus de Over das outras armas. " +
         "Equipamentos Sombrios não recebem estes bônus."
-)}
+)}` +
+        `
 ${tbl(
     ths([
         "Arma",
@@ -100,21 +101,25 @@ ${tbl(
         ["Nv.5 e Grau B", "12", "-", "-", "-", "2"],
         ["Nv.5 e Grau A", "16", "-", "-", "-", "2"],
     ])
-)}
+)}` +
+        `
 <div ` +
         `style="height:12px">` +
         `</div>${tbl(
-            `<tr><th rowspan="2">Armadura</th><th colspan="4">DEF/DEFM por refino</th><th rowspan="2">TEN/TENM por refino</th>` +
+            `<tr><th rowspan="2">Armadura</th><th colspan="4">DEF/DEFM por refino</th>` +
+                `<th rowspan="2">TEN/TENM por refino</th>` +
                 `</tr><tr><th>+1 ~ +4</th><th>+5 ~ +8</th><th>+9 ~ +12</th><th>+13 ~ +20</th></tr>`,
             `<tr><td>Nv.1</td><td>1</td><td>2</td><td>3</td><td>4 ~ 5</td><td>-</td></tr><tr>` +
                 `<td>Nv.2</td><td colspan="4">20% da DEF dada pelo refino da armadura</td><td>2</td>` +
                 `</tr>`
-        )}
+        )}` +
+        `
 ${secH(
     "Minérios",
     "Refinar custa dinheiro e exige o minério correto para o nível do item. Os minérios são obtidos nos NPCs " +
         "das refinarias, por zeny ou trocando por itens."
-)}
+)}` +
+        `
 <h3 ` +
         `class="table-group-title">Minérios comuns para armas</h3>` +
         `${mine([
@@ -148,7 +153,8 @@ ${secH(
                     [3, "Pó de Éter"],
                 ]),
             ],
-        ])}
+        ])}` +
+        `
 <h3 ` +
         `class="table-group-title" style="margin-top:16px">Minérios especiais para armas</h3>` +
         `${mine([
@@ -185,7 +191,8 @@ ${secH(
                     [3, "Pó de Éter"],
                 ]),
             ],
-        ])}
+        ])}` +
+        `
 <h3 ` +
         `class="table-group-title" style="margin-top:16px">Minérios comuns para armaduras</h3>` +
         `${mine([
@@ -217,7 +224,8 @@ ${secH(
                     [3, "Pó de Éter"],
                 ]),
             ],
-        ])}
+        ])}` +
+        `
 <h3 ` +
         `class="table-group-title" style="margin-top:16px">Minérios especiais para armaduras</h3>` +
         `${mine([
@@ -254,8 +262,10 @@ ${secH(
                     [3, "Pó de Éter"],
                 ]),
             ],
-        ])}
-${secH("Outros métodos", "Na maioria dos casos, são itens especiais.")}
+        ])}` +
+        `
+${secH("Outros métodos", "Na maioria dos casos, são itens especiais.")}` +
+        `
 ${tbl(
     ths(["Item", "Efeito"]),
     trs([
@@ -284,8 +294,10 @@ ${tbl(
         ],
         [
             "Manufatura",
-            `Os minérios de manufatura são refinados em qualquer NPC das refinarias: ${cst("", [[20, "Minério de Zelunium"]])} ` +
-                `→ ${itemLink("Zelunium")}; ${cst("", [[20, "Minério de Sombridecon"]])} → ${itemLink("Sombridecon")}. ` +
+            `Os minérios de manufatura são refinados em qualquer NPC das refinarias: ` +
+                `${cst("", [[20, "Minério de Zelunium"]])} ` +
+                `→ ${itemLink("Zelunium")}; ${cst("", [[20, "Minério de Sombridecon"]])}` +
+                ` → ${itemLink("Sombridecon")}. ` +
                 `Refinador de Prontera (prt_in 62/57).`,
         ],
     ])
@@ -300,12 +312,14 @@ function grauPage() {
     return (
         `<div class="panel-note">Grau é um sistema de aprimoramento que concede bônus especiais e altera a estética ` +
         `dos equipamentos. Só armaduras nível 2 e armas nível 5 são afetadas.</div>
-${secH(
-    "Bônus por grau",
-    "Cada Grau adiciona um bônus percentual a cada refino de uma arma nível 5. (O texto da bROWiki diz “nível " +
-        "2”, mas os valores são os das armas nível 5 da página Refinamento.) A letra do Grau aparece na frente " +
-        "do nome do item, como em [B] Adaga."
-)}
+` +
+        `${secH(
+            "Bônus por grau",
+            "Cada Grau adiciona um bônus percentual a cada refino de uma arma nível 5. (O texto da bROWiki diz “nível " +
+                "2”, mas os valores são os das armas nível 5 da página Refinamento.) A letra do Grau aparece na frente " +
+                "do nome do item, como em [B] Adaga."
+        )}` +
+        `
 ${tbl(
     ths(["Arma", "ATQ & ATQM por refino", "Bônus", "Prefixo"]),
     trs([
@@ -315,7 +329,8 @@ ${tbl(
         ["Grau B", "+12,0", "50% de aumento", "[B]"],
         ["Grau A", "+16,0", "100% de aumento", "[A]"],
     ])
-)}
+)}` +
+        `
 ${secH("Como funciona")}` +
         `<div class="card" style="padding:16px 20px"><ol><li>Vá para uma refinaria e fale com o NPC com indicação de Grau.</li>` +
         `<li>A interface de Grau será aberta: arraste o item até a janela e selecione os materiais.</li>` +
@@ -329,7 +344,8 @@ ${secH("Como funciona")}` +
                 "de Bênçãos necessárias para subir 1% varia com o grau.",
         ])}` +
         `</div>
-${secH("Informações", "Atualmente, para subir de grau, o item deve estar no +11 no mínimo.")}
+${secH("Informações", "Atualmente, para subir de grau, o item deve estar no +11 no mínimo.")}` +
+        `
 ${tbl(
     ths([
         "Etapa",
@@ -382,8 +398,10 @@ ${tbl(
         ],
         ["", "", cst("", [[10, "Âmbar de Éter"]]), "2.500.000z", "Seguro", "—", "—"],
     ])
-)}
-${secH("Materiais", "Os materiais podem ser obtidos com os NPCs de Grau. Topázio e Âmbar podem ser comprados com a Joalheira (morocc 166/54).")}
+)}` +
+        `
+${secH("Materiais", "Os materiais podem ser obtidos com os NPCs de Grau. Topázio e Âmbar podem ser comprados com a Joalheira (morocc 166/54).")}` +
+        `
 ${tbl(
     ths(["Item", "Zeny", "Materiais"]),
     trs([
@@ -464,12 +482,14 @@ function upgradesView() {
         list
             .map(
                 ([v, l]) =>
-                    `<button class="subtab ${cur === v ? "active" : ""}"${cur === v ? ' aria-current="page"' : ""} data-${attr}="${v}" type="button">` +
+                    `<button class="subtab ${cur === v ? "active" : ""}"${cur === v ? ' aria-current="page"' : ""}` +
+                    ` data-${attr}="${v}" type="button">` +
                     `${l}</button>`
             )
             .join("");
     return (
-        `<div class="page-head"><div><div class="eyebrow">SISTEMAS DE MELHORIA</div><h1 class="page-title">Grau & Refinamento</h1>` +
+        `<div class="page-head"><div><div class="eyebrow">SISTEMAS DE MELHORIA</div>` +
+        `<h1 class="page-title">Grau & Refinamento</h1>` +
         `<p class="page-subtitle">Chances de sucesso e, abaixo, os detalhes de Refinamento e Grau.</p>` +
         `</div><span class="count-pill">CHANCES + DETALHES</span></div>
 <div class="up-controls">` +
@@ -478,9 +498,11 @@ function upgradesView() {
             ["refino", "Refino"],
             ["grau", "Grau"],
         ])}` +
-        `<label class="switch-entry" data-up-extra="especiais"><input type="checkbox" id="upEspeciais"${upSpecial ? " checked" : ""}> ` +
+        `<label class="switch-entry" data-up-extra="especiais"><input type="checkbox" id="upEspeciais"` +
+        `${upSpecial ? " checked" : ""}> ` +
         `Minérios especiais</label>` +
-        `<label class="switch-entry" data-up-extra="modo"><input type="checkbox" id="upEvento"${upMode === "evento" ? " checked" : ""}> ` +
+        `<label class="switch-entry" data-up-extra="modo"><input type="checkbox" id="upEvento"` +
+        `${upMode === "evento" ? " checked" : ""}> ` +
         `Chances durante o evento</label>` +
         `</div></div>
 <div id="upChance">${upChance()}</div>

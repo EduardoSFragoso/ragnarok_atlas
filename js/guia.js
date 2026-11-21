@@ -13,7 +13,8 @@ function naviBtn(cmd) {
     if (!cmd) return "";
     const full = cmd.startsWith("/navi") ? cmd : `/navi ${cmd}`;
     return (
-        `<button type="button" class="navi-chip" data-copy-navi="${esc(full)}" title="Clique para copiar ${esc(full)}">` +
+        `<button type="button" class="navi-chip" data-copy-navi="${esc(full)}" title="Clique para copiar ` +
+        `${esc(full)}">` +
         `<code>${esc(full)}</code></button>`
     );
 }
@@ -79,16 +80,25 @@ function itensNecessariosHtml(ep) {
                   count: `${t.linhas.length} itens`,
               })
             : "";
+    const corpoEmbarque = () => {
+        const tabelaEmbarque = tableFrame(
+            it.embarque.colunas.map(esc),
+            trs(it.embarque.linhas.map((r) => r.map(richText))),
+            "align-top"
+        );
+        const obsEquip = it.observacaoEquip
+            ? `<p class="gift-line"><b>Equipamentos e encantamentos:</b> ${richText(it.observacaoEquip)}</p>`
+            : "";
+        const nota = it.nota ? `<p class="gift-line">${richText(it.nota)}</p>` : "";
+        return `${tabelaEmbarque}${obsEquip}${nota}`;
+    };
     const embarque = it.embarque
-        ? fold(
-              it.embarque.titulo,
-              `${tableFrame(it.embarque.colunas.map(esc), trs(it.embarque.linhas.map((r) => r.map(richText))), "align-top")}${it.observacaoEquip ? `<p class="gift-line"><b>Equipamentos e encantamentos:</b> ${richText(it.observacaoEquip)}</p>` : ""}${it.nota ? `<p class="gift-line">${richText(it.nota)}</p>` : ""}`,
-              { open: true, count: `${it.embarque.linhas.length} itens` }
-          )
+        ? fold(it.embarque.titulo, corpoEmbarque(), { open: true, count: `${it.embarque.linhas.length} itens` })
         : "";
     return (
         `<section class="itens-necessarios">
-    <div class="section-heading"><div><h2>Itens necessários</h2>` +
+    <div class="section-heading"><div>` +
+        `<h2>Itens necessários</h2>` +
         `<p>Materiais da estória e o que levar de Midgard antes do passo a passo. Itens de diárias ficam na página Missões Diárias.</p>` +
         `</div></div>
     ${block(it.diarias)}${embarque}
@@ -115,12 +125,20 @@ function servicosHtml(ep) {
             "align-top"
         );
     const repTabela = (t) => tableFrame(t.colunas.map(esc), trs(t.linhas.map((r) => r.map(richText))), "align-top");
+    const notaRep = rep?.nota ? `<p class="gift-line">${richText(rep.nota)}</p>` : "";
+    const reputacao = rep
+        ? fold(rep.titulo, `${repTabela(rep)}${notaRep}`, { count: `${rep.linhas.length} itens` })
+        : "";
     return (
         `<section class="itens-necessarios">
-    <div class="section-heading"><div><h2>Serviços do episódio</h2>` +
+    <div class="section-heading"><div>` +
+        `<h2>Serviços do episódio</h2>` +
         `<p>NPCs de utilidade, lojas e trocas do episódio.</p></div></div>
-    ${sv ? fold(sv.titulo, tabela(sv), { count: `${sv.linhas.length} serviços` }) : ""}
-    ${rep ? fold(rep.titulo, `${repTabela(rep)}${rep.nota ? `<p class="gift-line">${richText(rep.nota)}</p>` : ""}`, { count: `${rep.linhas.length} itens` }) : ""}
+    ` +
+        `${sv ? fold(sv.titulo, tabela(sv), { count: `${sv.linhas.length} serviços` }) : ""}` +
+        `
+    ${reputacao}` +
+        `
   ` +
         `</section>`
     );
@@ -142,8 +160,16 @@ function guideView() {
        com âncora por seção e um sumário com links no topo. */
     const principalHtml = ep.principal
         .map((cap, idx) => {
+            const notaCap = cap.nota ? `<p class="gift-line">⚠️ ${esc(cap.nota)}</p>` : "";
+            const avisoCap = cap.aviso
+                ? `<p class="gift-line"><span class="aviso-critico">${esc(cap.aviso)}</span></p>`
+                : "";
+            const premioCap = cap.recompensa ? `<p class="gift-line">🎁 ${esc(cap.recompensa)}</p>` : "";
+            const desbloqueioCap = cap.desbloqueia
+                ? `<p class="gift-line">🔓 <b>Desbloqueia:</b> ${esc(cap.desbloqueia)}</p>`
+                : "";
             const body =
-                `${itensEtapa(cap.itens)}${cap.nota ? `<p class="gift-line">⚠️ ${esc(cap.nota)}</p>` : ""}${cap.aviso ? `<p class="gift-line"><span class="aviso-critico">${esc(cap.aviso)}</span></p>` : ""}${cap.recompensa ? `<p class="gift-line">🎁 ${esc(cap.recompensa)}</p>` : ""}${cap.desbloqueia ? `<p class="gift-line">🔓 <b>Desbloqueia:</b> ${esc(cap.desbloqueia)}</p>` : ""}` +
+                `${itensEtapa(cap.itens)}${notaCap}${avisoCap}${premioCap}${desbloqueioCap}` +
                 `<ol class="guide-steps">${stepList(cap.passos)}</ol>`;
             return (
                 `<section class="guide-section" id="${ep.id}-cap${idx}"><div class="guide-section-head">` +
@@ -193,15 +219,18 @@ function guideView() {
         ` +
         `<h1 class="page-title">` +
         `${esc(ep.titulo)}</h1>
-        <p class="page-subtitle">${esc(ep.requisitos)} · ${esc(ep.recompensaTotal)}` +
+        <p class="page-subtitle">${esc(ep.requisitos)}` +
+        ` · ${esc(ep.recompensaTotal)}` +
         `</p>
       </div>
     </div>
     ${epSwitcher()}
-    ${avisoSeFalha("guia")}
+    ${avisoSeFalha("guia")}` +
+        `
     ${avisosHtml}
     ${itensNecessariosHtml(ep)}
-    ${servicosHtml(ep)}
+    ${servicosHtml(ep)}` +
+        `
     ` +
         `<div class="section-heading">` +
         `<div><h2>Passo a passo</h2><p>Capítulos da história e missões secundárias, com /navi copiável em cada etapa.</p>` +
@@ -209,17 +238,22 @@ function guideView() {
     <div class="up-controls" style="margin-bottom:14px">
       <div class="subtabs" role="group" ` +
         `aria-label="Tipo de missão">
-        <button class="subtab ${guideTab === "principal" ? "active" : ""}"${guideTab === "principal" ? ' aria-current="page"' : ""} ` +
-        `data-guide-tab="principal" type="button">Quest Principal (${ep.principal.length} etapas)</button>
+        <button class="subtab ${guideTab === "principal" ? "active" : ""}` +
+        `"${guideTab === "principal" ? ' aria-current="page"' : ""} ` +
+        `data-guide-tab="principal" type="button">Quest Principal (${ep.principal.length}` +
+        ` etapas)</button>
         ` +
-        `<button class="subtab ${guideTab === "secundarias" ? "active" : ""}"${guideTab === "secundarias" ? ' aria-current="page"' : ""} ` +
-        `data-guide-tab="secundarias" type="button">Missões Secundárias (${ep.secundarias.length})</button>
+        `<button class="subtab ${guideTab === "secundarias" ? "active" : ""}"${guideTab === "secundarias" ? ' aria-current="page"' : ""}` +
+        ` ` +
+        `data-guide-tab="secundarias" type="button">Missões Secundárias (${ep.secundarias.length}` +
+        `)</button>
       ` +
         `</div>
     </div>
     <div id="guideBody">
       ${sumarioHtml}
-      ${guideTab === "principal" ? principalHtml : secundariasHtml}
+      ` +
+        `${guideTab === "principal" ? principalHtml : secundariasHtml}
     ` +
         `</div>
   `

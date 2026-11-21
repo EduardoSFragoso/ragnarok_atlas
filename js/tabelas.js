@@ -84,7 +84,8 @@ function filteredRows(view) {
 
 function tableFrame(headers, body, extra = "") {
     return (
-        `<div class="table-wrap"><table class="data-table ${extra}"><thead><tr>${headers.map((h) => `<th>${h}</th>`).join("")}` +
+        `<div class="table-wrap"><table class="data-table ${extra}"><thead><tr>` +
+        `${headers.map((h) => `<th>${h}</th>`).join("")}` +
         `</tr></thead><tbody>${body || `<tr><td class="empty" colspan="${headers.length}">Nenhum resultado para esse filtro.</td></tr>`}` +
         `</tbody></table></div>`
     );
@@ -92,19 +93,21 @@ function tableFrame(headers, body, extra = "") {
 
 function rowspanBody(rows, cols, mergeCols = []) {
     if (!rows.length) return "";
+    const campos = cols.map(([campo]) => campo);
     let out = "";
     for (let i = 0; i < rows.length; i++) {
         out += "<tr>";
-        cols.forEach((c, j) => {
+        cols.forEach(([campo, , formatar], j) => {
+            const celula = () => (formatar ? formatar(rows[i]) : esc(rows[i][campo] || "—"));
             if (mergeCols.includes(j)) {
                 const parents = mergeCols.filter((n) => n <= j),
                     same = (a, b) =>
-                        parents.every((k) => String(rows[a][cols[k][0]] || "") === String(rows[b][cols[k][0]] || ""));
+                        parents.every((k) => String(rows[a][campos[k]] || "") === String(rows[b][campos[k]] || ""));
                 if (i > 0 && same(i - 1, i)) return;
                 let span = 1;
                 while (i + span < rows.length && same(i, i + span)) span++;
-                out += `<td rowspan="${span}">${c[2] ? c[2](rows[i]) : esc(rows[i][c[0]] || "—")}</td>`;
-            } else out += `<td>${c[2] ? c[2](rows[i]) : esc(rows[i][c[0]] || "—")}</td>`;
+                out += `<td rowspan="${span}">${celula()}</td>`;
+            } else out += `<td>${celula()}</td>`;
         });
         out += "</tr>";
     }
@@ -144,11 +147,11 @@ function renderEquipmentTable(rows) {
                                     i === 0
                                         ? `<td rowspan="${unique.length}" class="material-cell"><div class="material-lines">` +
                                           `${price
-                                              .map(
-                                                  (x, j) =>
-                                                      `<span class="${j === 0 ? "material-line" : "table-meta"}">${j === 0 ? `<b class="material-qty">${x}</b>` : x}` +
-                                                      `</span>`
-                                              )
+                                              .map((x, j) => {
+                                                  const classe = j === 0 ? "material-line" : "table-meta";
+                                                  const texto = j === 0 ? `<b class="material-qty">${x}</b>` : x;
+                                                  return `<span class="${classe}">${texto}</span>`;
+                                              })
                                               .join("")}` +
                                           `</div></td>`
                                         : ""
@@ -158,7 +161,8 @@ function renderEquipmentTable(rows) {
                 })
                 .join("");
             return (
-                `<section class="table-section"><div class="table-section-head"><h2>${esc(section[0][K.ep])} · ${esc(section[0][K.cat])}` +
+                `<section class="table-section"><div class="table-section-head"><h2>${esc(section[0][K.ep])}` +
+                ` · ${esc(section[0][K.cat])}` +
                 `</h2><span>${new Set(section.map((r) => r[K.equip])).size} equipamentos</span></div>` +
                 `${tableFrame([`Equipamentos · ${esc(section[0][K.cat])}`, "Preço por equipamento"], rowsHtml, "grouped-table")}` +
                 `</section>`
@@ -174,7 +178,8 @@ function renderEquipmentTable(rows) {
                 ? `<section class="table-section"><div class="table-section-head"><h2>Automatron · refinamento</h2>` +
                   `<span>1 refinador</span></div>${tableFrame(
                       ["Item", "Refino exigido", "Resultado", "Custo", "Equipamentos compatíveis"],
-                      `<tr><td>${itemLink("Refinador de Automatron")}</td><td>+4 a +6</td><td>+7</td><td>30.000.000 Zeny</td>` +
+                      `<tr><td>${itemLink("Refinador de Automatron")}</td><td>+4 a +6</td><td>+7</td>` +
+                          `<td>30.000.000 Zeny</td>` +
                           `<td>Colete, Perna e Motor Automatron A/B</td></tr>`,
                       "grouped-table"
                   )}` +
@@ -210,7 +215,8 @@ function renderEnchantTable(rows) {
                 ];
                 const body = rowspanBody(dedup, cols, [0, 1]);
                 return (
-                    `<section class="table-section"><div class="table-section-head"><h2>${esc(section[0][K.ep])} · ${esc(section[0][K.alvo])}` +
+                    `<section class="table-section"><div class="table-section-head"><h2>${esc(section[0][K.ep])}` +
+                    ` · ${esc(section[0][K.alvo])}` +
                     `</h2><span>${dedup.length} opções</span></div><p class="table-search-note">Os valores são os publicados ` +
                     `para o equipamento em +11 quando aplicável; nos acessórios, mantive o efeito normal indicado pela referência.</p>` +
                     `${tableFrame(
@@ -282,14 +288,24 @@ function renderCostTable(rows) {
                                                       `</span>${mats(g)}`
                                               )
                                               .join("");
-                                return `<tr><td>${esc(target)}</td><td>${slots}</td><td>${fx}</td><td class="material-cell">${matHtml}</td></tr>`;
+                                return (
+                                    `<tr><td>${esc(target)}</td><td>${slots}</td><td>${fx}</td><td class="material-cell">` +
+                                    `${matHtml}</td></tr>`
+                                );
                             })
                             .join("");
                     const navis = [...new Set(all.map((r) => r[K.navi]).filter(Boolean))];
+                    const tabelaCusto = tableFrame(
+                        ["Equipamento", "Slot(s)", "Tipo de efeito", "Materiais por tentativa"],
+                        body,
+                        "grouped-table align-top"
+                    );
                     return (
-                        `<section class="table-section"><div class="table-section-head"><h2>${esc(episode[0][K.ep])} · custo de encantamento</h2>` +
+                        `<section class="table-section"><div class="table-section-head"><h2>${esc(episode[0][K.ep])}` +
+                        ` · custo de encantamento</h2>` +
                         `<span>${targets.length} equipamentos</span></div><div class="panel-note cost-summary">` +
-                        `<b>Armaduras e acessórios:</b> 35 × ${itemLink("Pétala de Flor Invernal")} em Vellgunde (${esc(navis[0] || "")}). ` +
+                        `<b>Armaduras e acessórios:</b> 35 × ${itemLink("Pétala de Flor Invernal")}` +
+                        ` em Vellgunde (${esc(navis[0] || "")}). ` +
                         `A troca entrega <b>1 Peça de Flor Invernal aleatória</b>. Os custos dos encantamentos de armas variam ` +
                         `por slot e estão na tabela.</div>` +
                         `${
@@ -297,7 +313,7 @@ function renderCostTable(rows) {
                                 ? '<p class="table-search-note" style="margin:6px 0 10px">* Encantamentos de habilidade de classe 3: valores ' +
                                   "confirmados somente no Hazy Forest (kRO); não constam na bROWiki ou iROWiki.</p>"
                                 : ""
-                        }${tableFrame(["Equipamento", "Slot(s)", "Tipo de efeito", "Materiais por tentativa"], body, "grouped-table align-top")}` +
+                        }${tabelaCusto}` +
                         `</section>`
                     );
                 }
@@ -325,22 +341,39 @@ function renderCostTable(rows) {
                         const first = costGroup[0],
                             targets = [...new Set(costGroup.map((x) => x.target))],
                             materials = first.materials
-                                .map(
-                                    (x) =>
+                                .map((x) => {
+                                    const npc = x[K.npc]
+                                        ? `<span class="table-meta">${esc(x[K.npc])}${x[K.navi] ? ` · ${esc(x[K.navi])}` : ""}</span>`
+                                        : "";
+                                    const obs = x[K.obs] ? `<span class="table-meta">${esc(x[K.obs])}</span>` : "";
+                                    return (
                                         `<div class="material-line"><b class="material-qty">${esc(x[K.qtd] || "—")} ×</b>` +
-                                        `${itemLink(x[K.material])}</div>${x[K.npc] ? `<span class="table-meta">${esc(x[K.npc])}${x[K.navi] ? ` · ${esc(x[K.navi])}` : ""}</span>` : ""}${x[K.obs] ? `<span class="table-meta">${esc(x[K.obs])}</span>` : ""}`
-                                )
+                                        `${itemLink(x[K.material])}</div>${npc}${obs}`
+                                    );
+                                })
                                 .join(""),
                             body = costGroup
                                 .map(
                                     (x, i) =>
-                                        `<tr><td>${esc(x.target)}</td><td>${esc(x.slot)}</td><td>${esc(x.effect)}</td>${i === 0 ? `<td rowspan="${costGroup.length}" class="material-cell"><div class="material-lines">${materials}</div></td>` : ""}` +
+                                        `<tr><td>${esc(x.target)}</td><td>${esc(x.slot)}</td><td>${esc(x.effect)}` +
+                                        `</td>${
+                                            i === 0
+                                                ? `<td rowspan="${costGroup.length}" class="material-cell"><div class="material-lines">` +
+                                                  `${materials}</div></td>`
+                                                : ""
+                                        }` +
                                         `</tr>`
                                 )
                                 .join("");
+                        const tabelaCusto = tableFrame(
+                            ["Equipamento", "Slot(s)", "Tipo de efeito", "Materiais por tentativa"],
+                            body,
+                            "grouped-table align-top"
+                        );
                         return (
-                            `<section class="table-section"><div class="table-section-head"><h2>${esc(episode[0][K.ep])} · custo por encantamento</h2>` +
-                            `<span>${targets.length} peças com o mesmo custo</span></div>${tableFrame(["Equipamento", "Slot(s)", "Tipo de efeito", "Materiais por tentativa"], body, "grouped-table align-top")}` +
+                            `<section class="table-section"><div class="table-section-head"><h2>${esc(episode[0][K.ep])}` +
+                            ` · custo por encantamento</h2>` +
+                            `<span>${targets.length} peças com o mesmo custo</span></div>${tabelaCusto}` +
                             `</section>`
                         );
                     })
@@ -369,7 +402,7 @@ function renderDataTable(view) {
         cols = cfg.cols.map(([campo, rotulo]) => [COL[cfg.key][campo], rotulo]),
         body = rowspanBody(found, cols, cfg.mergeCols || []);
     $("#tableMount").innerHTML = tableFrame(
-        cols.map((c) => esc(c[1])),
+        cols.map(([, rotulo]) => esc(rotulo)),
         body
     );
 }
@@ -378,7 +411,9 @@ function renderReformTable() {
     const f = db.fides || {},
         term = globalTerm.toLocaleLowerCase("pt-BR");
     $("#reformNote").innerHTML =
-        `<p class="table-search-note">Armas Adulter Fides (+9 ou mais) viram Vivatus Fides com o ${esc(f.npc?.nome || "Bamdatt")} ${naviBtn("/navi " + (f.npc?.navi || "wolfvill 170/131"))}. ` +
+        `<p class="table-search-note">Armas Adulter Fides (+9 ou mais) viram Vivatus Fides com o ` +
+        `${esc(f.npc?.nome || "Bamdatt")} ${naviBtn("/navi " + (f.npc?.navi || "wolfvill 170/131"))}` +
+        `. ` +
         `Os três métodos têm o mesmo custo fixo para todas as classes e armas; o Esboço de Arma deve corresponder ` +
         `à arma desejada.</p>`;
     const classes = (f.classes || []).filter(
@@ -405,9 +440,11 @@ function renderReformTable() {
             classes
                 .map(
                     (cl) =>
-                        `<tr><td class="classe-cell">${esc(cl.classe)}</td><td><div class="ver-grid">${cl.armas
+                        `<tr><td class="classe-cell">${esc(cl.classe)}</td><td><div class="ver-grid">` +
+                        `${cl.armas
                             .map((a) => `<div class="adu">${refItem(a.o)}</div><div class="viv">${refItem(a.r)}</div>`)
-                            .join("")}` + `</div></td></tr>`
+                            .join("")}` +
+                        `</div></td></tr>`
                 )
                 .join(""),
             "conv-table align-top"

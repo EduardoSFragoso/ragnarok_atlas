@@ -123,7 +123,8 @@ const CALCS = [
                 value: Math.max(0, max - penalty),
                 unit: "poções",
                 caption:
-                    `Diferença A−B: ${fmt(d)} pontos. Máximo pelo nível: ${fmt(max)}. Faixa estimada: máximo − ${penalty}. ` +
+                    `Diferença A−B: ${fmt(d)} pontos. Máximo pelo nível: ${fmt(max)}. Faixa estimada: máximo − ` +
+                    `${penalty}. ` +
                     `Fórmula A: ${fmt(a)} · Fórmula B: ${fmt(b)}.`,
             };
         },
@@ -164,7 +165,8 @@ const CALCS = [
                 value: Math.max(0, max - penalty),
                 unit: "poções",
                 caption:
-                    `Diferença A−B: ${fmt(d)} pontos. Máximo pelo nível: ${fmt(max)}. Faixa estimada: máximo − ${penalty}. ` +
+                    `Diferença A−B: ${fmt(d)} pontos. Máximo pelo nível: ${fmt(max)}. Faixa estimada: máximo − ` +
+                    `${penalty}. ` +
                     `Fórmula A: ${fmt(a)} · Fórmula B: ${fmt(b)}.`,
             };
         },
@@ -185,10 +187,20 @@ const CALCS = [
             const a = v.classe / 4 + v.des / 3 + v.luk / 2,
                 d = v.aleatorio + v.dificuldade,
                 diff = a - d;
+            const estimativa =
+                diff >= 30
+                    ? "Estimativa indicada: 10 a 12 pratos."
+                    : diff >= 10
+                      ? "Estimativa indicada: 10 pratos."
+                      : diff === 0
+                        ? "Estimativa indicada: 8 pratos."
+                        : diff > -50
+                          ? "Estimativa indicada: 5 pratos."
+                          : "Estimativa indicada: falha.";
             return {
                 value: diff,
                 unit: "pts",
-                caption: `Criação: ${fmt(a)} · Dificuldade: ${fmt(d)}. ${diff >= 30 ? "Estimativa indicada: 10 a 12 pratos." : diff >= 10 ? "Estimativa indicada: 10 pratos." : diff === 0 ? "Estimativa indicada: 8 pratos." : diff > -50 ? "Estimativa indicada: 5 pratos." : "Estimativa indicada: falha."}`,
+                caption: `Criação: ${fmt(a)} · Dificuldade: ${fmt(d)}. ${estimativa}`,
             };
         },
     },
@@ -279,18 +291,28 @@ function calcPanel(id) {
     if (!c) return "";
     return (
         `<section class="calculator" data-active-calc="${c.id}"><div class="card calc-form">` +
-        `<h3>${c.title}</h3><p>${c.desc}</p><div class="fields"><div class="field"><label for="recipeProduct">Produto / receita</label>` +
+        `<h3>${c.title}</h3><p>${c.desc}</p><div class="fields"><div class="field">` +
+        `<label for="recipeProduct">Produto / receita</label>` +
         `<select id="recipeProduct" name="recipeProduct">${recipes.map((r) => `<option>${esc(r.name)}</option>`).join("")}` +
         `</select></div>${c.fields
-            .map(
-                ([name, label, value, choices]) =>
-                    `<div class="field"><label for="f_${name}">${label}</label>${
-                        choices
-                            ? `<select id="f_${name}" name="${name}">${choices.map(([text, n]) => `<option value="${n}" ${n === value ? "selected" : ""}>${text} (+${n}%)</option>`).join("")}` +
-                              `</select>`
-                            : `<input id="f_${name}" name="${name}" type="number" step="any" value="${value}"${id === "runas" && name === "dificuldade" ? ' readonly title="Preenchido automaticamente pela receita escolhida"' : ""}>`
-                    }` + `</div>`
-            )
+            .map(([name, label, value, choices]) => {
+                const opcoes = choices
+                    ? choices
+                          .map(
+                              ([text, n]) =>
+                                  `<option value="${n}" ${n === value ? "selected" : ""}>${text} (+${n}%)</option>`
+                          )
+                          .join("")
+                    : "";
+                const somenteLeitura =
+                    id === "runas" && name === "dificuldade"
+                        ? ' readonly title="Preenchido automaticamente pela receita escolhida"'
+                        : "";
+                const controle = choices
+                    ? `<select id="f_${name}" name="${name}">${opcoes}</select>`
+                    : `<input id="f_${name}" name="${name}" type="number" step="any" value="${value}"${somenteLeitura}>`;
+                return `<div class="field"><label for="f_${name}">${label}</label>${controle}</div>`;
+            })
             .join("")}` +
         `</div>${id === "preparar" ? '<p class="table-search-note" data-difficulty-range hidden></p>' : ""}` +
         `</div><div class="card calc-result"><div class="eyebrow">RESULTADO EM TEMPO REAL</div>` +
@@ -308,12 +330,14 @@ function recipeIngredients(id, name) {
     const materials = recipe.materials
         .map(
             (m) =>
-                `<div class="ingredient"><span class="item-label">${itemLink(m.name)}</span><b>${m.quantities.map(esc).join(" + ")}` +
+                `<div class="ingredient"><span class="item-label">${itemLink(m.name)}</span>` +
+                `<b>${m.quantities.map(esc).join(" + ")}` +
                 `</b></div>`
         )
         .join("");
     return (
-        `<div class="ingredient-list"><div class="ingredient"><span class="item-label">Materiais para ${itemLink(recipe.name)}` +
+        `<div class="ingredient-list"><div class="ingredient"><span class="item-label">Materiais para ` +
+        `${itemLink(recipe.name)}` +
         `</span><b>POR UNID.</b></div>${materials || '<span class="recipe-empty">Materiais não informados.</span>'}` +
         `</div>`
     );
@@ -331,8 +355,10 @@ function recipeCatalog(id) {
         `<th>Materiais por receita</th></tr></thead><tbody id="recipeRows">${recipes
             .map(
                 (r) =>
-                    `<tr data-recipe-row data-search="${esc([r.name, ...r.materials.map((m) => m.name)].join(" ").toLocaleLowerCase("pt-BR"))}">` +
-                    `<td><div class="recipe-product"><a class="recipe-select item-label" href="${itemHref(r.name)}" target="_blank" ` +
+                    `<tr data-recipe-row data-search="${esc([r.name, ...r.materials.map((m) => m.name)].join(" ").toLocaleLowerCase("pt-BR"))}` +
+                    `">` +
+                    `<td><div class="recipe-product"><a class="recipe-select item-label" href="` +
+                    `${itemHref(r.name)}" target="_blank" ` +
                     `rel="noopener noreferrer" title="Abrir ${esc(r.name)} no Divine Pride">` +
                     `${itemIcon(r.name)}${esc(r.name)}</a></div></td><td><div class="recipe-materials">` +
                     `${
@@ -359,7 +385,8 @@ function updateArrowCalc() {
     $("#arrowIngredients").innerHTML = recipe.materials
         .map(
             (m) =>
-                `<div class="ingredient"><span class="item-label">${itemLink(m.name)}</span><b>${m.quantities.map((q) => fmt(Number(q) || 0)).join(" + ")}` +
+                `<div class="ingredient"><span class="item-label">${itemLink(m.name)}</span>` +
+                `<b>${m.quantities.map((q) => fmt(Number(q) || 0)).join(" + ")}` +
                 `</b></div>`
         )
         .join("");
@@ -391,7 +418,8 @@ function syncRecipeChoice() {
                 if (note) {
                     note.textContent =
                         nums.length > 1
-                            ? `Esta receita tem dificuldade variável: ${text}. A calculadora usa o menor valor (${fmt(nums[0])}%).`
+                            ? `Esta receita tem dificuldade variável: ${text}. A calculadora usa o menor valor (` +
+                              `${fmt(nums[0])}%).`
                             : text.toLowerCase().includes("não indicada")
                               ? "A página não informa dificuldade para esta receita."
                               : `Dificuldade desta receita: ${text}.`;
@@ -534,7 +562,8 @@ function enchantPanel() {
         `</select></div><p class="table-search-note">Materiais do upgrade de grau da Arma Vil Invernal (encantamento {2}).</p>` +
         `</div><div class="fields" id="ecSlots" style="margin-top:11px"></div><p class="table-search-note" id="ecHint" ` +
         `style="margin-top:10px">` +
-        `</p></div><div class="card calc-result"><div class="eyebrow">CUSTO TOTAL</div><h3 id="ecTitle">—</h3>` +
+        `</p></div><div class="card calc-result"><div class="eyebrow">CUSTO TOTAL</div>` +
+        `<h3 id="ecTitle">—</h3>` +
         `<p id="ecNote"></p><div class="ingredient-list" id="ecTotals"></div></div></section>`
     );
 }
@@ -563,7 +592,8 @@ function updateEnchantCalc(sec) {
             .map((p) => {
                 const list = fixed.filter((e) => e.pos.includes(p)).sort((x, y) => x.pos.length - y.pos.length);
                 return (
-                    `<div class="field"><label for="ecPos${p}">Encantamento ${p}</label><select id="ecPos${p}" data-pos="${p}">` +
+                    `<div class="field"><label for="ecPos${p}">Encantamento ${p}</label><select id="ecPos` +
+                    `${p}" data-pos="${p}">` +
                     `${list.map(opt).join("")}<option value="-1">— nenhum —</option></select></div>`
                 );
             })
@@ -573,7 +603,8 @@ function updateEnchantCalc(sec) {
             h +=
                 `<div class="field"><label for="ecAny">Efeito do encantamento</label><select id="ecAny" data-any>` +
                 `${any.map(opt).join("")}<option value="-1">— nenhum —</option></select></div><div class="field">` +
-                `<label for="ecAnyN">Quantidade de encantos</label><select id="ecAnyN">${Array.from({ length: n }, (_, k) => `<option>${k + 1}</option>`).join("")}` +
+                `<label for="ecAnyN">Quantidade de encantos</label><select id="ecAnyN">` +
+                `${Array.from({ length: n }, (_, k) => `<option>${k + 1}</option>`).join("")}` +
                 `</select></div>`;
         }
         box.innerHTML = h || '<p class="muted">Sem dados para este equipamento.</p>';

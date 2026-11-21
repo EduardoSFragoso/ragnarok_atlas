@@ -83,7 +83,7 @@ function diaTablesTsv(rows) {
             return (
                 `<section class="table-section"><div class="table-section-head"><h2>${title}</h2>` +
                 `<span>${n} atividade${n > 1 ? "s" : ""}</span></div>${tableFrame(
-                    cols.map((c) => esc(c[1])),
+                    cols.map(([, rotulo]) => esc(rotulo)),
                     body,
                     "grouped-table align-top"
                 )}` +
@@ -120,11 +120,11 @@ function diariasView() {
                   const extra = gr.diarias
                       .filter((d) => (d.detalhes && d.detalhes.length) || d.tabela)
                       .map((d) => {
+                          const itensPassos = (d.detalhes || [])
+                              .map((x) => `<li class="guide-step"><span class="step-text">${richText(x)}</span></li>`)
+                              .join("");
                           const passos =
-                              d.detalhes && d.detalhes.length
-                                  ? `<ol class="guide-steps">${d.detalhes.map((x) => `<li class="guide-step"><span class="step-text">${richText(x)}</span></li>`).join("")}` +
-                                    `</ol>`
-                                  : "";
+                              d.detalhes && d.detalhes.length ? `<ol class="guide-steps">${itensPassos}</ol>` : "";
                           const tabela = d.tabela
                               ? tableFrame(
                                     d.tabela.colunas.map((c) => esc(c)),
@@ -135,7 +135,8 @@ function diariasView() {
                           return (
                               `<section class="guide-section" id="${esc(activeDiaEp)}-como-${esc(d.nome)
                                   .toLowerCase()
-                                  .replace(/[^a-z0-9]+/g, "-")}">` +
+                                  .replace(/[^a-z0-9]+/g, "-")}` +
+                              `">` +
                               `<div class="guide-section-head"><h3>Como fazer — ${esc(d.nome)}</h3></div>${passos}${tabela}` +
                               `</section>`
                           );
@@ -161,7 +162,8 @@ function diariasView() {
         <p class="page-subtitle">Tarefas repetíveis do episódio, com os itens de ` +
         `cada uma.</p>
       </div>
-      ${diariasEstoqueWidget(activeDiaEp, rows)}
+      ${diariasEstoqueWidget(activeDiaEp, rows)}` +
+        `
     </div>
     <div class="toolbar" ` +
         `style="margin-bottom:14px">` +
@@ -169,7 +171,8 @@ function diariasView() {
         `${eps.map((e) => `<option${e === activeDiaEp ? " selected" : ""}>${esc(e)}</option>`).join("")}` +
         `</select></div>
     ${avisoSeFalha("fontes")}
-    ${ges?.diarias?.aviso ? `<div class="panel-note">${richText(ges.diarias.aviso)}</div>` : ""}
+    ${ges?.diarias?.aviso ? `<div class="panel-note">${richText(ges.diarias.aviso)}</div>` : ""}` +
+        `
     ` +
         `<div class="panel-note">` +
         `<b>Ganho por dia:</b> <span id="diaTotalsList">${diaTotalsHtml(rows, diaBonus && temBonus)}` +
@@ -208,7 +211,8 @@ function diariasEstoqueWidget(ep, rows) {
         `<div id="diaEstoque" data-ep="${esc(ep)}" class="estoque-widget"><div class="est-head">` +
         `<span class="eyebrow">ESTOQUE · ${esc(ep)}</span>${
             temBonus
-                ? `<label class="bonus-entry"><input type="checkbox" id="diaBonus"${diaBonus ? " checked" : ""}> incluir ` +
+                ? `<label class="bonus-entry"><input type="checkbox" id="diaBonus"${diaBonus ? " checked" : ""}` +
+                  `> incluir ` +
                   `bônus por reputação</label>`
                 : ""
         }` +
@@ -216,12 +220,16 @@ function diariasEstoqueWidget(ep, rows) {
             .map((m) => {
                 const farm = totals.get(m) || 0;
                 return (
-                    `<div class="est-item"><span class="item-label">${itemIcon(m)}${esc(m)}</span><span class="est-controls">` +
-                    `<label>Tem <input type="number" min="0" step="1" data-est-item="${esc(m)}" value="${esc(est[m] ?? rec?.total_moedas?.[m] ?? 0)}" ` +
+                    `<div class="est-item"><span class="item-label">${itemIcon(m)}${esc(m)}` +
+                    `</span><span class="est-controls">` +
+                    `<label>Tem <input type="number" min="0" step="1" data-est-item="${esc(m)}` +
+                    `" value="${esc(est[m] ?? rec?.total_moedas?.[m] ?? 0)}" ` +
                     `title="Valor salvo; vazio ou 0 volta ao total das quests">` +
-                    `</label><button type="button" class="button" data-est-add="${esc(m)}" data-farm="${farm}" title="Somar ` +
+                    `</label><button type="button" class="button" data-est-add="${esc(m)}" data-farm="` +
+                    `${farm}" title="Somar ` +
                     `o ganho das diárias de hoje ao estoque">+ ${fmt(farm)}` +
-                    `</button><button type="button" class="button stock-reset" data-est-rst="${esc(m)}" title="Voltar ao ` +
+                    `</button><button type="button" class="button stock-reset" data-est-rst="` +
+                    `${esc(m)}" title="Voltar ao ` +
                     `total das quests deste item">↺</button>` +
                     `</span></div>`
                 );

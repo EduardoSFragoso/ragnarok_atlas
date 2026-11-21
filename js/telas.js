@@ -48,9 +48,9 @@ function landing() {
             ["fontes", "↗", "Fontes e referências", "Consulte as páginas de apoio e as observações dos dados."],
         ]
             .map(
-                (c) =>
-                    `<button class="quick-card card" data-go="${c[0]}"><span class="quick-icon">${c[1]}` +
-                    `</span><h3>${c[2]}</h3><p>${c[3]}</p></button>`
+                ([vista, icone, titulo, texto]) =>
+                    `<button class="quick-card card" data-go="${vista}"><span class="quick-icon">${icone}` +
+                    `</span><h3>${titulo}</h3><p>${texto}</p></button>`
             )
             .join("")}` +
         `</div>`
@@ -65,7 +65,8 @@ function sourceView() {
         `<div class="page-head"><div><div class="eyebrow">CONSULTA E RASTREABILIDADE</div>` +
         `<h1 class="page-title">Fontes & referências</h1><p class="page-subtitle">Páginas consultadas como apoio ` +
         `e referências indicadas para expandir a base.</p>` +
-        `</div><span class="count-pill">${BROWIKI.length + HAZY_EP.length + IROWIKI.length + 4} LINKS</span>` +
+        `</div><span class="count-pill">${BROWIKI.length + HAZY_EP.length + IROWIKI.length + 4}` +
+        ` LINKS</span>` +
         `</div>${avisoSeFalha("referencias")}<div class="panel-note">Os dados estruturados ficam em arquivos ` +
         `JSON na pasta <code>data/</code>, reunindo informações da bROWiki e da API do Divine Pride, com apoio ` +
         `do Hazy Forest e do iRO Wiki como fontes complementares. A permissão para redistribuir os dados e textos ` +
@@ -78,7 +79,8 @@ function sourceView() {
         `</div><div class="source-grid"><article class="card source-card"><h3>API do Divine Pride</h3>` +
         `<a href="https://www.divine-pride.net/tools/api-doc" target="_blank" rel="noopener noreferrer">Documentação da API ↗</a>` +
         `<p>Fonte consultada para IDs, ícones e parte dos dados dos itens catalogados.</p>` +
-        `</article><article class="card source-card"><h3>Termos de uso do Divine</h3><a href="https://divine.inc/terms" ` +
+        `</article><article class="card source-card"><h3>Termos de uso do Divine</h3>` +
+        `<a href="https://divine.inc/terms" ` +
         `target="_blank" rel="noopener noreferrer">Ler os termos ↗</a>` +
         `<p>Dados, textos e ícones da API são conteúdo de terceiros, fora da licença do código do projeto.</p>` +
         `</article></div><div class="section-heading"><div><h2>Fontes de refino Automatron</h2>` +
@@ -99,7 +101,8 @@ function sourceView() {
                     `${BROWIKI.filter(([categoria]) => categoria === cat)
                         .map(
                             ([, nome, url]) =>
-                                `<article class="card source-card"><h3>${esc(nome)}</h3><a href="${esc(url)}" target="_blank" rel="noopener ` +
+                                `<article class="card source-card"><h3>${esc(nome)}</h3><a href="${esc(url)}` +
+                                `" target="_blank" rel="noopener ` +
                                 `noreferrer">Abrir página no bROWiki ↗</a>` +
                                 `</article>`
                         )
@@ -107,19 +110,23 @@ function sourceView() {
                     `</div>`
             )
             .join("")}` +
-        `<div class="section-heading"><div><h2>Hazy Forest (fonte complementar)</h2><p>Páginas dos episódios ` +
+        `<div class="section-heading"><div><h2>Hazy Forest (fonte complementar)</h2>` +
+        `<p>Páginas dos episódios ` +
         `usadas nas missões diárias e nos consumos (wiki do kRO).</p>` +
         `</div></div><div class="source-grid">${HAZY_EP.map(
             ([, nome, url]) =>
-                `<article class="card source-card"><h3>${esc(nome)}</h3><a href="${esc(url)}" target="_blank" rel="noopener ` +
+                `<article class="card source-card"><h3>${esc(nome)}</h3><a href="${esc(url)}` +
+                `" target="_blank" rel="noopener ` +
                 `noreferrer">Abrir página no Hazy Forest ↗</a>` +
                 `</article>`
         ).join("")}` +
-        `</div><div class="section-heading"><div><h2>iRO Wiki (fonte complementar)</h2><p>Conferência dos passos ` +
+        `</div><div class="section-heading"><div><h2>iRO Wiki (fonte complementar)</h2>` +
+        `<p>Conferência dos passos ` +
         `dos episódios 19, 18, 17.2 e 17.1 e das missões diárias.</p>` +
         `</div></div><div class="source-grid">${IROWIKI.map(
             ([, nome, url]) =>
-                `<article class="card source-card"><h3>${esc(nome)}</h3><a href="${esc(url)}" target="_blank" rel="noopener ` +
+                `<article class="card source-card"><h3>${esc(nome)}</h3><a href="${esc(url)}` +
+                `" target="_blank" rel="noopener ` +
                 `noreferrer">Abrir página no iRO Wiki ↗</a>` +
                 `</article>`
         ).join("")}` +

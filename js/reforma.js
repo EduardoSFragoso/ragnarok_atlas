@@ -54,16 +54,21 @@ function refMulti(g) {
         const p = par(items),
             req = inf.notas.length ? inf.notas.map(refNota).join("<br>") : "\u2014",
             ms = refMethods(inf);
-        (ms.length ? ms : [["\u2014", "\u2014", "\u2014"]]).forEach((m) => rows.push([p, req, m[0], m[1], m[2]]));
+        (ms.length ? ms : [["\u2014", "\u2014", "\u2014"]]).forEach(([metodo, refino, materiais]) =>
+            rows.push([p, req, metodo, refino, materiais])
+        );
     });
+    // posição de cada coluna na linha: [item, requisitos, método, alteração no refino, materiais]
+    const [ITEM, REQUISITOS, METODO, REFINO, MATERIAIS] = [0, 1, 2, 3, 4];
+    const crua = (posicao) => (linha) => linha[posicao];
     const cols = [
-        [0, "Item original \u2192 reformado", (c) => c[0]],
-        [1, "Requisitos", (c) => c[1]],
-        [2, "M\u00e9todo", (c) => c[2]],
-        [3, "Altera\u00e7\u00e3o no refino", (c) => c[3]],
-        [4, "Materiais", (c) => c[4]],
+        [ITEM, "Item original \u2192 reformado", crua(ITEM)],
+        [REQUISITOS, "Requisitos", crua(REQUISITOS)],
+        [METODO, "M\u00e9todo", crua(METODO)],
+        [REFINO, "Altera\u00e7\u00e3o no refino", crua(REFINO)],
+        [MATERIAIS, "Materiais", crua(MATERIAIS)],
     ];
-    return tbl(ths(cols.map((c) => esc(c[1]))), rowspanBody(rows, cols, [0, 1]), "grouped-table align-top");
+    return tbl(ths(cols.map(([, rotulo]) => esc(rotulo))), rowspanBody(rows, cols, [0, 1]), "grouped-table align-top");
 }
 
 const refGrupo = (g) =>
@@ -93,7 +98,8 @@ function refMinerais() {
                 tipos
                     .map(
                         (tp, i) =>
-                            `<tr>${i === 0 ? `<td rowspan="3">${c}</td>` : ""}<td><span class="item-label">${itemLink(`Semijoia ${c} de ${tp}`)}` +
+                            `<tr>${i === 0 ? `<td rowspan="3">${c}</td>` : ""}<td><span class="item-label">` +
+                            `${itemLink(`Semijoia ${c} de ${tp}`)}` +
                             `</span></td><td>${prev ? cst("", [[3, `Semijoia ${prev} de ${tp}`]]) : cst("", [[1, "Sombridecon"]])}` +
                             `</td>${i === 0 ? `<td rowspan="3">${z}</td>` : ""}</tr>`
                     )
@@ -110,19 +116,26 @@ function fidesBonus() {
         tbl(
             ths(["Bônus", "Adulter", "Vivatus"]),
             ["1º Bônus", "2º Bônus"]
-                .map(
-                    (t, i) =>
-                        `<tr><th colspan="3">${t}</th></tr>${(i ? d.segundo : d.primeiro).map((x) => `<tr><td>${esc(x.efeito)}</td><td>${esc(x.adulter)}</td><td>${esc(x.vivatus)}</td></tr>`).join("")}`
-                )
+                .map((t, i) => {
+                    const linhas = (i ? d.segundo : d.primeiro)
+                        .map(
+                            (x) =>
+                                `<tr><td>${esc(x.efeito)}</td><td>${esc(x.adulter)}</td><td>${esc(x.vivatus)}</td></tr>`
+                        )
+                        .join("");
+                    return `<tr><th colspan="3">${t}</th></tr>${linhas}`;
+                })
                 .join(""),
             "grouped-table"
         );
     const comb = (rot, nom) =>
         `<p class="table-search-note"><b>${esc(rot)}</b> ${nom.map((n) => itemLink(n)).join(", ")}</p>`;
+    const combAdulter = comb("Combinadores das Armas Adulter Fides:", b.combinadores.adulter);
+    const combVivatus = comb("Combinadores das Armas Vivatus Fides:", b.combinadores.vivatus);
     return (
         `<div class="panel-note lg"><b>Regras</b><ul>${b.regras.map((r) => `<li>${esc(r)}</li>`).join("")}` +
         `</ul>${b.variaveis.map((v) => `<p><b>${esc(v.nome)}</b> pode ser, aleatoriamente: ${esc(v.opcoes)}.</p>`).join("")}` +
-        `</div>${comb("Combinadores das Armas Adulter Fides:", b.combinadores.adulter)}${comb("Combinadores das Armas Vivatus Fides:", b.combinadores.vivatus)}` +
+        `</div>${combAdulter}${combVivatus}` +
         `<p class="table-search-note">${esc(b.combinadores.nota)}</p><div class="section-heading">` +
         `<div><h2>Bônus Físicos</h2></div></div>${fb(b.fisicos)}<div class="section-heading">` +
         `<div><h2>Bônus Mágicos</h2></div></div>${fb(b.magicos)}`
@@ -131,23 +144,31 @@ function fidesBonus() {
 
 function reformView() {
     const eq = db.reformaPagina?.equipes || [];
+    const textoReformas =
+        "Cada equipe marca as armas reformadas com um sufixo no nome. Clique no título de uma seção para recolher ou abrir.";
     return (
-        `<div class="page-head"><div><div class="eyebrow">MELHORIAS DE EQUIPAMENTO</div><h1 class="page-title">Reforma</h1>` +
-        `<p class="page-subtitle">Equipes de reforma, armas Fides e minerais.</p></div><span class="count-pill">` +
+        `<div class="page-head"><div><div class="eyebrow">MELHORIAS DE EQUIPAMENTO</div>` +
+        `<h1 class="page-title">Reforma</h1>` +
+        `<p class="page-subtitle">Equipes de reforma, armas Fides e minerais.</p>` +
+        `</div><span class="count-pill">` +
         `${eq.length} EQUIPES + FIDES</span></div>
 <div class="panel-note lg">Reforma é um sistema que permite ` +
         `transformar seus equipamentos em versões mais poderosas. Para reformar um item, vá ao Laboratório Regenschirm ` +
-        `e fale com a Promotora de Reformas, no Shopping ${naviBtn("/navi itemmall 15/50")} ou em Lighthalzen ${naviBtn("/navi lighthalzen 99/156")}. ` +
+        `e fale com a Promotora de Reformas, no Shopping ${naviBtn("/navi itemmall 15/50")}` +
+        ` ou em Lighthalzen ${naviBtn("/navi lighthalzen 99/156")}. ` +
         `O processo exige o equipamento com o nível de refino e os materiais corretos.</div>
-${avisoSeFalha("fides")}${avisoSeFalha("reformaPagina")}
-${secH("Reformas", "Cada equipe marca as armas reformadas com um sufixo no nome. Clique no título de uma seção para recolher ou abrir.")}${eq.map(refEquipe).join("")}
+` +
+        `${avisoSeFalha("fides")}${avisoSeFalha("reformaPagina")}
+${secH("Reformas", textoReformas)}${eq.map(refEquipe).join("")}` +
+        `
 ${fold(
     "Armas Fides",
     '<div id="reformNote"></div><div id="reformConversionMount"></div><div class="section-heading"><div><h2>B\u00f4nus ' +
         "aleat\u00f3rios das Armas Fides</h2></div></div>" +
         fidesBonus(),
     { cls: "fold-top", count: `${(db.fides?.classes || []).reduce((n, c) => n + c.armas.length, 0)} armas` }
-)}
+)}` +
+        `
 ${fold(
     "Minerais",
     '<div class="panel-note lg">São fabricados pelo Pesquisador de Minérios ${naviBtn("/navi rgsr_in 131/187")}. ' +
