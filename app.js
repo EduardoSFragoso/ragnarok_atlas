@@ -228,17 +228,6 @@ let currentView = "inicio",
 /* Preenchido em loadData a partir de data/referencias.json (itens_conhecidos
    e ep19_ids), dos mapas do Divine Pride e das receitas. */
 let ICON_IDS = {};
-/* Estrutura das tabelas de receita por habilidade (posições das colunas). */
-const RECIPE_META = {
-    flechas: { key: "flechas", product: 1, material: 3, quantity: 4 },
-    toxina: { key: "toxina", product: 2, material: 6, quantity: 7 },
-    veneno: { key: "veneno", product: 2, material: 6, quantity: 7 },
-    runas: { key: "runas", product: 2, material: 6, quantity: 7, difficulty: 3 },
-    preparar: { key: "preparar", product: 2, material: 6, quantity: 7, difficulty: 3 },
-    manipular: { key: "manipular", product: 2, material: 6, quantity: 7, factor: 3 },
-    farmacia: { key: "farmacia", product: 2, material: 6, quantity: 7, factor: 3 },
-    culinaria: { key: "culinaria", product: 2, material: 6, quantity: 7 },
-};
 const $ = (s) => document.querySelector(s),
     $$ = (s) => [...document.querySelectorAll(s)];
 function esc(v) {
@@ -261,9 +250,11 @@ function episodeRank(s) {
     return m ? Number(m[1]) : -1;
 }
 /** Ordena grupos pelo episódio (mais recente primeiro, empate alfabético). */
-function sortEpisodes(groups) {
+function sortEpisodes(groups, epCol) {
     return groups.sort(
-        (a, b) => episodeRank(b[0][0]) - episodeRank(a[0][0]) || String(a[0][0]).localeCompare(String(b[0][0]), "pt-BR")
+        (a, b) =>
+            episodeRank(b[0][epCol]) - episodeRank(a[0][epCol]) ||
+            String(a[0][epCol]).localeCompare(String(b[0][epCol]), "pt-BR")
     );
 }
 /** Debounce simples: executa fn só depois de `ms` sem novas chamadas. */
@@ -334,6 +325,24 @@ const ROW_JSON_KEYS = [
     "farmacia",
     "culinaria",
 ];
+/* Índices de coluna por NOME LÓGICO: COL.custo.material, COL.equips.npc etc.
+   data/colunas.json liga cada nome lógico ao nome da coluna no JSON; aqui os
+   nomes viram índices da matriz montada por rowsFromJson. O código das views
+   usa COL e não números soltos (r[7]) — reordenar colunas não quebra nada. */
+const COL = {};
+function resolverColunas() {
+    for (const key of ROW_JSON_KEYS) {
+        const cabecalho = db[key]?.[0] || [];
+        COL[key] = {};
+        for (const [campo, nome] of Object.entries(db.colunas?.[key]?.campos || {})) {
+            const i = cabecalho.indexOf(nome);
+            if (i < 0) {
+                console.error(`Campo "${campo}" aponta para a coluna "${nome}", ausente em ${DATA_FILES[key]}`);
+                falhasCarga.push(`${DATA_FILES[key]} (coluna "${nome}" ausente)`);
+            } else COL[key][campo] = i;
+        }
+    }
+}
 /* Converte as linhas-objeto dos JSONs em matriz (1ª linha = cabeçalho). As colunas
    são lidas POR NOME, na ordem definida em data/colunas.json: reordenar ou
    acrescentar colunas nos JSONs não desloca mais os índices usados pelo app.
@@ -398,7 +407,8 @@ async function loadData() {
     for (const key of ROW_JSON_KEYS)
         db[key] = Array.isArray(db[key]?.[0])
             ? db[key]
-            : rowsFromJson(db[key] || [], db.colunas?.[key], DATA_FILES[key]);
+            : rowsFromJson(db[key] || [], db.colunas?.[key]?.colunas, DATA_FILES[key]);
+    resolverColunas();
     /* Conteúdo estático migrado para data/referencias.json: links, IDs
        conhecidos, Ep. 19 (grau/reciclagem) e chances expandidas com rb(). */
     const ref = db.referencias || {};
@@ -416,28 +426,30 @@ async function loadData() {
     GRAU_CH = expandChance(ref.grau_chances);
     ICON_IDS = Object.assign({}, ref.itens_conhecidos || {}, ref.ep19_ids || {});
     Object.assign(ICON_IDS, db.itemIds || {});
-    for (const key of ["flechas", "toxina", "veneno", "runas", "preparar", "manipular", "farmacia", "culinaria"])
-        for (const r of db[key] || []) {
-            if (r[0] && r[2]) ICON_IDS[r[2]] = r[0];
-            if (r[4] && r[6]) ICON_IDS[r[6]] = r[4];
+    for (const key of ["toxina", "veneno", "runas", "preparar", "manipular", "farmacia", "culinaria"]) {
+        const K = COL[key];
+        for (const r of (db[key] || []).slice(1)) {
+            if (r[K.idProduto] && r[K.produto]) ICON_IDS[r[K.produto]] = r[K.idProduto];
+            if (r[K.idMaterial] && r[K.material]) ICON_IDS[r[K.material]] = r[K.idMaterial];
         }
+    }
     if (falhasCarga.length) mostrarBannerCarga(falhasCarga);
 }
 /* ===== Receitas por habilidade ===== */
 function getRecipes(id) {
-    const meta = RECIPE_META[id];
-    if (!meta) return [];
+    const K = COL[id];
+    if (K?.produto == null) return [];
     let active = "";
     const recipes = [];
-    for (const r of (db[meta.key] || []).slice(id === "flechas" ? 2 : 1)) {
-        if (r[meta.product]) {
-            active = r[meta.product];
+    for (const r of (db[id] || []).slice(id === "flechas" ? 2 : 1)) {
+        if (r[K.produto]) {
+            active = r[K.produto];
             recipes.push({ name: active, raw: r, materials: [] });
         }
-        if (active && r[meta.material]) {
+        if (active && r[K.material]) {
             const recipe = recipes[recipes.length - 1],
-                name = r[meta.material],
-                qty = r[meta.quantity] || "1";
+                name = r[K.material],
+                qty = r[K.quantidade] || "1";
             let material = recipe.materials.find((m) => m.name === name);
             if (!material) {
                 material = { name, quantities: [] };
@@ -499,59 +511,61 @@ const TABLES = {
         title: "Equipamentos de episódio",
         desc: "Peças disponíveis, NPCs, materiais de troca e observações.",
         cols: [
-            [0, "Episódio"],
-            [1, "Categoria"],
-            [3, "Equipamento"],
-            [4, "NPC"],
-            [5, "/navi"],
-            [7, "Material"],
-            [8, "Qtd."],
-            [10, "Material 2"],
-            [11, "Qtd. 2"],
-            [12, "Observação"],
+            ["ep", "Episódio"],
+            ["cat", "Categoria"],
+            ["equip", "Equipamento"],
+            ["npc", "NPC"],
+            ["navi", "/navi"],
+            ["mat1", "Material"],
+            ["qtd1", "Qtd."],
+            ["mat2", "Material 2"],
+            ["qtd2", "Qtd. 2"],
+            ["obs", "Observação"],
         ],
-        filters: [0, 1],
+        filters: ["ep", "cat"],
     },
     encantamentos: {
         key: "encantos",
         title: "Encantamentos disponíveis",
         desc: "Efeitos listados por episódio, equipamento-alvo e slot.",
         cols: [
-            [0, "Episódio"],
-            [1, "Equipamento-alvo"],
-            [2, "Slot"],
-            [3, "Tipo de efeito"],
-            [5, "Encantamento"],
-            [6, "Efeito"],
-            [8, "Item consumido"],
-            [9, "Chance (%)"],
-            [10, "Observação"],
+            ["ep", "Episódio"],
+            ["alvo", "Equipamento-alvo"],
+            ["slot", "Slot"],
+            ["efeito", "Tipo de efeito"],
+            ["encanto", "Encantamento"],
+            ["valor", "Efeito"],
+            ["consumido", "Item consumido"],
+            ["chance", "Chance (%)"],
+            ["obs", "Observação"],
         ],
-        filters: [0, 1, 2],
+        filters: ["ep", "alvo", "slot"],
     },
     custos: {
         key: "custo",
         title: "Custos de encantamento",
         desc: "Materiais, quantidades, NPCs e observações para preparar cada encantamento.",
         cols: [
-            [0, "Episódio"],
-            [1, "Equipamento-alvo"],
-            [2, "Slot"],
-            [3, "Tipo de efeito"],
-            [5, "Material"],
-            [6, "Qtd."],
-            [7, "NPC / origem"],
-            [8, "/navi"],
-            [9, "Observação"],
+            ["ep", "Episódio"],
+            ["alvo", "Equipamento-alvo"],
+            ["slot", "Slot"],
+            ["efeito", "Tipo de efeito"],
+            ["material", "Material"],
+            ["qtd", "Qtd."],
+            ["npc", "NPC / origem"],
+            ["navi", "/navi"],
+            ["obs", "Observação"],
         ],
-        filters: [0, 1, 2],
+        filters: ["ep", "alvo", "slot"],
     },
 };
 /* ===== Busca (termo único em globalTerm, com debounce e cache por linha) ===== */
 function tableView(view) {
     const config = TABLES[view],
         rows = (db[config.key] || []).slice(1).filter((r) => r.some(Boolean));
-    const eps = [...new Set(rows.map((r) => r[0]).filter(Boolean))].sort((a, b) => episodeRank(b) - episodeRank(a));
+    const eps = [...new Set(rows.map((r) => r[COL[config.key].ep]).filter(Boolean))].sort(
+        (a, b) => episodeRank(b) - episodeRank(a)
+    );
     return `<div class="page-head"><div><div class="eyebrow">BIBLIOTECA DE DADOS</div><h1 class="page-title">${config.title}</h1><p class="page-subtitle">${config.desc}</p></div><span class="count-pill">${rows.length} REGISTROS</span></div>${avisoSeFalha(config.key)}<div class="toolbar"><input id="tableSearch" type="search" aria-label="Filtrar a tabela" placeholder="Filtrar por nome, material ou observação…" value="${esc(globalTerm)}"><select id="episodeFilter" aria-label="Filtrar por episódio"><option value="">Todos os episódios</option>${eps.map((e) => `<option>${esc(e)}</option>`).join("")}</select><button class="button" id="clearFilters">Limpar filtros</button></div><div id="tableMount"></div>`;
 }
 function filteredRows(view) {
@@ -559,7 +573,7 @@ function filteredRows(view) {
         rows = (db[cfg.key] || []).slice(1).filter((r) => r.some(Boolean));
     const term = globalTerm.trim().toLocaleLowerCase("pt-BR"),
         ep = $("#episodeFilter")?.value || "";
-    return rows.filter((r) => (!term || rowText(r).includes(term)) && (!ep || r[0] === ep));
+    return rows.filter((r) => (!term || rowText(r).includes(term)) && (!ep || r[COL[cfg.key].ep] === ep));
 }
 function groupBy(rows, keyFn) {
     const groups = new Map();
@@ -594,34 +608,40 @@ function rowspanBody(rows, cols, mergeCols = []) {
     return out;
 }
 function renderEquipmentTable(rows) {
-    const sections = sortEpisodes(groupBy(rows, (r) => `${r[0]}\x00${r[1]}`));
+    const K = COL.equips;
+    const sections = sortEpisodes(
+        groupBy(rows, (r) => `${r[K.ep]}\x00${r[K.cat]}`),
+        K.ep
+    );
     const equipment = sections
         .map((section) => {
-            const byCost = groupBy(section, (r) => [r[4], r[5], r[7], r[8], r[10], r[11]].join("\x00"));
+            const byCost = groupBy(section, (r) =>
+                [r[K.npc], r[K.navi], r[K.mat1], r[K.qtd1], r[K.mat2], r[K.qtd2]].join("\x00")
+            );
             const rowsHtml = byCost
                 .map((costGroup) => {
-                    const unique = [...new Map(costGroup.map((r) => [r[3], r])).values()];
+                    const unique = [...new Map(costGroup.map((r) => [r[K.equip], r])).values()];
                     const c = costGroup[0],
-                        note = String(c[12] || "")
+                        note = String(c[K.obs] || "")
                             .replace(/Preço por equipamento\.?\s*/i, "")
                             .replace(/Armaduras?(?:\s*\/[^.]*)?\.?/i, "")
                             .trim(),
                         price = [
-                            c[8] && `${esc(c[8])} ${itemLink(c[7])}`,
+                            c[K.qtd1] && `${esc(c[K.qtd1])} ${itemLink(c[K.mat1])}`,
                             note && esc(note),
-                            c[4] && `NPC: ${esc(c[4])}`,
-                            c[5] && esc(c[5]),
-                            c[11] && `${esc(c[11])} ${itemLink(c[10])}`,
+                            c[K.npc] && `NPC: ${esc(c[K.npc])}`,
+                            c[K.navi] && esc(c[K.navi]),
+                            c[K.qtd2] && `${esc(c[K.qtd2])} ${itemLink(c[K.mat2])}`,
                         ].filter(Boolean);
                     return unique
                         .map(
                             (r, i) =>
-                                `<tr><td><span class="item-label">${itemLink(r[3])}</span></td>${i === 0 ? `<td rowspan="${unique.length}" class="material-cell"><div class="material-lines">${price.map((x, j) => `<span class="${j === 0 ? "material-line" : "table-meta"}">${j === 0 ? `<b class="material-qty">${x}</b>` : x}</span>`).join("")}</div></td>` : ""}</tr>`
+                                `<tr><td><span class="item-label">${itemLink(r[K.equip])}</span></td>${i === 0 ? `<td rowspan="${unique.length}" class="material-cell"><div class="material-lines">${price.map((x, j) => `<span class="${j === 0 ? "material-line" : "table-meta"}">${j === 0 ? `<b class="material-qty">${x}</b>` : x}</span>`).join("")}</div></td>` : ""}</tr>`
                         )
                         .join("");
                 })
                 .join("");
-            return `<section class="table-section"><div class="table-section-head"><h2>${esc(section[0][0])} · ${esc(section[0][1])}</h2><span>${new Set(section.map((r) => r[3])).size} equipamentos</span></div>${tableFrame([`Equipamentos · ${esc(section[0][1])}`, "Preço por equipamento"], rowsHtml, "grouped-table")}</section>`;
+            return `<section class="table-section"><div class="table-section-head"><h2>${esc(section[0][K.ep])} · ${esc(section[0][K.cat])}</h2><span>${new Set(section.map((r) => r[K.equip])).size} equipamentos</span></div>${tableFrame([`Equipamentos · ${esc(section[0][K.cat])}`, "Preço por equipamento"], rowsHtml, "grouped-table")}</section>`;
         })
         .join("");
     const episode = $("#episodeFilter")?.value || "",
@@ -636,22 +656,31 @@ function renderEquipmentTable(rows) {
     );
 }
 function renderEnchantTable(rows) {
-    const sections = sortEpisodes(groupBy(rows, (r) => `${r[0]}\x00${r[1]}`));
+    const K = COL.encantos;
+    const sections = sortEpisodes(
+        groupBy(rows, (r) => `${r[K.ep]}\x00${r[K.alvo]}`),
+        K.ep
+    );
     return (
         sections
             .map((section) => {
                 const dedup = [
-                    ...new Map(section.map((r) => [[r[2], r[3], r[5], r[6], r[8], r[10]].join("\x00"), r])).values(),
+                    ...new Map(
+                        section.map((r) => [
+                            [r[K.slot], r[K.efeito], r[K.encanto], r[K.valor], r[K.consumido], r[K.obs]].join("\x00"),
+                            r,
+                        ])
+                    ).values(),
                 ];
                 const cols = [
-                    [2, "Slot(s)"],
-                    [3, "Tipo de efeito"],
-                    [5, "Encantamento", (r) => `<span class="item-label">${itemLink(r[5])}</span>`],
-                    [6, "Efeito (+11 quando aplicável)", (r) => esc(r[6] || "—")],
+                    [K.slot, "Slot(s)"],
+                    [K.efeito, "Tipo de efeito"],
+                    [K.encanto, "Encantamento", (r) => `<span class="item-label">${itemLink(r[K.encanto])}</span>`],
+                    [K.valor, "Efeito (+11 quando aplicável)", (r) => esc(r[K.valor] || "—")],
                 ];
                 const body = rowspanBody(dedup, cols, [0, 1]);
-                return `<section class="table-section"><div class="table-section-head"><h2>${esc(section[0][0])} · ${esc(section[0][1])}</h2><span>${dedup.length} opções</span></div><p class="table-search-note">Os valores são os publicados para o equipamento em +11 quando aplicável; nos acessórios, mantive o efeito normal indicado pela referência.</p>${tableFrame(
-                    cols.map((c) => esc(c[1])),
+                return `<section class="table-section"><div class="table-section-head"><h2>${esc(section[0][K.ep])} · ${esc(section[0][K.alvo])}</h2><span>${dedup.length} opções</span></div><p class="table-search-note">Os valores são os publicados para o equipamento em +11 quando aplicável; nos acessórios, mantive o efeito normal indicado pela referência.</p>${tableFrame(
+                    cols.map((c) => esc(c[K.alvo])),
                     body,
                     "grouped-table align-top"
                 )}</section>`;
@@ -661,35 +690,39 @@ function renderEnchantTable(rows) {
     );
 }
 function renderCostTable(rows) {
-    const episodes = sortEpisodes(groupBy(rows, (r) => r[0]));
+    const K = COL.custo;
+    const episodes = sortEpisodes(
+        groupBy(rows, (r) => r[K.ep]),
+        K.ep
+    );
     return (
         episodes
             .map((episode) => {
                 const all = episode;
-                if (/Ep\.\s*19\b/i.test(episode[0][0])) {
-                    const targets = [...new Set(all.map((r) => r[1]).filter(Boolean))],
+                if (/Ep\.\s*19\b/i.test(episode[0][K.ep])) {
+                    const targets = [...new Set(all.map((r) => r[K.alvo]).filter(Boolean))],
                         body = targets
                             .map((target) => {
                                 const groups = groupBy(
-                                        all.filter((x) => x[1] === target),
-                                        (r) => `${r[2]}\x00${r[3]}`
+                                        all.filter((x) => x[K.alvo] === target),
+                                        (r) => `${r[K.slot]}\x00${r[K.efeito]}`
                                     ),
                                     isArmor =
                                         /Armadura|Veste|Manto|Sobrepeliz|Bota|Sapato|Anel|Brinco|Pingente|Colar/i.test(
                                             target
                                         );
                                 const mats = (g) =>
-                                    `<div class="material-lines">${g.map((x) => `<div class="material-line"><b class="material-qty">${esc(x[6] || "—")} ×</b>${itemLink(x[5])}</div>`).join("")}</div>`;
+                                    `<div class="material-lines">${g.map((x) => `<div class="material-line"><b class="material-qty">${esc(x[K.qtd] || "—")} ×</b>${itemLink(x[K.material])}</div>`).join("")}</div>`;
                                 if (!isArmor)
                                     return groups
                                         .map(
                                             (g) =>
-                                                `<tr><td>${esc(target)}</td><td>${esc(g[0][2] || "—")}</td><td>${esc(g[0][3] || "—")}</td><td class="material-cell">${mats(g)}</td></tr>`
+                                                `<tr><td>${esc(target)}</td><td>${esc(g[0][K.slot] || "—")}</td><td>${esc(g[0][K.efeito] || "—")}</td><td class="material-cell">${mats(g)}</td></tr>`
                                         )
                                         .join("");
-                                const slots = groups.map((g) => esc(g[0][2] || "—")).join("<br>"),
-                                    fx = groups.map((g) => esc(g[0][3] || "—")).join("<br>");
-                                const mkey = (g) => g.map((x) => [x[5], x[6]].join("\x00")).join("|"),
+                                const slots = groups.map((g) => esc(g[0][K.slot] || "—")).join("<br>"),
+                                    fx = groups.map((g) => esc(g[0][K.efeito] || "—")).join("<br>");
+                                const mkey = (g) => g.map((x) => [x[K.material], x[K.qtd]].join("\x00")).join("|"),
                                     uniq = new Map();
                                 groups.forEach((g) => {
                                     if (!uniq.has(mkey(g))) uniq.set(mkey(g), g);
@@ -700,22 +733,32 @@ function renderCostTable(rows) {
                                         : [...uniq.values()]
                                               .map(
                                                   (g) =>
-                                                      `<span class="table-meta">Encantamento ${esc(g[0][2] || "")} · ${esc(g[0][3] || "")}</span>${mats(g)}`
+                                                      `<span class="table-meta">Encantamento ${esc(g[0][K.slot] || "")} · ${esc(g[0][K.efeito] || "")}</span>${mats(g)}`
                                               )
                                               .join("");
                                 return `<tr><td>${esc(target)}</td><td>${slots}</td><td>${fx}</td><td class="material-cell">${matHtml}</td></tr>`;
                             })
                             .join("");
-                    const navis = [...new Set(all.map((r) => r[8]).filter(Boolean))];
-                    return `<section class="table-section"><div class="table-section-head"><h2>${esc(episode[0][0])} · custo de encantamento</h2><span>${targets.length} equipamentos</span></div><div class="panel-note cost-summary"><b>Armaduras e acessórios:</b> 35 × ${itemLink("Pétala de Flor Invernal")} em Vellgunde (${esc(navis[0] || "")}). A troca entrega <b>1 Peça de Flor Invernal aleatória</b>. Os custos dos encantamentos de armas variam por slot e estão na tabela.</div>${all.some((r) => /\*/.test(r[3] || "")) ? '<p class="table-search-note" style="margin:6px 0 10px">* Encantamentos de habilidade de classe 3: valores confirmados somente no Hazy Forest (kRO); não constam na bROWiki ou iROWiki.</p>' : ""}${tableFrame(["Equipamento", "Slot(s)", "Tipo de efeito", "Materiais por tentativa"], body, "grouped-table align-top")}</section>`;
+                    const navis = [...new Set(all.map((r) => r[K.navi]).filter(Boolean))];
+                    return `<section class="table-section"><div class="table-section-head"><h2>${esc(episode[0][K.ep])} · custo de encantamento</h2><span>${targets.length} equipamentos</span></div><div class="panel-note cost-summary"><b>Armaduras e acessórios:</b> 35 × ${itemLink("Pétala de Flor Invernal")} em Vellgunde (${esc(navis[0] || "")}). A troca entrega <b>1 Peça de Flor Invernal aleatória</b>. Os custos dos encantamentos de armas variam por slot e estão na tabela.</div>${all.some((r) => /\*/.test(r[K.efeito] || "")) ? '<p class="table-search-note" style="margin:6px 0 10px">* Encantamentos de habilidade de classe 3: valores confirmados somente no Hazy Forest (kRO); não constam na bROWiki ou iROWiki.</p>' : ""}${tableFrame(["Equipamento", "Slot(s)", "Tipo de efeito", "Materiais por tentativa"], body, "grouped-table align-top")}</section>`;
                 }
-                const perTarget = groupBy(all, (r) => `${r[1]}\x00${r[2]}\x00${r[3]}`).map((g) => {
+                const perTarget = groupBy(all, (r) => `${r[K.alvo]}\x00${r[K.slot]}\x00${r[K.efeito]}`).map((g) => {
                     const r = g[0],
                         materials = [
-                            ...new Map(g.map((x) => [[x[5], x[6], x[7], x[8], x[9]].join("\x00"), x])).values(),
+                            ...new Map(
+                                g.map((x) => [[x[K.material], x[K.qtd], x[K.npc], x[K.navi], x[K.obs]].join("\x00"), x])
+                            ).values(),
                         ];
-                    const signature = materials.flatMap((x) => [x[5], x[6], x[7], x[8], x[9]]).join("\x00");
-                    return { target: r[1] || "—", slot: r[2] || "—", effect: r[3] || "—", materials, signature };
+                    const signature = materials
+                        .flatMap((x) => [x[K.material], x[K.qtd], x[K.npc], x[K.navi], x[K.obs]])
+                        .join("\x00");
+                    return {
+                        target: r[K.alvo] || "—",
+                        slot: r[K.slot] || "—",
+                        effect: r[K.efeito] || "—",
+                        materials,
+                        signature,
+                    };
                 });
                 const sameCosts = groupBy(perTarget, (x) => x.signature);
                 return sameCosts
@@ -725,7 +768,7 @@ function renderCostTable(rows) {
                             materials = first.materials
                                 .map(
                                     (x) =>
-                                        `<div class="material-line"><b class="material-qty">${esc(x[6] || "—")} ×</b>${itemLink(x[5])}</div>${x[7] ? `<span class="table-meta">${esc(x[7])}${x[8] ? ` · ${esc(x[8])}` : ""}</span>` : ""}${x[9] ? `<span class="table-meta">${esc(x[9])}</span>` : ""}`
+                                        `<div class="material-line"><b class="material-qty">${esc(x[K.qtd] || "—")} ×</b>${itemLink(x[K.material])}</div>${x[K.npc] ? `<span class="table-meta">${esc(x[K.npc])}${x[K.navi] ? ` · ${esc(x[K.navi])}` : ""}</span>` : ""}${x[K.obs] ? `<span class="table-meta">${esc(x[K.obs])}</span>` : ""}`
                                 )
                                 .join(""),
                             body = costGroup
@@ -734,7 +777,7 @@ function renderCostTable(rows) {
                                         `<tr><td>${esc(x.target)}</td><td>${esc(x.slot)}</td><td>${esc(x.effect)}</td>${i === 0 ? `<td rowspan="${costGroup.length}" class="material-cell"><div class="material-lines">${materials}</div></td>` : ""}</tr>`
                                 )
                                 .join("");
-                        return `<section class="table-section"><div class="table-section-head"><h2>${esc(episode[0][0])} · custo por encantamento</h2><span>${targets.length} peças com o mesmo custo</span></div>${tableFrame(["Equipamento", "Slot(s)", "Tipo de efeito", "Materiais por tentativa"], body, "grouped-table align-top")}</section>`;
+                        return `<section class="table-section"><div class="table-section-head"><h2>${esc(episode[0][K.ep])} · custo por encantamento</h2><span>${targets.length} peças com o mesmo custo</span></div>${tableFrame(["Equipamento", "Slot(s)", "Tipo de efeito", "Materiais por tentativa"], body, "grouped-table align-top")}</section>`;
                     })
                     .join("");
             })
@@ -745,10 +788,12 @@ function renderCostTable(rows) {
 let activeDiaEp = null,
     diaBonus = false;
 function diaRows() {
-    return (db.fontes || []).slice(1).filter((r) => r[0] && r[1] && r[4]);
+    const K = COL.fontes;
+    return (db.fontes || []).slice(1).filter((r) => r[K.ep] && r[K.atividade] && r[K.item]);
 }
 function diaEps() {
-    return [...new Set(diaRows().map((r) => r[0]))].sort((a, b) => episodeRank(b) - episodeRank(a));
+    const K = COL.fontes;
+    return [...new Set(diaRows().map((r) => r[K.ep]))].sort((a, b) => episodeRank(b) - episodeRank(a));
 }
 function guiaEpFor(label) {
     const rank = episodeRank(label);
@@ -761,13 +806,14 @@ function guiaEpFor(label) {
     );
 }
 function diaTotals(rows, bonus) {
+    const K = COL.fontes;
     const m = new Map();
     rows.forEach((r) => {
-        const incl = String(r[7] || "").toLowerCase() === "sim",
-            base = incl ? Number(r[5]) || 0 : 0,
-            extra = bonus && incl && Number(r[6]) > 0 ? Number(r[6]) : 0,
+        const incl = String(r[K.incluir] || "").toLowerCase() === "sim",
+            base = incl ? Number(r[K.qtd]) || 0 : 0,
+            extra = bonus && incl && Number(r[K.bonus]) > 0 ? Number(r[K.bonus]) : 0,
             q = base + extra;
-        if (q > 0) m.set(r[4], (m.get(r[4]) || 0) + q);
+        if (q > 0) m.set(r[K.item], (m.get(r[K.item]) || 0) + q);
     });
     return m;
 }
@@ -782,21 +828,27 @@ function diaTotalsHtml(rows, bonus) {
     );
 }
 function diaTablesTsv(rows) {
-    const tipos = [...new Set(rows.map((r) => r[2] || "—"))],
-        temBonus = rows.some((r) => Number(r[6]) > 0),
+    const K = COL.fontes;
+    const tipos = [...new Set(rows.map((r) => r[K.tipo] || "—"))],
+        temBonus = rows.some((r) => Number(r[K.bonus]) > 0),
         cols = [
-            [1, "Atividade", (c) => activityLink(c[1])],
-            [4, "Item", (c) => `<span class="item-label">${itemLink(c[4])}</span>`],
-            [5, "Qtd. por execução", (c) => esc(c[5] || "0")],
+            [K.atividade, "Atividade", (c) => activityLink(c[K.atividade])],
+            [K.item, "Item", (c) => `<span class="item-label">${itemLink(c[K.item])}</span>`],
+            [K.qtd, "Qtd. por execução", (c) => esc(c[K.qtd] || "0")],
         ];
-    if (temBonus) cols.push([6, "Bônus por reputação", (c) => ((Number(c[6]) || 0) > 0 ? `+${esc(c[6])}` : "—")]);
-    cols.push([9, "Observação", (c) => esc(c[9] || "—")]);
+    if (temBonus)
+        cols.push([
+            K.bonus,
+            "Bônus por reputação",
+            (c) => ((Number(c[K.bonus]) || 0) > 0 ? `+${esc(c[K.bonus])}` : "—"),
+        ]);
+    cols.push([K.obs, "Observação", (c) => esc(c[K.obs] || "—")]);
     const merge = [0];
     if (temBonus) merge.push(cols.length - 2);
     return tipos
         .map((t) => {
-            const rs = rows.filter((r) => (r[2] || "—") === t),
-                n = new Set(rs.map((r) => r[1])).size,
+            const rs = rows.filter((r) => (r[K.tipo] || "—") === t),
+                n = new Set(rs.map((r) => r[K.atividade])).size,
                 title =
                     t === "Missão diária"
                         ? "Missões diárias"
@@ -813,9 +865,10 @@ function diaTablesTsv(rows) {
         .join("");
 }
 function diariasView() {
+    const K = COL.fontes;
     const eps = diaEps();
     activeDiaEp = eps.includes(activeDiaEp) ? activeDiaEp : eps[0];
-    const rows = diaRows().filter((r) => r[0] === activeDiaEp);
+    const rows = diaRows().filter((r) => r[K.ep] === activeDiaEp);
     const ges = guiaEpFor(activeDiaEp),
         grupos = ges?.diarias?.grupos;
     /* Título cru: o esc() é aplicado na interpolação, depois. */
@@ -860,7 +913,7 @@ function diariasView() {
               })
               .join("")
         : diaTablesTsv(rows);
-    const temBonus = rows.some((r) => Number(r[6]) > 0);
+    const temBonus = rows.some((r) => Number(r[K.bonus]) > 0);
     return `
     <div class="page-head">
       <div>
@@ -894,9 +947,10 @@ function estEpSalvar(ep, itens) {
 }
 /* Cartão do estoque exibido no topo direito da página de diárias. */
 function diariasEstoqueWidget(ep, rows) {
+    const K = COL.fontes;
     const rec = recompensaFor(ep),
         totals = diaTotals(rows, diaBonus),
-        temBonus = rows.some((r) => Number(r[6]) > 0),
+        temBonus = rows.some((r) => Number(r[K.bonus]) > 0),
         moedas = rec?.moedas?.length ? rec.moedas : [...totals.keys()];
     if (!moedas.length) return "";
     const est = estEpCarregar(ep);
@@ -957,7 +1011,7 @@ function renderDataTable(view) {
         return;
     }
     const cfg = TABLES[view],
-        cols = cfg.cols,
+        cols = cfg.cols.map(([campo, rotulo]) => [COL[cfg.key][campo], rotulo]),
         body = rowspanBody(found, cols, cfg.mergeCols || []);
     $("#tableMount").innerHTML = tableFrame(
         cols.map((c) => esc(c[1])),
@@ -1063,15 +1117,15 @@ function syncRecipeChoice() {
         name = section.querySelector('[name="recipeProduct"]')?.value;
     if (name) {
         $("#selectedMaterials").innerHTML = recipeIngredients(id, name);
-        const meta = RECIPE_META[id],
+        const K = COL[id] ?? {},
             recipe = getRecipes(id).find((r) => r.name === name);
-        if (meta?.factor && recipe?.raw?.[meta.factor]) {
+        if (K.fator != null && recipe?.raw?.[K.fator]) {
             const factor = section.querySelector('[name="taxa"]');
-            if (factor) factor.value = Number(recipe.raw[meta.factor]) || factor.value;
+            if (factor) factor.value = Number(recipe.raw[K.fator]) || factor.value;
         }
-        if (meta?.difficulty && recipe?.raw?.[meta.difficulty]) {
+        if (K.dificuldade != null && recipe?.raw?.[K.dificuldade]) {
             const field = section.querySelector('[name="dificuldade"]'),
-                text = recipe.raw[meta.difficulty];
+                text = recipe.raw[K.dificuldade];
             if (field) {
                 const nums = [...text.matchAll(/[+−-]?\d+(?:[,.]\d+)?/g)].map((x) =>
                     Number(x[0].replace("−", "-").replace(",", "."))
@@ -1348,9 +1402,10 @@ const totalList = (map, extras = []) =>
         .map(([n, q]) => `<div class="ingredient"><span class="item-label">${itemLink(n)}</span><b>${fmt(q)}</b></div>`)
         .join("") + extras.map((x) => `<div class="ingredient"><span>${esc(x)}</span><b>sem total</b></div>`).join("");
 function enchIsRandom(g) {
+    const K = COL.custo;
     return (
         /aleat/i.test(g.map((x) => x.join(" ")).join(" ")) ||
-        g.every((x) => /^P[eé]tala de Flor Invernal$/i.test(x[5] || ""))
+        g.every((x) => /^P[eé]tala de Flor Invernal$/i.test(x[K.material] || ""))
     );
 }
 const slotPos = (s) => {
@@ -1363,24 +1418,25 @@ const slotPos = (s) => {
 let enchCache = null,
     enchCacheRef = null;
 function enchIndex() {
+    const K = COL.custo;
     if (enchCache && enchCacheRef === db.custo) return enchCache;
     const idx = new Map();
     groupBy(
-        (db.custo || []).slice(1).filter((r) => r[0] && r[1] && r[5]),
-        (r) => [r[0], r[1], r[2], r[3]].join("\x00")
+        (db.custo || []).slice(1).filter((r) => r[K.ep] && r[K.alvo] && r[K.material]),
+        (r) => [r[K.ep], r[K.alvo], r[K.slot], r[K.efeito]].join("\x00")
     ).forEach((g) => {
         const r = g[0];
-        if (/reset/i.test(r[3] || "") || (/\b19\b/.test(r[0]) && enchIsRandom(g))) return;
-        if (!idx.has(r[0])) idx.set(r[0], new Map());
-        const E = idx.get(r[0]);
-        if (!E.has(r[1])) E.set(r[1], []);
-        E.get(r[1]).push({
-            slot: r[2] || "",
-            pos: slotPos(r[2]),
-            effect: r[3] || "—",
-            mats: [...new Map(g.map((x) => [[x[5], x[6]].join("\x00"), x])).values()].map((x) => ({
-                name: x[5],
-                qty: x[6],
+        if (/reset/i.test(r[K.efeito] || "") || (/\b19\b/.test(r[K.ep]) && enchIsRandom(g))) return;
+        if (!idx.has(r[K.ep])) idx.set(r[K.ep], new Map());
+        const E = idx.get(r[K.ep]);
+        if (!E.has(r[K.alvo])) E.set(r[K.alvo], []);
+        E.get(r[K.alvo]).push({
+            slot: r[K.slot] || "",
+            pos: slotPos(r[K.slot]),
+            effect: r[K.efeito] || "—",
+            mats: [...new Map(g.map((x) => [[x[K.material], x[K.qtd]].join("\x00"), x])).values()].map((x) => ({
+                name: x[K.material],
+                qty: x[K.qtd],
             })),
         });
     });

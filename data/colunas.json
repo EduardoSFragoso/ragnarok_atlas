@@ -1,188 +1,317 @@
 {
-    "equips": [
-        "Episódio",
-        "Categoria",
-        "col3",
-        "Equipamento",
-        "Onde adquirir (NPC)",
-        "/navi",
-        "col7",
-        "Material 1",
-        "Qtd 1",
-        "col10",
-        "Material 2",
-        "Qtd 2",
-        "Observação"
-    ],
-    "custo": [
-        "Episódio",
-        "Equipamento-alvo",
-        "Slot",
-        "Tipo de efeito",
-        "col5",
-        "Material",
-        "Qtd",
-        "Onde encantar / obter (NPC)",
-        "/navi",
-        "Observação"
-    ],
-    "encantos": [
-        "Episódio",
-        "Equipamento-alvo",
-        "Slot",
-        "Tipo de efeito",
-        "col5",
-        "Encantamento",
-        "Efeito (+11)",
-        "col8",
-        "Item consumido",
-        "Chance (%)",
-        "Observação"
-    ],
-    "fontes": [
-        "Episódio",
-        "Atividade",
-        "Tipo",
-        "col4",
-        "Item",
-        "Qtd por execução",
-        "Bônus por Reputação",
-        "Incluir? (Sim/Não)",
-        "Incluir bônus? (Sim/Não)",
-        "Observação",
-        "Por dia (se incluído)"
-    ],
-    "reforma": [
-        "Classe",
-        "col2",
-        "Arma Adulter Fides (drop na Mansão da Desilusão)",
-        "col4",
-        "col5",
-        "Arma Vivatus Fides (resultado da reforma)",
-        "Ritual de reforma",
-        "Perda de refino",
-        "col9",
-        "Material",
-        "Qtd",
-        "Observação"
-    ],
-    "flechas": [
-        "Ícone do produto",
-        "Tipo de flecha",
-        "Ícone do material",
-        "Material",
-        "Quantidade"
-    ],
-    "toxina": [
-        "ID do produto",
-        "Ícone do produto",
-        "Produto",
-        "Taxa/fator",
-        "ID do material",
-        "Ícone do material",
-        "Material",
-        "Quantidade",
-        "col9",
-        "FÓRMULA E CALCULADORA",
-        "col11",
-        "col12",
-        "col13",
-        "col14"
-    ],
-    "veneno": [
-        "ID do produto",
-        "Ícone do produto",
-        "Produto",
-        "Taxa/fator",
-        "ID do material",
-        "Ícone do material",
-        "Material",
-        "Quantidade",
-        "col9",
-        "FÓRMULA E CALCULADORA",
-        "col11",
-        "col12",
-        "col13",
-        "col14"
-    ],
-    "runas": [
-        "ID do produto",
-        "Ícone do produto",
-        "Produto",
-        "Taxa/fator",
-        "ID do material",
-        "Ícone do material",
-        "Material",
-        "Quantidade",
-        "col9",
-        "FÓRMULA E CALCULADORA — Perícia em Runas",
-        "col11",
-        "col12",
-        "col13",
-        "col14"
-    ],
-    "preparar": [
-        "ID do produto",
-        "Ícone do produto",
-        "Produto",
-        "Dificuldade",
-        "ID do material",
-        "Ícone do material",
-        "Material",
-        "Quantidade",
-        "col9",
-        "FÓRMULA E CALCULADORA",
-        "col11",
-        "col12",
-        "col13",
-        "col14"
-    ],
-    "manipular": [
-        "ID do produto",
-        "Ícone do produto",
-        "Produto",
-        "Taxa/fator",
-        "ID do material",
-        "Ícone do material",
-        "Material",
-        "Quantidade",
-        "col9",
-        "FÓRMULA E CALCULADORA — Manipular Poção",
-        "col11",
-        "col12",
-        "col13",
-        "col14"
-    ],
-    "farmacia": [
-        "ID do produto",
-        "Ícone do produto",
-        "Ícone do produto_2",
-        "Taxa/fator",
-        "ID do material",
-        "Ícone do material",
-        "Material",
-        "Quantidade",
-        "col9",
-        "FÓRMULA E CALCULADORA — Farmacologia Avançada",
-        "col11",
-        "col12",
-        "col13",
-        "col14"
-    ],
-    "culinaria": [
-        "ID do produto",
-        "Ícone do produto",
-        "Produto",
-        "Taxa/fator",
-        "ID do material",
-        "Ícone do material",
-        "Material",
-        "Quantidade",
-        "col9",
-        "FÓRMULA E CALCULADORA",
-        "col11",
-        "col12",
-        "col13",
-        "col14"
-    ]
+    "equips": {
+        "colunas": [
+            "Episódio",
+            "Categoria",
+            "col3",
+            "Equipamento",
+            "Onde adquirir (NPC)",
+            "/navi",
+            "col7",
+            "Material 1",
+            "Qtd 1",
+            "col10",
+            "Material 2",
+            "Qtd 2",
+            "Observação"
+        ],
+        "campos": {
+            "ep": "Episódio",
+            "cat": "Categoria",
+            "equip": "Equipamento",
+            "npc": "Onde adquirir (NPC)",
+            "navi": "/navi",
+            "mat1": "Material 1",
+            "qtd1": "Qtd 1",
+            "mat2": "Material 2",
+            "qtd2": "Qtd 2",
+            "obs": "Observação"
+        }
+    },
+    "custo": {
+        "colunas": [
+            "Episódio",
+            "Equipamento-alvo",
+            "Slot",
+            "Tipo de efeito",
+            "col5",
+            "Material",
+            "Qtd",
+            "Onde encantar / obter (NPC)",
+            "/navi",
+            "Observação"
+        ],
+        "campos": {
+            "ep": "Episódio",
+            "alvo": "Equipamento-alvo",
+            "slot": "Slot",
+            "efeito": "Tipo de efeito",
+            "material": "Material",
+            "qtd": "Qtd",
+            "npc": "Onde encantar / obter (NPC)",
+            "navi": "/navi",
+            "obs": "Observação"
+        }
+    },
+    "encantos": {
+        "colunas": [
+            "Episódio",
+            "Equipamento-alvo",
+            "Slot",
+            "Tipo de efeito",
+            "col5",
+            "Encantamento",
+            "Efeito (+11)",
+            "col8",
+            "Item consumido",
+            "Chance (%)",
+            "Observação"
+        ],
+        "campos": {
+            "ep": "Episódio",
+            "alvo": "Equipamento-alvo",
+            "slot": "Slot",
+            "efeito": "Tipo de efeito",
+            "encanto": "Encantamento",
+            "valor": "Efeito (+11)",
+            "consumido": "Item consumido",
+            "chance": "Chance (%)",
+            "obs": "Observação"
+        }
+    },
+    "fontes": {
+        "colunas": [
+            "Episódio",
+            "Atividade",
+            "Tipo",
+            "col4",
+            "Item",
+            "Qtd por execução",
+            "Bônus por Reputação",
+            "Incluir? (Sim/Não)",
+            "Incluir bônus? (Sim/Não)",
+            "Observação",
+            "Por dia (se incluído)"
+        ],
+        "campos": {
+            "ep": "Episódio",
+            "atividade": "Atividade",
+            "tipo": "Tipo",
+            "item": "Item",
+            "qtd": "Qtd por execução",
+            "bonus": "Bônus por Reputação",
+            "incluir": "Incluir? (Sim/Não)",
+            "obs": "Observação"
+        }
+    },
+    "reforma": {
+        "colunas": [
+            "Classe",
+            "col2",
+            "Arma Adulter Fides (drop na Mansão da Desilusão)",
+            "col4",
+            "col5",
+            "Arma Vivatus Fides (resultado da reforma)",
+            "Ritual de reforma",
+            "Perda de refino",
+            "col9",
+            "Material",
+            "Qtd",
+            "Observação"
+        ],
+        "campos": {}
+    },
+    "flechas": {
+        "colunas": [
+            "Ícone do produto",
+            "Tipo de flecha",
+            "Ícone do material",
+            "Material",
+            "Quantidade"
+        ],
+        "campos": {
+            "produto": "Tipo de flecha",
+            "material": "Material",
+            "quantidade": "Quantidade"
+        }
+    },
+    "toxina": {
+        "colunas": [
+            "ID do produto",
+            "Ícone do produto",
+            "Produto",
+            "Taxa/fator",
+            "ID do material",
+            "Ícone do material",
+            "Material",
+            "Quantidade",
+            "col9",
+            "FÓRMULA E CALCULADORA",
+            "col11",
+            "col12",
+            "col13",
+            "col14"
+        ],
+        "campos": {
+            "idProduto": "ID do produto",
+            "produto": "Produto",
+            "idMaterial": "ID do material",
+            "material": "Material",
+            "quantidade": "Quantidade"
+        }
+    },
+    "veneno": {
+        "colunas": [
+            "ID do produto",
+            "Ícone do produto",
+            "Produto",
+            "Taxa/fator",
+            "ID do material",
+            "Ícone do material",
+            "Material",
+            "Quantidade",
+            "col9",
+            "FÓRMULA E CALCULADORA",
+            "col11",
+            "col12",
+            "col13",
+            "col14"
+        ],
+        "campos": {
+            "idProduto": "ID do produto",
+            "produto": "Produto",
+            "idMaterial": "ID do material",
+            "material": "Material",
+            "quantidade": "Quantidade"
+        }
+    },
+    "runas": {
+        "colunas": [
+            "ID do produto",
+            "Ícone do produto",
+            "Produto",
+            "Taxa/fator",
+            "ID do material",
+            "Ícone do material",
+            "Material",
+            "Quantidade",
+            "col9",
+            "FÓRMULA E CALCULADORA — Perícia em Runas",
+            "col11",
+            "col12",
+            "col13",
+            "col14"
+        ],
+        "campos": {
+            "idProduto": "ID do produto",
+            "produto": "Produto",
+            "idMaterial": "ID do material",
+            "material": "Material",
+            "quantidade": "Quantidade",
+            "dificuldade": "Taxa/fator"
+        }
+    },
+    "preparar": {
+        "colunas": [
+            "ID do produto",
+            "Ícone do produto",
+            "Produto",
+            "Dificuldade",
+            "ID do material",
+            "Ícone do material",
+            "Material",
+            "Quantidade",
+            "col9",
+            "FÓRMULA E CALCULADORA",
+            "col11",
+            "col12",
+            "col13",
+            "col14"
+        ],
+        "campos": {
+            "idProduto": "ID do produto",
+            "produto": "Produto",
+            "idMaterial": "ID do material",
+            "material": "Material",
+            "quantidade": "Quantidade",
+            "dificuldade": "Dificuldade"
+        }
+    },
+    "manipular": {
+        "colunas": [
+            "ID do produto",
+            "Ícone do produto",
+            "Produto",
+            "Taxa/fator",
+            "ID do material",
+            "Ícone do material",
+            "Material",
+            "Quantidade",
+            "col9",
+            "FÓRMULA E CALCULADORA — Manipular Poção",
+            "col11",
+            "col12",
+            "col13",
+            "col14"
+        ],
+        "campos": {
+            "idProduto": "ID do produto",
+            "produto": "Produto",
+            "idMaterial": "ID do material",
+            "material": "Material",
+            "quantidade": "Quantidade",
+            "fator": "Taxa/fator"
+        }
+    },
+    "farmacia": {
+        "colunas": [
+            "ID do produto",
+            "Ícone do produto",
+            "Ícone do produto_2",
+            "Taxa/fator",
+            "ID do material",
+            "Ícone do material",
+            "Material",
+            "Quantidade",
+            "col9",
+            "FÓRMULA E CALCULADORA — Farmacologia Avançada",
+            "col11",
+            "col12",
+            "col13",
+            "col14"
+        ],
+        "campos": {
+            "idProduto": "ID do produto",
+            "produto": "Ícone do produto_2",
+            "idMaterial": "ID do material",
+            "material": "Material",
+            "quantidade": "Quantidade",
+            "fator": "Taxa/fator"
+        }
+    },
+    "culinaria": {
+        "colunas": [
+            "ID do produto",
+            "Ícone do produto",
+            "Produto",
+            "Taxa/fator",
+            "ID do material",
+            "Ícone do material",
+            "Material",
+            "Quantidade",
+            "col9",
+            "FÓRMULA E CALCULADORA",
+            "col11",
+            "col12",
+            "col13",
+            "col14"
+        ],
+        "campos": {
+            "idProduto": "ID do produto",
+            "produto": "Produto",
+            "idMaterial": "ID do material",
+            "material": "Material",
+            "quantidade": "Quantidade"
+        }
+    }
 }

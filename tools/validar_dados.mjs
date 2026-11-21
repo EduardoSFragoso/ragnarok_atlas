@@ -228,6 +228,25 @@ function lerJson(dir, arquivo, c) {
     }
 }
 
+/* data/colunas.json: por tabela, "colunas" (layout lido pelo app) e "campos"
+   (nome lógico -> nome da coluna, usado como COL.<tabela>.<campo> no app.js). */
+function validarContrato(colunas, c) {
+    const p = "data/colunas.json";
+    dicionario(objeto({ colunas: lista(texto, { min: 1 }), campos: dicionario(texto) }))(colunas, p, c);
+    for (const [tabela, def] of Object.entries(colunas)) {
+        if (tipo(def) !== "objeto" || !Array.isArray(def.colunas)) continue;
+        const repetidas = def.colunas.filter((n, i) => def.colunas.indexOf(n) !== i);
+        if (repetidas.length) c.erro(`${p}.${tabela}.colunas`, `nomes de coluna repetidos: ${repetidas.join(" | ")}`);
+        if (tipo(def.campos) !== "objeto") continue;
+        for (const [campo, nomeColuna] of Object.entries(def.campos))
+            if (!def.colunas.includes(nomeColuna))
+                c.erro(
+                    `${p}.${tabela}.campos.${campo}`,
+                    `aponta para a coluna "${nomeColuna}", que não está em "colunas"`
+                );
+    }
+}
+
 function validarTabela(arquivo, dados, esperado, c) {
     const p = `data/${arquivo}`;
     if (!Array.isArray(dados) || dados.length === 0) return c.erro(p, "esperava lista não vazia de linhas");
@@ -313,13 +332,14 @@ function validarIcones(dir, itens, refs, c) {
 export function validar(dir) {
     const c = contexto();
     const colunas = lerJson(dir, "colunas.json", c);
-    if (colunas !== undefined) dicionario(lista(texto, { min: 1 }))(colunas, "data/colunas.json", c);
+    if (colunas !== undefined) validarContrato(colunas, c);
     for (const [arquivo, chave] of Object.entries(TABELAS)) {
         const d = lerJson(dir, arquivo, c);
-        const esperado = colunas?.[chave];
+        const esperado = colunas?.[chave]?.colunas;
         if (colunas !== undefined && !Array.isArray(esperado)) c.erro("data/colunas.json", `falta a tabela "${chave}"`);
         else if (d !== undefined && Array.isArray(esperado)) validarTabela(arquivo, d, esperado, c);
     }
+
     const guia = lerJson(dir, "guia_episodio.json", c);
     if (guia !== undefined) validarGuia(guia, c);
     const rec = lerJson(dir, "recompensas_episodio.json", c);

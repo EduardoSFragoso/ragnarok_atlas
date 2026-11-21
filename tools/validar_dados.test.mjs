@@ -162,3 +162,24 @@ test("pega ícone ausente para um ID conhecido", () => {
     });
     assert.match(mensagens(validar(dir)), /ícone ausente para/);
 });
+
+test("pega campo lógico apontando para coluna inexistente em colunas.json", () => {
+    const dir = copiaComMutacao(({ ler, gravar }) => {
+        const c = ler("colunas.json");
+        c.custo.campos.material = "Coluna que não existe";
+        gravar("colunas.json", c);
+    });
+    assert.match(
+        mensagens(validar(dir)),
+        /colunas\.json\.custo\.campos\.material: aponta para a coluna "Coluna que não existe"/
+    );
+});
+
+test("pega colunas repetidas em colunas.json", () => {
+    const dir = copiaComMutacao(({ ler, gravar }) => {
+        const c = ler("colunas.json");
+        c.flechas.colunas.push(c.flechas.colunas[0]);
+        gravar("colunas.json", c);
+    });
+    assert.match(mensagens(validar(dir)), /colunas\.json\.flechas\.colunas: nomes de coluna repetidos/);
+});
