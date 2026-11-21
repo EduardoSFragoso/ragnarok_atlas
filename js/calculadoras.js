@@ -580,7 +580,7 @@ function updateEnchantCalc(sec) {
         is19 = /Ep\.\s*19\b/.test(ep.value);
     if (tg.dataset.ep !== ep.value) {
         tg.dataset.ep = ep.value;
-        tg.replaceChildren(...(idx.get(ep.value)?.keys() || []).map((t) => el("option", {}, t)));
+        tg.replaceChildren(...Array.from(idx.get(ep.value)?.keys() || []).map((t) => el("option", {}, t)));
     }
     sec.querySelectorAll("[data-grau]").forEach((el) => (el.hidden = !(is19 && /Vil Invern/i.test(tg.value))));
     const E = idx.get(ep.value)?.get(tg.value) || [],

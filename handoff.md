@@ -165,6 +165,10 @@ ou linha de comando.
 
 ### 5.1 Dependabot e proteção da `main`
 
+A CI e o projeto rodam em **Node 24** (`node-version: 24` no `ci.yml`, `"engines"` no `package.json`). Atenção ao
+escrever JS: _Iterator Helpers_ (`iterator.map()`, `.filter()` etc. direto num iterador de `Map`/`Set`) só existem no
+Node 22+ e em navegadores recentes — materialize com `[...iter]` ou `Array.from(iter)` antes.
+
 `.github/dependabot.yml` abre PRs semanais de atualização (npm e GitHub Actions); cada PR já sai validado pelo CI.
 
 **Passo a passo para criar a ruleset que protege a `main`** (uma vez só, na interface do GitHub):
