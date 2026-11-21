@@ -728,7 +728,7 @@
               "tarefa": "Falar com Friedrich S. Heine (prt_cas_q 21/83) e refazer a instância Sala de Ymir; acesso pelo Memorial (Camareiro Belle → Nillem → Máquina do Tempo, ou Observador Terketh)",
               "itens": "",
               "recompensa": "10 Marcas de Honra",
-              "obs": "- Instância com cooldown de 16 h; no iRO a missão se chama Hope You Cannot Let Go (nome oficial PT ainda não confirmado).\n- A 1.ª conclusão, durante a estória, paga 30 Marcas de Honra.",
+              "obs": "- Instância com cooldown de 16 h\n- A 1.ª conclusão, durante a estória, paga 30 Marcas de Honra.",
               "linkBrowiki": "https://browiki.org/wiki/Ritual_de_Coroa%C3%A7%C3%A3o"
             }
           ]
@@ -1603,7 +1603,6 @@
         "codigo": "S1",
         "titulo": "Meu Nome é Morning",
         "prerequisito": "Acesso à Rudus (cap. 0)",
-        "recompensa": "Recompensa não informada na bROWiki",
         "passos": [
           {
             "texto": "No calabouço de Rudus, encontre a criança solitária (Morning), uma das marcas amarelas do mapa.",
@@ -1776,7 +1775,6 @@
               "tarefa": "Instância do Distrito OS",
               "itens": "",
               "recompensa": "Aleatória: 1 Arma Danificada ou 1 Núcleo COR + 5 Chips Misteriosos",
-              "obs": "A bROWiki não informa as chances da recompensa",
               "linkBrowiki": "https://browiki.org/wiki/Ocupa%C3%A7%C3%A3o_OS"
             },
             {
@@ -1784,7 +1782,6 @@
               "tarefa": "Instância liberada no fim da história do episódio",
               "itens": "",
               "recompensa": "Aleatória: 1 Arma Danificada ou 1 Núcleo COR + 5 Chips Misteriosos",
-              "obs": "A bROWiki não informa as chances da recompensa",
               "linkBrowiki": "https://browiki.org/wiki/Memorial_COR"
             }
           ]
@@ -1822,7 +1819,7 @@
     "id": "ep172",
     "titulo": "Episódio 17.2: Legado do Sábio",
     "requisitos": "Nível de Base 130 · Quest anterior: Ilusión (Ep. 17.1) · Itens: 1 Folha de Yggdrasil, 10 Espada Chanfrada, 10 Líquido Fluorescente",
-    "recompensaTotal": "195 Vales Varmida no total (estória 105 + secundárias 90) — a infobox da bROWiki cita 105 Vales, que são só da estória principal",
+    "recompensaTotal": "195 Vales Varmida no total (estória 105 + secundárias 90)",
     "avisos": [
       "A instância O Jardim ao Anoitecer permite grupo; membros que não estiverem na tela na hora da morte de Sweety podem não completá-la, e quem já concluiu a instância não consegue reentrar."
     ],
@@ -2066,7 +2063,6 @@
         "codigo": "S2",
         "titulo": "Guia da Fazenda",
         "prerequisito": "Cap. 0 concluído",
-        "recompensa": "Recompensa não informada na bROWiki",
         "passos": [
           {
             "texto": "Fale com Ruinan na Mansão e ouça as instruções da colheita de Rabanetes de Cauda (Pitaya).",
@@ -2085,7 +2081,6 @@
         "codigo": "S3",
         "titulo": "Gerente Eorpa da Usina Mágica 2",
         "prerequisito": "Cap. 0 concluído",
-        "recompensa": "Recompensa não informada na bROWiki",
         "passos": [
           {
             "texto": "Fale com Eorpa, na Mansão, e coma as batatas fritas dela.",
@@ -2101,7 +2096,6 @@
         "codigo": "S4",
         "titulo": "Fale com Doçura",
         "prerequisito": "Cap. 0 concluído",
-        "recompensa": "Recompensa não informada na bROWiki",
         "passos": [
           {
             "texto": "Fale com Almond no Pátio do Dirigível, dentro da Mansão.",
@@ -2229,7 +2223,6 @@
         "codigo": "S9",
         "titulo": "Robô de Limpeza Ômega",
         "prerequisito": "Cap. 0 concluído",
-        "recompensa": "Recompensa não informada na bROWiki",
         "passos": [
           {
             "texto": "No caminho para a Estação de Tratamento de Esgoto (ba_in01), fale com o Robô de Limpeza Ômega e aguarde o diálogo.",
@@ -2475,7 +2468,7 @@
     "id": "ep18",
     "titulo": "Episódio 18: Caminho da Oração",
     "requisitos": "Nível de Base 170 · Quest anterior: Legado do Sábio (Ep. 17.2) · Santuário de Rachel até o passo 5",
-    "recompensaTotal": "713 Fragmentos de Ametista · 1.000 Reputação (Aldeia do Lobo Cinzento) · (Visual) Mini Elly — 460 da estória principal + 220 das missões da Aldeia + 33 das missões em Rachel; a infobox da bROWiki cita 660 Fragmentos (sem as missões de Rachel)",
+    "recompensaTotal": "713 Fragmentos de Ametista · 1.000 Reputação (Aldeia do Lobo Cinzento) · (Visual) Mini Elly — 460 da estória principal + 220 das missões da Aldeia + 33 das missões em Rachel",
     "avisos": [
       "A Boneca de Elly (chapéu) é recebida no início e é necessária em vários passos — só desequipe quando a quest pedir (no passo final com Miriam).",
       "Depois de Filhos Cinzentos, a história exige 1.000 de Reputação com a Aldeia do Lobo Cinzento. Cada missão do capítulo 2 dá Reputação +100 na primeira vez; na repetição (diárias), +30."
@@ -4293,21 +4286,21 @@
           "Lojas do Maram",
           "Maram (op. 1–4)",
           "/navi icas_in 180/61",
-          "- Op. 1: loja de ferramentas e consumíveis\n- op. 2: Equipamentos Invernais por 100 {{Pétala de Flor Invernal}} cada: {{Armadura Invernal [1]}}, {{Veste Invernal [1]}}, {{Manto Invernal [1]}}, {{Sobrepeliz Invernal [1]}}, {{Bota Invernal [1]}}, {{Sapato Invernal [1]}}, {{Anel Invernal [1]}}, {{Pingente Invernal [1]}}, {{Brinco Invernal [1]}} e {{Colar Invernal [1]}}\n- op. 3: vender os seus itens ao NPC",
-          "As Armas Invernais (150.000z) são compradas com Poruru, na mesma área das lojas do Maram. /navi icas_in 188/60 · No kRO/iRO a loja de Armas Glaciais fica na op. 3 do próprio Maram."
+          "- Op. 1: loja de ferramentas e consumíveis\n- op. 2: Equipamentos Invernais por 100 {{Pétala de Flor Invernal}} cada\n- op. 3: vender os seus itens ao NPC",
+          "As Armas Invernais (150.000z) são compradas com Poruru, na mesma área das lojas do Maram. /navi icas_in 188/60"
         ],
         [
           "Trocas e encantamentos",
           "Vellgunde (op. 2–4)",
           "/navi icas_in 185/63",
-          "- Op. 2: 35 Pétalas → 1 Peça de Flor Invernal aleatória (sai 1 Peça de qualquer encanto — os slots {4}, {3} e {2})\n- op. 3: reciclagem — escolha 3 Globos de qualquer tipo numa janela própria → 1 Globo aleatório\n- op. 4: encantamentos (aplicação da Peça no equipamento; sem zeny)",
-          "A reciclagem da op. 3 não consta na bROWiki (fonte: Hazy/iRO)."
+          "- Op. 2: 35 {{Pétala de Flor Invernal}} → 1 Peça de Flor Invernal aleatória (sai 1 de qualquer encanto — os slots {4}, {3} e {2})\n- op. 3: reciclagem — escolha 3 Globos de qualquer tipo numa janela própria → 1 {{Globo de Flor Invernal}} aleatório\n- op. 4: encantamentos (aplicação da Peça no equipamento; sem zeny)",
+          ""
         ],
         [
           "Globos e reputação",
           "Hoyoyo (op. 1–2)",
           "/navi icas_in 175/63",
-          "- Op. 1: 5 {{Minério Mágico de Flor Invernal}} → 1 Globo · 5 Globos → 1 Brilhante · 5 Brilhantes → 1 Reluzente\n- op. 2: loja de Reputação (itens pagos com {{Pétala de Flor Invernal}})",
+          "- Op. 1: 5 {{Minério Mágico de Flor Invernal}} → 1 {{Globo de Flor Invernal}} · 5 {{Globo de Flor Invernal}} → 1 {{Globo de Flor Invernal Brilhante}} · 5 {{Globo de Flor Invernal Brilhante}} → 1 {{Globo de Flor Invernal Reluzente}}\n- op. 2: loja de Reputação (itens pagos com {{Pétala de Flor Invernal}})",
           ""
         ],
         [
@@ -4315,7 +4308,7 @@
           "Incinerador, junto ao quartel",
           "/navi icecastle 186/221",
           "3 Armas Vil Invernais por uso",
-          "Liberado após o cap. 9; detalhes na aba Reciclagem."
+          "Liberado após o cap. 9; detalhes na aba Reciclagem e Globos."
         ]
       ]
     },
@@ -4363,7 +4356,7 @@
           "—"
         ]
       ],
-      "nota": "Lista do Hazy Forest (kRO); o LATAM pode variar. Cada nível exige 1.000 pontos de reputação, ganhos nas diárias e instâncias. No nível 0 Hoyoyo não fala com você."
+      "nota": "Cada nível exige 1.000 pontos de reputação, ganhos nas diárias e instâncias. No nível 0 Hoyoyo não fala com você."
     }
   }
 ]
