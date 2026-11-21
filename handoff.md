@@ -177,11 +177,16 @@ ou linha de comando.
     - **Require a pull request before merging** — com "1 required approval" se quiser revisão (sozinho, pode deixar 0
       e apenas mudar o fluxo: tudo passa por PR mesmo que você aprove o próprio PR);
     - **Required status checks** → Search: adicione o job **`checks`** (é o nome do job do `ci.yml`);
-    - **Block force pushes** e **Require conversation resolution before merging**.
-6. **Create changeset**. Feito isso: push direto na `main` passa a ser recusado; o CI roda **antes** do merge, no PR.
-7. Exceção emergencial: Settings → Rules → o ruleset → desative temporariamente (_edit → toggle Enforcement_), resolva
+    - **Block force pushes** e **Require conversation resolution before merging**;
+    - **Require linear history** — proíbe _merge commits_ na `main`, que fica sempre uma linha reta.
+6. Fora do ruleset (/settings do repositório): **Settings → General → Pull Requests → Allowed merge methods** —
+   desligue **Allow merge commits** e deixe **Allow squash merging** e **Allow rebase merging** ligados. Com isso os
+   únicos jeitos de entrar na `main` preservam a linearidade da regra acima: _Rebase and merge_ mantém os commits
+   menores do PR (padrão do projeto) e _Squash_ é o escape para achatar um PR com refino bagunçado.
+7. **Create changeset**. Feito isso: push direto na `main` passa a ser recusado; o CI roda **antes** do merge, no PR.
+8. Exceção emergencial: Settings → Rules → o ruleset → desative temporariamente (_edit → toggle Enforcement_), resolva
    e reative. O bypass de emergência não deve ser routineiro.
-8. Observação de plano: em repositório **público** é grátis; em **privado**, rulesets exigem GitHub Pro.
+9. Observação de plano: em repositório **público** é grátis; em **privado**, rulesets exigem GitHub Pro.
 
 ## 6. Checklist antes de cada commit
 
