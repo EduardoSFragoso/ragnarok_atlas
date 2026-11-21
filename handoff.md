@@ -141,6 +141,26 @@ Há também um fluxo **manual** (`puxar-efeitos-divine-pride.yml`) que consulta 
 `DP_API_KEY` e abre um PR; a chave só existe como variável de ambiente/segredo — **nunca** a coloque em arquivo, log
 ou linha de comando.
 
+### 5.1 Dependabot e proteção da `main`
+
+`.github/dependabot.yml` abre PRs semanais de atualização (npm e GitHub Actions); cada PR já sai validado pelo CI.
+
+**Passo a passo para criar a ruleset que protege a `main`** (uma vez só, na interface do GitHub):
+
+1. No repositório, **Settings → Rules → Rulesets → New ruleset → New branch ruleset**.
+2. **Ruleset Name**: `protege-main`. **Enforcement status**: Active.
+3. Seção **Target branches**: Add target → _Add classic branch targeting_ → Ref name: `Default` (ou `main`).
+4. Em **Bypass list**: deixe vazio (assim ninguém, nem você, escapa dos checks).
+5. Em **Branch rules**, marque:
+    - **Require a pull request before merging** — com "1 required approval" se quiser revisão (sozinho, pode deixar 0
+      e apenas mudar o fluxo: tudo passa por PR mesmo que você aprove o próprio PR);
+    - **Required status checks** → Search: adicione o job **`checks`** (é o nome do job do `ci.yml`);
+    - **Block force pushes** e **Require conversation resolution before merging**.
+6. **Create changeset**. Feito isso: push direto na `main` passa a ser recusado; o CI roda **antes** do merge, no PR.
+7. Exceção emergencial: Settings → Rules → o ruleset → desative temporariamente (_edit → toggle Enforcement_), resolva
+   e reative. O bypass de emergência não deve ser routineiro.
+8. Observação de plano: em repositório **público** é grátis; em **privado**, rulesets exigem GitHub Pro.
+
 ## 6. Checklist antes de cada commit
 
 1. `npm run format` (não formata `data/`: lá mantenha o estilo de indentação que o arquivo já tem).

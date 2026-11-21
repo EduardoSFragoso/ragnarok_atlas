@@ -1,0 +1,15 @@
+# Dependabot: mantém as dependências de desenvolvimento e as GitHub Actions
+# atualizadas. Cada PR abre validado pelo CI (ver .github/workflows/ci.yml).
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates
+version: 2
+
+updates:
+    - package-ecosystem: npm
+      directory: "/"
+      schedule:
+          interval: weekly
+
+    - package-ecosystem: github-actions
+      directory: "/"
+      schedule:
+          interval: weekly
