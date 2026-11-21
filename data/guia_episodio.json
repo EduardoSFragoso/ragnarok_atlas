@@ -647,7 +647,7 @@
               "recompensa": "4 Marcas de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Pris%C3%A3o#Velho_Amigo",
               "detalhes": [
-                "Converse com o Prisioneiro 243AD265 (/navi prt_prison 243/259).",
+                "Converse com o Prisioneiro 243AD265 /navi prt_prison 243/259.",
                 "Encontre a Forma Escura em um dos pontos: prt_prison 167/81, 203/213, 161/224, 153/173 ou 205/138; fale com ela até receber a Carta do Prisioneiro (se não estiver no ponto, tente outro).",
                 "Entregue a Carta do Prisioneiro ao Prisioneiro para receber a recompensa."
               ]
@@ -728,7 +728,7 @@
               "tarefa": "Falar com Friedrich S. Heine (prt_cas_q 21/83) e refazer a instância Sala de Ymir; acesso pelo Memorial (Camareiro Belle → Nillem → Máquina do Tempo, ou Observador Terketh)",
               "itens": "",
               "recompensa": "10 Marcas de Honra",
-              "obs": "Instância com cooldown de 16 h; no iRO a missão se chama Hope You Cannot Let Go (nome oficial PT ainda não confirmado). · A 1.ª conclusão, durante a estória, paga 30 Marcas de Honra.",
+              "obs": "- Instância com cooldown de 16 h; no iRO a missão se chama Hope You Cannot Let Go (nome oficial PT ainda não confirmado).\n- A 1.ª conclusão, durante a estória, paga 30 Marcas de Honra.",
               "linkBrowiki": "https://browiki.org/wiki/Ritual_de_Coroa%C3%A7%C3%A3o"
             }
           ]
@@ -742,13 +742,13 @@
               "itens": "",
               "recompensa": "4 Marcas de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Salvando_Vidas",
-              "obs": "Apenas 1 das 4 missões por dia (sorteada); os NPCs surgem ao se aproximar das coordenadas · Nv. base 140 · acesso a Prontera Destruída pelo Registro de Memórias (Camareiro Belle → Mago Nillem) ou com 1 Cristal de Prontera · o Cinto Velho garante 1 cura com a Templária (/navi prt_q 235/314) · desbloqueia a partir do fim do Ritual de Coroação.",
+              "obs": "- Apenas 1 das 4 missões por dia (sorteada); os NPCs surgem ao se aproximar das coordenadas\n- Nv. base 140\n- acesso a Prontera Destruída pelo Registro de Memórias (Camareiro Belle → Mago Nillem) ou com 1 Cristal de Prontera\n- o Cinto Velho garante 1 cura com a Templária /navi prt_q 235/314\n- desbloqueia a partir do fim do Ritual de Coroação.",
               "detalhes": [
-                "Fale com o Guarda Spiegel (/navi prt_q 153/323) — ele dá 1 das 4 missões abaixo; ao terminar, volte a ele para receber a recompensa.",
-                "Ingrato: encontre o Cidadão (/navi prt_q 221/193) → leve-o até o prédio da Estilista (/navi prt_q 76/98) → na Refinaria, pegue a mochila andando perto de /navi prt_q 177/185 → retorne ao Cidadão.",
-                "Soldado: fale com o Soldado (/navi prt_q 141/304) → fale com ele na Cavalaria (/navi prt_q 67/336) → fale com ele no prédio da estilista (/navi prt_q 79/103).",
-                "Amante: encontre Eryus (/navi prt_q 39/260) → vá à Catedral (/navi prt_q 231/309) → fale com a Moça atrás do prédio dos Clãs Reais (/navi prt_q 109/164) → retorne à Catedral → pegue o remédio no ponto da Moça (/navi prt_q 109/164) → retorne à Catedral.",
-                "Garota: procure a Garota (/navi prt_q 275/242) → vá à Catedral (/navi prt_q 230/316) → vá à Cavalaria (/navi prt_q 55/346)."
+                "Fale com o Guarda Spiegel /navi prt_q 153/323 — ele dá 1 das 4 missões abaixo; ao terminar, volte a ele para receber a recompensa.",
+                "Ingrato: encontre o Cidadão /navi prt_q 221/193 → leve-o até o prédio da Estilista /navi prt_q 76/98 → na Refinaria, pegue a mochila andando perto de /navi prt_q 177/185 → retorne ao Cidadão.",
+                "Soldado: fale com o Soldado /navi prt_q 141/304 → fale com ele na Cavalaria /navi prt_q 67/336 → fale com ele no prédio da estilista /navi prt_q 79/103.",
+                "Amante: encontre Eryus /navi prt_q 39/260 → vá à Catedral /navi prt_q 231/309 → fale com a Moça atrás do prédio dos Clãs Reais /navi prt_q 109/164 → retorne à Catedral → pegue o remédio no ponto da Moça /navi prt_q 109/164 → retorne à Catedral.",
+                "Garota: procure a Garota /navi prt_q 275/242 → vá à Catedral /navi prt_q 230/316 → vá à Cavalaria /navi prt_q 55/346."
               ]
             }
           ]
@@ -1145,14 +1145,14 @@
           "Encanto — Anéis Mercenários A/B",
           "Hogar",
           "/navi rebel_in 90/40",
-          "5 Brasões · reset 10",
+          "- 5 Brasões\n- reset 10",
           "Até 2 encantos, sem falha. O reset tem 20% de chance de destruir o item."
         ],
         [
           "Encanto — Vestimentas Consulente/Atraente",
           "Hogar",
           "/navi rebel_in 90/40",
-          "20 Brasões · reset 10",
+          "- 20 Brasões\n- reset 10",
           "Até 2 encantos, sem falha. Reset somente com os 2 encantos e sem chance de perder."
         ],
         [
@@ -1310,14 +1310,14 @@
               "recompensa": "3 Brasões de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Pesquisadores_Escondidos",
               "detalhes": [
-                "Ajude Philophontess na Base Militar (/navi que_swat 145/57).",
+                "Ajude Philophontess na Base Militar /navi que_swat 145/57.",
                 "No Laboratório Werner (slabw01): Armário Suspeito 235/137 e 254/131; Vão Suspeito 247/111 e 255/63; Mesa Suspeita 179/58; Tubo Suspeito 143/100; Estante Suspeita 247/34; Lixeira Suspeita 231/125.",
                 "Encontre 3 Pesquisadores para receber a recompensa."
               ]
             },
             {
               "nome": "Pesquisa de Quimeras",
-              "tarefa": "Na Base Militar, aceitar o pedido de Yuslan (/navi que_swat 161/53): eliminar 10 Quimeras Humanas e 10 Quimeras Disformes no Laboratório Werner e voltar a Yuslan",
+              "tarefa": "Na Base Militar, aceitar o pedido de Yuslan /navi que_swat 161/53: eliminar 10 Quimeras Humanas e 10 Quimeras Disformes no Laboratório Werner e voltar a Yuslan",
               "itens": "",
               "recompensa": "3 Brasões de Honra",
               "linkBrowiki": "https://browiki.org/wiki/Clana_Nemieri#Pesquisa_de_Quimeras",
@@ -1755,7 +1755,7 @@
               "tarefa": "Cavar perto do NPC em Rudus e entregar 10 do alimento do dia (a comida é a mesma para todo o servidor)",
               "itens": "10 de: {{Jellopy}} · {{Raiz de Árvore}} · {{Perna de Gafanhoto}} · {{Trevo}} · {{Plumas de Ave}} · {{Cauda de Rato}} · {{Canino Venenoso}} · {{Cauda de Yoyo}} · {{Dente de Morcego}} · {{Pata de Urso}}",
               "recompensa": "1 Núcleo COR · 5 Chips Misteriosos",
-              "obs": "Intimidade: a cada 10 níveis Morning pode pedir 1 Ovo de bichinho (Poring, Picky, Rocker ou Lunático) · Os ovos pedidos pelas cartas de intimidade (Poring 5 · Rocker 4 · Picky 3 · Lunatic 6) também pagam Núcleo COR.",
+              "obs": "- Intimidade: a cada 10 níveis Morning pode pedir 1 Ovo de bichinho (Poring, Picky, Rocker ou Lunático)\n- Os ovos pedidos pelas cartas de intimidade (Poring 5 · Rocker 4 · Picky 3 · Lunatic 6) também pagam Núcleo COR.",
               "linkBrowiki": "https://browiki.org/wiki/Aventuras_no_Distrito#Morning"
             },
             {
@@ -2271,7 +2271,7 @@
             "Também é item da diária Passatempo Refinado do Ep. 19"
           ]
         ],
-        "nota": "Itens recebidos durante a história: 1º Radar da Elyumina (ao entregar as Espadas e o Líquido) · Comunicador de Autômato (coletado para a Mazang, cap. 1) · Núcleos de Autômata Quebrada (coletados no cap. 3)."
+        "nota": "- Itens recebidos durante a história: 1º Radar da Elyumina (ao entregar as Espadas e o Líquido)\n- Comunicador de Autômato (coletado para a Mazang, cap. 1)\n- Núcleos de Autômata Quebrada (coletados no cap. 3)."
       }
     },
     "diarias": {
@@ -2364,7 +2364,7 @@
               "tarefa": "Eliminar 20 Almoxarife",
               "itens": "",
               "recompensa": "1 Vale Varmida",
-              "obs": "Pré-requisito: Segredo no Armazém · a Aventuras na Mansão marca 1 Vale; a página Segredo no Armazém cita 2 — conferir",
+              "obs": "- Pré-requisito: Segredo no Armazém\n- a Aventuras na Mansão marca 1 Vale; a página Segredo no Armazém cita 2 — conferir",
               "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Mans%C3%A3o#Vigiar_o_Subsolo"
             }
           ]
@@ -3198,7 +3198,7 @@
             "Esteja com ela no inventário antes de clicar na Carroça."
           ]
         ],
-        "nota": "A Boneca de Elly é recebida no início e se transforma no (Visual) Mini Elly no final · Caderno de Registros, Balde de Água Filtrada, Capturas e Arquivos são manejados pelas próprias missões · A Relíquia Sagrada é comprada por 550 zeny no Vendedor de Rachel (/navi rachel 103/141)."
+        "nota": "- A Boneca de Elly é recebida no início e se transforma no (Visual) Mini Elly no final\n- Caderno de Registros, Balde de Água Filtrada, Capturas e Arquivos são manejados pelas próprias missões\n- A Relíquia Sagrada é comprada por 550 zeny no Vendedor de Rachel /navi rachel 103/141."
       }
     },
     "diarias": {
@@ -3291,10 +3291,10 @@
               "recompensa": "3 Fragmento de Ametista",
               "linkBrowiki": "https://browiki.org/wiki/Aventuras_na_Aldeia#Coleta_de_Flor_Bicolor",
               "detalhes": [
-                "Vá até Mejai (/navi rachel 70/135) e aceite coletar uma Flor Bicolor conforme a palavra mencionada no diálogo; a palavra muda por dia e corresponde a uma linha da tabela abaixo.",
+                "Vá até Mejai /navi rachel 70/135 e aceite coletar uma Flor Bicolor conforme a palavra mencionada no diálogo; a palavra muda por dia e corresponde a uma linha da tabela abaixo.",
                 "Cultive a flor usando exatamente a combinação da tabela: o ângulo, as folhas que você deixa, a água e o pó secreto.",
                 "Receba 1 Flor Bicolor — o item dura 24 horas, então só cultive quando for entregar.",
-                "Entregue a flor a Mejai (/navi rachel 70/135) para receber a recompensa."
+                "Entregue a flor a Mejai /navi rachel 70/135 para receber a recompensa."
               ],
               "tabela": {
                 "colunas": [
@@ -3615,7 +3615,7 @@
             "navi": "/navi jor_nest 22/141"
           }
         ],
-        "nota": "No Ninho da Serpente (jor_nest), entre SEMPRE usando o Disfarce de Rgan (dura 180s). Compre extras com o Lunch (/navi jor_back2 250/30).",
+        "nota": "No Ninho da Serpente (jor_nest), entre SEMPRE usando o Disfarce de Rgan (dura 180s). Compre extras com o Lunch /navi jor_back2 250/30.",
         "itens": [
           "Casca de Ovo Rgan Superior (recebida na quest)",
           "{{Disfarce de Rgan}} — mantenha ativo no Ninho"
@@ -3649,7 +3649,7 @@
           }
         ],
         "itens": [],
-        "desbloqueia": "NPC de teleporte Syaryara (/navi icecastle 55/124), a instância diária Operação Destruição e a diária Ajudar Moryara com os Peixes."
+        "desbloqueia": "NPC de teleporte Syaryara /navi icecastle 55/124, a instância diária Operação Destruição e a diária Ajudar Moryara com os Peixes."
       },
       {
         "capitulo": "5. Busca por Vulnerabilidades",
@@ -4040,7 +4040,7 @@
             "{{Disfarce de Rgan}}",
             "Vários (1 vem na quest)",
             "Transformar o grupo (cap. 2) · toda visita ao Ninho (cap. 3–7, S5–S8 e diárias do Ninho) · área especial jor_dun01 8/238 (cap. 9)",
-            "Dura só 180 s e acaba se você morrer. Compre com o Lunch (/navi jor_back2 250/30); a diária do cardápio entrega 1 por dia. Também é criável com 2 {{Núcleo Mágico Rgan de Baixa Qualidade}}. !!Não é transferível para outros personagens!!"
+            "- Dura só 180 s e acaba se você morrer\n- Compre com o Lunch — /navi jor_back2 250/30\n- A diária do cardápio entrega 1 por dia\n- Também é criável com 2 {{Núcleo Mágico Rgan de Baixa Qualidade}}\n- !!Não é transferível para outros personagens!!"
           ],
           [
             "{{Núcleo Mágico Rgan de Baixa Qualidade}}",
@@ -4052,7 +4052,7 @@
             "{{Petisco de Gelo}}",
             "1 grátis + até 2 opcionais",
             "1ª entrega a Juncea (o grátis) — cap. 6 · alternativa aos 10 núcleos nas 2 entregas seguintes",
-            "O primeiro vem de Wirorung e Jaerorong (/navi icas_in 245/197)."
+            "O primeiro vem de Wirorung e Jaerorong — /navi icas_in 245/197."
           ],
           [
             "{{Carta Bathory}} ou {{Carta Druida Maligno}}",
@@ -4068,7 +4068,7 @@
           ]
         ],
         "observacaoEquip": "A carta ({{Carta Bathory}} ou {{Carta Druida Maligno}}) precisa estar equipada em Armadura para dar imunidade ao Dark Grand Cross da Simulação de Batalha. Arma ou encantamento de propriedade Vento cobre os monstros de Água dos campos e do Fosso. Ambos são opcionais, mas facilitam muito os capítulos 6 e 9 e as diárias.",
-        "nota": "Itens de quest recebidos e entregues automaticamente: Convite do Guardião · Casca de Ovo Rgan Superior · Livro-caixa · Tubo de Ensaio de Juncea · Tubo de Ensaio com Líquido Vermelho · Antena de Alta Sensibilidade (as 10 da S4 também vêm da quest)."
+        "nota": "- Itens de quest recebidos e entregues automaticamente: Convite do Guardião, Casca de Ovo Rgan Superior, Livro-caixa, Tubo de Ensaio de Juncea, Tubo de Ensaio com Líquido Vermelho, Antena de Alta Sensibilidade (as 10 da S4 também vêm da quest)."
       }
     },
     "diarias": {
@@ -4293,21 +4293,21 @@
           "Lojas do Maram",
           "Maram (op. 1–4)",
           "/navi icas_in 180/61",
-          "Op. 1: consumíveis · op. 2: Equipamento Invernal (100 Pétalas/peça) · op. 3: vender",
-          "As Armas Invernais (150.000z) são compradas com Poruru (/navi icas_in 188/60), na mesma área das lojas do Maram."
+          "- Op. 1: consumíveis\n- op. 2: Equipamento Invernal (100 Pétalas/peça)\n- op. 3: vender",
+          "As Armas Invernais (150.000z) são compradas com Poruru, na mesma área das lojas do Maram. /navi icas_in 188/60"
         ],
         [
           "Trocas e encantamentos",
           "Vellgunde (op. 2–4)",
           "/navi icas_in 185/63",
-          "Op. 2: 35 Pétalas → 1 Peça de Flor Invernal aleatória · op. 3: 3 Globos → 1 Globo aleatório · op. 4: encantamentos",
+          "- Op. 2: 35 Pétalas → 1 Peça de Flor Invernal aleatória\n- op. 3: 3 Globos → 1 Globo aleatório\n- op. 4: encantamentos",
           "A reciclagem da op. 3 não consta na bROWiki (fonte: Hazy/iRO)."
         ],
         [
           "Globos e reputação",
           "Hoyoyo (op. 1–2)",
           "/navi icas_in 175/63",
-          "Op. 1: 5 Minério → 1 Globo · 5 Globos → 1 Brilhante · 5 Brilhantes → 1 Reluzente · op. 2: loja de reputação",
+          "- Op. 1: 5 Minério → 1 Globo · 5 Globos → 1 Brilhante · 5 Brilhantes → 1 Reluzente\n- op. 2: loja de reputação",
           ""
         ],
         [

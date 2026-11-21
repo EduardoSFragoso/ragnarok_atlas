@@ -269,7 +269,7 @@
     "Bônus por Reputação": "2",
     "Incluir? (Sim/Não)": "Sim",
     "Incluir bônus? (Sim/Não)": "Não",
-    "Observação": "Escolha 1 assento por dia · Bônus de Reputação Lv.3 em Issgard",
+    "Observação": "- Escolha 1 assento por dia\n- Bônus de Reputação Lv.3 em Issgard",
     "Por dia (se incluído)": ""
   },
   {
@@ -295,7 +295,7 @@
     "Bônus por Reputação": "3",
     "Incluir? (Sim/Não)": "Não",
     "Incluir bônus? (Sim/Não)": "Não",
-    "Observação": "Escolha 1 assento por dia · Bônus de Reputação Lv.3 em Issgard",
+    "Observação": "- Escolha 1 assento por dia\n- Bônus de Reputação Lv.3 em Issgard",
     "Por dia (se incluído)": ""
   },
   {
@@ -321,7 +321,7 @@
     "Bônus por Reputação": "7",
     "Incluir? (Sim/Não)": "Não",
     "Incluir bônus? (Sim/Não)": "Não",
-    "Observação": "Escolha 1 assento por dia · Bônus de Reputação Lv.3 em Issgard",
+    "Observação": "- Escolha 1 assento por dia\n- Bônus de Reputação Lv.3 em Issgard",
     "Por dia (se incluído)": ""
   },
   {
@@ -425,7 +425,7 @@
     "Bônus por Reputação": "1",
     "Incluir? (Sim/Não)": "Sim",
     "Incluir bônus? (Sim/Não)": "Não",
-    "Observação": "Reputação +30 · O \"(+1)\" é ligado à Reputação; a página não informa o nível exigido",
+    "Observação": "- Reputação +30\n- O \"(+1)\" é ligado à Reputação; a página não informa o nível exigido",
     "Por dia (se incluído)": ""
   },
   {
@@ -438,7 +438,7 @@
     "Bônus por Reputação": "1",
     "Incluir? (Sim/Não)": "Sim",
     "Incluir bônus? (Sim/Não)": "Não",
-    "Observação": "Reputação +30 · O \"(+1)\" é ligado à Reputação; a página não informa o nível exigido",
+    "Observação": "- Reputação +30\n- O \"(+1)\" é ligado à Reputação; a página não informa o nível exigido",
     "Por dia (se incluído)": ""
   },
   {
@@ -490,7 +490,7 @@
     "Bônus por Reputação": "1",
     "Incluir? (Sim/Não)": "Sim",
     "Incluir bônus? (Sim/Não)": "Não",
-    "Observação": "Reputação +30 · O \"(+1)\" é ligado à Reputação; a página não informa o nível exigido",
+    "Observação": "- Reputação +30\n- O \"(+1)\" é ligado à Reputação; a página não informa o nível exigido",
     "Por dia (se incluído)": ""
   },
   {
@@ -503,7 +503,7 @@
     "Bônus por Reputação": "1",
     "Incluir? (Sim/Não)": "Sim",
     "Incluir bônus? (Sim/Não)": "Não",
-    "Observação": "Reputação +30 · O \"(+1)\" é ligado à Reputação; a página não informa o nível exigido",
+    "Observação": "- Reputação +30\n- O \"(+1)\" é ligado à Reputação; a página não informa o nível exigido",
     "Por dia (se incluído)": ""
   },
   {
@@ -529,7 +529,7 @@
     "Bônus por Reputação": "",
     "Incluir? (Sim/Não)": "Sim",
     "Incluir bônus? (Sim/Não)": "",
-    "Observação": "Diária distinta da de 20 Sapo Cinzento (só Nv. 200+) · Reputação +30",
+    "Observação": "- Diária distinta da de 20 Sapo Cinzento (só Nv. 200+)\n- Reputação +30",
     "Por dia (se incluído)": ""
   },
   {
@@ -594,7 +594,7 @@
     "Bônus por Reputação": "2",
     "Incluir? (Sim/Não)": "Sim",
     "Incluir bônus? (Sim/Não)": "Não",
-    "Observação": "Grupo de 2+ pessoas; alternativa conforme o seu nível de Reputação · Bônus: com Reputação nv. 5+ o total é 10 (nv. 4 ou menos: 8)",
+    "Observação": "- Grupo de 2+ pessoas; alternativa conforme o seu nível de Reputação\n- Bônus: com Reputação nv. 5+ o total é 10 (nv. 4 ou menos: 8)",
     "Por dia (se incluído)": ""
   },
   {
@@ -607,7 +607,7 @@
     "Bônus por Reputação": "3",
     "Incluir? (Sim/Não)": "Não",
     "Incluir bônus? (Sim/Não)": "Não",
-    "Observação": "Exige Chave da Mansão da Desilusão por membro (a Chave cai no Normal com 10% de chance; no Difícil não é obtida) · Bônus: com Reputação nv. 5+ o total é 13 (nv. 4 ou menos: 10)",
+    "Observação": "- Exige Chave da Mansão da Desilusão por membro (a Chave cai no Normal com 10% de chance; no Difícil não é obtida)\n- Bônus: com Reputação nv. 5+ o total é 13 (nv. 4 ou menos: 10)",
     "Por dia (se incluído)": ""
   },
   {
