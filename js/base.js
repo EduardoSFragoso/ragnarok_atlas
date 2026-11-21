@@ -139,6 +139,69 @@ function groupBy(rows, keyFn) {
     return [...groups.values()];
 }
 
+/* ===== Injeção de HTML — PONTO ÚNICO do site =====
+   As views produzem strings HTML (dados sempre passam por esc()/richText antes da
+   interpolação), mas a *injeção* na página é toda via API de DOM:
+   defineHTML(alvo, html) constrói os nós num <template>, remove conteúdo perigoso
+   (defesa em profundidade caso alguém interpole um dado sujo um dia) e entra com
+   replaceChildren — sem innerHTML de produção em nenhum outro arquivo. */
+
+/* Tags que nunca devem aparecer no HTML gerado pelo site. */
+const TAGS_BLOQUEADAS = new Set(["script", "iframe", "object", "embed", "base", "form", "meta", "link"]);
+
+/* Atributos de URL: bloqueiam esquemas não http(s)/relativos (javascript:, data:…). */
+const ATR_URL = new Set(["href", "src", "srcset", "action", "formaction"]);
+
+const URL_SEGURA = (v) => !/^\s*(?:javascript|data|vbscript):/i.test(v);
+
+/** Saneia um subárvore já parseada: revoga tags/atributos perigosos. Exceção única
+    e documentada: onerror em <img> (itemIcon usa para remover ícone ausente). */
+function saneiaSubarvore(raiz) {
+    for (const el of [...raiz.querySelectorAll("*")]) {
+        if (TAGS_BLOQUEADAS.has(el.tagName.toLowerCase())) {
+            el.remove();
+            continue;
+        }
+        for (const atributo of [...el.attributes]) {
+            const nome = atributo.name.toLowerCase();
+            if (nome.startsWith("on") && !(nome === "onerror" && el.tagName === "IMG")) {
+                el.removeAttribute(atributo.name);
+            } else if (ATR_URL.has(nome) && !URL_SEGURA(atributo.value)) {
+                el.removeAttribute(atributo.name);
+            }
+        }
+    }
+}
+
+/** Ponto único de injeção de HTML: substitui o conteúdo de `alvo` pelos nós
+    parseados e saneados de `html`. Devolve o próprio alvo para encadear. */
+function defineHTML(alvo, html) {
+    const tpl = document.createElement("template");
+    tpl.innerHTML = String(html ?? ""); // único innerHTML do projeto, dentro de base.js
+    saneiaSubarvore(tpl.content);
+    alvo.replaceChildren(tpl.content);
+    return alvo;
+}
+
+/** Construtor de DOM para código NOVO: el("tr", { class: "x", dataset: {…} },
+    el("td", {}, "texto"), …). Strings viram nós de texto, Elementos entram como
+    estão, { html: "…" } insere fragmento (use só com saída de richText/esc).
+    Prefira isto a montar strings quando o conteúdo é estrutural. */
+function el(tag, atributos = {}, ...filhos) {
+    const no = document.createElement(tag);
+    for (const [chave, valor] of Object.entries(atributos || {})) {
+        if (valor == null || valor === false) continue;
+        if (chave === "dataset") Object.assign(no.dataset, valor);
+        else if (chave === "html") defineHTML(no, valor);
+        else no.setAttribute(chave, valor === true ? "" : String(valor));
+    }
+    for (const filho of filhos.flat()) {
+        if (filho == null || filho === false) continue;
+        no.append(filho instanceof Node ? filho : document.createTextNode(String(filho)));
+    }
+    return no;
+}
+
 /* Caixa de erro padrão (role="alert") usada nos fallbacks de render. */
 function caixaErroHtml(titulo, detalhe) {
     return `<div class="error-box" role="alert"><b>${esc(titulo)}</b><br>${esc(detalhe || "")}</div>`;

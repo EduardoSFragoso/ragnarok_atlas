@@ -519,7 +519,7 @@ function upDetail() {
 
 function bindUpgrades() {
     const sync = () => {
-        $("#upChance").innerHTML = upChance();
+        defineHTML($("#upChance"), upChance());
         $$("[data-up-table]").forEach((b) => {
             const on = b.dataset.upTable === upTable;
             b.classList.toggle("active", on);
@@ -528,7 +528,7 @@ function bindUpgrades() {
         });
         $$('[data-up-extra="especiais"]').forEach((el) => (el.hidden = upTable !== "refino"));
         const d = $("#upDetail");
-        if (d) d.innerHTML = upDetail();
+        if (d) defineHTML(d, upDetail());
     };
     $$("[data-up-table]").forEach(
         (b) =>

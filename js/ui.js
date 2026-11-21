@@ -61,7 +61,7 @@ function setTheme(theme) {
     document.body.dataset.theme = theme;
     const dark = theme === "dark";
     document.querySelector('meta[name="theme-color"]')?.setAttribute("content", dark ? "#101923" : "#f4f6f7");
-    $("#themeToggle").innerHTML = dark ? "☼ <span>Modo claro</span>" : "☾ <span>Modo escuro</span>";
+    $("#themeToggle").replaceChildren(dark ? "☼ " : "☾ ", el("span", {}, dark ? "Modo claro" : "Modo escuro"));
     $("#themeToggle").setAttribute("aria-label", dark ? "Ativar modo claro" : "Ativar modo escuro");
     $("#themeToggle").title = dark ? "Ativar modo claro" : "Ativar modo escuro";
     try {

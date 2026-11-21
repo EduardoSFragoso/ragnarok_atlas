@@ -41,6 +41,7 @@ const navegador = {
     setTimeout: "readonly",
     Promise: "readonly",
     URLSearchParams: "readonly",
+    Node: "readonly",
 };
 
 export default scripts.map((arquivo) => ({
@@ -73,5 +74,16 @@ export default scripts.map((arquivo) => ({
         "no-cond-assign": ["error", "except-parens"],
         "no-async-promise-executor": "error",
         "require-atomic-updates": "warn",
+        // Injeção de HTML só via defineHTML (js/base.js): em qualquer outro script,
+        // atribuir .innerHTML vira erro de lint, não um vetor de XSS esquecido.
+        ...(arquivo !== "js/base.js" && {
+            "no-restricted-syntax": [
+                "error",
+                {
+                    selector: "AssignmentExpression[left.computed=false][left.property.name='innerHTML']",
+                    message: "Use defineHTML(alvo, html) — a injeção de HTML do site é centralizada em js/base.js.",
+                },
+            ],
+        }),
     },
 }));

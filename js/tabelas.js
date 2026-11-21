@@ -387,35 +387,40 @@ function renderCostTable(rows) {
 function renderDataTable(view) {
     const found = filteredRows(view);
     if (view === "equipamentos") {
-        $("#tableMount").innerHTML = renderEquipmentTable(found);
+        defineHTML($("#tableMount"), renderEquipmentTable(found));
         return;
     }
     if (view === "encantamentos") {
-        $("#tableMount").innerHTML = renderEnchantTable(found);
+        defineHTML($("#tableMount"), renderEnchantTable(found));
         return;
     }
     if (view === "custos") {
-        $("#tableMount").innerHTML = renderCostTable(found);
+        defineHTML($("#tableMount"), renderCostTable(found));
         return;
     }
     const cfg = TABLES[view],
         cols = cfg.cols.map(([campo, rotulo]) => [COL[cfg.key][campo], rotulo]),
         body = rowspanBody(found, cols, cfg.mergeCols || []);
-    $("#tableMount").innerHTML = tableFrame(
-        cols.map(([, rotulo]) => esc(rotulo)),
-        body
+    defineHTML(
+        $("#tableMount"),
+        tableFrame(
+            cols.map(([, rotulo]) => esc(rotulo)),
+            body
+        )
     );
 }
 
 function renderReformTable() {
     const f = db.fides || {},
         term = globalTerm.toLocaleLowerCase("pt-BR");
-    $("#reformNote").innerHTML =
+    defineHTML(
+        $("#reformNote"),
         `<p class="table-search-note">Armas Adulter Fides (+9 ou mais) viram Vivatus Fides com o ` +
-        `${esc(f.npc?.nome || "Bamdatt")} ${naviBtn("/navi " + (f.npc?.navi || "wolfvill 170/131"))}` +
-        `. ` +
-        `Os três métodos têm o mesmo custo fixo para todas as classes e armas; o Esboço de Arma deve corresponder ` +
-        `à arma desejada.</p>`;
+            `${esc(f.npc?.nome || "Bamdatt")} ${naviBtn("/navi " + (f.npc?.navi || "wolfvill 170/131"))}` +
+            `. ` +
+            `Os três métodos têm o mesmo custo fixo para todas as classes e armas; o Esboço de Arma deve corresponder ` +
+            `à arma desejada.</p>`
+    );
     const classes = (f.classes || []).filter(
         (cl) =>
             !term ||
@@ -433,20 +438,25 @@ function renderReformTable() {
               .join("")}` +
           `</div></div>`
         : "";
-    $("#reformConversionMount").innerHTML =
+    defineHTML(
+        $("#reformConversionMount"),
         ritual +
-        tableFrame(
-            ["Classe", "Adulter \u2192 Vivatus"],
-            classes
-                .map(
-                    (cl) =>
-                        `<tr><td class="classe-cell">${esc(cl.classe)}</td><td><div class="ver-grid">` +
-                        `${cl.armas
-                            .map((a) => `<div class="adu">${refItem(a.o)}</div><div class="viv">${refItem(a.r)}</div>`)
-                            .join("")}` +
-                        `</div></td></tr>`
-                )
-                .join(""),
-            "conv-table align-top"
-        );
+            tableFrame(
+                ["Classe", "Adulter \u2192 Vivatus"],
+                classes
+                    .map(
+                        (cl) =>
+                            `<tr><td class="classe-cell">${esc(cl.classe)}</td><td><div class="ver-grid">` +
+                            `${cl.armas
+                                .map(
+                                    (a) =>
+                                        `<div class="adu">${refItem(a.o)}</div><div class="viv">${refItem(a.r)}</div>`
+                                )
+                                .join("")}` +
+                            `</div></td></tr>`
+                    )
+                    .join(""),
+                "conv-table align-top"
+            )
+    );
 }
