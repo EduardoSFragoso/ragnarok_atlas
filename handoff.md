@@ -171,22 +171,42 @@ Node 22+ e em navegadores recentes — materialize com `[...iter]` ou `Array.fro
 
 `.github/dependabot.yml` abre PRs semanais de atualização (npm e GitHub Actions); cada PR já sai validado pelo CI.
 
-**Passo a passo para criar a ruleset que protege a `main`** (uma vez só, na interface do GitHub):
+### 5.2 Ruleset que protege a `main` — JÁ CRIADA E ATIVA
+
+O ruleset `protege-main` **existe e está em Enforcement: Active** nesta data. Estado atual verificado:
+
+- **Require a pull request before merging**: ligado (push direto na `main` é recusado com GH013 — testado).
+- **Require status checks to pass**: ligado, com o job **`checks`** (do `ci.yml`) como check obrigatório — PR com
+  CI vermelha fica com o botão de merge travado.
+- **Block force pushes** e **Require conversation resolution before merging**: ligados.
+- **Require linear history**: ligado — proíbe _merge commits_ na `main`, que fica sempre uma linha reta.
+- **Allowed merge methods** (fora do ruleset, em Settings → General → Pull Requests): _merge commits_ desligado;
+  _squash_ e _rebase_ ligados. Padrão do projeto: **Rebase and merge** (mantém os commits menores do PR); _Squash_
+  é o escape para achatar um PR com refino bagunçado.
+- ⚠ **Pendente de decisão**: o item **"Require branches to be up to date before merging"** estava **desmarcado**.
+  Recomendação: marcar — sem ele, um PR aprovado com CI verde pode ser mergido depois que a `main` andou (o check
+  passou, mas sobre um código que já não é o do topo). Com ele, o GitHub exige _Update branch_ antes do merge.
+
+**Lição registrada** (o motivo de o status check existir hoje): um PR foi mergido com a CI **vermelha** porque o
+ruleset ainda não exigia o check `checks` — o merge entrou e deixou a `main` quebrada até o PR de correção.
+O fix foi exatamente marcar _Require status checks to pass → `checks`_. Se você for mexer no ruleset, não desmarque
+esse item: é a rede de segurança que impede merge de código quebrado.
+
+Reprodução do passo a passo (caso o ruleset precise ser recriado do zero; uma vez só, na interface do GitHub):
 
 1. No repositório, **Settings → Rules → Rulesets → New ruleset → New branch ruleset**.
 2. **Ruleset Name**: `protege-main`. **Enforcement status**: Active.
 3. Seção **Target branches**: Add target → _Add classic branch targeting_ → Ref name: `Default` (ou `main`).
 4. Em **Bypass list**: deixe vazio (assim ninguém, nem você, escapa dos checks).
-5. Em **Branch rules**, marque:
+5. Em **Branch rules**, marque (é o estado atual descrito acima):
     - **Require a pull request before merging** — com "1 required approval" se quiser revisão (sozinho, pode deixar 0
       e apenas mudar o fluxo: tudo passa por PR mesmo que você aprove o próprio PR);
-    - **Required status checks** → Search: adicione o job **`checks`** (é o nome do job do `ci.yml`);
+    - **Require status checks to pass** → Search: adicione o job **`checks`** (é o nome do job do `ci.yml`);
+      avalie marcar também **Require branches to be up to date before merging** (ver pendência acima);
     - **Block force pushes** e **Require conversation resolution before merging**;
     - **Require linear history** — proíbe _merge commits_ na `main`, que fica sempre uma linha reta.
 6. Fora do ruleset (/settings do repositório): **Settings → General → Pull Requests → Allowed merge methods** —
-   desligue **Allow merge commits** e deixe **Allow squash merging** e **Allow rebase merging** ligados. Com isso os
-   únicos jeitos de entrar na `main` preservam a linearidade da regra acima: _Rebase and merge_ mantém os commits
-   menores do PR (padrão do projeto) e _Squash_ é o escape para achatar um PR com refino bagunçado.
+   desligue **Allow merge commits** e deixe **Allow squash merging** e **Allow rebase merging** ligados.
 7. **Create changeset**. Feito isso: push direto na `main` passa a ser recusado; o CI roda **antes** do merge, no PR.
 8. Exceção emergencial: Settings → Rules → o ruleset → desative temporariamente (_edit → toggle Enforcement_), resolva
    e reative. O bypass de emergência não deve ser routineiro.
