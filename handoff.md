@@ -183,9 +183,8 @@ O ruleset `protege-main` **existe e está em Enforcement: Active** nesta data. E
 - **Allowed merge methods** (fora do ruleset, em Settings → General → Pull Requests): _merge commits_ desligado;
   _squash_ e _rebase_ ligados. Padrão do projeto: **Rebase and merge** (mantém os commits menores do PR); _Squash_
   é o escape para achatar um PR com refino bagunçado.
-- ⚠ **Pendente de decisão**: o item **"Require branches to be up to date before merging"** estava **desmarcado**.
-  Recomendação: marcar — sem ele, um PR aprovado com CI verde pode ser mergido depois que a `main` andou (o check
-  passou, mas sobre um código que já não é o do topo). Com ele, o GitHub exige _Update branch_ antes do merge.
+- **Require branches to be up to date before merging**: ligado — um PR só mergea depois de _Update branch_ com a
+  `main` atual; o check obrigatório roda sempre sobre o topo mais recente, não sobre um código velho já aprovado.
 
 **Lição registrada** (o motivo de o status check existir hoje): um PR foi mergido com a CI **vermelha** porque o
 ruleset ainda não exigia o check `checks` — o merge entrou e deixou a `main` quebrada até o PR de correção.
@@ -202,7 +201,7 @@ Reprodução do passo a passo (caso o ruleset precise ser recriado do zero; uma 
     - **Require a pull request before merging** — com "1 required approval" se quiser revisão (sozinho, pode deixar 0
       e apenas mudar o fluxo: tudo passa por PR mesmo que você aprove o próprio PR);
     - **Require status checks to pass** → Search: adicione o job **`checks`** (é o nome do job do `ci.yml`);
-      avalie marcar também **Require branches to be up to date before merging** (ver pendência acima);
+      avalie marcar também **Require branches to be up to date before merging**;
     - **Block force pushes** e **Require conversation resolution before merging**;
     - **Require linear history** — proíbe _merge commits_ na `main`, que fica sempre uma linha reta.
 6. Fora do ruleset (/settings do repositório): **Settings → General → Pull Requests → Allowed merge methods** —
