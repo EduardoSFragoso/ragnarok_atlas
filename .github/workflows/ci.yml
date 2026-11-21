@@ -33,6 +33,9 @@ jobs:
             - name: Tests (data validator)
               run: npm test
 
+            - name: Render smoke test (jsdom)
+              run: npm run snapshot -- --verificar
+
             - name: Validate JSON
               run: |
                   set -euo pipefail

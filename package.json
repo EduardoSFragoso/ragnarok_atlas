@@ -10,10 +10,12 @@
         "format": "prettier --write .",
         "check": "node --check app.js",
         "validar:dados": "node tools/validar_dados.mjs",
-        "test": "node --test tools/validar_dados.test.mjs"
+        "test": "node --test tools/validar_dados.test.mjs",
+        "snapshot": "node tools/snapshot.mjs"
     },
     "devDependencies": {
         "eslint": "^10.15.0",
+        "jsdom": "^26.1.0",
         "prettier": "^3.10.1"
     },
     "engines": {
