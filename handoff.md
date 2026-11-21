@@ -195,7 +195,8 @@ Node 22+ e em navegadores recentes — materialize com `[...iter]` ou `Array.fro
 ## 6. Checklist antes de cada commit
 
 1. `npm run format` (não formata `data/`: lá mantenha o estilo de indentação que o arquivo já tem).
-2. Se mexeu em `js/`, `app.js` ou `styles.css`: `npm run versao`.
+2. Se mexeu em `js/`, `app.js` ou `styles.css`: `npm run versao` — **sempre por último, depois do `format`**: o
+   Prettier reformata o `js/` e invalida o hash se a versão foi calculada antes (a CI pega, mas evite o descaminho).
 3. `npm run check && npm run lint && npm run format:check`.
 4. Se mexeu em `data/`: `npm run validar:dados`.
 5. `npm test` (e os testes Python se mexeu em `tools/`).
