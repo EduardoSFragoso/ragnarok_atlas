@@ -42,7 +42,7 @@ as views leem as células por `r[K.campo]`, onde `K = COL.<tabela>`.
 
 Outras pastas: `data/` (conteúdo, JSON), `assets/icons/` (PNGs de itens, nomeados pelo ID do Divine Pride),
 `styles.css`, `tools/` (validação, testes e scripts de manutenção), `.github/workflows/` (CI e um fluxo manual).
-A branch `legado` guarda a versão antiga (planilhas TSV); não é usada no dia a dia.
+A branch `legado` guarda a versão antiga (planilhas TSV) e o conversor TSV → JSON (`tools/converter_tsv_json.py`); não é usada no dia a dia.
 
 ## 3. Contratos que não podem quebrar
 
@@ -175,7 +175,6 @@ estiver limpo, a chance de quebrar o site é pequena.
 | `puxar_efeitos_divine_pride.py` | busca na API do Divine Pride os efeitos pendentes                                              | rede + `DP_API_KEY` (env) |
 | `agregar_efeitos.py`            | agrega efeitos "com refino +X ou mais" em `encantamentos_disponiveis.json`                     | local                     |
 | `montar_reforma_fides.py`       | gera `data/reforma_fides.json` a partir da bROWiki (HTML)                                      | rede, sem chave           |
-| `converter_tsv_json.py`         | **legado**: converte planilhas TSV (hoje só na branch `legado`)                                | local                     |
 | `_comum.py`                     | utilitários: `registros(tabela)`, `carregar_contrato()`, escrita atômica em LF, HTTP com retry | —                         |
 
 As que leem tabelas de `data/` usam o contrato por **nome de campo** (`registros("custo")`; `agregar_efeitos.py` pega o
@@ -188,6 +187,9 @@ nome da coluna em `colunas.json`), nunca por posição. Escritas de JSON usam
 - Tratar `[1:]` como "pular o cabeçalho" em dados vindos de `registros()`: não há cabeçalho, o primeiro registro é dado
   (isso já fez ferramentas ignorarem o 1º registro de cada tabela).
 - Esquecer `npm run versao`: a CI reprova e, pior, o navegador pode servir arquivo velho.
+- Rodar Prettier em `data/`: ele fica fora do Prettier (`.prettierignore`) de propósito. Reformataria os 20 JSONs
+  (~33 mil linhas de diff) e brigaria com os scripts Python, que gravam com `indent=1`. Cada arquivo tem o seu estilo
+  de indentação (1, 2 ou 4 espaços); ao editar à mão, **preserve o estilo do arquivo** e não reformate o resto.
 - Mudar fim de linha: o repositório é **LF** (`.gitattributes`); no Windows, não converta para CRLF.
 - Dependência de carregamento para frente (3.4): funciona em um arquivo só e quebra quando o código está dividido.
 - Deixar uma alteração de teste (mutação "só para ver se quebra") no código: sempre desfaça antes de commitar e rode a
@@ -198,8 +200,8 @@ nome da coluna em `colunas.json`), nunca por posição. Escritas de JSON usam
 - Concluído: validador de esquema com testes; colunas lidas por nome (site e Python); índices numéricos substituídos por
   nomes lógicos; `app.js` dividido em `js/`; versão de cache automática; snapshot de renderização; ESLint multi-arquivo;
   CI cobrindo tudo isso.
-- Conhecido, não urgente: algumas linhas de HTML em template strings ainda passam de 160 caracteres; os cartões da
-  visão geral, as tuplas de links em `referencias.json` e as definições de coluna locais de reforma/diárias ainda usam
-  índices numéricos locais (não são colunas de tabela de dados).
+- Sem pendências conhecidas de legibilidade: as expressões longas de HTML foram extraídas para constantes nomeadas e
+  os índices numéricos de colunas/tuplas viraram nomes ou desestruturação. Os `[0]` que restam são "primeiro elemento"
+  de listas, o que é legítimo.
 - Se mudar algo estrutural (ordem dos scripts, contrato de colunas, fluxo de CI), **atualize este arquivo** e o README
   na mesma alteração.
