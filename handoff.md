@@ -180,9 +180,9 @@ O ruleset `protege-main` **existe e está em Enforcement: Active** nesta data. E
   CI vermelha fica com o botão de merge travado.
 - **Block force pushes** e **Require conversation resolution before merging**: ligados.
 - **Require linear history**: ligado — proíbe _merge commits_ na `main`, que fica sempre uma linha reta.
-- **Allowed merge methods** (fora do ruleset, em Settings → General → Pull Requests): _merge commits_ desligado;
-  _squash_ e _rebase_ ligados. Padrão do projeto: **Rebase and merge** (mantém os commits menores do PR); _Squash_
-  é o escape para achatar um PR com refino bagunçado.
+- **Allowed merge methods** (fora do ruleset, em Settings → General → Pull Requests): **_merge commits_ e
+  _squash_ desligados; só _Rebase and merge_ ligado** — a `main` fica uma linha reta e cada commit do PR entra
+  com a mensagem própria e o hash original (Squash achataria o PR e sumiria com os commits intermediários).
 - **Require branches to be up to date before merging**: ligado — um PR só mergea depois de _Update branch_ com a
   `main` atual; o check obrigatório roda sempre sobre o topo mais recente, não sobre um código velho já aprovado.
 
@@ -205,7 +205,8 @@ Reprodução do passo a passo (caso o ruleset precise ser recriado do zero; uma 
     - **Block force pushes** e **Require conversation resolution before merging**;
     - **Require linear history** — proíbe _merge commits_ na `main`, que fica sempre uma linha reta.
 6. Fora do ruleset (/settings do repositório): **Settings → General → Pull Requests → Allowed merge methods** —
-   desligue **Allow merge commits** e deixe **Allow squash merging** e **Allow rebase merging** ligados.
+   desligue **Allow merge commits** e **Allow squash merging**, deixando **apenas Allow rebase merging** ligado
+   (regra de casa atual: todo merge na `main` é Rebase and merge).
 7. **Create changeset**. Feito isso: push direto na `main` passa a ser recusado; o CI roda **antes** do merge, no PR.
 8. Exceção emergencial: Settings → Rules → o ruleset → desative temporariamente (_edit → toggle Enforcement_), resolva
    e reative. O bypass de emergência não deve ser routineiro.
