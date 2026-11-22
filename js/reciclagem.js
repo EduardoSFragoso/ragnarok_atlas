@@ -31,22 +31,6 @@ function recycleView() {
         `sorteada. A página de origem lista quatro grupos de resultado; confirme lá se são opções do menu ou ` +
         `resultados simultâneos.</p>` +
         `</div></div>${tableFrame(["Entrada", "Resultado", "Quantidade por reciclagem"], body, "grouped-table align-top")}` +
-        `<div class="section-heading"><div><h2>Estimativa por quantidade</h2><p>Quantas reciclagens você consegue ` +
-        `fazer e quanto pode receber de um grupo.</p>` +
-        `</div></div><div class="card calc-form"><div class="fields">` +
-        `<div class="field"><label>Armas Vil Invernais</label><div class="rc-stepper">` +
-        `<button type="button" class="button" ` +
-        `data-rc="sub" aria-label="Remover 3">− 3</button>` +
-        `<b id="rcQty">3</b><button type="button" class="button" data-rc="add" aria-label="Adicionar 3">+ 3</button>` +
-        `</div></div><div class="field"><label for="rcGroup">Grupo de resultado</label>` +
-        `<select id="rcGroup">` +
-        `${RECYCLE19.map(([grupo], i) => `<option value="${i}">${esc(grupo)}</option>`).join("")}` +
-        `</select></div><div class="field"><label for="rcDay">Armas por dia</label>` +
-        `<input id="rcDay" type="number" ` +
-        `min="0" step="3" value="${stNum(stLoad("ro-atlas-armas-dia", 0))}">` +
-        `</div></div><p class="table-search-note" id="rcDayNote"></p></div><div class="card calc-result">` +
-        `<div class="eyebrow">ESTIMATIVA</div><h3 id="rcTitle">—</h3><div class="ingredient-list" id="rcTotals">` +
-        `</div></div></div>` +
         globosHtml()
     );
 }
@@ -85,48 +69,4 @@ function globosHtml() {
         `<div class="panel-note"><b>Loja de Reputação:</b> o Hoyoyo também abre a loja de Reputação (op. 2, ` +
         `paga com ${itemLink("Pétala de Flor Invernal")}); a lista completa fica na aba Guia, no Ep. 19.</div>`
     );
-}
-
-function bindRecycle() {
-    let n = 3;
-    const g = () => RECYCLE19[+$("#rcGroup").value],
-        dayIn = $("#rcDay"),
-        dayNote = () => {
-            const d = Math.max(0, Number(dayIn.value) || 0),
-                c = Math.floor(d / 3);
-            $("#rcDayNote").textContent =
-                d > 0
-                    ? `${fmt(c)} reciclagens por dia (${fmt(d)} armas ÷ 3).`
-                    : "Informe quantas armas você consegue farmar por dia para estimar as reciclagens diárias.";
-        },
-        run = () => {
-            const cycles = n / 3;
-            $("#rcQty").textContent = fmt(n);
-            $("#rcTitle").textContent = `${fmt(cycles)} reciclage${cycles === 1 ? "m" : "ns"}`;
-            defineHTML(
-                $("#rcTotals"),
-                g()[1]
-                    .map(
-                        ([nome, min, max]) =>
-                            `<div class="ingredient"><span class="item-label">${itemLink(nome)}</span>` +
-                            `<b>${fmt(min * cycles)}${min === max ? "" : ` ~ ${fmt(max * cycles)}`}` +
-                            `</b></div>`
-                    )
-                    .join("")
-            );
-        };
-    $$("[data-rc]").forEach(
-        (b) =>
-            (b.onclick = () => {
-                n = Math.max(3, n + (b.dataset.rc === "add" ? 3 : -3));
-                run();
-            })
-    );
-    $("#rcGroup").onchange = run;
-    dayIn.oninput = () => {
-        stSave("ro-atlas-armas-dia", Math.max(0, Number(dayIn.value) || 0));
-        dayNote();
-    };
-    run();
-    dayNote();
 }
