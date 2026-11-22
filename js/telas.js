@@ -171,7 +171,6 @@ function render() {
     try {
         bindContent();
         if (currentView === "diarias") bindDiariasEstoque();
-        if (currentView === "reciclagem") bindRecycle();
         if (currentView === "grau") bindUpgrades();
     } catch (err) {
         console.error("Erro ao ligar os eventos da página:", err);
