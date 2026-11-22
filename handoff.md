@@ -177,6 +177,13 @@ Há também um fluxo **manual** (`puxar-efeitos-divine-pride.yml`) que consulta 
 `DP_API_KEY` e abre um PR; a chave só existe como variável de ambiente/segredo — **nunca** a coloque em arquivo, log
 ou linha de comando.
 
+**PRs abertos por esse fluxo** (autor `github-actions[bot]`) **não rodam a CI sozinhos**: o GitHub os deixa em _Action
+required_ e o check `checks` fica em "Expected — Waiting for status to be reported" até alguém com permissão de escrita
+clicar em **Approve workflows to run** (na página do PR ou da execução). Depois do clique a CI roda normalmente e o
+ruleset (§5.2) libera o merge. Testado em 22/11/2026 com um workflow descartável (CI verde em 32 s; o workflow de teste
+já foi removido). Não é preciso trocar o `GITHUB_TOKEN` por um PAT, e a aprovação é uma proteção do GitHub — não a
+contorne.
+
 ### 5.1 Dependabot e proteção da `main`
 
 A CI e o projeto rodam em **Node 24** (`node-version: 24` no `ci.yml`, `"engines"` no `package.json`). Atenção ao
