@@ -5,13 +5,11 @@ Guia comunitário em português para consultar equipamentos por episódio, encan
 ## Conteúdo
 
 - Equipamentos e materiais de episódios, com filtros e ordenação por episódio.
-- Encantamentos, efeitos e requisitos por equipamento e slot.
-- Fontes de obtenção, totais e campos para considerar bônus de reputação.
+- Encantamentos, efeitos e requisitos por equipamento e slot, com a aba **Reciclagem e Globos** do Ep. 19 (resultados da reciclagem de armas e a cadeia de trocas de Globo).
 - Fontes de obtenção, totais e campos para considerar bônus de reputação.
 - Missões diárias com um cartão de **estoque por episódio** (valor inicial guardado no navegador, botão para somar o farm de hoje ou digitação manual) e as recompensas de quest do episódio em seção dobrável.
 - Reforma de armas e referências sobre Grau e Refinamento.
 - Calculadoras executadas no navegador; os valores digitados não são enviados nem salvos.
-- Calculadoras de farm diário, de custo total de encantamento e de upgrade de Grau (Ep. 19), e seção de reciclagem do Ep. 19.
 - Grau e Refinamento (páginas da bROWiki), com chances normais e durante o evento.
 - Temas claro e escuro.
 
@@ -65,7 +63,7 @@ O site não tem build: o `index.html` carrega scripts comuns (com `defer`), na o
 | `js/tabelas.js`      | tabelas de equipamentos, encantamentos, custos e reformas                                  |
 | `js/diarias.js`      | missões diárias e controle de farm                                                         |
 | `js/calculadoras.js` | calculadoras, receitas por habilidade e encantamento total                                 |
-| `js/reciclagem.js`   | reciclagem do Ep. 19                                                                       |
+| `js/reciclagem.js`   | reciclagem de armas e trocas de Globo do Ep. 19 (aba "Reciclagem e Globos")                |
 | `js/refino-grau.js`  | páginas de Refinamento e Grau                                                              |
 | `js/reforma.js`      | página de Reforma e seções recolhíveis                                                     |
 | `js/guia.js`         | Guia de Episódio e cópia de `/navi`                                                        |

@@ -166,7 +166,7 @@ def main(argv=None):
                     erros.pop()
                     seguidas = 0
                     print(f"    {i}.png ok após esperar")
-                except Exception as e2:
+                except (urllib.error.URLError, ValueError, TimeoutError) as e2:  # HTTPError é subclasse de URLError
                     print(f"    continua falhando ({msg_erro(e2)}); interrompendo. Rode de novo mais tarde.")
                     break
         except (urllib.error.URLError, ValueError, TimeoutError) as e:
