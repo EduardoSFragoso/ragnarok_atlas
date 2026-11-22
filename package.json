@@ -10,7 +10,7 @@
         "format": "prettier --write .",
         "check": "node tools/checar_sintaxe.mjs",
         "validar:dados": "node tools/validar_dados.mjs",
-        "test": "node --test tools/validar_dados.test.mjs",
+        "test": "node --test tools/validar_dados.test.mjs tools/site.test.mjs",
         "snapshot": "node tools/snapshot.mjs",
         "versao": "node tools/versao_cache.mjs",
         "versao:verificar": "node tools/versao_cache.mjs --verificar"

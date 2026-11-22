@@ -38,20 +38,38 @@ function cargaFaltando() {
     }).filter(Boolean);
 }
 
-loadData()
-    .then(() => {
-        const faltando = cargaFaltando();
-        if (faltando.length)
-            throw new Error(
-                `Script(s) ausente(s) ou fora da ordem de index.html (handoff.md §3.4): ${faltando.join(", ")}.`
-            );
-        setView("inicio");
-    })
-    .catch((err) => {
-        defineHTML(
-            $("#content"),
-            `<div class="error-box"><b>Não consegui carregar a biblioteca.</b><br>${esc(err.message)}` +
-                `<br>Abra o site por um servidor local ou publique a pasta inteira no GitHub Pages; os arquivos de dados ` +
-                `precisam ficar ao lado do site em <code>data/</code>.</div>`
-        );
-    });
+/* Mostra o erro de carga com DOM puro: não depende de nenhum outro script — nem do base.js,
+   que pode ser justamente o arquivo que faltou. */
+function mostrarErroDeCarga(mensagem) {
+    const alvo = document.querySelector("#content");
+    if (!alvo) return;
+    const caixa = document.createElement("div");
+    caixa.className = "error-box";
+    const titulo = document.createElement("b");
+    titulo.textContent = "Não consegui carregar a biblioteca.";
+    const pastaDados = document.createElement("code");
+    pastaDados.textContent = "data/";
+    caixa.append(
+        titulo,
+        document.createElement("br"),
+        mensagem,
+        document.createElement("br"),
+        "Abra o site por um servidor local ou publique a pasta inteira no GitHub Pages; os arquivos de dados ",
+        "precisam ficar ao lado do site em ",
+        pastaDados,
+        "."
+    );
+    alvo.replaceChildren(caixa);
+}
+
+// A conferência vem ANTES de loadData(): se base.js ou dados.js faltarem, é aqui que aparece o aviso.
+const faltando = cargaFaltando();
+if (faltando.length) {
+    mostrarErroDeCarga(
+        `Script(s) ausente(s) ou fora da ordem de index.html (handoff.md §3.4): ${faltando.join(", ")}.`
+    );
+} else {
+    loadData()
+        .then(() => setView("inicio"))
+        .catch((err) => mostrarErroDeCarga(err.message));
+}

@@ -96,8 +96,19 @@ function rowText(r) {
 function itemIcon(name) {
     const id = ICON_IDS[String(name || "").trim()];
     if (!id || !/^\d+$/.test(String(id))) return "";
-    return `<img class="item-icon" src="assets/icons/${id}.png" alt="" loading="lazy" onerror="this.remove()">`;
+    return `<img class="item-icon" src="assets/icons/${id}.png" alt="" loading="lazy">`;
 }
+
+/* Ícone de item cujo PNG não existe: remove o <img> em vez de exibir imagem quebrada. O evento "error"
+   de <img> não borbulha, mas pode ser ouvido na fase de captura — assim o HTML gerado não precisa de
+   onerror inline (que o sanitizador não aceita mais). */
+document.addEventListener(
+    "error",
+    (e) => {
+        if (e.target?.matches?.("img.item-icon")) e.target.remove();
+    },
+    true
+);
 
 /** Link externo do Divine Pride: id numérico validado ou busca pelo nome. */
 function itemHref(name) {
@@ -143,19 +154,80 @@ function groupBy(rows, keyFn) {
    As views produzem strings HTML (dados sempre passam por esc()/richText antes da
    interpolação), mas a *injeção* na página é toda via API de DOM:
    defineHTML(alvo, html) constrói os nós num <template>, remove conteúdo perigoso
-   (defesa em profundidade caso alguém interpole um dado sujo um dia) e entra com
+   (defesa em profundidade caso alguém interpole um dado sujo um dia; veja saneiaSubarvore) e entra com
    replaceChildren — sem innerHTML de produção em nenhum outro arquivo. */
 
-/* Tags que nunca devem aparecer no HTML gerado pelo site. */
-const TAGS_BLOQUEADAS = new Set(["script", "iframe", "object", "embed", "base", "form", "meta", "link"]);
+/* Tags que nunca devem aparecer no HTML gerado pelo site (nomes em minúsculas): scripts e
+   documentos embutidos, formulários, folhas de estilo, <template> e, em SVG/MathML, os elementos
+   que carregam ou alteram URLs (use, set, animate*, foreignObject). */
+const TAGS_BLOQUEADAS = new Set([
+    "script",
+    "iframe",
+    "frame",
+    "frameset",
+    "object",
+    "embed",
+    "applet",
+    "base",
+    "form",
+    "meta",
+    "link",
+    "style",
+    "template",
+    "noscript",
+    "math",
+    "foreignobject",
+    "use",
+    "set",
+    "animate",
+    "animatetransform",
+    "animatemotion",
+]);
 
-/* Atributos de URL: bloqueiam esquemas não http(s)/relativos (javascript:, data:…). */
-const ATR_URL = new Set(["href", "src", "srcset", "action", "formaction"]);
+/* Atributos que carregam URL (inclui o xlink:href do SVG). */
+const ATR_URL = new Set([
+    "href",
+    "src",
+    "srcset",
+    "action",
+    "formaction",
+    "xlink:href",
+    "poster",
+    "data",
+    "background",
+    "ping",
+    "cite",
+    "longdesc",
+    "manifest",
+    "codebase",
+]);
 
-const URL_SEGURA = (v) => !/^\s*(?:javascript|data|vbscript):/i.test(v);
+/* Esquemas aceitos; relativas (assets/…, #âncora) resolvem para http: e passam. */
+const ESQUEMAS_PERMITIDOS = new Set(["http:", "https:", "mailto:", "tel:"]);
 
-/** Saneia um subárvore já parseada: revoga tags/atributos perigosos. Exceção única
-    e documentada: onerror em <img> (itemIcon usa para remover ícone ausente). */
+/** A URL é segura? Usa o parser URL do navegador (WHATWG), que já ignora TAB/quebras de linha e
+    espaços/controles no início ao decidir o esquema — então "java\tscript:" e "\u0001javascript:"
+    viram `javascript:` aqui, igual ao que o navegador faria, e são recusadas. */
+function urlPermitida(valor) {
+    try {
+        return ESQUEMAS_PERMITIDOS.has(new URL(valor, "http://relativa.invalid/").protocol);
+    } catch {
+        return false;
+    }
+}
+
+/** srcset é uma lista "url [descritor], url …": cada URL precisa passar. */
+function srcsetPermitido(valor) {
+    return valor
+        .split(",")
+        .map((parte) => parte.trim().split(/\s+/)[0])
+        .filter(Boolean)
+        .every(urlPermitida);
+}
+
+/** Saneia uma subárvore já parseada: remove tags perigosas, TODO atributo on* (sem exceções) e
+    atributos de URL com esquema fora da lista. Não há mais onerror inline: o ícone de item ausente
+    é tratado por um ouvinte de "error" na captura (logo abaixo de itemIcon). */
 function saneiaSubarvore(raiz) {
     for (const el of [...raiz.querySelectorAll("*")]) {
         if (TAGS_BLOQUEADAS.has(el.tagName.toLowerCase())) {
@@ -164,10 +236,11 @@ function saneiaSubarvore(raiz) {
         }
         for (const atributo of [...el.attributes]) {
             const nome = atributo.name.toLowerCase();
-            if (nome.startsWith("on") && !(nome === "onerror" && el.tagName === "IMG")) {
+            if (nome.startsWith("on")) {
                 el.removeAttribute(atributo.name);
-            } else if (ATR_URL.has(nome) && !URL_SEGURA(atributo.value)) {
-                el.removeAttribute(atributo.name);
+            } else if (ATR_URL.has(nome)) {
+                const ok = nome === "srcset" ? srcsetPermitido(atributo.value) : urlPermitida(atributo.value);
+                if (!ok) el.removeAttribute(atributo.name);
             }
         }
     }

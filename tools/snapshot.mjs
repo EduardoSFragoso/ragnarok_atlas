@@ -18,11 +18,10 @@
  * `npm run snapshot` DEPOIS. Saída 1 = algum estado mudou ou houve erro.
  * Se você mudou conteúdo (dados novos) de propósito, regrave a base.
  */
-import { JSDOM, VirtualConsole } from "jsdom";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import vm from "node:vm";
+import { abrirSite } from "./_site_jsdom.mjs";
 
 const args = process.argv.slice(2);
 const flags = new Set(args.filter((a) => a.startsWith("--")));
@@ -33,44 +32,7 @@ const esperar = (ms) => new Promise((r) => setTimeout(r, ms));
 
 /* ===== Captura ===== */
 async function capturar() {
-    const logs = [];
-    const vc = new VirtualConsole();
-    vc.on("jsdomError", (e) => logs.push("jsdomError: " + (e.detail?.message || e.message)));
-    vc.on("error", (...a) => logs.push("console.error: " + a.map(String).join(" ").slice(0, 300)));
-    vc.on("warn", (...a) => logs.push("console.warn: " + a.map(String).join(" ").slice(0, 300)));
-
-    const html = readFileSync(path.join(raiz, "index.html"), "utf8");
-    // scripts do index.html, na ordem em que o navegador os executaria
-    const scripts = [...html.matchAll(/<script[^>]*\ssrc="([^"]+)"[^>]*>/g)].map((m) => m[1].split("?")[0]);
-    const dom = new JSDOM(html.replace(/<script[^>]*\ssrc=[^>]*><\/script>/g, ""), {
-        url: "http://localhost/",
-        runScripts: "outside-only",
-        pretendToBeVisual: true,
-        virtualConsole: vc,
-        beforeParse(w) {
-            w.fetch = async (p) => {
-                try {
-                    const txt = readFileSync(path.join(raiz, String(p).split("?")[0]), "utf8");
-                    return { ok: true, status: 200, text: async () => txt, json: async () => JSON.parse(txt) };
-                } catch {
-                    return { ok: false, status: 404, text: async () => "", json: async () => ({}) };
-                }
-            };
-            w.matchMedia ??= () => ({
-                matches: false,
-                addListener() {},
-                removeListener() {},
-                addEventListener() {},
-                removeEventListener() {},
-            });
-            w.HTMLElement.prototype.scrollIntoView = () => {};
-            w.scrollTo = () => {};
-        },
-    });
-    const w = dom.window;
-    const contexto = dom.getInternalVMContext();
-    // vm.Script (e não eval) para que const/let de topo continuem visíveis entre scripts
-    const ev = (codigo) => new vm.Script(codigo).runInContext(contexto);
+    const { w, ev, logs } = await abrirSite({ raiz, clipboard: "ausente", aguardarCarga: false });
     const $ = (s) => w.document.querySelector(s);
     const $$ = (s) => [...w.document.querySelectorAll(s)];
     const disparar = (el, tipo) => el.dispatchEvent(new w.Event(tipo, { bubbles: true }));
@@ -79,7 +41,6 @@ async function capturar() {
         estados[nome] = ($(sel) ?? $("#content")).innerHTML;
     };
 
-    for (const s of scripts) ev(readFileSync(path.join(raiz, s), "utf8"));
     for (
         let i = 0;
         i < 100 && !ev("typeof db.guia !== 'undefined' && !!document.querySelector('#content').innerHTML");

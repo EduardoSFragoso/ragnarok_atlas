@@ -292,6 +292,45 @@ function guideView() {
     );
 }
 
+/**
+ * Copia o comando /navi de um botão e mostra o resultado no próprio chip.
+ * Cliques repetidos enquanto o feedback está ativo são ignorados: sem isso o 2º clique
+ * guardaria o rótulo "Copiado ✓" como se fosse o original e o chip ficaria sem o comando.
+ * @param {HTMLElement} btn Botão com data-copy-navi.
+ */
+function copiarNavi(btn) {
+    if (btn.dataset.copiando) return;
+    btn.dataset.copiando = "1";
+    const liberar = () => delete btn.dataset.copiando;
+    const copiado = navigator.clipboard
+        ? navigator.clipboard.writeText(btn.dataset.copyNavi)
+        : Promise.reject(new Error("clipboard indisponível")); // ex.: página aberta por http ou file://
+    copiado.then(
+        () => {
+            /* Estado "copiado" visível por 2 s: troca o rótulo do chip e restaura os nós originais. */
+            const original = [...btn.childNodes];
+            btn.classList.add("copied");
+            btn.replaceChildren("Copiado ✓");
+            setTimeout(() => {
+                btn.classList.remove("copied");
+                btn.replaceChildren(...original);
+                liberar();
+            }, 2000);
+        },
+        () => {
+            /* Sem permissão ou sem clipboard: avisa o usuário no chip. */
+            const titulo = btn.title;
+            btn.classList.add("copy-fail");
+            btn.title = "Não foi possível copiar — selecione o texto e use Ctrl+C";
+            setTimeout(() => {
+                btn.classList.remove("copy-fail");
+                btn.title = titulo;
+                liberar();
+            }, 2600);
+        }
+    );
+}
+
 document.addEventListener("click", (e) => {
     const tabBtn = e.target.closest("[data-guide-tab]");
     if (tabBtn) {
@@ -300,29 +339,5 @@ document.addEventListener("click", (e) => {
         return;
     }
     const copyBtn = e.target.closest("[data-copy-navi]");
-    if (copyBtn) {
-        const text = copyBtn.dataset.copyNavi;
-        navigator.clipboard
-            ?.writeText(text)
-            .then(() => {
-                /* Estado "copiado" visível por 2 s: troca o rótulo do chip e volta. */
-                const original = copyBtn.cloneNode(true);
-                copyBtn.classList.add("copied");
-                copyBtn.replaceChildren("Copiado ✓");
-                setTimeout(() => {
-                    copyBtn.classList.remove("copied");
-                    copyBtn.replaceChildren(...original.childNodes);
-                }, 2000);
-            })
-            .catch(() => {
-                /* Sem permissão de clipboard (ex.: file://): avisa o usuário no chip. */
-                const old = copyBtn.title;
-                copyBtn.classList.add("copy-fail");
-                copyBtn.title = "Não foi possível copiar — selecione o texto e use Ctrl+C";
-                setTimeout(() => {
-                    copyBtn.classList.remove("copy-fail");
-                    copyBtn.title = old;
-                }, 2600);
-            });
-    }
+    if (copyBtn) copiarNavi(copyBtn);
 });
