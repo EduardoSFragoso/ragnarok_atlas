@@ -107,18 +107,30 @@ executa no topo de um arquivo não podem depender de arquivos posteriores.
   certa e rode `npm run versao`. O ESLint descobre os arquivos pelo `index.html` — não precisa configurar nada.
 - Variável `let` de topo reatribuída em **outro** arquivo precisa de um bloco
   `/* eslint-disable prefer-const -- motivo */ ... /* eslint-enable prefer-const */` (o ESLint só vê um arquivo por vez).
-- **Guarda de carga**: na inicialização o `app.js` confere (`ARQUIVOS_DA_CARGA`) se os globais esperados de cada
-  arquivo existem — se algum faltar, uma caixa de erro visível aponta o arquivo culpado em vez de um erro distante.
-  Ao **renomear ou mover** uma função de topo, atualize também essa lista.
+- **Guarda de carga**: na inicialização, **antes** de `loadData()`, o `app.js` confere (`ARQUIVOS_DA_CARGA`) se os
+  globais esperados de cada script existem. Se algum faltar, uma caixa de erro visível aponta o arquivo culpado em vez
+  de um erro distante. A caixa é montada com DOM puro, então funciona mesmo se o `base.js` ou o `dados.js` forem os
+  ausentes. Ao **renomear ou mover** uma função de topo, atualize essa lista; ao **criar um script**, acrescente a
+  entrada dele. O `npm run check` falha se a lista e os `js/*.js` do `index.html` divergirem.
 
 ### 3.6 Injeção de HTML e API de DOM
 
 - **Todo HTML gerado entra no site por `defineHTML(alvo, html)` (`js/base.js`)**: parseia via `<template>`, **saneia**
-  (remove `script`/`iframe`/`object`/`embed`/`base`/`form`/`meta`/`link`; atributos `on*` com a exceção única de
-  `onerror` em `<img>`, usada pelos ícones de item para se removerem quando o PNG falta; URLs `javascript:`/`data:`)
-  e injeta com `alvo.replaceChildren()`. É o único `innerHTML` do projeto, documentado em `js/base.js`.
-- **Atribuir `.innerHTML` fora de `js/base.js` é erro de lint** (regra `no-restricted-syntax` no `eslint.config.js`,
-  que abre exceção só para `base.js`).
+  e injeta com `alvo.replaceChildren()`. É o único `innerHTML` do projeto. O sanitizador (`saneiaSubarvore`):
+    - remove as tags `script`, `iframe`/`frame`/`frameset`, `object`/`embed`/`applet`, `base`, `form`, `meta`, `link`,
+      `style`, `template`, `noscript`, `math` e, em SVG, `use`, `set`, `animate*` e `foreignObject`;
+    - remove **todo** atributo `on*`, sem exceção (não existe mais `onerror` inline);
+    - em atributos de URL (`href`, `src`, `srcset`, `action`, `formaction`, `xlink:href`, `poster`, `data`...) só aceita
+      `http:`, `https:`, `mailto:`, `tel:` e URLs relativas, decidido pelo parser `URL` do navegador — assim
+      `java<TAB>script:` e `<controle>javascript:` também são recusados. `data:` é sempre recusado;
+    - **não** filtra o atributo `style`, nem texto: o texto vindo de dados continua precisando de `esc()`/`richText`.
+      O sanitizador é defesa em profundidade, não licença para interpolar dado sem escapar.
+- **Ícone de item ausente** (PNG que não existe): `js/base.js` registra um ouvinte de `error` na fase de captura que
+  remove `img.item-icon`. Não escreva handlers inline (`onclick="…"`, `onerror="…"`): o sanitizador os apaga.
+- **Escrever HTML fora de `js/base.js` é erro de lint** (`no-restricted-syntax` no `eslint.config.js`, exceção só para
+  `base.js`): `.innerHTML =`, `.outerHTML =`, `insertAdjacentHTML`, `createContextualFragment` e `document.write`.
+- **Os testes ficam em `tools/site.test.mjs`** (payloads de XSS, botão `/navi`, guarda de carga). Ao mexer no
+  sanitizador, acrescente o payload novo lá primeiro e veja falhar.
 - **Código NOVO prefere o construtor de DOM `el(tag, atributos, ...filhos)`** a montar strings quando o conteúdo é
   estrutural: strings viram nós de texto, `Element`s entram como estão, `{ html: "…" }` injeta HTML (use só com a
   saída de `richText`/`esc`).
@@ -142,14 +154,15 @@ para ninguém ficar com arquivo velho em cache.
 | `npm run lint`                                         | ESLint em `app.js` e `js/`                                | sempre                                           |
 | `npm run format` / `format:check`                      | Prettier (4 espaços, 120 colunas, aspas duplas, LF)       | `format` antes de commitar                       |
 | `npm run validar:dados`                                | valida o esquema de todos os JSONs de `data/` e os ícones | sempre que mexer em `data/`                      |
-| `npm test`                                             | testes do validador (16)                                  | sempre                                           |
+| `npm test`                                             | testes do validador (16) e do site no jsdom (48)          | sempre                                           |
 | `py -m unittest discover -s tools -p "test_*.py"`      | testes das ferramentas Python (9)                         | ao mexer em `tools/*.py` ou `colunas.json`       |
 | `npm run snapshot -- --base`                           | grava a base do snapshot de renderização                  | **antes** de refatorar código                    |
 | `npm run snapshot`                                     | gera o snapshot e compara com a base                      | **depois** de refatorar                          |
 | `npm run snapshot -- --verificar`                      | só confere erros de renderização (a CI usa)               | sempre                                           |
 | `py -m ruff check tools/` e `py -m ruff format tools/` | lint/formatação dos scripts Python                        | ao mexer em `tools/*.py`                         |
 
-O **snapshot** roda o site num DOM simulado (jsdom) e captura o HTML de ~333 estados (todas as telas, episódios e abas
+O **snapshot** roda o site num DOM simulado (jsdom; o carregamento está em `tools/_site_jsdom.mjs`, compartilhado
+com os testes do site) e captura o HTML de ~330 estados (todas as telas, episódios e abas
 do guia, filtros, buscas, botões e todas as opções das calculadoras). Para uma refatoração que não deve mudar nada,
 ele precisa dizer "Idêntico à base". Se você mudou **conteúdo** de propósito (dados novos, texto novo), os estados
 afetados mudam — isso é esperado; confira que só mudou o que devia e regrave a base. A pasta `.snapshot/` é local
@@ -158,7 +171,8 @@ afetados mudam — isso é esperado; confira que só mudou o que devia e regrave
 ## 5. CI (`.github/workflows/ci.yml`)
 
 Em ordem: `npm ci` → `npm run check` → `versao:verificar` → `lint` → `format:check` → `validar:dados` → `npm test` →
-`snapshot --verificar` → testes Python → validação de JSON. Qualquer falha deixa o push vermelho.
+`snapshot --verificar` → testes Python → validação de JSON. Qualquer falha deixa o push vermelho. A CI roda com `permissions: contents: read` (menor privilégio: ela só lê o
+repositório; o fluxo manual abaixo declara as próprias permissões).
 Há também um fluxo **manual** (`puxar-efeitos-divine-pride.yml`) que consulta a API do Divine Pride com o segredo
 `DP_API_KEY` e abre um PR; a chave só existe como variável de ambiente/segredo — **nunca** a coloque em arquivo, log
 ou linha de comando.
@@ -277,8 +291,8 @@ nome da coluna em `colunas.json`), nunca por posição. Escritas de JSON usam
 
 - Concluído: validador de esquema com testes; colunas lidas por nome (site e Python); índices numéricos substituídos por
   nomes lógicos; `app.js` dividido em `js/`; versão de cache automática; snapshot de renderização; ESLint multi-arquivo;
-  injeção de HTML centralizada e saneada (`defineHTML`, §3.6) com guarda de carga no `app.js` — revisar na branch
-  `refatoracao-dom` antes de trazer para `main`; Dependabot e proteção da `main` (§5.1); CI cobrindo tudo isso.
+  injeção de HTML centralizada e saneada (`defineHTML`, §3.6) com guarda de carga no `app.js`, sanitizador endurecido e 48 testes do site
+  (`tools/site.test.mjs`); Dependabot e proteção da `main` (§5.1); CI cobrindo tudo isso.
 - Sem pendências conhecidas de legibilidade: as expressões longas de HTML foram extraídas para constantes nomeadas e
   os índices numéricos de colunas/tuplas viraram nomes ou desestruturação. Os `[0]` que restam são "primeiro elemento"
   de listas, o que é legítimo.

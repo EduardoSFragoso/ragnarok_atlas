@@ -5,6 +5,10 @@ on:
     push:
         branches: [main]
 
+# Menor privilégio: a CI só lê o repositório (não grava, não abre PR).
+permissions:
+    contents: read
+
 jobs:
     checks:
         runs-on: ubuntu-latest

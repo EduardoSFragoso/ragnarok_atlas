@@ -27,6 +27,23 @@ for (const s of scripts) {
 if (falhou) process.exit(1);
 console.log(`✔ Sintaxe OK em ${scripts.length} script(s).`);
 
+// --- o guarda de carga do app.js (ARQUIVOS_DA_CARGA) precisa listar todo js/*.js do index.html
+const appJs = readFileSync(path.join(raiz, "app.js"), "utf8");
+const noGuarda = new Set([...appJs.matchAll(/\[\s*"([a-z0-9-]+)",\s*\(\)\s*=>/g)].map((m) => m[1]));
+const noIndex = new Set(scripts.filter((s) => s.startsWith("js/")).map((s) => path.basename(s, ".js")));
+const faltamNoGuarda = [...noIndex].filter((n) => !noGuarda.has(n));
+const sobramNoGuarda = [...noGuarda].filter((n) => !noIndex.has(n));
+if (faltamNoGuarda.length || sobramNoGuarda.length) {
+    if (faltamNoGuarda.length)
+        console.error(
+            `✖ index.html carrega js/${faltamNoGuarda.join(", js/")}.js, mas ARQUIVOS_DA_CARGA (app.js) não lista: ${faltamNoGuarda.join(", ")}`
+        );
+    if (sobramNoGuarda.length)
+        console.error(`✖ ARQUIVOS_DA_CARGA (app.js) lista ${sobramNoGuarda.join(", ")}, que não está no index.html`);
+    process.exit(1);
+}
+console.log(`✔ Guarda de carga cobre os ${noIndex.size} scripts de js/.`);
+
 // --- nomes de topo sem uso
 const analisar = (s) =>
     espree.parse(readFileSync(path.join(raiz, s), "utf8"), { ecmaVersion: 2022, sourceType: "script" });
