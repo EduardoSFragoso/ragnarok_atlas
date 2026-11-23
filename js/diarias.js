@@ -100,8 +100,9 @@ function diariasView() {
     const rows = diaRows().filter((r) => r[K.ep] === activeDiaEp);
     const ges = guiaEpFor(activeDiaEp),
         grupos = ges?.diarias?.grupos;
-    /* Título cru: o esc() é aplicado na interpolação, depois. */
-    const title = grupos ? ges.diarias.titulo : activeDiaEp;
+    /* Título cru: o esc() é aplicado na interpolação, depois. Nem todo
+       episódio tem diarias.título no guia — há um fallback. */
+    const title = (grupos && ges.diarias.titulo) || "Missões diárias de episódio";
     const gruposHtml = grupos
         ? grupos
               .map((gr) => {
@@ -154,7 +155,7 @@ function diariasView() {
     const temBonus = rows.some((r) => Number(r[K.bonus]) > 0);
     return (
         `
-    <div class="page-head">
+    <div class="page-head dia-head-start">
       <div class="dia-head">
         <div class="eyebrow">DIÁRIAS DE EPISÓDIO</div>
         <h1 class="page-title">` +
@@ -165,6 +166,8 @@ function diariasView() {
         `<select id="diaSelect">${eps
             .map((e) => `<option${e === activeDiaEp ? " selected" : ""}>${esc(e)}</option>`)
             .join("")}</select></div>
+        <div class="panel-note dia-ganho"><b>Ganho por dia:</b> ` +
+        `<span id="diaTotalsList">${diaTotalsHtml(rows, diaBonus && temBonus)}</span></div>
       </div>
       ${diariasEstoqueWidget(activeDiaEp, rows)}` +
         `
@@ -172,10 +175,6 @@ function diariasView() {
     ${avisoSeFalha("fontes")}
     ${ges?.diarias?.aviso ? `<div class="panel-note">${richText(ges.diarias.aviso)}</div>` : ""}` +
         `
-    ` +
-        `<div class="panel-note">` +
-        `<b>Ganho por dia:</b> <span id="diaTotalsList">${diaTotalsHtml(rows, diaBonus && temBonus)}` +
-        `</span></div>
     ${gruposHtml}
   `
     );
