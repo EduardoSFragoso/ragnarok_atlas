@@ -1,5 +1,7 @@
 # Ragnarök Atlas · LATAM
 
+[![Abrir o Atlas](https://img.shields.io/website?url=https%3A%2F%2Feduardosfragoso.github.io%2Fragnarok_atlas%2F&label=Abrir%20o%20Atlas)](https://eduardosfragoso.github.io/ragnarok_atlas/)
+
 Guia comunitário em português para consultar equipamentos por episódio, encantamentos, custos e materiais, fontes de obtenção, reformas e sistemas de grau/refinamento. Inclui calculadoras de habilidades de criação e preparação. O projeto está em evolução.
 
 ## Conteúdo
