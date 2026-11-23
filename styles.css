@@ -675,6 +675,18 @@ body.menu-aberto {
     gap: 20px;
     margin-bottom: 22px;
 }
+
+/* Diárias: título e seletor de episódio na mesma coluna, para fechar o vão
+   acima do título (o card de estoque à direita é mais alto que o cabeçalho). */
+.dia-head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+.dia-ep-toolbar {
+    margin: 10px 0 0;
+}
 .page-title {
     font-size: 28px;
 }
