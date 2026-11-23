@@ -676,8 +676,12 @@ body.menu-aberto {
     margin-bottom: 22px;
 }
 
-/* Diárias: título e seletor de episódio na mesma coluna, para fechar o vão
-   acima do título (o card de estoque à direita é mais alto que o cabeçalho). */
+/* Diárias: título e seletor de episódio na mesma coluna; a nota de ganho
+   acompanha e o cabeçalho alinha pelo topo — card de estoque e coluna do
+   título ficam com alturas parecidas e não sobra vão em cima do título. */
+.dia-head-start {
+    align-items: flex-start;
+}
 .dia-head {
     display: flex;
     flex-direction: column;
@@ -685,6 +689,9 @@ body.menu-aberto {
     gap: 6px;
 }
 .dia-ep-toolbar {
+    margin: 10px 0 0;
+}
+.dia-ganho {
     margin: 10px 0 0;
 }
 .page-title {
