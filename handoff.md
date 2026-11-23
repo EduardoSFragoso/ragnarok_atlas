@@ -175,7 +175,9 @@ Em ordem: `npm ci` → `npm run check` → `versao:verificar` → `lint` → `fo
 repositório; o fluxo manual abaixo declara as próprias permissões).
 Há também um fluxo **manual** (`puxar-efeitos-divine-pride.yml`) que consulta a API do Divine Pride com o segredo
 `DP_API_KEY` e abre um PR; a chave só existe como variável de ambiente/segredo — **nunca** a coloque em arquivo, log
-ou linha de comando.
+ou linha de comando. Por abrir PR, esse workflow precisa de `contents: write` + `pull-requests: write` — o mínimo
+disponível para a função dele (o `ci.yml`, que só lê o código, fica com `contents: read`). PRs abertos pelo bot
+(`github-actions[bot]`) ficam em "Action required" e só rodam CI após **Approve workflows to run** — aprovar vai.
 
 **PRs abertos por esse fluxo** (autor `github-actions[bot]`) **não rodam a CI sozinhos**: o GitHub os deixa em _Action
 required_ e o check `checks` fica em "Expected — Waiting for status to be reported" até alguém com permissão de escrita
@@ -242,7 +244,9 @@ Reprodução do passo a passo (caso o ruleset precise ser recriado do zero; uma 
 4. Se mexeu em `data/`: `npm run validar:dados`.
 5. `npm test` (e os testes Python se mexeu em `tools/`).
 6. `npm run snapshot -- --verificar` (e a comparação com a base, se foi refatoração).
-7. Commit com mensagem curta em português, descrevendo o que mudou e por quê.
+7. Commit com mensagem curta em português, descrevendo o que mudou e por quê. **Assunto com até 70
+   caracteres** (o título do PR corta além disso); detalhes, passo a passo e justificativas vão no corpo
+   da mensagem, não no assunto.
 
 ## 7. Receitas para tarefas comuns
 
