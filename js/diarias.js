@@ -155,21 +155,20 @@ function diariasView() {
     return (
         `
     <div class="page-head">
-      <div>
+      <div class="dia-head">
         <div class="eyebrow">DIÁRIAS DE EPISÓDIO</div>
         <h1 class="page-title">` +
         `${esc(title)}</h1>
         <p class="page-subtitle">Tarefas repetíveis do episódio, com os itens de ` +
         `cada uma.</p>
+        <div class="toolbar dia-ep-toolbar"><label for="diaSelect">Episódio:</label>` +
+        `<select id="diaSelect">${eps
+            .map((e) => `<option${e === activeDiaEp ? " selected" : ""}>${esc(e)}</option>`)
+            .join("")}</select></div>
       </div>
       ${diariasEstoqueWidget(activeDiaEp, rows)}` +
         `
     </div>
-    <div class="toolbar" ` +
-        `style="margin-bottom:14px">` +
-        `<label for="diaSelect" style="font-size:14px">Episódio:</label><select id="diaSelect">` +
-        `${eps.map((e) => `<option${e === activeDiaEp ? " selected" : ""}>${esc(e)}</option>`).join("")}` +
-        `</select></div>
     ${avisoSeFalha("fontes")}
     ${ges?.diarias?.aviso ? `<div class="panel-note">${richText(ges.diarias.aviso)}</div>` : ""}` +
         `
