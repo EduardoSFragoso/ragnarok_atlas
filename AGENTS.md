@@ -43,21 +43,18 @@
 ## Desempenho e uso de recursos
 
 - Priorize a clareza; não otimize prematuramente.
-- Meça o desempenho com profiling antes de otimizar e concentre-se nos gargalos observados.
-- Evite loops ou iterações desnecessários. Use operações vetorizadas quando a linguagem ou biblioteca oferecer uma alternativa clara e apropriada.
-- Para dados grandes, avalie processamento em chunks, particionamento, compressão e formatos de armazenamento adequados.
-- Use profiling de memória quando houver indícios de consumo excessivo ou vazamentos.
-- Considere processamento paralelo ou armazenamento distribuído somente quando o volume e o perfil da carga justificarem a complexidade.
+- Meça o desempenho antes de otimizar e concentre-se nos gargalos observados (o site carrega todo o `data/` de uma vez; mudanças de formato de dados precisam ser medidas, não supostas).
+- Evite loops ou iterações desnecessários.
+- Para dados que crescerem (novos episódios em `data/`), avalie paginação/carregamento sob demanda antes de aceitar lentidão.
 - Documente otimizações que tornem o código significativamente menos óbvio.
 
 ## Ferramentas e padrões automáticos
 
 - Use os linters, formatadores e verificadores de tipos adotados pelo projeto.
 - Prefira executar essas ferramentas automaticamente no editor ou no pipeline de CI/CD.
-- Em projetos Python, use as ferramentas já configuradas no repositório; opções possíveis incluem Ruff, Black, mypy ou Pyright.
+- Em projetos Python (`tools/`), use as ferramentas já configuradas no repositório (Ruff e `unittest`).
 - Em projetos JavaScript/TypeScript, siga a configuração existente, por exemplo ESLint e Prettier.
 - Não introduza uma ferramenta nova sem necessidade; respeite primeiro as dependências e convenções existentes.
-- Em projetos Java com Spring Boot e Maven, use sempre o wrapper (`./mvnw`) e as ferramentas configuradas no repositório, por exemplo Spotless ou google-java-format, Checkstyle, SpotBugs ou Error Prone, e JUnit 5. Rode `./mvnw verify` antes de dar uma tarefa por concluída.
 - Exceção ao item sobre ferramentas novas: elas são aceitáveis quando criam uma rede de segurança ou fecham um risco real; registre o motivo no `handoff.md`.
 - Na CI, declare `permissions` mínimas (por exemplo `contents: read`), mantenha o Dependabot (ou equivalente) ativo e atualize as GitHub Actions.
 
@@ -86,30 +83,24 @@
 
 ## Segurança e proteção de dados
 
-- Valide e higienize entradas não confiáveis antes de usá-las.
-- Use consultas parametrizadas e mecanismos apropriados para evitar injeção de SQL, XSS e command injection.
+- Valide e higienize toda entrada antes de usá-la (importante no ponto de injeção de HTML do site: dados de `data/`, texto do usuário em busca e campos de formulário).
 - Nunca inclua senhas, tokens, chaves ou outras credenciais diretamente no código ou em configurações versionadas.
-- Colete e mantenha apenas os dados sensíveis necessários; remova-os quando deixarem de ser necessários, conforme as regras do projeto.
 - Restrinja o acesso a dados e recursos ao mínimo necessário e revise permissões relevantes.
 - Use criptografia e protocolos seguros apropriados para dados armazenados ou transmitidos; prefira bibliotecas e APIs mantidas e consolidadas.
 - Mantenha dependências atualizadas e avalie a segurança de bibliotecas e componentes de terceiros.
-- Implemente autenticação e autorização conforme os requisitos do sistema; use MFA quando aplicável.
 - Inclua verificações de segurança no fluxo de revisão e teste, usando ferramentas automáticas e avaliação especializada quando apropriado.
 - Nunca leia, exiba nem faça commit de `.env` ou de arquivos de credenciais; mascare valores secretos em logs, saídas e mensagens. Peça um `.env.example` com os nomes das variáveis, nunca os valores.
 - Em repositório novo, varra o código **e o histórico do Git** em busca de segredos. Se achar algum, pare e avise: o passo é **rotacionar** a credencial. Apagá-la do código não basta, porque o histórico guarda o valor.
 - Em repositório público, todo o histórico é público. No frontend só podem existir chaves feitas para serem públicas.
-- Configure CORS apenas com as origens necessárias (nunca `*` com credenciais) e faça o frontend chamar a API somente por HTTPS.
-- Em projetos Spring Boot, use parâmetros nomeados (JPA, JdbcTemplate) ou `PreparedStatement` em vez de concatenar SQL, e mantenha credenciais fora de `application*.properties` e `.yml` versionados: use placeholders (`${VARIAVEL}`) preenchidos por variáveis de ambiente.
-- No Actuator, exponha em produção só o endpoint `health`, nunca `management.endpoints.web.exposure.include=*`. Revise a `SecurityFilterChain` (rotas com `permitAll`, CSRF e CORS) sempre que uma rota nova for criada.
+- A única credencial do projeto é a chave da API Divine Pride (`DP_API_KEY`), usada só pelo workflow e pelas
+  ferramentas locais de `tools/`, sempre via segredo do repositório ou variável de ambiente e mascarada em logs.
 
-## Projetos com frontend no GitHub Pages, backend em VM e banco no Neon
+## Deste projeto (site estático no Pages)
 
-- Confirme o que o Pages publica: apenas a pasta do frontend. Nada do backend, `.env`, dumps ou código do servidor pode ficar acessível por URL.
-- O frontend chama a API somente por HTTPS, e o CORS aceita só a origem do Pages.
-- O banco só é acessado pelo servidor: `DATABASE_URL` fora do frontend e do repositório, com `sslmode=require`. A aplicação usa uma role com privilégios mínimos, nunca a dona do banco.
-- Migrações são versionadas, testadas do zero na CI com um Postgres efêmero e aplicadas primeiro numa branch do Neon, nunca direto na produção. Não mude o esquema sem plano de reversão e sem confirmar que existe backup ou ponto de restauração.
-- Na VM e no banco real, o agente só **sugere comandos de leitura**; a pessoa executa e devolve a saída com segredos e hosts mascarados. Nada destrutivo (DROP, TRUNCATE, apagar volumes, mudar firewall, reiniciar serviços) sem confirmação explícita.
-- Checklist e comandos de leitura: `docs/auditoria-infra.md`.
+- Sem back-end, sem banco, sem deploy de servidor: tudo que existe é dado público de jogo em `data/` e código próprio.
+- O Pages publica a raiz do repositório, então **todo arquivo versionado é baixável por URL** — nada sensível na árvore.
+- A única integração externa é leitura da API Divine Pride por HTTPS; o conteúdo dela entra em `data/`/`tools/cache/` por PR, nunca por push direto.
+- O aviso de fan project (README e página "Fontes & referências") não pode ser removido.
 
 ## Uso de assistentes de IA
 
