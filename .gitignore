@@ -3,3 +3,12 @@ __pycache__/
 .ruff_cache/
 node_modules/
 .snapshot/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.sql.gz
+target/
+build/
+dist/

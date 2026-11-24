@@ -1,9 +1,5 @@
 # Regras de desenvolvimento
 
-Regras de contexto para agentes de IA e pessoas que mantêm o **Ragnarök Atlas · LATAM**. O manual técnico
-vigente — arquitetura, ordem de carga, checklist até o commit e o fluxo de PR — é o `handoff.md` na raiz,
-que deve ser lido inteiro antes da primeira alteração; aqui ficam as regras gerais de como trabalhar.
-
 ## Princípios gerais
 
 - Prefira soluções simples, claras e fáceis de manter.
@@ -16,9 +12,8 @@ que deve ser lido inteiro antes da primeira alteração; aqui ficam as regras ge
 ## Organização e legibilidade
 
 - Use nomes descritivos e específicos para variáveis, funções, classes e módulos.
-- Siga as convenções de nomenclatura da linguagem e do projeto. Mantenha o mesmo padrão em todo o código
-  (neste projeto, comentários, identificadores e commits são em português do Brasil).
-- Mantenha a formatação e a indentação consistentes com os arquivos próximos (Prettier: 4 espaços, 120 colunas).
+- Siga as convenções de nomenclatura da linguagem e do projeto. Mantenha o mesmo padrão em todo o código.
+- Mantenha a formatação e a indentação consistentes com os arquivos próximos.
 - Use espaços em branco para separar blocos de lógica relacionados.
 - Escreva código que explique a própria intenção sempre que possível.
 - Use comentários para explicar decisões, regras de negócio não óbvias, limitações ou workarounds — não para repetir literalmente o que o código já mostra.
@@ -30,8 +25,7 @@ que deve ser lido inteiro antes da primeira alteração; aqui ficam as regras ge
 - Documente entradas, saídas, arquitetura relevante e particularidades necessárias para manter ou operar o projeto.
 - Escreva docstrings para funções, classes ou módulos cuja finalidade, parâmetros, retornos ou efeitos não sejam óbvios.
 - Mantenha a documentação atualizada quando uma mudança alterar o comportamento ou o modo de usar o projeto.
-- Ao concluir um trabalho grande, escreva ou atualize um `handoff.md`: estrutura, comandos, contratos que não podem
-  quebrar, armadilhas conhecidas e pendências. Atualize-o na mesma alteração que mudar algo estrutural.
+- Ao concluir um trabalho grande, escreva ou atualize um `handoff.md`: estrutura, comandos, contratos que não podem quebrar, armadilhas conhecidas e pendências. Atualize-o na mesma alteração que mudar algo estrutural.
 
 ## Qualidade, erros e testes
 
@@ -42,9 +36,7 @@ que deve ser lido inteiro antes da primeira alteração; aqui ficam as regras ge
 - Trate erros previsíveis de forma explícita e útil.
 - Capture exceções específicas; não oculte erros com tratamento genérico ou silencioso.
 - Não considere uma mudança concluída até revisar o código e executar os testes pertinentes.
-- Antes de refatorar código existente, crie uma rede de segurança (snapshot de renderização, testes de caracterização
-  ou equivalente — neste projeto, `npm run snapshot -- --base` antes e `npm run snapshot` depois) e, ao final, prove
-  que o comportamento não mudou.
+- Antes de refatorar código existente, crie uma rede de segurança (testes de caracterização, snapshot ou equivalente) e, ao final, prove que o comportamento não mudou.
 - Um teste novo só prova algo se falhar no código antigo ou com o defeito reintroduzido; confirme isso quando o teste cobrir um bug corrigido.
 - Teste falhas e mutações em uma cópia descartável; nunca deixe código alterado só para testar, nem arquivos temporários, no commit.
 
@@ -60,15 +52,14 @@ que deve ser lido inteiro antes da primeira alteração; aqui ficam as regras ge
 
 ## Ferramentas e padrões automáticos
 
-- Use os linters, formatadores e verificadores de tipos adotados pelo projeto: **ESLint** + **Prettier** para a web
-  (`npm run lint`, `npm run format`) e **Ruff** para os scripts Python de `tools/` (`py -m ruff check tools/`,
-  `py -m ruff format tools/`).
-- Prefira executar essas ferramentas automaticamente no editor ou no pipeline de CI/CD (a CI roda todas).
+- Use os linters, formatadores e verificadores de tipos adotados pelo projeto.
+- Prefira executar essas ferramentas automaticamente no editor ou no pipeline de CI/CD.
+- Em projetos Python, use as ferramentas já configuradas no repositório; opções possíveis incluem Ruff, Black, mypy ou Pyright.
+- Em projetos JavaScript/TypeScript, siga a configuração existente, por exemplo ESLint e Prettier.
 - Não introduza uma ferramenta nova sem necessidade; respeite primeiro as dependências e convenções existentes.
-- Exceção ao item anterior: ferramentas novas são aceitáveis quando criam uma rede de segurança ou fecham um risco real; registre o motivo no `handoff.md`.
-- Na CI, declare `permissions` mínimas (o `ci.yml` usa `contents: read`), mantenha o Dependabot ativo e atualize as
-  GitHub Actions. O workflow que abre PR (`puxar-efeitos-divine-pride.yml`) usa `contents: write` +
-  `pull-requests: write` — o mínimo para a função dele (ver `handoff.md` §5).
+- Em projetos Java com Spring Boot e Maven, use sempre o wrapper (`./mvnw`) e as ferramentas configuradas no repositório, por exemplo Spotless ou google-java-format, Checkstyle, SpotBugs ou Error Prone, e JUnit 5. Rode `./mvnw verify` antes de dar uma tarefa por concluída.
+- Exceção ao item sobre ferramentas novas: elas são aceitáveis quando criam uma rede de segurança ou fecham um risco real; registre o motivo no `handoff.md`.
+- Na CI, declare `permissions` mínimas (por exemplo `contents: read`), mantenha o Dependabot (ou equivalente) ativo e atualize as GitHub Actions.
 
 ## Git e colaboração
 
@@ -79,40 +70,46 @@ que deve ser lido inteiro antes da primeira alteração; aqui ficam as regras ge
 - Abra pull requests quando esse for o processo do projeto; descreva a mudança e facilite sua revisão.
 - Revise o código — próprio ou de outras pessoas — procurando erros, problemas de segurança, duplicação e sinais de complexidade desnecessária.
 - Refatore para melhorar a estrutura sem alterar o comportamento esperado, salvo quando a tarefa pedir o contrário.
-- Nunca faça push direto na branch principal: trabalhe em branch e abra PR. O ruleset `protege-main` exige PR com o
-  check da CI verde, branch atualizada e histórico linear; o único método de merge é **Rebase and merge**
-  (detalhes e a lição de cada regra no `handoff.md` §5.2).
+- Nunca faça push direto na branch principal: trabalhe em branch e abra PR, respeitando a proteção da branch (checks obrigatórios, aprovação e método de merge descritos no `handoff.md`).
 - Escreva o assunto do commit com até 70 caracteres, para que não seja cortado no título do PR; coloque os detalhes no corpo da mensagem.
 - Quem não puder dar push entrega patches (`git format-patch`) gerados sobre a branch principal **atual** e verificados num clone limpo (`git am` e todas as verificações do projeto). Se a principal mudar, refaça o patch.
-- Inclua no mesmo commit os artefatos derivados que a mudança alterar (ex.: os `?v=` do `index.html` via
-  `npm run versao`, que vai sempre **por último**, depois do `format` — `handoff.md` §6).
+- Inclua no mesmo commit os artefatos derivados que a mudança alterar (lockfiles, hashes de cache, arquivos gerados).
+
+## Configuração do repositório: PRs e commits
+
+- O agente não altera configurações do repositório (rulesets, proteção de branch, segredos, permissões de Actions, Pages) nem contorna as proteções existentes (bypass, push forçado, desativar checks). Se uma configuração atrapalhar, explique o problema e proponha a mudança para a pessoa aplicar.
+- Siga o template de PR (`.github/pull_request_template.md`), se existir. Todo PR descreve o que mudou e por quê, como foi testado e quais os riscos; prefira PRs pequenos e focados em um assunto.
+- Siga a política de assinatura e de autoria de commits descrita no `handoff.md` e não a desative.
+- Antes de cada commit, confira `git status` e `git diff --staged`: nada de segredos, `.env`, dumps, binários ou artefatos de build (`target/`, `build/`, `node_modules/`, `dist/`). Mantenha o `.gitignore` em dia.
+- Se um segredo for commitado, trate-o como vazado: rotacione a credencial primeiro. Reescrever o histórico é opcional e vem depois.
+- Checklist de configuração para quem administra o repositório: `docs/configuracao-repositorio.md`.
 
 ## Segurança e proteção de dados
 
-- Valide e higienize entradas não confiáveis antes de usá-las. Neste projeto, toda HTML derivada de dados passa por
-  `defineHTML()` (`js/base.js`), que constrói e saneia os nós; `innerHTML` direto é proibido fora de `base.js`
-  (regra do ESLint).
+- Valide e higienize entradas não confiáveis antes de usá-las.
 - Use consultas parametrizadas e mecanismos apropriados para evitar injeção de SQL, XSS e command injection.
 - Nunca inclua senhas, tokens, chaves ou outras credenciais diretamente no código ou em configurações versionadas.
 - Colete e mantenha apenas os dados sensíveis necessários; remova-os quando deixarem de ser necessários, conforme as regras do projeto.
 - Restrinja o acesso a dados e recursos ao mínimo necessário e revise permissões relevantes.
 - Use criptografia e protocolos seguros apropriados para dados armazenados ou transmitidos; prefira bibliotecas e APIs mantidas e consolidadas.
-- Mantenha dependências atualizadas (Dependabot semanal ativo) e avalie a segurança de bibliotecas e componentes de terceiros.
+- Mantenha dependências atualizadas e avalie a segurança de bibliotecas e componentes de terceiros.
 - Implemente autenticação e autorização conforme os requisitos do sistema; use MFA quando aplicável.
 - Inclua verificações de segurança no fluxo de revisão e teste, usando ferramentas automáticas e avaliação especializada quando apropriado.
-- Nunca leia, exiba nem faça commit de `.env` ou de arquivos de credenciais; mascare valores secretos em logs, saídas e mensagens. Peça um `.env.example` com os nomes das variáveis, nunca os valores. A única credencial do projeto
-  (`DP_API_KEY`) existe apenas como segredo do workflow — ver `handoff.md` §5.
-- Em repositório novo, varra o código **e o histórico do Git** em busca de segredos (a varredura feita no
-  `docs/auditoria-infra.md` não achou nada; refaça sempre que suspeitar). Se achar algum, pare e avise: o passo é
-  **rotacionar** a credencial. Apagá-la do código não basta, porque o histórico guarda o valor.
+- Nunca leia, exiba nem faça commit de `.env` ou de arquivos de credenciais; mascare valores secretos em logs, saídas e mensagens. Peça um `.env.example` com os nomes das variáveis, nunca os valores.
+- Em repositório novo, varra o código **e o histórico do Git** em busca de segredos. Se achar algum, pare e avise: o passo é **rotacionar** a credencial. Apagá-la do código não basta, porque o histórico guarda o valor.
 - Em repositório público, todo o histórico é público. No frontend só podem existir chaves feitas para serem públicas.
 - Configure CORS apenas com as origens necessárias (nunca `*` com credenciais) e faça o frontend chamar a API somente por HTTPS.
+- Em projetos Spring Boot, use parâmetros nomeados (JPA, JdbcTemplate) ou `PreparedStatement` em vez de concatenar SQL, e mantenha credenciais fora de `application*.properties` e `.yml` versionados: use placeholders (`${VARIAVEL}`) preenchidos por variáveis de ambiente.
+- No Actuator, exponha em produção só o endpoint `health`, nunca `management.endpoints.web.exposure.include=*`. Revise a `SecurityFilterChain` (rotas com `permitAll`, CSRF e CORS) sempre que uma rota nova for criada.
 
-## Se o projeto ganhar frontend no Pages + backend + banco
+## Projetos com frontend no GitHub Pages, backend em VM e banco no Neon
 
-Este projeto hoje é **só um frontend estático publicado na raiz pelo GitHub Pages** — sem backend, sem banco, sem API
-própria. Se algum dia ganhar uma dessas camadas, siga a checklist de `docs/auditoria-infra.md` (backend em VM, banco
-Postgres/Neon, CORS pela origem do Pages, migrações versionadas etc.) e atualize esta seção e o `handoff.md`.
+- Confirme o que o Pages publica: apenas a pasta do frontend. Nada do backend, `.env`, dumps ou código do servidor pode ficar acessível por URL.
+- O frontend chama a API somente por HTTPS, e o CORS aceita só a origem do Pages.
+- O banco só é acessado pelo servidor: `DATABASE_URL` fora do frontend e do repositório, com `sslmode=require`. A aplicação usa uma role com privilégios mínimos, nunca a dona do banco.
+- Migrações são versionadas, testadas do zero na CI com um Postgres efêmero e aplicadas primeiro numa branch do Neon, nunca direto na produção. Não mude o esquema sem plano de reversão e sem confirmar que existe backup ou ponto de restauração.
+- Na VM e no banco real, o agente só **sugere comandos de leitura**; a pessoa executa e devolve a saída com segredos e hosts mascarados. Nada destrutivo (DROP, TRUNCATE, apagar volumes, mudar firewall, reiniciar serviços) sem confirmação explícita.
+- Checklist e comandos de leitura: `docs/auditoria-infra.md`.
 
 ## Uso de assistentes de IA
 
@@ -121,9 +118,9 @@ Postgres/Neon, CORS pela origem do Pages, migrações versionadas etc.) e atuali
 - Entenda o código antes de usá-lo ou enviá-lo ao repositório; consiga explicar o que cada trecho faz.
 - Para tarefas grandes, comece propondo um plano em etapas antes de modificar o código.
 - Ao pedir ajuda à IA, informe linguagem, framework, requisitos, restrições de desempenho e requisitos de segurança relevantes.
-- Siga estas regras de contexto e as instruções do `handoff.md`.
+- Siga estas regras de contexto e as instruções específicas do repositório.
 - Em um repositório novo, a primeira etapa é uma auditoria sem alterações (estrutura, riscos, segredos, testes, CI, dependências); só depois proponha o plano.
-- Execute as verificações do projeto (formatação, lint, testes, snapshot) antes de declarar a tarefa concluída e informe com clareza o que não pôde ser verificado (navegador real, resultado da CI, infraestrutura).
+- Execute as verificações do projeto (formatação, lint, testes, build) antes de declarar a tarefa concluída e informe com clareza o que não pôde ser verificado (navegador real, resultado da CI, infraestrutura).
 - Não presuma o comportamento de ferramentas e serviços: a documentação envelhece. Confirme na fonte atual ou testando, e diga quando algo for hipótese.
 - Respeite os limites de acesso: sem acesso à infraestrutura, peça a saída de comandos de leitura; nunca peça nem aceite segredos reais.
 
