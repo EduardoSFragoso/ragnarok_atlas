@@ -2,8 +2,9 @@
 
 Documento para a IA (ou pessoa) que vai continuar mexendo no repositório. Leia inteiro antes da primeira alteração:
 a estrutura do código mudou bastante em relação às versões antigas (que tinham um `app.js` único de ~2.900 linhas).
-As **regras gerais de desenvolvimento** ficam no `AGENTS.md` (raiz) e a **checklist de auditoria de infraestrutura**
-em `docs/auditoria-infra.md`; este arquivo é o manual técnico que os dois referenciam.
+As **regras gerais de desenvolvimento** ficam no `AGENTS.md` (raiz), a **checklist de auditoria de infraestrutura**
+em `docs/auditoria-infra.md` e o **checklist de configuração do repositório (ruleset, Pages, Actions)** em
+`docs/configuracao-repositorio.md`; este arquivo é o manual técnico que os três referenciam.
 
 Tudo aqui foi conferido no repositório. Quando algo daqui contradisser o código, o código vence — e corrija este arquivo.
 
