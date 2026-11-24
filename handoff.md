@@ -198,7 +198,9 @@ Node 22+ e em navegadores recentes — materialize com `[...iter]` ou `Array.fro
 `.github/dependabot.yml` abre PRs semanais de atualização (npm e GitHub Actions); cada PR já sai validado pelo CI
 (além de alertas e _security updates_ do Dependabot, ligados no painel). Confirmações do dono (24/11/2026):
 Dependabot completo, **Enforce HTTPS** do Pages ligado, Pages servido por GitHub Actions com deploy verde,
-**secret scanning com push protection ativos** (bloco "Secret Protection" em Settings → Code security).
+**secret scanning com push protection ativos** (bloco "Secret Protection" em Settings → Code security). Confirmação
+adicional do dono: **"Automatically delete head branches" ligado** (Settings → General → Pull Requests) — o GitHub
+apaga sozinho a branch remota depois do merge; sobra apagar só a cópia local.
 
 ### 5.2 Ruleset que protege a `main` — JÁ CRIADA E ATIVA
 
