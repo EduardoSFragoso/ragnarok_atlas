@@ -4,71 +4,65 @@ Checklist para **quem administra o repositório**. Estas configurações ficam n
 
 Parte do conteúdo vem da documentação oficial do GitHub (regras de rulesets). Os nomes de menus mudam com o tempo; se algum caminho não existir, procure o nome da opção em **Settings**.
 
+## 0. Estado atual (conferido em 24/11/2026)
+
+| Item                                                                   | Estado                                                                                                                                    |
+| ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Ruleset `protege-main` na `main`                                       | Ativa (seção 1)                                                                                                                           |
+| Dependabot: alertas, security updates, version updates (npm + actions) | Ativos                                                                                                                                    |
+| Dependency graph                                                       | Ativo                                                                                                                                     |
+| Pages: Enforce HTTPS e deploy funcionando                              | Conforme                                                                                                                                  |
+| Secret scanning com push protection                                    | **A ativar** (seção 2)                                                                                                                    |
+| Code scanning (CodeQL)                                                 | Não usado — site estático simples; se quiser uma camada a mais, o CodeQL cobre JavaScript, mas aqui a rede de segurança é a CI + snapshot |
+| Workflow permissions globais em Actions                                | Verificar em **Settings → Actions → General**                                                                                             |
+
 ## 1. Ruleset da branch principal
 
-Em **Settings → Rules → Rulesets → New branch ruleset**, com alvo na branch padrão. Rulesets estão disponíveis em repositórios públicos no plano gratuito.
+Em **Settings → Rules → Rulesets → New branch ruleset**, com alvo na branch padrão. Rulesets estão disponíveis em repositórios públicos no plano gratuito. **Neste repositório já existe a ruleset `protege-main`**, criada conforme esta tabela.
 
-| Regra                                   | Recomendação                                                | Por quê                                                                                                    |
-| --------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Restrict deletions                      | Ligada (já vem ligada)                                      | Impede apagar a `main`                                                                                     |
-| Block force pushes                      | Ligada (já vem ligada)                                      | Impede reescrever o histórico publicado                                                                    |
-| Require linear history                  | Ligada                                                      | Exige squash ou rebase no merge; histórico fácil de reverter. O repositório precisa permitir esses métodos |
-| Require a pull request before merging   | Ligada                                                      | Nada entra sem PR                                                                                          |
-| ↳ aprovações exigidas                   | 0 se há uma só pessoa; 1 ou mais se há equipe               | Quem abre o PR não aprova o próprio; com 1 aprovação e um só mantenedor, o PR fica bloqueado               |
-| ↳ métodos de merge permitidos           | Só o adotado (por exemplo Rebase)                           | Evita o método errado por engano                                                                           |
-| ↳ conversas resolvidas                  | Ligada                                                      | Comentários de revisão não ficam esquecidos                                                                |
-| ↳ descartar aprovações antigas          | Ligada, se exigir aprovações                                | Aprovação vale para o código aprovado, não para o que mudou depois                                         |
-| Require status checks to pass           | Ligada, com o job da CI (por exemplo `checks`)              | A CI é o portão do merge                                                                                   |
-| ↳ branch atualizada antes do merge      | Ligada ("strict")                                           | Evita merge de código testado contra uma base velha                                                        |
-| Require code scanning results           | Ligada, se o CodeQL estiver ativo                           | Bloqueia alertas de severidade definida                                                                    |
-| Require secret scanning alerts resolved | Ligada, se usar secret scanning (recurso em prévia pública) | Bloqueia o merge com segredo detectado                                                                     |
-| Bypass list                             | Vazia, ou só o dono para emergências                        | Ninguém contorna a regra por conveniência                                                                  |
+| Regra                                 | Recomendação                                  | Por quê                                                                                                    |
+| ------------------------------------- | --------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Restrict deletions                    | Ligada (já vem ligada)                        | Impede apagar a `main`                                                                                     |
+| Block force pushes                    | Ligada (já vem ligada)                        | Impede reescrever o histórico publicado                                                                    |
+| Require linear history                | Ligada                                        | Exige squash ou rebase no merge; histórico fácil de reverter. O repositório precisa permitir esses métodos |
+| Require a pull request before merging | Ligada                                        | Nada entra sem PR                                                                                          |
+| ↳ aprovações exigidas                 | 0 se há uma só pessoa; 1 ou mais se há equipe | Quem abre o PR não aprova o próprio; com 1 aprovação e um só mantenedor, o PR fica bloqueado               |
+| ↳ métodos de merge permitidos         | Só o adotado (neste repo: Rebase)             | Evita o método errado por engano                                                                           |
+| ↳ conversas resolvidas                | Ligada                                        | Comentários de revisão não ficam esquecidos                                                                |
+| Require status checks to pass         | Ligada, com o job da CI (`checks`)            | A CI é o portão do merge                                                                                   |
+| ↳ branch atualizada antes do merge    | Ligada ("strict")                             | Evita merge de código testado contra uma base velha                                                        |
+| Bypass list                           | Vazia, ou só o dono para emergências          | Ninguém contorna a regra por conveniência                                                                  |
 
 **Limite do plano:** as regras "Restrict file paths", "Restrict file extensions" e "Restrict file size" são _push rulesets_, disponíveis para repositórios **privados ou internos** no plano Team. Em repositório público gratuito, o bloqueio de `.env`, `.pem` e dumps é feito por `.gitignore`, secret scanning com push protection e um hook local (seção 2).
+
+Assistência da IA nesta seção: a ruleset pode ser **lida** via API pública (seção 5), e o `handoff.md` (seção 5.2) registra o estado dela.
 
 ## 2. Segurança dos commits
 
 ### Segredos
 
-- **Secret scanning e push protection:** ative em **Settings → Code security** (ou _Advanced Security_). A push protection recusa o push que contém um segredo conhecido.
+- **Secret scanning e push protection:** ative em **Settings → Code security** (ou _Advanced Security_). A push protection recusa o push que contém um segredo conhecido. **Pendência atual deste repositório.**
 - **Hook local de pre-commit** com um detector de segredos (por exemplo `gitleaks`, na sintaxe atual da ferramenta). Ele barra o segredo antes de o commit existir.
 - Se um segredo for commitado: **rotacione primeiro**. Apagar do código não basta, porque o histórico guarda o valor. Reescrever o histórico é opcional e vem depois.
 
 ### Assinatura de commits
 
-A assinatura é recomendada, mas **a exigência tem armadilhas**. Para assinar com chave SSH:
-
-```bash
-git config --global gpg.format ssh
-git config --global user.signingkey ~/.ssh/id_ed25519.pub
-git config --global commit.gpgsign true
-```
-
-Depois adicione a mesma chave pública em **Settings → SSH and GPG keys** como _Signing Key_. Para assinar commits criados por `git am` (patches), use `git am -S`.
-
-Antes de ligar **Require signed commits** na ruleset, leia o que a documentação diz:
-
-- só commits assinados e verificados podem ser enviados à branch;
-- commits sem assinatura na branch do PR podem **bloquear o merge** (a documentação cita o squash), mesmo que o GitHub assinasse o commit final;
-- a documentação não detalha o caso do **Rebase and merge**.
-
-Por isso: **teste num PR descartável** antes de exigir assinatura, principalmente se o fluxo usa Rebase and merge ou commits gerados por IA e aplicados por patch.
+Recomendada, mas **a exigência tem armadilhas**: a documentação oficial cita bloqueio de merge com commits não assinados na branch do PR e não detalha o caso do **Rebase and merge**, que é o método deste repositório. Se um dia quiser exigir (`Require signed commits` na ruleset), **teste antes num PR descartável**.
 
 ## 3. Segurança do repositório e das Actions
 
-- **Dependabot:** ative alertas, atualizações de segurança e de versão, com um `.github/dependabot.yml` (exemplo na seção 4).
-- **Code scanning (CodeQL):** cobre Java, JavaScript/TypeScript e Python, entre outras linguagens.
-- **Private vulnerability reporting** e um `SECURITY.md` dizendo como reportar falhas.
+- **Dependabot:** alertas, atualizações de segurança e de versão ativos, com o `.github/dependabot.yml` (seção 4). **Já está ativo.**
+- **Private vulnerability reporting** e um `SECURITY.md` dizendo como reportar falhas. **Já existem.**
 - **Settings → Actions → General:**
     - _Workflow permissions_ em somente leitura; cada workflow declara o que precisa.
     - _Allow GitHub Actions to create and approve pull requests_ só se um workflow realmente abrir PRs.
     - Aprovação obrigatória para workflows de colaboradores externos.
-- **Environments** (por exemplo `producao`) com revisores obrigatórios, guardando a chave SSH de deploy da VM e outros segredos de deploy.
-- **Pages:** em **Settings → Pages**, publique só a pasta do frontend e ative _Enforce HTTPS_.
+- **Pages:** em **Settings → Pages**, publicar a pasta do site com _Enforce HTTPS_ ligado. **Já está conforme.**
+- Sem segredos de deploy (não há deploy de servidor); a única chave do repositório é a `DP_API_KEY`, guardada nos segredos das Actions.
 
 ## 4. Arquivos de apoio no repositório
 
-### `.github/pull_request_template.md`
+### `.github/pull_request_template.md` (o deste repositório)
 
 ```markdown
 ## O que mudou e por quê
@@ -81,23 +75,20 @@ Por isso: **teste num PR descartável** antes de exigir assinatura, principalmen
 ## Riscos e como reverter
 ```
 
-### `.github/dependabot.yml` (exemplo para Spring Boot com Maven + frontend)
+### `.github/dependabot.yml` (o deste repositório)
 
 ```yaml
 version: 2
 updates:
-    - package-ecosystem: "maven"
+    - package-ecosystem: npm
       directory: "/"
       schedule:
-          interval: "weekly"
-    - package-ecosystem: "npm"
-      directory: "/frontend"
-      schedule:
-          interval: "weekly"
-    - package-ecosystem: "github-actions"
+          interval: weekly
+
+    - package-ecosystem: github-actions
       directory: "/"
       schedule:
-          interval: "weekly"
+          interval: weekly
 ```
 
 ### `.gitignore` (trechos essenciais)
@@ -108,16 +99,11 @@ updates:
 !.env.example
 *.pem
 *.key
-*.sql.gz
-target/
-build/
-node_modules/
-dist/
 ```
 
 ### Outros
 
-- `SECURITY.md` com o canal de reporte de vulnerabilidades.
+- `SECURITY.md` com o canal de reporte de vulnerabilidades. **Já existe.**
 - `CODEOWNERS`, se houver mais de uma pessoa revisando.
 
 ## 5. Como mostrar a configuração a uma IA, sem prints
@@ -127,7 +113,7 @@ Estes comandos só **leem** a configuração (precisam do GitHub CLI, `gh`) e n�
 ```bash
 gh api repos/OWNER/REPO/rulesets --jq '.[] | {id, name, enforcement, target}'
 gh api repos/OWNER/REPO/rulesets/ID_DA_RULESET
-gh api repos/OWNER/REPO --jq '{private, default_branch, allow_rebase_merge, allow_squash_merge, allow_merge_commit, delete_branch_on_merge}'
+gh api repos/OWNER/REPO --jq '{private, default_branch, delete_branch_on_merge}'
 ```
 
 A IA compara o resultado com este checklist e aponta o que falta.

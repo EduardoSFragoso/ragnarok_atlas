@@ -195,7 +195,9 @@ A CI e o projeto rodam em **Node 24** (`node-version: 24` no `ci.yml`, `"engines
 escrever JS: _Iterator Helpers_ (`iterator.map()`, `.filter()` etc. direto num iterador de `Map`/`Set`) só existem no
 Node 22+ e em navegadores recentes — materialize com `[...iter]` ou `Array.from(iter)` antes.
 
-`.github/dependabot.yml` abre PRs semanais de atualização (npm e GitHub Actions); cada PR já sai validado pelo CI.
+`.github/dependabot.yml` abre PRs semanais de atualização (npm e GitHub Actions); cada PR já sai validado pelo CI
+(além de alertas e _security updates_ do Dependabot, ligados no painel). Confirmações do dono (24/11/2026):
+Dependabot completo, **Enforce HTTPS** do Pages ligado, Pages servido por GitHub Actions com deploy verde.
 
 ### 5.2 Ruleset que protege a `main` — JÁ CRIADA E ATIVA
 
