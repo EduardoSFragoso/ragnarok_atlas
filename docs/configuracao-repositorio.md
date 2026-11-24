@@ -12,7 +12,7 @@ Parte do conteúdo vem da documentação oficial do GitHub (regras de rulesets).
 | Dependabot: alertas, security updates, version updates (npm + actions) | Ativos                                                                                                                                    |
 | Dependency graph                                                       | Ativo                                                                                                                                     |
 | Pages: Enforce HTTPS e deploy funcionando                              | Conforme                                                                                                                                  |
-| Secret scanning com push protection                                    | **A ativar** (seção 2)                                                                                                                    |
+| Secret scanning com push protection                                    | Ativo (seção 2)                                                                                                                           |
 | Code scanning (CodeQL)                                                 | Não usado — site estático simples; se quiser uma camada a mais, o CodeQL cobre JavaScript, mas aqui a rede de segurança é a CI + snapshot |
 | Workflow permissions globais em Actions                                | Verificar em **Settings → Actions → General**                                                                                             |
 
@@ -41,7 +41,7 @@ Assistência da IA nesta seção: a ruleset pode ser **lida** via API pública (
 
 ### Segredos
 
-- **Secret scanning e push protection:** ative em **Settings → Code security** (ou _Advanced Security_). A push protection recusa o push que contém um segredo conhecido. **Pendência atual deste repositório.**
+- **Secret scanning e push protection:** ativos neste repositório (24/11/2026). **Atenção ao nome do menu:** a atividade única está no bloco **Secret Protection** em **Settings → Code security**, com um botão **Enable**; os toggles de secret scanning e push protection aparecem dentro dele depois de ativado. A push protection recusa o push que contém um segredo conhecido.
 - **Hook local de pre-commit** com um detector de segredos (por exemplo `gitleaks`, na sintaxe atual da ferramenta). Ele barra o segredo antes de o commit existir.
 - Se um segredo for commitado: **rotacione primeiro**. Apagar do código não basta, porque o histórico guarda o valor. Reescrever o histórico é opcional e vem depois.
 
