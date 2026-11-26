@@ -241,148 +241,153 @@ function renderCostTable(rows) {
     );
     return (
         episodes
-            .map((episode) => {
-                const all = episode;
-                if (/Ep\.\s*19\b/i.test(episode[0][K.ep])) {
-                    const targets = [...new Set(all.map((r) => r[K.alvo]).filter(Boolean))],
-                        body = targets
-                            .map((target) => {
-                                const groups = groupBy(
-                                        all.filter((x) => x[K.alvo] === target),
-                                        (r) => `${r[K.slot]}\x00${r[K.efeito]}`
-                                    ),
-                                    isArmor =
-                                        /Armadura|Veste|Manto|Sobrepeliz|Bota|Sapato|Anel|Brinco|Pingente|Colar/i.test(
-                                            target
-                                        );
-                                const mats = (g) =>
-                                    `<div class="material-lines">${g
-                                        .map(
-                                            (x) =>
-                                                `<div class="material-line"><b class="material-qty">${esc(x[K.qtd] || "—")} ×</b>` +
-                                                `${itemLink(x[K.material])}</div>`
-                                        )
-                                        .join("")}` + `</div>`;
-                                if (!isArmor)
-                                    return groups
-                                        .map(
-                                            (g) =>
-                                                `<tr><td>${esc(target)}</td><td>${esc(g[0][K.slot] || "—")}</td><td>${esc(g[0][K.efeito] || "—")}` +
-                                                `</td><td class="material-cell">${mats(g)}</td></tr>`
-                                        )
-                                        .join("");
-                                const slots = groups.map((g) => esc(g[0][K.slot] || "—")).join("<br>"),
-                                    fx = groups.map((g) => esc(g[0][K.efeito] || "—")).join("<br>");
-                                const mkey = (g) => g.map((x) => [x[K.material], x[K.qtd]].join("\x00")).join("|"),
-                                    uniq = new Map();
-                                groups.forEach((g) => {
-                                    if (!uniq.has(mkey(g))) uniq.set(mkey(g), g);
-                                });
-                                const matHtml =
-                                    uniq.size === 1
-                                        ? mats(groups[0])
-                                        : [...uniq.values()]
-                                              .map(
-                                                  (g) =>
-                                                      `<span class="table-meta">Encantamento ${esc(g[0][K.slot] || "")} · ${esc(g[0][K.efeito] || "")}` +
-                                                      `</span>${mats(g)}`
-                                              )
-                                              .join("");
-                                return (
-                                    `<tr><td>${esc(target)}</td><td>${slots}</td><td>${fx}</td><td class="material-cell">` +
-                                    `${matHtml}</td></tr>`
-                                );
-                            })
-                            .join("");
-                    const navis = [...new Set(all.map((r) => r[K.navi]).filter(Boolean))];
-                    const tabelaCusto = tableFrame(
-                        ["Equipamento", "Slot(s)", "Tipo de efeito", "Materiais por tentativa"],
-                        body,
-                        "grouped-table align-top"
-                    );
-                    return (
-                        `<section class="table-section"><div class="table-section-head"><h2>${esc(episode[0][K.ep])}` +
-                        ` · custo de encantamento</h2>` +
-                        `<span>${targets.length} equipamentos</span></div><div class="panel-note cost-summary">` +
-                        `<b>Armaduras e acessórios:</b> 35 × ${itemLink("Pétala de Flor Invernal")}` +
-                        ` em Vellgunde (${esc(navis[0] || "")}). ` +
-                        `A troca entrega <b>1 Peça de Flor Invernal aleatória</b>. Os custos dos encantamentos de armas variam ` +
-                        `por slot e estão na tabela.</div>` +
-                        `${
-                            all.some((r) => /\*/.test(r[K.efeito] || ""))
-                                ? '<p class="table-search-note" style="margin:6px 0 10px">* Encantamentos de habilidade de classe 3: valores ' +
-                                  "confirmados somente no Hazy Forest (kRO); não constam na bROWiki ou iROWiki.</p>"
-                                : ""
-                        }${tabelaCusto}` +
-                        `</section>`
-                    );
-                }
-                const perTarget = groupBy(all, (r) => `${r[K.alvo]}\x00${r[K.slot]}\x00${r[K.efeito]}`).map((g) => {
-                    const r = g[0],
-                        materials = [
-                            ...new Map(
-                                g.map((x) => [[x[K.material], x[K.qtd], x[K.npc], x[K.navi], x[K.obs]].join("\x00"), x])
-                            ).values(),
-                        ];
-                    const signature = materials
-                        .flatMap((x) => [x[K.material], x[K.qtd], x[K.npc], x[K.navi], x[K.obs]])
-                        .join("\x00");
-                    return {
-                        target: r[K.alvo] || "—",
-                        slot: r[K.slot] || "—",
-                        effect: r[K.efeito] || "—",
-                        materials,
-                        signature,
-                    };
-                });
-                const sameCosts = groupBy(perTarget, (x) => x.signature);
-                return sameCosts
-                    .map((costGroup) => {
-                        const first = costGroup[0],
-                            targets = [...new Set(costGroup.map((x) => x.target))],
-                            materials = first.materials
-                                .map((x) => {
-                                    const npc = x[K.npc]
-                                        ? `<span class="table-meta">${esc(x[K.npc])}${x[K.navi] ? ` · ${esc(x[K.navi])}` : ""}</span>`
-                                        : "";
-                                    const obs = x[K.obs] ? `<span class="table-meta">${richText(x[K.obs])}</span>` : "";
-                                    return (
-                                        `<div class="material-line"><b class="material-qty">${esc(x[K.qtd] || "—")} ×</b>` +
-                                        `${itemLink(x[K.material])}</div>${npc}${obs}`
-                                    );
-                                })
-                                .join(""),
-                            body = costGroup
-                                .map(
-                                    (x, i) =>
-                                        `<tr><td>${esc(x.target)}</td><td>${esc(x.slot)}</td><td>${esc(x.effect)}` +
-                                        `</td>${
-                                            i === 0
-                                                ? `<td rowspan="${costGroup.length}" class="material-cell"><div class="material-lines">` +
-                                                  `${materials}</div></td>`
-                                                : ""
-                                        }` +
-                                        `</tr>`
-                                )
-                                .join("");
-                        const tabelaCusto = tableFrame(
-                            ["Equipamento", "Slot(s)", "Tipo de efeito", "Materiais por tentativa"],
-                            body,
-                            "grouped-table align-top"
-                        );
-                        return (
-                            `<section class="table-section"><div class="table-section-head"><h2>${esc(episode[0][K.ep])}` +
-                            ` · custo por encantamento</h2>` +
-                            `<span>${targets.length} peças com o mesmo custo</span></div>${tabelaCusto}` +
-                            `</section>`
-                        );
-                    })
-                    .join("");
-            })
+            .map((episode) =>
+                /Ep\.\s*19\b/i.test(episode[0][K.ep])
+                    ? renderEpisode19CostTable(episode, K)
+                    : renderStandardCostTable(episode, K)
+            )
             .join("") ||
         `<div class="table-wrap"><table class="data-table"><tbody><tr><td class="empty">Nenhum resultado para esse filtro.</td>` +
             `</tr></tbody></table></div>`
     );
+}
+
+function renderEpisode19CostTable(episode, K) {
+    const all = episode,
+        targets = [...new Set(all.map((r) => r[K.alvo]).filter(Boolean))],
+        body = targets
+            .map((target) => {
+                const groups = groupBy(
+                        all.filter((x) => x[K.alvo] === target),
+                        (r) => `${r[K.slot]}\x00${r[K.efeito]}`
+                    ),
+                    isArmor = /Armadura|Veste|Manto|Sobrepeliz|Bota|Sapato|Anel|Brinco|Pingente|Colar/i.test(target);
+                const mats = (g) =>
+                    `<div class="material-lines">${g
+                        .map(
+                            (x) =>
+                                `<div class="material-line"><b class="material-qty">${esc(x[K.qtd] || "—")} ×</b>` +
+                                `${itemLink(x[K.material])}</div>`
+                        )
+                        .join("")}` + `</div>`;
+                if (!isArmor)
+                    return groups
+                        .map(
+                            (g) =>
+                                `<tr><td>${esc(target)}</td><td>${esc(g[0][K.slot] || "—")}</td><td>${esc(g[0][K.efeito] || "—")}` +
+                                `</td><td class="material-cell">${mats(g)}</td></tr>`
+                        )
+                        .join("");
+                const slots = groups.map((g) => esc(g[0][K.slot] || "—")).join("<br>"),
+                    fx = groups.map((g) => esc(g[0][K.efeito] || "—")).join("<br>");
+                const mkey = (g) => g.map((x) => [x[K.material], x[K.qtd]].join("\x00")).join("|"),
+                    uniq = new Map();
+                groups.forEach((g) => {
+                    if (!uniq.has(mkey(g))) uniq.set(mkey(g), g);
+                });
+                const matHtml =
+                    uniq.size === 1
+                        ? mats(groups[0])
+                        : [...uniq.values()]
+                              .map(
+                                  (g) =>
+                                      `<span class="table-meta">Encantamento ${esc(g[0][K.slot] || "")} · ${esc(g[0][K.efeito] || "")}` +
+                                      `</span>${mats(g)}`
+                              )
+                              .join("");
+                return (
+                    `<tr><td>${esc(target)}</td><td>${slots}</td><td>${fx}</td><td class="material-cell">` +
+                    `${matHtml}</td></tr>`
+                );
+            })
+            .join(""),
+        navis = [...new Set(all.map((r) => r[K.navi]).filter(Boolean))],
+        tabelaCusto = tableFrame(
+            ["Equipamento", "Slot(s)", "Tipo de efeito", "Materiais por tentativa"],
+            body,
+            "grouped-table align-top"
+        );
+    return (
+        `<section class="table-section"><div class="table-section-head"><h2>${esc(episode[0][K.ep])}` +
+        ` · custo de encantamento</h2>` +
+        `<span>${targets.length} equipamentos</span></div><div class="panel-note cost-summary">` +
+        `<b>Armaduras e acessórios:</b> 35 × ${itemLink("Pétala de Flor Invernal")}` +
+        ` em Vellgunde (${esc(navis[0] || "")}). ` +
+        `A troca entrega <b>1 Peça de Flor Invernal aleatória</b>. Os custos dos encantamentos de armas variam ` +
+        `por slot e estão na tabela.</div>` +
+        `${
+            all.some((r) => /\*/.test(r[K.efeito] || ""))
+                ? '<p class="table-search-note" style="margin:6px 0 10px">* Encantamentos de habilidade de classe 3: valores ' +
+                  "confirmados somente no Hazy Forest (kRO); não constam na bROWiki ou iROWiki.</p>"
+                : ""
+        }${tabelaCusto}` +
+        `</section>`
+    );
+}
+
+function renderStandardCostTable(episode, K) {
+    const all = episode;
+    const perTarget = groupBy(all, (r) => `${r[K.alvo]}\x00${r[K.slot]}\x00${r[K.efeito]}`).map((g) => {
+        const r = g[0],
+            materials = [
+                ...new Map(
+                    g.map((x) => [[x[K.material], x[K.qtd], x[K.npc], x[K.navi], x[K.obs]].join("\x00"), x])
+                ).values(),
+            ];
+        const signature = materials
+            .flatMap((x) => [x[K.material], x[K.qtd], x[K.npc], x[K.navi], x[K.obs]])
+            .join("\x00");
+        return {
+            target: r[K.alvo] || "—",
+            slot: r[K.slot] || "—",
+            effect: r[K.efeito] || "—",
+            materials,
+            signature,
+        };
+    });
+    const sameCosts = groupBy(perTarget, (x) => x.signature);
+    return sameCosts
+        .map((costGroup) => {
+            const first = costGroup[0],
+                targets = [...new Set(costGroup.map((x) => x.target))],
+                materials = first.materials
+                    .map((x) => {
+                        const npc = x[K.npc]
+                            ? `<span class="table-meta">${esc(x[K.npc])}${x[K.navi] ? ` · ${esc(x[K.navi])}` : ""}</span>`
+                            : "";
+                        const obs = x[K.obs] ? `<span class="table-meta">${richText(x[K.obs])}</span>` : "";
+                        return (
+                            `<div class="material-line"><b class="material-qty">${esc(x[K.qtd] || "—")} ×</b>` +
+                            `${itemLink(x[K.material])}</div>${npc}${obs}`
+                        );
+                    })
+                    .join(""),
+                body = costGroup
+                    .map(
+                        (x, i) =>
+                            `<tr><td>${esc(x.target)}</td><td>${esc(x.slot)}</td><td>${esc(x.effect)}` +
+                            `</td>${
+                                i === 0
+                                    ? `<td rowspan="${costGroup.length}" class="material-cell"><div class="material-lines">` +
+                                      `${materials}</div></td>`
+                                    : ""
+                            }` +
+                            `</tr>`
+                    )
+                    .join("");
+            const tabelaCusto = tableFrame(
+                ["Equipamento", "Slot(s)", "Tipo de efeito", "Materiais por tentativa"],
+                body,
+                "grouped-table align-top"
+            );
+            return (
+                `<section class="table-section"><div class="table-section-head"><h2>${esc(episode[0][K.ep])}` +
+                ` · custo por encantamento</h2>` +
+                `<span>${targets.length} peças com o mesmo custo</span></div>${tabelaCusto}` +
+                `</section>`
+            );
+        })
+        .join("");
 }
 function renderDataTable(view) {
     const found = filteredRows(view);

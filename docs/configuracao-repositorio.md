@@ -4,22 +4,22 @@ Checklist para **quem administra o repositório**. Estas configurações ficam n
 
 Parte do conteúdo vem da documentação oficial do GitHub (regras de rulesets). Os nomes de menus mudam com o tempo; se algum caminho não existir, procure o nome da opção em **Settings**.
 
-## 0. Estado atual (conferido em 24/11/2026)
+## 0. Estado atual (conferido em 25/11/2026)
 
-| Item                                                                   | Estado                                                                                                                                    |
-| ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Ruleset `protege-main` na `main`                                       | Ativa (seção 1)                                                                                                                           |
-| Dependabot: alertas, security updates, version updates (npm + actions) | Ativos                                                                                                                                    |
-| Dependency graph                                                       | Ativo                                                                                                                                     |
-| Pages: Enforce HTTPS e deploy funcionando                              | Conforme                                                                                                                                  |
-| Excluir-automaticamente as branches de PR mergeadas                    | Ativo (**Settings → General → Pull Requests → Automatically delete head branches**)                                                       |
-| Secret scanning com push protection                                    | Ativo (seção 2)                                                                                                                           |
-| Code scanning (CodeQL)                                                 | Não usado — site estático simples; se quiser uma camada a mais, o CodeQL cobre JavaScript, mas aqui a rede de segurança é a CI + snapshot |
-| Workflow permissions globais em Actions                                | Verificar em **Settings → Actions → General**                                                                                             |
+| Item                                                           | Estado                                                                                                                                    |
+| -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Ruleset `protege-branches` em `main` e `legado`                | Ativa (seção 1)                                                                                                                           |
+| Dependabot: security updates; updates semanais (npm + actions) | Segurança ativa; versões configuradas no arquivo                                                                                          |
+| Dependency graph                                               | Ativo                                                                                                                                     |
+| Pages: Enforce HTTPS e deploy funcionando                      | Conforme                                                                                                                                  |
+| Excluir-automaticamente as branches de PR mergeadas            | Ativo (**Settings → General → Pull Requests → Automatically delete head branches**)                                                       |
+| Secret scanning com push protection                            | Ativo (seção 2)                                                                                                                           |
+| Code scanning (CodeQL)                                         | Não usado — site estático simples; se quiser uma camada a mais, o CodeQL cobre JavaScript, mas aqui a rede de segurança é a CI + snapshot |
+| Workflow permissions globais em Actions                        | Verificar em **Settings → Actions → General**                                                                                             |
 
 ## 1. Ruleset da branch principal
 
-Em **Settings → Rules → Rulesets → New branch ruleset**, com alvo na branch padrão. Rulesets estão disponíveis em repositórios públicos no plano gratuito. **Neste repositório já existe a ruleset `protege-main`**, criada conforme esta tabela.
+Em **Settings → Rules → Rulesets → New branch ruleset**, com alvo na branch padrão. Rulesets estão disponíveis em repositórios públicos no plano gratuito. **Neste repositório já existe a ruleset ativa `protege-branches`**, que cobre `main` e `legado`.
 
 | Regra                                 | Recomendação                                  | Por quê                                                                                                    |
 | ------------------------------------- | --------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -52,7 +52,7 @@ Recomendada, mas **a exigência tem armadilhas**: a documentação oficial cita 
 
 ## 3. Segurança do repositório e das Actions
 
-- **Dependabot:** alertas, atualizações de segurança e de versão ativos, com o `.github/dependabot.yml` (seção 4). **Já está ativo.**
+- **Dependabot:** alertas e atualizações de segurança ativos; atualizações semanais de npm e GitHub Actions estão no `.github/dependabot.yml` (seção 4). As Actions são fixadas por SHA completo e atualizadas pelo Dependabot.
 - **Private vulnerability reporting** e um `SECURITY.md` dizendo como reportar falhas. **Já existem.**
 - **Settings → Actions → General:**
     - _Workflow permissions_ em somente leitura; cada workflow declara o que precisa.

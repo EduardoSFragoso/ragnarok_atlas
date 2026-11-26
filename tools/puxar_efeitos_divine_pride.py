@@ -32,6 +32,7 @@ Depois envie tools/cache/divine_pride_saida.json de volta para eu atualizar a pl
 """
 
 import argparse
+import math
 import os
 import re
 import time
@@ -385,14 +386,14 @@ def segundos_positivos(texto):
     Returns:
         float: valor convertido.
     Raises:
-        argparse.ArgumentTypeError: se não for número ou se for <= 0.
+        argparse.ArgumentTypeError: se não for número finito e positivo.
     """
     try:
         valor = float(texto)
     except ValueError:
         raise argparse.ArgumentTypeError(f"número inválido: {texto!r}") from None
-    if valor <= 0:
-        raise argparse.ArgumentTypeError(f"o valor de --delay deve ser maior que zero (recebi {valor})")
+    if not math.isfinite(valor) or valor <= 0:
+        raise argparse.ArgumentTypeError(f"o valor de --delay deve ser finito e maior que zero (recebi {valor})")
     return valor
 
 
