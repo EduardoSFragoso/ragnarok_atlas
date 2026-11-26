@@ -158,7 +158,7 @@ para ninguém ficar com arquivo velho em cache.
 | `npm run format` / `format:check`                      | Prettier (4 espaços, 120 colunas, aspas duplas, LF)       | `format` antes de commitar                       |
 | `npm run validar:dados`                                | valida o esquema de todos os JSONs de `data/` e os ícones | sempre que mexer em `data/`                      |
 | `npm test`                                             | testes do validador (16) e do site no jsdom (48)          | sempre                                           |
-| `py -m unittest discover -s tools -p "test_*.py"`      | testes das ferramentas Python (9)                         | ao mexer em `tools/*.py` ou `colunas.json`       |
+| `py -m unittest discover -s tools -p "test_*.py"`      | testes das ferramentas Python (12)                        | ao mexer em `tools/*.py` ou workflows            |
 | `npm run snapshot -- --base`                           | grava a base do snapshot de renderização                  | **antes** de refatorar código                    |
 | `npm run snapshot`                                     | gera o snapshot e compara com a base                      | **depois** de refatorar                          |
 | `npm run snapshot -- --verificar`                      | só confere erros de renderização (a CI usa)               | sempre                                           |
@@ -202,9 +202,9 @@ Dependabot completo, **Enforce HTTPS** do Pages ligado, Pages servido por GitHub
 adicional do dono: **"Automatically delete head branches" ligado** (Settings → General → Pull Requests) — o GitHub
 apaga sozinho a branch remota depois do merge; sobra apagar só a cópia local.
 
-### 5.2 Ruleset que protege a `main` — JÁ CRIADA E ATIVA
+### 5.2 Ruleset que protege `main` e `legado` — JÁ CRIADA E ATIVA
 
-O ruleset `protege-main` **existe e está em Enforcement: Active** nesta data. Estado atual verificado:
+O ruleset `protege-branches` **existe e está em Enforcement: Active** (verificado em 25/11/2026) e cobre a branch padrão `main` e `legado`. Estado atual verificado:
 
 - **Require a pull request before merging**: ligado (push direto na `main` é recusado com GH013 — testado).
 - **Require status checks to pass**: ligado, com o job **`checks`** (do `ci.yml`) como check obrigatório — PR com
@@ -225,8 +225,8 @@ esse item: é a rede de segurança que impede merge de código quebrado.
 Reprodução do passo a passo (caso o ruleset precise ser recriado do zero; uma vez só, na interface do GitHub):
 
 1. No repositório, **Settings → Rules → Rulesets → New ruleset → New branch ruleset**.
-2. **Ruleset Name**: `protege-main`. **Enforcement status**: Active.
-3. Seção **Target branches**: Add target → _Add classic branch targeting_ → Ref name: `Default` (ou `main`).
+2. **Ruleset Name**: `protege-branches`. **Enforcement status**: Active.
+3. Seção **Target branches**: adicionar `Default` (ou `main`) e `refs/heads/legado`.
 4. Em **Bypass list**: deixe vazio (assim ninguém, nem você, escapa dos checks).
 5. Em **Branch rules**, marque (é o estado atual descrito acima):
     - **Require a pull request before merging** — com "1 required approval" se quiser revisão (sozinho, pode deixar 0
@@ -315,5 +315,7 @@ nome da coluna em `colunas.json`), nunca por posição. Escritas de JSON usam
 - Sem pendências conhecidas de legibilidade: as expressões longas de HTML foram extraídas para constantes nomeadas e
   os índices numéricos de colunas/tuplas viraram nomes ou desestruturação. Os `[0]` que restam são "primeiro elemento"
   de listas, o que é legítimo.
+- Em `js/tabelas.js`, a renderização de custos separa as regras de Episódio 19 das regras dos demais episódios; o
+  snapshot confirmou que os 331 estados visuais permaneceram iguais nessa refatoração.
 - Se mudar algo estrutural (ordem dos scripts, contrato de colunas, fluxo de CI), **atualize este arquivo** e o README
   na mesma alteração.

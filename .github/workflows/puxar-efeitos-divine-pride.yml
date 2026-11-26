@@ -25,16 +25,17 @@ jobs:
         runs-on: ubuntu-latest
         timeout-minutes: 60
         steps:
-            - uses: actions/checkout@v7
+            - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
-            - uses: actions/setup-python@v7
+            - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
               with:
                   python-version: "3.12"
 
             - name: Rodar o script (usa o segredo DP_API_KEY, nunca impresso no log)
               env:
                   DP_API_KEY: ${{ secrets.DP_API_KEY }}
-              run: python3 tools/puxar_efeitos_divine_pride.py --delay "${{ inputs.delay || '1.2' }}"
+                  DELAY: ${{ inputs.delay || '1.2' }}
+              run: python3 tools/puxar_efeitos_divine_pride.py --delay "$DELAY"
 
             - name: Gerar o corpo do PR (resumo dos itens baixados)
               run: |
@@ -74,7 +75,7 @@ jobs:
                   PY
 
             - name: Abrir/atualizar o PR automático com a saída
-              uses: peter-evans/create-pull-request@v8
+              uses: peter-evans/create-pull-request@3ffccacd46053766916f087ce41d627c0b8cf2d1 # v8
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
                   branch: data/divine-pride

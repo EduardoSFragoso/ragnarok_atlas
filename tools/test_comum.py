@@ -3,6 +3,7 @@
 Rodar: python3 -m unittest discover -s tools -p "test_*.py"   (no Windows: py -m unittest ...)
 """
 
+import argparse
 import json
 import shutil
 import tempfile
@@ -82,6 +83,12 @@ class TestRegistros(unittest.TestCase):
 
 
 class TestFerramentas(unittest.TestCase):
+    def test_delay_rejeita_valores_nao_finitos(self):
+        self.assertEqual(puxar_efeitos_divine_pride.segundos_positivos("1.2"), 1.2)
+        for valor in ("nan", "inf"):
+            with self.subTest(valor=valor), self.assertRaises(argparse.ArgumentTypeError):
+                puxar_efeitos_divine_pride.segundos_positivos(valor)
+
     def test_agregar_efeitos_usa_o_contrato(self):
         self.assertEqual(agregar_efeitos.COLUNA, "Efeito (+11)")
         self.assertEqual(agregar_efeitos.PLANILHA.name, "encantamentos_disponiveis.json")

@@ -58,20 +58,20 @@ Os ícones já identificados são armazenados em `assets/icons/` para evitar nov
 
 O site não tem build: o `index.html` carrega scripts comuns (com `defer`), na ordem abaixo, e eles compartilham o escopo global. A ordem importa — cada arquivo só usa, no momento do carregamento, o que já foi definido antes (o resto é chamado depois, quando tudo está carregado).
 
-| Arquivo              | Conteúdo                                                                                   |
-| -------------------- | ------------------------------------------------------------------------------------------ |
-| `js/base.js`         | arquivos de dados, estado global, utilitários (texto, ícones, busca) e armazenamento local |
-| `js/dados.js`        | dados carregados de `data/`, normalização das tabelas (`COL`) e `loadData()`               |
-| `js/tabelas.js`      | tabelas de equipamentos, encantamentos, custos e reformas                                  |
-| `js/diarias.js`      | missões diárias e controle de farm                                                         |
-| `js/calculadoras.js` | calculadoras, receitas por habilidade e encantamento total                                 |
-| `js/reciclagem.js`   | reciclagem de armas e trocas de Globo do Ep. 19 (aba "Reciclagem e Globos")                |
-| `js/refino-grau.js`  | páginas de Refinamento e Grau                                                              |
-| `js/reforma.js`      | página de Reforma e seções recolhíveis                                                     |
-| `js/guia.js`         | Guia de Episódio e cópia de `/navi`                                                        |
-| `js/telas.js`        | navegação, `render()` e eventos do conteúdo                                                |
-| `js/ui.js`           | busca global, menu móvel e tema                                                            |
-| `app.js`             | ponto de entrada: carrega os dados e abre a visão geral                                    |
+| Arquivo              | Conteúdo                                                                                              |
+| -------------------- | ----------------------------------------------------------------------------------------------------- |
+| `js/base.js`         | arquivos de dados, estado global, utilitários (texto, ícones, busca) e armazenamento local            |
+| `js/dados.js`        | dados carregados de `data/`, normalização das tabelas (`COL`) e `loadData()`                          |
+| `js/tabelas.js`      | tabelas de equipamentos, encantamentos, custos e reformas; custos separam Ep. 19 dos demais episódios |
+| `js/diarias.js`      | missões diárias e controle de farm                                                                    |
+| `js/calculadoras.js` | calculadoras, receitas por habilidade e encantamento total                                            |
+| `js/reciclagem.js`   | reciclagem de armas e trocas de Globo do Ep. 19 (aba "Reciclagem e Globos")                           |
+| `js/refino-grau.js`  | páginas de Refinamento e Grau                                                                         |
+| `js/reforma.js`      | página de Reforma e seções recolhíveis                                                                |
+| `js/guia.js`         | Guia de Episódio e cópia de `/navi`                                                                   |
+| `js/telas.js`        | navegação, `render()` e eventos do conteúdo                                                           |
+| `js/ui.js`           | busca global, menu móvel e tema                                                                       |
+| `app.js`             | ponto de entrada: carrega os dados e abre a visão geral                                               |
 
 ## Qualidade de código
 
@@ -80,7 +80,7 @@ O projeto usa linters e formatadores com configuração versionada (aplicados no
 - **Ruff** (`ruff.toml`) — lint e formatação dos scripts Python (`py -m ruff check tools/` e `py -m ruff format tools/`); instale com `py -m pip install --user ruff`.
 - **Prettier** (`.prettierrc.json`) — formatação de todos os arquivos (`npm run format`; a CI roda `npm run format:check`).
 - **ESLint** (`eslint.config.js`) — lint de `app.js` e `js/*.js` para o navegador (`npm run lint`). Como os scripts compartilham o escopo global, o ESLint trata o que um arquivo declara como global nos demais.
-- **Testes das ferramentas Python** (`tools/test_comum.py`, só biblioteca padrão) — `py -m unittest discover -s tools -p "test_*.py"`: conferem a leitura das tabelas pelo contrato (ordem das colunas livre, coluna ausente com erro claro) e que `baixar_icones`/`puxar_efeitos` consideram todos os registros.
+- **Testes das ferramentas Python e workflows** (`tools/test_comum.py`, `tools/test_workflow.py`, só biblioteca padrão) — `py -m unittest discover -s tools -p "test_*.py"`: conferem a leitura das tabelas, atrasos finitos, passagem segura do `delay` e Actions fixadas por SHA.
 - **Checagem de scripts** (`tools/checar_sintaxe.mjs`) — `npm run check`: confere a sintaxe de todos os scripts do `index.html` e avisa (⚠) sobre nomes declarados no topo e nunca usados.
 - **Versão de cache** (`tools/versao_cache.mjs`) — grava no `index.html` um `?v=<hash>` por script/CSS, calculado pelo conteúdo. Depois de editar qualquer arquivo em `js/`, `app.js` ou `styles.css`, rode `npm run versao`; a CI falha (`npm run versao:verificar`) se algum estiver desatualizado.
 - **Snapshot de renderização** (`tools/snapshot.mjs`, usa `jsdom`) — roda o site num DOM simulado e captura o HTML de centenas de estados (telas, abas, filtros, buscas e todas as opções das calculadoras). Para refatorar com segurança: `npm run snapshot -- --base` antes de mexer no código e `npm run snapshot` depois; ele aponta qual estado mudou. Na CI roda `npm run snapshot -- --verificar`, que só falha se alguma tela quebrar ou der erro no console. A pasta `.snapshot/` é local e não vai para o Git.
